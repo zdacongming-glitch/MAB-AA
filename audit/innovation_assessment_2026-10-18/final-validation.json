@@ -1,0 +1,10 @@
+{
+  "actual_isolated_contexts": 10,
+  "scored_cells": 80,
+  "independent_statistics_check": "passed",
+  "packet_hash_check": "passed",
+  "protocol_hash_check": "passed",
+  "markdown_formula_check": "passed",
+  "original_sources_check": "see integrity-check.json",
+  "first_five_retained": true
+}

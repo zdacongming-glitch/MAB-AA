@@ -1,0 +1,37 @@
+layer 1 states 4 total 5
+layer 2 states 10 total 15
+layer 3 states 20 total 35
+layer 4 states 35 total 70
+layer 5 states 56 total 126
+layer 6 states 84 total 210
+layer 7 states 120 total 330
+layer 8 states 165 total 495
+layer 9 states 220 total 715
+layer 10 states 308 total 1023
+layer 11 states 460 total 1483
+layer 12 states 717 total 2200
+a 0 success False r None time 1.0
+a 1 success False r None time 1.4
+a 2 success False r None time 1.9
+a 3 success False r None time 2.3
+a 4 success False r None time 2.8
+a 5 success False r None time 3.3
+a 6 success False r None time 3.8
+a 7 success False r None time 4.2
+a 8 success False r None time 4.7
+a 9 success False r None time 5.2
+a 10 success False r None time 5.6
+a 11 success False r None time 6.1
+a 12 success False r None time 6.5
+a 13 success False r None time 7.0
+a 14 success False r None time 7.5
+a 15 success False r None time 8.0
+a 16 success False r None time 8.4
+a 17 success False r None time 8.9
+a 18 success False r None time 9.4
+a 19 success False r None time 9.8
+a 20 success False r None time 12.0
+a 21 success False r None time 12.8
+a 22 success False r None time 13.1
+a 23 success False r None time 13.4
+a 24 success True r 0.7996202455039987 time 13.9

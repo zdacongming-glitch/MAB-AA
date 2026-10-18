@@ -1,0 +1,1039 @@
+{
+  "date": "2026-10-17",
+  "status": "passed",
+  "policy": "Byte-exact copies; sources unchanged; no manuscript or Git edits.",
+  "files": [
+    {
+      "group": "proposal",
+      "source": "proposal/Arriving-Arms-阶段性理论总结.md",
+      "destination": "supporting/proposal/Arriving-Arms-阶段性理论总结.md",
+      "sha256": "354011218ad7a3a8ec4235ae7c6bb6f8a9ca9566ae45360b7c99681b84cfebac",
+      "bytes": 42567,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/CCP_算法探索_研究包_2026-10-16.zip",
+      "destination": "supporting/proposal/CCP_算法探索_研究包_2026-10-16.zip",
+      "sha256": "5f5a505081c2f3426d827c0765067f6033d3a6150b6a1cacaadf1c5d2bf7e075",
+      "bytes": 5362325,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/MAB-AA_发散重构与创新性评估_多尺度到达谱_2026-10-12.md",
+      "destination": "supporting/proposal/MAB-AA_发散重构与创新性评估_多尺度到达谱_2026-10-12.md",
+      "sha256": "a18c1712b3892dd3c72f3a3c09cce9617c1a7afd03aaecd2d7507d74a6181c5c",
+      "bytes": 51858,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/MAB-AA_时间几何_证明与可复现核查_2026-10-12.zip",
+      "destination": "supporting/proposal/MAB-AA_时间几何_证明与可复现核查_2026-10-12.zip",
+      "sha256": "41bf63242501bcb65ecf86acd0e2d215db3fdfdb04cbe298c7f6ace74c0677ae",
+      "bytes": 47052,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/MAB-AA_时间几何主线_完整理论与创新性评估_2026-10-12.md",
+      "destination": "supporting/proposal/MAB-AA_时间几何主线_完整理论与创新性评估_2026-10-12.md",
+      "sha256": "b3d71a38bc04a96908dcfdd25642ff32f9b634bbddf0e6bff0cc76381e7b9f9b",
+      "bytes": 73664,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/MAB-AA_重构推进_学习与认证双重边界_2026-10-12.md",
+      "destination": "supporting/proposal/MAB-AA_重构推进_学习与认证双重边界_2026-10-12.md",
+      "sha256": "1ffd5af8b45e28038973dfbec0a8f47df361269d8ab18ce53a8d334c51313a5c",
+      "bytes": 102099,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/Part-I-Arrival-Minimax-闭合证明.md",
+      "destination": "supporting/proposal/Part-I-Arrival-Minimax-闭合证明.md",
+      "sha256": "a9c898104f5b99f4c07add2f4498da50f07ecf5e494b13a6d0ed60cf59b305a3",
+      "bytes": 18780,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/Part-II-Instance-Sensitive-研究记录.md",
+      "destination": "supporting/proposal/Part-II-Instance-Sensitive-研究记录.md",
+      "sha256": "4aff3d01657b9cee740150998dd2f33c282608d737ef018275148aa950a21abf",
+      "bytes": 39964,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/temporal_geometry_research/api_results.json",
+      "destination": "supporting/proposal/temporal_geometry_research/api_results.json",
+      "sha256": "dead2a2f01f265f255656edcf9b517cb297da8d04105066184535126a3e9dff8",
+      "bytes": 124,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/temporal_geometry_research/audit_geometry.py",
+      "destination": "supporting/proposal/temporal_geometry_research/audit_geometry.py",
+      "sha256": "ecbfa7d2faa4aa927d3777c87e9c719b38a6419656b7e305eebc8bde5411dbe6",
+      "bytes": 3638,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/temporal_geometry_research/check_document.py",
+      "destination": "supporting/proposal/temporal_geometry_research/check_document.py",
+      "sha256": "dc1646add78c3203535beec632c727b7d3daf1f7b26da055ca36dbae5401d0e0",
+      "bytes": 1874,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/temporal_geometry_research/document_checks.json",
+      "destination": "supporting/proposal/temporal_geometry_research/document_checks.json",
+      "sha256": "411220b4339f31fc4b0e7fa9d54763c1076625e70b61c0ad83b3008ece905d53",
+      "bytes": 361,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/temporal_geometry_research/geometry.py",
+      "destination": "supporting/proposal/temporal_geometry_research/geometry.py",
+      "sha256": "ca4209504b948123a3db6b22acca231524072d2888683b7c95b3c3a64e756759",
+      "bytes": 5301,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/temporal_geometry_research/geometry_results.json",
+      "destination": "supporting/proposal/temporal_geometry_research/geometry_results.json",
+      "sha256": "8f619122397251639a831f6ffacd9dd60842c23c09f092c5e35c2d37cae841df",
+      "bytes": 380,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/temporal_geometry_research/manifest.json",
+      "destination": "supporting/proposal/temporal_geometry_research/manifest.json",
+      "sha256": "381becff076e4294be866d59378248a6a637d8aa4fa801f83e0a2feaed57484a",
+      "bytes": 2272,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/temporal_geometry_research/mc_moss.py",
+      "destination": "supporting/proposal/temporal_geometry_research/mc_moss.py",
+      "sha256": "66a397914dc443a0aed0e6365399ff443ca289e66f9980d0be3883eda457cb55",
+      "bytes": 4347,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/temporal_geometry_research/policy_diagnostics.py",
+      "destination": "supporting/proposal/temporal_geometry_research/policy_diagnostics.py",
+      "sha256": "4d2b42bebc87b32f9ebf68c7c5ed6572cf6d7d57c43e0680c62b535ed041c347",
+      "bytes": 5134,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/temporal_geometry_research/policy_results.csv",
+      "destination": "supporting/proposal/temporal_geometry_research/policy_results.csv",
+      "sha256": "3eb534c079cb1790485518ba16bd64ca74f60b616d5a6816c3b080b9ac23b693",
+      "bytes": 2539,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/temporal_geometry_research/policy_summary.json",
+      "destination": "supporting/proposal/temporal_geometry_research/policy_summary.json",
+      "sha256": "8361e11058b1729aa1024e993ab41e087db67963ceeeae3d9687370173fb4884",
+      "bytes": 370,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/temporal_geometry_research/README.md",
+      "destination": "supporting/proposal/temporal_geometry_research/README.md",
+      "sha256": "05b12431215730b17821360cea1b1557252805e7689eab3599408a7fec9051d5",
+      "bytes": 3098,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/temporal_geometry_research/requirements-diagnostics.txt",
+      "destination": "supporting/proposal/temporal_geometry_research/requirements-diagnostics.txt",
+      "sha256": "e43a36d2c8d8a1a0dfe19662ec7ab32e012dcd85896f25ddc9091e3c6e4613b0",
+      "bytes": 83,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/temporal_geometry_research/test_online_api.py",
+      "destination": "supporting/proposal/temporal_geometry_research/test_online_api.py",
+      "sha256": "25a2176ff8f2145319ffeeccac8d12f6180f1025fdbf46fa076e7f18b9cb63d9",
+      "bytes": 1423,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/temporal_geometry_research/theory.md",
+      "destination": "supporting/proposal/temporal_geometry_research/theory.md",
+      "sha256": "b3d71a38bc04a96908dcfdd25642ff32f9b634bbddf0e6bff0cc76381e7b9f9b",
+      "bytes": 73664,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/UCB-AA_三项核心成果与CP伪代码_详细汇报.md",
+      "destination": "supporting/proposal/UCB-AA_三项核心成果与CP伪代码_详细汇报.md",
+      "sha256": "657ec7c6656a4a068403a14f0c3e0f7fbdbd7f7710c187eee61e6cf0ee0289bb",
+      "bytes": 28712,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/UCB-AA_持续集合维护_理论研究包_2026-10-14.zip",
+      "destination": "supporting/proposal/UCB-AA_持续集合维护_理论研究包_2026-10-14.zip",
+      "sha256": "31819feddb021601aa6a4c1197757b3b066f22a8869fbb4718c528170e8003f7",
+      "bytes": 44873,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/UCB-AA_阶段性研究汇报_聊天原文.md",
+      "destination": "supporting/proposal/UCB-AA_阶段性研究汇报_聊天原文.md",
+      "sha256": "f934136cc1133c4d51760a4d19487cc07e9811ee8a4c0417fda1b0c9a7a4af61",
+      "bytes": 11277,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/UCB-AA删除与集合维护重构_Codex执行方案_v1.0.md",
+      "destination": "supporting/proposal/UCB-AA删除与集合维护重构_Codex执行方案_v1.0.md",
+      "sha256": "9337fea59140d7a563b371080495c703baca613fede4f1a352bc6a96fd3054c0",
+      "bytes": 81290,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/ucbaa_continuous_maintenance_2026-10-14/assessment-record.json",
+      "destination": "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/assessment-record.json",
+      "sha256": "e55fcece762719425738739386980f94d3cdccef7cb203fc609f21926286e97f",
+      "bytes": 9092,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/ucbaa_continuous_maintenance_2026-10-14/cp_ucb_aa.py",
+      "destination": "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/cp_ucb_aa.py",
+      "sha256": "272815cbb45e2de1a99f849bd4718892ef6bc010d081e0eaf2ec45b21c746ef9",
+      "bytes": 6201,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/ucbaa_continuous_maintenance_2026-10-14/diagnostics-results.json",
+      "destination": "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/diagnostics-results.json",
+      "sha256": "19ae84a624bf740309225f30497f1306aa48a53f10bd82fe3c100ce4ea2ac90d",
+      "bytes": 2484,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/ucbaa_continuous_maintenance_2026-10-14/diagnostics.py",
+      "destination": "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/diagnostics.py",
+      "sha256": "7b372d380dface317aad854fc713214207e797cb3f027f7e82d43f258654034e",
+      "bytes": 6294,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/ucbaa_continuous_maintenance_2026-10-14/evidence-manifest.json",
+      "destination": "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/evidence-manifest.json",
+      "sha256": "eff130baf88b82e099f35258e0b69a6c4c93d03361cc877c1ee6c921028c11e5",
+      "bytes": 5190,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/ucbaa_continuous_maintenance_2026-10-14/format-validation.json",
+      "destination": "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/format-validation.json",
+      "sha256": "2f651c643b1c436e16cc42f1a2b86325fac50de243673ea1718acbdec5ec6060",
+      "bytes": 295,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/ucbaa_continuous_maintenance_2026-10-14/implementation-sanity.json",
+      "destination": "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/implementation-sanity.json",
+      "sha256": "ae471288439a4e1c6b6404336ee72eb302d544a03c477a4192e1718a91608d8d",
+      "bytes": 1511,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/ucbaa_continuous_maintenance_2026-10-14/proof-audit.md",
+      "destination": "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/proof-audit.md",
+      "sha256": "a8098a0518d19d48509eb220231eb9e7ef31bc8d76ebcde38597a90613743df7",
+      "bytes": 4310,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/ucbaa_continuous_maintenance_2026-10-14/README.md",
+      "destination": "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/README.md",
+      "sha256": "9dbbfadafdf0e9045bf77054c4b05a6a37918ea0708940c9087c014284f929ed",
+      "bytes": 3314,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/ucbaa_continuous_maintenance_2026-10-14/持续集合维护_理论与完整证明.md",
+      "destination": "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/持续集合维护_理论与完整证明.md",
+      "sha256": "1fb396aac5a827d661a1fc87988f8126a454eb22eca1125a37fa8b74b6a73257",
+      "bytes": 59069,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/第二轮稿件修改_FCCP整合_Codex执行方案_v2.0.md",
+      "destination": "supporting/proposal/第二轮稿件修改_FCCP整合_Codex执行方案_v2.0.md",
+      "sha256": "232e9507283b1c9c35cf2690b5077beff041420efc6868f6d8e37092ac582190",
+      "bytes": 107195,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/论文重构方案_持续到达下的相对近优集合维护与文献审计_2026-10-11.md",
+      "destination": "supporting/proposal/论文重构方案_持续到达下的相对近优集合维护与文献审计_2026-10-11.md",
+      "sha256": "5be74f60f2d0ed6b5c51b49b73abc0a7867329e141dd4f667b11577573258dd7",
+      "bytes": 71473,
+      "source_unchanged": true
+    },
+    {
+      "group": "proposal",
+      "source": "proposal/阶段确认_JASA_TM_2026-10-13.md",
+      "destination": "supporting/proposal/阶段确认_JASA_TM_2026-10-13.md",
+      "sha256": "59ad421f2cbcc081fc9034b5040f76c21c3001b9e39b115dee15f8f42bb79b7e",
+      "bytes": 12290,
+      "source_unchanged": true
+    },
+    {
+      "group": "original_submission",
+      "source": "JASA-template/agsm.bst",
+      "destination": "supporting/original_submission/agsm.bst",
+      "sha256": "45f44eb36fa833b1848521b848fdfb56c0d36b9a278bdf6a744bb5ebd83145f3",
+      "bytes": 26902,
+      "source_unchanged": true
+    },
+    {
+      "group": "original_submission",
+      "source": "JASA-template/bibliography.bib",
+      "destination": "supporting/original_submission/bibliography.bib",
+      "sha256": "36dee2427c36a735441047b2041d97d6a580482fd1953489ed77f053d706f5ee",
+      "bytes": 35676,
+      "source_unchanged": true
+    },
+    {
+      "group": "original_submission",
+      "source": "JASA-template/figure_nsclc_targeted_therapy_arms.png",
+      "destination": "supporting/original_submission/figure_nsclc_targeted_therapy_arms.png",
+      "sha256": "aec1de26d41f8b8d91ed10db60875b23eb758da8ea244cc7530b354e7562a72e",
+      "bytes": 198569,
+      "source_unchanged": true
+    },
+    {
+      "group": "original_submission",
+      "source": "JASA-template/mab_aa_main.pdf",
+      "destination": "supporting/original_submission/mab_aa_main.pdf",
+      "sha256": "44c19acf42498b41179ae52d2a0951a004c76c834b2eb244c22fc1b05135fb8e",
+      "bytes": 1430137,
+      "source_unchanged": true
+    },
+    {
+      "group": "original_submission",
+      "source": "JASA-template/mab_aa_main.tex",
+      "destination": "supporting/original_submission/mab_aa_main.tex",
+      "sha256": "d81d24cda29e9137fa85a622244be374d880480aca267eb62d17caafaa249f6f",
+      "bytes": 208328,
+      "source_unchanged": true
+    },
+    {
+      "group": "original_submission",
+      "source": "JASA-template/mab_aa_preprint.pdf",
+      "destination": "supporting/original_submission/mab_aa_preprint.pdf",
+      "sha256": "7efa1a13179ff623ae31af361e97e347a225e27eb9c1928d61cfe20ea3400390",
+      "bytes": 1467776,
+      "source_unchanged": true
+    },
+    {
+      "group": "original_submission",
+      "source": "JASA-template/mab_aa_preprint.tex",
+      "destination": "supporting/original_submission/mab_aa_preprint.tex",
+      "sha256": "3133ad77cccab5c3262194f947f2df647a2ebe8f07d7425b3ffcca09a33ceb7e",
+      "bytes": 192923,
+      "source_unchanged": true
+    },
+    {
+      "group": "original_submission",
+      "source": "JASA-template/main.pdf",
+      "destination": "supporting/original_submission/main.pdf",
+      "sha256": "379bd07cf3a7c2749a79dfcfd55a494bb1415167d0c303dddcda54cecdd2a589",
+      "bytes": 1247004,
+      "source_unchanged": true
+    },
+    {
+      "group": "original_submission",
+      "source": "JASA-template/main.tex",
+      "destination": "supporting/original_submission/main.tex",
+      "sha256": "9ccb52219762217e691d9d858549c7c47fd2bc73c310bca8a40b752aa52cc9cb",
+      "bytes": 70632,
+      "source_unchanged": true
+    },
+    {
+      "group": "original_submission",
+      "source": "JASA-template/scenario_C_arm_set_size_vs_t.png",
+      "destination": "supporting/original_submission/scenario_C_arm_set_size_vs_t.png",
+      "sha256": "e3ba6d3f9ea10edbe9008db95dc0c2b0e1f0a9eb01055aade0ef3facae01a470",
+      "bytes": 124295,
+      "source_unchanged": true
+    },
+    {
+      "group": "original_submission",
+      "source": "JASA-template/scenario_C_dynamic_regret_vs_t.png",
+      "destination": "supporting/original_submission/scenario_C_dynamic_regret_vs_t.png",
+      "sha256": "b7d7b26642b3bbce44f38bce622676e9c83c0beae4a158cde853b4bcb20df48e",
+      "bytes": 177477,
+      "source_unchanged": true
+    },
+    {
+      "group": "original_submission",
+      "source": "JASA-template/scenario_C_wasted_pulls_eps_0_1.png",
+      "destination": "supporting/original_submission/scenario_C_wasted_pulls_eps_0_1.png",
+      "sha256": "6e97f5922c165b3f325d489a4bf5dde6f5809519c35123f9e24d429259d4732d",
+      "bytes": 49202,
+      "source_unchanged": true
+    },
+    {
+      "group": "original_submission",
+      "source": "JASA-template/scenario_E_arm_set_size_vs_t.png",
+      "destination": "supporting/original_submission/scenario_E_arm_set_size_vs_t.png",
+      "sha256": "218eb4c335b21b96459286f9cb7d76edb275ef4334a5beb1ded751c0e18550c1",
+      "bytes": 117018,
+      "source_unchanged": true
+    },
+    {
+      "group": "original_submission",
+      "source": "JASA-template/scenario_E_dynamic_regret_vs_t.png",
+      "destination": "supporting/original_submission/scenario_E_dynamic_regret_vs_t.png",
+      "sha256": "caa0003385dc40e0d2ab99a49c46790f7da9fe6354b86bf0e6d4080910fcd1c4",
+      "bytes": 129940,
+      "source_unchanged": true
+    },
+    {
+      "group": "original_submission",
+      "source": "JASA-template/scenario_E_wasted_pulls_eps_0_1.png",
+      "destination": "supporting/original_submission/scenario_E_wasted_pulls_eps_0_1.png",
+      "sha256": "7e583a171fa4448392b8575698b09aacd91eb1278e73e2b83205429ae3036efa",
+      "bytes": 46714,
+      "source_unchanged": true
+    },
+    {
+      "group": "original_review",
+      "source": "Reviews_JASA-RA-2026-0866.pdf",
+      "destination": "supporting/original_submission/Reviews_JASA-RA-2026-0866.pdf",
+      "sha256": "4ee1be44544c6b4d6f19bcdbc914ac194ed4ecf4c86ef976953349953fde7823",
+      "bytes": 241727,
+      "source_unchanged": true
+    },
+    {
+      "group": "review_history",
+      "source": "revision_notes/JASA_revision_analysis_2026-09-23.md",
+      "destination": "supporting/review_history/revision_notes/JASA_revision_analysis_2026-09-23.md",
+      "sha256": "87800010239781f482b8c1a8a4abf4a9443945ff471edbb9c7ba192adebd4cb5",
+      "bytes": 31896,
+      "source_unchanged": true
+    },
+    {
+      "group": "review_history",
+      "source": "revision_notes/review_audit_evidence_2026-09-23.json",
+      "destination": "supporting/review_history/revision_notes/review_audit_evidence_2026-09-23.json",
+      "sha256": "f425e2d38b60815760d5c4d8f293ab5c34a2942e58510ff30075879d696bd369",
+      "bytes": 13836,
+      "source_unchanged": true
+    },
+    {
+      "group": "review_history",
+      "source": "reviewer1_response_2026-09-24/response_strategy_and_draft.md",
+      "destination": "supporting/review_history/reviewer1_response_2026-09-24/response_strategy_and_draft.md",
+      "sha256": "033c0626205b84428814f92300371f6e6a355691d0c514e69057830ba7ccdee4",
+      "bytes": 15359,
+      "source_unchanged": true
+    },
+    {
+      "group": "review_history",
+      "source": "reviewer1_response_2026-09-24/technical_positioning_note.md",
+      "destination": "supporting/review_history/reviewer1_response_2026-09-24/technical_positioning_note.md",
+      "sha256": "0f9913d707e8dbf0b3a61c2b1547b2eb467b4b784c80d9bd5ae0980930378fb6",
+      "bytes": 7947,
+      "source_unchanged": true
+    },
+    {
+      "group": "review_history",
+      "source": "reviewer1_response_2026-09-24/validation.json",
+      "destination": "supporting/review_history/reviewer1_response_2026-09-24/validation.json",
+      "sha256": "d3867cf2b0db1215b77a7640ce38421a54375291c33a6d2cbd8395e5b213cfc7",
+      "bytes": 1055,
+      "source_unchanged": true
+    },
+    {
+      "group": "review_history",
+      "source": "adversarial_review_2026-09-23/assessment.md",
+      "destination": "supporting/review_history/adversarial_review_2026-09-23/assessment.md",
+      "sha256": "f9e9d616f123cba10f75b7228b2f65eff61ec1bf117224c08e9dae7b158cf83d",
+      "bytes": 27503,
+      "source_unchanged": true
+    },
+    {
+      "group": "review_history",
+      "source": "adversarial_review_2026-09-23/baseline_and_boundary_checks.md",
+      "destination": "supporting/review_history/adversarial_review_2026-09-23/baseline_and_boundary_checks.md",
+      "sha256": "970e9d7ddcc71309b54e5ba2e7527e2aab0316e7538266d99587e0819bceaa75",
+      "bytes": 8636,
+      "source_unchanged": true
+    },
+    {
+      "group": "review_history",
+      "source": "adversarial_review_2026-09-23/check_review.py",
+      "destination": "supporting/review_history/adversarial_review_2026-09-23/check_review.py",
+      "sha256": "b14d27e35e7f97159b8ad5edb61edaea23c6645cf1ebdfafb601309413e6d313",
+      "bytes": 1912,
+      "source_unchanged": true
+    },
+    {
+      "group": "review_history",
+      "source": "adversarial_review_2026-09-23/evidence.json",
+      "destination": "supporting/review_history/adversarial_review_2026-09-23/evidence.json",
+      "sha256": "21bb024f773a83f33ea9686e0a38b462eddc8848863655bee442eaa92ae5285b",
+      "bytes": 17799,
+      "source_unchanged": true
+    },
+    {
+      "group": "review_history",
+      "source": "adversarial_review_2026-09-23/README.md",
+      "destination": "supporting/review_history/adversarial_review_2026-09-23/README.md",
+      "sha256": "3285ac64fd60188f91f96350870bc3076104400396a0b48f61725f822a296013",
+      "bytes": 1314,
+      "source_unchanged": true
+    },
+    {
+      "group": "review_history",
+      "source": "adversarial_review_2026-09-23/review_checks.json",
+      "destination": "supporting/review_history/adversarial_review_2026-09-23/review_checks.json",
+      "sha256": "e8da24a3319dfbd81e4bc07314d1ce6c39a082b3f3aefae6904437fc82cf7e86",
+      "bytes": 152,
+      "source_unchanged": true
+    },
+    {
+      "group": "review_history",
+      "source": "adversarial_review_2026-09-23/verify_evidence.py",
+      "destination": "supporting/review_history/adversarial_review_2026-09-23/verify_evidence.py",
+      "sha256": "af016d87793cd48a20e61d338701bfbc738c8f4d85ffe2e804ad8cf15620c154",
+      "bytes": 8173,
+      "source_unchanged": true
+    },
+    {
+      "group": "historical_research_input_pdfs",
+      "source": "ucbaa_jasa_resubmission_2026-10-15/audit/source_layout_2026-10-16/previous_revision/baseline/manuscript.pdf",
+      "destination": "supporting/research_input_pdfs/manuscript(2).pdf",
+      "sha256": "eeecbd9680c3f14f046e9f898379f6abbb505f5195405a144552ff207ba2386d",
+      "bytes": 855381,
+      "source_unchanged": true
+    },
+    {
+      "group": "historical_research_input_pdfs",
+      "source": "ucbaa_jasa_resubmission_2026-10-15/audit/source_layout_2026-10-16/previous_revision/baseline/supplement.pdf",
+      "destination": "supporting/research_input_pdfs/supplement(2).pdf",
+      "sha256": "f2d4ebeec121c1f7e03405da8ff4273facde5d69f48ab2cadc0af8db348d0d6e",
+      "bytes": 1106504,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/reproducibility_package.zip",
+      "destination": "supporting/companion_temporal_geometry/reproducibility_package.zip",
+      "sha256": "ada2987f4e88ac30c7367f160f1d9a6e1148321e90d2153d4cd9abaa965bfa58",
+      "bytes": 12763769,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/manuscript.pdf",
+      "destination": "supporting/companion_temporal_geometry/manuscript.pdf",
+      "sha256": "1124af1a652dbaeca1e0a38369c4067018f0e5f88824b02afa110c4e8222f9f7",
+      "bytes": 563569,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/supplement.pdf",
+      "destination": "supporting/companion_temporal_geometry/supplement.pdf",
+      "sha256": "24ca1de62e95f6fb7024a3ab073bdbdf99ffb496b9d79dcb105506382f744fea",
+      "bytes": 435258,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/README.md",
+      "destination": "supporting/companion_temporal_geometry/README.md",
+      "sha256": "d8c5140f96d56cf17c9f4fa48c5c513aad08d720122b34640ff369f6e50c4f73",
+      "bytes": 2763,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/README_reproduction.md",
+      "destination": "supporting/companion_temporal_geometry/README_reproduction.md",
+      "sha256": "0de60fbb7cdd63521dc547682e2e2abb9821925218710844fcd5b6ea7de389e8",
+      "bytes": 2803,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/requirements.txt",
+      "destination": "supporting/companion_temporal_geometry/requirements.txt",
+      "sha256": "07a3a4e0c70bf1f3405e8d82631cf41ff131a0609e44c1a4f25fb81587aec25c",
+      "bytes": 190,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/jasa-reference.bst",
+      "destination": "supporting/companion_temporal_geometry/jasa-reference.bst",
+      "sha256": "0f52ba07d9189aa924d203b000ca72f54c916bc7ed89b9209871d827b206cadb",
+      "bytes": 29474,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/sections/S3_secondary_proofs.tex",
+      "destination": "supporting/companion_temporal_geometry/sections/S3_secondary_proofs.tex",
+      "sha256": "8c01f62000ea313b38b20a931c94fa5f9c1e02edf4736abfe4bd2cf6e9f10564",
+      "bytes": 11015,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/sections/S2_geometry_proofs.tex",
+      "destination": "supporting/companion_temporal_geometry/sections/S2_geometry_proofs.tex",
+      "sha256": "3dfc7b2d02a614193a2e4f9e7ac28e28a15c93607e3a488af11de64a47af87a9",
+      "bytes": 10164,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/sections/S1_spectral_proofs.tex",
+      "destination": "supporting/companion_temporal_geometry/sections/S1_spectral_proofs.tex",
+      "sha256": "918237fb2ba83968c55f1f1933425ab090c1aaf10d1170e3025be53145603a66",
+      "bytes": 16261,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/sections/08_discussion.tex",
+      "destination": "supporting/companion_temporal_geometry/sections/08_discussion.tex",
+      "sha256": "0905bc63242d993210861c52774b07e4a2defe006212652d792500842e30ab22",
+      "bytes": 3010,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/sections/06_random_arrivals.tex",
+      "destination": "supporting/companion_temporal_geometry/sections/06_random_arrivals.tex",
+      "sha256": "c965ec4fdd3e784f9d8540b5fe5346292087ab75fa3f25f5a01e862b7e04bfb0",
+      "bytes": 7868,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/sections/05_capacity.tex",
+      "destination": "supporting/companion_temporal_geometry/sections/05_capacity.tex",
+      "sha256": "5764ecbdd242eeb4c572a24502f2e7885bbd5dea30209e95305cf62c95dc20d6",
+      "bytes": 5471,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/sections/04_scales.tex",
+      "destination": "supporting/companion_temporal_geometry/sections/04_scales.tex",
+      "sha256": "e77bf9ba71d43bde8132de4cebef7652d2f1b0f883f80d11b53786b3c4a13431",
+      "bytes": 4801,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/sections/03_policy.tex",
+      "destination": "supporting/companion_temporal_geometry/sections/03_policy.tex",
+      "sha256": "79f54d9efcdb1f211cf23051e133848d2bf52d8460fa9de32946ac09b46ee481",
+      "bytes": 6880,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/sections/02_geometry.tex",
+      "destination": "supporting/companion_temporal_geometry/sections/02_geometry.tex",
+      "sha256": "3cfb6892a7ecaee2cb5928079d1f0ced67b949b6c4284600731e2083bf6b3a43",
+      "bytes": 6475,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/sections/01_introduction.tex",
+      "destination": "supporting/companion_temporal_geometry/sections/01_introduction.tex",
+      "sha256": "806cc772488744740a1e92872d7c2ddb6d293b38718f342e32684ad872b73886",
+      "bytes": 8331,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/computational_supplement.tex",
+      "destination": "supporting/companion_temporal_geometry/computational_supplement.tex",
+      "sha256": "67560d9e746dc3e96a4320811ed2a4db3cf484139ca4fdb6ce3a9003441f93dd",
+      "bytes": 1224,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/references.bib",
+      "destination": "supporting/companion_temporal_geometry/references.bib",
+      "sha256": "118981915793cae02c11b80dcca14a4881b940452a4246b03ce0cb160d80eb91",
+      "bytes": 6611,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/experiments/experiments.tex",
+      "destination": "supporting/companion_temporal_geometry/experiments/experiments.tex",
+      "sha256": "c60e858aaa8b8ef94dd14e6bb10beb26cd6167df5b67c840510cc5576c73334b",
+      "bytes": 7518,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/figures/fig_policy_comparison.pdf",
+      "destination": "supporting/companion_temporal_geometry/figures/fig_policy_comparison.pdf",
+      "sha256": "9bfc718d4e97694d30185ebf2e0a0bbe07e46eb8189de123085f542654aae5b1",
+      "bytes": 66952,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/figures/fig_structural_diagnostics.pdf",
+      "destination": "supporting/companion_temporal_geometry/figures/fig_structural_diagnostics.pdf",
+      "sha256": "90500ffede7f5daec509a3cfe5ba413e861fa0d347450e6ee783a04739fa8155",
+      "bytes": 49502,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/experiments/results_paragraph.tex",
+      "destination": "supporting/companion_temporal_geometry/experiments/results_paragraph.tex",
+      "sha256": "db2470f230a575f5897eb96f17a1000f1bb86b8c95908159efaa606dffcb9233",
+      "bytes": 911,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/experiments/table_regret.tex",
+      "destination": "supporting/companion_temporal_geometry/experiments/table_regret.tex",
+      "sha256": "bba844ec96081576b1c6834d4209eb2a21251078dcf786de2824971030b42407",
+      "bytes": 900,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/experiments/table_geometry.tex",
+      "destination": "supporting/companion_temporal_geometry/experiments/table_geometry.tex",
+      "sha256": "cc51c47d929511c5ad2990620eeae0edb1360a4285fb047f7c3051e76f891b01",
+      "bytes": 421,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/experiments_v2/random_appendix.tex",
+      "destination": "supporting/companion_temporal_geometry/experiments_v2/random_appendix.tex",
+      "sha256": "5adfc21e7ff2d32b39de13850318f830d8521185e1978dc6dc830762f75ac375",
+      "bytes": 6397,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/figures_v2/random_mixture_comparison.pdf",
+      "destination": "supporting/companion_temporal_geometry/figures_v2/random_mixture_comparison.pdf",
+      "sha256": "b6830b1bcb0796f35ca458b0e89b780ac1680325cb63daf2a541517476391b74",
+      "bytes": 44659,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/experiments_v2/mechanisms_appendix.tex",
+      "destination": "supporting/companion_temporal_geometry/experiments_v2/mechanisms_appendix.tex",
+      "sha256": "1a0e9b58594617950f43600ca2242a8d1de312bb9a2b2955be2bd895f00a2269",
+      "bytes": 4519,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/figures_v2/fig_mechanisms_baselines.pdf",
+      "destination": "supporting/companion_temporal_geometry/figures_v2/fig_mechanisms_baselines.pdf",
+      "sha256": "27412fe1e342e38fc14dfb4a8a7c0bfd572631f57cc8c9434e7aaba79b5f155b",
+      "bytes": 52270,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/figures_v2/fig_mechanisms_windows.pdf",
+      "destination": "supporting/companion_temporal_geometry/figures_v2/fig_mechanisms_windows.pdf",
+      "sha256": "5335bdb68656c1cd3f086b62c422f483d58238a04ac2725ad4274095df8e632f",
+      "bytes": 52351,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/experiments_v2/bayes_supplement.tex",
+      "destination": "supporting/companion_temporal_geometry/experiments_v2/bayes_supplement.tex",
+      "sha256": "4e24ac0c7ab2d7a157a5cd9173c26a7e6ed0c9d56a899353afa4928fd553a4fb",
+      "bytes": 8719,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/figures_v2/fig_geometry_sensitivity.pdf",
+      "destination": "supporting/companion_temporal_geometry/figures_v2/fig_geometry_sensitivity.pdf",
+      "sha256": "1559dca199c462950f33c5727987e1361eec712a732020f56c0434f1d301c9f1",
+      "bytes": 50287,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/figures_v2/fig_bayes_exact.pdf",
+      "destination": "supporting/companion_temporal_geometry/figures_v2/fig_bayes_exact.pdf",
+      "sha256": "cd4b9541feb4181e466eec0fb468ef889f6e10b83d0fb823c3976f5836bda5cf",
+      "bytes": 43048,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/preamble.tex",
+      "destination": "supporting/companion_temporal_geometry/preamble.tex",
+      "sha256": "caf0b5ed880db38d24eb19b732e44786a6db037fc3d006fc40bb79fd0afd61fb",
+      "bytes": 1277,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/supplement.tex",
+      "destination": "supporting/companion_temporal_geometry/supplement.tex",
+      "sha256": "373be9441cad9dc3dbdfb0c2280c03891991c7556e844527edcee3832c0453f9",
+      "bytes": 1076,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/theory/random_positive_results.tex",
+      "destination": "supporting/companion_temporal_geometry/theory/random_positive_results.tex",
+      "sha256": "bf8ea5ddcf8a964064c2c0bd8897185207578e89d9070a60c6e34092da029379",
+      "bytes": 15825,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/theory/new_results.tex",
+      "destination": "supporting/companion_temporal_geometry/theory/new_results.tex",
+      "sha256": "1a97293e113f1f4ef89d907748489cd8e8fa9540c82faa7d5b0bcede12da61f2",
+      "bytes": 17402,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/manuscript.tex",
+      "destination": "supporting/companion_temporal_geometry/manuscript.tex",
+      "sha256": "e98f0bca22ac9e13fff5c68d485fc5378fc6ab02bef27e56fbed82ab067fd1b0",
+      "bytes": 3006,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/experiments_v2/experiments.tex",
+      "destination": "supporting/companion_temporal_geometry/experiments_v2/experiments.tex",
+      "sha256": "414869054b7891e64c28aa157c124a09b761dfbf25311f33fd64696968b11ae0",
+      "bytes": 929,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/experiments_v2/stretch_results.tex",
+      "destination": "supporting/companion_temporal_geometry/experiments_v2/stretch_results.tex",
+      "sha256": "613419d82df932b81f372c73403a9a3fa5be333eac4ca7941e4503b1cafc48e2",
+      "bytes": 2980,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/figures_v2/fig_stretch_heldout.pdf",
+      "destination": "supporting/companion_temporal_geometry/figures_v2/fig_stretch_heldout.pdf",
+      "sha256": "d3676f25000cafd91cb4fed4c015f8119eae5d973ac1dbd1ef2add076eddc24c",
+      "bytes": 48901,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/experiments_v2/random_results.tex",
+      "destination": "supporting/companion_temporal_geometry/experiments_v2/random_results.tex",
+      "sha256": "ed2639cafabcd1e604f6ef86b62e9c9f8bcddae2c2318e89b0d9617436f33d41",
+      "bytes": 3697,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/figures_v2/random_gap_heatmap.pdf",
+      "destination": "supporting/companion_temporal_geometry/figures_v2/random_gap_heatmap.pdf",
+      "sha256": "f90161f72a951914c671b9278d98ab252f68f8ca51b0aca68a7cc7b2afe3ac97",
+      "bytes": 50506,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/figures_v2/random_common_gap.pdf",
+      "destination": "supporting/companion_temporal_geometry/figures_v2/random_common_gap.pdf",
+      "sha256": "0cd8675c9aec357794b81104b2b9c03cb8c2cbefcbc0b04879c95aee175ab553",
+      "bytes": 49478,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/experiments_v2/mechanisms_results.tex",
+      "destination": "supporting/companion_temporal_geometry/experiments_v2/mechanisms_results.tex",
+      "sha256": "378387442c5d4a19c77b08ed16aa56630b7b29b3eb107f30192bfc538334e0db",
+      "bytes": 4780,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/figures_v2/fig_mechanisms_ablation.pdf",
+      "destination": "supporting/companion_temporal_geometry/figures_v2/fig_mechanisms_ablation.pdf",
+      "sha256": "2fda937c5d38932f85f5d8c258815ba3d5c8ad567054ae910c90f9124ea72bab",
+      "bytes": 54378,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/experiments_v2/mechanisms_table_baselines.tex",
+      "destination": "supporting/companion_temporal_geometry/experiments_v2/mechanisms_table_baselines.tex",
+      "sha256": "8529a7bcf4b5bfeb4c462395afddee2e8c9df8a26d2694762c552bd20480f7aa",
+      "bytes": 1148,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/experiments_v2/geometry_results.tex",
+      "destination": "supporting/companion_temporal_geometry/experiments_v2/geometry_results.tex",
+      "sha256": "39dea8ed2040d4e79aae4ad8e42ee8e44739be7c0ef4315f8ca77c07a96dbd01",
+      "bytes": 3972,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/figures_v2/fig_geometry_risk.pdf",
+      "destination": "supporting/companion_temporal_geometry/figures_v2/fig_geometry_risk.pdf",
+      "sha256": "cd88e581176ae2fca7003797d7359752228cec6b225d695efb4e0b508773dce2",
+      "bytes": 53244,
+      "source_unchanged": true
+    },
+    {
+      "group": "companion_temporal_geometry",
+      "source": "reconstruction_jasa_stage2_2026-10-13/jasa_submission.tex",
+      "destination": "supporting/companion_temporal_geometry/jasa_submission.tex",
+      "sha256": "4008ecc955661c8aefb7778ef8bf05a913b706fe58a15722d4e0993f5c41242c",
+      "bytes": 2221,
+      "source_unchanged": true
+    }
+  ],
+  "groups": {
+    "companion_temporal_geometry": {
+      "files": 50,
+      "bytes": 14589211
+    },
+    "historical_research_input_pdfs": {
+      "files": 2,
+      "bytes": 1961885
+    },
+    "original_review": {
+      "files": 1,
+      "bytes": 241727
+    },
+    "original_submission": {
+      "files": 15,
+      "bytes": 5522593
+    },
+    "proposal": {
+      "files": 40,
+      "bytes": 6297787
+    },
+    "review_history": {
+      "files": 12,
+      "bytes": 135582
+    }
+  },
+  "copied_files": 120,
+  "total_bytes": 28748785,
+  "final_source_and_destination_hashes_verified": true,
+  "companion_scope": "Separate cited input. Its complete ZIP contains independent experiments; no result is reattributed to the current paper.",
+  "current_editable_tex_entry": "manuscript.tex",
+  "historical_c16_input_identities": [
+    {
+      "historical_name": "manuscript(2).pdf",
+      "packaged_path": "supporting/research_input_pdfs/manuscript(2).pdf",
+      "sha256": "eeecbd9680c3f14f046e9f898379f6abbb505f5195405a144552ff207ba2386d",
+      "bytes": 855381,
+      "matches_c16_source_documents": true
+    },
+    {
+      "historical_name": "supplement(2).pdf",
+      "packaged_path": "supporting/research_input_pdfs/supplement(2).pdf",
+      "sha256": "f2d4ebeec121c1f7e03405da8ff4273facde5d69f48ab2cadc0af8db348d0d6e",
+      "bytes": 1106504,
+      "matches_c16_source_documents": true
+    },
+    {
+      "historical_name": "manuscript(1).pdf",
+      "packaged_path": "supporting/companion_temporal_geometry/manuscript.pdf",
+      "sha256": "1124af1a652dbaeca1e0a38369c4067018f0e5f88824b02afa110c4e8222f9f7",
+      "bytes": 563569,
+      "matches_c16_source_documents": true
+    },
+    {
+      "historical_name": "supplement(1).pdf",
+      "packaged_path": "supporting/companion_temporal_geometry/supplement.pdf",
+      "sha256": "24ca1de62e95f6fb7024a3ab073bdbdf99ffb496b9d79dcb105506382f744fea",
+      "bytes": 435258,
+      "matches_c16_source_documents": true
+    },
+    {
+      "historical_name": "cp_ucb_aa.py",
+      "packaged_path": "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/cp_ucb_aa.py",
+      "sha256": "272815cbb45e2de1a99f849bd4718892ef6bc010d081e0eaf2ec45b21c746ef9",
+      "bytes": 6201,
+      "matches_c16_source_documents": true
+    }
+  ],
+  "added_document": {
+    "path": "supporting/README.md",
+    "sha256": "80459a1973291a925a67f45a2d7a7d10214c334d6ef698a99f0783dbb960926b"
+  }
+}

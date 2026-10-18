@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "checks": [
+    "full_synthetic_matrix",
+    "paired_MCSE",
+    "Bonferroni_widens_CI",
+    "stratified_suite_MCSE",
+    "repeat_analysis_excludes_derived_CSV",
+    "balanced_but_missing_last_rep",
+    "duplicate_success_row",
+    "debug_horizon_not_formal",
+    "unpaired_potential_streams",
+    "invalid_count_vector",
+    "error_row",
+    "mixed_protocol_versions"
+  ],
+  "n_synthetic_rows": 2304,
+  "no_bandit_policies_executed": true,
+  "expected_difference": 0.10030655617143973,
+  "expected_paired_mcse": 0.0036110835675989368,
+  "analysis_sha256": "d6426bc47344b1b867d7041a4085e1286530fc4e7dbd5c473a2c0335a83fa6ef"
+}

@@ -1,0 +1,101 @@
+\section{A general information-allocation lower relaxation}
+\label{app:information}
+
+This result is useful beyond the separated family, but does not assert
+attainability. Fix a reference environment $\mu$, endpoint $T$, and a
+deterministic query set
+\[
+ \mathcal Q\subseteq\{(i,t):i\in A_t,
+                  |\Delta_i(t)-\varepsilon|>\eta\},\qquad W=|\mathcal Q|.
+\]
+For each query choose any allowed alternative $\lambda$ that reverses arm
+$i$'s membership at time $t$. Put $u_{i,t}=P_\mu(i\in V_t)$ and
+\[
+ \Phi_\delta(u)=
+ \begin{cases}
+ \kl(1-\delta-u,\delta),&0\le u<1-2\delta,\\
+ 0,&1-2\delta\le u\le1.
+ \end{cases}
+\]
+This function is convex and nonincreasing: the positive branch is an affine
+composition of binary KL, and its value and derivative vanish at the join.
+
+\begin{proposition}[One protocol for area and information]
+\label{prop:information}
+For any reliable policy,
+\[
+ \sum_jE_\mu N_j(t)\kl(\mu_j,\lambda_j)
+                       \ge\Phi_\delta(u_{i,t}).
+\]
+If its joint area budget at $\mu$ is $a$, then
+$\sum_{(i,t)\in\mathcal Q}u_{i,t}\le a+\delta W$. Consequently $E_\mu R_T$
+is at least the value of
+\[
+ \inf_{x,u}\sum_{s\le T}\sum_{j\in A_s}\Delta_j(s)x_{s,j},
+\]
+subject to $x_{s,j}\ge0$, $\sum_{j\in A_s}x_{s,j}=1$, no prearrival
+allocations, the preceding unresolved-probability constraint, and for every
+query and chosen alternative,
+\[
+ \sum_{s\le t}\sum_jx_{s,j}\kl(\mu_j,\lambda_j)
+                             \ge\Phi_\delta(u_{i,t}).
+\]
+For non-Bernoulli laws replace binary arm divergences by their distributional KL.
+\end{proposition}
+\begin{proof}
+Let $F$ be the event of issuing, at $(i,t)$, the determinate label correct in
+the reference environment. Then $P_\mu(F)\ge1-u_{i,t}-\delta$, whereas
+$P_\lambda(F)\le\delta$. The history-KL identity and data processing give
+the claimed constraint whenever $1-u_{i,t}-\delta>\delta$; otherwise
+nonnegativity suffices. This is the precise point where the truncated KL is
+needed. On area success the queried unresolved sum is at most $a$; outside
+success it is at most $W$. Taking expectations gives $a+\delta W$.
+The actual occupation probabilities $x_{s,j}=P_\mu(I_s=j)$ satisfy every
+constraint, with objective exactly $E_\mu R_T$.
+\end{proof}
+
+One observation can enter many information constraints but is charged once
+in the objective. Neither convex feasibility nor an oracle allocation proves
+that a policy with unknown means and future arrivals attains this relaxation.
+Dropping $\delta W$ would also change the stated risk protocol.
+
+\section{Intermediate configurations and known-reference diagnostics}
+\label{app:variants}
+
+In the homogeneous repeated-update family, define
+\[
+ B_{J,M}=2(M+1)\{J(2M+1)+J(J-1)/2\}+2(M+J+1).
+\]
+If a predetermined set of $s$ of the $J$ candidate batches uses precision
+$\rho_f=d/4$ and the rest uses $\rho_c=v/8$, the shared-evidence bound gives
+\[
+ \mathcal A_T(\eta)\le(J-s)MH+B_{J,M}q_f
+\]
+on checkpoint coverage. The unconditional reward bound gives
+\[
+ ER_T\le2\varepsilon M\{sq_f+(J-s)q_c\}
+ +64\left(\frac{JM}{\varepsilon}+\frac{J^2}{v}\right)\log(2T)+1.
+\]
+Every adjacent precision pair satisfies
+$d+\rho_e+\rho_{e+1}<v$, and every window completes its checkpoints, so
+the proof follows by applying the same batchwise accounting. The choice of
+which batches receive fine service must be made without their reward data.
+These are attainable points, not a proof of optimality at every area budget.
+
+An additional diagnostic gives each batch's reference identity to the policy
+and discloses that its role is best within its own window. Its numerical mean
+remains unknown. Sample the reference to its checkpoint, then its candidates
+to theirs, and otherwise sample the latest reference. Keep the same reporting
+comparisons. For windows long enough to complete this work, the regret in the
+specified family is pathwise
+\[
+ R_T=\sum_{e,k}(\varepsilon-\sigma_{e,k}d)q_{e,k}.
+\]
+Reference sampling and idle exploitation have zero regret, whereas each
+candidate checkpoint occurs in its birth window and pays its displayed gap.
+The coarse version has $R_T\le2\varepsilon JM q_c$ with no extra $\log T$
+reward term. Comparing with the rapid lower bound isolates a squared
+$v/d$ cost ratio. This additional role information makes the allocation
+problem easier; this policy is not the main unknown-reference algorithm.
+Its interval-based label reliability still holds on the full bounded model,
+while its reward statement only holds on the disclosed-role performance family.

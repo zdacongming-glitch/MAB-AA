@@ -1,0 +1,130 @@
+\section{Independent Random Arrivals and the Order of Minimax Operations}\label{sec:random}
+\subsection{Why Deterministic Risks Cannot Simply Be Averaged}
+The deterministic analysis immediately supplies an upper bound for a random schedule independent of the reward streams and policy randomization. Conditional on its full realization, the potential streams keep their original laws. Hence, for each fixed environment,
+\begin{equation}\label{eq:random-upper}
+ \EE R_T(\pi^{\mathrm{MC}})
+ \le\EE_\tau\min\{T,300\cS_T(\tau)\}
+ \le\min\{T,1200\EE_\tau\cC_T(\tau)\}.
+\end{equation}
+There is no corresponding general lower bound obtained by averaging Theorem~\ref{thm:main}. Its least favorable reward environment may depend on the realized schedule. When the environment must be chosen before an independent schedule draw, these choices are no longer admissible. Random-horizon minimax problems have been studied in online learning: for a restricted adversarial full-information loss game, \citet{luo2014horizon} show that the minimax value does equal the average of the fixed-horizon values. The stationary bandit construction below has a different conclusion and different information assumptions.
+
+To formalize the distinction, let $\mathcal Q$ be a distribution over arrival schedules and put
+\[
+ \cR_T^{\mathrm{joint}}(\mathcal Q)
+ =\inf_{\pi}\sup_P\EE_{\tau\sim\mathcal Q,P}^{\pi}R_T.
+\]
+Here $P$ is fixed independently of $\tau$. The policy may know $T$ and $\mathcal Q$, and sees arrivals causally. This information class is specified separately from that of MC-MOSS; the result below establishes a boundary of the deterministic-schedule characterization.
+
+\begin{theorem}[A logarithmic separation]\label{thm:random-main}
+For every integer $m\ge1$, let $T_m=4^m$. There is an independent two-arm arrival law $\mathcal Q_m$ such that
+\begin{equation}\label{eq:random-main}
+ \EE_\tau\cC_{T_m}(\tau)=c_m(m+1),\quad
+ \frac1{16}\le\cR_{T_m}^{\mathrm{joint}}(\mathcal Q_m)\le380,
+ \quad c_m=\left(\sum_{j=0}^m2^{-j}\right)^{-1}.
+\end{equation}
+Thus $\EE_\tau\cR_{T_m}(\tau)$ can be of order $\log T_m$, while the joint minimax risk is of order one.
+\end{theorem}
+
+The anchor arrives at time one. Draw $J$ with probability $c_m2^{-j}$ on $j=0,\ldots,m$, and let the only competitor have remaining lifetime $H=4^J$. Its conditional capacity is $\sqrt H$, giving the first equality. If the two means have fixed gap $\Delta>0$, a known-horizon two-arm MOSS policy, started when the competitor arrives, satisfies
+\[
+ \EE R_H\le\min\left\{H\Delta,
+ \frac{50[1+\log_+(H\Delta^2)]}{\Delta}\right\}.
+\]
+The known endpoint reveals $H$ at arrival, so this construction is causal. Averaging its bound gives a sum over $x_j=\Delta2^j$ of terms bounded by
+\[
+ \min\{x_j,50(1+2\log_+x_j)/x_j\}.
+\]
+The terms below one have a bounded geometric sum. The terms above one also sum to a constant, because their denominator doubles while the logarithm increases linearly. A two-point testing argument on the event $H=1$ gives the lower constant. The supplement proves the local MOSS bound and both claims in \eqref{eq:random-main}.
+
+Every remaining-lifetime scale can be hard when it is allowed its own gap. A single gap chosen before the random schedule is drawn cannot be simultaneously worst at all these scales. This is the source of the separation. It leaves the conditional upper bound \eqref{eq:random-upper} intact, but rules out its general interpretation as a matching characterization of the independent-random-arrival minimax problem.
+
+\subsection{A Positive Result for a Revealing Batch Template}
+The obstruction has a computable resolution when the identities and
+relative times of the batches are fixed and only their common time
+scale is random. Fix disjoint nonempty batches $B_1,\ldots,B_b$ and
+$\alpha_1>\cdots>\alpha_b=1$. Draw a positive integer $H$ from a known
+finite law $Q$, with $\alpha_jH$ integer for every batch. For a known
+endpoint $T\ge\alpha_1\max\operatorname{supp}(Q)$, batch $j$ arrives at
+\[
+ \tau_j=T-\alpha_jH+1.
+\]
+The anchor alone is available before the first batch. Labels and
+reward laws are fixed before $H$ is drawn. The first arrival reveals
+$H=(T-\tau_1+1)/\alpha_1$; using this information is permitted by the
+causal observation model.
+
+Define
+\begin{equation}\label{eq:random-W-main}
+ W(Q)=\sup_{x\ge1}\frac{\EE_Q\min\{H,x\}}{\sqrt x}
+ =\max_{h\in\operatorname{supp}(Q)}
+       \frac{\EE_Q\min\{H,h\}}{\sqrt h}.
+\end{equation}
+For a chosen testing scale $x$, the numerator counts the expected
+number of rounds in which that test can be carried out, truncated at
+$x$. Division by $\sqrt x$ reflects the gap scale that keeps those
+observations difficult. The same $x$ is used across every realization
+of the arrival process.
+
+\begin{theorem}[Fixed-template random arrivals]\label{thm:random-positive-main}
+For the preceding experiment,
+\begin{equation}\label{eq:random-template-main}
+ \frac{W(Q)}{32}\le\cR_T^{\mathrm{joint}}
+ \le A_{\boldsymbol\alpha,\boldsymbol B}W(Q),
+\end{equation}
+where, writing $k_j=1+\sum_{r\le j}|B_r|$,
+$d_j=\alpha_j-\alpha_{j+1}$ for $j<b$, and $d_b=1$, one may take
+\[
+ A_{\boldsymbol\alpha,\boldsymbol B}
+   =\sum_{j=1}^b(20k_j+43)(k_j-1)\sqrt{d_j}.
+\]
+The upper bound is attained by a causal rule that plays the anchor
+until the first batch, then starts fixed-horizon MOSS with fresh
+statistics at each batch, using the revealed interval length $d_jH$.
+The lower bound allows the learner to use all observations and even
+to know $H$ from the beginning.
+\end{theorem}
+
+The constants are uniform in $Q$, its support range and $T$, with the
+batch template held fixed. They are not uniform in a growing number
+of arms or batches. The attaining rule is a known-endpoint
+construction; this theorem does not assign the same guarantee to
+MC-MOSS or imply that cold restarting is preferable in general.
+
+The lower bound uses a single final-batch candidate with mean
+$1/2\pm1/(8\sqrt x)$ and sets every other mean to $1/2$. Earlier
+observations carry no information about the sign. Testing in the
+first $\min\{H,x\}$ rounds after that candidate arrives yields the
+numerator in \eqref{eq:random-W-main}, with a prior independent of $H$.
+For the upper bound, the positive gap of a fixed arm within a fixed
+batch interval is the same for every stretch. A tail integration
+argument bounds the average of its fixed-horizon MOSS cost by a
+constant times $W(Q)$. Summing the interval costs includes all rounds
+after the first arrival. The supplement proves the constants and
+justifies the use of fresh future reward streams after a reset.
+
+The functional has a simple tail interpretation:
+\begin{equation}\label{eq:random-W-tail-main}
+ V(Q)\le W(Q)\le2V(Q),\qquad
+ V(Q)=\max_{h\in\operatorname{supp}(Q)}\sqrt h\,\PP_Q(H\ge h).
+\end{equation}
+This is the usual weak tail quantity of $\sqrt H$, used here as a
+statistical complexity. It is computable from the arrival law alone.
+For the fixed template, deterministic capacity is between $\sqrt H$
+and $\sqrt{(k_b-1)\alpha_1H}$. Consequently,
+\begin{equation}\label{eq:random-D-main}
+ \frac{\EE_Q\cC_T(\tau(H))}{\cR_T^{\mathrm{joint}}}
+ \asymp_{\boldsymbol\alpha,\boldsymbol B}
+ D(Q),\qquad D(Q)=\frac{\EE_Q\sqrt H}{W(Q)}\ge1.
+\end{equation}
+Thus averaging the deterministic capacity remains correct, up to
+fixed-template constants, precisely for families of laws with bounded
+$D(Q)$. A deterministic scale gives $D=1$, and support in
+$[h_0,Lh_0]$ gives $D\le\sqrt L$. For
+$\PP(H=4^j)=c_m2^{-j}$, $W(Q)<3$ while
+$\EE\sqrt H=c_m(m+1)$. For a noninteger template, use $H=q4^J$
+with a fixed positive integer $q$ making every $q\alpha_j$ an integer;
+both quantities are then multiplied by $\sqrt q$.
+The earlier separation therefore extends to
+every fixed multi-batch template in this class. Unknown endpoints,
+nonrevealing arrival laws and growing templates remain separate
+problems.

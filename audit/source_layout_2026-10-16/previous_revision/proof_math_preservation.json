@@ -1,0 +1,13 @@
+{
+  "scope": "Display migration only; not independent proof verification",
+  "baseline_display_count": 72,
+  "revised_display_count": 72,
+  "removed_displays": [
+    "D(P\\VertQ)\\ge\\operatorname{kl}(P(F),Q(F))."
+  ],
+  "added_displays": [
+    "D(P\\VertQ)\\ge\\operatorname{kl}(P(F),Q(F))\\geP(F)\\log\\frac1{Q(F)}-\\log2."
+  ],
+  "expected_information_tools_merge_only": true,
+  "legacy_theory_sources_unchanged": true
+}

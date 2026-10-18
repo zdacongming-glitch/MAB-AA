@@ -1,0 +1,111 @@
+{
+  "kind": "single-run implementation sanity check",
+  "seed": 20261014,
+  "T": 20000,
+  "epsilon": 0.3,
+  "delta": 0.05,
+  "precision": 0.12,
+  "eta": 0.1,
+  "pseudo_regret": 886.1399999999544,
+  "unresolved_area": 8686,
+  "observed_label_error_rounds": 0,
+  "fixed_checkpoint_intervals_cover": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "final_counts": {
+    "1": 5142,
+    "2": 858,
+    "3": 4975,
+    "4": 1025,
+    "5": 6872,
+    "6": 1128
+  },
+  "quotas": {
+    "1": 705,
+    "2": 858,
+    "3": 954,
+    "4": 1025,
+    "5": 1082,
+    "6": 1128
+  },
+  "snapshots": [
+    {
+      "t": 1,
+      "C": [],
+      "D": [],
+      "V": [
+        1,
+        2
+      ]
+    },
+    {
+      "t": 6000,
+      "C": [
+        1
+      ],
+      "D": [],
+      "V": [
+        2
+      ]
+    },
+    {
+      "t": 6001,
+      "C": [],
+      "D": [],
+      "V": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "t": 12000,
+      "C": [
+        1,
+        3
+      ],
+      "D": [
+        2
+      ],
+      "V": [
+        4
+      ]
+    },
+    {
+      "t": 12001,
+      "C": [],
+      "D": [
+        2
+      ],
+      "V": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "t": 20000,
+      "C": [
+        5
+      ],
+      "D": [
+        2,
+        4
+      ],
+      "V": [
+        1,
+        3,
+        6
+      ]
+    }
+  ],
+  "warning": "This is not the separated theorem family, not a baseline comparison, and not an estimate of a 1-delta guarantee."
+}

@@ -1,0 +1,31 @@
+{
+  "all_rows_present": true,
+  "maximum_regret_decomposition_error": 3.069544618483633e-12,
+  "total_runs": 5760,
+  "error_runs": 0,
+  "replications_per_environment": 160,
+  "zero_error_one_sided95_upper_per_environment_method": 0.018549134077503804,
+  "fixed_checkpoint_quotas": {
+    "0.04": [
+      6344,
+      7718,
+      8584,
+      9223,
+      9730,
+      10150,
+      10510,
+      10824
+    ],
+    "0.12": [
+      705,
+      858,
+      954,
+      1025,
+      1082,
+      1128,
+      1168,
+      1203
+    ]
+  },
+  "joint_label_reliability_claim": "Not empirically established; finite scenarios and Monte Carlo sampling cannot verify uniform time-uniform reliability."
+}

@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "scope": "read-only reanalysis, figures and exact copies; no new comparative simulation",
+  "frozen_source_files": 172,
+  "original_manifest_entries_checked": 175,
+  "frozen_source_unchanged": true,
+  "stored_records": 28800,
+  "corrected_primary_records": 27648,
+  "stored_methods": 25,
+  "primary_methods": 24,
+  "summary_mean_max_abs_error": {
+    "regret": 4.547473508864641e-13,
+    "area": 1.4551915228366852e-11,
+    "service_pulls": 4.547473508864641e-13,
+    "service_regret": 4.547473508864641e-13,
+    "service_denials": 4.547473508864641e-13,
+    "reward_projections": 5.551115123125783e-17,
+    "service_mass": 1.8189894035458565e-12,
+    "active_service_rounds": 0.0,
+    "final_unresolved": 4.440892098500626e-16,
+    "final_all_unresolved": 4.440892098500626e-16
+  },
+  "mean_wins": 59,
+  "all_five_mean_wins_scenarios": 11,
+  "strict_family60": 52,
+  "relaxed_family60": 54,
+  "equal_scenario_mean_reduction_vs_thompson_percent": 19.484622855875145,
+  "phase_integer_boundary_cases": 1035,
+  "phase_residual_range": [
+    0.0,
+    1.000000002899469
+  ],
+  "failure_paths_retained": 164,
+  "development_rows": {
+    "development-all": 2640,
+    "development2-all": 5616,
+    "development3-all": 5760
+  },
+  "figures": [
+    "reward-paired.pdf",
+    "preference-tradeoff.pdf"
+  ],
+  "generated_tex_files": 0,
+  "release_copies": 172
+}

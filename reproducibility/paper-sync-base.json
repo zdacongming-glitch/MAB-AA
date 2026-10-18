@@ -1,0 +1,14 @@
+{
+  "baseline_semantics": "Mutable common SHA-256 baseline for the seven audited manuscript assets; historical research manifests remain unchanged.",
+  "files": {
+    "figures/fig_cost_area.pdf": "2a9aeb9cbb61df077804344a8bc51dc8e1c192ec7c568e0ee5e7aa55a11e3693",
+    "figures/fig_paths_pair1.pdf": "36132c84cf7d19a3212baaf2425aa9f1e966e3a5c40cd6ab8c273c5f6fcaef9e",
+    "figures/fig_paths_pair2.pdf": "d89e0fca80293eb8f2636cb05504e9c27efb0625bd0cd5e859b1377a55020997",
+    "manuscript.tex": "8224019a719e477cb697cf2c7134a56a09425bb76e62a279d7806dfca3cad76d",
+    "references.bib": "7535ef2e456e5a4d8775ec41b3a753389c462500d2ef2818bdc7bb7e96dc6310",
+    "revision2/generated/preference-tradeoff.pdf": "cc79f6c3d07fdd857e8ab57c591e3982bf1154ab4d2d23dca1c6b66d7b0eb566",
+    "revision2/generated/reward-paired.pdf": "5d43d48a1087bf22d9a05d41ddc5b715608882da9c92722e827f24aa9786e542"
+  },
+  "initialization": "2026-10-18 repository split; hashes read from the original Overleaf manuscript working tree before copying.",
+  "schema_version": 1
+}

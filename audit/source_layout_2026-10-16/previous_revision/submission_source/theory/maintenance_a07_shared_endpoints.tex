@@ -1,0 +1,122 @@
+% Reorganized from the frozen October 15, 2026 supplement.
+\section{Shared evidence and rapid/deferred endpoints}
+\label{app:reuse}
+
+\subsection{Shared evidence across separated windows}
+Let batch $e$ have reference mean $b_e$, $M_e$ candidate means
+$b_e-\varepsilon\pm d_e$, and common predetermined precision $\rho_e$.
+The final batch contains only its reference; set $M_J=M_{-1}=0$ and
+$S_e=\sum_{i\in F_e}q_i(\rho_e)$. Assume
+\[
+ H_e\ge2S_e,\quad b_J-b_0\le\varepsilon/4,\quad
+ d_e+\rho_e+\rho_{e+1}<b_{e+1}-b_e,\quad
+ 2\max_e\rho_e\le\varepsilon/2.
+\]
+The algorithm is not told which arm is the reference or when the next window
+starts. By induction every batch completes its checkpoints within its first
+$2S_e$ rounds, before the next batch appears. On coverage, successive
+reference levels satisfy $b_e+\rho_e<b_{e+1}-\rho_{e+1}$. Once batch $e$
+completes, the maximum upper endpoint of all available arms is at most
+$b_e+\rho_e$. Its candidates are therefore completely classified when
+$2\rho_e<d_e$.
+
+An old candidate in batch $e-1$ has upper endpoint at most
+$b_{e-1}-\varepsilon+d_{e-1}+\rho_{e-1}$, whereas the new reference has
+lower endpoint at least $b_e-\rho_e$. Their difference exceeds
+$\varepsilon$, excluding the entire preceding candidate batch without any
+further old-arm observations. Older exclusions persist. Every reference has
+gap at most $\varepsilon/4$ and total endpoint error at most
+$\varepsilon/2$, so all references become positively certified.
+If $F=\{e<J:2\rho_e<d_e\}$, the area is consequently at most
+\[
+ \sum_{e\notin F}M_eH_e+2\sum_{e\in F}M_eS_e+
+                2\sum_{e=0}^J(e+1+M_{e-1})S_e.
+\]
+The terms cover current nonfine candidates, fine candidates, and temporarily
+unresolved references plus the preceding candidate batch. All earlier
+candidate batches have already been excluded.
+
+For expected regret, every observation with pre-pull count below $q_i$
+occurs in its arm's birth window. Such reference observations have zero
+regret, and candidate observations cost at most $\varepsilon+d_e$ each.
+All observations with pre-pull count at least $q_i$ are ordinary UCB pulls.
+For each arm that has a positive gap by $T$, let
+$\gamma_i=\min_{t\le T:i\in\mathcal A_t,\,\Delta_i(t)>0}\Delta_i(t)$
+and $D_i^T=\max_{t\le T:i\in\mathcal A_t}\Delta_i(t)$.
+Use the good-round concentration bound from Section~\ref{app:joint}. At a good UCB round, any positive-gap
+pull has pre-pull count at most $12\log(2T)/\gamma_i^2$. Since lifetime counts do not
+repeat, this gives the unconditional bound
+\begin{equation}
+\label{eq:app_reuse_regret}
+ ER_T\le\sum_{e<J}\sum_{k=1}^{M_e}(\varepsilon+d_e)q_{e,k}
+ +\sum_{i:\gamma_i\text{ exists}}D_i^T
+ \left[\left\lceil\frac{12\log(2T)}{\gamma_i^2}\right\rceil-q_i+1\right]_+
+ +1.
+\end{equation}
+The completion-before-next-batch assumption is essential to the first
+charging term. It is not an assertion about arbitrary overlapping arrivals.
+
+\subsection{Rapid and deferred endpoints on one family}
+\label{app:tradeoff}
+
+Here $J\ge1$, $M\ge\max\{2,J\}$,
+$0<\varepsilon\le1/8$, $0<\delta\le1/16$, $Jv\le\varepsilon/4$,
+$0<d\le v/32$, and $\eta=d/2$. The reference means are
+$b_e=1/2+ev$ and the $M$ candidates born in window $e<J$ have means
+$b_e-\varepsilon+\sigma_{e,k}d$. Each window has length $H$, and the final
+window contains only a new reference. Set
+\[
+ K=J(M+1)+1,\quad L_K=\log\frac{4K(K+1)}\delta,
+ \quad q_f=\lceil32L_K/d^2\rceil,\quad q_c=\lceil128L_K/v^2\rceil,
+\]
+\[
+ H=128(M+J+1)q_f,\qquad T=(J+1)H,\qquad V=JMH.
+\]
+These are analysis quantities: the policy uses the selected precision
+$\rho_f=d/4$ or $\rho_c=v/8$, not $K,H,T$ or the best-arm identities.
+Both choices satisfy the separated-window conditions.
+
+The preceding area bound is at most $B_{J,M}q_f$ for the fine policy and
+$V+B_{J,M}q_c$ for the coarse policy, where
+\[
+ B_{J,M}=2(M+1)\{J(2M+1)+J(J-1)/2\}+2(M+J+1).
+\]
+For $2\le M$ and $J\le M$, $B_{J,M}\le12JM^2$. Indeed,
+$M+1\le3M/2$, $2M+1\le5M/2$, and $J-1\le M$ bound the main term by
+$9JM^2$, and the final term by $3JM^2$. The definition of $H$ gives
+$B_{J,M}q_f\le V/8$, while $q_c\le q_f$ gives coarse area at most $9V/8$.
+Both statements hold on the same fixed-checkpoint coverage event of
+probability at least $1-\delta/2$.
+
+For rapid maintenance the area-to-regret lower bound applies. For its upper
+bound, every available arm in this family has gap at most $2\varepsilon$.
+Hence, on every path, $R_T\le2\varepsilon T$. Since
+$(J+1)(M+J+1)/(JM)\le5$,
+\[
+ 2\varepsilon T\le1280\varepsilon JM q_f.
+\]
+Furthermore $K\le2M^2$, $K+1\le3M^2$ imply
+$L_K\le5\log(M/\delta)$, and
+$q_f\le165d^{-2}\log(M/\delta)$. Thus
+\[
+ 2^{-20}\frac{\varepsilon JM}{d^2}\log\frac M\delta
+ \le\mathfrak R_\Theta(V/8)
+ \le2^{18}\frac{\varepsilon JM}{d^2}\log\frac M\delta.
+\]
+This upper bound uses the stated horizon and must not be extended unchanged
+to arbitrarily long windows.
+
+For the coarse policy, within-checkpoint candidate regret is at most
+$2\varepsilon JM q_c$. Candidates have
+$\gamma_i\ge\varepsilon-d\ge3\varepsilon/4$, $D_i^T\le2\varepsilon$;
+old references have $\gamma_i\ge v$, $D_i^T\le Jv$. Dropping the favorable
+quota subtraction in \eqref{eq:app_reuse_regret} and absorbing integer terms
+gives
+\[
+ \sup_\Theta ER_T\le2\varepsilon JM q_c+
+ 64\left(\frac{JM}{\varepsilon}+\frac{J^2}{v}\right)\log(2T)+1.
+\]
+At fixed $J,M,\varepsilon,v,\delta$, $d\downarrow0$ makes
+$T=\Theta(d^{-2})$. Consequently the rapid endpoint is $\Theta(d^{-2})$
+and the deferred endpoint is at most $O(\log(1/d))$. No matching lower bound
+for the latter endpoint is asserted.

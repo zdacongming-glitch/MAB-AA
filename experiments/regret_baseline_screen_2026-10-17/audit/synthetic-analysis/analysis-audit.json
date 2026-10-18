@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "formal_complete_matrix": true,
+  "rows": 2304,
+  "methods": 2,
+  "scenarios": 12,
+  "repetitions_per_cell": 96,
+  "protocol_sha256": "fcb9439071c227a8e16d1ad52945106847126214a6e7d652dc52c22e4e66cce9",
+  "source_payload_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "interval_note": "Paired two-sided Student t intervals; Bonferroni simultaneous intervals cover all non-F-R methods times scenarios. Descriptive screening on an already observed holdout, not a fresh confirmatory test.",
+  "suite_note": "Equal scenario weighting. Raw cumulative regret has scenario-dependent horizon/gaps. Mean ratio SE uses a paired delta approximation, including denominator covariance. Aggregate paired-difference intervals conservatively use the smallest per-scenario degrees of freedom; cross-scenario seeds are independent.",
+  "historical_references": []
+}

@@ -1,0 +1,86 @@
+\section{Introduction}
+\label{sec:introduction}
+
+A sequential experiment may need to retain several promising alternatives
+while new alternatives continue to enter. Examples include a testing platform
+that receives externally generated designs and an experimental pipeline that
+introduces candidates during an ongoing study. The investigator must decide
+which alternative to sample and what the accumulated evidence says about the
+whole candidate set. Cumulative reward loss measures the quality of allocation,
+but a small loss does not guarantee that all alternatives within a specified
+tolerance of the current best can be distinguished from those outside it.
+
+Consider a collection of well-studied candidates and one newly available arm.
+Although the earlier means have not changed, uncertainty about the new arm's
+possible superiority may prevent positive certification of many earlier
+candidates. An informative upper bound on its mean may be needed before the
+earlier candidates can be certified. A candidate close to today's relative
+threshold may itself require many observations to classify. After a sufficiently
+better arm arrives, both possible sides of
+the old threshold can lie well below the new one. Observations already collected
+can then suffice to exclude the candidate, without resolving its earlier
+membership. Continual reporting therefore creates shared waiting costs, while
+later arrivals can make unfinished fine-resolution tasks unnecessary.
+
+We study these effects in the stationary stochastic bandit model with exogenous
+permanent arrivals. Regret is measured against the best arm available at each
+physical observation time. This model and comparator are established in
+ballooning bandits \citep{ghalme2021}. For any finite prefix, permanent arrival
+is also a monotone availability pattern in the sleeping-bandit formulation
+\citep{kleinberg2010}. An ordinary index policy can admit an arm on arrival.
+The additional statistical requirement considered here is a reliable report of
+the complete current relative near-optimal set, together with a bound on how
+long its members and nonmembers remain unresolved.
+
+The fixed-arm version of relative-good-set identification is the
+ALL-$\varepsilon$ problem of \citet{mason2020}. Their analysis already
+distinguishes discrimination near the membership boundary from uncertainty
+about the best mean. Their algorithms, including $(\mathrm{ST})^2$ and FAREAST,
+are essential comparisons for any proposed extension. Reusing confidence bounds
+after an arrival is a natural adaptation; the cost of maintaining their reports
+through repeated changes of the relative threshold requires further analysis.
+Our lower bounds measure cumulative unresolved arm time under one simultaneous
+correctness requirement. They concern continuing reports, rather than a single
+terminal recommendation or independently imposed deadlines.
+Fixed-budget thresholding also studies terminal classification loss
+\citep{cheshire2020}; cumulative unresolved time records the full reporting path.
+
+Joint reward and identification objectives also have substantial precedents.
+\citet{degenne2019} study the compromise between regret and decision time;
+\citet{yang2026} characterize regret-optimal fixed-confidence best-arm
+identification and its sampling cost. \citet{cho2025} combine reward-oriented
+sampling with anytime-valid testing for fixed-threshold good-arm
+identification. Separating a reward policy from a reporting layer thus has
+established precedents. Sequential multiple testing
+and support recovery likewise supply the simultaneous-recovery scales used
+below \citep{malloy2014,jamieson2018}. We study how a continuing obligation to
+report the relative set imposes these costs, shares them among arms, and
+sometimes allows them to be avoided.
+
+Our first main result gives a common-environment lower bound: an insufficiently
+studied arrival can keep a whole cohort unresolved. Combined with an executable
+upper bound, it identifies the polynomial arrival exponent below which both
+expected regret and cumulative unresolved area can be sublinear. A separate
+worst-schedule result characterizes the area as the smaller of the available
+arm-time and a quadratic-in-arm-count identification cost. Its lower bound
+already occurs for an initial batch. Repeated benchmark improvements have a
+further temporal effect, which we analyze separately.
+
+Our second main result isolates the cost of temporary membership questions.
+In an explicit multiple-update family, a small area budget forces enough
+fine-resolution classifications before they expire. At a specified sequence
+of horizons this gives matching rapid-maintenance regret bounds. A larger
+constant-factor area budget permits coarse evidence to be reused after the
+next improvement and has a substantially smaller attainable regret. We also
+prove a fixed-probability regret lower bound under precisely the same area
+requirement. These results describe two service budgets; they do not identify
+the entire instancewise frontier.
+
+The checkpoint construction is deliberately simple. It accepts arms immediately,
+retains all observations, and interleaves reporting service with full-history
+UCB. It provides a constructive bound whose reward guarantee holds without
+conditioning on correct reports. Its limitations are visible in the numerical
+comparisons: strong confidence-based adaptations can improve both regret and
+area, and fine fixed checkpoints can be impractical at moderate budgets.
+The construction establishes attainable joint costs and explains their
+mechanism; it need not be the best practical implementation.

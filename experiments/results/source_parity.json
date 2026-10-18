@@ -1,0 +1,24 @@
+{
+  "kind": "compiled implementation parity with original public interface",
+  "seed": 812463,
+  "horizon": 20000,
+  "passed": true,
+  "per_round_comparisons": [
+    "action",
+    "service flag",
+    "all available arm counts",
+    "C/D/V report"
+  ],
+  "counts": [
+    3224,
+    858,
+    954,
+    3918,
+    1082,
+    3832,
+    1168,
+    4964
+  ],
+  "pseudo_regret": 1194.7199999999143,
+  "eta_area": 14433
+}

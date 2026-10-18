@@ -1,0 +1,50 @@
+\documentclass[11pt]{article}
+\input{preamble}
+% Set \anonymoustrue for an author-free review copy if required by the portal.
+\newif\ifanonymous
+\anonymousfalse
+\title{Multi-armed bandits with arriving arms:\\the cost of reliable set maintenance}
+\ifanonymous
+\author{}
+\else
+\author{Deqi Zheng\thanks{The first two authors contributed equally.} \quad
+ Xiaoyang Xu\footnotemark[1] \\ Qiuzhen College, Tsinghua University
+ \and Yuhong Yang\thanks{Corresponding author: yyangsc@mail.tsinghua.edu.cn.}\\
+ Yau Mathematical Sciences Center, Tsinghua University}
+\fi
+\date{October 15, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Sequential experiments may acquire new alternatives while earlier alternatives
+remain available. A procedure can accumulate little regret and still provide
+little evidence about which alternatives are currently near optimal. We study
+the joint cost of reward collection and reliable maintenance of the complete
+relative near-optimal set. Reports are correct simultaneously over arms and
+time; timeliness is measured by cumulative unresolved arm time outside a
+boundary band. We show that uncertainty about one arrival can obstruct positive
+certification of many earlier arms. This yields an arrival-growth boundary for
+sublinear maintenance area, and the worst-schedule area is characterized up to
+universal constants. A repeated-update construction separates prompt
+classification from permitted deferral: at a specified horizon, the former
+requires regret proportional to the inverse squared boundary distance, whereas
+the latter admits only logarithmic dependence when the other parameters are
+fixed. The necessary cost also holds with fixed positive probability under the
+same maintenance requirement. A checkpoint policy reuses observations across
+arrivals and supplies executable upper bounds. Comparisons with retained-history
+confidence methods show both the reporting cost missed by regret alone and the
+practical conservatism of the checkpoint construction.
+\end{abstract}
+\noindent\textit{Keywords:} adaptive experimentation; all-good-arm identification;
+arriving arms; cumulative unresolved time; sequential inference.
+\input{sections/01_introduction}
+\input{sections/02_model}
+\input{sections/03_method}
+\input{sections/04_maintenance}
+\input{sections/05_tradeoff}
+\input{sections/06_experiments}
+\FloatBarrier
+\input{sections/07_discussion}
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

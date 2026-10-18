@@ -1,0 +1,29 @@
+{
+  "frozen_before_test": true,
+  "date": "2026-10-16",
+  "primary_candidate": "CCP-beta1",
+  "family": [
+    "CCP-beta0.25",
+    "CCP-beta0.5",
+    "CCP-beta1",
+    "CCP-beta2"
+  ],
+  "primary_fair_comparator": "ALLplus-beta1",
+  "n_test_scenarios": 10,
+  "replications_per_scenario": 64,
+  "n_policy_configurations": 21,
+  "default_lambda_time_price": 0.1,
+  "maximum_designated_service_fraction": 0.5,
+  "secondary_scores_weights": [
+    0.01,
+    0.03,
+    0.1,
+    0.3
+  ],
+  "note": "Weights are diagnostic scalarizations of mean outcomes, not replacements for the high-probability area criterion. Development performed on four distinct environments; no TEST outcomes consulted before freezing.",
+  "hashes": {
+    "engine.py": "206fa880f2206c235214081b1f95f9ee01ee887edd42d3615ae43ba6515183e3",
+    "protocol.json": "9f5c84b8c37976f449fe05ad2337deb7e603aa5508e15d59e96d9bb6e187f32f",
+    "test-policies-frozen.json": "516660049c58277fe424ff673656c16fffb1fa22131566800ac6ab27fe31d4ca"
+  }
+}

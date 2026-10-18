@@ -1,0 +1,44 @@
+% Reorganized from the frozen October 15, 2026 supplement.
+\section{Eventual exact classification and unconditional regret}
+\label{app:consistency}
+
+This extension uses a separate, revisable multiresolution policy, rather
+than the fixed-checkpoint policy. Let epochs be $E_e=\{16^e,\ldots,16^{e+1}-1\}$ and use cumulative targets
+$q_e=\lceil4^e(e+1)^2\rceil$. At even rounds serve, by FIFO, any arrived
+arm below the current target, including arms formerly reported excluded.
+Other rounds use full-history UCB. In epoch $e$ report from the raw intervals
+with radius
+\[
+ b_{i,e}(n)=\sqrt{\frac{\log\{16i^2(e+1)^2n^2/\delta\}}{2n}},
+\]
+clipped to $[0,1]$ and equal to $[0,1]$ at zero count. Intervals are
+recomputed rather than permanently intersected across epochs.
+
+Hoeffding and a union over $i,e,n$ bound the probability of any coverage
+failure by $\delta\zeta(2)^3/8<\delta$. This proves all-time reporting
+reliability. Suppose arrivals eventually stop with $K<\infty$. For all large
+$e$, the current epoch's remaining checkpoint work is at most $Kq_e$, and
+its $2Kq_e$ physical service time is smaller than $15\cdot16^e$. Therefore
+each arm has at least $q_{e-1}$ observations at the beginning of every
+sufficiently late epoch. Uniformly for $t\in E_e$ and actual
+$n\in[q_{e-1},t]$, the radius is
+$O(\sqrt{\{e+\log i+\log(1/\delta)\}/q_{e-1}})=o(1)$.
+
+For every positive rational $z$, Hoeffding makes
+$\sum_nP(|\hat r_i(n)-r_i|>z)<\infty$. Tail union bounds imply only
+finitely many deviations of size $z$ almost surely. Taking a countable
+intersection over $z$ and the finitely many final arms gives simultaneous
+empirical-mean convergence. If
+$\min_i|\max_jr_j-r_i-\varepsilon|>0$, then all interval comparisons
+are eventually correct and complete, almost surely. This conclusion is not
+conditioned on early coverage, and early reporting errors can be corrected.
+
+Through $T\in E_e$, service pulls number at most $Kq_e$, because targets are
+cumulative and lifetime counts never decrease. This is
+$O(K\sqrt T(1+\log T)^2)$. Apply the unconditional UCB counting bound in Section~\ref{app:joint} to
+the remaining pulls to obtain
+\[
+ ER_T=O\{K\sqrt T(1+\log T)^2+\sqrt{KT\log(2T)}\}=o(T)
+\]
+for each eventually finite instance. Exact boundary cases are not included
+in the complete-classification claim.

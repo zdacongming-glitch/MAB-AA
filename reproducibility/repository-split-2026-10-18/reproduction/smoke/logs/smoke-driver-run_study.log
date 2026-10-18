@@ -1,0 +1,12 @@
+usage: run_study.py [-h] [--stage {dev,test}] [--rep REP] [--out OUT]
+                    [--policies POLICIES] [--scenario SCENARIO]
+                    [--offset OFFSET]
+
+options:
+  -h, --help           show this help message and exit
+  --stage {dev,test}
+  --rep REP
+  --out OUT
+  --policies POLICIES
+  --scenario SCENARIO
+  --offset OFFSET

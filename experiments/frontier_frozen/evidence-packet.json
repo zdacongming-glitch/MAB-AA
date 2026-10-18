@@ -1,0 +1,12 @@
+{
+  "files": {
+    "theory_frontier.md": "b1d14cc64e3b64fc7594576b987b77f411d4bfaab74dc81233bdc6a9494c63b5",
+    "holdout-freeze.json": "57d1655881064f7e5c521ec8c7acb21d351f9617c5682f231bdbad6658557613",
+    "holdout-summary.csv": "f28374673692808b7d1cdd7d20a16146bab87164649330eef7e948bb8d50fa83",
+    "holdout-paired.csv": "1de10b3e9d7004afda36e4ff353cc770eb128e9c323dfdb51fdf75a115e22250",
+    "proof_audit.md": "d65a0b147c48fcaf4ffda2efced38652932901baaa70b9aeead12b2538ede92d",
+    "literature.json": "5d6e8f653a62d6e92e7cf69624eef00a699282abaf31e9c3bf0117ba2b22d293",
+    "研究报告_前沿与算法.md": "c5b14fce622311bd976265609c3f97d463ef23e31dd72b3adeb5a3c1084fa8a5"
+  },
+  "scope": "this round incremental contributions; not the unseen Codex-revised manuscript"
+}

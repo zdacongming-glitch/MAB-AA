@@ -1,0 +1,256 @@
+\section{Proof of the spectral minimax theorem}\label{sec:spectral-proofs}
+\subsection{Concentration on potential sample streams}
+If $X\in[0,1]$ has mean $\mu$, then
+\begin{equation}\label{eq:mgf}
+ \EE e^{\lambda(\mu-X)}\le e^{\lambda^2/8},\qquad \lambda\in\mathbb R.
+\end{equation}
+For completeness, the log moment generating function has value and derivative zero at the origin. Its second derivative is the variance under an exponentially tilted law, at most $1/4$ because its support remains in an interval of length one. Integrating twice proves \eqref{eq:mgf}.
+
+For $S_n=\sum_{r=1}^n(\mu-X_r)$, the process $e^{\lambda S_n-n\lambda^2/8}$ is a nonnegative supermartingale. Stopping it at the first threshold crossing before a deterministic integer $N$ shows that the probability of ever exceeding $c$ by time $N$ is at most $1/c$. Monotone convergence of the crossing events gives the same inequality over all $n$. Taking $\lambda=4x$ or $\lambda=4y/N$, respectively, gives
+\begin{align}
+ \PP\{\exists n>v:S_n/n\ge x\}&\le e^{-2vx^2},\quad v,x>0,\label{eq:large-prefix}\\
+ \PP\{\max_{n\le N}S_n\ge y\}&\le e^{-2y^2/N},\quad y>0.\label{eq:prefix-max}
+\end{align}
+The one-prefix upper-tail inequality is also $\PP(\widehat\mu_n-\mu\ge x)\le e^{-2nx^2}$.
+
+\begin{lemma}\label{lem:Z}
+The random variable in \eqref{eq:underestimate} satisfies, for $v,x,z>0$,
+\[
+ \EE Z(v)\le5/\sqrt v,\qquad
+ \PP\{Z(v)>x\}\le\min\{1,5/(vx^2)\},\qquad
+ \EE[Z(v)\ind\{Z(v)\ge z\}]\le10/(vz).
+\]
+\end{lemma}
+\begin{proof}
+Use \eqref{eq:large-prefix} for $n>v$. For $n\le v$, let $m_k=v2^{-(k+1)}$ and partition into $m_k<n\le2m_k$, $k\ge0$. If a prefix in this interval makes $Z(v)>x$, then
+\[
+ S_n>m_kx+\sqrt{m_k k\log2}.
+\]
+For each nonempty integer interval, \eqref{eq:prefix-max} with $N=\lfloor2m_k\rfloor$ bounds its probability by $2^{-k}e^{-vx^2/2^{k+1}}$. Thus
+\begin{equation}\label{eq:peeling}
+ \PP\{Z(v)>x\}\le e^{-2vx^2}+\sum_{k\ge0}2^{-k}e^{-vx^2/2^{k+1}}.
+\end{equation}
+Integrating these nonnegative terms gives
+\[
+ \EE Z(v)\le\frac{\sqrt\pi}{2\sqrt{2v}}
+ +\frac{\sqrt\pi}{\sqrt{2v}}\sum_{k\ge0}2^{-k/2}<\frac5{\sqrt v}.
+\]
+For the polynomial tail, put $u_k=vx^2/2^{k+1}$. Since $u_ke^{-u_k}\le2\int_{u_k/2}^{u_k}e^{-u}\,du$ and these integration intervals are disjoint, the sum in \eqref{eq:peeling} is at most $4/(vx^2)$. Its first term is at most $1/(vx^2)$. Finally,
+\[
+ \EE[Z\ind\{Z\ge z\}]
+ =z\PP(Z\ge z)+\int_z^\infty\PP(Z>x)\,dx\le\frac{10}{vz}.
+\]
+Non-strict tail inequalities follow by limits. All suprema are countable, and all interchanges use nonnegative integrands.
+\end{proof}
+
+\begin{lemma}[Distinct counts]\label{lem:distinct}
+Consider at most $h$ selected pairs $(i,n)$ from $k$ fixed potential streams, where $n\ge1$ and each pair is selected at most once. Selection may depend on the entire adaptive experiment. Then
+\[
+ \EE\sum_{\mathrm{selected}\ (i,n)}(\widehat\mu_{i,n}-\mu_i)_+\le\sqrt{2kh}.
+\]
+Also, for $v>0$,
+\[
+ \sum_{n\ge1}\sqrt{[\log(v/n)]_+/n}\le\sqrt{2\pi v}.
+\]
+\end{lemma}
+\begin{proof}
+For every $\eta>0$, the first sum is bounded pathwise by
+\[
+ \eta h+\sum_{i=1}^k\sum_{n\ge1}(\widehat\mu_{i,n}-\mu_i-\eta)_+.
+\]
+The expectation of the double sum for each stream is at most
+\[
+ \int_\eta^\infty\sum_{n\ge1}e^{-2nx^2}\,dx
+ =\int_\eta^\infty\frac{dx}{e^{2x^2}-1}\le\frac1{2\eta}.
+\]
+Minimize at $\eta=\sqrt{k/(2h)}$; the case of no selections is immediate. For the second bound the summand is a decreasing function on $(0,v)$, so its sum is at most
+\[
+ \int_0^v\sqrt{\log(v/x)/x}\,dx
+ =\sqrt v\int_0^\infty u^{1/2}e^{-u/2}\,du=\sqrt{2\pi v}.
+\]
+This also covers $v<1$, when the sum is zero.
+\end{proof}
+
+\subsection{The full-history segment bound}
+\begin{proof}[Proof of Lemma~\ref{lem:kernel}]
+If $d>h$, use $R_{\mathrm{segment}}\le h$. Otherwise at most $k\le d$ arms are available during the prefix. Genuine first pulls cost at most $d\le\sqrt{dh}$. At every remaining selection the best available arm has been observed, because an unobserved best arm would force the selection of an unobserved arm. Apply \eqref{eq:index-decomposition}. For each local time $s$, a best-arm label is fixed by the deterministic schedule and the fixed reward means, so Lemma~\ref{lem:Z} gives a total expected underestimation cost at most
+\[
+ 5\sum_{s=1}^h\sqrt{d/s}\le10\sqrt{dh}.
+\]
+Lifetime count pairs do not repeat. Lemma~\ref{lem:distinct} bounds the empirical overestimation sum by $\sqrt{2kh}\le\sqrt{2dh}$. For the bonus replace $s$ by $h$, extend each arm's counts to all positive integers, and apply the same lemma to obtain $k\sqrt{2\pi h/d}\le\sqrt{2\pi dh}$. Summing gives \eqref{eq:kernel}. The samples can include arbitrary observations gathered before the segment. The proof has used only unconditional prefix inequalities on their original streams.
+\end{proof}
+
+\subsection{Charging clock segments to the spectrum}
+Write $f_b(k)=\min\{b,\sqrt{kb}\}$. We will use
+\[
+ f_b\left(\sum_r k_r\right)\le\sum_r f_b(k_r).
+\]
+If any right-hand term is saturated the inequality follows at once; otherwise it follows from subadditivity of the square root.
+
+\begin{lemma}\label{lem:delay}
+Deleting competing arms and delaying the remaining arms, with the endpoint fixed, produces a spectrum $\cS_T'$ satisfying $\cS_T'\le2\cS_T$.
+\end{lemma}
+\begin{proof}
+Arms in original group $m$ can only move to groups $\ell\le m$. If $k_{m,\ell}$ counts them, their new total contribution is at most both
+\[
+ \sum_{\ell\le m}b_\ell<2b_m,
+ \qquad
+ \sum_{\ell\le m}\sqrt{k_{m,\ell}b_\ell}
+ \le\sqrt{2k_mb_m}.
+\]
+It is therefore at most $2f_{b_m}(k_m)$. Subadditivity separates the contributions of different original groups, and summing proves the claim.
+\end{proof}
+
+\begin{lemma}\label{lem:long}
+If at least $m$ competitors each have lifetime at least $H$, then $\cS_T\ge\min\{H,\sqrt{mH}\}$.
+\end{lemma}
+\begin{proof}
+Every group containing those arms has upper endpoint at least $H$. Its cost is at least $f_H$ applied to the number of these arms in the group. Subadditivity of $f_H$ then gives the assertion.
+\end{proof}
+
+\begin{proof}[Upper bound in Theorem~\ref{thm:main}]
+Before the first competitor arrives, regret is zero. Index subsequent clock segments by $j=0,\ldots,J$, with start $\sigma_j$, length $h_j$, initial competitor count $c_j=K_{\sigma_j}-1$, capacity $d_j=2c_j$, and remaining lifetime $H_j=T-\sigma_j+1$. Then $c_{j+1}\ge2c_j$.
+
+If some $c_j\ge H_j$, let $j_*$ be the first such index. The regret of this segment and all later rounds is at most $H_{j_*}\le\cS_T$ by Lemma~\ref{lem:long}. If there is no such index, there is no tail of this type. For the preceding segments set $c_{-1}=0$ and let $E_j$ consist of the competitors arriving between consecutive segment starts, including all initial competitors for $j=0$. Then
+\[
+ m_j=|E_j|=c_j-c_{j-1}\ge c_j/2.
+\]
+Delete other arms and delay every arm in $E_j$ to $\sigma_j$. Its new spectrum obeys $\cS_T'\le2\cS_T$.
+
+Group the retained segment starts by the dyadic scale of $H_j$. For a nonempty scale $\ell$, let $j_{\mathrm{last}}$ be its last segment. Geometric growth implies
+\[
+ \sum_{j:\,H_j\in(b_\ell/2,b_\ell]}\sqrt{c_jH_j}
+ \le\frac{\sqrt{c_{j_{\mathrm{last}}}b_\ell}}{1-2^{-1/2}}.
+\]
+The number $k_\ell'$ of delayed competitors in this group satisfies
+\[
+ c_{j_{\mathrm{last}}}/2\le k_\ell'\le c_{j_{\mathrm{last}}}
+ <H_{j_{\mathrm{last}}}\le b_\ell.
+\]
+The group is unsaturated, and the preceding sum is at most $\sqrt2 f_{b_\ell}(k_\ell')/(1-2^{-1/2})$. Summing and using $h_j\le H_j$ gives
+\[
+ \sum_{j<j_*}\sqrt{c_jh_j}
+ \le\frac{2\sqrt2}{1-2^{-1/2}}\cS_T,
+\]
+where the sum includes every segment when no $j_*$ exists. Lemma~\ref{lem:kernel} now gives
+\[
+ \EE R_T\le\left(1+\frac{60}{1-2^{-1/2}}\right)\cS_T<210\cS_T.
+\]
+Together with $R_T\le T$, this proves the stated, slightly looser constant. The endpoint-dependent grouping is used only in the proof.
+\end{proof}
+
+\subsection{A compatible family for the lower bound}
+The likelihood argument used below is standard in bandit lower bounds; see \citet{kaufmann2016complexity}. We give its precise form here. If two Bernoulli environments differ only on arm $i$, then their history laws through a deterministic round $u$ satisfy
+\begin{equation}\label{eq:KL}
+ D(\PP_0^u\Vert\PP_i^u)=\EE_0N_i(u)\kl(p_i,q_i).
+\end{equation}
+To prove it, factor the conditional likelihood at each action and reward. The action kernels are the same under the two environments and cancel; only observed rewards from arm $i$ remain. Policy randomization can be included in the history and contributes zero divergence. For $0\le Y\le h$,
+\begin{equation}\label{eq:TV}
+ |\EE_0Y-\EE_iY|\le h\TV(\PP_0^u,\PP_i^u)
+ \le h\sqrt{D(\PP_0^u\Vert\PP_i^u)/2}.
+\end{equation}
+The second inequality follows by binary data processing and $\kl(p,q)\ge2(p-q)^2$. The latter follows by differentiating twice in $p$ and using $1/\{p(1-p)\}\ge4$. We also use $\kl(p,q)\le(p-q)^2/\{q(1-q)\}$, a consequence of $\log x\le x-1$.
+
+\paragraph{A two-environment component.}
+Suppose $M\ge1$, and choose a competitor with maximum lifetime $H_{\max}$. Set all other means to $1/2$, and set this competitor's mean to $1/2\pm\epsilon$, where $\epsilon=1/(32\sqrt{H_{\max}})$. All rewards are Bernoulli. The divergence between the two complete history laws is at most $32H_{\max}\epsilon^2$, so their total variation is at most $1/8$. If $N$ counts this arm's pulls after it arrives, the equal-prior Bayes risk is at least
+\begin{equation}\label{eq:single-lower}
+ \frac\epsilon2\{\EE_-N+H_{\max}-\EE_+N\}
+ \ge\frac{\epsilon H_{\max}}2(1-1/8)
+ \ge\frac{\sqrt{H_{\max}}}{128}.
+\end{equation}
+Let $S_{\mathrm{rest}}$ be the spectral mass in groups with $k_\ell=1$ or $\ell\le1$. A geometric sum gives
+\[
+ S_{\mathrm{rest}}\le\frac{\sqrt{2H_{\max}}}{1-2^{-1/2}}+3
+ \le8\sqrt{H_{\max}}.
+\]
+Thus the minimax risk is at least $S_{\mathrm{rest}}/1024$.
+
+\paragraph{Selecting compatible scales.}
+For the other groups, $\ell\ge2$ and $k_\ell\ge2$. Let their total cost be $S_{\mathrm{high}}$, and put
+\[
+ m_\ell=k_\ell-1,\qquad v_\ell=\min\{1,\sqrt{m_\ell/b_\ell}\}.
+\]
+Then $b_\ell v_\ell\ge s_{\ell,T}/\sqrt2$. Choose either the even or the odd groups, whichever has greater $\sum b_\ell v_\ell$. Scan the chosen groups from larger to smaller lifetimes. Retain the first, then retain a group only if its $v_\ell$ exceeds twice the most recently retained value. Call the retained set $\mathcal J$.
+
+Within a fixed parity, $b_\ell$ decreases by a factor of at least four. Between two retained groups, omitted values have $v\le2v_{\mathrm{last}}$, and their $b$ values sum to at most $b_{\mathrm{last}}/3$. Their total mass is therefore at most two thirds of the preceding retained mass. It follows that
+\begin{equation}\label{eq:selected}
+ \sum_{\ell\in\mathcal J}b_\ell v_\ell\ge\frac3{10\sqrt2}S_{\mathrm{high}},
+ \qquad \sum_{\ell\in\mathcal J}v_\ell\le2.
+\end{equation}
+The second inequality holds because retained values more than double in chronological order and none exceeds one.
+
+\paragraph{One product prior.}
+For each retained group let
+\[
+ \epsilon_\ell=v_\ell/32,\qquad
+ \theta_\ell=\frac12+\sum_{r\in\mathcal J:r>\ell}\epsilon_r.
+\]
+Give one actual arm in the group mean $\theta_\ell$. This is its reference arm. Among its $m_\ell$ remaining candidates, put probability $1/2$ on the null configuration, in which all means equal $\theta_\ell-\epsilon_\ell$. Give each candidate $i$ probability $1/(2m_\ell)$ of being the unique spike with mean $\theta_\ell+\epsilon_\ell$, leaving all other candidates at the null mean. Choose these latent configurations independently across groups. The anchor has mean $1/2$, and all unused arms have mean $1/4$. All rewards are Bernoulli.
+
+Equation~\eqref{eq:selected} gives $\sum\epsilon_\ell\le1/16$, so all parameters remain in a fixed interior subinterval of $[0,1]$. Reference levels depend only on deterministic gap sizes, not on previous latent configurations. Observing later reference arms therefore does not reveal earlier configurations.
+
+Charge group $\ell$ only on the interval
+\begin{equation}\label{eq:testing-window}
+ Q_\ell=\{T-b_\ell/2+1,\ldots,T-b_\ell/4\},
+ \qquad h_\ell=b_\ell/4.
+\end{equation}
+These are integer intervals. Every arm in group $\ell$ has arrived before $Q_\ell$. The next retained group has not arrived by its end, and the intervals are disjoint. They remain within $[1,T]$ even when $b_\ell>T$, since a nonempty group implies $T>b_\ell/2$. Every earlier group's largest possible mean is at most $\theta_\ell$. Consequently, on $Q_\ell$ the reference is optimal under the null and candidate $i$ is optimal under spike $i$.
+
+\paragraph{Testing with the complete observed history.}
+Fix all latent configurations other than the one in group $\ell$. Under its null write
+\[
+ A=\sum_{i=1}^{m_\ell}\EE_0N_i(Q_\ell),\qquad
+ D_i=\kl(\theta_\ell-\epsilon_\ell,\theta_\ell+\epsilon_\ell)
+       \EE_0N_i(\max Q_\ell).
+\]
+Here $N_i(Q_\ell)$ counts pulls in the window, whereas $N_i(\max Q_\ell)$ counts all pulls through its end. The latter includes information acquired before the window. At most $b_\ell$ physical slots are available between the group's first possible arrival and this endpoint. The KL bound and Cauchy--Schwarz therefore give
+\begin{equation}\label{eq:average-TV}
+ \frac1{m_\ell}\sum_i\sqrt{D_i/2}
+ \le\sqrt{\frac{32\epsilon_\ell^2b_\ell}{2m_\ell}}\le\frac18.
+\end{equation}
+The null-window regret is at least $\epsilon_\ell A$, and under spike $i$ it is at least $\epsilon_\ell\{h_\ell-\EE_iN_i(Q_\ell)\}$. Equation~\eqref{eq:TV} gives conditional Bayes risk at least
+\begin{align*}
+ \frac{\epsilon_\ell}2 A+
+ \frac{\epsilon_\ell}{2m_\ell}\sum_i\{h_\ell-\EE_iN_i(Q_\ell)\}
+ &\ge\frac{\epsilon_\ell}2
+ \left\{h_\ell+(1-1/m_\ell)A-
+ h_\ell\frac1{m_\ell}\sum_i\sqrt{D_i/2}\right\}\\
+ &\ge\frac{\epsilon_\ell h_\ell}4
+ =\frac{b_\ell v_\ell}{512}.
+\end{align*}
+This holds for every configuration of the other groups. Average over those configurations and sum over the disjoint windows. The resulting lower bound concerns one product prior, not a sum of unrelated worst-case environments. By \eqref{eq:selected},
+\[
+ \cR_T(\tau)\ge\frac{3}{5120\sqrt2}S_{\mathrm{high}}
+ \ge S_{\mathrm{high}}/2500.
+\]
+Taking the maximum with \eqref{eq:single-lower} and the rest-mass bound gives $\cR_T(\tau)\ge\cS_T/10000$. For $M=0$ both sides vanish. This proves the lower bound in Theorem~\ref{thm:main}.
+
+The anchor law remains Bernoulli$(1/2)$ in both constructions. The lower bound therefore also holds if the learner is told the anchor's complete reward law in advance.
+
+\subsection{A lower bound with constant probability}
+\begin{proposition}\label{prop:prob-lower}
+For every deterministic schedule, endpoint and policy, there is a fixed Bernoulli environment such that
+\[
+ \PP\{R_T\ge\cS_T/20000\}\ge1/8.
+\]
+The environment may depend on the policy, schedule and endpoint.
+\end{proposition}
+\begin{proof}
+If $S_{\mathrm{high}}\ge\cS_T/2$, use the product prior above. On each window define $Y_\ell=\epsilon_\ell\sum_iN_i(Q_\ell)$ under the null and $Y_\ell=\epsilon_\ell\{h_\ell-N_i(Q_\ell)\}$ under spike $i$. Then, pathwise,
+\[
+ 0\le Y:=\sum_\ell Y_\ell\le R_T,\qquad
+ Y\le A:=\sum_\ell\epsilon_\ell h_\ell,\qquad \EE Y\ge A/4.
+\]
+Since $\EE Y\le A/8+A\PP(Y\ge A/8)$, we obtain $\PP(Y\ge A/8)\ge1/8$. Equation~\eqref{eq:selected} yields
+\[
+ A/8=\frac1{1024}\sum_{\ell\in\mathcal J}b_\ell v_\ell
+ \ge\frac{3\cS_T}{20480\sqrt2}\ge\frac{\cS_T}{20000}.
+\]
+If $S_{\mathrm{rest}}\ge\cS_T/2$, use the two-environment prior. Its proxy loss is $\epsilon N$ under the inferior alternative and $\epsilon(H_{\max}-N)$ under the superior alternative. It lies in $[0,A]$ with $A=\sqrt{H_{\max}}/32$, has mean at least $A/4$, and satisfies $A/8\ge\cS_T/4096$. The same probability argument applies. In either case a finite-prior average probability of at least $1/8$ implies that at least one fixed environment attains that probability. The zero-competitor case is immediate.
+\end{proof}
+
+Define $r_\delta=\inf_\pi\inf\{r\ge0:\sup_P\PP_P(R_T>r)\le\delta\}$. For $0<\delta<1/8$, the proposition and Markov's inequality give
+\[
+ \cS_T/20000\le r_\delta\le\min\{T,300\cS_T/\delta\}.
+\]
+This characterizes fixed confidence levels up to constants. It does not give sharp dependence as $\delta$ tends to zero.

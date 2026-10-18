@@ -1,0 +1,164 @@
+[
+  {
+    "page": 1,
+    "command": [
+      "pdftoppm",
+      "-f",
+      "1",
+      "-l",
+      "1",
+      "-singlefile",
+      "-png",
+      "-scale-to",
+      "1400",
+      "manuscript.pdf",
+      "audit/full_merge_2026-10-17/pages/page-1"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "page": 23,
+    "command": [
+      "pdftoppm",
+      "-f",
+      "23",
+      "-l",
+      "23",
+      "-singlefile",
+      "-png",
+      "-scale-to",
+      "1400",
+      "manuscript.pdf",
+      "audit/full_merge_2026-10-17/pages/page-23"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "page": 24,
+    "command": [
+      "pdftoppm",
+      "-f",
+      "24",
+      "-l",
+      "24",
+      "-singlefile",
+      "-png",
+      "-scale-to",
+      "1400",
+      "manuscript.pdf",
+      "audit/full_merge_2026-10-17/pages/page-24"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "page": 25,
+    "command": [
+      "pdftoppm",
+      "-f",
+      "25",
+      "-l",
+      "25",
+      "-singlefile",
+      "-png",
+      "-scale-to",
+      "1400",
+      "manuscript.pdf",
+      "audit/full_merge_2026-10-17/pages/page-25"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "page": 26,
+    "command": [
+      "pdftoppm",
+      "-f",
+      "26",
+      "-l",
+      "26",
+      "-singlefile",
+      "-png",
+      "-scale-to",
+      "1400",
+      "manuscript.pdf",
+      "audit/full_merge_2026-10-17/pages/page-26"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "page": 65,
+    "command": [
+      "pdftoppm",
+      "-f",
+      "65",
+      "-l",
+      "65",
+      "-singlefile",
+      "-png",
+      "-scale-to",
+      "1400",
+      "manuscript.pdf",
+      "audit/full_merge_2026-10-17/pages/page-65"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "page": 86,
+    "command": [
+      "pdftoppm",
+      "-f",
+      "86",
+      "-l",
+      "86",
+      "-singlefile",
+      "-png",
+      "-scale-to",
+      "1400",
+      "manuscript.pdf",
+      "audit/full_merge_2026-10-17/pages/page-86"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "page": 87,
+    "command": [
+      "pdftoppm",
+      "-f",
+      "87",
+      "-l",
+      "87",
+      "-singlefile",
+      "-png",
+      "-scale-to",
+      "1400",
+      "manuscript.pdf",
+      "audit/full_merge_2026-10-17/pages/page-87"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "page": 88,
+    "command": [
+      "pdftoppm",
+      "-f",
+      "88",
+      "-l",
+      "88",
+      "-singlefile",
+      "-png",
+      "-scale-to",
+      "1400",
+      "manuscript.pdf",
+      "audit/full_merge_2026-10-17/pages/page-88"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  }
+]

@@ -1,0 +1,86 @@
+% Reorganized from the frozen October 15, 2026 supplement.
+\section{Partial simultaneous recovery}
+\label{app:partial}
+
+\paragraph{Precise claim.}
+Let $m\ge1$ independent uniform signs specify independent observation laws
+$P_i^+,P_i^-$. All nuisance parameters and observations are independent of
+these signs. Sampling may be adaptive and interleaved, and $\tau$ is bounded.
+At every sign configuration, the probability of any erroneous determinate
+report is at most $\delta\le1/16$. Let $J_\tau$ be the number of determinate
+reports and
+$\kappa=\max_i\max\{D(P_i^+\Vert P_i^-),D(P_i^-\Vert P_i^+)\}\in(0,\infty)$.
+If $\overline P(J_\tau\ge m/2)\ge1/2$, then
+\[
+ \overline E\sum_iN_i(\tau)\ge\frac{m}{1024\kappa}\log\frac m\delta.
+\]
+
+\begin{proof}
+Let $L_i$ be the observed positive-versus-negative log likelihood ratio for
+coordinate $i$. After conditioning on the full stopped history, the action
+and stopping kernels cancel. The likelihood factors over coordinates and so
+does the posterior, even though the sample counts need not be independent.
+The smallest coordinatewise posterior error is
+$e_i=(1+e^{|L_i|})^{-1}$. If $S$ is the reported subset, its conditional
+probability of complete correctness is at most $\prod_{i\in S}(1-e_i)$;
+choosing a non-MAP label cannot improve it. Thus
+\[
+ \overline E\left[1-\prod_{i\in S}(1-e_i)\right]\le\delta.
+\]
+With probability at least $1-2\delta$ this product is at least $1/2$ and hence
+$\sum_{i\in S}e_i\le\log2$. Intersecting with $J_\tau\ge m/2$ costs at most
+$2\delta$ and leaves probability at least $3/8$. For $m\ge4096$, Jensen gives
+on this intersection
+\[
+ \sum_i|L_i|\ge\sum_{i\in S}\{\log(1/e_i)-\log2\}
+ \ge\frac m2\log\frac{m}{4\log2}.
+\]
+Successive conditional expectations of signed likelihood increments give
+\[
+ \overline E\sum_i\sigma_iL_i\le\kappa\overline E\sum_iN_i(\tau).
+\]
+Finite two-way KL makes the stopped increments integrable. Given the history,
+$E(\sigma_iL_i\mid H_\tau)=|L_i|(1-2e_i)$, and
+$2|L_i|e_i\le1$ for every real $L_i$. Therefore
+\[
+ \kappa\overline E\sum_iN_i\ge\overline E\sum_i|L_i|-m
+ \ge m\left\{\frac3{16}\log\frac{m}{4\log2}-1\right\}
+ \ge\frac m{256}\log m,
+\]
+where the last inequality holds for $m\ge4096$.
+
+For the confidence term, fix a sign vector and flip coordinate $i$ only.
+The event reporting the original sign on coordinate $i$ has original
+probability at least its determinate-report probability minus $\delta$, and
+flipped probability at most $\delta$. Average the data-processing inequalities
+over vectors and coordinates and use joint convexity of binary KL.
+Since $\overline EJ_\tau\ge m/4$, this yields
+\[
+ \kappa\overline E\sum_iN_i\ge
+ m\operatorname{kl}(1/4-\delta,\delta)
+ \ge\frac m{256}\log(1/\delta).
+\]
+To check the last scalar inequality, write $L=\log(1/\delta)$. For $L\le8$,
+Pinsker gives a lower bound $2(1/4-2\delta)^2\ge1/32\ge L/256$.
+For $L\ge8$, binary entropy at most $\log2$ gives
+$\operatorname{kl}(1/4-\delta,\delta)\ge3L/16-\log2\ge L/16$.
+When $m\ge4096$, the maximum of the two preceding bounds is at least half
+their sum. When $m<4096$, $\log m\le3\log(1/\delta)$, and the confidence
+bound alone suffices. Both cases imply the stated constant $1/1024$.
+\end{proof}
+
+\paragraph{Single-window truncation.}
+If such a batch has $H$ rounds with qualifying boundary distance larger than
+$\eta$, set
+\[
+ h_* =\min\left\{H,
+ \left\lceil\frac{m\log(m/\delta)}{1024\kappa}\right\rceil-1\right\}.
+\]
+At every $r\le h_*$ there are at most $r$ batch observations. The recovery
+lemma's contrapositive makes the probability of half-completion less than
+$1/2$, so the expected unresolved count is at least $m/4$. Thus batch area
+has expectation at least $mh_*/4$. Its first-$h_*$-round area $Y$ lies in
+$[0,mh_*]$; consequently
+$\overline P(Y\ge mh_*/8)\ge1/7$. One fixed sign configuration attains
+at least this probability. If $h_*=0$, only the trivial zero lower bound is
+asserted.

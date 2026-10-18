@@ -1,0 +1,6 @@
+# Python used: 3.11.7; CPU execution, no GPU dependency.
+numpy==1.26.4
+numba==0.59.0
+pandas==2.1.4
+scipy==1.11.4
+matplotlib==3.8.0

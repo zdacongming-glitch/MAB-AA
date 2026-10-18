@@ -1,0 +1,52 @@
+[
+  {
+    "generation": "Earlier checkpoint",
+    "path": "ucbaa_jasa_resubmission_2026-10-15/experiments/results/runs.csv",
+    "rows": 5760,
+    "scenarios": 4,
+    "methods": 9,
+    "repetitions": 160,
+    "sha256": "33c3bd38660fe9943d5b53d061545b515eb424e7d4542b4b482a17cf70db5b86",
+    "role": "historical; not pooled with F17"
+  },
+  {
+    "generation": "CCP development study",
+    "path": "CCP_research_2026-10-16/test-results.csv",
+    "rows": 13440,
+    "scenarios": 10,
+    "methods": 21,
+    "repetitions": 64,
+    "sha256": "3579419a04724e31d806313652336aed0685d1ae967360ee20585c407a75638d",
+    "role": "historical; not pooled with F17"
+  },
+  {
+    "generation": "Frontier/Shared study",
+    "path": "frontier_research_2026-10-16/holdout-all.csv",
+    "rows": 12672,
+    "scenarios": 12,
+    "methods": 22,
+    "repetitions": 48,
+    "sha256": "ec3e58f3e9a4fcfc6a3f7df15bb7aecc6d6793c18f37f79212a8f9afc395e8ef",
+    "role": "historical; not pooled with F17"
+  },
+  {
+    "generation": "F17 original test",
+    "path": "F-CCP_2026-10-17/results/holdout-all.csv",
+    "rows": 27648,
+    "scenarios": 12,
+    "methods": 24,
+    "repetitions": 96,
+    "sha256": "f7e77d4df069477ca5b4708a73e6f2898d8df4251514510eb93c017f78a63d90",
+    "role": "original; superseded ALL retained"
+  },
+  {
+    "generation": "F17 corrected comparator",
+    "path": "F-CCP_2026-10-17/results/matched-all-all.csv",
+    "rows": 1152,
+    "scenarios": 12,
+    "methods": 1,
+    "repetitions": 96,
+    "sha256": "35d20a058abbe34ea8bf4248de97ba95f6cbd7b25ead7e798ab37e50b9f2e4dd",
+    "role": "replaces old ALL in primary analysis"
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "packet_id": "sha256:a721e6f670e55962b16e1a8a98c3373e8e8ca6f693f3139a504f87c054427ed5",
+  "protocol_id": "sha256:9130f81d6331625669c89a2d0d03d84bb2e646f6b5179c28eae17715977bc538",
+  "frozen_at_utc": "2026-10-18T08:36:30.912007+00:00",
+  "files": [
+    {
+      "source": "manuscript.tex",
+      "snapshot": "snapshot/manuscript.tex.snapshot",
+      "sha256": "8224019a719e477cb697cf2c7134a56a09425bb76e62a279d7806dfca3cad76d",
+      "bytes": 256400
+    },
+    {
+      "source": "references.bib",
+      "snapshot": "snapshot/references.bib.snapshot",
+      "sha256": "7535ef2e456e5a4d8775ec41b3a753389c462500d2ef2818bdc7bb7e96dc6310",
+      "bytes": 39255
+    },
+    {
+      "source": "experiments/fccp_frozen/src/flexible_ccp.py",
+      "snapshot": "snapshot/experiments/fccp_frozen/src/flexible_ccp.py.snapshot",
+      "sha256": "7286f226f49a8fc3e0ca0d53c8f42dacc92f360e04d74dad337c771a5478ab7a",
+      "bytes": 10652
+    },
+    {
+      "source": "experiments/fccp_frozen/src/flexible_engine.py",
+      "snapshot": "snapshot/experiments/fccp_frozen/src/flexible_engine.py.snapshot",
+      "sha256": "453c22588b64e53de6cc32d103af98468fa31e61ba46acadc655aa27e03b88c4",
+      "bytes": 8608
+    },
+    {
+      "source": "experiments/fccp_frozen/src/flexible_v2.py",
+      "snapshot": "snapshot/experiments/fccp_frozen/src/flexible_v2.py.snapshot",
+      "sha256": "4b3f895b0e6352fd660283bc75b1e2e5bb90eb5268ef627c23386862b416dac7",
+      "bytes": 4197
+    },
+    {
+      "source": "experiments/fccp_frozen/src/ccp_primitives.py",
+      "snapshot": "snapshot/experiments/fccp_frozen/src/ccp_primitives.py.snapshot",
+      "sha256": "e3fbf8194b1b7559db6c60a1cff0d12c79c229034fe77aaf1dc3e89b58c4769f",
+      "bytes": 16533
+    },
+    {
+      "source": "experiments/regret_baseline_screen_2026-10-17/REPORT.md",
+      "snapshot": "snapshot/experiments/regret_baseline_screen_2026-10-17/REPORT.md.snapshot",
+      "sha256": "da372873c83433f86862ab149f1e7d62ef354dea2de1263f7372e932da6aa280",
+      "bytes": 21186
+    },
+    {
+      "source": "experiments/regret_baseline_screen_2026-10-17/results/suite-summary.csv",
+      "snapshot": "snapshot/experiments/regret_baseline_screen_2026-10-17/results/suite-summary.csv.snapshot",
+      "sha256": "35ee7d9f4169d3c407e9da503b9751e89b410a92e97029483a7aa0ab16d6c924",
+      "bytes": 3259
+    },
+    {
+      "source": "experiments/regret_baseline_screen_2026-10-17/results/paired-vs-FR.csv",
+      "snapshot": "snapshot/experiments/regret_baseline_screen_2026-10-17/results/paired-vs-FR.csv.snapshot",
+      "sha256": "7e25b44e3dc77eb11242bf37e905f2d4cf45c2cc03b17a5c5089599c8c84eec9",
+      "bytes": 49829
+    },
+    {
+      "source": "experiments/regret_baseline_screen_2026-10-17/results/analysis-audit.json",
+      "snapshot": "snapshot/experiments/regret_baseline_screen_2026-10-17/results/analysis-audit.json.snapshot",
+      "sha256": "c659e8c138ffdfc86e3b7e72767b3cc2eff6765b977af6edf4e80892a1f979fc",
+      "bytes": 2049
+    }
+  ],
+  "rules": [
+    {
+      "source": "C:\\Users\\12701\\.codex\\skills\\statistical-innovation-assessment\\SKILL.md",
+      "snapshot": "rules/SKILL.md.snapshot",
+      "sha256": "1646f205b8f4734b375abc8bf1e9c518b6795cfd1a8ec4a23b56a55b8e282362"
+    },
+    {
+      "source": "C:\\Users\\12701\\.codex\\skills\\statistical-innovation-assessment\\references\\rubric.md",
+      "snapshot": "rules/references/rubric.md.snapshot",
+      "sha256": "acf4617a123b2e18845d0999f35b4145d5b64d8e0838007565c534d9985d3266"
+    },
+    {
+      "source": "C:\\Users\\12701\\.codex\\skills\\statistical-innovation-assessment\\references\\repeated-assessment.md",
+      "snapshot": "rules/references/repeated-assessment.md.snapshot",
+      "sha256": "e7815728455a4516102d7662910ad27759b83ec6f2f3acabeb33668294a7f293"
+    }
+  ],
+  "packet_sha256": "eedf87ab31408e72d8240176e5e8f0446eda564c1830f6f9d1f500915dc28c84",
+  "excerpts_sha256": "dfeebb20be920971ee3bf7f49454a65f4f82b899f2c34414cf22c32cb4d0c13a"
+}

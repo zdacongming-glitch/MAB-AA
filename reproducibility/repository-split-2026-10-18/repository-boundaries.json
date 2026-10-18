@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "overleaf_tracked_files": 21,
+  "overleaf_paper_files": 7,
+  "original_submission_files_preserved": 12,
+  "overleaf_paper_staged_bytes_unchanged": true,
+  "original_JASA_template_unchanged_in_both_repositories": true,
+  "research_checkout_ignored_by_overleaf_parent": true,
+  "separate_remote_destinations_verified": true,
+  "overleaf_staged_paths": [
+    ".gitattributes",
+    ".gitignore",
+    "JASA-template/agsm.bst",
+    "JASA-template/bibliography.bib",
+    "JASA-template/figure_nsclc_targeted_therapy_arms.png",
+    "JASA-template/mab_aa_main.tex",
+    "JASA-template/mab_aa_preprint.tex",
+    "JASA-template/main.tex",
+    "JASA-template/scenario_C_arm_set_size_vs_t.png",
+    "JASA-template/scenario_C_dynamic_regret_vs_t.png",
+    "JASA-template/scenario_C_wasted_pulls_eps_0_1.png",
+    "JASA-template/scenario_E_arm_set_size_vs_t.png",
+    "JASA-template/scenario_E_dynamic_regret_vs_t.png",
+    "JASA-template/scenario_E_wasted_pulls_eps_0_1.png",
+    "ucbaa_jasa_resubmission_2026-10-15/figures/fig_cost_area.pdf",
+    "ucbaa_jasa_resubmission_2026-10-15/figures/fig_paths_pair1.pdf",
+    "ucbaa_jasa_resubmission_2026-10-15/figures/fig_paths_pair2.pdf",
+    "ucbaa_jasa_resubmission_2026-10-15/manuscript.tex",
+    "ucbaa_jasa_resubmission_2026-10-15/references.bib",
+    "ucbaa_jasa_resubmission_2026-10-15/revision2/generated/preference-tradeoff.pdf",
+    "ucbaa_jasa_resubmission_2026-10-15/revision2/generated/reward-paired.pdf"
+  ]
+}

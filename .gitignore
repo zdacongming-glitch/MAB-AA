@@ -1,0 +1,31 @@
+# Generated workspaces and caches are not distributed inputs.
+_reproduced/
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+*.pyo
+*.nbc
+*.nbi
+**/build/
+**/baseline-build/
+# Retain final and historical PDFs; omit TeX intermediates.
+*.aux
+*.bbl
+*.blg
+*.bcf
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.run.xml
+*.toc
+*.out
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.dvi
+/manuscript.log
+.DS_Store

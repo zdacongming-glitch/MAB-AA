@@ -1,0 +1,228 @@
+{
+  "created_date": "2026-10-15",
+  "archive_status": "historical_experiments_only",
+  "new_simulations_run": 0,
+  "implementation": "Original archived explore-then-commit implementation, not a repaired theoretical Algorithm 1 and not CP-UCB-AA or AA-FB.",
+  "original_root": "D:/博士学习/科研/Projects/Bandit with Arriving Arms/simulation_final",
+  "original_results_seed": 20260309,
+  "source_policy": "All original files copied byte-for-byte; originals read only.",
+  "summaries": {
+    "metrics": [
+      "dynamic_regret",
+      "wasted_pulls_eps_0_05",
+      "wasted_pulls_eps_0_1",
+      "final_active_size"
+    ],
+    "standard_error": "Sample SD with ddof=1 divided by sqrt(n).",
+    "intervals": "Two-sided pointwise 95% Student-t Monte Carlo intervals with n-1 degrees of freedom; no multiplicity adjustment or correction for historical tuning.",
+    "historical_interval_difference": "Original agg_final.csv used 1.96*SE. This summary uses the Student-t critical value while preserving the same means and sample SDs.",
+    "pairing": "Differences use matching replicate IDs within a scenario.",
+    "active_size": "Original recorded final active size; not total storage, certified quality, or evidence that all later arrivals were screened."
+  },
+  "checks": {
+    "C": {
+      "rows": 500,
+      "methods": 5,
+      "replications_per_method": 100,
+      "replicate_ids": "0 through 99",
+      "T": 60000,
+      "M": 5,
+      "master_seed": 20260309,
+      "raw_configuration_matches_archive": true,
+      "recomputed_means_and_SD_match_archived_aggregate": true,
+      "custom_effective_M_matches_configuration": true
+    },
+    "E": {
+      "rows": 500,
+      "methods": 5,
+      "replications_per_method": 100,
+      "replicate_ids": "0 through 99",
+      "T": 60000,
+      "M": 4,
+      "master_seed": 20260309,
+      "raw_configuration_matches_archive": true,
+      "recomputed_means_and_SD_match_archived_aggregate": true,
+      "custom_effective_M_matches_configuration": true
+    }
+  },
+  "preserved_files": [
+    {
+      "source": "D:/博士学习/科研/Projects/Bandit with Arriving Arms/simulation_final/algos.py",
+      "archive": "experiments/original_submission_archive/source/algos.py",
+      "bytes": 19191,
+      "sha256": "636af3a2f204af8614669adbcb276219316c5e9997db894762945ae97815460e"
+    },
+    {
+      "source": "D:/博士学习/科研/Projects/Bandit with Arriving Arms/simulation_final/env.py",
+      "archive": "experiments/original_submission_archive/source/env.py",
+      "bytes": 9748,
+      "sha256": "de824dc4adf2bdfc797f856ce87826f23993a61498904958f800dcd464c57b33"
+    },
+    {
+      "source": "D:/博士学习/科研/Projects/Bandit with Arriving Arms/simulation_final/runner.py",
+      "archive": "experiments/original_submission_archive/source/runner.py",
+      "bytes": 22622,
+      "sha256": "9ee9f28d9186d31fc6646c1b77d93efe67629188305cf0923744bf9e4198285c"
+    },
+    {
+      "source": "D:/博士学习/科研/Projects/Bandit with Arriving Arms/simulation_final/ce_five_algo_runner.py",
+      "archive": "experiments/original_submission_archive/source/ce_five_algo_runner.py",
+      "bytes": 9816,
+      "sha256": "407c342ae1155fbae48f0af83ed6035e46e709ad75ca5e56f3c18d36054448a9"
+    },
+    {
+      "source": "D:/博士学习/科研/Projects/Bandit with Arriving Arms/simulation_final/scenario_ce_runner.py",
+      "archive": "experiments/original_submission_archive/source/scenario_ce_runner.py",
+      "bytes": 22880,
+      "sha256": "4e40306a11f121483f19059736cfbac90f878262dd55d6cf8318822aba5f94c6"
+    },
+    {
+      "source": "D:/博士学习/科研/Projects/Bandit with Arriving Arms/simulation_final/plots.py",
+      "archive": "experiments/original_submission_archive/source/plots.py",
+      "bytes": 6844,
+      "sha256": "a7ab3040339099b1f17a60e29531707e2b193784bd8048d245dfeccdfe761744"
+    },
+    {
+      "source": "D:/博士学习/科研/Projects/Bandit with Arriving Arms/simulation_final/outputs/final/scenario_C/config.json",
+      "archive": "experiments/original_submission_archive/scenario_C/config.json",
+      "bytes": 582,
+      "sha256": "4de043f8f7613795e6594ffe23fd77e56a27f995a1760511c82dc0b2f1473a27"
+    },
+    {
+      "source": "D:/博士学习/科研/Projects/Bandit with Arriving Arms/simulation_final/outputs/final/scenario_C/raw_final.csv",
+      "archive": "experiments/original_submission_archive/scenario_C/raw_final.csv",
+      "bytes": 228022,
+      "sha256": "18a4bca15030cc4bbec4900e0ba028d3695ddbfab62fba410ddcfbbb6ed24e76"
+    },
+    {
+      "source": "D:/博士学习/科研/Projects/Bandit with Arriving Arms/simulation_final/outputs/final/scenario_C/agg_final.csv",
+      "archive": "experiments/original_submission_archive/scenario_C/agg_final.csv",
+      "bytes": 3694,
+      "sha256": "8136d5f3ab4163da39d7d1b81405e5170e61e75f35686651561e47c7d5b81d55"
+    },
+    {
+      "source": "D:/博士学习/科研/git/MAB-AA/JASA-template/scenario_C_dynamic_regret_vs_t.png",
+      "archive": "figures/original_submission/scenario_C_dynamic_regret_vs_t.png",
+      "bytes": 177477,
+      "sha256": "b7d7b26642b3bbce44f38bce622676e9c83c0beae4a158cde853b4bcb20df48e"
+    },
+    {
+      "source": "D:/博士学习/科研/git/MAB-AA/JASA-template/scenario_C_wasted_pulls_eps_0_1.png",
+      "archive": "figures/original_submission/scenario_C_wasted_pulls_eps_0_1.png",
+      "bytes": 49202,
+      "sha256": "6e97f5922c165b3f325d489a4bf5dde6f5809519c35123f9e24d429259d4732d"
+    },
+    {
+      "source": "D:/博士学习/科研/git/MAB-AA/JASA-template/scenario_C_arm_set_size_vs_t.png",
+      "archive": "figures/original_submission/scenario_C_arm_set_size_vs_t.png",
+      "bytes": 124295,
+      "sha256": "e3ba6d3f9ea10edbe9008db95dc0c2b0e1f0a9eb01055aade0ef3facae01a470"
+    },
+    {
+      "source": "D:/博士学习/科研/Projects/Bandit with Arriving Arms/simulation_final/outputs/final/scenario_E/config.json",
+      "archive": "experiments/original_submission_archive/scenario_E/config.json",
+      "bytes": 559,
+      "sha256": "f43596478c8b7c29e3055856ee8c8275533daeaa433542ff02a0a3e03a638b58"
+    },
+    {
+      "source": "D:/博士学习/科研/Projects/Bandit with Arriving Arms/simulation_final/outputs/final/scenario_E/raw_final.csv",
+      "archive": "experiments/original_submission_archive/scenario_E/raw_final.csv",
+      "bytes": 238917,
+      "sha256": "835e6043e3d1525742b1e70dfaae69961918c201d227604f5f20a581b44bd84a"
+    },
+    {
+      "source": "D:/博士学习/科研/Projects/Bandit with Arriving Arms/simulation_final/outputs/final/scenario_E/agg_final.csv",
+      "archive": "experiments/original_submission_archive/scenario_E/agg_final.csv",
+      "bytes": 3732,
+      "sha256": "ac67970095cf37d2c8245e6aace1adc9e575fcbc4e48aed3312a9169903b0a73"
+    },
+    {
+      "source": "D:/博士学习/科研/git/MAB-AA/JASA-template/scenario_E_dynamic_regret_vs_t.png",
+      "archive": "figures/original_submission/scenario_E_dynamic_regret_vs_t.png",
+      "bytes": 129940,
+      "sha256": "caa0003385dc40e0d2ab99a49c46790f7da9fe6354b86bf0e6d4080910fcd1c4"
+    },
+    {
+      "source": "D:/博士学习/科研/git/MAB-AA/JASA-template/scenario_E_wasted_pulls_eps_0_1.png",
+      "archive": "figures/original_submission/scenario_E_wasted_pulls_eps_0_1.png",
+      "bytes": 46714,
+      "sha256": "7e583a171fa4448392b8575698b09aacd91eb1278e73e2b83205429ae3036efa"
+    },
+    {
+      "source": "D:/博士学习/科研/git/MAB-AA/JASA-template/scenario_E_arm_set_size_vs_t.png",
+      "archive": "figures/original_submission/scenario_E_arm_set_size_vs_t.png",
+      "bytes": 117018,
+      "sha256": "218eb4c335b21b96459286f9cb7d76edb275ef4334a5beb1ded751c0e18550c1"
+    }
+  ],
+  "specification_discrepancies": [
+    {
+      "item": "C background arrivals",
+      "manuscript": "Poisson",
+      "archived": "Bernoulli probability 0.005"
+    },
+    {
+      "item": "C step starting parameter r0",
+      "manuscript": "0.6 in main text; 0.7 in supplement",
+      "archived": 0.7
+    },
+    {
+      "item": "E near-optimal means",
+      "manuscript": "[0.7,0.8] in main text; [0.89,0.90] in supplement",
+      "archived": "Uniform[0.75,0.90]"
+    },
+    {
+      "item": "M",
+      "manuscript": "Not specified for experiments",
+      "archived": "C:5; E:4"
+    },
+    {
+      "item": "Growing MOSS clock",
+      "manuscript": "T in main text; t in supplement",
+      "archived": "current t"
+    },
+    {
+      "item": "Formal elimination reference set",
+      "manuscript": "merged active set",
+      "archived": "C_prev when nonempty"
+    },
+    {
+      "item": "Empirical means",
+      "manuscript": "first n_p observations",
+      "archived": "all observations obtained so far"
+    },
+    {
+      "item": "After completion of planned rounds",
+      "manuscript": "Not fully specified to physical horizon",
+      "archived": "Fixed exploit pool; later arrivals remain buffered and are not admitted"
+    },
+    {
+      "item": "Arrival timing",
+      "manuscript": "Available-arm decision formulation",
+      "archived": "An action is selected before env.step reveals arrivals at that time; regret benchmark includes the arrivals"
+    },
+    {
+      "item": "Budget truncation",
+      "manuscript": "Full phase target",
+      "archived": "A phase can end at T before its target and still evaluate elimination with the planned phase radius"
+    }
+  ],
+  "not_preserved": [
+    {
+      "files": "raw_checkpoint.csv in both source scenarios",
+      "reason": "Approximately 380 MB combined; final raw observations and six original figures are preserved here. Historical trajectories remain at the recorded source root; no trajectory is reconstructed from the final table."
+    }
+  ],
+  "outputs": [
+    "summary.csv",
+    "paired_differences.csv",
+    "table_original_archive.tex"
+  ],
+  "output_sha256": {
+    "summary.csv": "13cc865c6706d0e8c47f16a6887ed1b0cac7dcd929cecc3e611326ca3212df29",
+    "paired_differences.csv": "40510ec46d952e709318221762b8e9f25599fcc036ee8cf8c8780ce5480c7d18",
+    "table_original_archive.tex": "0cd0a87305e98e869f0019a97973d70587b80b039e1d13a527a1c0bedb6ffc2e"
+  },
+  "summarizer_sha256": "06ca2bb99a48ca6851158827959d07c6db56337d5c0ff0ab3cfcf23765ce9ec1",
+  "recompute_command": "python -B experiments/original_submission_archive/summarize_archive.py"
+}

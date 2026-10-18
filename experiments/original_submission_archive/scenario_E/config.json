@@ -1,0 +1,32 @@
+{
+  "scenario": "E",
+  "best_config": {
+    "scenario": "E",
+    "T": 60000,
+    "K0": 20,
+    "arrival_mode": "bernoulli",
+    "lambda": 0.005,
+    "rho": 0.005,
+    "M": 4,
+    "scenario_params": {
+      "m0": 5,
+      "Delta_min": 0.15,
+      "p_join_near": 0.3,
+      "mu_top": 0.9,
+      "pi_good": 0.1,
+      "mu_h": 0.8,
+      "delta": 0.1,
+      "mu_l": 0.1,
+      "mu_m": 0.4
+    }
+  },
+  "final_R": 100,
+  "seed": 20260309,
+  "algorithms": [
+    "custom_elim",
+    "moss",
+    "naive_elim",
+    "ucb",
+    "erse"
+  ]
+}

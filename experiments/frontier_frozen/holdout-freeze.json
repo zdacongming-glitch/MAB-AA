@@ -1,0 +1,637 @@
+{
+  "created_utc": "2026-10-16T02:36:45.531267+00:00",
+  "reps": 48,
+  "scenarios": [
+    {
+      "name": "stable_new",
+      "arrivals": [
+        1,
+        1,
+        2777,
+        2777,
+        6129,
+        6129,
+        9779,
+        9779
+      ],
+      "means": [
+        0.74,
+        0.65,
+        0.12,
+        0.26,
+        0.46,
+        0.69,
+        0.31,
+        0.57
+      ],
+      "epsilon": 0.2,
+      "eta": 0.05,
+      "delta": 0.05,
+      "T": 14000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "updates_new",
+      "arrivals": [
+        1,
+        1,
+        3113,
+        3113,
+        3113,
+        6779,
+        6779,
+        6779,
+        10331,
+        10331,
+        10331
+      ],
+      "means": [
+        0.38,
+        0.14,
+        0.62,
+        0.36,
+        0.49,
+        0.81,
+        0.59,
+        0.53,
+        0.965,
+        0.735,
+        0.84
+      ],
+      "epsilon": 0.2,
+      "eta": 0.05,
+      "delta": 0.05,
+      "T": 14000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "burst_new",
+      "arrivals": [
+        1,
+        1,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337
+      ],
+      "means": [
+        0.64,
+        0.47,
+        0.905,
+        0.865,
+        0.755,
+        0.7,
+        0.62,
+        0.55,
+        0.41,
+        0.31,
+        0.13,
+        0.79,
+        0.81,
+        0.67
+      ],
+      "epsilon": 0.2,
+      "eta": 0.05,
+      "delta": 0.05,
+      "T": 14000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "stopped_new",
+      "arrivals": [
+        1,
+        1,
+        1777,
+        1777,
+        1777,
+        3337,
+        3337,
+        3337,
+        3337
+      ],
+      "means": [
+        0.66,
+        0.29,
+        0.86,
+        0.59,
+        0.44,
+        0.77,
+        0.52,
+        0.18,
+        0.69
+      ],
+      "epsilon": 0.2,
+      "eta": 0.05,
+      "delta": 0.05,
+      "T": 14000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "boundary_new",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        5777,
+        5777,
+        5777
+      ],
+      "means": [
+        0.78,
+        0.568,
+        0.592,
+        0.49,
+        0.665,
+        0.15,
+        0.61,
+        0.55,
+        0.72
+      ],
+      "epsilon": 0.2,
+      "eta": 0.04,
+      "delta": 0.05,
+      "T": 14000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "near_ties_new",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        4337,
+        4337,
+        4337,
+        4337,
+        8779,
+        8779,
+        8779,
+        8779,
+        8779
+      ],
+      "means": [
+        0.625,
+        0.61,
+        0.6,
+        0.465,
+        0.64,
+        0.58,
+        0.515,
+        0.25,
+        0.65,
+        0.595,
+        0.53,
+        0.36,
+        0.48
+      ],
+      "epsilon": 0.13,
+      "eta": 0.035,
+      "delta": 0.05,
+      "T": 14000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "late_record_new",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        4337,
+        4337,
+        11311,
+        11311,
+        11311
+      ],
+      "means": [
+        0.515,
+        0.415,
+        0.27,
+        0.19,
+        0.15,
+        0.46,
+        0.895,
+        0.67,
+        0.84
+      ],
+      "epsilon": 0.2,
+      "eta": 0.05,
+      "delta": 0.05,
+      "T": 14000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "low_means",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        3779,
+        3779,
+        8111,
+        8111,
+        8111
+      ],
+      "means": [
+        0.245,
+        0.19,
+        0.14,
+        0.06,
+        0.215,
+        0.07,
+        0.27,
+        0.17,
+        0.105
+      ],
+      "epsilon": 0.08,
+      "eta": 0.025,
+      "delta": 0.05,
+      "T": 14000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "ceiling_new",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        3779,
+        3779,
+        3779,
+        9113,
+        9113
+      ],
+      "means": [
+        0.965,
+        0.855,
+        0.755,
+        0.24,
+        0.985,
+        0.805,
+        0.7,
+        0.615,
+        0.13
+      ],
+      "epsilon": 0.15,
+      "eta": 0.04,
+      "delta": 0.05,
+      "T": 14000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "many_new",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        4337,
+        11213,
+        11213,
+        11213,
+        11213,
+        11213
+      ],
+      "means": [
+        0.805,
+        0.735,
+        0.62,
+        0.45,
+        0.12,
+        0.175,
+        0.23,
+        0.285,
+        0.34,
+        0.395,
+        0.45,
+        0.505,
+        0.56,
+        0.615,
+        0.67,
+        0.725,
+        0.78,
+        0.835,
+        0.865,
+        0.895,
+        0.945,
+        0.915,
+        0.755,
+        0.675,
+        0.51
+      ],
+      "epsilon": 0.2,
+      "eta": 0.05,
+      "delta": 0.05,
+      "T": 18000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "serial_arrivals",
+      "arrivals": [
+        1,
+        1,
+        601,
+        1214,
+        1827,
+        2440,
+        3053,
+        3666,
+        4279,
+        4892,
+        5505,
+        6118,
+        6731,
+        7344,
+        7957,
+        8570,
+        9183,
+        9796,
+        10409,
+        11022,
+        11635,
+        12248
+      ],
+      "means": [
+        0.655,
+        0.44,
+        0.12,
+        0.38,
+        0.68,
+        0.49,
+        0.56,
+        0.2,
+        0.72,
+        0.6,
+        0.41,
+        0.77,
+        0.52,
+        0.25,
+        0.73,
+        0.81,
+        0.61,
+        0.45,
+        0.86,
+        0.68,
+        0.57,
+        0.32
+      ],
+      "epsilon": 0.2,
+      "eta": 0.05,
+      "delta": 0.05,
+      "T": 15000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "bounded_low_variance_new",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        4777,
+        4777,
+        4777,
+        9449,
+        9449,
+        9449
+      ],
+      "means": [
+        0.69,
+        0.52,
+        0.33,
+        0.17,
+        0.84,
+        0.62,
+        0.73,
+        0.79,
+        0.46,
+        0.26
+      ],
+      "epsilon": 0.2,
+      "eta": 0.05,
+      "delta": 0.05,
+      "T": 14000,
+      "kind": "two_point"
+    }
+  ],
+  "policies": [
+    {
+      "name": "UCB",
+      "reward": 0,
+      "scheduler": -1,
+      "beta": 1e+100,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "Growing-MOSS",
+      "reward": 1,
+      "scheduler": -1,
+      "beta": 1e+100,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "MC-MOSS",
+      "reward": 2,
+      "scheduler": -1,
+      "beta": 1e+100,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "MC-MOSS-clipped",
+      "reward": 7,
+      "scheduler": -1,
+      "beta": 1e+100,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "Thompson",
+      "reward": 3,
+      "scheduler": -1,
+      "beta": 1e+100,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "KL-UCB",
+      "reward": 4,
+      "scheduler": -1,
+      "beta": 1e+100,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "CCP-b0.25",
+      "reward": 7,
+      "scheduler": 13,
+      "beta": 0.25,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "CCP-b1.0",
+      "reward": 7,
+      "scheduler": 13,
+      "beta": 1.0,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "CCP-b4.0",
+      "reward": 7,
+      "scheduler": 13,
+      "beta": 4.0,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "CCP-free",
+      "reward": 7,
+      "scheduler": 13,
+      "beta": 1e+100,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "ALLplus-b0.25",
+      "reward": 7,
+      "scheduler": 1,
+      "beta": 0.25,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "ALLplus-b1.0",
+      "reward": 7,
+      "scheduler": 1,
+      "beta": 1.0,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "ALLplus-b4.0",
+      "reward": 7,
+      "scheduler": 1,
+      "beta": 4.0,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "ALLplus-free",
+      "reward": 7,
+      "scheduler": 1,
+      "beta": 1e+100,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "Shared-b0.25",
+      "reward": 7,
+      "scheduler": 28,
+      "beta": 0.25,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "Shared-b1.0",
+      "reward": 7,
+      "scheduler": 28,
+      "beta": 1.0,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "Shared-b4.0",
+      "reward": 7,
+      "scheduler": 28,
+      "beta": 4.0,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "Shared-free",
+      "reward": 7,
+      "scheduler": 28,
+      "beta": 1e+100,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "Bundle-b1",
+      "reward": 7,
+      "scheduler": 24,
+      "beta": 1.0,
+      "period": 2,
+      "price": 0.1
+    },
+    {
+      "name": "CCP-fast",
+      "reward": 7,
+      "scheduler": 13,
+      "beta": 1e+100,
+      "period": 1,
+      "price": 0.1
+    },
+    {
+      "name": "ALLplus-fast",
+      "reward": 7,
+      "scheduler": 1,
+      "beta": 1e+100,
+      "period": 1,
+      "price": 0.1
+    },
+    {
+      "name": "Shared-fast",
+      "reward": 7,
+      "scheduler": 28,
+      "beta": 1e+100,
+      "period": 1,
+      "price": 0.1
+    }
+  ],
+  "primary": "Shared-b1.0",
+  "primary_comparators": [
+    "CCP-b1.0",
+    "ALLplus-b1.0"
+  ],
+  "reward_seed": 6210000,
+  "policy_seed": 7310000,
+  "note": "New predefined environments, independent seeds. Prior scenarios used for development only. Primary chosen on development average relative area subject to modest regret change; no superiority assumed. Pure reward policies share the report layer only, with no service or budget restrictions. Fractional Beta-TS on non-Bernoulli observations is a heuristic, not a correct Bayesian posterior.",
+  "hashes": {
+    "engine_base.py": "206fa880f2206c235214081b1f95f9ee01ee887edd42d3615ae43ba6515183e3",
+    "engine_new.py": "f5f1dc16f2cd76fc0a0b86607f7888c7059921e77d044cc416aebb8eeb36d509",
+    "new_schedulers.py": "3f9f9f1d8b6d31356eef3e8bafeb4118e2e9cb190fd7857b1a3c3e6adb906f32"
+  }
+}

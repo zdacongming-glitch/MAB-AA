@@ -1,0 +1,18 @@
+{
+  "manuscript": {
+    "pages": 29,
+    "undefined": 0,
+    "overfull": 0,
+    "unresolved_text_markers": 0,
+    "old_pseudo_regret_term": false,
+    "pdf_sha256": "eeecbd9680c3f14f046e9f898379f6abbb505f5195405a144552ff207ba2386d"
+  },
+  "supplement": {
+    "pages": 35,
+    "undefined": 0,
+    "overfull": 0,
+    "unresolved_text_markers": 0,
+    "old_pseudo_regret_term": false,
+    "pdf_sha256": "f2d4ebeec121c1f7e03405da8ff4273facde5d69f48ab2cadc0af8db348d0d6e"
+  }
+}

@@ -1,0 +1,31 @@
+\documentclass[11pt]{article}
+\input{preamble}
+\setstretch{1.08}
+\externaldocument[][nocite]{manuscript}
+\externaldocument[S-][nocite]{supplement}
+\renewcommand{\thesection}{C\arabic{section}}
+\renewcommand{\thetheorem}{C\arabic{theorem}}
+\renewcommand{\theequation}{C\arabic{equation}}
+\renewcommand{\thefigure}{C\arabic{figure}}
+\renewcommand{\thetable}{C\arabic{table}}
+\title{Computational supplement to ``The temporal geometry of bandits with arriving arms''}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+All risks reported here are expected pseudo-regrets under specified
+Bernoulli experiments. Except for the exact finite-prior dynamic
+program, estimates use independent Monte Carlo replications; their
+standard errors do not quantify uncertainty about a minimax value.
+The accompanying scripts save the means, arrival schedules, seeds,
+per-replication losses and verification records.
+\tableofcontents
+\input{experiments_v2/bayes_supplement}
+\section{Clock, capacity and history interventions}
+\input{experiments_v2/mechanisms_appendix}
+\section{Random-arrival experiments}
+\input{experiments_v2/random_appendix}
+\input{experiments/experiments}
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "canonical_source": "fccp_flowchart.md",
+  "nodes": 15,
+  "edges": 17,
+  "rendered_edges_match_canonical_mermaid": true,
+  "size_pixels": [
+    2000,
+    1880
+  ],
+  "font": "C:\\Windows\\Fonts\\msyh.ttc",
+  "sources": {
+    "fccp_flowchart.md": "870bd611533cf2b06dcd5fab8f2e635661c371d211201a8b1ead963f5c3e3e5c",
+    "render_flowchart.py": "f9a3d43fc0e6e121fe17b0feb824e9dc660565f836afb625de786cb24b967697"
+  },
+  "outputs": {
+    "fccp_flowchart.png": "83e2131a622c94d7e21e37545650e9f595ff417ceb75f5f76702e8ea9c97807c",
+    "fccp_flowchart.pdf": "7291f7a6d7063f9c80f87e70e6a800bf581fb0393677c19352d801d4e5820ac8"
+  }
+}

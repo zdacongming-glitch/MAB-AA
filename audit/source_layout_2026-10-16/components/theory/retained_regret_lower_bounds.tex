@@ -1,0 +1,325 @@
+% Self-contained proofs of the retained regret lower bounds.
+% Main-source antecedents: mab_aa_main.tex 1037--1179, 1215--1348.
+% Original proofs: 2909--3080, 3085--3372, 3377--3569.
+% The half-horizon event below replaces the original floor-threshold argument.
+\section{Proofs of the retained regret lower bounds}
+\label{app:retained_regret_lower_bounds}
+
+These arguments use the original regret criterion
+$R_T(\pi;\nu)=\sum_{t=1}^T(r^*(t)-r_{I_t})$ at a deterministic physical
+horizon. Reward laws are stationary and independent across arms and draws.
+The policies are nonanticipating, may use independent randomization, and
+use the same action kernels in every environment being compared. Each
+comparison keeps the deterministic arrival schedule fixed. The schedules
+and reward laws may depend on $T$ where this is explicitly stated. All
+logarithms are natural.
+
+\subsection{Information inequalities with adaptive sampling}
+
+For probability laws $P,Q$, write $D(P\Vert Q)$ for relative entropy and
+$\operatorname{TV}(P,Q)=\sup_A|P(A)-Q(A)|$. For Bernoulli laws the relative
+entropy is denoted by $\operatorname{kl}(p,q)$. The usual conventions apply
+at zero probabilities.
+
+\begin{lemma}[Information inequalities]
+\label{lem:retained_information}
+For any event $A$,
+\begin{equation}
+ D(P\Vert Q)\ge\operatorname{kl}(P(A),Q(A))
+       \ge P(A)\log\frac1{Q(A)}-\log2.
+ \label{eq:retained_binary_information}
+\end{equation}
+Also,
+\begin{equation}
+ \operatorname{TV}(P,Q)\le\sqrt{D(P\Vert Q)/2},\qquad
+ |\E_P Z-\E_Q Z|\le\operatorname{TV}(P,Q)\quad(0\le Z\le1).
+ \label{eq:retained_tv_information}
+\end{equation}
+For $0<q<1$ and $0\le p\le1$,
+\begin{equation}
+ \operatorname{kl}(p,q)\le\frac{(p-q)^2}{q(1-q)}.
+ \label{eq:retained_bernoulli_upper}
+\end{equation}
+Finally, suppose two bandit environments differ only in the reward law
+of arm $i$, from $P_i$ to $Q_i$, with $D(P_i\Vert Q_i)<\infty$. If their
+history laws up to a deterministic time $u$ are $P^{H_u}$ and $Q^{H_u}$,
+then
+\begin{equation}
+ D(P^{H_u}\Vert Q^{H_u})
+       =\E_P N_i(u)D(P_i\Vert Q_i),\qquad
+ N_i(u)=\sum_{t=1}^u\ind\{I_t=i\}.
+ \label{eq:retained_adaptive_kl}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Splitting the relative-entropy integral over $A$ and its complement and
+applying Jensen's inequality on each part gives the first inequality in
+\eqref{eq:retained_binary_information}. The remaining binary entropy
+$p\log p+(1-p)\log(1-p)$ is bounded below by $-\log2$, and
+$(1-p)\log(1/(1-q))\ge0$, giving the second inequality.
+For fixed $q\in(0,1)$, the second derivative of
+$p\mapsto\operatorname{kl}(p,q)$ is $1/(p(1-p))\ge4$; the function and its
+first derivative vanish at $p=q$. Thus
+$\operatorname{kl}(p,q)\ge2(p-q)^2$, with endpoint cases by limits.
+Applying the first part of \eqref{eq:retained_binary_information} to
+every event proves the total-variation bound in
+\eqref{eq:retained_tv_information}. For bounded $Z$,
+\[
+ \E_P Z-\E_Q Z
+       =\int_0^1\{P(Z>x)-Q(Z>x)\}\,dx,
+\]
+so the same definition of total variation bounds the absolute difference.
+The inequality $\log x\le x-1$, applied to the two terms in Bernoulli
+relative entropy, gives \eqref{eq:retained_bernoulli_upper}.
+
+To establish \eqref{eq:retained_adaptive_kl}, include the observed rewards,
+actions, and available sets in the transcript. The available sets are
+deterministic and agree across the environments. Conditional on a past
+history $h$, the two joint laws of the next action and reward are
+$\pi_t(dj\mid h)P_j(dx)$ and $\pi_t(dj\mid h)Q_j(dx)$, respectively.
+The common action kernel cancels from the likelihood ratio. Their
+conditional relative entropy is therefore
+$\pi_t(\{i\}\mid h)D(P_i\Vert Q_i)$, since all other laws agree.
+The chain rule for relative entropy and iterated expectation give
+\[
+ D(P^{H_u}\Vert Q^{H_u})
+   =D(P_i\Vert Q_i)\sum_{t=1}^u
+           \E_P\pi_t(\{i\}\mid H_{t-1})
+   =D(P_i\Vert Q_i)\E_P N_i(u).
+\]
+This calculation also accounts for randomized policies. The finite
+horizon and finite armwise divergence ensure that its right side is
+finite. These are the standard adaptive change-of-measure identities
+used in bandit lower bounds \citep{kaufmann2016}.
+\end{proof}
+
+\subsection{Inferior arrivals and the static specialization}
+
+For each $T$, let arm $0$ be available from time $1$ and uniquely optimal
+in a baseline environment $\nu^{(0)}$, with mean $r^\star$. All other
+means are strictly smaller. Let $\mathcal I_T$ be a nonempty finite set
+of arriving arms. For $i\in\mathcal I_T$, its law is $P_i$, its mean is
+$r^\star-\Delta_i$, and its arrival time is $\tau_i\le T$. An alternative
+$\nu^{(i)}$ changes only this arm's law to $Q_i$, whose mean is
+$r^\star+\eta_i$. Put
+\[
+ H_i=T-\tau_i+1,\qquad H_{\min}=\min_{i\in\mathcal I_T}H_i,\qquad
+ d_i=D(P_i\Vert Q_i),\qquad
+ \mathcal V_T=\{\nu^{(0)}\}\cup\{\nu^{(i)}:i\in\mathcal I_T\}.
+\]
+Assume $H_{\min}\to\infty$ and fixed positive constants satisfy
+$\Delta_i\ge\underline\Delta$, $\eta_i\ge\underline\eta$, and
+$0<d_i\le\overline d$ uniformly over the indicated arms and all
+sufficiently large $T$. Let a policy sequence obey
+\[
+ g_T:=\sup_{\nu\in\mathcal V_T}
+       \E_\nu R_T(\pi^{(T)};\nu)
+       =o(H_{\min}^a)\quad\text{for every }a>0.
+\]
+
+\begin{proof}[Proof of the local-alternative regret lower bound]
+Fix $i\in\mathcal I_T$ and let
+\[
+ A_i=\{N_i(T)\le H_i/2\}.
+\]
+Under the baseline, every pull of $i$ incurs regret $\Delta_i$, so
+$\E_0N_i(T)\le g_T/\underline\Delta$. Markov's inequality gives
+\begin{equation}
+ \Prob_0(A_i^c)\le\frac{2g_T}{\underline\Delta H_i}.
+ \label{eq:retained_half_baseline}
+\end{equation}
+Under $\nu^{(i)}$, arm $i$ is uniquely best after its arrival. Each
+post-arrival pull of a different arm incurs regret at least $\eta_i$.
+On $A_i$ there are at least $H_i/2$ such pulls. Therefore
+\begin{equation}
+ \Prob_{\nu^{(i)}}(A_i)
+       \le\frac{2g_T}{\underline\eta H_i}.
+ \label{eq:retained_half_alternative}
+\end{equation}
+Take $a=1/2$ in the uniform-goodness condition. For all sufficiently
+large $T$, $g_T\le H_{\min}^{1/2}$. Consequently the right side of
+\eqref{eq:retained_half_baseline} is at most
+$2/(\underline\Delta H_{\min}^{1/2})$, which tends to zero uniformly in
+$i$. The right side of \eqref{eq:retained_half_alternative} is at most
+$2/(\underline\eta H_i^{1/2})$, which is at most $H_i^{-1/3}$ once
+$H_{\min}$ is sufficiently large. Hence one common deterministic
+threshold in $T$ gives, for every $i\in\mathcal I_T$,
+\[
+ \Prob_0(A_i)\ge\frac12,\qquad
+ \Prob_{\nu^{(i)}}(A_i)\le H_i^{-1/3}.
+\]
+Applying \eqref{eq:retained_binary_information} and
+\eqref{eq:retained_adaptive_kl} yields
+\[
+ d_i\E_0N_i(T)
+       \ge\frac16\log H_i-\log2
+       \ge\frac1{12}\log H_i
+\]
+for all sufficiently large $T$, uniformly over $i$. In the last step
+use $H_i\ge H_{\min}\to\infty$. If an alternative event had probability
+zero, the binary divergence would be infinite while the adaptive
+divergence is finite; the displayed argument is valid with the usual
+extended-value convention as well.
+
+Under the same baseline environment for all the arms,
+\[
+ R_T(\pi^{(T)};\nu^{(0)})
+       \ge\sum_{i\in\mathcal I_T}\Delta_iN_i(T).
+\]
+There is no summation of lower bounds obtained in incompatible baseline
+environments. Taking expectations and summing the uniform armwise
+bounds proves
+\[
+ \E_0R_T
+       \ge\frac1{12}\sum_{i\in\mathcal I_T}
+                  \frac{\Delta_i}{d_i}\log H_i
+       \ge\frac{\underline\Delta}{12\overline d}
+                 |\mathcal I_T|\log H_{\min}.
+\]
+\end{proof}
+
+For a static fixed collection of $K$ inferior arms, all $H_i=T$.
+Fixed positive gaps and alternative improvements give positive lower
+bounds $\underline\Delta,\underline\eta$, and finitely many finite
+divergences have a finite common upper bound. If additionally
+$d_i\le C_i\Delta_i^2$, the preceding display becomes
+\[
+ \E_0R_T\ge\frac1{12}\sum_{i=1}^K
+                              \frac{\log T}{C_i\Delta_i}.
+\]
+This proves the static specialization directly. Its fixed laws and
+fixed $K$ distinguish it from a growing triangular family. The
+uniform-goodness hypothesis is a condition on policies; the result
+does not establish that this policy class is nonempty for every
+growth schedule. In particular, its two conclusions together imply
+$|\mathcal I_T|\log H_{\min}=o(H_{\min}^a)$ for every $a>0$ whenever
+the assumed sequence exists.
+
+\subsection{Successive local comparisons under benchmark improvements}
+
+Fix $J\ge1$, positive integer block lengths $H_m$ with
+$\sum_{m=1}^JH_m=T$, and endpoints $s_m=\sum_{\ell=1}^mH_\ell$,
+$s_0=0$. At time $s_{m-1}+1$, two Bernoulli arms $c_m,d_m$ arrive,
+with means
+\[
+ r_{c_m}=\theta_m,\qquad
+ r_{d_m}=\theta_m+\sigma_m\varepsilon_m,
+ \qquad \sigma\in\{-1,+1\}^J.
+\]
+The arms remain available. There are no other arms. Fix
+$0<\gamma<1/2$, assume $\varepsilon_m>0$ and
+$\theta_m\pm\varepsilon_m\in[\gamma,1-\gamma]$, and require
+$\theta_{m+1}\ge\theta_m+\varepsilon_m$ for $m<J$.
+Let $\nu_\sigma$ denote the corresponding full environment.
+
+\begin{proof}[Proof of the deterministic-block regret lower bound]
+For a fixed policy, let
+\[
+ \mathcal R_m=\sum_{t=s_{m-1}+1}^{s_m}
+                      (r^*(t)-r_{I_t}),\qquad
+ N_m=\sum_{t=s_{m-1}+1}^{s_m}\ind\{I_t=d_m\}.
+\]
+These are random variables, and $R_T=\sum_m\mathcal R_m$ pathwise.
+Fix a block $m$ and fix all signs other than $\sigma_m$. Denote the
+two resulting environments by $\nu^{m,-}$ and $\nu^{m,+}$.
+For every earlier block $j<m$,
+\[
+ r_{c_j}=\theta_j\le\theta_m,\qquad
+ r_{d_j}\le\theta_j+\varepsilon_j
+                    \le\theta_{j+1}\le\theta_m.
+\]
+Thus the best mean in block $m$ is $\theta_m$ under the negative sign
+and $\theta_m+\varepsilon_m$ under the positive sign. All arms older
+than block $m$ remain available; they cannot exceed these reference
+levels. Consequently,
+\[
+ \mathcal R_m\ge\varepsilon_mN_m
+       \quad\text{under }\nu^{m,-},\qquad
+ \mathcal R_m\ge\varepsilon_m(H_m-N_m)
+       \quad\text{under }\nu^{m,+}.
+\]
+Let $P^{m,-}_{[m]}$ and $P^{m,+}_{[m]}$ be the history laws only up to
+time $s_m$. The variable $N_m/H_m$ is measurable for that prefix and
+lies in $[0,1]$. By \eqref{eq:retained_tv_information},
+\begin{align*}
+ \E_{m,-}\mathcal R_m+\E_{m,+}\mathcal R_m
+ &\ge\varepsilon_m
+       \{\E_{m,-}N_m+\E_{m,+}(H_m-N_m)\}\\
+ &\ge H_m\varepsilon_m
+       \{1-\operatorname{TV}(P^{m,-}_{[m]},P^{m,+}_{[m]})\}.
+\end{align*}
+Only the observations of $d_m$ have different laws. That arm has no
+observations before its arrival at the beginning of block $m$.
+Equation \eqref{eq:retained_adaptive_kl}, applied at the prefix
+endpoint $s_m$, therefore gives
+\[
+ D(P^{m,-}_{[m]}\Vert P^{m,+}_{[m]})
+       =\E_{m,-}N_m\,
+          \operatorname{kl}(\theta_m-\varepsilon_m,
+                              \theta_m+\varepsilon_m)
+       \le H_m\operatorname{kl}(\theta_m-\varepsilon_m,
+                                \theta_m+\varepsilon_m).
+\]
+Using a full-horizon transcript instead would include later pulls
+of $d_m$; the prefix endpoint is essential to the bound by $H_m$.
+The Bernoulli upper bound and Pinsker's inequality give
+\[
+ \operatorname{TV}(P^{m,-}_{[m]},P^{m,+}_{[m]})
+ \le\sqrt{\frac12H_m
+             \operatorname{kl}(\theta_m-\varepsilon_m,
+                                 \theta_m+\varepsilon_m)}
+ \le\sqrt{\frac{2H_m\varepsilon_m^2}{\gamma(1-\gamma)}}.
+\]
+The pair of expected block regrets is nonnegative, so it is at least
+\[
+ H_m\varepsilon_m
+       \left(1-\sqrt{\frac{2H_m\varepsilon_m^2}
+                                {\gamma(1-\gamma)}}\right)_+.
+\]
+Averaging over the two signs in this block contributes a factor
+$1/2$. Averaging also over all fixed configurations of the other
+signs, and then summing over blocks, gives
+\begin{align*}
+ \sup_\sigma\E_{\nu_\sigma}R_T
+ &\ge2^{-J}\sum_{\sigma\in\{-1,+1\}^J}
+                           \E_{\nu_\sigma}R_T\\
+ &\ge\frac12\sum_{m=1}^JH_m\varepsilon_m
+       \left(1-\sqrt{\frac{2H_m\varepsilon_m^2}
+                                {\gamma(1-\gamma)}}\right)_+.
+\end{align*}
+The same uniform sign average is used for every block, so these
+blockwise bounds combine under one full-environment distribution.
+If $H_m\varepsilon_m^2\le\kappa\gamma(1-\gamma)$ with
+$0<\kappa<1/2$, each factor is at least $1-\sqrt{2\kappa}$.
+The proof holds for every policy, including randomized and
+horizon-dependent policies, and therefore also after taking their
+infimum.
+\end{proof}
+
+For completeness, if $\varepsilon_m\ge c_\varepsilon\sqrt{J/T}$ and
+the small-information condition holds, the last bound is at least
+\[
+ c_\kappa\sum_{m=1}^JH_m\varepsilon_m
+       \ge c_\kappa c_\varepsilon\sqrt{JT}.
+\]
+Conditions $H_m\asymp T/J$ and
+$\varepsilon_m\asymp\sqrt{J/T}$ with a sufficiently small product
+of upper constants ensure that small-information condition.
+The ladder must also exist inside the bounded interval. Telescoping
+the monotonicity constraints gives
+\[
+ \sum_{m=1}^J\varepsilon_m
+       \le\theta_J+\varepsilon_J-(\theta_1-\varepsilon_1)
+       \le1-2\gamma.
+\]
+Consequently
+$c_\varepsilon J^{3/2}/\sqrt T\le1-2\gamma$, proving the necessary
+range $J=O(T^{1/3})$. A homogeneous example with
+$\varepsilon_m=\varepsilon$ and $\theta_m=\gamma+m\varepsilon$
+is feasible whenever $(J+1)\varepsilon\le1-2\gamma$.
+There are exactly $2J$ arrived arms, so block count and arm count
+are different quantities. These deterministic-horizon lower bounds
+do not establish matching with an upper bound at a random stopping
+time, nor do they impose a growth boundary on all possible
+arriving-arm environments.

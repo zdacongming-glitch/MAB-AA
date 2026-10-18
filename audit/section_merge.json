@@ -1,0 +1,26 @@
+{
+  "operation": "Inline all seven sections in manuscript.tex without editing their text",
+  "date": "2026-10-15",
+  "backup_directory": "audit/before_section_merge",
+  "section_order": [
+    "sections/01_introduction.tex",
+    "sections/02_model.tex",
+    "sections/03_method.tex",
+    "sections/04_maintenance.tex",
+    "sections/05_tradeoff.tex",
+    "sections/06_experiments.tex",
+    "sections/07_discussion.tex"
+  ],
+  "original_source_sha256": {
+    "manuscript.tex": "62476b70785d0a1d90f047501f724040fa463414089b4b9be0d10d295b0a6a78",
+    "sections/01_introduction.tex": "5b96aaf1b6bc94da4e6e923abdae1639ab3871352aaf1a91e09752566188b93f",
+    "sections/02_model.tex": "d356ea8f875adaa3730a688f6f6bcfe3f2e52f9c7bb852d503371e248b31d2c3",
+    "sections/03_method.tex": "7ae4d50fbfbae7bda460be0cce8bba85561661009d38b4ea059a25853d7db80b",
+    "sections/04_maintenance.tex": "f59b47e0719dd936ab3960751ded225c563c33c843ab722f91a66363605e3e3b",
+    "sections/05_tradeoff.tex": "4e6c04d26a7470aaad251c87a867e89f2667228afce7b599432a1895ccec3488",
+    "sections/06_experiments.tex": "f274bc5eb70ad4e091b559fa4ca249704fa46fb2babbca21bf4d4e87a2525e40",
+    "sections/07_discussion.tex": "7b4f620177499ab62422b0ef91f18cfce8841b6df03426a2811dc13e61f785f0"
+  },
+  "merged_manuscript_sha256": "5f04a26586dd02610a48a97bb08ecdc9b957e9d41fc53f57000a8c58a2abdf4e",
+  "assessment_status": "Existing assessments and frozen evidence remain unchanged; no reassessment performed."
+}

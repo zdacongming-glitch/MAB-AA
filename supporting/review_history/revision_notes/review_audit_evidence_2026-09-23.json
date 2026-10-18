@@ -1,0 +1,442 @@
+{
+  "date": "2026-09-23",
+  "manuscript": "D:/博士学习/科研/git/MAB-AA/JASA-template/mab_aa_main.tex",
+  "simulation_root": "D:/博士学习/科研/Projects/Bandit with Arriving Arms/simulation_final",
+  "archive_root": "D:/博士学习/科研/Projects/Bandit with Arriving Arms/simulation_final/outputs/final",
+  "scope": "Read-only source and archive audit. Six custom_elim replays, not a full rerun of the original 100-replicate experiment.",
+  "figure_sha256": [
+    {
+      "figure": "scenario_C_arm_set_size_vs_t.png",
+      "sha256": "e3ba6d3f9ea10edbe9008db95dc0c2b0e1f0a9eb01055aade0ef3facae01a470",
+      "matched_archive_relative_path": "scenario_C/plots/scenario_C_arm_set_size_vs_t.png"
+    },
+    {
+      "figure": "scenario_C_dynamic_regret_vs_t.png",
+      "sha256": "b7d7b26642b3bbce44f38bce622676e9c83c0beae4a158cde853b4bcb20df48e",
+      "matched_archive_relative_path": "scenario_C/plots/scenario_C_dynamic_regret_vs_t.png"
+    },
+    {
+      "figure": "scenario_C_wasted_pulls_eps_0_1.png",
+      "sha256": "6e97f5922c165b3f325d489a4bf5dde6f5809519c35123f9e24d429259d4732d",
+      "matched_archive_relative_path": "scenario_C/plots/scenario_C_wasted_pulls_eps_0_1.png"
+    },
+    {
+      "figure": "scenario_E_arm_set_size_vs_t.png",
+      "sha256": "218eb4c335b21b96459286f9cb7d76edb275ef4334a5beb1ded751c0e18550c1",
+      "matched_archive_relative_path": "scenario_E/plots/scenario_E_arm_set_size_vs_t.png"
+    },
+    {
+      "figure": "scenario_E_dynamic_regret_vs_t.png",
+      "sha256": "caa0003385dc40e0d2ab99a49c46790f7da9fe6354b86bf0e6d4080910fcd1c4",
+      "matched_archive_relative_path": "scenario_E/plots/scenario_E_dynamic_regret_vs_t.png"
+    },
+    {
+      "figure": "scenario_E_wasted_pulls_eps_0_1.png",
+      "sha256": "7e583a171fa4448392b8575698b09aacd91eb1278e73e2b83205429ae3036efa",
+      "matched_archive_relative_path": "scenario_E/plots/scenario_E_wasted_pulls_eps_0_1.png"
+    }
+  ],
+  "archive_paired_statistics": [
+    {
+      "scenario": "C",
+      "n": 100,
+      "paired_difference_UCBAA_minus_MOSS": 3103.2215977464743,
+      "paired_95_normal_interval": [
+        2443.9606645258523,
+        3762.4825309670964
+      ],
+      "regret_summary": {
+        "mean": {
+          "custom_elim": 5139.9426960415185,
+          "erse": 28872.74999592616,
+          "moss": 2036.721098295043,
+          "naive_elim": 27507.030332467297,
+          "ucb": 9347.1957246791
+        },
+        "min": {
+          "custom_elim": 1587.104877900284,
+          "erse": 22827.871670211145,
+          "moss": 1675.1941276457171,
+          "naive_elim": 17857.903839898107,
+          "ucb": 7378.121087995191
+        },
+        "max": {
+          "custom_elim": 16885.328172949852,
+          "erse": 30922.49662417321,
+          "moss": 3230.254112994411,
+          "naive_elim": 31257.722956641475,
+          "ucb": 10955.459221997731
+        }
+      },
+      "UCB_effective_arms_per_time": 0.0053061666666666665
+    },
+    {
+      "scenario": "E",
+      "n": 100,
+      "paired_difference_UCBAA_minus_MOSS": -162.87481102634007,
+      "paired_95_normal_interval": [
+        -320.0807672939317,
+        -5.668854758748466
+      ],
+      "regret_summary": {
+        "mean": {
+          "custom_elim": 1880.878160348248,
+          "erse": 25152.23727237973,
+          "moss": 2043.752971374588,
+          "naive_elim": 5433.368455566103,
+          "ucb": 7964.260146203678
+        },
+        "min": {
+          "custom_elim": 793.3876911427107,
+          "erse": 22473.72219122483,
+          "moss": 1651.719034313185,
+          "naive_elim": 1276.4819733445113,
+          "ucb": 7290.118442947794
+        },
+        "max": {
+          "custom_elim": 5609.015427493619,
+          "erse": 27365.170279591748,
+          "moss": 2959.5167381998704,
+          "naive_elim": 11988.904192630607,
+          "ucb": 9363.60906224981
+        }
+      },
+      "UCB_effective_arms_per_time": 0.005422833333333333
+    }
+  ],
+  "archive_checkpoint_statistics": [
+    {
+      "scenario": "C",
+      "algorithm": "ucb",
+      "checkpoints": [
+        {
+          "t": 15015,
+          "mean_regret": 2091.383011225404,
+          "regret_over_t": 0.13928624783385973
+        },
+        {
+          "t": 29970,
+          "mean_regret": 4450.622757881124,
+          "regret_over_t": 0.1485025945238947
+        },
+        {
+          "t": 44985,
+          "mean_regret": 6869.159673733496,
+          "regret_over_t": 0.15269889238042672
+        },
+        {
+          "t": 60000,
+          "mean_regret": 9347.1957246791,
+          "regret_over_t": 0.15578659541131834
+        }
+      ]
+    },
+    {
+      "scenario": "C",
+      "algorithm": "custom_elim",
+      "checkpoints": [
+        {
+          "t": 15015,
+          "mean_regret": 2931.1159071702937,
+          "regret_over_t": 0.19521251463005618
+        },
+        {
+          "t": 29970,
+          "mean_regret": 3987.817353997589,
+          "regret_over_t": 0.13306030543869166
+        },
+        {
+          "t": 44985,
+          "mean_regret": 4489.932424976619,
+          "regret_over_t": 0.09980954595924461
+        },
+        {
+          "t": 60000,
+          "mean_regret": 5139.942696041519,
+          "regret_over_t": 0.08566571160069199
+        }
+      ]
+    },
+    {
+      "scenario": "C",
+      "algorithm": "moss",
+      "checkpoints": [
+        {
+          "t": 15015,
+          "mean_regret": 522.8881841303688,
+          "regret_over_t": 0.03482438788747045
+        },
+        {
+          "t": 29970,
+          "mean_regret": 1022.19610815242,
+          "regret_over_t": 0.03410731091599666
+        },
+        {
+          "t": 44985,
+          "mean_regret": 1538.3339545012266,
+          "regret_over_t": 0.03419659785486777
+        },
+        {
+          "t": 60000,
+          "mean_regret": 2036.721098295043,
+          "regret_over_t": 0.033945351638250715
+        }
+      ]
+    },
+    {
+      "scenario": "E",
+      "algorithm": "ucb",
+      "checkpoints": [
+        {
+          "t": 15015,
+          "mean_regret": 1950.0738291987093,
+          "regret_over_t": 0.12987504689968093
+        },
+        {
+          "t": 29970,
+          "mean_regret": 3907.776841175547,
+          "regret_over_t": 0.13038961765684173
+        },
+        {
+          "t": 44985,
+          "mean_regret": 5905.748336954844,
+          "regret_over_t": 0.13128261280326428
+        },
+        {
+          "t": 60000,
+          "mean_regret": 7964.260146203678,
+          "regret_over_t": 0.13273766910339463
+        }
+      ]
+    },
+    {
+      "scenario": "E",
+      "algorithm": "custom_elim",
+      "checkpoints": [
+        {
+          "t": 15015,
+          "mean_regret": 1309.200801309252,
+          "regret_over_t": 0.08719286056005675
+        },
+        {
+          "t": 29970,
+          "mean_regret": 1479.0080578894615,
+          "regret_over_t": 0.04934961821452991
+        },
+        {
+          "t": 44985,
+          "mean_regret": 1675.1278200544514,
+          "regret_over_t": 0.037237475159596564
+        },
+        {
+          "t": 60000,
+          "mean_regret": 1880.878160348248,
+          "regret_over_t": 0.031347969339137464
+        }
+      ]
+    },
+    {
+      "scenario": "E",
+      "algorithm": "moss",
+      "checkpoints": [
+        {
+          "t": 15015,
+          "mean_regret": 571.3767936049722,
+          "regret_over_t": 0.03805373250782366
+        },
+        {
+          "t": 29970,
+          "mean_regret": 1057.8637601154742,
+          "regret_over_t": 0.035297422759942416
+        },
+        {
+          "t": 44985,
+          "mean_regret": 1555.5751150250164,
+          "regret_over_t": 0.03457986251028157
+        },
+        {
+          "t": 60000,
+          "mean_regret": 2043.752971374588,
+          "regret_over_t": 0.0340625495229098
+        }
+      ]
+    }
+  ],
+  "g3_counterexample_numerical_checks": [
+    {
+      "M": 8,
+      "nM": 768477,
+      "N": 23054310,
+      "S_i": 927.9140625,
+      "claimed_upper_bound": 1201.1191893985285,
+      "ratio": 0.772541202147192
+    },
+    {
+      "M": 12,
+      "nM": 196729877,
+      "N": 5901896310,
+      "S_i": 14846.56982421875,
+      "claimed_upper_bound": 1653.9667254811216,
+      "ratio": 8.97634129846236
+    },
+    {
+      "M": 16,
+      "nM": 50362848446,
+      "N": 1510885453380,
+      "S_i": 237545.11389160156,
+      "claimed_upper_bound": 2098.4170191442254,
+      "ratio": 113.20205265418454
+    },
+    {
+      "M": 20,
+      "nM": 12892889202125,
+      "N": 386786676063750,
+      "S_i": 3800721.822087288,
+      "claimed_upper_bound": 2542.0993657485596,
+      "ratio": 1495.1114316367834
+    }
+  ],
+  "independent_replays": [
+    {
+      "scenario": "C",
+      "replicate": 1,
+      "regret": 3379.7835794386156,
+      "last_round_end": 9323,
+      "exploitation_tail_pulls": 50677,
+      "admitted_arms": 26,
+      "arrived_arms": 317,
+      "unadmitted_arms": 291,
+      "round_end_times": [
+        160,
+        530,
+        1035,
+        1835,
+        4588,
+        9323
+      ],
+      "matched_archived_regret_rel_tol_1e_12": true,
+      "horizon": 60000,
+      "master_seed": 20260309,
+      "algorithm": "custom_elim"
+    },
+    {
+      "scenario": "C",
+      "replicate": 2,
+      "regret": 3155.921457813672,
+      "last_round_end": 20895,
+      "exploitation_tail_pulls": 39105,
+      "admitted_arms": 60,
+      "arrived_arms": 309,
+      "unadmitted_arms": 249,
+      "round_end_times": [
+        160,
+        636,
+        1706,
+        3895,
+        8603,
+        20895
+      ],
+      "matched_archived_regret_rel_tol_1e_12": true,
+      "horizon": 60000,
+      "master_seed": 20260309,
+      "algorithm": "custom_elim"
+    },
+    {
+      "scenario": "C",
+      "replicate": 3,
+      "regret": 3703.4700627191023,
+      "last_round_end": 16261,
+      "exploitation_tail_pulls": 43739,
+      "admitted_arms": 43,
+      "arrived_arms": 320,
+      "unadmitted_arms": 277,
+      "round_end_times": [
+        160,
+        583,
+        1374,
+        3095,
+        6272,
+        16261
+      ],
+      "matched_archived_regret_rel_tol_1e_12": true,
+      "horizon": 60000,
+      "master_seed": 20260309,
+      "algorithm": "custom_elim"
+    },
+    {
+      "scenario": "E",
+      "replicate": 1,
+      "regret": 1080.8281181022571,
+      "last_round_end": 4682,
+      "exploitation_tail_pulls": 55318,
+      "admitted_arms": 28,
+      "arrived_arms": 324,
+      "unadmitted_arms": 296,
+      "round_end_times": [
+        280,
+        840,
+        1514,
+        2972,
+        4682
+      ],
+      "matched_archived_regret_rel_tol_1e_12": true,
+      "horizon": 60000,
+      "master_seed": 20260309,
+      "algorithm": "custom_elim"
+    },
+    {
+      "scenario": "E",
+      "replicate": 2,
+      "regret": 1762.7551571847612,
+      "last_round_end": 7466,
+      "exploitation_tail_pulls": 52534,
+      "admitted_arms": 39,
+      "arrived_arms": 316,
+      "unadmitted_arms": 277,
+      "round_end_times": [
+        280,
+        896,
+        1570,
+        3867,
+        7466
+      ],
+      "matched_archived_regret_rel_tol_1e_12": true,
+      "horizon": 60000,
+      "master_seed": 20260309,
+      "algorithm": "custom_elim"
+    },
+    {
+      "scenario": "E",
+      "replicate": 3,
+      "regret": 1605.3935764209712,
+      "last_round_end": 8730,
+      "exploitation_tail_pulls": 51270,
+      "admitted_arms": 40,
+      "arrived_arms": 327,
+      "unadmitted_arms": 287,
+      "round_end_times": [
+        280,
+        882,
+        1556,
+        3816,
+        8730
+      ],
+      "matched_archived_regret_rel_tol_1e_12": true,
+      "horizon": 60000,
+      "master_seed": 20260309,
+      "algorithm": "custom_elim"
+    }
+  ],
+  "source_file_sha256": {
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\mab_aa_main.tex": "d81d24cda29e9137fa85a622244be374d880480aca267eb62d17caafaa249f6f",
+    "D:\\博士学习\\科研\\git\\MAB-AA\\Reviews_JASA-RA-2026-0866.pdf": "4ee1be44544c6b4d6f19bcdbc914ac194ed4ecf4c86ef976953349953fde7823",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\algos.py": "636af3a2f204af8614669adbcb276219316c5e9997db894762945ae97815460e",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\env.py": "de824dc4adf2bdfc797f856ce87826f23993a61498904958f800dcd464c57b33",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\runner.py": "9ee9f28d9186d31fc6646c1b77d93efe67629188305cf0923744bf9e4198285c",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\ce_five_algo_runner.py": "407c342ae1155fbae48f0af83ed6035e46e709ad75ca5e56f3c18d36054448a9",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_C\\config.json": "4de043f8f7613795e6594ffe23fd77e56a27f995a1760511c82dc0b2f1473a27",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_C\\raw_final.csv": "18a4bca15030cc4bbec4900e0ba028d3695ddbfab62fba410ddcfbbb6ed24e76",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_E\\config.json": "f43596478c8b7c29e3055856ee8c8275533daeaa433542ff02a0a3e03a638b58",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_E\\raw_final.csv": "835e6043e3d1525742b1e70dfaae69961918c201d227604f5f20a581b44bd84a"
+  }
+}

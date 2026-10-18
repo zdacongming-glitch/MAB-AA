@@ -1,0 +1,18 @@
+{
+  "valid_main_runs": 27648,
+  "completed_correction_runs": 1152,
+  "all_pulls_match_endpoint": true,
+  "fixed_TS_compatibility_identical": 1152,
+  "paired_comparisons": 60,
+  "strict_mean_wins": 59,
+  "strict_upper_fwer_below_zero": 52,
+  "relaxed_NI_upper_fwer_below_zero": 54,
+  "alpha_family": 0.05,
+  "relaxed_margin": "5% of comparator mean plus 2 regret units; not literal non-inferiority",
+  "all_failure_paths_retained": true,
+  "phase_integer_boundary_delays": 1035,
+  "phase_residual_range": [
+    0.0,
+    1.000000002899469
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "checked_after_actual_rounds": 5,
+  "trigger_source": "assessment-summary-first-five.json",
+  "triggers": [
+    "c3: tier 2 in 4 rounds, tier 3 in 1 round; sample SD 0.45",
+    "c5: tier 2 in 4 rounds, tier 3 in 1 round"
+  ],
+  "fact_checks": {
+    "c3": "Compared round 01 and rounds 02-04. All acknowledge the static initial-batch lower bound, existing simultaneous-recovery tools, finite-horizon truncation, distinct schedule quantifiers and residual critical logarithmic gap. The disagreement is whether cumulative-area conversion and growth/burst consequences independently clear the 4.0 substantive-obstacle threshold, not a different theorem statement.",
+    "c5": "Compared rounds 01-03 with round 04. All acknowledge the same costmatched ALL evidence, exact continuous proxy but no optimal statistical allocation, and guarantees independent of accurate cost prediction. The disagreement is whether pair/reference planning plus empirical comparison already supplies a reusable new allocation principle; lack of a complete Pareto theorem is not used as a mandatory gate."
+  },
+  "material_error_identified": false,
+  "packet_changed": false,
+  "protocol_changed": false,
+  "decision": "Preserve the original five and append five fresh isolated contexts under the precommitted rule; stop at ten and retain remaining disagreements."
+}

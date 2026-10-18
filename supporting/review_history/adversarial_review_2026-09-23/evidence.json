@@ -1,0 +1,398 @@
+{
+  "scope": "Official source only; no exploratory algorithms included.",
+  "manuscript_sha256": "d81d24cda29e9137fa85a622244be374d880480aca267eb62d17caafaa249f6f",
+  "source_hashes": {
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\mab_aa_main.tex": "d81d24cda29e9137fa85a622244be374d880480aca267eb62d17caafaa249f6f",
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\mab_aa_main.pdf": "44c19acf42498b41179ae52d2a0951a004c76c834b2eb244c22fc1b05135fb8e",
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\bibliography.bib": "36dee2427c36a735441047b2041d97d6a580482fd1953489ed77f053d706f5ee",
+    "D:\\博士学习\\科研\\git\\MAB-AA\\Reviews_JASA-RA-2026-0866.pdf": "4ee1be44544c6b4d6f19bcdbc914ac194ed4ecf4c86ef976953349953fde7823",
+    "D:\\博士学习\\科研\\git\\MAB-AA\\revision_notes\\review_audit_evidence_2026-09-23.json": "f425e2d38b60815760d5c4d8f293ab5c34a2942e58510ff30075879d696bd369",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\algos.py": "636af3a2f204af8614669adbcb276219316c5e9997db894762945ae97815460e",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\env.py": "de824dc4adf2bdfc797f856ce87826f23993a61498904958f800dcd464c57b33",
+    "C:\\Users\\12701\\.codex\\skills\\statistical-innovation-assessment\\SKILL.md": "21fd8ef57a2c42384cdad83ed526a53b87b6a4a9d3a5cd85d7541b17697e108a",
+    "C:\\Users\\12701\\.codex\\skills\\statistical-innovation-assessment\\references\\rubric.md": "acf4617a123b2e18845d0999f35b4145d5b64d8e0838007565c534d9985d3266",
+    "C:\\Users\\12701\\.codex\\skills\\statistical-innovation-assessment\\references\\examples.md": "9381d5594fb63320eb4b11de4046302d863e5a2553a1c22e2a2479b80d2f93f3",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_C\\config.json": "4de043f8f7613795e6594ffe23fd77e56a27f995a1760511c82dc0b2f1473a27",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_C\\raw_final.csv": "18a4bca15030cc4bbec4900e0ba028d3695ddbfab62fba410ddcfbbb6ed24e76",
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\scenario_C_dynamic_regret_vs_t.png": "b7d7b26642b3bbce44f38bce622676e9c83c0beae4a158cde853b4bcb20df48e",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_C\\plots\\scenario_C_dynamic_regret_vs_t.png": "b7d7b26642b3bbce44f38bce622676e9c83c0beae4a158cde853b4bcb20df48e",
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\scenario_C_wasted_pulls_eps_0_1.png": "6e97f5922c165b3f325d489a4bf5dde6f5809519c35123f9e24d429259d4732d",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_C\\plots\\scenario_C_wasted_pulls_eps_0_1.png": "6e97f5922c165b3f325d489a4bf5dde6f5809519c35123f9e24d429259d4732d",
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\scenario_C_arm_set_size_vs_t.png": "e3ba6d3f9ea10edbe9008db95dc0c2b0e1f0a9eb01055aade0ef3facae01a470",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_C\\plots\\scenario_C_arm_set_size_vs_t.png": "e3ba6d3f9ea10edbe9008db95dc0c2b0e1f0a9eb01055aade0ef3facae01a470",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_E\\config.json": "f43596478c8b7c29e3055856ee8c8275533daeaa433542ff02a0a3e03a638b58",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_E\\raw_final.csv": "835e6043e3d1525742b1e70dfaae69961918c201d227604f5f20a581b44bd84a",
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\scenario_E_dynamic_regret_vs_t.png": "caa0003385dc40e0d2ab99a49c46790f7da9fe6354b86bf0e6d4080910fcd1c4",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_E\\plots\\scenario_E_dynamic_regret_vs_t.png": "caa0003385dc40e0d2ab99a49c46790f7da9fe6354b86bf0e6d4080910fcd1c4",
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\scenario_E_wasted_pulls_eps_0_1.png": "7e583a171fa4448392b8575698b09aacd91eb1278e73e2b83205429ae3036efa",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_E\\plots\\scenario_E_wasted_pulls_eps_0_1.png": "7e583a171fa4448392b8575698b09aacd91eb1278e73e2b83205429ae3036efa",
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\scenario_E_arm_set_size_vs_t.png": "218eb4c335b21b96459286f9cb7d76edb275ef4334a5beb1ded751c0e18550c1",
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_E\\plots\\scenario_E_arm_set_size_vs_t.png": "218eb4c335b21b96459286f9cb7d76edb275ef4334a5beb1ded751c0e18550c1"
+  },
+  "source_mtime_ns": {
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\mab_aa_main.tex": 1782740446190204000,
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\mab_aa_main.pdf": 1780397440085224300,
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\bibliography.bib": 1779679245543694600,
+    "D:\\博士学习\\科研\\git\\MAB-AA\\Reviews_JASA-RA-2026-0866.pdf": 1790128034497207400,
+    "D:\\博士学习\\科研\\git\\MAB-AA\\revision_notes\\review_audit_evidence_2026-09-23.json": 1790129393507300400,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\algos.py": 1773224759785116300,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\env.py": 1773065499912153500,
+    "C:\\Users\\12701\\.codex\\skills\\statistical-innovation-assessment\\SKILL.md": 1790151792352716400,
+    "C:\\Users\\12701\\.codex\\skills\\statistical-innovation-assessment\\references\\rubric.md": 1790151873201260700,
+    "C:\\Users\\12701\\.codex\\skills\\statistical-innovation-assessment\\references\\examples.md": 1790151873203708600,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_C\\config.json": 1773285546409866800,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_C\\raw_final.csv": 1773285537571528000,
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\scenario_C_dynamic_regret_vs_t.png": 1779679245553034000,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_C\\plots\\scenario_C_dynamic_regret_vs_t.png": 1773285548152569900,
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\scenario_C_wasted_pulls_eps_0_1.png": 1779679245554037700,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_C\\plots\\scenario_C_wasted_pulls_eps_0_1.png": 1773285549340598100,
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\scenario_C_arm_set_size_vs_t.png": 1779679245549672600,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_C\\plots\\scenario_C_arm_set_size_vs_t.png": 1773285548722984800,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_E\\config.json": 1773285561618235200,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_E\\raw_final.csv": 1773285552795731600,
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\scenario_E_dynamic_regret_vs_t.png": 1779679245556189800,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_E\\plots\\scenario_E_dynamic_regret_vs_t.png": 1773285562097342800,
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\scenario_E_wasted_pulls_eps_0_1.png": 1779679245557691800,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_E\\plots\\scenario_E_wasted_pulls_eps_0_1.png": 1773285563220763300,
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\scenario_E_arm_set_size_vs_t.png": 1779679245554037700,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_E\\plots\\scenario_E_arm_set_size_vs_t.png": 1773285562567701400
+  },
+  "previous_source_hash_checks": {
+    "D:\\博士学习\\科研\\git\\MAB-AA\\JASA-template\\mab_aa_main.tex": true,
+    "D:\\博士学习\\科研\\git\\MAB-AA\\Reviews_JASA-RA-2026-0866.pdf": true,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\algos.py": true,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\env.py": true,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\runner.py": true,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\ce_five_algo_runner.py": true,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_C\\config.json": true,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_C\\raw_final.csv": true,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_E\\config.json": true,
+    "D:\\博士学习\\科研\\Projects\\Bandit with Arriving Arms\\simulation_final\\outputs\\final\\scenario_E\\raw_final.csv": true
+  },
+  "original_inputs_unchanged": true,
+  "figure_matches": {
+    "scenario_C_dynamic_regret_vs_t.png": true,
+    "scenario_C_wasted_pulls_eps_0_1.png": true,
+    "scenario_C_arm_set_size_vs_t.png": true,
+    "scenario_E_dynamic_regret_vs_t.png": true,
+    "scenario_E_wasted_pulls_eps_0_1.png": true,
+    "scenario_E_arm_set_size_vs_t.png": true
+  },
+  "archived_statistics": {
+    "C": {
+      "n": 100,
+      "horizon": 60000,
+      "configuration": {
+        "scenario": "C",
+        "best_config": {
+          "scenario": "C",
+          "T": 60000,
+          "K0": 10,
+          "arrival_mode": "bernoulli",
+          "lambda": 0.005,
+          "rho": 0.005,
+          "M": 5,
+          "scenario_params": {
+            "gamma": [
+              0.3,
+              0.6,
+              0.9
+            ],
+            "Delta_step": 0.05,
+            "r0": 0.7,
+            "pi_good": 0.1,
+            "mu_h": 0.8,
+            "delta": 0.1,
+            "mu_l": 0.1,
+            "mu_m": 0.4
+          }
+        },
+        "final_R": 100,
+        "seed": 20260309,
+        "algorithms": [
+          "custom_elim",
+          "moss",
+          "naive_elim",
+          "ucb",
+          "erse"
+        ]
+      },
+      "mean_metrics": {
+        "custom_elim": {
+          "dynamic_regret": 5139.9426960415185,
+          "wasted_pulls_eps_0_1": 8225.18,
+          "final_active_size": 3.25
+        },
+        "erse": {
+          "dynamic_regret": 28872.74999592616,
+          "wasted_pulls_eps_0_1": 52995.82,
+          "final_active_size": 86.96
+        },
+        "moss": {
+          "dynamic_regret": 2036.721098295043,
+          "wasted_pulls_eps_0_1": 3331.0,
+          "final_active_size": 318.37
+        },
+        "naive_elim": {
+          "dynamic_regret": 27507.030332467297,
+          "wasted_pulls_eps_0_1": 50276.71,
+          "final_active_size": 2.58
+        },
+        "ucb": {
+          "dynamic_regret": 9347.1957246791,
+          "wasted_pulls_eps_0_1": 16377.95,
+          "final_active_size": 318.37
+        }
+      },
+      "paired_difference_UCBAA_minus_MOSS": 3103.2215977464743,
+      "paired_standard_error": 336.35761899011334,
+      "paired_95_t_interval": [
+        2435.8151083771927,
+        3770.628087115756
+      ],
+      "two_case_bonferroni_95_t_interval": [
+        2337.6704882502595,
+        3868.772707242689
+      ],
+      "regret_ratio": 2.5236360051183295
+    },
+    "E": {
+      "n": 100,
+      "horizon": 60000,
+      "configuration": {
+        "scenario": "E",
+        "best_config": {
+          "scenario": "E",
+          "T": 60000,
+          "K0": 20,
+          "arrival_mode": "bernoulli",
+          "lambda": 0.005,
+          "rho": 0.005,
+          "M": 4,
+          "scenario_params": {
+            "m0": 5,
+            "Delta_min": 0.15,
+            "p_join_near": 0.3,
+            "mu_top": 0.9,
+            "pi_good": 0.1,
+            "mu_h": 0.8,
+            "delta": 0.1,
+            "mu_l": 0.1,
+            "mu_m": 0.4
+          }
+        },
+        "final_R": 100,
+        "seed": 20260309,
+        "algorithms": [
+          "custom_elim",
+          "moss",
+          "naive_elim",
+          "ucb",
+          "erse"
+        ]
+      },
+      "mean_metrics": {
+        "custom_elim": {
+          "dynamic_regret": 1880.878160348248,
+          "wasted_pulls_eps_0_1": 3264.08,
+          "final_active_size": 5.73
+        },
+        "erse": {
+          "dynamic_regret": 25152.23727237973,
+          "wasted_pulls_eps_0_1": 46331.78,
+          "final_active_size": 133.16
+        },
+        "moss": {
+          "dynamic_regret": 2043.752971374588,
+          "wasted_pulls_eps_0_1": 5010.18,
+          "final_active_size": 325.37
+        },
+        "naive_elim": {
+          "dynamic_regret": 5433.368455566103,
+          "wasted_pulls_eps_0_1": 9436.13,
+          "final_active_size": 5.88
+        },
+        "ucb": {
+          "dynamic_regret": 7964.260146203678,
+          "wasted_pulls_eps_0_1": 21281.37,
+          "final_active_size": 325.37
+        }
+      },
+      "paired_difference_UCBAA_minus_MOSS": -162.87481102634007,
+      "paired_standard_error": 80.2071205446896,
+      "paired_95_t_interval": [
+        -322.0231392428135,
+        -3.7264828098666385
+      ],
+      "two_case_bonferroni_95_t_interval": [
+        -345.42649606573445,
+        19.676874013054288
+      ],
+      "regret_ratio": 0.9203060187275013
+    }
+  },
+  "fresh_original_algorithm_replays": [
+    {
+      "scenario": "C",
+      "replicate": 1,
+      "regret": 3379.7835794386156,
+      "archived_regret": 3379.783579438616,
+      "algorithm_info": {
+        "effective_M": 5,
+        "N": 2783.520592342062,
+        "survivor_size": 2
+      },
+      "round_endpoints": [
+        {
+          "t": 160,
+          "round": 0,
+          "active": 10
+        },
+        {
+          "t": 530,
+          "round": 1,
+          "active": 4
+        },
+        {
+          "t": 1035,
+          "round": 2,
+          "active": 2
+        },
+        {
+          "t": 1835,
+          "round": 3,
+          "active": 2
+        },
+        {
+          "t": 4588,
+          "round": 4,
+          "active": 3
+        },
+        {
+          "t": 9323,
+          "round": 5,
+          "active": 2
+        }
+      ],
+      "arrived": 317,
+      "sampled": 26,
+      "last_round_end": 9323
+    },
+    {
+      "scenario": "E",
+      "replicate": 1,
+      "regret": 1080.8281181022571,
+      "archived_regret": 1080.8281181022571,
+      "algorithm_info": {
+        "effective_M": 4,
+        "N": 695.8801480855155,
+        "survivor_size": 2
+      },
+      "round_endpoints": [
+        {
+          "t": 280,
+          "round": 0,
+          "active": 20
+        },
+        {
+          "t": 840,
+          "round": 1,
+          "active": 7
+        },
+        {
+          "t": 1514,
+          "round": 2,
+          "active": 6
+        },
+        {
+          "t": 2972,
+          "round": 3,
+          "active": 6
+        },
+        {
+          "t": 4682,
+          "round": 4,
+          "active": 2
+        }
+      ],
+      "arrived": 324,
+      "sampled": 28,
+      "last_round_end": 4682
+    }
+  ],
+  "gap_compression_checks": [
+    {
+      "M": 8,
+      "nM": 768477,
+      "N": 23054310,
+      "actual_S": 927.9140625,
+      "claimed_upper_bound": 1201.1191893985285,
+      "ratio": 0.772541202147192
+    },
+    {
+      "M": 12,
+      "nM": 196729877,
+      "N": 5901896310,
+      "actual_S": 14846.56982421875,
+      "claimed_upper_bound": 1653.9667254811216,
+      "ratio": 8.97634129846236
+    },
+    {
+      "M": 16,
+      "nM": 50362848447,
+      "N": 1510885453410,
+      "actual_S": 237545.11389160156,
+      "claimed_upper_bound": 2098.417019145814,
+      "ratio": 113.20205265409885
+    },
+    {
+      "M": 20,
+      "nM": 12892889202125,
+      "N": 386786676063750,
+      "actual_S": 3800721.822087288,
+      "claimed_upper_bound": 2542.0993657485596,
+      "ratio": 1495.1114316367834
+    }
+  ],
+  "stopped_admission_counterexample": {
+    "T": 60000,
+    "tau": 30000,
+    "regret": 30001.0,
+    "new_arm_pulls": 0,
+    "round_endpoints": [
+      {
+        "t": 16,
+        "round": 0,
+        "active": 1
+      },
+      {
+        "t": 53,
+        "round": 1,
+        "active": 1
+      },
+      {
+        "t": 166,
+        "round": 2,
+        "active": 1
+      },
+      {
+        "t": 483,
+        "round": 3,
+        "active": 1
+      },
+      {
+        "t": 1222,
+        "round": 4,
+        "active": 1
+      },
+      {
+        "t": 2048,
+        "round": 5,
+        "active": 1
+      }
+    ],
+    "scope": "Original archived implementation under unrestricted exogenous arrivals; not a counterexample satisfying all paper assumptions."
+  },
+  "intervals_note": "Approximate paired t Monte Carlo intervals; two-case Bonferroni is reported separately. No claim of correcting unknown historical tuning or selection.",
+  "credit_cards_used": 0
+}

@@ -1,0 +1,24 @@
+{
+  "completed_development_runs": 3488,
+  "completed_test_runs": 13440,
+  "test_scenarios": 10,
+  "replications_per_scenario": 64,
+  "policy_configurations": 21,
+  "primary_candidate": "CCP-beta1",
+  "primary_comparator": "ALLplus-beta1",
+  "area_mean_wins": 9,
+  "both_mean_wins": 5,
+  "mean_of_scenario_regrets_ccp": 585.1456093749941,
+  "mean_of_scenario_regrets_all": 607.1619062499929,
+  "mean_of_scenario_areas_ccp": 29731.46875,
+  "mean_of_scenario_areas_all": 39196.509375,
+  "primary_label_failures": 0,
+  "primary_interval_failures": 4,
+  "primary_empty_intersections": 3,
+  "theory_status": {
+    "finite_beta": "schedule-minimax regret order, not full joint frontier",
+    "unlimited": "worst-schedule area order, not automatically same regret order"
+  },
+  "not_a_reproduction_of_manuscript_table_2": true,
+  "no_post_test_tuning": true
+}

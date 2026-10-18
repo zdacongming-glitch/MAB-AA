@@ -1,0 +1,41 @@
+{
+  "packet_id": "final-e3d41742b6578e108b2bdb834ecce301410ac981a36a4e11f8b4bf96f8f17551",
+  "protocol_id": "innovation-only-fixed-rubric-isolated-v1",
+  "files": {
+    "final_evidence.md": "21300d5aa5123799218ceeca026d0feae8c0e6bfedc877843b09dd323fe576d7",
+    "final_packet.txt": "84468b3ff00e738b7f274698a3505fbd5415042f93717f91b394438ee22089b4"
+  },
+  "source_files": {
+    "manuscript.tex": "62476b70785d0a1d90f047501f724040fa463414089b4b9be0d10d295b0a6a78",
+    "sections/01_introduction.tex": "5b96aaf1b6bc94da4e6e923abdae1639ab3871352aaf1a91e09752566188b93f",
+    "sections/02_model.tex": "d356ea8f875adaa3730a688f6f6bcfe3f2e52f9c7bb852d503371e248b31d2c3",
+    "sections/03_method.tex": "7ae4d50fbfbae7bda460be0cce8bba85561661009d38b4ea059a25853d7db80b",
+    "sections/04_maintenance.tex": "f59b47e0719dd936ab3960751ded225c563c33c843ab722f91a66363605e3e3b",
+    "sections/05_tradeoff.tex": "4e6c04d26a7470aaad251c87a867e89f2667228afce7b599432a1895ccec3488",
+    "sections/06_experiments.tex": "f274bc5eb70ad4e091b559fa4ca249704fa46fb2babbca21bf4d4e87a2525e40",
+    "sections/07_discussion.tex": "7b4f620177499ab62422b0ef91f18cfce8841b6df03426a2811dc13e61f785f0",
+    "supplement.tex": "3caedc8aab4839abfa96f65612413317f053b5a0724a991a7b946f5345e2e40e",
+    "theory/extensions.tex": "9a0e6fa51a2982580827d2ca05d500d849acca2301ec9a67165d476ecbf34aac",
+    "theory/information_and_variants.tex": "adb92790cd5400be0cb7d6050fc9f3de3bd3a135565e2334412249c0a8897a33",
+    "theory/supplementary_proofs.tex": "4504418b00f10df5954d36743a397728fae75a58fdbe54e32d9f1d488e29fa9f",
+    "references.bib": "bfeaea756005de36dbe34c20fd84a80d46e8786a37f7b85219b51d6e716ec4a3",
+    "experiments/results/summary.csv": "f660d675e16224bd81c9ebfb3403a0d35c608cd664c6e369944459d1d3faf879",
+    "experiments/results/verification.json": "5a85c0c4166871446bb456125ec4f4868fc46b78746a702ce936e1e4cb738cbb",
+    "experiments/results/source_parity.json": "1c7573d2fc2d1d6d1792c2b2a4210a0b76024a838f3581681a0418b554e21eab"
+  },
+  "objects": [
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "overall"
+  ],
+  "model_id": "inherited parent model; exact serving snapshot not exposed",
+  "model_snapshot": null,
+  "settings": {
+    "fork_turns": "none",
+    "model_override": false
+  },
+  "verification": "Hashes identify frozen evidence; they do not prove truth or novelty."
+}

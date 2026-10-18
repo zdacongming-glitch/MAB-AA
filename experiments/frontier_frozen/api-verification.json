@@ -1,0 +1,82 @@
+[
+  {
+    "scenario": "stable_new",
+    "scheduler": "ccp",
+    "rounds": 14000,
+    "identical_actions": true,
+    "identical_service": true,
+    "identical_counts": true,
+    "regret": 471.9899999999982,
+    "area": 23447
+  },
+  {
+    "scenario": "stable_new",
+    "scheduler": "shared",
+    "rounds": 14000,
+    "identical_actions": true,
+    "identical_service": true,
+    "identical_counts": true,
+    "regret": 474.6899999999946,
+    "area": 23805
+  },
+  {
+    "scenario": "stable_new",
+    "scheduler": "allplus",
+    "rounds": 14000,
+    "identical_actions": true,
+    "identical_service": true,
+    "identical_counts": true,
+    "regret": 494.41999999999916,
+    "area": 29816
+  },
+  {
+    "scenario": "stable_new",
+    "scheduler": "bundle",
+    "rounds": 14000,
+    "identical_actions": true,
+    "identical_service": true,
+    "identical_counts": true,
+    "regret": 472.26999999999816,
+    "area": 21460
+  },
+  {
+    "scenario": "burst_new",
+    "scheduler": "ccp",
+    "rounds": 14000,
+    "identical_actions": true,
+    "identical_service": true,
+    "identical_counts": true,
+    "regret": 558.8050000000317,
+    "area": 33288
+  },
+  {
+    "scenario": "burst_new",
+    "scheduler": "shared",
+    "rounds": 14000,
+    "identical_actions": true,
+    "identical_service": true,
+    "identical_counts": true,
+    "regret": 597.9950000000098,
+    "area": 34259
+  },
+  {
+    "scenario": "burst_new",
+    "scheduler": "allplus",
+    "rounds": 14000,
+    "identical_actions": true,
+    "identical_service": true,
+    "identical_counts": true,
+    "regret": 554.9700000000141,
+    "area": 46389
+  },
+  {
+    "scenario": "burst_new",
+    "scheduler": "bundle",
+    "rounds": 14000,
+    "identical_actions": true,
+    "identical_service": true,
+    "identical_counts": true,
+    "regret": 558.6050000000316,
+    "area": 33859
+  }
+]

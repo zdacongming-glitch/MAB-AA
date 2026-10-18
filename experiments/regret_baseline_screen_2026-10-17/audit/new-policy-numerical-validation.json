@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "seed": 612091,
+  "performance_trials": false,
+  "scipy_c_signature": "double (double, double, double, int __pyx_skip_dispatch)",
+  "empirical_dinf": {
+    "cases": 600,
+    "max_independent_optimizer_error": 6.661338147750939e-16,
+    "max_bernoulli_KL_error": 8.881784197001252e-16
+  },
+  "empirical_support_and_boundary_checks": "passed",
+  "bayes_ucb_public_scipy_match": {
+    "states": 150,
+    "max_quantile_error": 0.0
+  },
+  "index_formula_states": 150,
+  "imed_near_one_checks": [
+    {
+      "nx": 7.0,
+      "ny": 1.0,
+      "target": 0.99999,
+      "error": 0.0
+    },
+    {
+      "nx": 7.0,
+      "ny": 1.0,
+      "target": 0.999999999,
+      "error": 0.0
+    },
+    {
+      "nx": 7.0,
+      "ny": 1.0,
+      "target": 0.999999999999,
+      "error": 0.0
+    },
+    {
+      "nx": 1.0,
+      "ny": 7.0,
+      "target": 0.99999,
+      "error": 2.220446049250313e-16
+    },
+    {
+      "nx": 1.0,
+      "ny": 7.0,
+      "target": 0.999999999,
+      "error": 0.0
+    },
+    {
+      "nx": 1.0,
+      "ny": 7.0,
+      "target": 0.999999999999,
+      "error": 0.0
+    },
+    {
+      "nx": 9999.0,
+      "ny": 1.0,
+      "target": 0.99999,
+      "error": 0.0
+    },
+    {
+      "nx": 9999.0,
+      "ny": 1.0,
+      "target": 0.999999999,
+      "error": 0.0
+    },
+    {
+      "nx": 9999.0,
+      "ny": 1.0,
+      "target": 0.999999999999,
+      "error": 3.552713678800501e-15
+    }
+  ],
+  "imed_target_one": "limiting convention checked for pointmass at 1 (0) and lower pointmass (infinite)"
+}

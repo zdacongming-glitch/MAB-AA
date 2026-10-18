@@ -1,0 +1,59 @@
+\section{Accumulation Across Lifetime Scales}\label{sec:scales}
+\subsection{What a Lifetime Fixed Point Retains}
+A useful scalar summary discards arms with at most $r$ rounds left and compares the total lifetime of the remaining arms with $r^2$. For $M\ge1$, define
+\begin{equation}\label{eq:fixed-point}
+ V_T(r)=\sum_{i\ne a}H_i\ind\{H_i>r\},\qquad
+ \Gamma_T=\min\{r\in\{1,\ldots,T\}:V_T(r)\le r^2\}.
+\end{equation}
+Set $\Gamma_T=0$ for $M=0$. This functional is introduced here as a candidate compression of the arrival information. Its relationship to the exact rate can be characterized for every schedule.
+
+\begin{theorem}[A squared-spectrum interpretation]\label{thm:fixed-point}
+Let $Q_T=(\sum_\ell s_{\ell,T}^2)^{1/2}$. When $M\ge1$,
+\begin{equation}\label{eq:QGamma}
+ \Gamma_T\le\lceil Q_T\rceil\le2Q_T,
+ \qquad Q_T\le3\Gamma_T.
+\end{equation}
+Consequently, with
+\begin{equation}\label{eq:effective}
+ D_T^{\mathrm{eff}}=\frac{\cS_T^2}{Q_T^2},
+\end{equation}
+we have $1\le D_T^{\mathrm{eff}}\le1+\lceil\log_2T\rceil$ and
+\[
+ \cR_T(\tau)\asymp\cS_T\asymp\Gamma_T\sqrt{D_T^{\mathrm{eff}}}.
+\]
+Moreover, $\cS_T\le C\Gamma_T\sqrt{1+\log(T/\Gamma_T)}$ for a universal $C$.
+\end{theorem}
+
+The proof separates scales below and above $\Gamma_T$. The small scales have a bounded geometric square sum. Above the threshold, their squared costs are bounded by twice $V_T(\Gamma_T)$. In the other direction, any scale above $Q_T$ must be unsaturated, so its squared cost contains the corresponding lifetime mass. This yields \eqref{eq:QGamma} without assumptions on the spacing or sizes of batches.
+
+The effective number $D_T^{\mathrm{eff}}$ is large when many scales contribute comparable amounts. If a bounded number of scales dominate, the fixed point already determines the rate up to constants. A growing discrepancy requires contributions to accumulate across an increasing number of scales. Although $D_T^{\mathrm{eff}}$ uses the specified dyadic partition, the capacity and the fixed point themselves do not.
+
+\subsection{A Sharp Separation}
+Let $T=16^m$. In addition to the anchor, batch $j$ contains $4^j$ arms with common remaining lifetime $H_j=4^{2m-j}$, for $j=0,\ldots,m$. These lifetimes occupy different dyadic groups and satisfy $4^jH_j=T$. Hence
+\begin{equation}\label{eq:separation}
+ \cS_T=(m+1)\sqrt T,\qquad Q_T=\sqrt{(m+1)T},
+ \qquad \cR_T(\tau)\asymp\sqrt T\log T.
+\end{equation}
+The fixed point is of order $\sqrt{T\log T}$ and the final number of arms is of order $\sqrt T$. The usual total-count expression $\sqrt{K_TT}$ is then of order $T^{3/4}$, while the fixed point is too small by a factor of order $\sqrt{\log T}$. The final bound in Theorem~\ref{thm:fixed-point} shows that the latter loss has the largest possible order.
+
+Even the pair $(K_T,\Gamma_T)$ is insufficient at constant precision. At the same endpoint, keep the same total number of arms, put $m+1$ competitors at time one, and put all remaining competitors in the last round. This schedule has $\Gamma_T\asymp\sqrt{mT}$ as before, but $\cS_T\asymp\sqrt{mT}$. The two schedules therefore agree in final count and in the order of their fixed points, while their minimax risks have an unbounded ratio.
+
+\subsection{The Boundary for Learning}
+\begin{theorem}[Uniform sublinear regret]\label{thm:learning}
+For one infinite deterministic arrival schedule, the following are equivalent:
+\begin{align*}
+ K_t=o(t)\quad&\Longleftrightarrow\quad\cS_T=o(T)
+ \quad\Longleftrightarrow\quad\cC_T=o(T)\\
+ &\Longleftrightarrow\quad
+ \text{there is one policy }\pi\text{ with }\sup_P\EE_P R_T(\pi)=o(T).
+\end{align*}
+The same MC-MOSS policy gives the last property for every schedule satisfying the first. These conditions are also equivalent to uniform convergence of $R_T/T$ to zero in probability under a single policy.
+\end{theorem}
+
+For sufficiency, Cauchy--Schwarz gives $\cS_T\le2\sqrt{(K_T-1)T}$. For necessity, if $K_t\ge\epsilon t$ along a subsequence, evaluate regret at $T=2t$. Those already present competitors all have lifetime at least $t+1$, forcing a linear spectral cost. The uniform supremum is essential: the theorem does not assert that a single fixed reward environment is hard at every endpoint.
+
+The characterization gives familiar rates when a fixed fraction of the final competitors arrive by $T/2$. In that case,
+\[
+ \cR_T(\tau)\asymp\min\{T,\sqrt{(K_T-1)T}\},
+\]
+with constants depending on that fraction. Thus $K_t\asymp t^\alpha$, $0<\alpha<1$, gives rate $T^{(1+\alpha)/2}$; $K_t\asymp t/(\log t)^p$, $p>0$, gives $T/(\log T)^{p/2}$; and $K_t\asymp t/\log\log t$ gives $T/\sqrt{\log\log T}$. These are order statements for the specified growth conditions. They show why an extra concentration logarithm in a particular upper bound must not be interpreted as a stronger learnability requirement.

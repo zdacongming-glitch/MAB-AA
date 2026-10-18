@@ -1,0 +1,42 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{graphicx,booktabs,array,enumitem}
+\usepackage[round,authoryear]{natbib}
+\usepackage{setspace}
+\usepackage{xr-hyper}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{bookmark}
+\allowdisplaybreaks
+\setlength{\emergencystretch}{2em}
+\setlist{topsep=3pt,itemsep=2pt}
+\newtheorem{theorem}{Theorem}
+\ifdefined\JASASubmission
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\else
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\fi
+\theoremstyle{remark}
+\ifdefined\JASASubmission
+\newtheorem{remark}{Remark}
+\else
+\newtheorem{remark}[theorem]{Remark}
+\fi
+\newcommand{\EE}{\mathbb E}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\cR}{\mathfrak R}
+\newcommand{\cS}{\mathscr S}
+\newcommand{\cC}{\mathscr C}
+\newcommand{\cN}{\mathcal N}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\logp}{\log_+}
+\DeclareMathOperator{\kl}{kl}
+\DeclareMathOperator{\TV}{TV}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}

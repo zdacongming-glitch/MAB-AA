@@ -1,0 +1,9 @@
+{
+  "seed": 20261012,
+  "total_policy_steps_excluding_compilation": 4105304,
+  "deterministic_trajectories": 14,
+  "bernoulli_full_trajectories": 24,
+  "prefix_consistency_reruns": 24,
+  "status": "all feasibility, deterministic-count and prefix-consistency checks passed",
+  "limitations": "Diagnostics only; no estimated coverage, no claim of universal superiority."
+}

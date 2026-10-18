@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "actual_visual_inspection": "Both generated PNGs opened through view_image after full completion; all labels, intervals, annotations, legends and footnotes legible; no overlap or clipping. Regeneration changed report prose only, identical PNG content.",
+  "heatmap": "17 rows in protocol order; all 12 scenarios; raw-value labels; log color scale explicitly labelled; F-R orange outline.",
+  "paired_figure": "2x2 panels: IMED, Bayes-UCB, KL-UCB+, empirical-KL-UCB; all 12 scenarios each; negative favors baseline; unadjusted interval and selection notes explicit.",
+  "no_runtime_or_manuscript_changes": true,
+  "files": [
+    {
+      "file": "REPORT.md",
+      "bytes": 21186,
+      "sha256_matches_manifest": true
+    },
+    {
+      "file": "figures\\mean_regret_heatmap.png",
+      "bytes": 765123,
+      "sha256_matches_manifest": true,
+      "pixels": [
+        4011,
+        2628
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "file": "figures\\strongest_added_paired_differences.png",
+      "bytes": 449199,
+      "sha256_matches_manifest": true,
+      "pixels": [
+        3880,
+        2978
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "file": "figures\\mean_regret_heatmap.pdf",
+      "bytes": 129568,
+      "sha256_matches_manifest": true,
+      "pdf_page_object_count": 1,
+      "pdf_header": "%PDF-1.4"
+    },
+    {
+      "file": "figures\\strongest_added_paired_differences.pdf",
+      "bytes": 48939,
+      "sha256_matches_manifest": true,
+      "pdf_page_object_count": 1,
+      "pdf_header": "%PDF-1.4"
+    }
+  ]
+}

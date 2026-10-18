@@ -1,0 +1,257 @@
+\documentclass[11pt]{article}
+\input{preamble}
+\externaldocument[][nocite]{revision_2026-10-16/build/supplement}[supplement.pdf]
+% Set \anonymoustrue for an author-free review copy if required by the portal.
+\newif\ifanonymous
+\anonymousfalse
+\title{The Cost of Reliable Near-Optimal Set Maintenance\\with Arriving Arms}
+\ifanonymous
+\author{}
+\else
+\author{Deqi Zheng\thanks{The first two authors contributed equally.} \quad
+ Xiaoyang Xu\footnotemark[1] \\ Qiuzhen College, Tsinghua University
+ \and Yuhong Yang\thanks{Corresponding author: yyangsc@mail.tsinghua.edu.cn.}\\
+ Yau Mathematical Sciences Center, Tsinghua University}
+\fi
+\date{October 15, 2026}
+\ifanonymous
+\hypersetup{pdftitle={The Cost of Reliable Near-Optimal Set Maintenance with Arriving Arms},pdfauthor={}}
+\else
+\hypersetup{pdftitle={The Cost of Reliable Near-Optimal Set Maintenance with Arriving Arms},pdfauthor={Deqi Zheng, Xiaoyang Xu, Yuhong Yang}}
+\fi
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study the cost of maintaining reliable reports of all relatively
+near-optimal arms while collecting rewards when new arms arrive and remain
+available. Reward laws are stationary, but each arrival can change the
+membership boundary. We measure reporting progress by cumulative unresolved
+arm time outside a prescribed boundary band, under simultaneous correctness
+of all issued labels. Uncertainty about one new arm can obstruct positive
+certification of many earlier candidates. A lower bound in one common
+reference environment quantifies this effect. We obtain matching
+worst-schedule orders for unresolved area and an arrival-growth boundary
+for jointly sublinear area and expected regret. On a specified
+repeated-update family, rapid maintenance requires inverse-square regret,
+whereas a constant-factor larger area budget admits a logarithmic regret
+upper bound. The rapid cost also holds with nonvanishing probability in a
+fixed environment. A fixed-precision checkpoint construction provides the
+upper bounds without knowing future arrivals. Finite-budget comparisons
+show that its conservative certification cost can be substantial; they
+do not establish uniform numerical superiority or a general optimal
+regret--area frontier.
+\end{abstract}
+\noindent\textit{Keywords:} sequential experimentation; arriving arms;
+near-optimal set maintenance; dynamic regret; simultaneous inference.
+
+\section{Introduction}
+\label{sec:introduction}
+
+Sequential experiments often acquire new candidates while earlier ones remain
+available. An allocation rule must learn which candidates yield high rewards.
+An experimenter may also need to know which of all available candidates are
+within a specified tolerance of the current best. These objectives need not
+favor the same observations. A candidate can be sufficiently inferior to
+receive little reward-driven exploration and still be difficult to classify
+relative to the near-optimality boundary.
+
+We study these objectives together under permanent exogenous arrivals and
+stationary reward laws. If $r^*(t)$ is the largest mean among the arms
+available at time $t$, an arm is relatively near-optimal when its mean is at
+least $r^*(t)-\varepsilon$. Reports certify membership, certify exclusion, or
+leave the arm unresolved. We require one simultaneous correctness event for
+all labels at all times. To rule out indefinite abstention, we charge the
+cumulative unresolved time of arms whose means lie more than $\eta$ from
+the membership boundary. The question is how much regret is necessary, and
+how much is attainable, under this reporting requirement.
+
+New arrivals affect the task in two ways. An uncertain new candidate may be
+better than the incumbent by enough to invalidate many existing positive
+reports. Evidence about that one candidate is then relevant to many
+reports at once. A later improvement can also make an earlier difficult
+membership question unnecessary: a candidate close to the old boundary may
+be far below the new one. Its existing upper confidence bound can be
+combined with a new reference's lower bound to certify exclusion. Neither
+effect requires the reward law of an old arm to change.
+
+Our observation model and regret comparator have established precedents.
+Permanent arrivals form a monotone special case of sleeping-bandit
+availability \citep{kleinberg2010}; ballooning bandits already compare reward
+with the best arm currently available \citep{ghalme2021}. Exogenous arrivals
+differ from drawing arms on demand from a reservoir
+\citep{10.1214/aos/1069362389} and from the disappearing actions of mortal
+bandits \citep{NIPS2008_788d9869}. Benchmark improvements here arise from new
+arms, whereas nonstationary bandits allow the reward distributions of
+existing arms to change \citep{Besbes2014,Auer2019ADSWITCH}. Sequential
+allocation and adaptive experimentation have a long statistical history
+\citep{Robbins1952,LAI19854,Lai1987}; the expanding set of actions retains
+that allocation problem and adds an evolving inferential target.
+
+For a fixed arm set, identifying every relatively near-optimal arm is the
+ALL-$\varepsilon$ problem \citep{mason2020}. Joint reward and identification
+objectives also have established precedents
+\citep{degenne2019,yang2026,cho2025}. Our task requires continuing reports
+under arrivals, with all-time label reliability and an explicit cumulative
+cost for unresolved arm time. The distinction concerns the reporting
+protocol and its cost, rather than a new arriving-arm model. The simultaneous
+recovery scales used in our lower bounds build on existing information
+inequalities and multiple-recovery arguments
+\citep{kaufmann2016,malloy2014,jamieson2018}.
+
+We give three results about maintenance cost. First, a common-reference
+lower bound shows how one uncertain arrival can obstruct many other
+certifications. Its information queue accumulates cost over time within
+one reward environment. Second, we obtain matching worst-schedule orders
+for cumulative unresolved area, including finite-horizon truncation, and
+derive the polynomial arrival boundary for jointly sublinear area and
+expected regret. This worst-case lower bound already occurs in an initial
+static batch; the common-reference result describes a separate consequence
+of continuing arrivals. Third, on a specified repeated-update family,
+rapid resolution of temporary membership tasks has matching inverse-square
+regret costs. Allowing a constant-factor larger area budget admits a
+logarithmic regret upper bound. A nonvanishing-probability lower bound
+holds in one fixed environment under the same cumulative-area requirement.
+The deferred endpoint has only an upper bound, and the general frontier
+over intermediate budgets and overlapping arrivals remains open.
+
+An explicit fixed-precision procedure, Checkpoint-UCB, supplies the
+attainability results. It shares all observations between certification
+and reward learning and retains every arrived arm in reward selection.
+The construction separates the statistical costs cleanly, but its
+conservative quotas can exceed a practical budget. Our numerical study
+retains those failures as well as favorable comparisons. Section~\ref{sec:model}
+defines the joint task, Section~\ref{sec:method} gives the construction,
+and Sections~\ref{sec:maintenance}--\ref{sec:tradeoff} establish the
+maintenance and regret bounds. Section~\ref{sec:experiments} examines their
+finite-budget implications.
+
+\section{Model, reliable reports, and maintenance cost}
+\label{sec:model}
+\label{sec:problem}
+
+\subsection{Observation model and regret}
+
+Let $\mathcal A$ be a possibly infinite set of arms. Arm $i$ arrives at
+time $\tau_i$, after which it remains available. At every physical time
+$t=1,2,\ldots$,
+\[
+ \mathcal A_t=\{i:\tau_i\le t\},\qquad
+ 1\le K_t=|\mathcal A_t|<\infty.
+\]
+Arbitrary finite batches are allowed, including $K_T>T$ at an evaluation
+endpoint. Each arm has an unknown stationary reward law on $[0,1]$ with
+mean $r_i$. Its successive potential observations $(Y_{i,n})_{n\ge1}$ are
+independent and identically distributed, and the streams of different arms
+are independent. Arrivals are exogenous and independent of both these
+streams and policy randomization. Unless stated otherwise, each result
+is for a fixed deterministic arrival schedule.
+
+At time $t$, the policy first receives all current arrivals, then selects
+one arm $I_t\in\mathcal A_t$, observes one reward $X_{t,I_t}$, and finally
+issues its report. It uses the observed history
+\[
+ H_{t-1}=(\mathcal A_s,I_s,X_{s,I_s})_{s=1}^{t-1}
+\]
+and independent randomization. Means, future arrivals, and true membership
+labels are unavailable to the policy. With
+$N_i(t)=\sum_{s\le t}\ind\{I_s=i\}$, the physical observation is
+$X_{t,I_t}=Y_{I_t,N_{I_t}(t-1)+1}$. Write
+\[
+ \hat r_i(n)=\frac1n\sum_{s=1}^nY_{i,s},\qquad
+ r^*(t)=\max_{i\in\mathcal A_t}r_i,\qquad
+ \Delta_i(t)=r^*(t)-r_i \quad(i\in\mathcal A_t).
+\]
+At a deterministic endpoint $T$, cumulative dynamic regret is
+\[
+ R_T(\pi)=\sum_{t=1}^{T}\Delta_{I_t}(t).
+\]
+This is a sum of mean gaps, random through the policy's arm selections;
+$\E R_T$ is its expectation. The quantity does not compare realized
+reward sequences. Physical time always counts actual observations.
+
+\subsection{Reliable reports and cumulative unresolved time}
+\label{sec:reporting_task}
+
+For $0<\varepsilon<1$, the target set is
+\[
+ \mathcal G_t^\varepsilon=\{i\in\mathcal A_t:\Delta_i(t)\le\varepsilon\}.
+\]
+After the current observation, a report partitions all of $\mathcal A_t$
+into $\mathcal P_t,\mathcal N_t,\mathcal V_t$: certified members, certified
+nonmembers, and unresolved arms. Define
+\[
+ E_{\rm lab}=\{\text{for all }t:\ \mathcal P_t\subseteq\mathcal G_t^\varepsilon
+                  \subseteq\mathcal A_t\setminus\mathcal N_t\}.
+\]
+A policy is $\delta$-reliable if $\Prob(E_{\rm lab})\ge1-\delta$ in every
+allowed reward environment. A positive report may be withdrawn after a new
+arrival. On the correctness event, a negative report remains valid because
+$r^*(t)$ is nondecreasing and the arm's mean is stationary.
+
+Reliability permits all arms to remain unresolved. For a boundary width
+$0<\eta<1$, define
+\begin{equation}
+ \begin{split}
+ d_i^\varepsilon(t)&=|\Delta_i(t)-\varepsilon|,\\
+ U_t(\eta)&=\sum_{i\in\mathcal A_t}
+   \ind\{i\in\mathcal V_t,d_i^\varepsilon(t)>\eta\},\qquad
+ \mathcal U_T(\eta)=\sum_{t=1}^{T}U_t(\eta).
+ \end{split}
+ \label{eq:area}
+\end{equation}
+The count includes newly arrived arms with no observations and old arms
+that become unresolved again. Every such arm--time pair is charged; the
+loss is not limited to the time before a first decision. Within the
+boundary band, unresolved time is exempt, but any label issued there must
+still be correct. The true distance $d_i^\varepsilon(t)$ is used only by
+the evaluator and in the analysis.
+
+The task parameters are fixed when comparing policies. Their roles are
+summarized below.
+\begin{center}
+\begin{tabular}{cl}
+\toprule
+Parameter & Meaning\\
+\midrule
+$\varepsilon\in(0,1)$ & Relative near-optimality tolerance\\
+$\delta\in(0,1/2)$ & Joint error budget\\
+$\eta\in(0,1)$ & Boundary width exempting unresolved time\\
+$\rho\in(0,1)$ & Predetermined precision of reporting checkpoints\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The main requirement at a fixed $T$ is
+\begin{equation}
+ \E_\theta R_T\le r,\qquad
+ \Prob_\theta\{E_{\rm lab},\mathcal U_T(\eta)\le a\}\ge1-\delta.
+ \label{eq:joint_protocol}
+\end{equation}
+It combines an expected regret bound with a joint high-probability
+label--area guarantee. In particular, $\mathcal U_T=o(T)$ requires the
+time-average number of unresolved separated arms to vanish, rather than
+only a small unresolved fraction of all arms. The area guarantee is for
+each deterministic endpoint; it need not hold for every endpoint on one
+common area event.
+
+For a performance family $\Theta$, let $\mathfrak R_\Theta(a)$ be the
+infimum of $\sup_{\theta\in\Theta}\E_\theta R_T$ over policies reliable on
+the full bounded model and satisfying the probability condition in
+\eqref{eq:joint_protocol} for every $\theta\in\Theta$. The value is
+$+\infty$ if the feasible class is empty. Full-model label reliability
+and a family-specific area guarantee are distinct requirements. The
+lower bounds remain valid when reliability is required only on the
+lower-bound subfamily.
+
+\subsection{How arrivals change the reporting problem}
+
+For a fixed old arm, $\Delta_i(t)$ is nondecreasing, so its true membership
+can change only from member to nonmember. Its boundary distance
+$|\Delta_i(t)-\varepsilon|$ need not be monotone. A new candidate can first
+create uncertainty about the current best mean, obstructing positive
+certification of many old arms even when those arms remain truly
+near-optimal. A sufficiently good new reference can later move the
+boundary past earlier candidates, making their fine classification
+unnecessary. Sections~\ref{sec:maintenance} and~\ref{sec:tradeoff} quantify
+these two effects under the same reporting protocol.

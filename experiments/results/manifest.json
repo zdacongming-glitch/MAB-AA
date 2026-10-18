@@ -1,0 +1,21 @@
+{
+  "source_sha256": "272815cbb45e2de1a99f849bd4718892ef6bc010d081e0eaf2ec45b21c746ef9",
+  "runner_sha256": "0befc8fc3297281fa7a7429fb5f19e964b9997387e8f23d4d3211a6b730ad3a5",
+  "config_sha256": "acc3777995a963e1f5434a092be4d377e37aa686f4956ef3c7ce7b2661c10011",
+  "runs_sha256": "33c3bd38660fe9943d5b53d061545b515eb424e7d4542b4b482a17cf70db5b86",
+  "paths_sha256": "bc6977aff3b0a7b827dd874db87f4e3643d8907e005c0a5e92a1b1a22fd81cb4",
+  "elapsed_seconds": 13.512519899995823,
+  "python": "3.11.7 | packaged by Anaconda, Inc. | (main, Dec 15 2023, 18:05:47) [MSC v.1916 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "numpy": "1.26.4",
+  "numba": "0.59.0",
+  "replications_per_scenario": 160,
+  "rounds_per_run": 20000,
+  "total_runs": 5760,
+  "policy_information": "No policy receives true means, future births, final arm count, horizon or evaluation truth; array size is storage only. Means/reward table are accessed only by the environment and evaluator.",
+  "notes": "Monte Carlo results concern the four frozen scenarios; not a proof of uniform reliability or asymptotic optimality.",
+  "reference_origin_repository_relative": "proposal/ucbaa_continuous_maintenance_2026-10-14/cp_ucb_aa.py",
+  "reference_path": "experiments/reference_cp_ucb_aa.py",
+  "reference_copy_verification": "identical SHA to original; post-port per-round parity passed",
+  "packaging_update": "Reference source path made local after numeric production; policy logic and data unchanged"
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "basis": "current incremental contribution",
+  "packet_id": "d86c1316dfa03fc08869265d13811bf8d32223b1c691d751dbb3f8bd532be091",
+  "evaluated_utc": "2026-10-16T17:12:56.689384+00:00",
+  "protocol": {
+    "source": "statistical-innovation-assessment",
+    "rubric": "levels 1/2/3 = 8-10/4-7.9/1-3.9; score individual and overall, no averaging of contributions",
+    "execution_method": "single_current_context",
+    "isolation": false,
+    "model_snapshot": null,
+    "planned_rounds": 5,
+    "completed_rounds": 1,
+    "reason_independent_repetition_incomplete": "No isolated scoring agent or independent model call was executed."
+  },
+  "scores": {
+    "baseline_compatibility": {
+      "tier": 3,
+      "score": 2.0,
+      "rationale": "Direct consequence of disabling intervention with identical action kernel and randomness."
+    },
+    "pressure_controller": {
+      "tier": 3,
+      "score": 3.1,
+      "rationale": "Observable backlog and cost scheduling heuristic; no new optimal decision principle."
+    },
+    "dual_budget_interface": {
+      "tier": 3,
+      "score": 3.8,
+      "rationale": "Separates reward-core exploration from certification, preserves a service guarantee; central bounds follow from previously established any-action regret and finite-work inequalities."
+    },
+    "guarded_tempered_sampling": {
+      "tier": 3,
+      "score": 3.5,
+      "rationale": "New tested configuration improves most mean-regret comparisons, but tempered random sampling and optimism-based protection have strong precedents; no universal dominance or new tight rate."
+    },
+    "no_zero_slack_example": {
+      "tier": 3,
+      "score": 2.0,
+      "rationale": "A useful elementary decision-theoretic diagnostic, not a major new impossibility principle."
+    },
+    "overall": {
+      "tier": 3,
+      "score": 3.8,
+      "confidence": "medium",
+      "rationale": "Substantial implementation and application value, but remains a systematic extension of prior CCP; no new frontier characterization or nontrivial oracle-efficient allocation guarantee. The parent paper is not rescored here."
+    }
+  },
+  "repeat_statistics": {
+    "n": 1,
+    "mean": null,
+    "variance": null,
+    "standard_deviation": null,
+    "note": "No repeat mean or variance reported; only one actual judgment."
+  },
+  "main_limits": [
+    "Strict universal no-worse goal is disproved for the named initialization conventions.",
+    "Main held-out pointwise means win in 59/60 pairs, but statistical no-inferiority is not established for all pairs.",
+    "Cold scores can worsen high-regret tails.",
+    "Same ALL cost controller required one audited post-test correction.",
+    "No new complete regret-area frontier."
+  ]
+}

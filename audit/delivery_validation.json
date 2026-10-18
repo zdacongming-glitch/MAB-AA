@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "issues": [],
+  "markdown_files_checked": [
+    {
+      "file": "assessments/final_evidence.md",
+      "display_delimiters": 0
+    },
+    {
+      "file": "assessments/final_summary.md",
+      "display_delimiters": 0
+    },
+    {
+      "file": "assessments/initial_evidence.md",
+      "display_delimiters": 0
+    },
+    {
+      "file": "assessments/initial_summary.md",
+      "display_delimiters": 0
+    },
+    {
+      "file": "audit/before_notation_alignment/README.md",
+      "display_delimiters": 0
+    },
+    {
+      "file": "audit/before_notation_alignment/response_to_reviewers.md",
+      "display_delimiters": 10
+    },
+    {
+      "file": "audit/before_notation_alignment/revision_map_zh.md",
+      "display_delimiters": 0
+    },
+    {
+      "file": "audit/literature_scope.md",
+      "display_delimiters": 0
+    },
+    {
+      "file": "audit/mathematical_review.md",
+      "display_delimiters": 10
+    },
+    {
+      "file": "audit/notation_alignment_report_zh.md",
+      "display_delimiters": 2
+    },
+    {
+      "file": "audit/original_numerical_preservation.md",
+      "display_delimiters": 0
+    },
+    {
+      "file": "audit/prose_review.md",
+      "display_delimiters": 0
+    },
+    {
+      "file": "audit/ucbaa_repair_proof_audit.md",
+      "display_delimiters": 0
+    },
+    {
+      "file": "experiments/README.md",
+      "display_delimiters": 0
+    },
+    {
+      "file": "README.md",
+      "display_delimiters": 0
+    },
+    {
+      "file": "research_report_zh.md",
+      "display_delimiters": 6
+    },
+    {
+      "file": "response_to_reviewers.md",
+      "display_delimiters": 10
+    },
+    {
+      "file": "revision_map_zh.md",
+      "display_delimiters": 0
+    },
+    {
+      "file": "theory/audit_and_extensions.md",
+      "display_delimiters": 10
+    }
+  ],
+  "production_runs": 5760,
+  "final_packet_id": "final-e3d41742b6578e108b2bdb834ecce301410ac981a36a4e11f8b4bf96f8f17551",
+  "assessment_scope": "Historical frozen assessment; not a reassessment of the current original-based revision.",
+  "current_revision": "ucbaa-original-based-2026-10-15-v1",
+  "original_source_inventory": {
+    "assessment-record.json": {
+      "bytes": 9092,
+      "sha256": "e55fcece762719425738739386980f94d3cdccef7cb203fc609f21926286e97f"
+    },
+    "cp_ucb_aa.py": {
+      "bytes": 6201,
+      "sha256": "272815cbb45e2de1a99f849bd4718892ef6bc010d081e0eaf2ec45b21c746ef9"
+    },
+    "diagnostics-results.json": {
+      "bytes": 2484,
+      "sha256": "19ae84a624bf740309225f30497f1306aa48a53f10bd82fe3c100ce4ea2ac90d"
+    },
+    "diagnostics.py": {
+      "bytes": 6294,
+      "sha256": "7b372d380dface317aad854fc713214207e797cb3f027f7e82d43f258654034e"
+    },
+    "evidence-manifest.json": {
+      "bytes": 5190,
+      "sha256": "eff130baf88b82e099f35258e0b69a6c4c93d03361cc877c1ee6c921028c11e5"
+    },
+    "format-validation.json": {
+      "bytes": 295,
+      "sha256": "2f651c643b1c436e16cc42f1a2b86325fac50de243673ea1718acbdec5ec6060"
+    },
+    "implementation-sanity.json": {
+      "bytes": 1511,
+      "sha256": "ae471288439a4e1c6b6404336ee72eb302d544a03c477a4192e1718a91608d8d"
+    },
+    "proof-audit.md": {
+      "bytes": 4310,
+      "sha256": "a8098a0518d19d48509eb220231eb9e7ef31bc8d76ebcde38597a90613743df7"
+    },
+    "README.md": {
+      "bytes": 3314,
+      "sha256": "9dbbfadafdf0e9045bf77054c4b05a6a37918ea0708940c9087c014284f929ed"
+    },
+    "持续集合维护_理论与完整证明.md": {
+      "bytes": 59069,
+      "sha256": "1fb396aac5a827d661a1fc87988f8126a454eb22eca1125a37fa8b74b6a73257"
+    }
+  },
+  "original_pdf_sha256": "44c19acf42498b41179ae52d2a0951a004c76c834b2eb244c22fc1b05135fb8e"
+}

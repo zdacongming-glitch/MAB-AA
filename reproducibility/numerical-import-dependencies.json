@@ -1,0 +1,279 @@
+{
+  "scope": "Static imports for active extracted numerical packages",
+  "checked_files": 49,
+  "results": [
+    {
+      "package": "experiments\\ccp_frozen",
+      "file": "analyze.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\ccp_frozen",
+      "file": "build_report.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\ccp_frozen",
+      "file": "ccp.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\ccp_frozen",
+      "file": "diagnostics.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\ccp_frozen",
+      "file": "engine-stage1.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\ccp_frozen",
+      "file": "engine-stage2.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\ccp_frozen",
+      "file": "engine-stage3.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\ccp_frozen",
+      "file": "engine.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\ccp_frozen",
+      "file": "freeze_test.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\ccp_frozen",
+      "file": "plot_results.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\ccp_frozen",
+      "file": "protocol.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\ccp_frozen",
+      "file": "run_study.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "abm.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "analyze_holdout.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "audit_checks.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "build_report.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "dev_round2.py",
+      "external_nonstdlib": [
+        "protocol"
+      ]
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "dev_round3.py",
+      "external_nonstdlib": [
+        "protocol"
+      ]
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "dev_run.py",
+      "external_nonstdlib": [
+        "protocol"
+      ]
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "engine_base.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "engine_new.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "engine_v2.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "exact_arrival.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "exact_easy.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "exact_frontier.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "exact_frontier_v1.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "export_exact_policy.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "new_schedulers.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "practical.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "test_protocol.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "test_run.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "verify_api.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "verify_engine.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\frontier_frozen",
+      "file": "witness_scheduler.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\fccp_frozen\\src",
+      "file": "analyze.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\fccp_frozen\\src",
+      "file": "audit.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\fccp_frozen\\src",
+      "file": "build_report.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\fccp_frozen\\src",
+      "file": "ccp_primitives.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\fccp_frozen\\src",
+      "file": "demo.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\fccp_frozen\\src",
+      "file": "dev3.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\fccp_frozen\\src",
+      "file": "flexible_ccp.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\fccp_frozen\\src",
+      "file": "flexible_engine.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\fccp_frozen\\src",
+      "file": "flexible_matched.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\fccp_frozen\\src",
+      "file": "flexible_v2.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\fccp_frozen\\src",
+      "file": "freeze_test.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\fccp_frozen\\src",
+      "file": "matched_all.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\fccp_frozen\\src",
+      "file": "study.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\fccp_frozen\\src",
+      "file": "study_matched.py",
+      "external_nonstdlib": []
+    },
+    {
+      "package": "experiments\\fccp_frozen\\src",
+      "file": "study_v2.py",
+      "external_nonstdlib": []
+    }
+  ],
+  "dynamic_sys_path_resolution": [
+    {
+      "file": "dev_round2.py",
+      "module": "protocol",
+      "resolved_at": "experiments\\frontier_frozen\\prior\\CCP_research_2026-10-16\\protocol.py",
+      "exists": true
+    },
+    {
+      "file": "dev_round3.py",
+      "module": "protocol",
+      "resolved_at": "experiments\\frontier_frozen\\prior\\CCP_research_2026-10-16\\protocol.py",
+      "exists": true
+    },
+    {
+      "file": "dev_run.py",
+      "module": "protocol",
+      "resolved_at": "experiments\\frontier_frozen\\prior\\CCP_research_2026-10-16\\protocol.py",
+      "exists": true
+    }
+  ],
+  "unresolved_imports": [],
+  "note": "Frontier development scripts explicitly insert prior/CCP_research_2026-10-16 into sys.path; all protocol imports resolve to that preserved local subtree."
+}

@@ -1,0 +1,79 @@
+% Reorganized from the frozen October 15, 2026 supplement.
+\section{Broadcast uncertainty and queue area}
+\label{app:broadcast}
+
+\paragraph{Precise claim.}
+Let $0<\varepsilon\le1/16$, $0<\delta\le1/16$,
+$0<\eta<\varepsilon/2$. The reference arm has mean
+$1/4+\varepsilon/2$. All candidates have mean $p=1/4$ in environment zero;
+environment $j$ raises only candidate $j$ to $p+2\varepsilon$. Let $M_t$ be
+the candidate count, $a_t$ the new-candidate count, and
+\[
+ q_- =\left\lfloor\frac{\operatorname{kl}(1/4,\delta)}
+                         {\operatorname{kl}(1/4,1/4+2\varepsilon)}\right\rfloor,
+ \quad Q_t=(Q_{t-1}+q_-a_t-1)_+,\quad Q_0=0,
+\]
+\[
+ \mathcal B_T=\sum_{t\le T}(M_t-1)_+1\{Q_t>0\}.
+\]
+Every policy reliable on these environments obeys
+\[
+ E_0\mathcal U_T(\eta)\ge(3/4-\delta)\mathcal B_T,
+ \qquad
+ P_0\{\mathcal U_T(\eta)\ge\mathcal B_T/4\}\ge1/4
+\]
+when $\mathcal B_T>0$.
+
+\begin{proof}
+The denominator defining $q_-$ is at most
+$\operatorname{kl}(1/4,3/8)\le1/15$, whereas its numerator is at least
+$\frac14\log4+\frac34\log(4/5)\ge7/48>2/15$. Thus $q_-\ge2$.
+The recursion gives, by induction,
+\[
+ Q_t=\max_{0\le u\le t}\left\{
+       q_-\sum_{r=u+1}^ta_r-(t-u)\right\}.
+\]
+If $Q_t>0$, there is a suffix in which total candidate demand exceeds all
+physical observation slots. Its arms had no observations before that suffix.
+Consequently at least one deterministic candidate label $j$ satisfies
+$E_0N_j(t)<q_-$. The choice is made from expected counts, not from a realized
+history. For any other candidate $i$, membership of $i$ in $\mathcal P_t$ is erroneous
+under environment $j$. Its probability there is at most $\delta$.
+The history KL is strictly below $\operatorname{kl}(1/4,\delta)$, so data
+processing and monotonicity of binary KL force $P_0(i\in \mathcal P_t)<1/4$.
+Since all candidates are genuinely good under environment zero,
+$P_0(i\in \mathcal N_t)\le\delta$. It follows that
+$P_0(i\in \mathcal V_t)\ge3/4-\delta$. These candidates all have boundary distance
+$\varepsilon/2>\eta$. Summing at deterministic busy rounds proves the
+expectation bound, entirely under the one environment zero.
+
+Let $Y$ count candidate unresolved area only at busy rounds with $M_t\ge2$.
+Then $Y\le\mathcal U_T$, $0\le Y\le2\mathcal B_T$, and
+$E_0Y\ge11\mathcal B_T/16$. If
+$p=P_0(Y\ge\mathcal B_T/4)$, then
+$11\mathcal B_T/16\le\mathcal B_T/4+(7\mathcal B_T/4)p$, so $p\ge1/4$.
+\end{proof}
+
+\paragraph{Queue area.}
+For an integer $q\ge2$, suppose $m$ candidates arrive by time $s$ and put
+$D=s+qm-1$. Then
+\[
+ \sum_{t\le D}(M_t-1)_+1\{Q_t(q)>0\}
+ \ge\frac{q-1}{2}m(m-1).
+\]
+To prove this, remove all subsequent arrivals, which can only decrease both
+the queue and its weights. The $qm$ service units finish by $D$. At the
+$n$th actual service, at least $\lceil n/q\rceil$ candidates have arrived,
+so service rounds weighted by $M_t-1$ sum to at least
+$\sum_{n=1}^{qm}(\lceil n/q\rceil-1)=qm(m-1)/2$.
+The post-service queue is zero at the last service round of each busy period.
+Their cumulative arrival counts are distinct integers in $\{1,\ldots,m\}$,
+so removing their weights costs at most $m(m-1)/2$. This proves the claim.
+
+In particular, if along a fixed infinite schedule a policy reliable in every
+environment has a deterministic area envelope $a_T=o(T)$, then
+$K_t=o(\sqrt t)$. Otherwise along $s_n$ there are at least $c\sqrt{s_n}$
+candidates. Choose the first $m_n=\lfloor c\sqrt{s_n}\rfloor$; eventually
+$q_-m_n\le s_n$. The queue bound and the preceding probability statement at
+$2s_n$ give $P_0(\mathcal U_{2s_n}\ge c's_n)\ge1/4$, contradicting
+$\delta\le1/16$ and the proposed envelope.

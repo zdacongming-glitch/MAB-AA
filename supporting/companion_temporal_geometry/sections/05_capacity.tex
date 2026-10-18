@@ -1,0 +1,82 @@
+\section{Computing and Interpreting Arrival Capacity}\label{sec:capacity-properties}
+\subsection{A Hull Calculation and Its Certificate}
+Sort the $M$ competing-arm lifetimes as $H_{(1)}\le\cdots\le H_{(M)}$. The suffix constraints are equivalent to
+\[
+ \sum_{i=1}^r n_{(i)}\le H_{(r)},\qquad r=1,\ldots,M.
+\]
+For tied lifetimes the constraint at the last tied index implies the earlier ones. Let $0=r_0<r_1<\cdots<r_B=M$ be the vertices of the lower convex hull of $(0,0),(r,H_{(r)})$, with $H_{(0)}=0$. Its successive slopes are
+\begin{equation}\label{eq:hull-slopes}
+ q_b=\frac{H_{(r_b)}-H_{(r_{b-1})}}{r_b-r_{b-1}},\qquad b=1,\ldots,B.
+\end{equation}
+They are positive and nondecreasing.
+
+\begin{proposition}[Explicit capacity and dual certificate]\label{prop:hull}
+Assign $n_{(i)}^*=q_b$ for $r_{b-1}<i\le r_b$. This allocation maximizes \eqref{eq:capacity}, so
+\begin{equation}\label{eq:hull-capacity}
+ \cC_T=\sum_{b=1}^B(r_b-r_{b-1})\phi(q_b).
+\end{equation}
+An exact dual representation is
+\begin{equation}\label{eq:dual}
+ \cC_T=\min_{\lambda_r\ge0}\left\{
+ \sum_{r=1}^M H_{(r)}\lambda_r+
+ \sum_{i=1}^M g\left(\sum_{r=i}^M\lambda_r\right)\right\},
+\end{equation}
+where $g(0)=+\infty$ and
+\[
+ g(c)=
+ \begin{cases}
+ 1/(4c),&0<c\le1/2,\\
+ 1-c,&1/2\le c\le1,\\
+ 0,&c\ge1.
+ \end{cases}
+\]
+The minimum is attained by nonzero multipliers only at hull vertices.
+\end{proposition}
+
+This is the common-shape nested allocation geometry studied by \citet{vidal2016nested}, with a supergradient treatment of the corner in $\phi$. If $p_b=1$ for $q_b\le1$ and $p_b=1/(2\sqrt{q_b})$ otherwise, an attaining certificate is $\lambda_{r_b}=p_b-p_{b+1}$, where $p_{B+1}=0$, and zero elsewhere. Sorting takes $O(M\log M)$ comparisons; a monotone stack then builds the hull in $O(M)$ arithmetic operations. Integer cross-products can determine the slope order without floating-point comparisons. No claim about unit-cost arithmetic for arbitrarily large integers is needed.
+
+\subsection{Integer Allocations}
+Restricting sample allocations to integers changes the capacity by only a small multiplicative factor. To quantify this difference, define the integer allocation capacity
+\[
+ \cC_T^{\mathrm{int}}=
+ \max_{N\in\cN_T\cap\mathbb Z_+^M}\sum_i\sqrt{N_i}.
+\]
+An integer feasible vector can be realized by actual pulls, again filling legal suffixes from shortest to longest lifetime.
+
+\begin{theorem}[Sharp comparison with integer capacity]\label{thm:integer-main}
+For every finite arrival schedule,
+\begin{equation}\label{eq:integer-main}
+ \kappa\cC_T\le\cC_T^{\mathrm{int}}\le\cC_T,
+ \qquad \kappa=\frac{2\,2^{1/4}}{1+\sqrt2}=0.985171\ldots.
+\end{equation}
+No larger universal constant can replace $\kappa$ in the lower bound.
+\end{theorem}
+
+The upper comparison follows because $\phi(N_i)=\sqrt{N_i}$ at integer arguments. For the lower comparison, sort a fractional optimizer and round all of its prefix sums with the same uniform offset. The resulting integer prefix sums remain feasible, every coordinate is rounded to one of its two nearest integers, and its expectation is unchanged. The linear interpolation of the square root between integer arguments is at least $\kappa\phi$. Balanced allocations with average count tending to $\sqrt2$ attain this loss asymptotically. The full rounding and sharpness arguments are in the supplement. The fractional and integer capacities are therefore close; this comparison does not supply a regret guarantee for a policy based on either optimizing allocation.
+
+\subsection{Sensitivity and Marginal Contributions}
+The capacity has several exact properties, which need not transfer as exact inequalities to the minimax risk. If a batch of any finite size is added with every lifetime at most $h$, the capacity increases by at most $h$. If two lifetime vectors on the same arm set obey $\max_i|H_i-H_i'|\le d$, then
+\begin{equation}\label{eq:jitter}
+ |\cC(H)-\cC(H')|\le d.
+\end{equation}
+Along one infinite schedule, even with an arbitrarily large new batch,
+\begin{equation}\label{eq:capacity-growth}
+ 0\le\cC_{T+1}-\cC_T\le1.
+\end{equation}
+These facts follow by deleting at most $h$, $d$, or one unit of allocated mass and using that $\phi$ is increasing and 1-Lipschitz. Their complete proofs handle tied lifetimes and are given in the supplement.
+
+A more detailed description fixes a finite universe of possible competing arms and varies its subset $A$. Let $\cC(A)$ denote the corresponding capacity, with the anchor always present. For $z>0$, define
+\begin{equation}\label{eq:cut-main}
+ F_z(A)=\min_{0\le h\le T,\ h\in\mathbb Z}
+ \left\{h+z|\{i\in A:H_i>h\}|\right\}.
+\end{equation}
+This is the largest total feasible allocation if each arm's contribution is capped at $z$. The hull allocation attains every capped objective simultaneously, and
+\begin{equation}\label{eq:integral-main}
+ \cC(A)=\tfrac12F_1(A)+\tfrac14\int_1^\infty F_z(A)z^{-3/2}\,dz.
+\end{equation}
+Each capped value is submodular. Thus, if $A\subseteq B$ and $i\notin B$,
+\[
+ 0\le\cC(B\cup\{i\})-\cC(B)
+ \le\cC(A\cup\{i\})-\cC(A)\le\sqrt{H_i}.
+\]
+This specializes the concave-polymatroid value property of \citet{he2012polymatroid}; the explicit cuts describe it in terms of the arrival times. It states that the marginal increase in this measure of difficulty diminishes as the candidate pool grows. Removing an available arm changes the decision benchmark, so this property is not a justification for excluding arms while claiming the original regret guarantee.

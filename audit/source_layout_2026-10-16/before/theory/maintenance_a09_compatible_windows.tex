@@ -1,0 +1,42 @@
+% Reorganized from the frozen October 15, 2026 supplement.
+\section{Compatible-window truncated area}
+\label{sec:truncated_extension}
+
+\begin{proposition}[Additive truncated area in one compatible experiment]
+\label{prop:truncated_windows}
+Consider finitely many batches indexed by $e$. Batch $e$ contains $m_e$
+independent signs and has a deterministic validity window $W_e$ of length
+$H_e$ that begins at that batch's arrival round. During that window each sign
+is its arm's relative-goodness label and
+its boundary distance exceeds $\eta$. The signs across all batches are
+independent, other distributions do not encode them, and no information
+about batch $e$ is available before its arrival. Samples remain interleaved
+and adaptive. Suppose every sign configuration has familywise reporting error
+at most $0<\delta\le1/16$. Let $0<\kappa_e<\infty$ bound the two directional
+divergences in batch $e$, and define
+\[
+ h_e=\min\left\{H_e,
+ \left\lceil\frac{m_e\log(m_e/\delta)}{1024\kappa_e}\right\rceil-1\right\},
+ \qquad S=\sum_e m_eh_e.
+\]
+When $S>0$, one fixed full sign configuration satisfies
+\[
+ P\{\mathcal U_T(\eta)\ge S/8\}\ge1/7,
+\]
+provided every selected window lies before $T$ and every candidate--time pair
+is counted only once. The windows may overlap when they concern distinct
+arms and their stated qualification structure is jointly realizable.
+\end{proposition}
+\begin{proof}
+At the $r$th round after batch $e$ arrives, $r\le h_e$, the entire experiment
+has supplied at most $r$ samples of that batch. The contrapositive of the
+partial-recovery lemma shows that at least half the batch is determinate with
+probability less than $1/2$. Its expected unresolved count is therefore at
+least $m_e/4$. Let $Y$ sum unresolved candidate--time pairs over the first
+$h_e$ rounds of all selected windows. All these pairs have boundary distance
+larger than $\eta$, so $Y\le\mathcal U_T(\eta)$, while $0\le Y\le S$ and
+$\overline EY\ge S/4$. If $p=\overline P(Y\ge S/8)$, then
+$S/4\le S/8+(7S/8)p$, giving $p\ge1/7$. Select a fixed configuration from
+the common product prior. Compatibility of the windows is essential: this
+proof cannot sum bounds from mutually incompatible reference environments.
+\end{proof}

@@ -1,0 +1,8 @@
+{
+  "source": "revision2/analysis/reanalyze_fccp.py",
+  "source_sha256": "19aea469312f8636bb9fcf70e2797ce6b2c5d4881e98f6425f7b548f5dbfd4aa",
+  "work_copy_sha256": "5fe70f3f59ea657ffb46ae439e990c7c00470df4b92acf4d62c3afd815b3bc61",
+  "change": "REPO = PROJECT.parent -> REPO = PROJECT",
+  "reason": "Keep all historical research-asset lookups inside the isolated paper copy.",
+  "policy_code_changed": false
+}

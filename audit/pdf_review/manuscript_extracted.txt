@@ -1,0 +1,1449 @@
+                          Multi-armed bandits with arriving arms:
+                   sequential screening and reliable set maintenance
+                                        Deqi Zheng∗ Xiaoyang Xu∗
+                                    Qiuzhen College, Tsinghua University
+                                            Yuhong Yang†
+                         Yau Mathematical Sciences Center, Tsinghua University
+
+                                                 October 15, 2026
+
+
+
+                                                      Abstract
+              We study a stochastic multi-armed bandit problem in which new arms arrive exogenously and
+          remain available. Performance is measured against the best currently available arm. The resulting
+          arrival information discrepancy and drifting benchmark motivate UCB for Arriving Arms (UCB-
+          AA), which screens new arms before they enter full competition with incumbents. We analyze
+          this two-stage design and give a finite-budget regret analysis based on the comparisons and
+          sample prefixes actually used. The analysis separates learning among admitted arms from delayed
+          admission and loss of an earlier benchmark. We then ask what statistical benefit can accompany
+          screening beyond a smaller internal active set. For simultaneous, reliable reporting of the relative
+          near-optimal set, uncertainty about one arrival can obstruct many earlier certifications. We
+          characterize a worst-schedule maintenance cost and identify the polynomial arrival boundary for
+          sublinear unresolved time. A repeated-update family shows that prompt resolution of temporary
+          membership questions can require inverse-square regret, whereas allowing more waiting admits
+          a logarithmic upper bound. The necessary cost also holds with fixed positive probability. A
+          separate checkpoint construction supplies attainable reporting bounds. Numerical evidence
+          distinguishes the archived UCB-AA implementation from this construction and exposes the
+          finite-budget cost of conservative certification.
+
+Keywords: sequential experimentation; adaptive screening; arriving arms; dynamic regret; arrival
+information discrepancy; drifting benchmark.
+
+
+1        Introduction
+The classical multi-armed bandit framework assumes that the set of available actions is fixed in
+advance. In many modern applications, however, the action set expands over time. Precision
+oncology provides a representative example: as genomic profiling has advanced, the set of approved
+    ∗
+        The first two authors contributed equally.
+    †
+        Corresponding author: yyangsc@mail.tsinghua.edu.cn.
+
+
+                                                           1
+Figure 1: The historical motivating illustration from the original submission: FDA approval records
+for targeted therapies and immunotherapies for non-small cell lung cancer over 2003–2025 (U.S. Food
+and Drug Administration, 2025). The expanding option set motivates arriving-arm experiments.
+No treatment outcomes from this illustration enter the bandit simulations.
+
+targeted therapies for non-small cell lung cancer has grown substantially, so a trial designed around
+a fixed collection of treatments may become outdated before it is completed. Similar issues arise in
+online advertising and other adaptive decision problems in which new options appear sequentially.
+    Motivated by such problems, we study the multi-armed bandit problem with arriving arms
+(MAB-AA). Let At denote the set of arms available at time t, with At ⊆ At+1 . New arms arrive
+over time and remain available thereafter. Performance is evaluated against the best arm currently
+available, since a terminal best arm need not have been available earlier.
+    Relative to the classical stochastic bandit setting, MAB-AA introduces two main difficulties.
+The first is arrival information discrepancy (AID): newly arrived arms must be explored, which
+repeatedly diverts samples away from well-understood incumbent arms. The second is a drifting
+benchmark (DB): as better arms enter the system, both the identity of the optimal arm and the
+regret benchmark may change over time.
+    The setting retains stationary, unstructured reward laws and an external arrival process. Arms
+are not drawn on demand from a reservoir (Berry et al., 1997), and do not disappear as in mortal
+bandits (Chakrabarti et al., 2008). Permanent arrivals are a monotone special case of sleeping-bandit
+availability (Kleinberg et al., 2010). Benchmark changes are caused by new arms, rather than
+changes in the reward laws of existing arms as in nonstationary bandits (Besbes et al., 2014; Auer
+et al., 2019). Ballooning bandits already use permanent arrivals and regret against the best currently
+available arm (Ghalme et al., 2021); we do not claim either as a new model or comparator.
+    From a statistical perspective, multi-armed bandit problems have long been studied as models
+for sequential allocation and adaptive experimentation, dating back to Robbins (1952) and the
+asymptotically efficient allocation theory of Lai and Robbins (1985); see also Lai (1987) for connec-
+tions to adaptive treatment allocation. This viewpoint has motivated a broad statistical literature,
+including Bayesian and index-based approaches to sequential allocation (Gittins, 1979; Berry and
+
+
+                                                  2
+Fristedt, 1985), response-adaptive randomization in clinical trials (Zelen, 1969; Wei and Durham,
+1978; Villar et al., 2015; Williamson and Villar, 2020; Aziz et al., 2021), covariate-dependent and
+nonparametric bandit methods (Woodroofe, 1979; Yang and Zhu, 2002; Rigollet and Zeevi, 2010;
+Perchet and Rigollet, 2013), and recent high-dimensional, semiparametric, and transfer-learning
+formulations (Qian and Yang, 2016; Qian et al., 2024; Cai et al., 2024). These works share with ours
+the broad goal of learning from accumulated evidence to reduce allocation to inferior alternatives,
+but do not directly study the permanent exogenous arrival setting considered here.
+    Methodologically, the two challenges call for different but complementary design principles. To
+address AID, our approach combines elimination steps (Even-Dar et al., 2006; Auer and Ortner, 2010;
+Perchet and Rigollet, 2013; Qian and Yang, 2016) with a pre-elimination mechanism tailored to the
+expanding action set. The key idea is to prevent the main competition stage from being repeatedly
+disrupted by every newly arriving arm. Instead, late arrivals are first screened against incumbent
+candidates, so that clearly inferior arms can be removed before receiving the full exploration budget
+assigned to serious contenders. To handle DB, the algorithm repeatedly updates the relevant
+comparison set as new arms arrive, and the analysis evaluates regret against the best arm currently
+available rather than against a fixed hindsight oracle. Based on these ideas, we propose UCB for
+Arriving Arms (UCB-AA). For UCB-AA, we derive regret upper bounds that depend explicitly
+on the arrival process, establish sublinear dynamic regret when arm-count growth and admission
+delay are controlled, study representative lower-bound regimes, and develop an online extension for
+unknown horizons.
+    UCB for Arriving Arms (UCB-AA) implements this screening design. Its pre-elimination stage
+samples an arrival at coarse resolutions before spending the finer budget used for incumbent arms.
+Formal elimination then compares the merged active set. A finite-budget analysis must account
+for unfinished phases, arrivals waiting for admission, and any loss of a previously admitted best
+arm. We give that accounting explicitly and establish a sample-count bound without compressing
+historical gaps into a terminal gap.
+    The active set alone does not describe what has been learned about all available arms. An
+excluded arm may be statistically inferior, or it may never have been admitted. This distinction
+leads to a further question within the same MAB-AA setting: what does it cost to maintain reliable
+knowledge of the complete relative near-optimal set while collecting reward? The fixed-arm version
+is the ALL-ε problem (Mason et al., 2020). Joint reward and identification objectives also have
+established precedents (Degenne et al., 2019; Yang et al., 2026; Cho et al., 2025). Our additional
+requirement concerns continuing reports under arrivals, with one simultaneous correctness event
+and a cumulative cost for unresolved arm time.
+    Two effects of the drifting benchmark determine that cost. An uncertain new arm can block
+positive certification of many well-studied incumbents. A later improvement can also make a difficult
+earlier membership question irrelevant. We prove a common-environment broadcast lower bound
+and a worst-schedule maintenance bound, obtaining the polynomial arrival exponent below which
+sublinear regret and sublinear unresolved time are jointly possible. In a repeated-update family,
+prompt maintenance has matching inverse-square regret bounds at specified horizons, whereas a
+
+
+                                                 3
+larger constant-factor area budget admits a logarithmic regret upper bound. A fixed-probability
+lower bound shows that the necessary cost is not confined to rare paths. These are substantive
+extensions of the original regret question, rather than guarantees inferred from the size of UCB-AA’s
+active set.
+    For the reporting upper bounds we use a separate checkpoint construction, CP-UCB-AA. It
+preserves accumulated observations but does not remove negatively reported arms from reward selec-
+tion. We distinguish its guarantees from those of the two-stage UCB-AA procedure. The numerical
+study likewise distinguishes the original archived implementation from the reporting comparisons.
+It retains favorable and unfavorable original observations, while showing that conservative fixed
+checkpoints can be impractical at moderate budgets.
+
+
+2     Multi-armed bandit problem with arriving arms
+2.1   Problem formulation
+We consider a sequential decision process over time steps t = 1, 2, . . .. Let A be the possibly infinite
+set of all arms. At time t only At ⊆ A is available, where At ⊆ At+1 , A1 =    ̸ ∅, and Kt = |At | < ∞.
+For arm i, its arrival time is
+                                      τi = inf{t ≥ 1 : i ∈ At }.
+
+Each arm has an unknown stationary reward law on [0, 1] with mean ri . Reward streams are
+independent across arms, and successive observations of each arm are independent and identically
+distributed. The arrival process is exogenous to the learner and independent of these reward streams.
+We state results conditional on a fixed arrival schedule unless otherwise specified.
+    In physical-time notation, Xt,i denotes the reward observed if arm i is selected at time t. A
+policy is a sequence π = (πt )t≥1 of possibly randomized rules. After seeing At , it selects It ∈ At
+using the observed history
+                                                                t−1
+                                       Ht−1 = (As , Is , Xs,Is )s=1
+
+and independent randomization, and then observes Xt,It . It does not know the arm means or future
+arrivals.
+                      P
+    Write Ni (t) = s≤t 1{Is = i} for the cumulative number of pulls of arm i. To distinguish pull
+number from physical time, represent its successive potential observations by (Yi,n )n≥1 , so that
+Xt,It = YIt ,NIt (t−1)+1 . Define
+
+                             n
+                          1X
+              r̂i (n) =         Yi,s ,   r∗ (t) = max ri ,          ∆i (t) = r∗ (t) − ri   (i ∈ At ).
+                          n s=1                   i∈At
+
+
+For an almost surely finite stopping time τ , the cumulative dynamic regret is
+                                                    τ
+                                                             r∗ (t) − rIt .
+                                                    X                    
+                                         Rτ (π) =
+                                                    t=1
+
+
+
+
+                                                         4
+At a deterministic horizon T we write RT (π), or RT when the policy is understood. It is random
+through the arm selections; ERT is its expectation. A definition at random τ does not assert that
+every deterministic-horizon bound also holds at arbitrary stopping times. Physical time t always
+counts actual pulls. Algorithmic rounds are indexed separately by m.
+
+2.2   Main statistical challenges
+Arrival information discrepancy (AID). A first difficulty is arrival information discrepancy.
+With a finite sampling budget up to time T , the learner must allocate samples both to incumbent
+arms and to newly arriving arms whose rewards are still highly uncertain. Under continual arrivals,
+this repeated re-exploration can prevent the learner from concentrating pulls on the best currently
+available arm. Consequently, without additional regularity conditions on the arrival process, sublinear
+regret may be unattainable.
+     Drifting benchmark (DB). In contrast to the classical setting where the best mean reward
+is fixed, the benchmark in MAB-AA is time-dependent: r∗ (t) = maxi∈At ri . Since At expands
+over time, both the identity of the best arm and the value r∗ (t) may change when new arms
+arrive. Consequently, for a fixed arm i, the suboptimal gap r∗ (t) − ri is generally time-varying
+(and non-decreasing in t). This drifting benchmark complicates both algorithm design and analysis,
+because the learner must continuously compare well-sampled incumbent arms with newly arriving
+arms whose estimates are still highly uncertain.
+
+2.3   Admission and retirement in the reward account
+The distinction between statistical reports and reward eligibility is useful even before introducing a
+policy. Let Aadm
+              t   ⊆ At be an admitted set and Bt ⊆ Aadmt    its nonempty reward-active subset, with
+It ∈ Bt . At every deterministic endpoint, including one inside an algorithmic round,
+
+                                                                 (r∗ (t) − max ri )
+                                 X                         X
+                          RT =         (max ri − rIt ) +
+                                        i∈Bt                             i∈Aadm
+                                 t≤T                       t≤T              t
+                                     X
+                                 +       ( max ri − max ri ).                                      (1)
+                                               adm       i∈Bt
+                                     t≤T i∈At
+
+This follows by adding and subtracting the two intermediate maxima at each pull. The terms are
+within-active learning, admission delay, and loss of an admitted benchmark through retirement.
+The latter two cannot in general be identified with arrival increments alone. On a simultaneous
+confidence event, the revised UCB-AA comparisons preserve a best admitted arm, making the third
+term zero. The checkpoint construction introduced later uses Bt = Aadm
+                                                                   t    = At for reward selection,
+so its last two terms vanish on every sample path.
+
+
+3     UCB for Arriving Arms (UCB-AA)
+UCB-AA is an elimination-based procedure organized by rounds. Its main idea is simple: newly
+arriving arms are not allowed to compete immediately with well-sampled incumbent arms. Instead,
+
+                                                     5
+they are first buffered and screened at lower cost. Only those that survive this screening step
+enter full competition in the next stage. This design aims to reduce wasted exploration on clearly
+suboptimal late arrivals while preserving the ability to detect genuinely competitive new arms.
+
+3.1   UCB-AA under a physical sampling budget
+UCB for Arriving Arms (UCB-AA) uses two stages of screening. At the beginning of round m,
+admit the buffered batch Am and form Bm = Cm−1 ∪ Am , where Cm−1 contains the surviving
+incumbents. For m ≥ 2, screen the new arms in phases p = 0, . . . , m − 2 against the incumbents
+and the remaining new arms; only new arms can be removed. Then apply formal elimination
+to the merged set in phases m − 1, m. Round zero uses phase zero, and round one uses formal
+phases zero and one. Empty preliminary batches are no-ops. This retains the distinction between
+pre-elimination, which addresses arrival information discrepancy, and formal elimination after new
+arms have entered the main competition.
+    Let sm be the physical start of round m. Set A0 = A1 and, for m ≥ 1, admit the entire buffer,
+including arrivals at sm : Am = Asm \ A(m − 1), where A(m − 1) = j<m Aj . Arrivals during a call
+                                                                    S
+
+are added to the buffer before the current physical action and wait for the next round.
+    To give this procedure a fixed-budget guarantee, specify its confidence calibration, comparison
+data, and stopping rule. For a known physical budget T ≥ 1 and 0 < δ < 1, let
+                            l                    m
+                     MT =       1
+                                                     ,           N = 8T 4MT /δ,         e = 2−p .
+                                2 log2 (T + 1)                                          ∆ p         (2)
+
+Use the target and radius formulas
+                                                                            v
+                                                e 2)
+                                    &                    '                  u
+                                        2 log(N ∆                                   e 2)
+                                                                            u log(N ∆
+                                                  p                                   p
+                            np =                             ,       bp =   t
+                                                                                           .        (3)
+                                            e2
+                                            ∆ p
+                                                                                  2np
+
+In an elimination call, sample each candidate to np lifetime pulls, retaining all earlier observations.
+After the call’s sampling is complete, compare the actual prefix intervals r̂i (np ) ± bp . Remove a
+candidate only if its upper bound is strictly below the largest reference lower bound. Incumbents
+have already reached the necessary prefix before a preliminary comparison, so no unobserved
+incumbent estimate is used. Stop after physical pull T , including when it cuts through a target
+or a round. The calibrated nMT > T ensures that the finite phase range covers this execution.
+These conventions specify the confidence comparisons and budget accounting for the two elimination
+stages. The guarantee below uses this calibration; a smaller empirical calibration need not have the
+same coverage probability.
+    The algorithm retains the original two stages. Pre-elimination applies only to newly admitted
+arms and uses the already observed incumbent prefixes. Formal elimination applies to the merged
+active set. The empty-batch branch, strict comparison, and physical-budget stopping rule make
+those operations unambiguous; they do not replace screening with the checkpoint construction.
+
+
+
+
+                                                                 6
+Algorithm 1 UCB for Arriving Arms (UCB-AA), with explicit prefix comparisons
+Require: Physical budget T ; MT , N, np , bp from (2)–(3)
+ 1: Initialize C−1 = ∅ and retain lifetime sample prefixes
+ 2: Stop immediately after pull T ; an unfinished call performs no elimination
+ 3: procedure Elim(S, R, p)
+ 4:     Before each physical pull, add newly arriving unadmitted arms to the buffer
+ 5:     Pull each j ∈ S to np total observations
+ 6:     For j ∈ R, set LCBj = r̂j (np ) − bp , UCBj = r̂j (np ) + bp
+ 7:     Remove simultaneously from S every j with UCBj < maxi∈R LCBi
+ 8:     return S
+ 9: end procedure
+10: for m = 0, . . . , MT do
+                                                 0
+11:     Admit buffered batch Am ; set Bm           = Cm−1 ∪ Am
+12:     if m ≥ 2 then
+13:         Set A0m = Am
+14:         for p = 0, . . . , m − 2 do
+15:             if Apm ̸= ∅ then
+16:                 Ap+1                 p
+                       m ← Elim(Am , Cm−1 ∪ Am , p)
+                                                      p
+
+17:             else
+18:                 Ap+1
+                       m ←∅
+19:             end if
+                  p+1
+20:             Bm     ← Cm−1 ∪ Ap+1    m
+21:         end for
+22:     end if
+23:     if m = 0 then
+              1                0    0
+24:         Bm   ← Elim(Bm       , Bm , 0)
+25:     else
+26:         for p = m − 1, m do
+                  p+1                p     p
+27:             Bm     ← Elim(Bm       , Bm  , p)
+28:         end for
+29:     end if
+                  m+1
+30:     C m ← Bm
+31: end for
+
+
+3.2   Roundwise regret, historical loss, and arrival delay
+                                                               S
+Let sm be the physical start of round m, A(m) = j≤m Aj , and r∗(m) = maxi∈Bm ri . Write
+∆rd                                                             ∗
+  i (m) = r∗(m) − ri for its roundwise gap, reserving ∆i (t) = r (t) − ri for physical time. Write
+radm (m) = maxi∈A(m) ri for the best mean among all admitted arms, including those previously
+eliminated. At a physical time t, the current round is m(t). The exact regret identity is
+
+                                   RT (π) = Rround (T ) + HT + DT ,                            (4)
+                                               X
+                               Rround (T ) =         {r∗(m(t)) − rIt },
+                                               t≤T
+                                               X
+                                      HT =           {radm (m(t)) − r∗(m(t)) },
+                                               t≤T
+
+                                                     {r∗ (t) − radm (m(t))}.
+                                               X
+                                      DT =
+                                               t≤T
+
+
+
+
+                                                        7
+All three quantities are nonnegative. The historical term HT records the consequence of eliminating
+an admitted benchmark arm; DT records only the time before arrivals are admitted. Combining
+them into a residual does not make that residual arrival delay.
+    For a complete run of M + 1 rounds, the original T0 (π) denotes its actual random number of
+pulls, and Rround (T0 (π)) = RM (π). The pathwise identity also applies at this endpoint, but the
+fixed-budget bound does not replace T by ET0 (π) or assert a guarantee for an arbitrary stopping
+time. The original K(m), if supplied, bounds |A(m)|; it differs from the actual count Kt = |At | and
+is not an additional input required by the present calibration.
+    The delay contribution is explicit. Let βu = r∗ (u) − r∗ (u − 1) for u ≥ 2 and let αT (u) be the first
+round start at or after u, with value T + 1 when no such start occurs by T . Because A(m) = Asm ,
+
+                                              T
+                                              X
+                                       DT =         βu {αT (u) − u}.                                  (5)
+                                              u=2
+
+This formula retains benchmark improvements in the last unfinished round.
+
+Theorem 3.1 (A repaired fixed-budget bound for UCB-AA). For independent arm streams, each
+consisting of iid [0, 1]-valued rewards, deterministic permanent arrivals, a nonempty initial arm set,
+and KT = |AT | < ∞, the UCB-AA procedure specified above satisfies, with probability at least 1 − δ,
+                                                          q
+                    HT = 0,        RT (π) ≤ min{T, 8 (2 log N + 1)KT T + DT }.
+
+It follows that                              q
+                       ERT (π) ≤ min{T, 8 (2 log N + 1)KT T + EDT + δT }.                             (6)
+
+The inequalities include incomplete targets and rounds and allow ties between arm means. No
+terminal-gap stability condition is needed.
+
+    The proof uses the actual lifetime observation count. On one simultaneous prefix-coverage
+event, a best admitted arm survives every comparison. A new arm that receives phase-p samples
+for p ≥ 1 has survived the preceding comparison in the same round; its roundwise gap is at most
+4bp−1 . An incumbent receives no new samples in formal phase m − 1, because it already has nm−1
+observations. Its new phase-m samples follow the current round’s phase-m − 1 comparison and obey
+                                                                                     p
+the same bound. Thus the nth observation of an arm has roundwise loss at most 4 (2 log N + 1)/n.
+Summing these distinct prefix charges yields (6); the argument does not replace intermediate gaps
+by a terminal gap or condition on a selected elimination chain. The supplementary material gives
+the full proofs.
+    For T ≥ 2, the choice δ = T −2 makes the statistical term O( KT T log(T + 1)). Sublinear regret
+                                                                 p
+
+therefore follows under the sufficient conditions KT log(T + 1) = o(T ) and EDT = o(T ). The delay
+condition is essential to this statement; the result does not assert sublinear regret for arbitrary
+arrivals. For an unknown horizon, a restart at physical budgets 1, 2, 4, . . . gives a valid extension
+with the same statistical order and its own explicit delay term. The supplementary material provides
+its construction. Each restart has a prescribed number of physical pulls, so an unfinished round is
+
+
+                                                      8
+charged at the actual endpoint.
+
+Corollary 3.2 (Static arms and fixed-gap distractors). Suppose an arm available at time one has
+mean r⋆ and every arm arriving by T has mean at most r⋆ . Write ∆i = r⋆ − ri and A = 2 log N + 1.
+Then DT = 0 pathwise and, with probability at least 1 − δ,
+
+                                                                     16A
+                                        X                                
+                             RT (π) ≤           min ∆i (T − τi + 1),     .                          (7)
+                                        i∈AT
+                                                                      ∆i
+                                        ∆i >0
+
+Adding δT gives an expected-regret bound, and both bounds may be capped at T .
+
+    Indeed the active best mean equals r⋆ on the common confidence event. Applying the actual-
+prefix charge to a suboptimal arm’s last observation gives Ni (T ) ≤ 16A/∆2i , while Ni (T ) ≤ T −τi +1.
+For T ≥ 2 and δ = T −2 , the static case therefore has upper order i:∆i >0 log(T + 1)/∆i ; arrivals
+                                                                       P
+
+with a fixed positive gap have upper order KT log(T + 1). For example, consider an initial optimum
+r⋆ = 3/4, another initial mean 1/4, and arriving means ri = 1/2 − 2−i−2 at exogenous physical
+times τi , i ≥ 1. All distractors have gap at least 1/4, so the same bound gives O(KT log(T + 1))
+expected regret for this exogenous arrival example.
+
+
+4     Regret lower bounds in representative arrival regimes
+We consider two representative lower-bound regimes for regret. The first describes the evidence
+needed to reject inferior arrivals when the best arm is already available. Its static special case is a
+classical calibration (Lai and Robbins, 1985; Burnetas and Katehakis, 1996). The second describes
+successive local comparisons as the benchmark improves. Both concern regret at a deterministic
+physical horizon. They are separate from the reporting requirements introduced below, and are not
+claimed as matching converses to an upper bound evaluated at a random round-completion time.
+
+4.1   Static arms and arriving distractors
+For each horizon T , fix an exogenous deterministic arrival schedule and a baseline environment ν (0) .
+Arm 0 is available from time 1 and has mean r⋆ strictly larger than every other mean. Let IT be a
+nonempty collection of inferior arrivals. For i ∈ IT , write
+
+                 ri = r⋆ − ∆i ,     Hi (T ) = T − τi + 1,      Hmin (T ) = min Hi (T ).
+                                                                              i∈IT
+
+
+The reward law of arm i is Pi . Suppose there is a law Qi on [0, 1] with mean r⋆ + ηi , where ηi > 0,
+and put di = D(Pi ∥Qi ). Let ν (i) change only this arm’s law to Qi , retaining all other reward laws
+and the arrival schedule. Set VT = {ν (0) } ∪ {ν (i) : i ∈ IT }.
+
+Theorem 4.1 (Local-alternative regret lower bound). Assume Hmin (T ) → ∞ and that fixed positive
+constants ∆, η, d satisfy, for all sufficiently large T and every i ∈ IT ,
+
+                                  ∆i ≥ ∆,         ηi ≥ η,   0 < di ≤ d.
+
+                                                       9
+Suppose a sequence of nonanticipating policies {π (T ) } is uniformly good on this family at scale
+Hmin (T ), meaning
+
+                           sup Eν RT (π (T ) ; ν) = o Hmin (T )a
+                                                                          
+                                                                              for every a > 0.               (8)
+                           ν∈VT
+
+Then, for all sufficiently large T ,
+
+                                                  1 X ∆i                   ∆
+                  Eν (0) RT (π (T ) ; ν (0) ) ≥             log Hi (T ) ≥     |IT | log Hmin (T ).           (9)
+                                                  12 i∈I di               12d
+                                                        T
+
+
+    The conclusion is conditional on (8); that condition can be restrictive for growing families. Indeed,
+the theorem requires |IT | log Hmin (T ) = o(Hmin (T )a ) for every a > 0 if such a policy sequence exists.
+It does not assert existence in arrival regimes that violate this necessary compatibility condition.
+Equally spaced arrivals with spacing ⌊T /|IT |⌋ → ∞ give Hmin (T ) ≥ ⌊T /|IT |⌋. If every arrival
+occurs before αT for a fixed α < 1, then Hmin (T ) ≥ (1 − α)T . These substitutions describe the
+corresponding lower bounds without removing the uniform-goodness condition.
+    For a fixed collection of K inferior arms all available at time 1, take Hi (T ) = T . If the local
+alternatives satisfy di ≤ Ci ∆2i with fixed 0 < Ci < ∞, then the same argument gives
+
+                                                                            K
+                                                                        1 X    log T
+                                        Eν (0) RT (π (T ) ; ν (0) ) ≥                                       (10)
+                                                                        12 i=1 Ci ∆i
+
+for all sufficiently large T . The laws, gaps, and K are fixed in this specialization. These are
+applications of the usual bandit change-of-measure argument (Kaufmann et al., 2016), not new
+claims about a regret comparator. Complete proofs appear in the supplementary material.
+
+4.2    Successive near-tied benchmark improvements
+Fix integers J ≥ 1 and H1 , . . . , HJ ≥ 1 with Jm=1 Hm = T . Write s0 = 0, sm = m
+                                                            P                                         P
+                                                                                         ℓ=1 Hℓ , and
+Bm = {sm−1 + 1, . . . , sm }. At the start of block m, two Bernoulli arms cm , dm arrive and remain
+available, with means
+
+                          rcm = θm ,          rdm = θm + σm εm ,              σm ∈ {−1, +1}.
+
+There are no other arms in this construction, so KT = 2J. Fix 0 < γ < 1/2 and require
+
+            θm − εm , θm + εm ∈ [γ, 1 − γ],                 εm > 0,           θm+1 ≥ θm + εm     (m < J).   (11)
+
+Let VTprog contain the 2J sign configurations. The local perturbations εm in this construction are
+not the near-optimality tolerance used later for reporting.
+
+
+
+
+                                                             10
+Theorem 4.2 (Deterministic-block regret lower bound). Every nonanticipating policy satisfies
+                                                                          s
+                                               J
+                                                                                         !
+                                            1 X                               2Hm ε2m
+                         sup Eν RT (π; ν) ≥       Hm εm 1 −                                  .                       (12)
+                        ν∈V prog            2 m=1                             γ(1 − γ)   +
+                            T
+
+
+
+In particular, if Hm ε2m ≤ κγ(1−γ) for all m, with 0 < κ < 1/2, the right side is at least cκ m Hm εm ,
+                                                                                                                 P
+                   √
+where cκ = (1 − 2κ)/2 > 0. The same bounds hold after taking the infimum over policies on the
+left.
+                          p
+    If Hm ≍ T /J, εm ≍ J/T , and the constants satisfy the preceding small-information condition,
+                                 √                                                             p
+this gives a lower bound of order JT . Bounded rewards restrict this specialization. If εm ≥ cε J/T
+for every m, then
+                                q        J
+                                         X
+                          Jcε J/T ≤           εm ≤ θJ + εJ − (θ1 − ε1 ) ≤ 1 − 2γ.
+                                        m=1
+
+Consequently J = O(T 1/3 ) is necessary for this family. This is a feasibility restriction of the bounded
+ladder construction, not an impossibility boundary for the unrestricted arriving-arm model. No
+uniform-goodness assumption is needed for (12). Complete proofs appear in the supplementary
+material.
+
+
+5     Reliable maintenance of the near-optimal set
+We now supplement the allocation objective with an explicit reporting objective. The reward model,
+available arms, and dynamic-regret comparator remain those of Section 2. Reporting a relative
+near-optimal set is an additional statistical task; it is not identified with UCB-AA’s active or
+surviving set. We use separate report notation to keep that distinction visible.
+
+5.1    Reporting reliability and unresolved time
+For 0 < ε < 1, the target is
+                                         Gtε = {i ∈ At : ∆i (t) ≤ ε}.
+
+A report partitions At into Pt , Nt , Vt : certified good, certified bad, and unresolved. With 0 < δ < 1/2,
+let
+                                 Elab = {for all t : Pt ⊆ Gtε ⊆ At \ Nt }.
+
+A policy is δ-reliable if P(Elab ) ≥ 1 − δ in every allowed reward environment. Positive reports may
+need revision after an arrival. A sound negative report remains valid because r∗ (t) is nondecreasing.
+This statement refers to the model’s stationary means and permanent availability.
+   Reliability alone permits every arm to remain unresolved. To measure progress, fix a boundary
+width 0 < η < 1 and define
+
+                                                 X                                               T
+                                                                                                 X
+            dεi (t) = |∆i (t) − ε|,   Ut (η) =          1{i ∈ Vt , dεi (t) > η},   UT (η) =            Ut (η).       (13)
+                                                 i∈At                                            t=1
+
+
+                                                          11
+An arm within the boundary band still requires a correct label whenever a label is issued; its
+unresolved time is simply exempt from the service loss. No assumption removes such arms from the
+model. The parameters have different roles: ε defines membership, η defines the precision at which
+unresolved time is charged, and a policy’s service precision will be denoted by ρ.
+   The main joint requirement at a fixed T is
+
+                             Eθ RT ≤ r,         Pθ {Elab , UT (η) ≤ a} ≥ 1 − δ.                     (14)
+
+It uses an expected reward cost and a joint high-probability reporting cost. It is stronger than
+control of per-arm errors, and differs from false discovery rate control. In particular, UT = o(T )
+requires the time-average number of unresolved separated arms to vanish. It does not merely require
+a small unresolved fraction among all arrived arms.
+    For a performance family Θ, write RΘ (a) for the infimum of supθ∈Θ Eθ RT over policies reliable
+on the full bounded model and satisfying the second condition of (14) for every θ ∈ Θ. The value
+is +∞ if no policy is feasible. The lower bounds remain valid if reliability is required only on the
+lower-bound subfamily.
+
+5.2   Lifetime checkpoints and reward selection
+For this construction, index arms by arrival order i = 1, 2, . . ., with a fixed order within each batch.
+This is an indexing convention, not an assumption about the reward laws. Choose 0 < ρ < 1 before
+observing rewards. For arm i, set
+
+                                                      2       4i(i + 1)
+                                                                       
+                                       qi (ρ) =         2
+                                                          log           .                           (15)
+                                                      ρ           δ
+
+Before this count is reached, its reporting interval is [0, 1]. Afterwards, the interval is permanently
+
+                             [ℓi , ui ] = [r̂i (qi ) − ρ/2, r̂i (qi ) + ρ/2] ∩ [0, 1].              (16)
+
+The interval uses a fixed potential prefix, even though its completion time is adaptive. Later
+observations continue to update the reward estimate. One can also prescribe different precisions ρi
+before observing the corresponding arms; selecting a favorable checkpoint from their realized data is
+not covered.
+    CP-UCB-AA uses the following physical-clock rule.
+   1. Admit current arrivals and append their checkpoints to a queue in arrival order. Initialize
+      their counts to zero.
+
+   2. At an even time step, if a checkpoint is incomplete, sample the first incomplete arm in the
+      queue. These are designated service pulls.
+
+
+
+
+                                                         12
+  3. At every other time step maximize, over all i ∈ At ,
+                                                                      s
+                                                                          3 log(2t)
+                                        Ji (t) = r̂i (Ni (t − 1)) +                  .                           (17)
+                                                                          Ni (t − 1)
+
+      Use +∞ for a zero count and break ties in arrival order.
+
+  4. Update the chosen arm’s lifetime count and reward sum. If the count first equals qi , construct
+     (16). Every observation contributes to checkpoint completion, including observations from
+     (17).
+
+  5. Set r∗ (t) = maxi∈At ℓi and r∗ (t) = maxi∈At ui , and report
+
+           Pt = {i : ℓi ≥ r∗ (t) − ε},        Nt = {i : ui < r∗ (t) − ε},                Vt = At \ (Pt ∪ Nt ).   (18)
+
+
+The intervals are nonempty on every sample path, so Pt and Nt cannot overlap. All arrived arms
+remain eligible for (17), including those in Nt . The method stores a count, sum, and reporting
+interval for every arm; it does not claim to reduce total arm storage. A direct index or report update
+costs O(Kt ) operations. The executable fixed-precision reference is supplied with the numerical
+code.
+
+Proposition 5.1 (Simultaneous reporting and unconditional reward cost). On the full bounded
+model, CP-UCB-AA satisfies P(Elab ) ≥ 1 − δ/2. If IT is its set of designated service time steps,
+then at every deterministic T ,
+                                                                                               
+                                                q                                X             
+                    ERT ≤ min T, KT + 4 3KT T log(2T ) + 1 + E                            ∆It (t) .              (19)
+                                                                                               
+                                                                                  t∈IT
+
+
+Pathwise, |IT | ≤
+                    P
+                        i≤KT qi .
+
+    Hoeffding’s inequality bounds the failure at checkpoint i by δ/{2i(i+1)}. Summing over potential
+arm indices gives one coverage event of probability at least 1 − δ/2, on which every report is correct.
+For (19), a separate, summable concentration argument at physical time t controls ordinary UCB
+pulls. Each arm and pre-pull count is charged at most once; inserted service observations only skip
+counts. This proof holds on all reporting paths and therefore incurs no omitted δT term. Complete
+proofs appear in the supplementary material.
+    This separate construction addresses the reporting objective and is not a reimplementation of
+the two-stage screening algorithm in Section 3. It has no prescribed terminal round, no delayed
+admission, and no restart that is completed artificially for analysis. The guarantees above concern
+CP-UCB-AA. The regret guarantee for UCB-AA is stated separately in Section 3.
+
+
+
+
+                                                        13
+6     The burden of continual certification
+6.1   One uncertain arrival can obstruct many reports
+The first lower bound retains one reward environment throughout the time axis. It therefore measures
+a cumulative burden without adding the worst cases of incompatible experiments. Fix 0 < ε ≤ 1/16,
+0 < δ ≤ 1/16, and 0 < η < ε/2. An initial reference has Bernoulli mean 1/4 + ε/2. Candidates arrive
+on any prescribed schedule. In environment zero each has mean p = 1/4; environment j changes
+only candidate j to mean p + 2ε. All candidates are good in environment zero, with boundary
+distance ε/2. After candidate j arrives in environment j, every other candidate is bad.
+    Let Mt count arrived candidates and at = Mt − Mt−1 . Define
+
+                    kl(1/4, δ)
+                                     
+           q− =                   ,                       Qt = (Qt−1 + q− at − 1)+ ,   Q0 = 0,
+                kl(1/4, 1/4 + 2ε)
+                  X
+           BT =         (Mt − 1)+ 1{Qt > 0}.                                                        (20)
+                  t≤T
+
+The queue is an information-capacity certificate: each arriving candidate requires q− units, while
+only one observation is possible per round. It is not the queue of any particular policy. In the stated
+range q− ≥ 2.
+Theorem 6.1 (Broadcast uncertainty). For every policy reliable on environment zero and all its
+one-candidate alternatives,
+                                E0 UT (η) ≥ (3/4 − δ)BT .
+
+If BT > 0, then
+                                          P0 {UT (η) ≥ BT /4} ≥ 1/4.
+
+These conclusions still hold when the policy knows the full arrival schedule, the horizon, and the
+reference distribution.
+    At a busy time, some deterministic candidate label has expected sample count below q− .
+Changing that candidate alone has too little history KL to permit positive certification of another
+candidate with probability at least 1/4. Reliability also bounds incorrect negative reports. The
+remaining probability must be unresolved. The same reference environment supports this argument
+at every time; the difficult label is selected from expected counts rather than from a favorable realized
+history. The supplementary proof includes the bounded-variable step needed for the probability
+statement.
+    If m candidates have arrived by time s, the queue obeys the deterministic inequality
+                        X                                  q−1
+                              (Mt − 1)+ 1{Qt (q) > 0} ≥        m(m − 1),        q ≥ 2.              (21)
+                      t≤s+qm−1
+                                                            2
+
+The factor m2 reflects the number of affected reports as well as the work needed to exclude high-
+quality alternatives. The subtraction of one unit in q − 1 accounts for the last observation of each
+busy period: reports are issued after service.
+
+                                                     14
+Corollary 6.2 (Arrival-growth boundary). Fix the preceding task parameters and one infinite
+arrival schedule. If a policy is reliable for every reward environment and has a deterministic envelope
+                                                                  √
+aT = o(T ) satisfying (14) in every environment, then Kt = o( t). Conversely, KT2 log(eKT ) = o(T )
+suffices for one horizon-free policy to have both ERT = o(T ) and such a sublinear area envelope. In
+particular, for Kt ≍ tα , 0 < α < 1, simultaneous attainment is possible if and only if α < 1/2.
+
+   The sufficiency follows from the next theorem. The exponent statement leaves a logarithmic
+                                                                √
+gap for general critical schedules. It does not identify Kt = o( t) as a sufficient condition on every
+schedule.
+
+6.2   Worst-schedule maintenance area
+Let AT,K be the smallest a attainable by a full-model reliable policy with
+
+                                                   c
+                                   sup    sup Pr {Elab or UT (η) > a} ≤ δ.
+                               τ :KT ≤K    r
+
+
+Policies may know T, K and the schedule for the lower bound. The upper bound uses neither T nor
+K as input.
+
+Theorem 6.3 (Worst-schedule area and joint attainability). For K ≥ 2, T ≥ 1, 0 < ε ≤ 1/8,
+0 < η ≤ ε/32, and 0 < δ ≤ 1/16,
+                           (                   )                     (              )
+                  −24          K2     K                                K2     K
+                 2      min KT, 2 log              ≤ AT,K ≤ 256 min KT, 2 log           .           (22)
+                               η      δ                                η      δ
+
+The CP policy with ρ = η/4 attains the upper order and also satisfies
+                                          q                                       
+                  ERT ≤ min T, K + 4 3KT log(2T ) + 1 + 99Kη −2 log(K/δ) .                          (23)
+
+    For the upper bound, completed checkpoints imply endpoint errors at most η/4, sufficient to
+classify all arms outside the boundary band. The unfinished-work queue is dominated by adding qi
+at each arrival and serving at even rounds. On the simultaneous coverage event,
+                                                                         
+                                                              X          
+                                   UT (η) ≤ min KT T, 2KT            qi       .                     (24)
+                                                                         
+                                                              i≤KT
+
+
+Additional UCB observations reduce the work; they are not charged again as new checkpoint samples.
+The lower bound uses K − 1 candidates with independent means 1/2 ± 2η and a reference of mean
+1/2 + ε, all available at the first pull. Simultaneous partial recovery and a horizon truncation give the
+probability statement required by the definition of AT,K . The statistical log K factor has fixed-arm
+multiple-testing precedents; the lower construction itself requires no repeated arrivals.
+    For fixed task parameters, (22) implies a precise uniform terminal-count statement: over all
+schedules with KT ≤ k(T ), sublinear expected regret and sublinear service envelopes are jointly
+attainable if and only if k(T )2 log k(T ) = o(T ). Here the worst schedule can change with T . On
+
+                                                       15
+a single fixed schedule that conclusion cannot be inferred from total growth alone. For example,
+batches of size                             √
+                                               sn
+                                                      
+                                                                  n
+                                 mn =              1/4
+                                                         , sn = 22 ,
+                                         (log sn )
+              √
+give Kt = o( t) but preclude any o(T ) area envelope uniform over reward environments. Near sn ,
+simultaneous classification of that burst requires accumulated unresolved area of order m2n log mn ,
+which exceeds sn by a growing factor. The supplementary argument selects a single infinite schedule;
+the difficult reward environment is allowed to vary with the endpoint, as required by the stated
+uniform guarantee.
+
+
+7     Temporary membership questions and their regret cost
+7.1   A repeated-update family
+We now keep the reward environment, arrival schedule, endpoint, and reporting parameters fixed
+when comparing two area budgets. Choose integers J ≥ 1, M ≥ max{2, J} and
+
+               0 < ε ≤ 1/8,    0 < δ ≤ 1/16,      Jv ≤ ε/4,   0 < d ≤ v/32,   η = d/2.         (25)
+
+At ae = 1 + eH, e = 0, . . . , J, a reference with mean be = 1/2 + ev arrives. For each e < J, the
+same batch contains M candidates with Bernoulli means
+
+                              re,k = be − ε + σe,k d,    σe,k ∈ {−1, +1}.                      (26)
+
+The last batch contains only its reference, and T = (J + 1)H. The family Θ includes every sign
+configuration and every within-batch permutation. The policy is not told which arm is the reference.
+Lower bounds may disclose those identities and the schedule. All arms remain available.
+   In its birth window a candidate is good exactly when its sign is positive. Its regret gap is
+approximately ε, but its distance to the membership boundary is d. At the next update both signs
+become bad, with boundary distance at least v − d. Every reference remains good. Thus the final
+good set consists only of references, regardless of all the candidate signs. The statistical tasks
+that distinguish the environments are temporarily relevant and can expire while their arms remain
+available.
+
+7.2   Area forces completion of enough temporary tasks
+The lower-bound ingredient permits arbitrary interleaving and stopping. For m independent uniform
+signs with observation laws Pi+ , Pi− , put
+
+                        κ = max max{D(Pi+ ∥Pi− ), D(Pi− ∥Pi+ )} ∈ (0, ∞).
+                                i
+
+
+
+
+                                                    16
+If a bounded stopping time has at least half the signs determined with prior probability at least
+1/2, and all configurations have familywise report error at most δ ≤ 1/16, then
+                                            m
+                                            X              m      m
+                                        E         Ni ≥         log .                                     (27)
+                                            i=1
+                                                         1024κ    δ
+
+Other observations must not encode these signs. The proof factors the posterior after the sampling
+and stopping kernels cancel, and combines a simultaneous recovery bound with coordinatewise
+change of measure (Kaufmann et al., 2016). It does not assert independence of the random sample
+counts. The logarithmic simultaneous-recovery scale is established statistical structure; its role here
+is to price partially completed, expiring tasks.
+    For clarity, a heterogeneous version gives an explicit lower allocation constraint. Let a compatible
+batch e have Me candidates, window length He , boundary distance de > η, and two-way KL bounded
+                               P
+by κe . Put we = Me He , V = e we . Define
+                                         
+                                         kl(1 − δ − u, δ),       u < 1 − 2δ,
+                              Φδ (u) =
+                                         0,                      u ≥ 1 − 2δ,
+                                  (                                                           )
+                                     (p − 2δ)+        m
+                                                                  
+                   gm,δ (p) = max 0,           log           − 1, Φδ (1 − p/2) .
+                                         2         4 log 2 +
+If a policy satisfies the joint area requirement with budget a, then
+
+                                                              X (ε − de )Me
+                      sup Eσ RT ≥              inf                            gMe ,δ (pe ).              (28)
+                        σ           P    0≤pe ≤1
+                                                       e               κe
+                                       w p ≥(1−δ)V −2a
+                                      e e e
+
+
+Here pe is the probability of determining at least half of batch e before its window ends. A window
+that never does so contributes at least we /2 area. This gives the constraint directly from the
+area success event, with its failure probability retained. The objective then uses (27) under one
+compatible product prior. The policy can choose where to defer; no separate requirement forces
+every window to finish. The relaxation need not be attainable in general.
+
+7.3   Reusable coarse evidence and a matched rapid endpoint
+                                                                                                  P
+CP-UCB-AA can use a predetermined precision ρe for each arriving batch. Let Se = i:τi =ae qi (ρe )
+be the total checkpoint work of batch e, and set M−1 = MJ = 0. In a heterogeneous repeated-update
+family, suppose
+
+         He ≥ 2Se ,     bJ − b0 ≤ ε/4,            de + ρe + ρe+1 < be+1 − be ,         2 max ρe ≤ ε/2.   (29)
+                                                                                              e
+
+These are conditions on the performance family, not future inputs supplied to the policy. Write
+F = {e < J : 2ρe < de }.
+
+Proposition 7.1 (Shared update from lifetime evidence). On the checkpoint coverage event, under
+
+                                                         17
+(29),
+                                X                 X                  J
+                                                                     X
+                     UT (η) ≤         Me He + 2         M e Se + 2       (e + 1 + Me−1 )Se .       (30)
+                                e∈F
+                                 /                e∈F                e=0
+
+When the next batch completes its checkpoints, every preceding-batch candidate can be excluded
+using its saved interval and the new reference lower bound, without another observation of that old
+candidate for certification.
+
+   The last term charges only temporarily affected references and the preceding candidate cohort,
+rather than all historical candidates at each update. The conclusion follows because the new
+lower bound exceeds every preceding candidate upper bound by more than ε. The condition
+He ≥ 2Se ensures that all its checkpoint observations occur in its birth window. The corresponding
+unconditional reward bound, including excess UCB pulls, is given in the supplement.
+   For the homogeneous family (25)–(26), set
+
+                                                   4K(K + 1)
+                K = J(M + 1) + 1,        LK = log            , ρf = d/4, ρc = v/8,
+                                                      δ
+          qf = ⌈32LK /d2 ⌉,     qc = ⌈128LK /v 2 ⌉, H = 128(M + J + 1)qf , V = JM H.               (31)
+
+The quantities qf , qc are uniform analysis bounds on the actual armwise quotas. Neither final arm
+count nor future times are policy inputs. Fine precision can be set from the task input as ρf = η/2;
+the coarse precision is a separate preselected configuration. Automatic adaptation to an unknown
+improvement scale is not asserted.
+
+Theorem 7.2 (Rapid and deferred maintenance at the same endpoint). On the preceding family
+and horizon,
+                             εJM       M                     εJM       M
+                        2−20 2 log        ≤ RΘ (V /8) ≤ 218 2 log .                             (32)
+                               d       δ                      d         δ
+The coarse-precision CP policy has joint label-and-area success probability at least 1 − δ with area
+budget 9V /8, and                                             !
+                                                   JM     J2
+                      sup Eθ RT ≤ 2εJM qc + 64          +       log(2T ) + 1.                   (33)
+                      θ∈Θ                           ε      v
+Consequently, at fixed legal J, M, ε, v, δ and d ↓ 0, with η = d/2 and the horizon in (31), RΘ (V /8) =
+Θ(d−2 ), whereas RΘ (9V /8) = O(log(1/d)).
+
+    For the lower bound, area at most V /8 forces half-completion in at least 3J/4 windows on
+success. Enough windows then require (27), and each candidate observation costs at least ε − d.
+Distinct batches’ samples are charged once. For the upper bound, (30) gives the appropriate area
+budgets. At the specified horizon the deterministic bound RT ≤ 2εT suffices for the rapid order;
+it would not justify the same conclusion at arbitrarily longer windows. The coarse bound instead
+counts checkpoint observations and excess ordinary UCB pulls separately.
+    The two budgets differ by a constant factor, but they allow different service levels. The theorem
+does not claim that the coarse policy meets the rapid budget, that its regret upper bound is matched,
+or that all intermediate budgets are characterized. A preselected mixture of fine and coarse batches
+
+                                                        18
+gives additional attainable points, as recorded in the supplement.
+
+7.4   A probability lower bound under the same area requirement
+An expectation lower bound alone could, in principle, reflect unusual sample paths. The following
+result gives a stronger conclusion without replacing the cumulative area requirement by deadlines.
+
+Theorem 7.3 (A nonvanishing probability of the rapid-maintenance cost). In the repeated-update
+family, suppose a reliable policy satisfies
+
+                                  Pσ {Elab , UT (η) ≤ V /8} ≥ 1 − δ
+
+for every sign configuration. Then one fixed configuration satisfies
+
+                                                    εJM     M            11
+                                                                
+                                Pσ RT ≥ 2−20          2
+                                                        log          ≥      .                    (34)
+                                                     d      δ            80
+
+   The proof stops each window at half-completion, its endpoint, or the first candidate sample
+beyond a fixed budget. Applying the partial-recovery lemma to this stopped experiment bounds the
+probability of a cheap completion by 1/2. Low total area requires many completions; a count of
+cheap completions then leaves enough expensive windows with probability at least 1/5 − δ ≥ 11/80.
+Their actual observations give (34). No independence between window-completion events is needed.
+Since 11/80 > δ, the rapid endpoint in (32) also has matching order when regret and area are
+bounded on one event of probability at least 1 − δ. The full stopping argument and a compatible
+multiple-window area truncation are proved in the supplement.
+
+
+8     Numerical studies
+8.1   The original two arrival scenarios
+We retain the original simulation designs and their three evaluation criteria: cumulative dynamic
+regret RT , wasted pulls
+                                              T
+                                              X
+                                       WT =         1{∆It (t) ≥ 0.1},
+                                              t=1
+
+and active-set size. The latter counts arms retained by an implementation; it does not by itself
+establish that every available arm has been evaluated. Both archived scenarios have T = 60,000 and
+100 independent replications.
+    The progressive step-up scenario starts with ten arms. Background arrivals occur with Bernoulli
+probability 0.005 per time step. Step arms arrive at t/T ∈ {0.3, 0.6, 0.9} with means min(1, 0.7 +
+0.05k), k = 1, 2, 3. The near-tied top-set scenario starts with twenty arms, including five arms drawn
+from Uniform(0.75, 0.90). Background arrivals again have probability 0.005, with probability 0.30 of
+being drawn from the near-optimal component. These are the archived configurations that generated
+the original figures; the supplied configuration files specify the remaining mixture components.
+
+
+                                                      19
+Table 1: Original archived experiments at T = 60,000 (100 replications per scenario and method).
+Entries are means with Monte Carlo standard errors in parentheses. Archived UCB-AA is the
+explore-then-commit implementation with M = 5 in C and M = 4 in E; these are not validation
+results for a repaired or continuously admitting implementation. Buffered arrivals excluded from
+the final active count were not necessarily screened or certified inferior.
+            Scenario   Method                          RT           WT (0.1)     Final active
+            C          Archived UCB-AA      5,139.9 (337.1)    8,225.2 (765.3)      3.2 (0.3)
+            C          Growing UCB1          9,347.2 (60.1)   16,378.0 (121.2)    318.4 (1.8)
+            C          Growing MOSS-t        2,036.7 (24.1)     3,331.0 (30.5)    318.4 (1.8)
+            C          Naive elimination   27,507.0 (198.2)   50,276.7 (395.6)      2.6 (0.1)
+            C          Dynamic SE          28,872.7 (107.6)   52,995.8 (141.9)     87.0 (2.1)
+            E          Archived UCB-AA       1,880.9 (78.9)    3,264.1 (127.5)      5.7 (0.2)
+            E          Growing UCB1          7,964.3 (37.9)   21,281.4 (225.8)    325.4 (1.8)
+            E          Growing MOSS-t        2,043.8 (20.3)     5,010.2 (55.6)    325.4 (1.8)
+            E          Naive elimination    5,433.4 (182.4)    9,436.1 (350.5)      5.9 (0.2)
+            E          Dynamic SE           25,152.2 (98.4)   46,331.8 (152.8)    133.2 (1.5)
+
+
+    The archived UCB-AA implementation uses M = 5 and M = 4 in the two scenarios, respectively,
+and N = e/∆   e 2 . It stops admission after the prescribed rounds and then exploits a fixed survivor
+                M
+pool. Its formal comparisons use incumbent references when present and empirical means from
+all observations. These details differ from the prefix-based, merged-reference procedure stated in
+Section 3. We therefore retain these results as observations about the archived implementation,
+rather than claiming that the repaired finite-budget procedure has been rerun.
+    The archived UCB-AA has mean regret 5139.94 in the step-up scenario, compared with 2036.72
+for Growing MOSS. In the near-tied scenario the corresponding means are 1880.88 and 2043.75. In
+both scenarios it improves mean regret and wasted pulls relative to the archived Growing UCB1,
+dynamic successive elimination, and no-pre-elimination implementations. Thus the favorable near-
+tied result is retained, as is the substantially worse step-up result against MOSS. A small survivor
+pool cannot be attributed entirely to statistical screening: some later arms were never admitted.
+The original six figures are retained in the supplement with this implementation qualification.
+    To evaluate the repaired UCB-AA procedure itself, the two original environments need a common
+implementation of the prefix means, merged references, budget truncation, and continued admission.
+Short-interval retained-history comparisons and best-arm-retention diagnostics are also needed.
+The reporting experiments below answer a different, additional question and do not replace that
+algorithm comparison.
+
+8.2   Finite-budget comparisons for reliable set maintenance
+We examine the cost of maintaining reliable reports at an actual sampling budget, including settings
+in which the conservative checkpoint construction is impractical. These comparisons assess finite-
+budget behavior of the reporting construction, not the two-stage UCB-AA procedure. The four
+environments are not the separated family used for the two-endpoint theorem, and the simulations
+do not test its asymptotic rates.
+
+                                                 20
+8.2.1   Protocol and competing rules
+
+All rewards are Bernoulli. We fix T = 20,000, ε = .30, η = .10, and δ = .05, with eight arms by the
+end of each run. There are 160 independent replications per environment. Within a replication,
+every method receives the same potential reward stream for each arm; its nth pull of arm i reveals
+the same Yi,n . Thus methods share the underlying observations without being forced to take the
+same actions. Arrivals occur before the action, reports follow the observation, and all methods
+retain previous observations. The full arrival times, means, seeds, and policy definitions are saved
+in a single configuration file.
+    The first environment has initial means .65, .50 and three later batches of inferior arms, so the
+benchmark remains constant. The second has four successive benchmark levels .45, .70, .90, .98;
+some earlier unresolved membership questions become obsolete when a better arm arrives. The
+third introduces six arms at one time, including a new best arm. The fourth ends arrivals at pull
+4037 and leaves nearly 16,000 further pulls for recovery. Noninitial batches occur 36 pulls after a
+100-pull admission grid, so the short-period baseline is not evaluated only at its most favorable
+alignment. No policy is given future arrivals, the means, or the evaluation horizon.
+    We implement CP-UCB-AA with FIFO service every second pull at two fixed precisions. The
+choice ρ = .04 satisfies 2ρ < η: on the coverage event, completing all checkpoints resolves every η-
+separated arm. The choice ρ = .12, inherited from the implementation supplied with the theoretical
+development, is a coarser engineering setting. Its labels remain reliable, but it need not resolve
+every arm counted by the η = .10 metric. We report these choices separately. With eight arms their
+total checkpoint quotas are 73,083 and 8,123 pulls, respectively. The finer setting therefore cannot
+complete all quotas within the chosen budget.
+    Three comparisons isolate the allocation rule while retaining the coarser checkpoint report: FIFO
+service every eighth pull, confidence-driven service every second pull, and full-history UCB without
+designated service pulls. Confidence-driven service samples the widest interval among unresolved
+arms and the arm with largest upper endpoint, breaking ties by sample count and then arrival order.
+It stops designated service when no report remains unresolved. A completed checkpoint retains its
+fixed interval.
+    We also use the full-prefix confidence report from the theory with three reward or sampling
+rules. UCB-prefix admits every arm immediately and uses the same full-history UCB index as
+CP-UCB-AA. Growing-MOSS uses the anytime index
+                                             s
+                                                 max{log(t/(Kt n)), 0}
+                                 r̂i (n) +                             ,
+                                                          n
+
+with infinite index at n = 0; no minimax property of the fixed-horizon MOSS algorithm is assumed
+for this extension. ALL-ε adaptation uses the confidence-driven service rule every second pull
+and UCB otherwise. It retains all history and can revise positive reports after arrivals. This is a
+natural adaptation of confidence-based all-good-arm sampling, not an implementation of FAREAST
+or (ST)2 . Finally, Batch100-UCB follows the reviewer’s proposed short-admission comparison: it
+admits waiting arms at pulls 1, 101, 201, . . ., uses UCB on the admitted reward-active arms, and
+
+                                                      21
+Table 2: Final cumulative dynamic regret and cumulative η-unresolved arm-time at T = 20,000.
+Entries are means (Monte Carlo standard errors), from 160 paired replications. Area is in units of
+103 . The two checkpoint precisions have different completeness guarantees.
+              Scenario                  Method                      Regret      Area / 103
+              Stable benchmark          CP-FIFO (ρ = .04)      1360.5 (1.5)   111.78 (0.00)
+                                        CP-FIFO (ρ = .12)      3629.9 (0.7)    49.72 (0.23)
+                                        UCB-prefix              441.7 (2.3)    83.97 (0.46)
+                                        Growing-MOSS             77.3 (0.8)    92.43 (0.00)
+                                        ALL-ε adapt.          1367.8 (11.6)    11.31 (0.09)
+                                        Batch100-UCB            209.3 (2.6)    85.27 (0.52)
+              Successive improvements   CP-FIFO (ρ = .04)      5297.4 (1.2)    74.82 (0.00)
+                                        CP-FIFO (ρ = .12)      1194.7 (0.0)    14.74 (0.10)
+                                        UCB-prefix              246.2 (1.7)    18.45 (0.14)
+                                        Growing-MOSS             53.1 (0.8)    33.65 (0.11)
+                                        ALL-ε adapt.           2905.8 (2.4)     9.53 (0.13)
+                                        Batch100-UCB            238.8 (2.1)    22.85 (0.09)
+              Burst                     CP-FIFO (ρ = .04)      2798.0 (1.6)    75.89 (0.00)
+                                        CP-FIFO (ρ = .12)      3392.2 (0.2)    28.21 (0.17)
+                                        UCB-prefix              354.1 (2.2)    41.75 (0.39)
+                                        Growing-MOSS             69.3 (0.9)    57.03 (0.01)
+                                        ALL-ε adapt.           2017.4 (9.8)    10.31 (0.09)
+                                        Batch100-UCB            278.9 (2.7)    55.87 (0.15)
+              Arrivals stop             CP-FIFO (ρ = .04)      4759.0 (1.3)    89.86 (0.00)
+                                        CP-FIFO (ρ = .12)      2645.9 (0.3)    25.14 (0.01)
+                                        UCB-prefix              248.8 (1.5)    45.96 (0.56)
+                                        Growing-MOSS             52.0 (0.6)    71.59 (0.01)
+                                        ALL-ε adapt.           3027.5 (4.3)    12.07 (0.07)
+                                        Batch100-UCB            214.2 (1.8)    55.28 (0.21)
+
+
+retires an arm from reward sampling when its upper bound falls below the largest active lower
+bound. It retains all observations. Its report covers all physically arrived arms, including those still
+waiting for admission, whose intervals are [0, 1].
+    Table 2 gives means and Monte Carlo standard errors. Figure 2 includes every method; error
+bars are 1.96 Monte Carlo standard errors. The released data also contain paired differences, all
+unresolved paths, service pulls, and the regret charged to service. The compiled implementation
+was checked against the original CP-UCB-AA choose/observe/report class for 20,000 successive
+rounds: actions, service indicators, every available-arm count, and every reported label agreed at
+each round.
+
+8.2.2   What the comparisons show
+
+In all 640 finer-checkpoint runs, every available arm remains unresolved at every time step. Five to
+eight arms are counted by the final η-unresolved metric because that metric exempts the boundary
+band; the remaining arms have not been classified. The resulting zero-error record therefore does
+not establish useful classification at this budget. Its charged unresolved area ranges from 74,820 to
+
+
+                                                  22
+                                               Stable benchmark                                                                    Successive improvements
+  Unresolved area (103)
+
+
+
+
+                                                                                              Unresolved area (103)
+                                  100
+                                                                                                                      60
+                                   75
+                                                                                                                      40
+                                   50
+
+                                   25                                                                                 20
+
+
+                                        0   1000         2000               3000                                           0   1000     2000      3000     4000      5000
+                                                       Regret                                                                                  Regret
+
+                                                       Burst                                                                              Arrivals stop
+          Unresolved area (103)
+
+
+
+
+                                                                                              Unresolved area (103)
+                                                                                                                      80
+                                   60
+                                                                                                                      60
+                                   40
+                                                                                                                      40
+
+                                   20                                                                                 20
+
+                                        0   1000           2000               3000                                         0   1000       2000      3000      4000
+                                                       Regret                                                                                Regret
+
+
+                                                   CP, precision 0.04                CP, period 8                              Growing MOSS
+                                                   CP, precision 0.12                UCB + checkpoint                          ALL-epsilon adaptation
+                                                   CP, confidence service            UCB + prefix                              Batch-100 UCB
+
+
+
+Figure 2: Regret and cumulative η-unresolved area for all nine methods. Lower values on both
+axes are preferable. Error bars quantify Monte Carlo uncertainty, not uncertainty in the theoretical
+reliability statement. Neither checkpoint precision nor its allocation variants uniformly dominate
+the confidence-based adaptation.
+
+
+111,784. This is an observable limitation of the conservative construction, rather than evidence that
+arrivals are intrinsically unmanageable at this budget. The confidence-based adaptation resolves all
+η-separated arms by the end in every replication of these four environments.
+    The coarser checkpoints reduce area substantially relative to UCB alone, but can incur much
+larger regret. Under a stable benchmark, CP-FIFO has mean regret 3629.9 and area 49,718,
+compared with 1367.8 and 11,306 for ALL-ε adaptation. The paired differences, CP-FIFO minus
+the adaptation, are 2262.1 (standard error 11.7) for regret and 38,411.7 (standard error 241.9) for
+area. The adaptation also improves both quantities in the burst environment. These comparisons
+do not support a general numerical advantage of checkpoint FIFO over a strong history-retaining
+identification rule.
+    In the successive-improvement environment, CP-FIFO instead occupies a different cost point:
+regret 1194.7 and area 14,743, compared with 2905.8 and 9525 for the confidence-based adaptation.
+Here the paired regret difference is −1711.0 (standard error 2.4), while the area difference is 5217.7
+(standard error 141.1). These points do not isolate the benefit of task expiration. The adaptation
+
+
+                                                                                         23
+                                           Stable benchmark                                                 Successive improvements
+
+                                                                                       5000
+             3000
+                                                                                       4000
+
+                                                                                       3000
+  Regret
+
+
+
+
+             2000
+
+                                                                                       2000
+             1000
+                                                                                       1000
+
+                               0                                                          0
+
+                               8                                                          6
+
+                                                                                          5
+           η-unresolved arms
+
+
+
+
+                               6
+                                                                                          4
+
+                               4                                                          3
+
+                                                                                          2
+                               2
+                                                                                          1
+
+                               0                                                          0
+                                   0   5           10             15             20            0            5             10             15   20
+                                           Physical pulls (103)                                                   Physical pulls (103)
+
+
+
+                                                            CP, precision 0.04           Growing MOSS
+                                                            CP, precision 0.12           ALL-epsilon adaptation
+                                                            UCB + prefix                 Batch-100 UCB
+
+
+
+Figure 3: Mean regret and mean η-unresolved arm counts at the physical sampling clock. Bands
+are 1.96 Monte Carlo standard errors; vertical dotted lines mark arrivals. Stable and improving
+benchmarks are shown here; the other environments appear in the supplement. The main six
+methods are displayed; all nine methods and all sampled paths are retained in the released results.
+
+
+uses all 10,000 designated service pulls in this environment, while coarse CP uses about 5,786; some
+remaining questions lie inside the unpenalized boundary band. The lower regret may therefore
+partly reflect a different stopping rule for reporting work. A comparison with the same boundary
+tolerance and service requirement is needed to distinguish the mechanisms. These observations do
+not estimate an optimal frontier.
+    Growing-MOSS has the smallest mean regret in all four environments, between 52.0 and 77.3,
+while leaving substantially larger unresolved areas. Low regret therefore provides little evidence
+of timely set maintenance. Conversely, the explicit service rules pay for observations of inferior
+arms. Reducing service from every second to every eighth pull generally reduces regret and enlarges
+unresolved area. Replacing FIFO by the confidence-driven checkpoint allocation does not uniformly
+improve either criterion; allocation and the report’s precision both matter.
+    For Batch100-UCB we additionally record the exact decomposition into within-active regret,
+
+
+                                                                                  24
+admission delay, and loss from previous reward retirement. Its admission-delay contributions are 0,
+33.92, 16.00, and 22.40 in the four environments. No historical-retirement deficit occurred in these
+runs. The largest discrepancy between total regret and the sum of the three recorded components
+was below 3.1 × 10−12 . The corresponding admission and retirement terms are identically zero for
+the methods that admit every arm immediately and retain every arm for reward selection. This
+accounting avoids attributing every loss outside within-active learning to arrival delay.
+    There were no incorrect positive or negative reports in any of the 5760 runs. For one fixed
+environment and method, zero failures in 160 replications gives a one-sided 95% upper confidence
+bound of 0.0186 on its failure probability. This finite set of diagnostics does not establish the
+uniform, all-environment reliability guarantee. Nor do these small eight-arm experiments validate
+the asymptotic lower bounds, resolve the critical logarithmic gap, or establish checkpoint optimality.
+They show the practical cost of the conservative quotas and the importance of comparing retained-
+history methods under both regret and maintenance criteria.
+
+
+9    Discussion
+We studied stochastic multi-armed bandits with arriving arms, where the available action set
+expands and performance is measured against the best currently available arm. Arrival information
+discrepancy and a drifting benchmark create repeated learning costs even though every arm has
+a stationary reward law. The two-stage UCB-AA design addresses the information imbalance by
+screening arrivals before full competition with incumbents. The revised regret account separates
+learning, admission delay, and loss of an earlier admitted benchmark. Its finite-budget guarantee is
+conditional on the stated calibration and retains the admission-delay term explicitly.
+     The additional maintenance analysis makes precise a statistical question that the original active-
+set comparison left open. A smaller internal set does not establish reliable knowledge of the complete
+near-optimal set. One uncertain arrival can obstruct many earlier certifications, and a drifting
+benchmark can make difficult unresolved questions expire. The broadcast and repeated-update
+results characterize costs arising from these two effects. Their assumptions, including the restricted
+update family and the different allowed area budgets, are part of the conclusions. The worst area
+lower bound already occurs in a static initial batch; the temporary-task results supply a separate
+dynamic mechanism.
+     UCB-AA and CP-UCB-AA serve different purposes in this analysis. The former retains the
+original screening architecture. The latter is a constructive reporting rule whose service precision
+is fixed in advance and whose unconditional reward analysis does not require correct reports. Its
+conservative checkpoints may be ineffective at moderate budgets, and its numerical cost is not
+uniformly competitive. Neither a negative report nor a smaller reported set is treated as a reduction
+in total storage.
+     The supplement supplies full proofs of the quantile lower bound in Section 7 and the compatible-
+window truncation result. It also gives eventual exact classification by a separate revisable mul-
+tiresolution construction when arrivals stop, the final arm count is finite, and no arm lies on the
+
+
+                                                  25
+membership boundary. That conclusion does not apply to fixed-precision checkpoints.
+    The general frontier under overlapping arrivals, automatic precision selection, and a matching
+converse for deferred maintenance remain open. The archived UCB-AA study also leaves a concrete
+empirical obligation: the repaired procedure must be compared under the same admission and
+retained-history rules before attributing a numerical gain to pre-elimination. Contextual information,
+delayed feedback, and post-arrival reward drift remain natural extensions of the original MAB-AA
+formulation.
+
+
+Data and code availability
+No original empirical or human-subject outcome data were collected. The original simulation
+configurations, endpoint records, source snapshots, and figures are preserved separately from the
+new reporting experiments. The release contains the 5,760 reporting runs, their fixed configuration,
+code, and checks. The oncology illustration is the historical motivation from the original submission,
+based on public approval records.
+
+
+References
+Peter Auer and Ronald Ortner. Ucb revisited: Improved regret bounds for the stochastic
+  multi-armed bandit problem. Periodica Mathematica Hungarica, 61:55 – 65, 2010. doi:
+  10.1007/s10998-010-3055-6. URL https://www.akjournals.com/view/journals/10998/61/
+  1-2/article-p55.xml.
+
+Peter Auer, Pratik Gajane, and Ronald Ortner. Adaptively tracking the best bandit arm with an
+  unknown number of distribution changes. In Proceedings of the 32nd Conference on Learning
+ Theory, volume 99 of Proceedings of Machine Learning Research, pages 138–158, 2019. URL
+  https://proceedings.mlr.press/v99/auer19a.html.
+
+Maryam Aziz, Emilie Kaufmann, and Marie-Karelle Riviere. On multi-armed bandit designs for
+ dose-finding clinical trials. Journal of Machine Learning Research, 22:686–723, 2021. ISSN
+ 1532-4435.
+
+Donald A. Berry and Bert Fristedt. Bandit Problems: Sequential Allocation of Experiments.
+ Chapman and Hall, London, 1985.
+
+Donald A. Berry, Robert W. Chen, Alan Zame, David C. Heath, and Larry A. Shepp. Bandit
+ problems with infinitely many arms. The Annals of Statistics, 25:2103 – 2116, 1997. doi:
+ 10.1214/aos/1069362389. URL https://doi.org/10.1214/aos/1069362389.
+
+Omar Besbes, Yonatan Gur, and Assaf Zeevi. Stochastic multi-armed-bandit problem with non-
+ stationary rewards. In Proceedings of the 28th International Conference on Neural Information
+ Processing Systems, volume 1 of NIPS’14, page 199–207, 2014.
+
+
+
+                                                 26
+Apostolos N. Burnetas and Michael N. Katehakis. Optimal adaptive policies for sequential allocation
+ problems. Advances in Applied Mathematics, 17:122–142, 1996. ISSN 0196-8858. doi: https:
+ //doi.org/10.1006/aama.1996.0007. URL https://www.sciencedirect.com/science/article/
+ pii/S019688589690007X.
+
+Changxiao Cai, T. Tony Cai, and Hongzhe Li. Transfer learning for contextual multi-armed
+ bandits. The Annals of Statistics, 52:207 – 232, 2024. doi: 10.1214/23-AOS2341. URL https:
+ //doi.org/10.1214/23-AOS2341.
+
+Deepayan Chakrabarti, Ravi Kumar, Filip Radlinski, and Eli Upfal. Mortal multi-armed bandits.
+ In Proceedings of the 22nd International Conference on Neural Information Processing Systems,
+ NIPS’08, page 273–280, 2008. ISBN 9781605609492.
+
+Brian M. Cho, Dominik Meier, Kyra Gan, and Nathan Kallus. Reward maximization for pure
+  exploration: minimax optimal good arm identification for nonparametric multi-armed bandits. In
+  Proceedings of the 28th International Conference on Artificial Intelligence and Statistics, volume
+  258 of Proceedings of Machine Learning Research, pages 2251–2259, 2025.
+
+Rémy Degenne, Thomas Nedelec, Clément Calauzènes, and Vianney Perchet. Bridging the gap
+  between regret minimization and best arm identification, with application to A/B tests. In
+ Proceedings of the 22nd International Conference on Artificial Intelligence and Statistics, volume 89
+  of Proceedings of Machine Learning Research, pages 1988–1996, 2019.
+
+Eyal Even-Dar, Shie Mannor, and Yishay Mansour. Action elimination and stopping conditions
+  for the multi-armed bandit and reinforcement learning problems. Journal of Machine Learning
+ Research, 7:1079–1105, 2006. URL http://jmlr.org/papers/v7/evendar06a.html.
+
+Ganesh Ghalme, Swapnil Dhamal, Shweta Jain, Sujit Gujar, and Y. Narahari. Ballooning multi-
+ armed bandits. Artificial Intelligence, 296:103485, 2021. doi: 10.1016/j.artint.2021.103485.
+
+J. C. Gittins. Bandit processes and dynamic allocation indices. Journal of the Royal Statistical
+  Society: Series B (Methodological), 41:148–164, 1979. ISSN 0035-9246. doi: 10.1111/j.2517-6161.
+  1979.tb01068.x. URL https://doi.org/10.1111/j.2517-6161.1979.tb01068.x.
+
+Emilie Kaufmann, Olivier Cappé, and Aurélien Garivier. On the complexity of best-arm identification
+ in multi-armed bandit models. Journal of Machine Learning Research, 17(1):1–42, 2016.
+
+Robert Kleinberg, Alexandru Niculescu-Mizil, and Yogeshwer Sharma. Regret bounds for sleeping
+  experts and bandits. Machine Learning, 80:245–272, 2010.
+
+T.L Lai and Herbert Robbins. Asymptotically efficient adaptive allocation rules. Advances in Applied
+  Mathematics, 6:4–22, 1985. ISSN 0196-8858. doi: https://doi.org/10.1016/0196-8858(85)90002-8.
+  URL https://www.sciencedirect.com/science/article/pii/0196885885900028.
+
+
+
+
+                                                 27
+Tze Leung Lai. Adaptive Treatment Allocation and the Multi-Armed Bandit Problem. The Annals
+  of Statistics, 15:1091 – 1114, 1987. doi: 10.1214/aos/1176350495. URL https://doi.org/10.
+  1214/aos/1176350495.
+
+Blake Mason, Lalit Jain, Ardhendu Tripathy, and Robert Nowak. Finding all ε-good arms in
+  stochastic bandits. In Advances in Neural Information Processing Systems, volume 33, 2020.
+
+Vianney Perchet and Philippe Rigollet. The multi-armed bandit problem with covariates. The
+  Annals of Statistics, 41:693 – 721, 2013. doi: 10.1214/13-AOS1101. URL https://doi.org/10.
+  1214/13-AOS1101.
+
+Wei Qian and Yuhong Yang. Randomized allocation with arm elimination in a bandit problem with
+ covariates. Electronic Journal of Statistics, 10:242 – 270, 2016. doi: 10.1214/15-EJS1104. URL
+ https://doi.org/10.1214/15-EJS1104.
+
+Wei Qian, Ching-Kang Ing, and Ji Liu. Adaptive algorithm for multi-armed bandit problem with high-
+ dimensional covariates. Journal of the American Statistical Association, 119:970–982, 2024. doi:
+ 10.1080/01621459.2022.2152343. URL https://doi.org/10.1080/01621459.2022.2152343.
+
+Philippe Rigollet and Assaf Zeevi. Nonparametric bandits with covariates. In Proceedings of the
+ 23rd Annual Conference on Learning Theory (COLT), Proceedings of Machine Learning Research,
+  pages 54–66, 2010. ISBN 9780982252925.
+
+Herbert Robbins. Some aspects of the sequential design of experiments. Bulletin of the American
+ Mathematical Society, 58:527 – 535, 1952.
+
+U.S. Food and Drug Administration. Drug approvals and databases, 2025. URL https://www.fda.
+  gov/drugs/development-approval-process-drugs/drug-approvals-and-databases.
+
+Sofía S. Villar, James Wason, and Jack Bowden. Response-adaptive randomization for multi-arm
+  clinical trials using the forward looking gittins index rule. Biometrics, 71:969–978, 2015. ISSN
+  0006-341X. doi: 10.1111/biom.12337. URL https://doi.org/10.1111/biom.12337.
+
+L. J. Wei and S. Durham. The randomized play-the-winner rule in medical trials. Journal of the
+  American Statistical Association, 73:840–843, 1978. doi: 10.1080/01621459.1978.10480109. URL
+  https://www.tandfonline.com/doi/abs/10.1080/01621459.1978.10480109.
+
+S. Faye Williamson and Sofía S. Villar. A response-adaptive randomization procedure for multi-
+  armed clinical trials with normally distributed outcomes. Biometrics, 76:197–209, 2020. ISSN
+  0006-341X. doi: 10.1111/biom.13119. URL https://doi.org/10.1111/biom.13119.
+
+Michael Woodroofe. A one-armed bandit problem with a concomitant variable. Journal of the
+ American Statistical Association, 74:799–806, 1979. doi: 10.1080/01621459.1979.10481033. URL
+ https://www.tandfonline.com/doi/abs/10.1080/01621459.1979.10481033.
+
+Junwen Yang, Vincent Y. F. Tan, and Tianyuan Jin. Best arm identification with minimal regret.
+  Journal of Machine Learning Research, 27(86):1–41, 2026.
+
+                                               28
+Yuhong Yang and Dan Zhu. Randomized Allocation with nonparametric estimation for a multi-
+  armed bandit problem with covariates. The Annals of Statistics, 30:100 – 121, 2002. doi:
+ 10.1214/aos/1015362186. URL https://doi.org/10.1214/aos/1015362186.
+
+M. Zelen. Play the winner rule and the controlled clinical trial. Journal of the Ameri-
+ can Statistical Association, 64:131–146, 1969. doi: 10.1080/01621459.1969.10500959. URL
+ https://www.tandfonline.com/doi/abs/10.1080/01621459.1969.10500959.
+
+
+
+
+                                           29
+

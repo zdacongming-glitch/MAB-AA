@@ -1,0 +1,509 @@
+{
+  "stage": "development3",
+  "created_utc": "2026-10-16T16:48:33.349169+00:00",
+  "scenarios": [
+    {
+      "name": "dev_sparse",
+      "arrivals": [
+        1,
+        1,
+        2701,
+        6401
+      ],
+      "means": [
+        0.72,
+        0.43,
+        0.17,
+        0.59
+      ],
+      "epsilon": 0.2,
+      "eta": 0.05,
+      "delta": 0.05,
+      "T": 10000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "dev_records",
+      "arrivals": [
+        1,
+        1,
+        2801,
+        2801,
+        2801,
+        6701,
+        6701,
+        6701
+      ],
+      "means": [
+        0.39,
+        0.13,
+        0.66,
+        0.41,
+        0.49,
+        0.92,
+        0.69,
+        0.81
+      ],
+      "epsilon": 0.2,
+      "eta": 0.05,
+      "delta": 0.05,
+      "T": 10000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "dev_boundary",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        4701,
+        4701,
+        4701
+      ],
+      "means": [
+        0.76,
+        0.53,
+        0.58,
+        0.68,
+        0.17,
+        0.55,
+        0.62,
+        0.33
+      ],
+      "epsilon": 0.2,
+      "eta": 0.035,
+      "delta": 0.05,
+      "T": 10000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "dev_ties",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        5101,
+        5101,
+        5101,
+        5101
+      ],
+      "means": [
+        0.58,
+        0.575,
+        0.55,
+        0.525,
+        0.49,
+        0.595,
+        0.54,
+        0.52,
+        0.43
+      ],
+      "epsilon": 0.1,
+      "eta": 0.025,
+      "delta": 0.05,
+      "T": 10000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "dev_lowvar",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        3401,
+        3401,
+        3401,
+        7801,
+        7801,
+        7801
+      ],
+      "means": [
+        0.69,
+        0.63,
+        0.53,
+        0.38,
+        0.78,
+        0.68,
+        0.57,
+        0.82,
+        0.76,
+        0.66
+      ],
+      "epsilon": 0.2,
+      "eta": 0.05,
+      "delta": 0.05,
+      "T": 10000,
+      "kind": "two_point"
+    },
+    {
+      "name": "dev2_rare",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        5001,
+        5001,
+        5001
+      ],
+      "means": [
+        0.045,
+        0.035,
+        0.02,
+        0.015,
+        0.06,
+        0.04,
+        0.025
+      ],
+      "epsilon": 0.025,
+      "eta": 0.0075,
+      "delta": 0.05,
+      "T": 10000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "dev2_ceiling",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        4901,
+        4901,
+        4901
+      ],
+      "means": [
+        0.99,
+        0.98,
+        0.95,
+        0.81,
+        0.995,
+        0.96,
+        0.91
+      ],
+      "epsilon": 0.04,
+      "eta": 0.01,
+      "delta": 0.05,
+      "T": 10000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "dev2_close_two",
+      "arrivals": [
+        1,
+        1
+      ],
+      "means": [
+        0.48,
+        0.52
+      ],
+      "epsilon": 0.03,
+      "eta": 0.01,
+      "delta": 0.05,
+      "T": 10000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "dev2_reverse_two",
+      "arrivals": [
+        1,
+        1
+      ],
+      "means": [
+        0.52,
+        0.48
+      ],
+      "epsilon": 0.03,
+      "eta": 0.01,
+      "delta": 0.05,
+      "T": 10000,
+      "kind": "bernoulli"
+    },
+    {
+      "name": "dev3_tinygap",
+      "arrivals": [
+        1,
+        1
+      ],
+      "means": [
+        0.5,
+        0.51
+      ],
+      "epsilon": 0.025,
+      "eta": 0.005,
+      "delta": 0.05,
+      "T": 16000,
+      "kind": "bernoulli"
+    }
+  ],
+  "policies": [
+    {
+      "name": "TS",
+      "core": 3,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": null,
+      "beta_s": null,
+      "temperature": 1.0,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "MC-MOSS",
+      "core": 2,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": null,
+      "beta_s": null,
+      "temperature": 1.0,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "Growing-MOSS",
+      "core": 1,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": null,
+      "beta_s": null,
+      "temperature": 1.0,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "UCB1",
+      "core": 10,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": null,
+      "beta_s": null,
+      "temperature": 1.0,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "TS-cold",
+      "core": 3,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": null,
+      "beta_s": null,
+      "temperature": 0.5,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "F-R-cold16",
+      "core": 3,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": 16.0,
+      "beta_s": null,
+      "temperature": 0.5,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "Warm11-temp0.4-guardNone",
+      "core": 11,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": null,
+      "beta_s": null,
+      "temperature": 0.4,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "Warm11-temp0.4-guard16.0",
+      "core": 11,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": 16.0,
+      "beta_s": null,
+      "temperature": 0.4,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "Warm11-temp0.5-guardNone",
+      "core": 11,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": null,
+      "beta_s": null,
+      "temperature": 0.5,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "Warm11-temp0.5-guard16.0",
+      "core": 11,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": 16.0,
+      "beta_s": null,
+      "temperature": 0.5,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "Warm11-temp0.65-guardNone",
+      "core": 11,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": null,
+      "beta_s": null,
+      "temperature": 0.65,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "Warm11-temp0.65-guard16.0",
+      "core": 11,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": 16.0,
+      "beta_s": null,
+      "temperature": 0.65,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "Warm12-temp0.4-guardNone",
+      "core": 12,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": null,
+      "beta_s": null,
+      "temperature": 0.4,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "Warm12-temp0.4-guard16.0",
+      "core": 12,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": 16.0,
+      "beta_s": null,
+      "temperature": 0.4,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "Warm12-temp0.5-guardNone",
+      "core": 12,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": null,
+      "beta_s": null,
+      "temperature": 0.5,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "Warm12-temp0.5-guard16.0",
+      "core": 12,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": 16.0,
+      "beta_s": null,
+      "temperature": 0.5,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "Warm12-temp0.65-guardNone",
+      "core": 12,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": null,
+      "beta_s": null,
+      "temperature": 0.65,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "Warm12-temp0.65-guard16.0",
+      "core": 12,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": 16.0,
+      "beta_s": null,
+      "temperature": 0.65,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    }
+  ],
+  "reps": 32,
+  "reward_seed": 104110100,
+  "policy_seed": 104120100,
+  "hashes": {
+    "ccp_primitives.py": "e3fbf8194b1b7559db6c60a1cff0d12c79c229034fe77aaf1dc3e89b58c4769f",
+    "flexible_engine.py": "453c22588b64e53de6cc32d103af98468fa31e61ba46acadc655aa27e03b88c4",
+    "flexible_v2.py": "4b3f895b0e6352fd660283bc75b1e2e5bb90eb5268ef627c23386862b416dac7",
+    "study.py": "3bee6bd6aef59e4db7907703bc70e520a376f69f6c70fce424fe3c59546230f8",
+    "study_v2.py": "d44fdf6dc836d9f8511d0c2ae423e2ac1d5a7817b60b653910e8ae4b191a2924"
+  },
+  "notes": "Two disjoint optimism-gap ledgers; pure reference samplers unchanged. Frozen before all runs in this stage. Boundary truth tolerances only in evaluation."
+}

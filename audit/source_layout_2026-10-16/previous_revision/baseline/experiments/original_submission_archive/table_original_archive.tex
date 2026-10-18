@@ -1,0 +1,24 @@
+% Recomputed from archived raw_final.csv; no new simulation was run.
+\begin{table}[tbp]
+\centering
+\small
+\caption{Original archived experiments at $T=60{,}000$ (100 replications per scenario and method). Entries are means with Monte Carlo standard errors in parentheses. Archived UCB-AA is the explore-then-commit implementation with $M=5$ in C and $M=4$ in E; these are not validation results for a repaired or continuously admitting implementation. Buffered arrivals excluded from the final active count were not necessarily screened or certified inferior.}
+\label{tab:original-archive}
+\begin{tabular}{llrrr}
+\toprule
+Scenario & Method & $R_T$ & $W_T$ ($0.1$) & Final active \\
+\midrule
+C & Archived UCB-AA & 5,139.9 (337.1) & 8,225.2 (765.3) & 3.2 (0.3) \\
+C & Growing UCB1 & 9,347.2 (60.1) & 16,378.0 (121.2) & 318.4 (1.8) \\
+C & Growing MOSS-t & 2,036.7 (24.1) & 3,331.0 (30.5) & 318.4 (1.8) \\
+C & Naive elimination & 27,507.0 (198.2) & 50,276.7 (395.6) & 2.6 (0.1) \\
+C & Dynamic SE & 28,872.7 (107.6) & 52,995.8 (141.9) & 87.0 (2.1) \\
+\addlinespace
+E & Archived UCB-AA & 1,880.9 (78.9) & 3,264.1 (127.5) & 5.7 (0.2) \\
+E & Growing UCB1 & 7,964.3 (37.9) & 21,281.4 (225.8) & 325.4 (1.8) \\
+E & Growing MOSS-t & 2,043.8 (20.3) & 5,010.2 (55.6) & 325.4 (1.8) \\
+E & Naive elimination & 5,433.4 (182.4) & 9,436.1 (350.5) & 5.9 (0.2) \\
+E & Dynamic SE & 25,152.2 (98.4) & 46,331.8 (152.8) & 133.2 (1.5) \\
+\bottomrule
+\end{tabular}
+\end{table}

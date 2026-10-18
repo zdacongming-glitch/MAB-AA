@@ -1,0 +1,467 @@
+                Reducing Exploration of Dying Arms in Mortal Bandits
+
+
+
+
+            Stefano Tracà                          Cynthia Rudin                          Weiyu Yan
+ Massachusetts Institute of Technology              Duke University                      Duke University
+         stet@alum.mit.edu                        cynthia@cs.duke.edu                  weiyu.yan@duke.edu
+
+
+
+
+                       Abstract                               to be valuable in the setting of advertising (see Agar-
+                                                              wal et al. [2009] and Féraud and Urvoy [2012]) and in
+                                                              other areas such as communications underlaying cellular
+     Mortal bandits have proven to be extremely
+                                                              networks (see Maghsudi and Stańczak [2015]). Bnaya
+     useful for providing news article recommen-
+                                                              et al. [2013] propose an adaptation to the mortal settings
+     dations, running automated online advertising
+                                                              of the popular UCB algorithm introduced by Auer et al.
+     campaigns, and for other applications where
+                                                              [2002]. While these algorithms are designed to adapt ex-
+     the set of available options changes over time.
+                                                              ploration based on when arms appear, they do not adapt
+     Previous work on this problem showed how to
+                                                              when arms disappear (for example, in the work of Bnaya
+     regulate exploration of new arms when they
+                                                              et al. [2013], new arms are immediately played, even for
+     have recently appeared, but they do not adapt
+                                                              arms that may soon die, which could be a poor strategy).
+     when the arms are about to disappear. Since in
+                                                              In strategic implementations of mortal bandits, we should
+     most applications we can determine either ex-
+                                                              not be exploring arms that are soon going to disappear.
+     actly or approximately when arms will disap-
+     pear, we can leverage this information to im-            In the applications discussed above (advertising, news ar-
+     prove performance: we should not be explor-              ticle recommendation, website optimization) and others,
+     ing arms that are about to disappear. We pro-            we often know in advance when arms will appear or dis-
+     vide adaptations of algorithms, regret bounds,           appear. For coupons and discount sales, we launch them
+     and experiments for this study, showing a                for known periods of time (e.g., a one day sale), whereas
+     clear benefit from regulating greed (explo-              for news articles, we could choose to place them in a
+     ration/exploitation) for arms that will soon dis-        pool of possible featured articles for mobile devices for
+     appear. We illustrate numerical performance              one day or one week. If the lifespans of the arms are
+     on the Yahoo! Front Page Today Module User               not known, they can often be estimated. For instance, we
+     Click Log Dataset.                                       can observe the distribution of the lifespans of the arms
+     Keywords: Multi-armed bandit, exploration-               to determine when an arm is old relative to other arms.
+     exploitation trade-off, retail management, rec-          Alternatively, external features can be used to estimate
+     ommender systems, regret bounds.                         the remaining lifespan of an arm.
+                                                              This work provides algorithms for the mortal bandit set-
+                                                              ting that reduce exploration for dying arms. In Section 2
+1   INTRODUCTION                                              we introduce two algorithms: the AG-L algorithm (adap-
+                                                              tive greedy with life regulation) and the UCB-L algo-
+In many applications of multi-armed bandits, the bandits      rithm (UCB mortal with life regulation). We present fi-
+are mortal, meaning that they do not exist for the full pe-   nite time regret bounds (proofs are in the Supplement1 )
+riod over which the algorithm is running. In advertising,     and intuition on the meaning of the bounds. In Section 3
+ads and coupons can come and go; in news article rec-         we discuss numerical performance on the publicly avail-
+ommendation, the news is perpetually changing; in web-        able Yahoo! Front Page Today Module User Click Log
+site optimization, the content changes to keep viewers           1
+                                                                 The Supplement is available in the GitHub repository:
+interested. Chakrabarti et al. [2009] introduced and for-     https://github.com/5tefan0/Supplement-
+malized the notion of mortal bandits, and there has been      to-Reducing-Exploration-of-Dying-Arms-
+a body of work following this. This work has proved           in-Mortal-Bandits
+Dataset. The experiments show a clear benefit in final               arm available at that turn). For the rest of the game (t ∈
+rewards when the algorithms reduce exploration of arms               {mI + 1, · · · , n}), the algorithm incurs ∆j,i∗t regret at
+that are about to expire. This confirms the intuition that           time t only when arm j is available S       (j ∈ Mt ) and it is
+                                                                                                                   n
+it is useless to gain information about arms if they are             pulled (t ∈ I(j)). Let us call M = t=1 Mt the set of
+going to disappear soon anyway.                                      all arms that appear during the game and Lj = {sj , sj +
+                                                                     1, · · · , lj } the set of turns that arm j is available. Then,
+2    ALGORITHMS FOR REGULATING                                       we can also write (2) as
+     EXPLORATION OVER ARM LIFE
+                                                                                     X             X X
+                                                                          Rn =            ∆j,i∗j +            ∆j,i∗t 1{t∈I(j)} . (3)
+                                                                                j∈MI           j∈M t∈Lj
+Formally, the mortal stochastic multi-armed bandit prob-                                           t>mI
+lem is a game played in n rounds. At each round t the                Depending on the algorithm used, one formulation may
+algorithm chooses an action It among a finite set Mt of              be more convenient than the other when computing a
+possible choices called arms (for example, they could be             bound on the expected cumulative regret E[Rn ]. A com-
+ads shown on a website, recommended videos and arti-                 plete list of the symbols used throughout the paper can
+cles, or prices). When arm j ∈ Mt is played, a random                be found in Supplement E.
+reward Xj (t) is drawn from an unknown distribution.
+The distribution of Xj (t) does not change with time (the
+                                                                     2.1   THE ADAPTIVE GREEDY WITH LIFE
+index t is used to indicate in which turn the reward was
+                                                                           REGULATION (AG-L) ALGORITHM
+drawn) and it is bounded in [a, b] (and we denote with r
+the range r = b − a), while the set Mt can change: arms              In Algorithm 1 we extend the adaptive greedy algorithm
+may become unavailable (they “die”) or new arms may                  (which we abbreviate with AG) presented in Chakrabarti
+arrive (they “are born”). At each turn, the player suffers a         et al. [2009]. We call this new algorithm the adaptive
+possible regret from not having played the best arm: the             greedy with life regulation algorithm, which we abbrevi-
+mean regret for having played arm j at turn t is given by            ate with AG-L. AG-L handles rewards bounded in [a, b],
+∆j,i∗t = µi∗t − µj , where µi∗t is the mean reward of the            and regulates exploration based on the remaining life of
+best arm available at turn t (indicated by i∗t ) and µj is the       the arms (that is, the algorithm avoids exploring arms
+mean reward obtained when playing arm j. Let us call                 that are going to disappear soon). During the initializa-
+I(j) the set of turns during which the algorithm chose               tion phase, the algorithm plays each arm in the initial-
+arm j. At the end of each turn the algorithm updates the             ization pool MI once. After that, to determine whether
+estimate of the mean reward of arm j:                                to explore arms, AG-L draws from a Bernoulli random
+                                  Tj (t−1)                           variable with parameter
+                            1       X
+              X̂j =                        Xj (s),            (1)
+                       Tj (t − 1)                                                              maxj∈Mt X̂j − a
+                                   s∈I(j)                                           p=1−                       ,
+                                                                                                   b−a
+where Tj (t − 1) is the number of times arm j has been
+                                                                     which intuitively means that if the algorithm has a good
+played before round t starts.
+                                                                     available arm (i.e., an arm that has a high mean estimate)
+Let us define Mt as the set of all available arms at turn t          the probability of exploration is very low and the algo-
+(M1 is the starting set of arms). MI = {1, 2, . . . , mI } ⊂         rithm will exploit by playing the best available arm so
+M1 , MI 6= ∅ is the set of arms that are initialized over the        far (ignoring also arms that were excluded in the initial-
+first mI iterations (i.e., the algorithm plays one time all          ization phase or have been born and never played). If
+of them following the order of their index). The quantity            the value of the Bernoulli random variable is 1, then AG-
+that a policy tries to minimize is the cumulative regret             L proceeds by playing an arm at random among those
+Rn that is given by                                                  arms whose remaining life is long enough: we call this
+                              n
+                                                                     set Mt (L). One way to set Mt (L) is to pick all arms in
+           X                  X      X                               Mt such that their remaining lifespan is in the top 30%
+    Rn =          ∆j,i∗j +                  ∆j,i∗t 1{t∈I(j)} , (2)
+                             t=mI +1 j∈Mt
+                                                                     of the distribution of all remaining lifespans (we chose
+           j∈MI
+                                                                     30% because we tuned this parameter by trying differ-
+where 1{t∈I(j)} is an indicator function equal to 1 if arm           ent values on a small subset of data). Mt (L) can also
+j is played at time t (otherwise its value is 0). The first          contain arms that have never been played before or that
+summation in (2) is the regret that the algorithm suffers            were excluded in the initialization phase. As mentioned
+during the initialization phase when each arm in MI is               earlier, if the value of the Bernoulli random variable is 0,
+pulled once yielding a regret of ∆j,i∗j (the arms in MI              then AG-L exploits the arm that has the highest average
+are played in order of their index and i∗j denotes the best          reward.
+Algorithm 1: AG-L algorithm                                     where the matrix has a total of mk rows (and columns),
+Input         : number of rounds n, initialization set of       f1 (x), · · · , fmk (x) and F1 (x), · · · , Fmk (x) are the
+                arms MI , set Mt of available arms at           PDFs (or PMFs) of the distributions of the average re-
+                time, rewards range [a, b]                      wards (which we can compute knowing the distribution
+Initialization: play all arms in MI once, and initialize        from which rewards are drawn). For each h, we indicate
+                X̂j for each j = 1, · · · , mI                  how many times arm j has been pulled up to time k with
+for t = mI + 1 to n do                                                                              k
+    Draw a Bernoulli B r.v. with parameter
+                                                                                                    X
+                                                                      tj (h, k) = 1{j∈MI } +                  1{is0 ∈I(j)} .
+                                                                                                  s0 =mI +1
+                            maxj∈Mt X̂j − a
+                   p=1−                     ;
+                                b−a                             Similarly to when we defined the regret, let us call
+                                                                ∆(i, is ) = µi − µis . Then, consider the following quan-
+    if B = 1 then                                               tities (see Supplement A for how to compute them given
+        Play an arm at random from Mt (L);                      the mean rewards):
+        else
+            Play an arm j with highest X̂j ;                      • us (h, is ) is an upper bound on the probability
+        end                                                         that arm is is considered to be the best arm at
+   end                                                              time s given the history of pulls (according to h)
+   Get reward Xj (t);                                               up to time s − 1:
+   Update X̂j ;                                                                          Y             
+                                                                                                            ti (h, s)∆(i, is )2
+                                                                                                                                
+end                                                                  us (h, is )   =              exp − s
+                                                                                       i:µi >µis
+                                                                                                                     2r
+
+                                                                                                   ti (h, s)∆(i, is )2
+                                                                                                                      
+                                                                                       + exp −                            ,
+                                                                                                            2r
+Note that this algorithm is not relevant to sleeping ban-
+dits (see Kleinberg et al. [2010] and Kanade et al. [2009])          where range of rewards r is defined as r = b − a.
+because those arms do not die, they simply sleep. For
+sleeping bandits, we would want to explore them until             • Uk (h, ik ) is an upper bound on the probability
+they fall asleep because the estimate of the arm’s mean             that arm ik would be pulled at time k given the
+reward would still be useful when the arm wakes up                  history of pulls (according to h) up to time k − 1:
+again.                                                              When k < t, then Uk (h, ik ) =
+
+In order to derive a finite time regret bound we introduce            R1 p                                         
+                                                                        0   mk 1{bk =1} + (1 − p)uk (h, ik )1{bk =0} ×
+Ht−1 as the set of all possible histories (after determin-
+istic initialization) of the game up to turn t − 1:                                      fM (h,k) (g(p)) dp,                    (4)
+
+                                                                     and when k = t, then Ut (h, it ) =
+                                              
+                    bmI +1 bmI +2 . . . bt−1
+Ht−1 = h =                                        such that
+                     imI +1 imI +2 . . . it−1                        Z 1                           
+                                                                             p
+  bs ∈ {0, 1}, is ∈ Ms , ∀s ∈ {mI + 1, . . . , t − 1}} .                        + (1 − p)ut (h, it ) fM (h,t) (g(p)) dp. (5)
+                                                                      0      mt
+Each element h of Ht−1 is a possible history of pulls
+before turn t and tells exactly what arm was pulled and           • Ut (h, j) is an upper bound on the probability
+if it was an exploration turn or an exploitation turn. If           that arm j would be pulled at time t given the
+bs = 1 we say that the algorithm explored at time s, if             history of pulls (according to h) up to time t − 1:
+bs = 0 we say that the algorithm exploited at time s,
+while is is the index of the arm that was played at time             Ut (h, j) =                                       (6)
+s. Let us define the linear transformation g(p) = b +                  Z 1                          
+(a−b)p (used to standardize rewards to the interval [0, 1])                    p
+and use a result from Vaughan and Venables [1972] for                              + (1 − p)ut (h, j) fM (h,t) (g(p)) dp.
+                                                                         0     m t
+the PDF (or PMF) fM (h,s) (g(p)) of the maximum of the
+estimated mean rewards at time s given that each arm has
+been pulled according to history h up to time s − 1:            In standard regret bounds, the bound is usually in terms
+                                                                of the mean rewards µj and ∆j for each arm j, which
+                                F (x)
+                                    1       ...    Fmk (x)    are not known in the application. Our bounds analo-
+                     1           ..       ..        ..        gously depend on the µj ’s and ∆(i, is )’s (where is is
+                                               .
+                                                           
+fM (h,k) (x) =             perm  .                   .   
+                 (mt − 1)!      
+                                   F1 (x)   ...    Fmk (x)
+                                                              the arm played at time s, and i is another arm with
+                                   f1 (x)   ...    fmk (x)      higher mean reward). While standard bounds usually
+have a simple dependence on µj ’s, our bounds have a          during exploration turns and the other during exploitation
+more complicated dependence on the µj ’s. On the other        turns):
+hand, they depend on the same quantities as the standard
+bounds; once we have the µj terms, the bound can be             • 1/ms (recall that ms is the number of arms avail-
+computed using the same information that is available in          able at turn s): this is a constant appearing during
+the standard bounds. For instance us (h, is ), Us (h, is ),       exploration phases (when bs = 1).
+and Ut (h, j) do not require any additional information
+other than the µj ’s.                                           • us (h, is ): this is a product of negative exponentials
+                                                                  that decreases quickly, becoming smaller than 1/ms
+Theorem 2.1 presents a finite time upper bound on the             after enough pulls on arm is . It appears during ex-
+regret for the AG-L algorithm (Supplement A has the               ploitation turns (when bs = 0).
+proof).
+                                                              The two terms are mutually exclusive, and the AG algo-
+    Theorem 2.1. The bound on the mean regret                 rithm that explores more often will have the term 1/ms
+    E[Rn ] at time n is given by                              appear more often in the integrand of Equation (4). A
+                                                              larger integrand will yield a larger regret bound.
+      E[Rn ]
+         X                  n
+                            X          X                      Conversely, the AG-L algorithm considers only the set
+      ≤      ∆j,i∗j +                        ∆j,i∗t × (7)     Mt (L) of arms with long life, and the term 1/ms will ap-
+         j∈MI           t=mI +1 j∈Mt (L)                      pear less often than the smaller quantity us (h, is ), yield-
+        X                     t−1
+                              Y
+                                               !              ing a smaller regret bound.
+                Ut (h, j)             Us (h, is ) .   (8)     Algorithms with smaller regret bounds generally lead to
+      h∈Ht−1                s=mI +1
+                                                              smaller regrets in practice. We will show how this is re-
+                                                              alized in the experiments later.
+The standard case, when there is no exploration regula-       We can see the bound’s intuition by restating Theorem
+tion based on remaining arms life, can be recovered by        2.1 with dependence on the 1/ms and us (h, is ) terms
+setting Mt (L) = Mt . (This is the case where we are not      notated explicitly:
+excluding arms that are about to disappear). In that stan-
+dard case, Theorem 2.1 is a novel finite time regret bound
+                                                                  Theorem 2.2. The bound on the mean regret
+for the standard AG algorithm introduced by Chakrabarti           E[Rn ] at time n is given by
+et al. [2009].
+                                                                                              n
+The first summation in (7) represents the total mean re-
+                                                                                              X         X
+                                                                  E[Rn ] ≤ O(1) +                                ∆j,i∗t ×
+gret suffered during the initialization phase. Intuitively,                                 t=mI +1 j∈Mt (L)
+it is the summation of the mean regrets ∆j,i∗t for hav-             X             
+                                                                                      1         1
+                                                                                                                                     
+ing pulled an arm j that is in the initialization set MI =                    F          ,··· ,    , u1 (h, i1 ), · · · , ut (h, it ) ,
+                                                                                      m1        mt
+                                                                  h∈Ht−1
+{1, 2, . . . , mI }. The second triple summation in (7) and
+(8) represents the total mean regret suffered after the           where
+initialization phase. Intuitively, it is the summation of                                                                      
+all the mean regrets ∆j,i∗t for having pulled an arm j                        1         1
+                                                                      F          ,··· ,    , u1 (h, i1 ), · · · , ut (h, it )
+weighted by the bound on the probability of pulling arm                       m1        mt
+j (the term that appears in (8)). The bound on the prob-                                    t−1
+                                                                                            Y
+ability of pulling arm j is computed by considering all                = Ut (h, j)                 Us (h, is )
+                                                                                         s=mI +1
+possible histories of pulls up to turn t − 1 (hence the
+summation over Ht−1 ). For each history h in the sum,             is an increasing function of all its arguments.
+the bound of choosing arm j at time t is given by mul-
+tiplying the bound Ut (h, j) on the probability of pulling
+arm j at turn t given h with the bound on the probabil-       Intuitively, u1 (h, i1 ), · · · , ut (h, it ) are smaller than
+                                                               1           1
+ity of that particular history h (given by the product of     m1 , · · · , mt since they decrease at a fast rate (they are
+Us (h, is ) up to turn t − 1).                                products of negative exponentials). By regulating explo-
+                                                              ration on arms that live longer, the bound of Algorithm
+To intuitively see why this regret bound is better than       1 presents the smaller terms more times than the larger
+the one that arises from the standard AG policy, we look      ones, yielding an overall better expected regret. Reduc-
+at the quantities in Equation (4). The integrand has two      ing exploration on dying arms tends not to impact the
+main terms that are mutually exclusive (i.e., one appears     other reward terms unless the dying arms have signif-
+icantly better rewards than the long-lived arms, which       algorithm, the arm with the highest upper confidence
+generally is not the case in real applications.              bound above the estimated mean is played. In this new
+                                                             version, the upper confidence bound has been modified
+A thought experiment with good and bad arms. Let
+                                                             so that it can be used in the mortal setting. It gradually
+us conduct a thought experiment to provide intuition for
+                                                             shrinks the estimated UCB as the life of the arm comes to
+why it is beneficial to limit exploration only among arms
+                                                             an end. Exploration is thus encouraged only on arms that
+with short remaining life. Consider two different stan-
+                                                             have a long lifespan. In this way, arms that are close to
+dard games, where arms are always available: the first
+                                                             expiring are played only if their estimated mean is high.
+with 100 arms, and the second with 10 arms. The quality
+                                                             Let sj and lj be the first and last turn at which arm j is
+of the arms come from the same distribution, for exam-
+                                                             available, and let ψ(j, t) be a function proportional to the
+ple we know that 30% of the arms have high expected
+                                                             remaining life of arm j, which decreases over time. An
+rewards, and 70% have instead low expected rewards.
+                                                             example for ψ(j, t) is c log(lj − t + 1), where c is a pos-
+The probability of picking a bad arm at random is the
+                                                             itive constant (note that ψ(j, t) approaches zero as the
+same in both games. However, one of these games is
+                                                             game gets closer to the expiration of arm j). New arms
+much more difficult than the other one in practice: in the
+                                                             are initialized by using the average performance of past
+10-arm game, we can allocate more pulls to each arm,
+                                                             arms (i.e., if in the past, many bad arms appeared, new
+and thus it is much easier to determine when an arm is
+                                                             arms are considered more likely to be bad), and their up-
+bad based on its mean reward estimate. For the 10-arm
+                                                             per confidence bound is built as if they have been played
+game, the algorithm will explore less (the term 1/ms will
+                                                             once. We abbreviate this algorithm by UCB-L.
+appear less often) than in the 100-arm game, and thus
+the 10-arm game will have better bounds on the prob-         Theorem 2.3 presents a finite time regret bound for the
+ability of playing suboptimal arms (the terms us (h, is )    UCB-L algorithm (proof in Supplement B).
+decrease more quickly). Thus, it is easier to play the
+standard game with fewer arms.                                                             S Ej z
+                                                                 Theorem 2.3. Let z=1             Lj be a partition of Lj
+When there is a mixture of long-lived and short-lived            into epochs with different best available arm, szj
+arms, AG-L may (in essence) reduce the full game to              and ljz be the first and last step of epoch Lzj , and
+a smaller, easier one that considers only the long-lived         for each epoch let uj,z be defined as
+arms.                                                                                          &                       '
+                                                                                                 8ψ(j, t) log(t − sj )
+In real applications, at each time, we expect there to be           uj,z =     max                                       ,
+a mixture of arms with short remaining life and long re-                    t∈{szj ,··· ,ljz }           ∆2j,z
+maining life. Intuitively, AG-L would reduce the game to
+an easier game by playing (among approximately good              where
+arms) mainly the long-lived arms.                                               ∆j,z = ∆j,i∗t for t ∈ Lzj .
+                                                                 Then, the bound on the mean regret E[Rn ] at time
+Algorithm 2: UCB-L algorithm                                     n is given by
+Input         : number of rounds n, initialization set of        E[Rn ]
+                arms MI , set Mt of available arms at              ≤
+                                                                          X
+                                                                                 ∆j,i∗j
+                time, rewards range [a, b]                                j∈MI
+Initialization: play all arms in MI once, and initialize                    Ej
+                X̂j for each j = 1, · · · , mI
+                                                                          X X
+                                                                   +                  ∆j,z min ljz − szj , uj,z
+for t = mI + 1 to n do                      q                             j∈M z=1
+                                            2 log(t−sj )                      X
+      Play arm with highest X̂j + ψ(j, t)     Tj (t−1) ;                  +          (t − si∗t )(t − sj − uj,z + 1)
+   Get reward Xj (t);                                                         t∈Lz
+                                                                                 j
+                                                                              t>mI
+   Update X̂j ;                                                            h
+                                                                                     − 4 ψ(j,t)              − 4 ψ(i∗ ,t)
+                                                                                                                          i
+                                                                          × (t − sj ) r2        + (t − si∗t ) r2 t           .
+end
+
+                                                                                    P
+                                                             The first summation j∈MI ∆j,i∗j is the regret suffered
+2.2    THE MORTAL UCB WITH LIFE                              during the initialization phase (the arms in MI are played
+       REGULATION ALGORITHM (UCB-L)                          in order of their index and i∗j denotes the best arm avail-
+                                                             able at that turn). Intuitively, uj,z is the number of pulls
+Algorithm 2 extends the UCB algorithm of Auer et al.         required to be able to distinguish arm j from the best arm
+[2002] to handle life regulation. In the standard UCB        in epoch z. In the second double summation, the mean
+                                                               be found in Supplement D.
+Table 1: extracted dataframe from the original text record
+  timestamp           id       clicked number of arms          For ad serving or article serving in practice, the AG-
+ 1317513291 id-560620             0              26            L and UCB-L algorithms would be told when arti-
+ 1317513291 id-565648             0              26            cles/advertisements/coupons are scheduled to appear and
+ 1317513291 id-563115             0              26            expire. Accordingly, we provided the algorithms with the
+ 1317513292 id-552077             0              26            beginning and end of life for each arm.
+ 1317513292 id-564335             0              26            Separately, we consider the case where we do not have
+                                                               the life of each arm in advance. In that case, we add a
+                                                               step to the algorithms, which estimates the lifespan of
+regret for pulling arm j is multiplied by the minimum
+                                                               new arms by the mean lifespan of expired arms.
+between the epoch length and the upper bound on the
+probability that the arms appears to be the best available     In order to obtain a distribution for performance (rather
+one. This upper bound is a combination of the proba-           than a single performance measurement), we ran the AG
+bility that we are either underestimating the best arm in      and AG-L algorithms many times to plot the distribu-
+epoch z or we are overestimating arm j (see Supplement         tion of rewards. The AG and AG-L algorithms are non-
+B for more details). If the game is such that no new arms      deterministic, since they choose arms randomly from the
+are born during the game and all arms expire after turn        candidates with enough remaining life. On the other
+n, then this regret bound reduces to the standard UCB          hand, UCB and UCB-L algorithms are deterministic be-
+bound (see Auer et al. [2002]).                                cause they always pick the arm with the best upper confi-
+                                                               dence bound. Running UCB and UCB-L many times on
+                                                               the same dataset will always give the same result. There-
+3   EXPERIMENTS ON Yahoo! NEWS                                 fore, to obtain a distribution for performance, we ran
+    ARTICLE RECOMMENDATION                                     UCB and UCB-L for different sliding windows of time
+                                                               (i.e., we started the algorithms at many different points in
+We tested the performance the new AG-L and UCB-                time), which explains the multi-modal shape of UCB-L
+L algorithms versus the standard AG and UCB algo-              rewards distribution in Figure 2.
+rithms using the dataset from the Yahoo! Webscope pro-
+gram. The dataset consists of a stream of recommenda-          Figures 1 and 2 show the empirical distribution of re-
+tion events that display articles randomly to users. At        wards for the algorithms. Each algorithm played 100
+each time, the dataset contains information on the action      games with 100000 turns per game. Each game con-
+taken (which is the article shown to the human viewing         sumed millions of data rows, because many actions could
+articles on Yahoo!), the outcome of that action (click or      not be evaluated, as discussed above (they did not match
+no click), the candidate arm pool at that time (the set        the action shown to the Yahoo! user at that time).
+of articles available) and the associated timestamp. We        The algorithms with life-regulation dramatically outper-
+preprocessed the original text file into a structured data     form the standard ones. Among AG-Ls, knowing the ex-
+frame (see an extract of the data frame in Table 1).           act lifespan of each article (rather than using an estimated
+In each game, the algorithms are tested on the same data.      lifespan) improves performance. This result would have
+The recommender algorithms play for a fixed number of          been obvious in retrospect: more information given to
+turns. We record the accumulated rewards of each algo-         the algorithm allows it to make better decisions.
+rithm.                                                         The AG-L strategy adopted here was part of a high-
+At each time, a reward can be calculated only when the         scoring entry of one of the Exploration-Exploitation
+article that was displayed to the human user matches the       competitions. The entry scored second place, with a
+action of the algorithm. (We do not know the outcome of        score that was not statistically significantly different
+actions not recorded in the dataset.) This means rewards       from the first place entry. In this competition, AG-L
+can only be calculated at a fraction of times that the algo-   was one of two key strategies contributing to the high
+rithm is playing. Therefore, while still playing the same      score. Both key strategies were based on incorporat-
+number of turns, some algorithms will have more evalu-         ing time series information about article behavior, which
+ations than others. In particular, an algorithm can be un-     added more strategic value than other types of informa-
+lucky, in that most of its actions are discarded by chance.    tion available during the competition.
+However, when the dataset was constructed, articles were
+shown uniformly at random to the human user, and over-
+all, the difference between the number of evaluations per
+algorithm is small. More details on the experiment can
+                                                          4   CONCLUSIONS
+
+                                                          In this work, we have shown that it is possible to leverage
+                                                          knowledge about the lifetimes of the arms to improve the
+                                                          quality of exploration and exploitation in mortal multi-
+                                                          armed bandits. Our algorithms focus on exploring the
+                                                          arms that will be available longer, leading to substan-
+                                                          tially increased rewards. In cases where we do not know
+                                                          the lifetimes of the arms but can estimate them, these
+                                                          techniques are still able to substantially increase rewards.
+                                                          We have presented novel finite time regret bounds and
+                                                          numerical experiments on the publicly available Yahoo!
+                                                          Webscope Program Dataset that show the benefit of re-
+                                                          ducing exploration on arms that are about to disappear
+                                                          soon.
+
+                                                          References
+                                                          Deepak Agarwal, Bee-Chung Chen, and Pradheep
+Figure 1: AG’s playing the game 100 times. Randomness       Elango. Explore/exploit schemes for web content op-
+arises from the AG algorithms.                              timization. In Ninth IEEE International Conference
+                                                            on Data Mining (ICDM), pages 1–10, 2009.
+                                                          Peter Auer, Nicolo Cesa-Bianchi, and Paul Fischer.
+                                                            Finite-time analysis of the multiarmed bandit problem.
+                                                            Machine learning, 47(2-3):235–256, 2002.
+                                                          Zahy Bnaya, Rami Puzis, Roni Stern, and Ariel Felner.
+                                                            Volatile multi-armed bandits for guaranteed targeted
+                                                            social crawling. In AAAI (Late-Breaking Develop-
+                                                            ments), 2013.
+                                                          Deepayan Chakrabarti, Ravi Kumar, Filip Radlinski, and
+                                                            Eli Upfal. Mortal multi-armed bandits. In Advances
+                                                            in Neural Information Processing Systems, pages 273–
+                                                            280, 2009.
+                                                          Raphaël Féraud and Tanguy Urvoy. A stochastic bandit
+                                                            algorithm for scratch games. In JMLR: Workshop and
+                                                            Conference Proceedings, Asian Conference on Ma-
+                                                            chine Learning, volume 25, pages 129–143, 2012.
+                                                          Varun Kanade, H Brendan McMahan, and Brent Bryan.
+                                                            Sleeping experts and bandits with stochastic action
+                                                            availability and adversarial rewards. 2009.
+                                                          Robert Kleinberg, Alexandru Niculescu-Mizil, and Yo-
+                                                            geshwer Sharma. Regret bounds for sleeping ex-
+                                                            perts and bandits. Machine learning, 80(2-3):245–
+                                                            272, 2010.
+Figure 2: UCB’s playing a set of 100 slightly different
+games. Randomness arises not from the algorithms but      Setareh Maghsudi and Slawomir Stańczak. On channel
+from random starting time.                                  selection for energy-constrained rateless-coded d2d
+                                                            communications. In Proc. 23rd European Signal Pro-
+                                                            cessing Conference (EUSIPCO), pages 1028–1032.
+                                                            IEEE, 2015.
+                                                          R. J. Vaughan and W. N. Venables. Permanent expres-
+                                                            sions for order statistic densities. Journal of the Royal
+Statistical Society. Series B (Methodological), 34(2):
+308–310, 1972.
+

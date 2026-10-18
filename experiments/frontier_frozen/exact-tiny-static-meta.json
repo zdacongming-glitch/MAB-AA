@@ -1,0 +1,7 @@
+{
+  "T": 8,
+  "epsilon": 0.8,
+  "eta": 0.05,
+  "delta": 0.1,
+  "arrival": 1
+}

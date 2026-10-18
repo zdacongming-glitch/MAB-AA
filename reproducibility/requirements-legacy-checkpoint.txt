@@ -1,0 +1,2 @@
+# Recorded legacy checkpoint experiment environment: Python 3.11.7 on Windows.
+-r ../experiments/requirements.txt

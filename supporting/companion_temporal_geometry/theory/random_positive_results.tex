@@ -1,0 +1,383 @@
+\section{A positive characterization for fixed batch templates}
+\label{sec:random-positive-proofs}
+
+The logarithmic separation in Section~\ref{sec:random-schedule-separation}
+does not preclude a distribution-dependent characterization on a more
+restricted class. We now fix the identities and relative timing of
+finitely many batches, while allowing their common time scale to have
+an arbitrary finite distribution. The constants below depend on the
+fixed template. In particular, the result is not a characterization
+uniform in a growing number of arms or batches.
+
+Let $B_1,\ldots,B_b$ be disjoint nonempty sets of non-anchor arms. Fix
+numbers $\alpha_1>\cdots>\alpha_b=1$ and a law $Q$ supported on finitely
+many positive integers. Assume $\alpha_j h$ is an integer for every
+$h\in\operatorname{supp}(Q)$ and every $j$. For a known integer endpoint
+$T\ge\alpha_1\max\operatorname{supp}(Q)$, draw $H\sim Q$ independently
+of all reward streams and policy randomization, and set
+\begin{equation}
+ \tau_j(H)=T-\alpha_jH+1,\qquad i\in B_j.
+ \label{eq:stretch-arrivals}
+\end{equation}
+Only the anchor is available before $\tau_1(H)$. Each arriving arm
+remains available. Put
+\[
+ k_j=1+\sum_{r\le j}|B_r|,\qquad K=k_b,\qquad
+ d_j=\begin{cases}\alpha_j-\alpha_{j+1},&j<b,\\1,&j=b.\end{cases}
+\]
+Thus the interval from batch $j$ through the round before batch $j+1$
+has exactly $d_jH$ rounds. Each such length is a positive integer.
+The reward laws are arbitrary independent stationary distributions on
+$[0,1]$, and are fixed before $H$ is drawn. The policy knows the
+template, $T$, and $Q$, and observes the arrivals causally. Let
+$\mathcal Q_{T,Q,\boldsymbol\alpha,\boldsymbol B}$ denote the resulting
+law of complete schedules. This information class is distinct from
+that used for the anytime MC-MOSS guarantee.
+
+Define the truncated-lifetime complexity
+\begin{equation}
+ W(Q)=\sup_{x\ge1}\frac{\EE_Q\min\{H,x\}}{\sqrt{x}}.
+ \label{eq:stretch-complexity}
+\end{equation}
+It is specified directly by the arrival law, with no optimization over
+bandit policies or reward environments.
+
+\begin{theorem}[A fixed-template random-arrival characterization]
+\label{thm:random-positive}
+Under the preceding assumptions,
+\begin{equation}
+ \frac{W(Q)}{32}
+ \le \cR_T^{\mathrm{joint}}
+       (\mathcal Q_{T,Q,\boldsymbol\alpha,\boldsymbol B})
+ \le A_{\boldsymbol\alpha,\boldsymbol B}W(Q),
+ \qquad
+ A_{\boldsymbol\alpha,\boldsymbol B}
+ =\sum_{j=1}^b(20k_j+43)(k_j-1)\sqrt{d_j}.
+ \label{eq:stretch-minimax}
+\end{equation}
+The upper bound is attained by the following causal rule. Play the
+anchor until the first batch arrives; its arrival reveals
+$H=(T-\tau_1+1)/\alpha_1$. At the start of each batch interval, reset
+all empirical statistics and run fixed-horizon MOSS on the $k_j$
+available arms for its known length $d_jH$.
+This rule uses the endpoint and template, but need not know the
+mixing probabilities in $Q$.
+
+The complexity can be computed by a finite maximization:
+\begin{equation}
+ W(Q)=\max_{h\in\operatorname{supp}(Q)}
+            \frac{\EE_Q\min\{H,h\}}{\sqrt h}.
+ \label{eq:stretch-finite}
+\end{equation}
+Moreover, with
+$V(Q)=\max_{h\in\operatorname{supp}(Q)}\sqrt h\,\PP_Q(H\ge h)$,
+\begin{equation}
+ V(Q)\le W(Q)\le2V(Q).
+ \label{eq:stretch-tail}
+\end{equation}
+\end{theorem}
+
+The rule in the theorem is an existence construction for a known
+endpoint and a fixed template. It is not MC-MOSS, and the theorem does
+not assert that retaining history is unnecessary for the original
+problem. Here the regret of every interval is charged explicitly;
+discarding its predecessor's observations merely gives a convenient
+upper bound. The lower bound permits the policy to use all previous
+observations and even the entire realized schedule.
+
+We first establish three ingredients. The first is a deliberately
+loose fixed-arm consequence of the MOSS index of
+\citet{audibert2009minimax}. We prove the exact bound used here rather
+than infer it from a distribution-free statement.
+
+\begin{lemma}[A per-arm fixed-horizon bound]
+\label{lem:stretch-local-gap}
+Run fixed-horizon MOSS for $n\ge1$ rounds on $k\ge2$ independent
+stationary $[0,1]$ arms, with all statistics initially zero. An
+unobserved arm has index $+\infty$; after $r\ge1$ observations its
+index is
+\[
+ \widehat\mu_{i,r}
+       +\sqrt{\frac{\log_+(n/(kr))}{r}}.
+\]
+Use any fixed deterministic tie rule. If arm $i$ has gap
+$\Delta_i=\mu^*-\mu_i>0$, its expected regret contribution satisfies
+\begin{equation}
+ \Delta_i\EE N_i(n)
+ \le \min\left\{n\Delta_i,
+   \frac{20k+10+16\log_+(n\Delta_i^2)}{\Delta_i}\right\}.
+ \label{eq:stretch-local-gap}
+\end{equation}
+An optimal arm has zero regret contribution. The statement remains
+valid when $n<k$, when some arms are never initialized, and when the
+optimal arm is not unique.
+\end{lemma}
+
+\begin{proof}
+Fix one optimal arm and put $v=n/k$. For its potential sample stream,
+let
+\[
+ Z=\sup_{r\ge1}\left[
+       \mu^*-\widehat\mu_{*,r}
+       -\sqrt{\log_+(v/r)/r}\right]_+.
+\]
+Lemma~\ref{lem:Z} yields
+$\PP(Z\ge x)\le\min\{1,5/(vx^2)\}$ for $x>0$.
+Write $\Delta=\Delta_i$. On $\{Z\ge\Delta/2\}$, bounding the
+contribution of arm $i$ by $n\Delta$ gives at most $20k/\Delta$ in
+expectation. Its initial pull costs at most $\Delta\le1/\Delta$.
+On the complementary event, choosing an observed suboptimal arm
+implies that the fixed optimal arm has been observed, since otherwise
+an unobserved arm would have infinite index. Index comparison gives
+\[
+ (\widehat\mu_{i,r}-\mu_i)_+
+       +\sqrt{\log_+(v/r)/r}\ge\Delta/2.
+\]
+Either the positive error or the bonus is at least $\Delta/4$.
+The pre-pull count $r$ is distinct at every selection of arm $i$.
+Hoeffding's inequality therefore bounds the expected number of
+error-type selections by
+\[
+ \sum_{r\ge1}e^{-r\Delta^2/8}
+    =\frac1{e^{\Delta^2/8}-1}\le\frac8{\Delta^2}.
+\]
+This argument uses all deterministic potential prefixes and does not
+condition a concentration bound on an adaptively selected count.
+
+Suppose $n\Delta^2\ge1$. Counts below $\Delta^{-2}$ contribute at most
+$\Delta^{-2}$ possibilities. If $r\ge\Delta^{-2}$ and the bonus is
+at least $\Delta/4$, then
+\[
+ r\le\frac{16}{\Delta^2}\log\frac{n}{kr}
+    \le\frac{16}{\Delta^2}\log(n\Delta^2).
+\]
+Thus the number of bonus-type counts is at most
+$[1+16\log(n\Delta^2)]/\Delta^2$. Adding the underestimation,
+initialization, error, and bonus terms gives the second expression
+in~\eqref{eq:stretch-local-gap}. If $n\Delta^2<1$, the deterministic
+bound $n\Delta<1/\Delta$ gives the same assertion. Combining it with
+the deterministic bound $n\Delta$ proves the stated minimum.
+\end{proof}
+
+\begin{lemma}[A uniform averaging inequality]
+\label{lem:stretch-average}
+Let $L$ be any finitely supported positive integer random variable,
+and put
+$W_L=\sup_{x\ge1}\EE\min\{L,x\}/\sqrt x$.
+For every $0<\Delta\le1$ and every $a,b\ge0$,
+\begin{equation}
+ \EE\min\left\{L\Delta,
+           \frac{a+b\log_+(L\Delta^2)}{\Delta}\right\}
+ \le (1+a+2b)W_L.
+ \label{eq:stretch-average}
+\end{equation}
+If $L=dH$ for $d>0$ and both $L$ and $H$ are positive integer valued,
+then $W_L=\sqrt d\,W(Q)$.
+\end{lemma}
+
+\begin{proof}
+Set $x=\Delta^{-2}\ge1$. The contribution from $L\le x$ is at most
+$\EE[L\ind\{L\le x\}]/\sqrt x\le W_L$. For $t\ge1$,
+\[
+ \PP(L>t)\le\frac{\EE\min\{L,t\}}{t}
+               \le\frac{W_L}{\sqrt t}.
+\]
+Consequently, the contribution from $L>x$ is at most
+\begin{align*}
+ \sqrt x\,\EE[(a+b\log(L/x))\ind\{L>x\}]
+ &=\sqrt x\left\{a\PP(L>x)
+             +b\int_x^\infty\frac{\PP(L>t)}{t}\,dt\right\}\\
+ &\le(a+2b)W_L.
+\end{align*}
+The integral identity follows from the nonnegative layer-cake
+formula; finite support ensures finiteness. This proves the first
+claim. The scaling identity follows from~\eqref{eq:stretch-finite},
+proved below: evaluating at the support points $d h$ gives exactly
+$\sqrt d$ times the expressions at $h$.
+\end{proof}
+
+\begin{lemma}[A common-environment testing bound]
+\label{lem:stretch-testing}
+For every $x\in\operatorname{supp}(Q)$ and every causal policy in the
+stated information class,
+\begin{equation}
+ \sup_P\EE_{H\sim Q,P}R_T
+      \ge\frac{\EE_Q\min\{H,x\}}{32\sqrt x}.
+ \label{eq:stretch-testing}
+\end{equation}
+The inequality also holds if the policy is told the realized value
+of $H$ before the experiment starts.
+\end{lemma}
+
+\begin{proof}
+Choose one label $i_0\in B_b$. In two environments $P_-$ and $P_+$,
+all other arms are Bernoulli with mean $1/2$, while arm $i_0$ is
+Bernoulli with mean $1/2-\delta$ and $1/2+\delta$, respectively, where
+$\delta=1/(8\sqrt x)\le1/8$. Both environments are fixed independently
+of $H$. The equally weighted prior on them is also independent of $H$.
+
+Condition on $H=h$. Before $i_0$ arrives, every observed reward has
+the same law under the two environments. This includes all rewards
+collected in the earlier batch intervals and every action based on
+them. After its arrival there are exactly $h$ rounds remaining. Put
+$\ell_h=\min\{h,x\}$, a positive integer, and retain the full history
+through the first $\ell_h$ of those rounds. Only observations from
+$i_0$ contribute to the likelihood ratio. If $N$ counts its pulls in
+these $\ell_h$ rounds, the chain rule for relative entropy gives
+\[
+ \operatorname{KL}(\mathbb P_{-,h},\mathbb P_{+,h})
+ =\EE_{-,h}N\,
+    \kl(1/2-\delta,1/2+\delta)
+ \le16\delta^2\ell_h\le\frac14.
+\]
+Here $\mathbb P_{\pm,h}$ include the entire earlier history and the
+policy's randomization. The policy kernels agree under both
+environments, and the schedule is the same after conditioning.
+The Bernoulli inequality follows from
+\[
+ \kl(1/2-\delta,1/2+\delta)
+ =2\delta\log\frac{1+2\delta}{1-2\delta}
+ \le\frac{8\delta^2}{1-2\delta}\le16\delta^2.
+\]
+Pinsker's inequality yields
+$\operatorname{TV}(\mathbb P_{-,h},\mathbb P_{+,h})\le1/\sqrt8<1/2$.
+Because $0\le N\le\ell_h$,
+$|\EE_{+,h}N-\EE_{-,h}N|\le\ell_h/2$. The regret in the retained
+interval is $\delta N$ in $P_-$ and $\delta(\ell_h-N)$ in $P_+$.
+Its prior average is therefore at least
+\[
+ \frac\delta2
+       (\ell_h+\EE_{-,h}N-\EE_{+,h}N)
+ \ge\frac{\delta\ell_h}{4}
+ =\frac{\min\{h,x\}}{32\sqrt x}.
+\]
+All other regret is nonnegative. Average over $h$; one of the two
+fixed environments has risk at least the prior average. This closes
+the lower bound without selecting an environment after observing the
+schedule. If $H$ is supplied at time zero, its conditional law and
+all pre-arrival observations are still identical under $P_-$ and
+$P_+$, so the proof is unchanged.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:random-positive}]
+We first verify the finite maximization independently of the regret
+argument. List the support as $h_1<\cdots<h_M$. Between consecutive
+support points,
+\[
+ \frac{\EE\min\{H,x\}}{\sqrt x}
+       =\frac{u}{\sqrt x}+v\sqrt x,
+ \qquad u,v\ge0.
+\]
+Its derivative has the sign of $vx-u$, so any interior critical
+point is a minimum. Below $h_1$ the expression is $\sqrt x$; above
+$h_M$ it is $\EE H/\sqrt x$. Its maximum is consequently attained
+at a support point, proving~\eqref{eq:stretch-finite}. This also
+justifies the scaling assertion of Lemma~\ref{lem:stretch-average}.
+
+For the tail comparison, $\EE\min\{H,h\}\ge h\PP(H\ge h)$ gives
+$V(Q)\le W(Q)$. For every $t>0$,
+$\PP(H>t)\le\min\{1,V(Q)/\sqrt t\}$: between support points use
+the smallest support point strictly above $t$, and above the largest
+point the tail vanishes. Hence, for $x\ge1$,
+\[
+ \EE\min\{H,x\}
+ =\int_0^x\PP(H>t)\,dt
+ \le V(Q)\int_0^x t^{-1/2}\,dt
+ =2V(Q)\sqrt x.
+\]
+This proves~\eqref{eq:stretch-tail}.
+
+Take a maximizing support point $x$ in
+Lemma~\ref{lem:stretch-testing} to obtain the lower bound.
+For the upper bound, use the rule stated in the theorem. Its
+pre-first-batch regret is zero. Conditional on $H=h$, all batch
+boundaries and interval lengths are deterministic, and the arriving
+batch labels reveal the required schedule. In interval $j$ the
+available arm set and its best mean are fixed, so each gap
+$\Delta_{i,j}=\max_{r\le j,\,i'\in B_r\cup\{a\}}\mu_{i'}-\mu_i$
+is the same for every value of $h$. (The maximum simply ranges over
+the anchor and batches $1,\ldots,j$.) Resetting the statistics makes
+this interval a fixed-horizon MOSS experiment with length $d_jh$
+and $k_j$ arms.
+
+To justify this last step in the presence of adaptive earlier
+sampling, one may realize rewards as independent variables
+$X_{i,t}\sim P_i$ for each label and calendar round and reveal only
+$X_{I_t,t}$. This has exactly the same observed law as independent
+potential pull streams. Conditional on the complete past at a batch
+boundary and on $H$, future calendar variables remain independent
+and keep their original laws. Thus the bound in
+Lemma~\ref{lem:stretch-local-gap} applies conditionally on the past;
+no old observations are treated as independent fresh data.
+
+Apply Lemma~\ref{lem:stretch-average} with $L=d_jH$,
+$a=20k_j+10$, and $b=16$ to each positive gap. Each arm contributes
+at most $(20k_j+43)\sqrt{d_j}W(Q)$. At least one arm has zero gap,
+so there are at most $k_j-1$ positive-gap terms. Sum over the batch
+intervals. They partition every round with more than one available
+arm, so all prefix and later regret has been included. This yields
+the upper bound in~\eqref{eq:stretch-minimax}, uniformly over the
+fixed reward laws.
+\end{proof}
+
+\begin{corollary}[When the expected deterministic capacity is correct]
+\label{cor:stretch-capacity}
+For a fixed template as above, write
+$D(Q)=\EE_Q\sqrt H/W(Q)$. Then $D(Q)\ge1$ and
+\begin{equation}
+ \frac{D(Q)}{A_{\boldsymbol\alpha,\boldsymbol B}}
+ \le
+ \frac{\EE_Q\cC_T(\tau(H))}
+      {\cR_T^{\mathrm{joint}}
+       (\mathcal Q_{T,Q,\boldsymbol\alpha,\boldsymbol B})}
+ \le32\sqrt{(K-1)\alpha_1}\,D(Q).
+ \label{eq:stretch-capacity-ratio}
+\end{equation}
+Consequently, over any sequence of laws and horizons with this
+template fixed, the expected deterministic capacity is of the same
+order as the joint minimax risk if and only if $D(Q)$ stays bounded.
+\end{corollary}
+
+\begin{proof}
+For every $h\ge1$, a single final-batch candidate has lifetime $h$,
+so its feasible allocation gives $\cC_T(\tau(h))\ge\sqrt h$.
+There are $K-1$ non-anchor arms, all with lifetime at most
+$\alpha_1h$. Since $\phi(n)\le\sqrt n$, the total-allocation
+constraint and Cauchy--Schwarz give
+\[
+ \cC_T(\tau(h))
+ \le\sqrt{(K-1)\alpha_1h}.
+\]
+Average these bounds and combine them with
+Theorem~\ref{thm:random-positive}. Finally,
+$\min\{H,x\}/\sqrt x\le\sqrt H$ pointwise, whence
+$W(Q)\le\EE\sqrt H$ and $D(Q)\ge1$.
+\end{proof}
+
+For a deterministic scale $H=h_0$, $W(Q)=\sqrt{h_0}$ and $D(Q)=1$.
+If the support lies in $[h_0,Lh_0]$ for a fixed $L$, then
+$D(Q)\le\sqrt L$. At the other extreme, for
+$\PP(H=4^j)=c_m2^{-j}$, $0\le j\le m$,
+\[
+ \frac{\EE\min\{H,4^r\}}{2^r}
+ =c_m\{3-2^{-r}-2^{r-m}\},\qquad0\le r\le m.
+\]
+Thus $1\le W(Q)<3$, whereas $\EE\sqrt H=c_m(m+1)$.
+For a template with noninteger $\alpha_j$, choose a fixed positive
+integer $q$ such that every $q\alpha_j$ is an integer and use
+$H=q4^J$ instead; both $W(Q)$ and $\EE\sqrt H$ are multiplied by
+$\sqrt q$. Such a $q$ exists for every template admitting a nonempty
+legal integer support.
+The same order-one versus logarithmic separation therefore persists
+for every fixed multi-batch template covered by the theorem, not
+only for a single arriving candidate.
+
+The tail functional in~\eqref{eq:stretch-tail} is the familiar weak
+$L^1$ tail quantity for $\sqrt H$; we do not claim a new general
+probability functional. The result identifies its statistical role in this
+specific independent-arrival experiment. Its limitations are material:
+the template is fixed; the endpoint is known; the first arrival
+reveals the remaining schedule; and the upper constant grows with
+the number of arms and batches. Random schedules that do not share a
+revealing common stretch, and rates uniform in growing templates,
+remain outside the theorem.

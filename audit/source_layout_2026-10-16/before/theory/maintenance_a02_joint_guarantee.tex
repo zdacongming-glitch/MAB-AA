@@ -1,0 +1,77 @@
+% Reorganized from the frozen October 15, 2026 supplement.
+\section{Joint guarantee of Checkpoint-UCB}
+\label{app:joint}
+
+Checkpoint-UCB fixes each arm's checkpoint before seeing its data. At even
+physical rounds it samples the earliest-arriving arm below its lifetime
+checkpoint, if one exists. At all other rounds it maximizes, over every
+available arm including reported exclusions,
+\[
+ J_i(t)=\hat r_i(N_i(t-1))+
+             \sqrt{3\log(2t)/N_i(t-1)},
+\]
+with index $+\infty$ at zero count and deterministic ties. Every observation
+serves both the lifetime checkpoint and the empirical reward estimate.
+The fixed-checkpoint argument in Section~\ref{app:tools} gives
+$P(E_{\rm lab})\ge1-\delta/2$. If $\mathcal I_T$ denotes designated
+service rounds, then $|\mathcal I_T|\le\sum_{i\le K_T}q_i$, because each
+such observation is charged to an arm below its single lifetime quota.
+The following reward argument does not assume separated arrival windows.
+
+
+\paragraph{A reward bound that does not condition on report coverage.}
+At physical time $t$, order arms by their first observed rewards. At most
+$t$ streams have been exposed, each at at most $t$ potential prefixes. A
+previously unobserved stream is independent of the history selecting it.
+Applying Hoeffding to each newly exposed stream and union bounding gives
+\[
+ P\left\{\exists\text{ observed arm and prefix }n\le t:
+ |\hat r_i(n)-r_i|>
+        \sqrt{3\log(2t)/n}\right\}
+ \le2t^2(2t)^{-6}=\frac1{32t^4}.
+\]
+The exposure order is used only for this union bound, not to assert
+independence among observed counts. An ordinary UCB pull with finite index,
+on this event's complement, has
+$\Delta_{I_t}(t)\le2\sqrt{3\log(2t)/N_{I_t}(t-1)}$.
+Each arm--pre-pull-count pair is charged at most once; interleaved service
+observations skip counts. Therefore the ordinary, nonfirst-pull regret is
+at most
+\[
+ 4\sqrt{3\log(2T)}\sum_i\sqrt{N_i(T)}
+ \le4\sqrt{3K_TT\log(2T)}
+\]
+on good rounds. First pulls cost at most $K_T$, and the sum of expected
+bad-round losses is less than one. Adding the actual regret of service
+rounds proves
+\[
+ ER_T\le\min\left\{T,K_T+4\sqrt{3K_TT\log(2T)}+1+
+       E\sum_{t\in\mathcal I_T}\Delta_{I_t}(t)\right\}.
+\]
+There is no $\delta T$ term: the reward policy never permanently discards an
+arm because of a reporting error.
+
+
+\begin{lemma}[Completion under arbitrary arrivals]
+\label{app:completion_general}
+Fix $0<\eta<1$ and use Checkpoint-UCB with the predetermined precision
+$\rho=\eta/4$. Let $\overline Q_t$ be the post-service workload of the
+virtual FIFO queue that inserts $q_i$ units at arm $i$'s arrival and serves
+one unit at every even physical round when nonempty. On the simultaneous
+checkpoint-coverage event, for each fixed deterministic endpoint $T$,
+\[
+ \mathcal U_T(\eta)\le
+ \sum_{t\le T}K_t1\{\overline Q_t>0\}
+ \le\min\{K_TT,2K_T\sum_{i\le K_T}q_i\}.
+\]
+\end{lemma}
+\begin{proof}
+If all current checkpoints are complete, all endpoint errors are at most $\eta/4$ and every arm whose
+boundary distance exceeds $\eta$ has a determinate report. A virtual FIFO
+queue adding $q_i$ work at each arrival and serving one unit at every even
+round dominates unfinished checkpoints; additional UCB observations only
+reduce actual work. Its busy periods, including alignment to the first even
+round, have total length at most $2\sum_iq_i$. Thus on simultaneous coverage the unresolved area is bounded by the
+queue-weighted sum in the statement, which is at most $K_TT$ and at most
+$2K_T\sum_{i\le K_T}q_i$.
+\end{proof}

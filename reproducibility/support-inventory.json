@@ -1,0 +1,516 @@
+{
+  "date": "2026-10-17",
+  "scope": "Read-only inventory of non-numerical support; no source copied or manuscript/Git changed.",
+  "required_external_support": [
+    {
+      "source": "Reviews_JASA-RA-2026-0866.pdf",
+      "role": "review provenance",
+      "proposed_destination": "supporting/reviews/Reviews_JASA-RA-2026-0866.pdf",
+      "rationale": "Original detailed reviewer report referred to by this resubmission.",
+      "exists": true,
+      "bytes": 241727,
+      "sha256": "4ee1be44544c6b4d6f19bcdbc914ac194ed4ecf4c86ef976953349953fde7823",
+      "packaged_destinations": [
+        "supporting/original_submission/Reviews_JASA-RA-2026-0866.pdf"
+      ],
+      "collection_complete": true
+    },
+    {
+      "source": "JASA-template/mab_aa_main.pdf",
+      "role": "original submitted paper",
+      "proposed_destination": "supporting/original_submission/mab_aa_main.pdf",
+      "rationale": "Original paper identity and notation; local copy makes this folder independent of its sibling.",
+      "exists": true,
+      "bytes": 1430137,
+      "sha256": "44c19acf42498b41179ae52d2a0951a004c76c834b2eb244c22fc1b05135fb8e",
+      "packaged_destinations": [
+        "supporting/original_submission/mab_aa_main.pdf"
+      ],
+      "collection_complete": true
+    },
+    {
+      "source": "proposal/UCB-AA删除与集合维护重构_Codex执行方案_v1.0.md",
+      "role": "revision instruction history",
+      "proposed_destination": "supporting/plans/round1.md",
+      "rationale": "Explains removal of the two-stage UCB-AA method and retained setting/theory.",
+      "exists": true,
+      "bytes": 81290,
+      "sha256": "9337fea59140d7a563b371080495c703baca613fede4f1a352bc6a96fd3054c0",
+      "packaged_destinations": [
+        "supporting/proposal/UCB-AA删除与集合维护重构_Codex执行方案_v1.0.md"
+      ],
+      "collection_complete": true
+    },
+    {
+      "source": "proposal/第二轮稿件修改_FCCP整合_Codex执行方案_v2.0.md",
+      "role": "revision instruction history",
+      "proposed_destination": "supporting/plans/round2.md",
+      "rationale": "Detailed C16/P16/F17 integration contract and source attribution.",
+      "exists": true,
+      "bytes": 107195,
+      "sha256": "232e9507283b1c9c35cf2690b5077beff041420efc6868f6d8e37092ac582190",
+      "packaged_destinations": [
+        "supporting/proposal/第二轮稿件修改_FCCP整合_Codex执行方案_v2.0.md"
+      ],
+      "collection_complete": true
+    },
+    {
+      "source": "proposal/ucbaa_continuous_maintenance_2026-10-14",
+      "role": "original maintenance research",
+      "proposed_destination": "supporting/research/maintenance_2026-10-14/",
+      "rationale": "Complete retained maintenance theory/proofs, audits, diagnostics and original CP implementation.",
+      "exists": true,
+      "files": 10,
+      "bytes": 97760,
+      "packaged_destinations": [
+        "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/assessment-record.json",
+        "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/cp_ucb_aa.py",
+        "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/diagnostics-results.json",
+        "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/diagnostics.py",
+        "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/evidence-manifest.json",
+        "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/format-validation.json",
+        "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/implementation-sanity.json",
+        "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/proof-audit.md",
+        "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/README.md",
+        "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/持续集合维护_理论与完整证明.md"
+      ],
+      "collection_complete": true
+    },
+    {
+      "source": "reconstruction_jasa_stage2_2026-10-13/reproducibility_package.zip",
+      "role": "external theorem input and its complete project archive",
+      "proposed_destination": "supporting/companion_temporal_geometry/reproducibility_package.zip",
+      "rationale": "Contains the companion full source, mathematical proofs and independent computational support; its results retain companion attribution.",
+      "exists": true,
+      "bytes": 12763769,
+      "sha256": "ada2987f4e88ac30c7367f160f1d9a6e1148321e90d2153d4cd9abaa965bfa58",
+      "packaged_destinations": [
+        "supporting/companion_temporal_geometry/reproducibility_package.zip"
+      ],
+      "collection_complete": true
+    },
+    {
+      "source": "reconstruction_jasa_stage2_2026-10-13/manuscript.pdf",
+      "role": "companion readable paper",
+      "proposed_destination": "supporting/companion_temporal_geometry/manuscript.pdf",
+      "rationale": "Readable source for the cited spectral minimax characterization.",
+      "exists": true,
+      "bytes": 563569,
+      "sha256": "1124af1a652dbaeca1e0a38369c4067018f0e5f88824b02afa110c4e8222f9f7",
+      "packaged_destinations": [
+        "supporting/companion_temporal_geometry/manuscript.pdf"
+      ],
+      "collection_complete": true
+    },
+    {
+      "source": "reconstruction_jasa_stage2_2026-10-13/supplement.pdf",
+      "role": "companion readable proofs",
+      "proposed_destination": "supporting/companion_temporal_geometry/supplement.pdf",
+      "rationale": "Readable complete probability, spectral, counting and clock arguments.",
+      "exists": true,
+      "bytes": 435258,
+      "sha256": "24ca1de62e95f6fb7024a3ab073bdbdf99ffb496b9d79dcb105506382f744fea",
+      "packaged_destinations": [
+        "supporting/companion_temporal_geometry/supplement.pdf"
+      ],
+      "collection_complete": true
+    }
+  ],
+  "recommended_provenance": [
+    {
+      "source": "revision_notes",
+      "role": "prior review analysis",
+      "proposed_destination": "supporting/reviews/revision_notes/",
+      "rationale": "Author analysis; must not be presented as a verbatim referee letter.",
+      "exists": true,
+      "files": 2,
+      "bytes": 45732,
+      "packaged_destinations": [
+        "supporting/review_history/revision_notes/JASA_revision_analysis_2026-09-23.md",
+        "supporting/review_history/revision_notes/review_audit_evidence_2026-09-23.json"
+      ],
+      "collection_complete": true
+    },
+    {
+      "source": "reviewer1_response_2026-09-24",
+      "role": "prior response draft",
+      "proposed_destination": "supporting/reviews/reviewer1_response_2026-09-24/",
+      "rationale": "Working response and technical positioning; historical rather than current response letter.",
+      "exists": true,
+      "files": 3,
+      "bytes": 24361,
+      "packaged_destinations": [
+        "supporting/review_history/reviewer1_response_2026-09-24/response_strategy_and_draft.md",
+        "supporting/review_history/reviewer1_response_2026-09-24/technical_positioning_note.md",
+        "supporting/review_history/reviewer1_response_2026-09-24/validation.json"
+      ],
+      "collection_complete": true
+    },
+    {
+      "source": "adversarial_review_2026-09-23",
+      "role": "prior internal audit",
+      "proposed_destination": "supporting/reviews/adversarial_review_2026-09-23/",
+      "rationale": "Internal proof and baseline challenges leading to later work, not external review.",
+      "exists": true,
+      "files": 7,
+      "bytes": 65489,
+      "packaged_destinations": [
+        "supporting/review_history/adversarial_review_2026-09-23/assessment.md",
+        "supporting/review_history/adversarial_review_2026-09-23/baseline_and_boundary_checks.md",
+        "supporting/review_history/adversarial_review_2026-09-23/check_review.py",
+        "supporting/review_history/adversarial_review_2026-09-23/evidence.json",
+        "supporting/review_history/adversarial_review_2026-09-23/README.md",
+        "supporting/review_history/adversarial_review_2026-09-23/review_checks.json",
+        "supporting/review_history/adversarial_review_2026-09-23/verify_evidence.py"
+      ],
+      "collection_complete": true
+    },
+    {
+      "source": "proposal/论文重构方案_持续到达下的相对近优集合维护与文献审计_2026-10-11.md",
+      "role": "earlier maintenance source provenance",
+      "proposed_destination": "supporting/plans/maintenance-origin-2026-10-11.md",
+      "rationale": "Listed by the 10/14 evidence manifest as an input.",
+      "exists": true,
+      "bytes": 71473,
+      "sha256": "5be74f60f2d0ed6b5c51b49b73abc0a7867329e141dd4f667b11577573258dd7",
+      "packaged_destinations": [
+        "supporting/proposal/论文重构方案_持续到达下的相对近优集合维护与文献审计_2026-10-11.md"
+      ],
+      "collection_complete": true
+    },
+    {
+      "source": "proposal/Part-II-Instance-Sensitive-研究记录.md",
+      "role": "earlier research source provenance",
+      "proposed_destination": "supporting/plans/instance-sensitive-notes.md",
+      "rationale": "Listed by the 10/14 evidence manifest; distinguishes earlier exploration from final theorem claims.",
+      "exists": true,
+      "bytes": 39964,
+      "sha256": "4aff3d01657b9cee740150998dd2f33c282608d737ef018275148aa950a21abf",
+      "packaged_destinations": [
+        "supporting/proposal/Part-II-Instance-Sensitive-研究记录.md"
+      ],
+      "collection_complete": true
+    },
+    {
+      "source": "proposal/UCB-AA_三项核心成果与CP伪代码_详细汇报.md",
+      "role": "maintenance explanation history",
+      "proposed_destination": "supporting/plans/maintenance-progress.md",
+      "rationale": "Narrative explanation of the maintenance claims and CP construction.",
+      "exists": true,
+      "bytes": 28712,
+      "sha256": "657ec7c6656a4a068403a14f0c3e0f7fbdbd7f7710c187eee61e6cf0ee0289bb",
+      "packaged_destinations": [
+        "supporting/proposal/UCB-AA_三项核心成果与CP伪代码_详细汇报.md"
+      ],
+      "collection_complete": true
+    },
+    {
+      "source": "proposal/UCB-AA_阶段性研究汇报_聊天原文.md",
+      "role": "maintenance research discussion",
+      "proposed_destination": "supporting/plans/maintenance-discussion.md",
+      "rationale": "Historical discussion; not an additional theorem or numerical dataset.",
+      "exists": true,
+      "bytes": 11277,
+      "sha256": "f934136cc1133c4d51760a4d19487cc07e9811ee8a4c0417fda1b0c9a7a4af61",
+      "packaged_destinations": [
+        "supporting/proposal/UCB-AA_阶段性研究汇报_聊天原文.md"
+      ],
+      "collection_complete": true
+    }
+  ],
+  "already_packaged_complete_research_archives": [
+    {
+      "path": "experiments/fccp_frozen/original-archives/CCP_算法探索_研究包_2026-10-16.zip",
+      "bytes": 5362325,
+      "sha256": "5f5a505081c2f3426d827c0765067f6033d3a6150b6a1cacaadf1c5d2bf7e075",
+      "zip_members": 287,
+      "theory_and_audit_members": [
+        "CCP_research_2026-10-16/proof-and-experiment-audit.md",
+        "CCP_research_2026-10-16/theory.md"
+      ]
+    },
+    {
+      "path": "experiments/fccp_frozen/original-archives/F-CCP_可调算法_理论与实验_2026-10-17.zip",
+      "bytes": 9131455,
+      "sha256": "1afc93e92858084be623a39b4bb399239648c342db5da213f393e9ffccdfe519",
+      "zip_members": 176,
+      "theory_and_audit_members": [
+        "F-CCP_2026-10-17/audit.md",
+        "F-CCP_2026-10-17/theory.md"
+      ]
+    },
+    {
+      "path": "experiments/fccp_frozen/original-archives/Regret_未决量前沿_理论与算法研究包_2026-10-16.zip",
+      "bytes": 1806123,
+      "sha256": "0b86d7f6ffce6e7d439b0c99266b2a37684f1b965305ec9c557050dca00c3bfe",
+      "zip_members": 109,
+      "theory_and_audit_members": [
+        "frontier_research_2026-10-16/prior/CCP_research_2026-10-16/theory.md",
+        "frontier_research_2026-10-16/proof_audit.md",
+        "frontier_research_2026-10-16/theory_frontier.md"
+      ]
+    }
+  ],
+  "companion_archive_current_source_checks": [
+    {
+      "source": "manuscript.tex",
+      "sha256": "e98f0bca22ac9e13fff5c68d485fc5378fc6ab02bef27e56fbed82ab067fd1b0",
+      "archive_members": [
+        "manuscript.tex"
+      ],
+      "archive_identical": true
+    },
+    {
+      "source": "supplement.tex",
+      "sha256": "373be9441cad9dc3dbdfb0c2280c03891991c7556e844527edcee3832c0453f9",
+      "archive_members": [
+        "supplement.tex"
+      ],
+      "archive_identical": true
+    },
+    {
+      "source": "sections/S1_spectral_proofs.tex",
+      "sha256": "918237fb2ba83968c55f1f1933425ab090c1aaf10d1170e3025be53145603a66",
+      "archive_members": [
+        "sections/S1_spectral_proofs.tex"
+      ],
+      "archive_identical": true
+    },
+    {
+      "source": "sections/S2_geometry_proofs.tex",
+      "sha256": "3dfc7b2d02a614193a2e4f9e7ac28e28a15c93607e3a488af11de64a47af87a9",
+      "archive_members": [
+        "sections/S2_geometry_proofs.tex"
+      ],
+      "archive_identical": true
+    },
+    {
+      "source": "sections/03_policy.tex",
+      "sha256": "79f54d9efcdb1f211cf23051e133848d2bf52d8460fa9de32946ac09b46ee481",
+      "archive_members": [
+        "sections/03_policy.tex"
+      ],
+      "archive_identical": true
+    },
+    {
+      "source": "theory/new_results.tex",
+      "sha256": "1a97293e113f1f4ef89d907748489cd8e8fa9540c82faa7d5b0bcede12da61f2",
+      "archive_members": [
+        "theory/new_results.tex"
+      ],
+      "archive_identical": true
+    },
+    {
+      "source": "references.bib",
+      "sha256": "118981915793cae02c11b80dcca14a4881b940452a4246b03ce0cb160d80eb91",
+      "archive_members": [
+        "references.bib"
+      ],
+      "archive_identical": true
+    }
+  ],
+  "current_document_local_assets": [
+    {
+      "path": "revision2/generated/reward-paired.pdf",
+      "exists": true,
+      "sha256": "5d43d48a1087bf22d9a05d41ddc5b715608882da9c92722e827f24aa9786e542"
+    },
+    {
+      "path": "revision2/generated/preference-tradeoff.pdf",
+      "exists": true,
+      "sha256": "cc79f6c3d07fdd857e8ab57c591e3982bf1154ab4d2d23dca1c6b66d7b0eb566"
+    },
+    {
+      "path": "figures/fig_cost_area.pdf",
+      "exists": true,
+      "sha256": "2a9aeb9cbb61df077804344a8bc51dc8e1c192ec7c568e0ee5e7aa55a11e3693"
+    },
+    {
+      "path": "figures/fig_paths_pair1.pdf",
+      "exists": true,
+      "sha256": "36132c84cf7d19a3212baaf2425aa9f1e966e3a5c40cd6ab8c273c5f6fcaef9e"
+    },
+    {
+      "path": "figures/fig_paths_pair2.pdf",
+      "exists": true,
+      "sha256": "d89e0fca80293eb8f2636cb05504e9c27efb0625bd0cd5e859b1377a55020997"
+    },
+    {
+      "path": "references.bib",
+      "exists": true,
+      "sha256": "7535ef2e456e5a4d8775ec41b3a753389c462500d2ef2818bdc7bb7e96dc6310"
+    }
+  ],
+  "revision2_script_portability": [
+    {
+      "path": "revision2/freeze_inputs.py",
+      "lines": [
+        7,
+        17,
+        18,
+        27,
+        28
+      ],
+      "classification": "historical snapshot creator, not current reproduction",
+      "dependency": "Five research directories and proposal plan under the old repository parent; Git working tree; old two-document root layout.",
+      "action": "Keep its original records unchanged and exclude from normal reproduction. Use a portable manifest verifier over packaged files."
+    },
+    {
+      "path": "revision2/final_verify.py",
+      "lines": [
+        7,
+        14,
+        15,
+        21,
+        79
+      ],
+      "classification": "historical two-document acceptance check",
+      "dependency": "All 1527 original protected inputs at old repository locations, root supplement.tex/pdf and Git parent.",
+      "action": "Do not run as current acceptance check after the merge; provide a new single-document self-contained validator. Preserve historical result JSON."
+    },
+    {
+      "path": "revision2/render_review.py",
+      "lines": [
+        50
+      ],
+      "classification": "historical two-document renderer",
+      "dependency": "Both root manuscript.pdf and root supplement.pdf; Poppler commands and Pillow.",
+      "action": "Use the current merged-PDF renderer or a wrapper selecting manuscript only. Do not recreate a second editable TeX entry."
+    },
+    {
+      "path": "revision2/analysis/reanalyze_fccp.py",
+      "lines": [
+        17,
+        21,
+        22,
+        275,
+        287,
+        356,
+        358
+      ],
+      "classification": "portable release path already present; external preference remains",
+      "dependency": "Prefers parent F17 tree if present; C16/P16 CSVs have an existing ZIP fallback; original ZIP copy mode reads repository parent.",
+      "action": "Invoke --release-only from a portable wrapper. This forces the packaged F17 tree, skips external copying, and retains predecessor ZIP fallback. No missing external predecessor dataset was established."
+    },
+    {
+      "path": "revision2/analysis/check_revision2_data.py",
+      "lines": [
+        31,
+        32,
+        36,
+        37
+      ],
+      "classification": "portable explicit-path data validator",
+      "dependency": "Requires --f-root and a fresh --out outside the frozen F17 tree; NumPy, pandas and SciPy.",
+      "action": "Wrapper supplies project-relative absolute paths resolved at runtime, and a new verification output name."
+    },
+    {
+      "path": "revision2/analysis/check_fccp_interface.py",
+      "lines": [
+        5,
+        6,
+        8
+      ],
+      "classification": "portable copied-code validator",
+      "dependency": "Only packaged experiments/fccp_frozen/src; writes local audit and local Numba cache.",
+      "action": "Can run without old repository directories; avoid importing from external research paths."
+    },
+    {
+      "path": "revision2/build_papers.py",
+      "lines": [
+        18,
+        25,
+        31,
+        32
+      ],
+      "classification": "portable current build",
+      "dependency": "Local manuscript.tex, bibliography, figures; external installed latexmk/pdfLaTeX/BibTeX executables.",
+      "action": "Current merged build is portable. --baseline is intentionally unavailable after source changes and is historical, not needed."
+    },
+    {
+      "path": "revision2/integrate.py",
+      "lines": [
+        11,
+        12
+      ],
+      "classification": "guarded historical content rewriter",
+      "dependency": "Local JSON blocks and old two-document organization.",
+      "action": "Keep guard; never call for reproduction of the merged manuscript."
+    }
+  ],
+  "literal_absolute_path_hits_in_revision2_scripts": [],
+  "historical_absolute_paths": "source-map.json and other historical reports store original machine paths as provenance; those are not current build dependencies. Preserve them, while the new public manifest uses relative paths.",
+  "companion_bibliographic_limit": "Anonymous unpublished companion version dated 2026-10-13; no verified public author list, DOI or arXiv identifier. Packaging the actual paper/proofs resolves local availability, not public publication status.",
+  "not_required_for_current_claims": [
+    {
+      "paths": [
+        "reconstruction_jasa_2026-10-13/"
+      ],
+      "reason": "Superseded G-prior project. Keep its historical hash map, but current companion archive provides the actual required spectral proofs."
+    },
+    {
+      "paths": [
+        "moss_2026-10-04/",
+        "moss_elimination_2026-10-02/",
+        "moss_elimination_2026-10-03/"
+      ],
+      "reason": "Abandoned alternative algorithm studies; current paper does not cite or use their numerical outputs."
+    },
+    {
+      "paths": [
+        "revision_trial_2026-09-23/",
+        "revision_exploration_2026-09-23/"
+      ],
+      "reason": "Earlier repair/exploration branches. Original paper archive and explicit retained research provenance suffice; do not mix these runs into final numerical evidence."
+    },
+    {
+      "paths": [
+        "proposal/temporal_geometry_research/"
+      ],
+      "reason": "Earlier G development input; the complete current G archive already preserves its necessary code and provenance."
+    }
+  ],
+  "collection_result": {
+    "status": "passed",
+    "manifest": "reproducibility/support-import-manifest.json",
+    "copied_files": 120,
+    "total_bytes": 28748785,
+    "historical_c16_input_identities": [
+      {
+        "historical_name": "manuscript(2).pdf",
+        "packaged_path": "supporting/research_input_pdfs/manuscript(2).pdf",
+        "sha256": "eeecbd9680c3f14f046e9f898379f6abbb505f5195405a144552ff207ba2386d",
+        "bytes": 855381,
+        "matches_c16_source_documents": true
+      },
+      {
+        "historical_name": "supplement(2).pdf",
+        "packaged_path": "supporting/research_input_pdfs/supplement(2).pdf",
+        "sha256": "f2d4ebeec121c1f7e03405da8ff4273facde5d69f48ab2cadc0af8db348d0d6e",
+        "bytes": 1106504,
+        "matches_c16_source_documents": true
+      },
+      {
+        "historical_name": "manuscript(1).pdf",
+        "packaged_path": "supporting/companion_temporal_geometry/manuscript.pdf",
+        "sha256": "1124af1a652dbaeca1e0a38369c4067018f0e5f88824b02afa110c4e8222f9f7",
+        "bytes": 563569,
+        "matches_c16_source_documents": true
+      },
+      {
+        "historical_name": "supplement(1).pdf",
+        "packaged_path": "supporting/companion_temporal_geometry/supplement.pdf",
+        "sha256": "24ca1de62e95f6fb7024a3ab073bdbdf99ffb496b9d79dcb105506382f744fea",
+        "bytes": 435258,
+        "matches_c16_source_documents": true
+      },
+      {
+        "historical_name": "cp_ucb_aa.py",
+        "packaged_path": "supporting/proposal/ucbaa_continuous_maintenance_2026-10-14/cp_ucb_aa.py",
+        "sha256": "272815cbb45e2de1a99f849bd4718892ef6bc010d081e0eaf2ec45b21c746ef9",
+        "bytes": 6201,
+        "matches_c16_source_documents": true
+      }
+    ]
+  }
+}

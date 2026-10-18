@@ -1,0 +1,725 @@
+{
+  "schema_version": 1,
+  "batch_id": "ucbaa-current-innovation-2026-10-18",
+  "packet_id": "sha256:a721e6f670e55962b16e1a8a98c3373e8e8ca6f693f3139a504f87c054427ed5",
+  "protocol_id": "sha256:9130f81d6331625669c89a2d0d03d84bb2e646f6b5179c28eae17715977bc538",
+  "protocol": {
+    "protocol_id": "sha256:9130f81d6331625669c89a2d0d03d84bb2e646f6b5179c28eae17715977bc538",
+    "rubric_version": "skill/rubric frozen SHA256 in manifest",
+    "model_id": "parent_default: Codex/GPT-6 family; exact deployment ID not exposed",
+    "model_snapshot": null,
+    "settings": {
+      "fork_turns": "none",
+      "model_override": null,
+      "reasoning_override": null,
+      "temperature": "not exposed",
+      "seed": "not exposed",
+      "task_sha256": "1ba307a5f4038d9b1b78596ea347bba8dcd5b21372ce9122af5ff61c6e219a7f",
+      "invocation_sha256": "e27783cd6acd667795723780471d3d7dd8078b52c2725f2bbbbb7b99ed36d6be"
+    },
+    "execution_method": "isolated_agents",
+    "scope": "innovation only, current results",
+    "initial_rounds": 5,
+    "maximum_rounds": 10,
+    "append_rule": "any sample SD>=0.4 or any cross-tier disagreement => investigate and append to 10 without changing evidence",
+    "objects": [
+      {
+        "id": "c1",
+        "label": "持续可靠集合维护问题与联合成本框架",
+        "kind": "contribution",
+        "basis": "current",
+        "dimensions": [
+          "innovation"
+        ]
+      },
+      {
+        "id": "c2",
+        "label": "广播不确定性的累计信息队列下界",
+        "kind": "contribution",
+        "basis": "current",
+        "dimensions": [
+          "innovation"
+        ]
+      },
+      {
+        "id": "c3",
+        "label": "最坏维护面积与到达增长边界",
+        "kind": "contribution",
+        "basis": "current",
+        "dimensions": [
+          "innovation"
+        ]
+      },
+      {
+        "id": "c4",
+        "label": "任务过期、服务成本分离与ABM中间区间",
+        "kind": "contribution",
+        "basis": "current",
+        "dimensions": [
+          "innovation"
+        ]
+      },
+      {
+        "id": "c5",
+        "label": "F-CCP证书规划与自适应服务算法",
+        "kind": "contribution",
+        "basis": "current",
+        "dimensions": [
+          "innovation"
+        ]
+      },
+      {
+        "id": "c6",
+        "label": "任意动作桥接、双预算与完成保证",
+        "kind": "contribution",
+        "basis": "current",
+        "dimensions": [
+          "innovation"
+        ]
+      },
+      {
+        "id": "c7",
+        "label": "冻结实验和扩展基准成果",
+        "kind": "contribution",
+        "basis": "current",
+        "dimensions": [
+          "innovation"
+        ]
+      },
+      {
+        "id": "overall",
+        "label": "当前成果整体",
+        "kind": "overall",
+        "basis": "current",
+        "dimensions": [
+          "innovation"
+        ]
+      }
+    ]
+  },
+  "planned_rounds": 5,
+  "objects": [
+    {
+      "id": "c1",
+      "label": "持续可靠集合维护问题与联合成本框架",
+      "kind": "contribution",
+      "basis": "current",
+      "dimensions": [
+        "innovation"
+      ]
+    },
+    {
+      "id": "c2",
+      "label": "广播不确定性的累计信息队列下界",
+      "kind": "contribution",
+      "basis": "current",
+      "dimensions": [
+        "innovation"
+      ]
+    },
+    {
+      "id": "c3",
+      "label": "最坏维护面积与到达增长边界",
+      "kind": "contribution",
+      "basis": "current",
+      "dimensions": [
+        "innovation"
+      ]
+    },
+    {
+      "id": "c4",
+      "label": "任务过期、服务成本分离与ABM中间区间",
+      "kind": "contribution",
+      "basis": "current",
+      "dimensions": [
+        "innovation"
+      ]
+    },
+    {
+      "id": "c5",
+      "label": "F-CCP证书规划与自适应服务算法",
+      "kind": "contribution",
+      "basis": "current",
+      "dimensions": [
+        "innovation"
+      ]
+    },
+    {
+      "id": "c6",
+      "label": "任意动作桥接、双预算与完成保证",
+      "kind": "contribution",
+      "basis": "current",
+      "dimensions": [
+        "innovation"
+      ]
+    },
+    {
+      "id": "c7",
+      "label": "冻结实验和扩展基准成果",
+      "kind": "contribution",
+      "basis": "current",
+      "dimensions": [
+        "innovation"
+      ]
+    },
+    {
+      "id": "overall",
+      "label": "当前成果整体",
+      "kind": "overall",
+      "basis": "current",
+      "dimensions": [
+        "innovation"
+      ]
+    }
+  ],
+  "rounds": [
+    {
+      "round_id": "innovation_round_01",
+      "context_id": "/root/innovation_round_01",
+      "packet_id": "sha256:a721e6f670e55962b16e1a8a98c3373e8e8ca6f693f3139a504f87c054427ed5",
+      "protocol_id": "sha256:9130f81d6331625669c89a2d0d03d84bb2e646f6b5179c28eae17715977bc538",
+      "scores": {
+        "c1": {
+          "innovation": {
+            "status": "scored",
+            "score": 4.8,
+            "tier": 2,
+            "rationale": "ALL-epsilon 已有相对未知最优均值的全臂分类，收益与识别联合目标、永久到达也分别已有先例；本稿新增的是同一可靠报告协议下可撤回正标签、边界带豁免和累计未决臂时间共同组织的持续维护问题。其价值超过双目标重命名，因为这一协议实际导出广播阻碍与临时问题过期两种不同成本机制，因而跨过4分门槛；目前尚不足以称为改变基础识别逻辑的范式，且不能将后续各定理再次累加为框架分数。"
+          }
+        },
+        "c2": {
+          "innovation": {
+            "status": "scored",
+            "score": 5.1,
+            "tier": 2,
+            "rationale": "静态 ALL-epsilon 已包含共同最优参考的不确定性，换测度本身也是成熟工具；新增量是将候选到达、每轮一次观察和受阻报告数结合为同一个基准环境上的加权信息队列，并得到累计面积及非消失概率下界。按期望样本数选择困难标签避免跨时刻拼接不相容最坏环境，给出可复用的动态累计障碍，支持明确理论创新而超过4分；特殊一候选替代族及较粗常数尚不足以支持一般到达轴的精细复杂度刻画。"
+          }
+        },
+        "c3": {
+          "innovation": {
+            "status": "scored",
+            "score": 3.8,
+            "tier": 3,
+            "rationale": "该项的 K平方乘固定精度同时恢复代价，主要来自已知多坐标恢复规模与固定检查点/FIFO完成界向累计面积的系统转换，最坏下界实际是第一轮静态批次。有限终点截断、高概率面积及两类到达量词的区分是扎实的适配内容，但扣除 c2 已评价的动态队列机制后，尚未见本项单独需要超出成熟恢复与队列工具的核心解决原则，因此不跨4分；一般固定临界轴仍有对数间隙，不能将多项式指数边界读成所有轴的完整判别。"
+          }
+        },
+        "c4": {
+          "innovation": {
+            "status": "scored",
+            "score": 6.0,
+            "tier": 2,
+            "rationale": "既有收益—识别和在线实验设计前沿并不直接回答永久保留臂中相对边界移动造成的临时分类任务：同一终点将面积预算从 V/8 放宽至 9V/8 可避开逆平方精度成本。固定环境概率加强、任意子集恢复和按激活秩分配新样本块的 ABM 将这一机制进一步变成可核查的中间面积区间，解决了累计面积如何迫使昂贵临时问题完成的实质障碍，达到6分的局部机制突破。其窗口高度分离、快速端终点特选、中间区间含加性 R0(T)，暂缓端缺匹配下界，故不支持7分的领域统摄性结论或一般前沿。"
+          }
+        },
+        "c5": {
+          "innovation": {
+            "status": "scored",
+            "score": 4.3,
+            "tier": 2,
+            "rationale": "置信序列、ALL式区间报告、成本敏感识别及收益核混合均有先例，但本稿将当前阻塞参考、两端点增量成本、边界带暂停与单次观察后重规划落实为一套连续维护程序。相对于保留历史的最宽区间 ALL 基线，其具体局部规划规则在相同价格、收益核及双预算下提供了新的可执行采样选择，并有冻结比较支持，属于跨过4分的有限方法增量。闭式解仅针对冻结中心的连续代理，既不证明统计信息分配最优，也没有证据说明任意配置或一般实例都改善成本，故离5分的较完整新能力仍有距离。"
+          }
+        },
+        "c6": {
+          "innovation": {
+            "status": "scored",
+            "score": 4.5,
+            "tier": 2,
+            "rationale": "MC-MOSS的到达谱尺度与时钟分析是 companion 输入，置信覆盖、配额和账本代数也不单独计新；本稿可评价的增量是以实际选择的可观测指数差桥接任意合法动作，并用独立收益与认证账本保留无条件收益保护及认证非饥饿接口。其证明明确处理潜在前缀、实际臂计数和旧样本，形成可复用的受保护外接采样机制，超过只将既有指数算法混合运行的标准保证，支持局部二级创新。Balanced仍须保留拒绝项，Classification的收益界多出配额项，常数与有限前缀界保守，因此没有同一默认配置同时达到两指标最优性的结论。"
+          }
+        },
+        "c7": {
+          "innovation": {
+            "status": "scored",
+            "score": 3.0,
+            "tier": 3,
+            "rationale": "冻结配对实验、同控制器 ALL 修正及新增强收益基准，主要检验本稿程序在指定场景的表现，并非新的统计推断原理。纯收益 F-R 的低均值伴随更重尾部、少数场景被 IMED 等击败，以及报告失败完整保留，给出了有组织的实证认识，但不足以跨4分的方法或机制门槛。扩展筛查仍使用已观察场景，不能当作新 holdout；运行规模、软件投入和重复的 BL 参数动作不增加创新层级。"
+          }
+        },
+        "overall": {
+          "innovation": {
+            "status": "scored",
+            "score": 5.7,
+            "tier": 2,
+            "rationale": "整体的核心增量是把持续可靠报告的累计成本变成可分析对象，并通过同环境广播队列与任务过期下的面积—收益成本分离，说明静态识别或常规收益—识别权衡未直接回答的动态维护障碍。ABM的受限中间区间及实际 F-CCP 接口使这一认识超出局部现象，支持较强的二级理论与方法创新；此判断基于主线相互作用，不由分项平均、相加或最高项决定。由于最坏面积部分大量沿用静态恢复、F-CCP并无一般面积约束下最优性、精细区间限于分离族，尚不足以称系统性解决该领域，更未达到改变基础问题观的8分门槛。"
+          }
+        }
+      },
+      "source_file": "rounds/innovation_round_01.json",
+      "source_sha256": "ad9e5828f9263e28b089a91b4ace84ebea55343a024ee301f89f27a9f91d24a0",
+      "verification_scope": {
+        "execution": "一次隔离上下文独立评分；未读取 rounds 中任何其他文件、旧 assessment、历史评审或聊天；未联网、未重新模拟、未修改稿件。",
+        "rules_read": [
+          "rules/SKILL.md.snapshot",
+          "rules/references/rubric.md.snapshot",
+          "rules/references/repeated-assessment.md.snapshot"
+        ],
+        "evidence_read": [
+          "evidence-packet.md",
+          "evidence-manifest.json",
+          "protocol.json",
+          "manuscript-excerpts.txt 全部2876行",
+          "snapshot/manuscript.tex.snapshot 主文缺段、概率工具、局部代理解、兼容端点、固定检查点构造、任意到达完成界、半恢复及一般面积下界接口",
+          "snapshot/experiments/fccp_frozen/src/flexible_ccp.py.snapshot",
+          "snapshot/experiments/fccp_frozen/src/flexible_engine.py.snapshot",
+          "snapshot/experiments/fccp_frozen/src/flexible_v2.py.snapshot",
+          "snapshot/experiments/fccp_frozen/src/ccp_primitives.py.snapshot",
+          "snapshot/experiments/regret_baseline_screen_2026-10-17/REPORT.md.snapshot",
+          "snapshot/experiments/regret_baseline_screen_2026-10-17/results/suite-summary.csv.snapshot",
+          "snapshot/experiments/regret_baseline_screen_2026-10-17/results/analysis-audit.json.snapshot"
+        ],
+        "checked_interfaces": "读取主文全部结果及相关广播、截断、固定无限轴、共享证据、概率成本、任意子集恢复、ABM和任意动作桥接证明；核对 F-CCP 源码中的单次观察、独立账本、失败处理、服务拒绝与代理规划。",
+        "limitations": "未独立逐行验算全部常数和全部补充证明，未访问最邻近论文原文而依据冻结包内已核查结论；未重算全部逐次原始实验数据。新颖性结论限于该冻结证据，不声称穷尽所有先作。"
+      },
+      "confidence": {
+        "level": "中",
+        "rationale": "当前模型、主结论、主要证明接口与实现已充分可见，c2/c4 的具体增量可以定位；边界主要在 c3 的新累计损失结果应算实质理论还是系统适配，以及 c5/c6 的具体构造是否超出成熟方法的直接组合。最邻近工作的所有推广范围并未独立全文核验，因此保留这一新颖性判断限制。",
+        "validation_state": "已核查主张及关键支持接口，未发现本轮足以推翻核心创新定位的明确反例；并非完整正确性审稿。"
+      },
+      "priority_validation": "优先对照冻结包的最强基线作一份保持相同观测与报告约束的精确归约：检验静态 ALL-epsilon/在线实验设计已有结果是否可直接推出同环境广播队列及临时任务中 k(a) log(k(a)/delta) 成本。若仅需常规代入即可推出，将下调主线的非直接性定位；若必须使用本文的累计兼容环境及过期任务论证，则可进一步稳固二级判断。"
+    },
+    {
+      "round_id": "innovation_round_02",
+      "context_id": "/root/innovation_round_02",
+      "packet_id": "sha256:a721e6f670e55962b16e1a8a98c3373e8e8ca6f693f3139a504f87c054427ed5",
+      "protocol_id": "sha256:9130f81d6331625669c89a2d0d03d84bb2e646f6b5179c28eae17715977bc538",
+      "scores": {
+        "c1": {
+          "innovation": {
+            "status": "scored",
+            "score": 5.3,
+            "tier": 2,
+            "rationale": "相对固定臂ALL-epsilon和既有regret—识别权衡，新增的是在相对最优边界随永久到达变化时，同时可靠地持续报告，并以边界带外累计未决臂时间收费的完整任务。该组织方式能区分广播阻塞与任务过期，并实际导出不同的信息成本结论，超过给已有双目标换名或直接迁移的4.0门槛。它仍沿用相对近优集合、序贯可靠性与机会成本的基础对象，未达到8.0概念突破；本项也不重复计入各定理的技术增量。"
+          }
+        },
+        "c2": {
+          "innovation": {
+            "status": "scored",
+            "score": 5.9,
+            "tier": 2,
+            "rationale": "静态ALL-epsilon已有未知最优参考对多个标签的共同影响，但本稿把这种影响沿给定到达轴转成加权信息队列，在一个固定基准环境中累积，而非相加彼此不相容的最坏实例。通过按期望样本数选择困难标签及队列忙期收费，得到对任意可靠策略的期望和固定正概率面积下界，提供超出标准换测度直接代入的可复用认识，接近6.0机制锚点。限制是队列刻画仍来自指定Bernoulli构造与常数阶下界，尚非一般实例的精确维护复杂度。"
+          }
+        },
+        "c3": {
+          "innovation": {
+            "status": "scored",
+            "score": 4.8,
+            "tier": 2,
+            "rationale": "同时恢复的log K代价和固定精度采样均有先例，新增内容是把其与累计报告面积及有限终点截断连接，给出任意批到达的匹配最坏阶，并区分终点计数类与固定无限轴的量词。固定轴必要条件、充分条件和稀疏突发反例形成新的维护可行性认识，超过简单移植单次样本复杂度的4.0门槛。最坏下界本身已在初始静态批次出现，且一般临界轴仍有对数间隙，因此尚不足以支持更深的统一机制定位。"
+          }
+        },
+        "c4": {
+          "innovation": {
+            "status": "scored",
+            "score": 6.2,
+            "tier": 2,
+            "rationale": "相对静态近优识别或既有regret—停止时间权衡，核心增量是新参考使旧符号任务过期，并以同一族、同一终点的两个面积预算证明快速服务逆平方成本与暂缓服务对数上界的分离。固定环境的非消失概率下界、schedule-information separation，以及任意子集恢复配合可预测激活新样本块的ABM中间区间，使这一机制具有实际理论推论，达到6.0关键机制锚点。其范围仍受分离窗口、预选精度和面积区间限制，暂缓端未匹配，ABM保留加性R0且校准用到族参数，未形成7.0所需的广泛统摄原则。"
+          }
+        },
+        "c5": {
+          "innovation": {
+            "status": "scored",
+            "score": 4.3,
+            "tier": 2,
+            "rationale": "相对保留历史的ALL-epsilon服务和静态成本敏感识别，本稿把移动相对边界下的候选—参考证书落实为带可观测指数价格的双坐标计划，结合边界暂停与每次只执行一观测的重规划，提供局部可复用的服务构造。该构造使参考与候选的证据成本共同进入选择，而非只按未决臂宽度服务；冻结的同控制器比较提供有限数值依据，支持较低第二级的4.0门槛。置信序列、逆平方根代理优化及收益采样工具本身不计新，现有理论主要依靠配额后备而不证明规划器的统计成本优势，因此尚未达到5.0以上的清晰能力突破。"
+          }
+        },
+        "c6": {
+          "innovation": {
+            "status": "scored",
+            "score": 4.7,
+            "tier": 2,
+            "rationale": "companion已有谱尺度与MC-MOSS工具，本稿新增的是允许任意实际动作、保留寿命样本计数的乐观指数差桥接，并据此用分离账本同时控制收益选择与证书服务。潜在前缀、实际选择计数和到达时钟的接口需重新论证，收益核探索不能耗尽证书账户，由此获得无覆盖事件条件化的regret保护及有拒绝项的完成界，超过直接援引原策略定理的4.0门槛。可靠标签、相位计数和最终有限臂完成中的基础步骤不重复计新，保守常数及预算拒绝仍限制实际面积保证，也未给默认Balanced同一配置的最优联合前沿。"
+          }
+        },
+        "c7": {
+          "innovation": {
+            "status": "scored",
+            "score": 2.7,
+            "tier": 3,
+            "rationale": "冻结配对实验、修正价格后的同控制器ALL比较和扩展纯regret筛查，提供了有关均值改善、尾部代价与失败路径的有用验证。其主要统计构造仍是既有模拟比较、配对分析与多重校正，尚未产生可独立复用的新推断原则或新机制识别方法，因此不跨4.0门槛。新增筛查使用已观察场景，F-R的纯收益优势不来自关闭的证书服务；均值、尾部和逐场景例外均保留，规模与实现投入不计作方法创新。"
+          }
+        },
+        "overall": {
+          "innovation": {
+            "status": "scored",
+            "score": 6.0,
+            "tier": 2,
+            "rationale": "整体主要增量是把持续可靠相对近优集合维护的成本落实为两个已论证机制：固定环境的广播信息阻塞，以及新参考使任务过期所带来的服务成本分离与部分中间区间。既有可靠置信序列加ALL-epsilon和固定服务混合虽能直接获得正确标签与保守完成，却不直接给出这些在同一环境累计的下界和过期任务成本规律，故当前核心贡献达到6.0关键机制层级，判断不由分项平均或机械取最大值得出。现有基础问题观仍延续既有序贯识别与收益权衡，且一般重叠到达、临界轴、统一因果前沿尚未解决，F-CCP也不继承ABM最优性，因此不支持7.0系统性突破或8.0基础概念创新。"
+          }
+        }
+      },
+      "source_file": "rounds/innovation_round_02.json",
+      "source_sha256": "0318a87378155ed0a63205debaf775db1ce9b8eacb8929628aa07f959662c038",
+      "verification_scope": {
+        "material_boundary": "仅使用指定冻结目录；未联网，未读取rounds中他人文件、历史assessment、旧评审或聊天；未修改稿件或重跑模拟。",
+        "rules_read": [
+          "rules/SKILL.md.snapshot",
+          "rules/references/rubric.md.snapshot",
+          "rules/references/repeated-assessment.md.snapshot"
+        ],
+        "evidence_read": [
+          "evidence-packet.md",
+          "evidence-manifest.json",
+          "protocol.json",
+          "evaluation-task.txt",
+          "manuscript-excerpts.txt（全部2876行）"
+        ],
+        "manuscript_verification": "读取摘录全部主文与各项证明接口；另从snapshot/manuscript.tex.snapshot补读主文167—176、1023—1063、1279—1286，代理解1539—1585及接口1810—1839。核查广播同环境与概率加强、面积截断和增长量词、寿命证据复用条件、快速/暂缓端点、固定环境概率代价、未知日程分离、任意子集恢复与ABM新样本块、任意动作桥接及双预算/服务拒绝的证明结构。",
+        "implementation_verification": [
+          "snapshot/experiments/fccp_frozen/src/flexible_ccp.py.snapshot（全文）",
+          "snapshot/experiments/fccp_frozen/src/flexible_engine.py.snapshot（全文）",
+          "snapshot/experiments/fccp_frozen/src/flexible_v2.py.snapshot（全文）",
+          "snapshot/experiments/fccp_frozen/src/ccp_primitives.py.snapshot（全文）"
+        ],
+        "empirical_verification": [
+          "主文冻结实验全部段落和表格",
+          "snapshot/experiments/regret_baseline_screen_2026-10-17/REPORT.md.snapshot（全文）",
+          "snapshot/experiments/regret_baseline_screen_2026-10-17/results/analysis-audit.json.snapshot（全文）"
+        ],
+        "limits": "未独立逐行验算完整补充证明、未重新执行统计或模拟、未核验全部原始逐次数据；邻近工作的结论以冻结证据包实际核验范围为限，不宣称排除所有未覆盖先作。"
+      },
+      "confidence": {
+        "innovation_judgment": "中",
+        "reason": "核心目标、邻近差别与重要证明接口足以支持当前第二级定位；c5处于局部方法创新与系统适配的相邻边界，且未联网补充近邻全文核验。",
+        "contribution_verification": "已检查定义、主定理、关键证明结构、实现和报告；不等于完成全部数学与数据独立复核。",
+        "independent_executions_in_this_file": 1,
+        "model_setting_limit": "沿用协议的父代理默认模型与可控设置；实际部署快照、temperature和seed未暴露。"
+      },
+      "priority_validation": {
+        "target": "c5的4.0门槛与整体理论增量的不可直接归约性",
+        "action": "在保持相同信息、寿命历史、报告标准、收益核和双预算下，明确写出最强成本敏感ALL-epsilon/统计设计替代器，并针对共享参考阻塞和过期任务给出定理映射或反例，再定位F-CCP的证书规划是否解决其无法直接处理的局部障碍。",
+        "decision_effect": "若已有替代器经标准映射即得到相同服务构造与全部有限预算能力，c5应归为第三级；若证实具体失败及F-CCP修复原则，则强化其低第二级定位。该核验不要求先证明完整Pareto最优性，也不把新模拟规模作为升档依据。"
+      }
+    },
+    {
+      "round_id": "innovation_round_03",
+      "context_id": "/root/innovation_round_03",
+      "packet_id": "sha256:a721e6f670e55962b16e1a8a98c3373e8e8ca6f693f3139a504f87c054427ed5",
+      "protocol_id": "sha256:9130f81d6331625669c89a2d0d03d84bb2e646f6b5179c28eae17715977bc538",
+      "scores": {
+        "c1": {
+          "innovation": {
+            "status": "scored",
+            "score": 4.8,
+            "tier": 2,
+            "rationale": "静态ALL-epsilon、到达臂收益比较及收益—识别双目标分别已有先例，本项的新内容是把可撤销成员报告、全时共同可靠性及边界带外累计未决臂时间组织为同一个持续决策问题。该成本使共同参考的广播阻碍与任务过期产生不同于末端识别的新结论，因而超出单纯换场景或双目标命名；但目标集合和推断逻辑延续已有框架，尚非基础概念突破。"
+          }
+        },
+        "c2": {
+          "innovation": {
+            "status": "scored",
+            "score": 5.8,
+            "tier": 2,
+            "rationale": "未知最大均值同时影响多臂分类已见于静态ALL-epsilon；新增的是在一个固定基准环境中，由任意到达轴的信息积压选取困难候选，再按受影响报告数累计收费，并给出非消失概率下界。这解决了逐时选不同困难环境不能合法累加的核心障碍，形成可复用的广播队列论证，明显超过4.0门槛；仍局限于特定一候选替代族，未形成一般到达轴的匹配信息复杂度，故未到7.0的统摄程度。"
+          }
+        },
+        "c3": {
+          "innovation": {
+            "status": "scored",
+            "score": 4.9,
+            "tier": 2,
+            "rationale": "同时恢复的对数代价与固定精度检查点属于既有工具，静态初始批次已经产生最坏下界，不能把平方量级和对数因子均归为到达机制原创。新增的有限终点面积量词、截断的高概率匹配阶，以及固定无限轴与逐终点总数类的区分和突发反例，使已有样本复杂度结论不能原封不动替代本项；这是明确但较局部的理论增量，临界固定轴仍有对数缺口。"
+          }
+        },
+        "c4": {
+          "innovation": {
+            "status": "scored",
+            "score": 6.1,
+            "tier": 2,
+            "rationale": "既有收益—识别权衡主要收费于最终识别或持续估计，本项抓住相对边界移动会使旧符号任务过期的机制，在同一族和终点上证明快速维护的逆平方成本与暂缓端的对数上界，并以固定环境概率下界排除仅由罕见路径造成的解释。ABM进一步用可选择恢复子集、激活秩误差分配及新样本块，在明确中间区间把面积预算转为必要服务数，形成超过5.0的一项可复用机制认识；其窗口分离、预选精度、面积校准信息和加性收益项限制了推广，暂缓端也未匹配，尚不足7.0。"
+          }
+        },
+        "c5": {
+          "innovation": {
+            "status": "scored",
+            "score": 4.3,
+            "tier": 2,
+            "rationale": "置信序列、共享历史、收益核混合和成本敏感识别均已有来源；本项较局部的新构造是把当前相对边界任务转为带参考选择的两端点证书成本，结合边界暂停及单步重规划，把有限服务用于当前能推进的报告。冻结的同控制器ALL比较为这种具体程序提供了有限预算能力证据，因此可支持局部方法增量跨过4.0，但优势尚不能归结为新的最优信息分配原则；闭式解只优化固定中心连续代理，最强成本敏感既有设计的同信息对照仍限制判断。"
+          }
+        },
+        "c6": {
+          "innovation": {
+            "status": "scored",
+            "score": 4.8,
+            "tier": 2,
+            "rationale": "谱尺度、MC-MOSS潜在前缀和时钟工具来自companion，兼容端点及置信事件标签有效性本身属于标准组合。可计入的是对实际任意动作和持续历史重证的指数缺口桥接，以及据此把任意收益核与认证的两类支出分别置于可观察预算内，获得不附加置信失败损失的无条件保护；这解决了收益采样与服务相互改写历史后的接口问题，达到局部实质构造层级。完成和面积界保留拒绝项，Balanced未同时得到指定面积最优保证，且没有相对独立TS的真实额外regret界，故不能上升为一般联合最优框架。"
+          }
+        },
+        "c7": {
+          "innovation": {
+            "status": "scored",
+            "score": 2.6,
+            "tier": 3,
+            "rationale": "冻结配对比较、失败保留、尾部分析以及新增强基准筛查较充分地展示了收益均值、尾部风险和维护成本的具体权衡，但其统计设计主要沿用标准模拟、配对区间和多重比较方法。纯收益增益在认证关闭时获得，不能作为证书调度机制的新理论证据；新增筛查又使用已看过的场景，故当前贡献主要是有内容的验证和适配，未展示超过4.0门槛的新统计原则。"
+          }
+        },
+        "overall": {
+          "innovation": {
+            "status": "scored",
+            "score": 6.0,
+            "tier": 2,
+            "rationale": "整体主要增量在于把可靠持续集合报告的成本识别为受共同参考广播与临时任务过期共同支配的信息服务问题，并通过同环境累计下界、增长限制及分离族的可达服务区间给出相互支撑的理论认识；这一核心突破超出把ALL-epsilon与收益核并列使用。整体达到关键机制型理论/框架创新的6.0锚点，依据并非分项均值或取最高项；算法的局部代理、借入谱刻画及实验均不额外叠加抬分。现有结论仍依赖特定替代结构和分离窗口，一般重叠到达的因果权衡未获统一解决，基础集合目标及识别逻辑也未改变，因此不足7.0系统性突破或8.0基础范式门槛。"
+          }
+        }
+      },
+      "source_file": "rounds/innovation_round_03.json",
+      "source_sha256": "b5e5805a8498daa9b7992701351ce1870afc4727e0ea22dc6e105e9f9d5bf5a5",
+      "verification_scope": {
+        "execution": "一次独立隔离评价；仅使用本批冻结材料；未读取历史评分、其他轮次结果或联网补充材料。",
+        "read_rules": [
+          "rules/SKILL.md.snapshot",
+          "rules/references/rubric.md.snapshot",
+          "rules/references/repeated-assessment.md.snapshot"
+        ],
+        "read_evidence": [
+          "evidence-packet.md",
+          "evidence-manifest.json",
+          "protocol.json",
+          "evaluation-task.txt",
+          "manuscript-excerpts.txt全部内容"
+        ],
+        "additional_checks": [
+          "snapshot/manuscript.tex.snapshot中主文遗漏行、两端点闭式规划与兼容证明、部分恢复证明及面积约束下界接口",
+          "snapshot/experiments/fccp_frozen/src/flexible_ccp.py.snapshot",
+          "snapshot/experiments/fccp_frozen/src/flexible_engine.py.snapshot",
+          "snapshot/experiments/fccp_frozen/src/flexible_v2.py.snapshot",
+          "snapshot/experiments/fccp_frozen/src/ccp_primitives.py.snapshot",
+          "snapshot/experiments/regret_baseline_screen_2026-10-17/REPORT.md.snapshot",
+          "snapshot/experiments/regret_baseline_screen_2026-10-17/results/suite-summary.csv.snapshot",
+          "snapshot/experiments/regret_baseline_screen_2026-10-17/results/analysis-audit.json.snapshot"
+        ],
+        "limits": "最邻近原始工作的结论使用冻结证据包给出的核查摘要，未独立阅读全文；没有对全部附录逐行验算，没有重新运行实验或读取逐次原始结果，也未扩大检索范围。当前没有确认推翻核心新贡献的反例，以上评分不是可靠性评分或完整证明认证。"
+      },
+      "confidence": {
+        "level": "中",
+        "rationale": "核心定义、主定理与关键证明已直接读取，能够区分新增累计/过期机制与既有静态恢复、置信序列及companion输入；局部规划器对最强既有成本敏感设计的不可归约程度，以及更广泛先作是否覆盖持续报告，仍受固定文献范围限制。",
+        "most_sensitive_objects": [
+          "c1",
+          "c5",
+          "c6"
+        ],
+        "validation_state": "核心证明接口有可检查支持；未完成所有证明和近邻范围的独立完备核验。"
+      },
+      "priority_validation": {
+        "target": "核心方法与框架相对最强既有成本敏感识别构造的增量",
+        "action": "在保留单次真实抽样、只见当前到达、全时可靠报告及相同预算的条件下，明确构造保留历史的ALL-epsilon加成本敏感服务基线，并逐条检查它能否直接推出同环境广播累计下界、任务过期的同终点成本分离及激活中间区间；对不能推出的一步给出具体失败条件。",
+        "decision_impact": "若三类核心结论可由已有统一结果直接得到，应下调核心框架定位；若只能得到有效性和保守完成，则能巩固第二级机制创新，并把算法局部组合的创新与核心理论分开。"
+      }
+    },
+    {
+      "round_id": "innovation_round_04",
+      "context_id": "/root/innovation_round_04",
+      "packet_id": "sha256:a721e6f670e55962b16e1a8a98c3373e8e8ca6f693f3139a504f87c054427ed5",
+      "protocol_id": "sha256:9130f81d6331625669c89a2d0d03d84bb2e646f6b5179c28eae17715977bc538",
+      "scores": {
+        "c1": {
+          "innovation": {
+            "status": "scored",
+            "score": 4.7,
+            "tier": 2,
+            "rationale": "相对静态ALL-epsilon及已有收益—识别双目标，新增的是永久到达下可撤回正标签、全时可靠性与边界带外累计未决臂时间组成的持续维护协议，而不是到达模型或双目标本身。该协议把一次参考不确定性影响多项报告、以及旧任务因边界移动而过期纳入同一可比较成本对象，并确实导出广播与临时任务结果，因而超过标准适配的4.0门槛、接近明确框架创新的5.0锚点。其基本对象仍是既有相对近优集合与序贯证据，尚无改变基础识别逻辑的8.0级概念突破。"
+          }
+        },
+        "c2": {
+          "innovation": {
+            "status": "scored",
+            "score": 5.7,
+            "tier": 2,
+            "rationale": "静态ALL-epsilon已经包含未知最大均值影响多臂分类的困难；本项新增在同一低均值基准环境、任意固定到达轴上，以后缀信息容量队列累积受影响报告面积，并给出不消失概率下界。按期望计数选困难标签避免把不兼容环境的逐时最坏情况相加，是现有终点复杂度不能直接代替的可复用分析原则，明确跨过4.0并超过5.0的一般新结论锚点。队列仍针对特定共同参考子族，尚未刻画一般实例的精确信息工作量，故未按6.0以上的广泛关键界限突破定位。"
+          }
+        },
+        "c3": {
+          "innovation": {
+            "status": "scored",
+            "score": 4.8,
+            "tier": 2,
+            "rationale": "相对已有同时恢复及固定臂分类复杂度，本项完成高概率累计面积的有限终点截断匹配，并以任意批到达的检查点上界连接联合次线性条件，所增不是log K或固定精度工具。将部分恢复、累计报告成本与固定无限到达轴的量词联系起来，并给出满足K_t=o(sqrt(t))仍失败的稀疏突发轴，提供超过直接代入的局部理论认识，达到4.0并接近5.0。主要最坏下界已由初始静态批次实现，固定轴临界条件仍有对数间隙，因而不能把指数边界当作一般到达几何的完整刻画。"
+          }
+        },
+        "c4": {
+          "innovation": {
+            "status": "scored",
+            "score": 6.2,
+            "tier": 2,
+            "rationale": "与固定臂收益—BAI、固定绝对阈值识别及长期公平服务不同，本项揭示奖励流不变而相对边界移动可使精细符号任务过期；在同族同终点比较面积预算时，迅速服务的匹配d^-2成本与暂缓服务的log(1/d)上界形成明确机制分离。共同环境的概率加强、按任意子集恢复导出的中间预算下界以及使用激活秩和新样本块的ABM构造，使这不是仅对已有识别界换参数，跨过4.0且达到6.0关键机制锚点。快速上界依赖所选H，暂缓端未匹配，中间区间采用更强分离族且保留R0(T)、校准需m和H，尚不支持7.0的普遍方法原则或8.0的基础范式变化。"
+          }
+        },
+        "c5": {
+          "innovation": {
+            "status": "scored",
+            "score": 3.8,
+            "tier": 3,
+            "rationale": "相对保留历史置信序列的ALL-epsilon服务混合及成本敏感识别，F-CCP把自排除区间、边界暂停、参考选择、两坐标逆平方根半径规划和单步重规划组织成较深入的实用适配。该局部规划的闭式解来自标准凸优化，报告有效性与保守完成由既有置信序列和配额后备保证；当前证据尚未展示规划本身克服一个上述基线无法处理的核心统计障碍，因此定位为第三级顶部而不跨4.0。该判断不要求完整Pareto最优定理，匹配ALL对照的均值改善支持程序的实用价值，但尚不足把代理成本下降解释成新的统计信息分配原则。"
+          }
+        },
+        "c6": {
+          "innovation": {
+            "status": "scored",
+            "score": 4.8,
+            "tier": 2,
+            "rationale": "与只能分析索引最大化动作的MC-MOSS输入及既有基线安全预算相比，本文把原始潜在前缀、实际拉取计数与到达时钟收费重接到任意合法动作，令可观测索引差成为奖励核和证书服务均可使用的无条件保护接口。该桥接配合分离账本避免奖励探索耗尽认证预算，并与保留拒绝项的服务保证构成可复用的局部设计原则，超过直接声称继承原算法定理的4.0门槛、接近5.0。谱尺度和谱下界属于companion，完成及面积部分主要是配额与相位记账，且Balanced保留拒绝、Classification另付Qcap，故不能将这些不同配置拼成联合最优前沿。"
+          }
+        },
+        "c7": {
+          "innovation": {
+            "status": "scored",
+            "score": 2.8,
+            "tier": 3,
+            "rationale": "冻结配对套件和扩展基准补充了相同控制器下证书调度的有限预算收益，以及F-R较低均值伴随更重尾部、特定场景被IMED等超过的实证认识，属于有信息量的系统验证。其设计和分析采用成熟配对、同时区间与消融手段，新增纯收益筛查也未揭示独立的新统计机制或解决现有方法的核心障碍，故未跨4.0。原场景并非一般处于窄理论范围，扩展筛查是已观察场景上的回顾扩展，且全部认证服务关闭，不能将其均值优势另算作证书规划创新或一般支配证据。"
+          }
+        },
+        "overall": {
+          "innovation": {
+            "status": "scored",
+            "score": 6.0,
+            "tier": 2,
+            "rationale": "整体的实质增量是持续可靠维护中共享参考造成的累计阻塞、以及参考改进使临时识别任务过期这两个成本机制，并有固定环境下界、最坏面积和特定族端点及ABM区间加以落实；不是已有双目标、置信序列或算法部件的数量。它们使相同原始奖励流下为何要付出不同服务成本得到可复用且有上下界支撑的解释，达到第二级6.0关键机制锚点；这一整体判断来自主结论的相互关系，不取分项均值或最大值。现有统一性仍限于特定分离族与保守实施接口，一般重叠未知到达下的联合权衡及规划器的统计分配原则尚未解决，故不支持7.0的系统性领域突破，更不跨8.0。"
+          }
+        }
+      },
+      "source_file": "rounds/innovation_round_04.json",
+      "source_sha256": "1f4fe47446d4acee33e90f1a31401c40177ab50db366b3864e3fcd241a9811db",
+      "verification_scope": {
+        "rules_read": [
+          "rules/SKILL.md.snapshot",
+          "rules/references/rubric.md.snapshot",
+          "rules/references/repeated-assessment.md.snapshot"
+        ],
+        "packet_materials_read": [
+          "evaluation-task.txt",
+          "evidence-packet.md",
+          "evidence-manifest.json",
+          "protocol.json",
+          "manuscript-excerpts.txt（全文，含全部所给主文和证明接口）"
+        ],
+        "additional_snapshot_ranges_read": {
+          "snapshot/manuscript.tex.snapshot": [
+            "167-176",
+            "1539-1585",
+            "1810-1839",
+            "2312-2403",
+            "2495-2573"
+          ]
+        },
+        "implementation_and_experiments_read": [
+          "snapshot/experiments/fccp_frozen/src/flexible_ccp.py.snapshot",
+          "snapshot/experiments/fccp_frozen/src/flexible_engine.py.snapshot",
+          "snapshot/experiments/fccp_frozen/src/flexible_v2.py.snapshot",
+          "snapshot/experiments/fccp_frozen/src/ccp_primitives.py.snapshot",
+          "snapshot/experiments/regret_baseline_screen_2026-10-17/REPORT.md.snapshot",
+          "snapshot/experiments/regret_baseline_screen_2026-10-17/results/analysis-audit.json.snapshot",
+          "snapshot/experiments/regret_baseline_screen_2026-10-17/results/suite-summary.csv.snapshot"
+        ],
+        "checked_interfaces": "核对广播队列的同环境逐时累积、有限截断和稀疏突发量词、部分及任意子集恢复、指定H下快速上界、概率加强、旧上端点复用、ABM新块和激活预算、任意动作实际计数桥接及不同配置的账本/完成条件；读取代码对应的代理规划与失败规则，并核对实验摘要的均值和例外。",
+        "literature_scope": "最邻近原始工作的目标、条件与结论以冻结证据包L1-L10及基础工具说明为限；未联网，也未独立取得这些原文的完整推广范围。",
+        "limitations": "未逐行独立重证全部定理，未重跑模拟或检查全部逐次结果；未读取任何历史创新评分、旧assessment、其他轮次输出或聊天；未修改稿件。"
+      },
+      "confidence": {
+        "overall": "中",
+        "reason": "主张、关键证明接口、实施程序及实验限制均有可核查冻结材料，足以区分核心理论增量和工具适配；但近邻比对受限于冻结核验摘要，不能据此排除所有等价先作，亦未完成全部证明的独立验算。",
+        "boundary_uncertainty": "主要边界是c5的程序组合是否已凭局部证书规划和匹配实验达到4.0；本轮判断其核心构造仍由成熟区间与成本敏感规划给出，实质方法增量尚不足。c2与c4的创新程度应与其受限子族范围同时解释。",
+        "result_validation_state": "已读取并检查主要机制和证明接口，未发现已确认推翻核心结果的新反例；这不是完整可靠性审稿或所有实验的独立复现。"
+      },
+      "priority_validation": {
+        "target": "c5在3.9与4.0之间的边界",
+        "action": "在相同证据、奖励核、双预算、参考选择和服务控制下，对比现有成本敏感区间分配的最强合理基线与F-CCP两坐标证书规划，给出一个可推导的小型到达族或机制性消融，核对其是否系统减少达成同一标签/面积目标所需的真实服务成本。",
+        "decision_relevance": "若可指出传统分配失败的具体相互作用及规划修复原则，可把c5提升为局部实质方法创新；若优势主要来自温度、价格或后备配额，应保留系统适配定位。这不以完整前沿定理为前提，也不把未来验证预记为当前分数。"
+      }
+    },
+    {
+      "round_id": "innovation_round_05",
+      "context_id": "/root/innovation_round_05",
+      "packet_id": "sha256:a721e6f670e55962b16e1a8a98c3373e8e8ca6f693f3139a504f87c054427ed5",
+      "protocol_id": "sha256:9130f81d6331625669c89a2d0d03d84bb2e646f6b5179c28eae17715977bc538",
+      "scores": {
+        "c1": {
+          "innovation": {
+            "status": "scored",
+            "score": 5.3,
+            "tier": 2,
+            "rationale": "相对静态 ALL-epsilon 及既有收益—识别双目标，本稿保留未知最优参考与永久到达，新增可撤回正标签的持续报告协议和边界带外累计未决臂时间，使共享参考阻塞与任务过期成为可比较的成本机制。它以随后得到的队列界和成本分离说明超出了给既有目标改名，达到明确框架创新；但基本成员参数、有效证据逻辑和双目标思想均有先例，尚不构成8.0门槛所需的基础问题观突破，也未形成7.0锚点的普遍统摄性框架。"
+          }
+        },
+        "c2": {
+          "innovation": {
+            "status": "scored",
+            "score": 5.6,
+            "tier": 2,
+            "rationale": "静态 ALL-epsilon 已含未知最大参考影响多个分类的结构，本稿的增量是在一个固定基准环境内，用期望样本数选择困难候选，将任意到达轴的信息欠账转成按受影响报告数加权的累计队列下界，并加强为非消失概率界。该同环境、沿时间累积的论证不能由分别选取每时刻最坏环境直接替代，跨过4.0门槛且较完整地揭示广播机制；但其基本工具仍为单坐标换测度，所刻画的是特定共同参考族，尚未给出一般实例的精细维护复杂度。"
+          }
+        },
+        "c3": {
+          "innovation": {
+            "status": "scored",
+            "score": 4.6,
+            "tier": 2,
+            "rationale": "固定臂同时恢复及其log K代价已有来源，最坏下界本身也由首轮静态批次实现；新增内容是将该恢复障碍和终点截断转成匹配的高概率累计面积阶，并与任意到达的检查点上界、固定无限轴的增长必要条件和稀疏突发反例相接。它提供了静态终点识别保证没有直接陈述的局部维护界限，支持4.0以上，但关键统计代价并非新的同时检验原理，且一般临界到达轴仍留对数间隙，因此低于深入揭示新机制的6.0锚点。"
+          }
+        },
+        "c4": {
+          "innovation": {
+            "status": "scored",
+            "score": 6.1,
+            "tier": 2,
+            "rationale": "既有收益—BAI、成本敏感停止和固定阈值分类结果没有直接处理本稿中由新参考使旧相对成员任务过期的服务选择；本稿在同族同终点给出快速端逆平方成本与暂缓端对数上界的分离，并以单环境概率加强和另一个分离族上的ABM中间区间把机制落实为可复用的成本认识。任意子集恢复及按激活秩分配新样本块，使部分任务服务的匹配区间超过常规检查点组合，符合6.0的关键机制突破。提升幅度限于充分分离窗口与指定随d变化的终点，暂缓端无匹配下界且ABM保留R0(T)，因而不能提升为一般未知重叠到达的系统性前沿。"
+          }
+        },
+        "c5": {
+          "innovation": {
+            "status": "scored",
+            "score": 4.5,
+            "tier": 2,
+            "rationale": "相对全历史置信序列加ALL-epsilon重算和固定份额服务，本稿给出具体的参考选择、带价格两端点证书代理规划、单次观察后重规划以及边界带暂停，并把它们接入自适应服务与共享终身统计。该程序在保留同奖励核、价格和双预算的修正ALL比较下提供有限预算的新服务能力，支持局部方法创新而无需完整Pareto定理；但凸代理的闭式解本身是标准优化，其半径预测及单参考选择未获信息分配最优性支持，现有理论主要依靠配额后备，故仅支持4级中段。"
+          }
+        },
+        "c6": {
+          "innovation": {
+            "status": "scored",
+            "score": 4.8,
+            "tier": 2,
+            "rationale": "到达谱尺度和MC-MOSS集中工具来自companion，置信序列可靠性及兼容端点也主要沿用既有逻辑；本稿实际增量是对任意合法动作重证潜在前缀与不重复真实计数的桥接，使两个独立指数差账本可保护任意奖励核，并保留拒绝次数地连接服务与完成。这个可复用接口处理了奖励探索可能耗尽认证账户的障碍，超过直接把原索引最大化算法定理代入的适配。其常数保守、Classification与Balanced拥有的保证不同，既无真实基线额外regret界也无默认配置的最优联合前沿，故尚不到更深层机制的6.0锚点。"
+          }
+        },
+        "c7": {
+          "innovation": {
+            "status": "scored",
+            "score": 3.0,
+            "tier": 3,
+            "rationale": "冻结配对实验、修正同控制器ALL比较及新增九算法族筛查，明确了F-R的均值收益、尾部代价和例外，提供较系统的适配与验证证据。其统计推断和比较原则均为既有工具，新增筛查在已查看场景上执行且认证关闭，尚未独立揭示能够跨越4.0门槛的新统计机制，也不能把纯收益优势记为证书调度创新。"
+          }
+        },
+        "overall": {
+          "innovation": {
+            "status": "scored",
+            "score": 6.0,
+            "tier": 2,
+            "rationale": "整篇当前贡献由持续相对集合维护中的两个核心机制支撑：共同参考不确定性沿到达轴广播累积，以及新参考使精细成员任务过期并改变必要收益成本；同环境队列论证、固定族成本分离和ABM区间已将这些机制变成具体理论认识。依据这些相互关联的核心贡献独立定位为6.0的关键机制突破，而非平均分项、累加实验或取最高项；F-CCP使问题具有可执行方法，但其局部代理与companion谱输入不额外计新。当前结果仍受分离族、窗口与配置条件限制，没有改变ALL-epsilon的基础参数或证据逻辑，也未给出一般重叠到达的统一前沿，因此不支持7.0以上的系统性突破或8.0的基础范式创新。"
+          }
+        }
+      },
+      "source_file": "rounds/innovation_round_05.json",
+      "source_sha256": "a10facae24b5571fb2b3dbce8077cb762802e0de4c5dd70d2cb493f11cfec56e",
+      "verification_scope": {
+        "basis": "当前成果；innovation单维；一次隔离上下文独立评价。",
+        "read": [
+          "evaluation-task.txt、冻结SKILL、rubric及repeated-assessment规则全文",
+          "evidence-packet.md、evidence-manifest.json、protocol.json",
+          "manuscript-excerpts.txt全部内容及完整主文；另补读原稿167-176、1279-1287、1539-1585、1810-1839、2312-2403、2495-2573的省略段落与证明接口",
+          "四个已列源代码快照全文：flexible_ccp.py、flexible_engine.py、flexible_v2.py、ccp_primitives.py",
+          "新增regret筛查REPORT全文、suite-summary.csv及analysis-audit.json；检查paired-vs-FR的表结构与204行计数（含12行F-R自身比较）"
+        ],
+        "checks": "清单中全部11个成果快照的SHA256与manifest一致；核对主要定理的量词、族、终点、拒绝项、加性项和方法归属，未发现足以推翻核心结论的已确认反例。",
+        "limits": "未联网、未读历史评分或其他轮次、未重新模拟、未修改稿件；未独立逐行验算全部证明或读取全部逐次实验数据。最近邻原始工作的精确范围依固定证据包核查结论，未另行查阅外部原文；不将未找到先作视为不存在先作。"
+      },
+      "confidence": {
+        "novelty_judgment": "中",
+        "reason": "固定包明确区分了已有基础工具、companion输入与本稿新增机制，主文和关键证明接口足以支持分项性质判断；c5相对最强成本敏感识别基线的不可归约程度，以及一般到达结构下机制的覆盖范围，仍会影响层级内精细定位。",
+        "result_verification": "已核查定义、主要结果、关键证明接口、实现和实验摘要；不是全部证明与原始数据的完整独立复验。"
+      },
+      "priority_validation": {
+        "task": "在同一持续报告目标、全历史有效证据、同信息与同预算下，直接比较F-CCP证书规划与强成本敏感ALL-epsilon或实验设计替代，分离参考选择、边界暂停及价格规划各自增加的服务能力。",
+        "decision_relevance": "若这些替代以相同代价直接得到同等能力，c5会趋近系统组合适配；若可定位一个其不能解决而本稿构造稳定解决的共享参考障碍，则可加强c5的实质方法创新定位。此项是后续优先验证，本轮未执行新增实验。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "action": "build",
+  "command": [
+    "D:\\anaconda3\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "reproduce.py",
+    "--build"
+  ],
+  "cwd": "D:\\博士学习\\科研\\git\\MAB-AA\\.resubmission_release_check_20261017T051309Z_e2a781\\ucbaa_jasa_resubmission_2026-10-15",
+  "exit_code": 0,
+  "seconds": 37.234,
+  "stdout": "RUN build-combined-manuscript\n{\n  \"status\": \"passed\",\n  \"action\": \"build\",\n  \"output\": \"D:\\\\博士学习\\\\科研\\\\git\\\\MAB-AA\\\\.resubmission_release_check_20261017T051309Z_e2a781\\\\ucbaa_jasa_resubmission_2026-10-15\\\\_reproduced\\\\20261017T051344Z-aa8be8bc\",\n  \"frozen_inputs_unchanged\": true\n}\n",
+  "stderr": ""
+}

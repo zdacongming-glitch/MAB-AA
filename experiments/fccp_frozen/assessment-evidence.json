@@ -1,0 +1,27 @@
+{
+  "scope": "F-CCP incremental method, proofs and this round experiments; excludes rescoring Codex manuscript and excludes re-counting prior frontier results",
+  "files": {
+    "theory.md": "16d75dce4bab7e77403660fd8c54c94d4b6a2b353dc9b7d1f72fa5633ec4b630",
+    "研究报告_FCCP可调版本.md": "d001091510c6da641086048ede06295000501e8c0c66ef5aa96603903436bcf7",
+    "src/flexible_ccp.py": "7286f226f49a8fc3e0ca0d53c8f42dacc92f360e04d74dad337c771a5478ab7a",
+    "src/flexible_v2.py": "4b3f895b0e6352fd660283bc75b1e2e5bb90eb5268ef627c23386862b416dac7",
+    "protocols/holdout-freeze.json": "7d4b8536869250ce3b19ad5f15ddf388c16ed17ca058a94171b694ad29229668",
+    "protocols/matched-all-freeze.json": "69bac0a73fb6f3af7525e61036673ff26dbccc25ef7345148c83ada1892c9689",
+    "results/holdout-summary.csv": "b996f557f56db86013d7d3770fb37a11dc1a4f650188c589e0da48d56c2bf97c",
+    "results/pure-regret-paired.csv": "1c3559abc1802a06d466d279bdc726fd45de812d7f0b65cb4f22bbc0f91a1257",
+    "results/joint-paired.csv": "98d5321fcdc060763869cbe5a99e9f93918127c07d37167813988ad519504037",
+    "results/analysis-checks.json": "283013becb5afbe45afb7b40ddeabfeb0c0d9cee82f960fb837dd003312bc885",
+    "audit.md": "0cd8cdb88b412e5e865755b8b78cac70ae63f0d5fc3f87d9adb6a0d95587500f"
+  },
+  "sources": [
+    "https://github.com/zdacongming-glitch/statistical-innovation-assessment",
+    "https://proceedings.mlr.press/v139/jin21d.html",
+    "https://proceedings.mlr.press/v48/wu16.html",
+    "https://proceedings.mlr.press/v65/agarwal17b.html",
+    "https://proceedings.mlr.press/v89/degenne19a.html",
+    "https://proceedings.mlr.press/v258/cho25a.html",
+    "https://proceedings.mlr.press/v19/garivier11a.html"
+  ],
+  "verification": "Primary bibliographic pages/abstracts and precise method scope; not exhaustive nearest-paper proof audit. New theory internally audited; no independent proof agent.",
+  "packet_id": "d86c1316dfa03fc08869265d13811bf8d32223b1c691d751dbb3f8bd532be091"
+}

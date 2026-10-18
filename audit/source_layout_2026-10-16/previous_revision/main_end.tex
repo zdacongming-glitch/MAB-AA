@@ -1,0 +1,55 @@
+\section{Discussion}
+\label{sec:discussion}
+
+Reliable maintenance has costs that reward allocation alone does not
+measure. An uncertain arrival can obstruct many positive reports, while
+a later improvement can end an earlier fine classification task. The
+common-reference lower bound and the repeated-update construction
+isolate these effects. The matching worst-schedule area bound answers a
+different question: its lower bound is already attained by a static
+initial batch. The corresponding growth consequences depend on whether
+the guarantee concerns one infinite schedule or a uniform terminal-count
+class.
+
+Checkpoint-UCB is an explicit attainability construction with a
+predetermined reporting precision. It reuses accumulated evidence and
+keeps all arrived arms eligible for rewards. Its upper bounds describe
+achievable statistical costs, but do not imply competitive constants at
+moderate budgets. In the numerical study the finer checkpoints never
+produced a determinate label, and the coarser configuration was worse
+than the retained-history identification adaptation in both displayed
+costs in two environments. Practical comparisons must therefore match
+the reporting task and required service level, as well as reward cost.
+
+On the specified repeated-update family, rapid maintenance has matching
+expected-regret and joint-quantile orders. The deferred endpoint supplies
+an upper bound at a larger area budget. A matching deferred converse,
+the frontier at intermediate budgets, and achievable guarantees under
+general overlapping arrivals remain unresolved. Automatic precision
+selection also needs a valid confidence construction; choosing a
+favorable checkpoint after inspecting its observations is outside the
+fixed-precision guarantee. Mechanism experiments that separate evidence
+reuse from service intensity and boundary-band work would help explain
+finite-budget performance.
+
+The supplement gives compatible-window truncations and a general
+information-allocation relaxation as necessary conditions, together with
+intermediate service configurations. It also proves eventual exact
+classification for a separate revisable, multiresolution procedure when
+arrivals stop, the final arm set is finite, and no arm lies on the
+membership boundary. That consistency statement has different
+assumptions and does not apply to fixed checkpoints. Contextual
+information, delayed observations, and changing reward laws would require
+further analysis.
+
+\section*{Data and code availability}
+The accompanying project contains the simulation configuration, 5,760
+run-level records, shared-stream construction, implementation, and
+plotting code used in this article. The configuration and recorded source
+hashes identify the experiment versions; computational details are given
+in the supplement. These are simulated data. A public repository or
+permanent archive URL has not been specified in this manuscript.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

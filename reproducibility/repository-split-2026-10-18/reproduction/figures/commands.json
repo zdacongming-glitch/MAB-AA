@@ -1,0 +1,42 @@
+{
+  "started_utc": "20261018T133007Z",
+  "action": "figures",
+  "suite": "fccp",
+  "scope": "isolated portable reproduction",
+  "workspace": "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133007Z-38f3d94a",
+  "commands": [
+    {
+      "name": "figures-fccp-readonly",
+      "command": [
+        "D:\\anaconda3\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133007Z-38f3d94a\\paper\\revision2\\analysis\\reanalyze_fccp.py",
+        "--release-only"
+      ],
+      "cwd": "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133007Z-38f3d94a\\paper",
+      "log": "logs\\figures-fccp-readonly.log",
+      "exit_code": 0,
+      "elapsed_seconds": 26.953
+    },
+    {
+      "name": "figures-checkpoint-readonly",
+      "command": [
+        "D:\\anaconda3\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133007Z-38f3d94a\\paper\\figures\\gen_fig_performance.py",
+        "--figures-only"
+      ],
+      "cwd": "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133007Z-38f3d94a\\paper",
+      "log": "logs\\figures-checkpoint-readonly.log",
+      "exit_code": 0,
+      "elapsed_seconds": 18.016
+    }
+  ],
+  "success": true,
+  "frozen_inputs_unchanged": true,
+  "protected_files_checked": 622
+}

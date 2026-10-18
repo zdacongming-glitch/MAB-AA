@@ -1,0 +1,17 @@
+scenario,method,regret,area,fail
+dev_updates,ALLplus-spec-0.25,241.35499999999945,14052.5,0.0
+dev_updates,ALLplus-spec-0.5,375.24749999999875,11651.625,0.0
+dev_updates,ALLplus-spec-1.0,622.9300000000071,11219.875,0.0
+dev_updates,ALLplus-spec-2.0,1079.2487500000486,10200.125,0.0
+dev_updates,CCP-spec-0.25,233.4312499999987,13516.125,0.0
+dev_updates,CCP-spec-0.5,377.99124999999566,10911.75,0.0
+dev_updates,CCP-spec-1.0,637.1162500000017,9600.375,0.0
+dev_updates,CCP-spec-2.0,789.4225000000131,9267.375,0.0
+dev_updates,ST2plus-spec-0.25,247.02874999999997,15235.375,0.0
+dev_updates,ST2plus-spec-0.5,379.27749999999907,12037.5,0.0
+dev_updates,ST2plus-spec-1.0,621.3525000000118,10774.25,0.0
+dev_updates,ST2plus-spec-2.0,689.0925000000193,9986.5,0.0
+dev_updates,plan-spec-0.25,230.97874999999894,14248.625,0.0
+dev_updates,plan-spec-0.5,371.37374999999514,11642.75,0.0
+dev_updates,plan-spec-1.0,627.7587500000043,9897.625,0.0
+dev_updates,plan-spec-2.0,785.7162500000157,9583.0,0.0

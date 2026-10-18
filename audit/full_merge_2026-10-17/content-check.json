@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "scope": "Independent read-only source-preservation audit. This does not revalidate mathematical correctness or simulation performance.",
+  "supplement_body_exact_preservation_after_removing_added_toc_wrapper": true,
+  "body_normalization": "Only strip surrounding whitespace and remove the two inserted tocdepth writes, the new Supplementary contents title, and one inserted page-enlargement command (\\enlargethispage{\\baselineskip}) after the original Data and code availability heading. No prose, mathematical content, results, labels, citations, tables, figures, algorithms, or proofs are normalized away.",
+  "checks": {
+    "labels": {
+      "before_count": 145,
+      "after_count": 145,
+      "ordered_equal": true,
+      "multiset_equal": true,
+      "missing": [],
+      "added": []
+    },
+    "numbered_sections": {
+      "before_count": 24,
+      "after_count": 24,
+      "ordered_equal": true,
+      "multiset_equal": true,
+      "missing": [],
+      "added": []
+    },
+    "references": {
+      "before_count": 119,
+      "after_count": 119,
+      "ordered_equal": true,
+      "multiset_equal": true,
+      "missing": [],
+      "added": []
+    },
+    "citations": {
+      "before_count": 23,
+      "after_count": 23,
+      "ordered_equal": true,
+      "multiset_equal": true,
+      "missing": [],
+      "added": []
+    },
+    "figure_resources": {
+      "before_count": 5,
+      "after_count": 5,
+      "ordered_equal": true,
+      "multiset_equal": true,
+      "missing": [],
+      "added": [],
+      "all_paths_exist": true
+    },
+    "display_math_blocks": {
+      "before_count": 205,
+      "after_count": 205,
+      "ordered_byte_content_equal": true
+    },
+    "table_blocks": {
+      "before_count": 11,
+      "after_count": 11,
+      "ordered_byte_content_equal": true
+    },
+    "longtable_blocks": {
+      "before_count": 5,
+      "after_count": 5,
+      "ordered_byte_content_equal": true
+    },
+    "figure_blocks": {
+      "before_count": 5,
+      "after_count": 5,
+      "ordered_byte_content_equal": true
+    },
+    "algorithm_blocks": {
+      "before_count": 3,
+      "after_count": 3,
+      "ordered_byte_content_equal": true
+    },
+    "theorem_blocks": {
+      "before_count": 12,
+      "after_count": 12,
+      "ordered_byte_content_equal": true
+    },
+    "proposition_blocks": {
+      "before_count": 6,
+      "after_count": 6,
+      "ordered_byte_content_equal": true
+    },
+    "lemma_blocks": {
+      "before_count": 4,
+      "after_count": 4,
+      "ordered_byte_content_equal": true
+    },
+    "corollary_blocks": {
+      "before_count": 3,
+      "after_count": 3,
+      "ordered_byte_content_equal": true
+    },
+    "proof_blocks": {
+      "before_count": 17,
+      "after_count": 17,
+      "ordered_byte_content_equal": true
+    }
+  },
+  "single_document_contract": {
+    "\\documentclass": 1,
+    "\\begin{document}": 1,
+    "\\end{document}": 1,
+    "\\bibliographystyle": 1,
+    "\\bibliography{": 1
+  },
+  "removed_cross_document_dependencies": true,
+  "bibliography_resource_unchanged": true,
+  "deliberate_packaging_changes": [
+    "One shared preamble; add longtable from the original supplement.",
+    "Remove xr-hyper and both externaldocument imports.",
+    "Replace the second document/title with an in-document supplementary-material boundary.",
+    "Reset supplemental counters and prefix sections/equations/figures/tables/algorithms with S; prefix supplement page numbers S-.",
+    "Prefix PDF anchor identifiers with supp. to distinguish reset counters.",
+    "Retain only supplementary entries in the displayed table of contents through tocdepth switches.",
+    "Consolidate the two bibliographies into one shared bibliography at the end."
+  ],
+  "hashes": {
+    "audit\\full_merge_2026-10-17\\before\\manuscript.tex": "ff6002ac7b3878807a8eeafbe348a900f102c5b33849297db32c5efba7cabdd9",
+    "audit\\full_merge_2026-10-17\\before\\supplement.tex": "e326ce32cf36aaa3206ab4c811a957e3ee5a840ee2c74051452bb8bcc22ea2c9",
+    "manuscript.tex": "8224019a719e477cb697cf2c7134a56a09425bb76e62a279d7806dfca3cad76d"
+  },
+  "main_body_exact_preservation_after_removing_added_toc_switch_and_page_adjustment": true,
+  "final_pagination_adjustments": {
+    "inserted_enlargethispage_count": 1,
+    "location": "Immediately after original Data and code availability heading",
+    "no_forced_clearpage_before_final_bibliography": true
+  }
+}

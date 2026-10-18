@@ -1,0 +1,22 @@
+\documentclass[11pt]{article}
+\input{preamble}
+\setstretch{1.08}
+\externaldocument[][nocite]{manuscript}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetheorem}{S\arabic{theorem}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\title{Supplement to ``The temporal geometry of bandits with arriving arms''}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+This supplement uses the deterministic arrival model and notation of the main article unless a result explicitly introduces a different experiment. All main risk bounds concern expected pseudo-regret at deterministic endpoints. Constants are universal unless a dependence is stated. The proofs use the original independent potential reward streams; they do not condition on realized old observations and then regard those observations as fresh.
+\tableofcontents
+\input{sections/S1_spectral_proofs}
+\input{sections/S2_geometry_proofs}
+\input{sections/S3_secondary_proofs}
+\input{theory/new_results}
+\input{theory/random_positive_results}
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

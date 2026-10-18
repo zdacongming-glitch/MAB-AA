@@ -1,0 +1,22 @@
+Title:           The Cost of Reliable Near-Optimal Set Maintenance with Arriving Arms
+Subject:         
+Keywords:        
+Author:          Deqi Zheng, Xiaoyang Xu, Yuhong Yang
+Creator:         LaTeX with hyperref
+Producer:        pdfTeX-1.40.26
+CreationDate:    Sat Oct 17 12:40:43 2026 �й���׼ʱ��
+ModDate:         Sat Oct 17 12:40:43 2026 �й���׼ʱ��
+Custom Metadata: yes
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           88
+Encrypted:       no
+Page size:       612 x 792 pts (letter)
+Page rot:        0
+File size:       1177116 bytes
+Optimized:       no
+PDF version:     1.5

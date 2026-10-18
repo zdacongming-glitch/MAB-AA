@@ -1,0 +1,24 @@
+{
+  "before_sha256": {
+    "manuscript.tex": "ff6002ac7b3878807a8eeafbe348a900f102c5b33849297db32c5efba7cabdd9",
+    "supplement.tex": "e326ce32cf36aaa3206ab4c811a957e3ee5a840ee2c74051452bb8bcc22ea2c9",
+    "manuscript.pdf": "ccab89ac013f93c93bff55f2c3467ed1440245556a2b4d896d5e43dec90c1756",
+    "supplement.pdf": "2b3799ed583df75d025609bbea9692140441a025ed8f07ccfe2eb1a825b34046",
+    "references.bib": "7535ef2e456e5a4d8775ec41b3a753389c462500d2ef2818bdc7bb7e96dc6310",
+    "README.md": "930c222b67d2e13e60c1f04bab780851088c8fda4ea63d6419a939f6e7c383f1",
+    "build.ps1": "f3afdbfd0aa1436661aa5c8fc1ec3a6f49aa5a75b83caad3cf0214d170f3a406",
+    "revision2/build_papers.py": "95d3507c28a0e22b6890f6e5db5a8e4df50ec4e4395b3c32d7307ae8c73da1c2",
+    "revision2/integrate.py": "22eb867ccc5ff639a974541cde1398a0e18cc9e545cd02ae0b21368cb459d1b0",
+    "revision2/check_sources.py": "40c8a1556f26ba68eacc790f0b189ff8ad9a064b64b8b77ab367b9e1913ddfcb"
+  },
+  "retained_labels": 145,
+  "numbered_sections": 24,
+  "manuscript_lines": 4787,
+  "bibliographies": 1,
+  "editable_entry": "manuscript.tex",
+  "archival_source_directory": "D:\\博士学习\\科研\\git\\MAB-AA\\ucbaa_jasa_resubmission_2026-10-15\\audit\\full_merge_2026-10-17\\before",
+  "manuscript_sha256": "8224019a719e477cb697cf2c7134a56a09425bb76e62a279d7806dfca3cad76d",
+  "pdf_sha256": "651cf2bc35ba1bd5e90556ad70a8aaee51dba373ae80735cf9f7870323807f54",
+  "pdf_pages": 88,
+  "status": "passed"
+}

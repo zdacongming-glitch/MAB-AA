@@ -1,0 +1,116 @@
+{
+  "started_utc": "20261018T133010Z",
+  "action": "smoke",
+  "suite": "fccp",
+  "scope": "isolated portable reproduction",
+  "workspace": "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133010Z-05a64172",
+  "commands": [
+    {
+      "name": "smoke-prescribed-interface",
+      "command": [
+        "D:\\anaconda3\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133010Z-05a64172\\paper\\revision2\\analysis\\check_fccp_interface.py"
+      ],
+      "cwd": "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133010Z-05a64172\\paper",
+      "log": "logs\\smoke-prescribed-interface.log",
+      "exit_code": 0,
+      "elapsed_seconds": 20.329
+    },
+    {
+      "name": "smoke-driver-study_v2",
+      "command": [
+        "D:\\anaconda3\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133010Z-05a64172\\paper\\experiments\\fccp_frozen\\src\\study_v2.py",
+        "--help"
+      ],
+      "cwd": "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133010Z-05a64172\\paper\\experiments\\fccp_frozen\\src",
+      "log": "logs\\smoke-driver-study_v2.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.141
+    },
+    {
+      "name": "smoke-driver-study_matched",
+      "command": [
+        "D:\\anaconda3\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133010Z-05a64172\\paper\\experiments\\fccp_frozen\\src\\study_matched.py",
+        "--help"
+      ],
+      "cwd": "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133010Z-05a64172\\paper\\experiments\\fccp_frozen\\src",
+      "log": "logs\\smoke-driver-study_matched.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.156
+    },
+    {
+      "name": "smoke-driver-run_study",
+      "command": [
+        "D:\\anaconda3\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133010Z-05a64172\\paper\\experiments\\ccp_frozen\\run_study.py",
+        "--help"
+      ],
+      "cwd": "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133010Z-05a64172\\paper\\experiments\\ccp_frozen",
+      "log": "logs\\smoke-driver-run_study.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.203
+    },
+    {
+      "name": "smoke-driver-test_run",
+      "command": [
+        "D:\\anaconda3\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133010Z-05a64172\\paper\\experiments\\frontier_frozen\\test_run.py",
+        "--help"
+      ],
+      "cwd": "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133010Z-05a64172\\paper\\experiments\\frontier_frozen",
+      "log": "logs\\smoke-driver-test_run.log",
+      "exit_code": 0,
+      "elapsed_seconds": 2.157
+    },
+    {
+      "name": "smoke-driver-run_experiments",
+      "command": [
+        "D:\\anaconda3\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133010Z-05a64172\\paper\\experiments\\run_experiments.py",
+        "--help"
+      ],
+      "cwd": "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133010Z-05a64172\\paper\\experiments",
+      "log": "logs\\smoke-driver-run_experiments.log",
+      "exit_code": 0,
+      "elapsed_seconds": 1.297
+    },
+    {
+      "name": "smoke-driver-ce_five_algo_runner",
+      "command": [
+        "D:\\anaconda3\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133010Z-05a64172\\paper\\experiments\\original_submission_archive\\source\\ce_five_algo_runner.py",
+        "--help"
+      ],
+      "cwd": "D:\\博士学习\\科研\\git\\MAB-AA\\.repository_split_20261018\\github-export\\_reproduced\\20261018T133010Z-05a64172\\paper\\experiments\\original_submission_archive\\source",
+      "log": "logs\\smoke-driver-ce_five_algo_runner.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.984
+    }
+  ],
+  "success": true,
+  "frozen_inputs_unchanged": true,
+  "protected_files_checked": 622
+}

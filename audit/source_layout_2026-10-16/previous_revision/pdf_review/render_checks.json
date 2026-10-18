@@ -1,0 +1,14 @@
+{
+  "manuscript": {
+    "pages": 20,
+    "empty_pages": [],
+    "page_boundary_violations": [],
+    "sha256": "b60951471ad4676eb119852cc322df9ff4a7915c407ddcf304624795c0f918fc"
+  },
+  "supplement": {
+    "pages": 20,
+    "empty_pages": [],
+    "page_boundary_violations": [],
+    "sha256": "a5fdd3b4d3f91217156542df50308120fb97da2a3a7913f053f460bf156b1ea8"
+  }
+}

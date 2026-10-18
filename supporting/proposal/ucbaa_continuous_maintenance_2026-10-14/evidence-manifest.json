@@ -1,0 +1,140 @@
+{
+  "date": "2026-10-14",
+  "version": "1.0",
+  "inputs": [
+    {
+      "name": "mab_aa_main.pdf",
+      "bytes": 1430137,
+      "sha256": "44c19acf42498b41179ae52d2a0951a004c76c834b2eb244c22fc1b05135fb8e"
+    },
+    {
+      "name": "manuscript(1).pdf",
+      "bytes": 563569,
+      "sha256": "1124af1a652dbaeca1e0a38369c4067018f0e5f88824b02afa110c4e8222f9f7"
+    },
+    {
+      "name": "supplement(1).pdf",
+      "bytes": 435258,
+      "sha256": "24ca1de62e95f6fb7024a3ab073bdbdf99ffb496b9d79dcb105506382f744fea"
+    },
+    {
+      "name": "论文重构方案_持续到达下的相对近优集合维护与文献审计_2026-10-11.md",
+      "bytes": 71473,
+      "sha256": "5be74f60f2d0ed6b5c51b49b73abc0a7867329e141dd4f667b11577573258dd7"
+    },
+    {
+      "name": "Part-II-Instance-Sensitive-研究记录.md",
+      "bytes": 39964,
+      "sha256": "4aff3d01657b9cee740150998dd2f33c282608d737ef018275148aa950a21abf"
+    }
+  ],
+  "proof_protocol": {
+    "repo": "zdacongming-glitch/prove-stat-ml-probability-theorems",
+    "skill_blob_sha": "b5f029c87ea097629b639523941262afc1d9bf3b",
+    "proof_protocol_blob_sha": "efc0fdcd8e60a737c15efc9ffb90604bc8611daa",
+    "domain_routes_blob_sha": "cf247df2989b5cc88d5eb4abf81a244755d838da",
+    "adversarial_audit_blob_sha": "301aaac7e2582a233c84cac395fbfa2e29f98c86"
+  },
+  "innovation_protocol": {
+    "repo": "zdacongming-glitch/statistical-innovation-assessment",
+    "skill_blob_sha": "2317897f5c3a0e6018758e791dced6f00bb0a472",
+    "rubric_blob_sha": "327861caa36ff15ac141d128d53360bb439b50bf",
+    "repetition_blob_sha": "1bcdbafcea92d0ac0e2c3b2940c4373e69003e0f",
+    "execution_method": "single_current_context_assessment",
+    "runtime_model_snapshot": null,
+    "settings": {},
+    "context_isolated_from_prior_scores": false
+  },
+  "sources": [
+    {
+      "citation": "Mason et al. 2020",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2020/file/edf0320adc8658b25ca26be5351b6c4a-Paper.pdf",
+      "verification_scope": "模型、主要定理和相关工作范围；不声称完整证明逐行审计"
+    },
+    {
+      "citation": "Yang, Tan, Jin 2026",
+      "url": "https://www.jmlr.org/papers/volume27/24-1612/24-1612.pdf",
+      "verification_scope": "模型及 Theorems 3,5,7 陈述"
+    },
+    {
+      "citation": "Cho et al. 2025",
+      "url": "https://proceedings.mlr.press/v258/cho25a.html",
+      "verification_scope": "正式出版信息与摘要；不凭摘要推断全部具体算法细节"
+    },
+    {
+      "citation": "Jamieson and Jain 2018",
+      "url": "https://papers.nips.cc/paper_files/paper/2018/hash/82cadb0649a3af4968404c9f6031b233-Abstract.html",
+      "verification_scope": "正式摘要、ALL-epsilon 论文中的对应引用；最近重开失败，保留先前核验等级"
+    },
+    {
+      "citation": "Kaufmann et al. 2016",
+      "url": "https://jmlr.org/papers/v17/kaufman16a.html",
+      "verification_scope": "经典换测度来源；本研究自行证明所用版本"
+    },
+    {
+      "citation": "Malloy and Nowak 2014",
+      "url": "https://arxiv.org/pdf/1212.1801",
+      "verification_scope": "原作者全文、模型与 coordinate-wise 适用限制"
+    },
+    {
+      "citation": "Cheshire et al. 2020",
+      "url": "https://proceedings.mlr.press/v125/cheshire20a.html",
+      "verification_scope": "正式页面与阈值识别损失范围，不等同累计 regret"
+    },
+    {
+      "citation": "Degenne et al. 2019",
+      "url": "https://proceedings.mlr.press/v89/degenne19a.html",
+      "verification_scope": "正式摘要与收益/判定/决策时间目标"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "README.md",
+      "bytes": 3314,
+      "sha256": "9dbbfadafdf0e9045bf77054c4b05a6a37918ea0708940c9087c014284f929ed"
+    },
+    {
+      "name": "持续集合维护_理论与完整证明.md",
+      "bytes": 59933,
+      "sha256": "c466b41eb4382d6cb71d81cba0f8cd549946e3a2dca7b75986ff0d12c05521fd"
+    },
+    {
+      "name": "proof-audit.md",
+      "bytes": 4310,
+      "sha256": "a8098a0518d19d48509eb220231eb9e7ef31bc8d76ebcde38597a90613743df7"
+    },
+    {
+      "name": "cp_ucb_aa.py",
+      "bytes": 6201,
+      "sha256": "272815cbb45e2de1a99f849bd4718892ef6bc010d081e0eaf2ec45b21c746ef9"
+    },
+    {
+      "name": "diagnostics.py",
+      "bytes": 6294,
+      "sha256": "7b372d380dface317aad854fc713214207e797cb3f027f7e82d43f258654034e"
+    },
+    {
+      "name": "diagnostics-results.json",
+      "bytes": 2484,
+      "sha256": "19ae84a624bf740309225f30497f1306aa48a53f10bd82fe3c100ce4ea2ac90d"
+    },
+    {
+      "name": "implementation-sanity.json",
+      "bytes": 1511,
+      "sha256": "ae471288439a4e1c6b6404336ee72eb302d544a03c477a4192e1718a91608d8d"
+    },
+    {
+      "name": "assessment-record.json",
+      "bytes": 9092,
+      "sha256": "e55fcece762719425738739386980f94d3cdccef7cb203fc609f21926286e97f"
+    },
+    {
+      "name": "format-validation.json",
+      "bytes": 295,
+      "sha256": "2f651c643b1c436e16cc42f1a2b86325fac50de243673ea1718acbdec5ec6060"
+    }
+  ],
+  "independent_review_performed": false,
+  "original_files_modified": false,
+  "note": "SHA values identify bytes, not proof correctness or independence of evaluation."
+}

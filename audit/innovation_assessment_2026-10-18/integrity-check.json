@@ -1,0 +1,21 @@
+{
+  "checked_at_utc": "2026-10-18T08:53:31.727832+00:00",
+  "frozen_and_live_sources_unchanged": true,
+  "source_count": 10,
+  "rules_and_task_unchanged": true,
+  "executed_rounds": 10,
+  "summarizer_source": "D:\\博士学习\\科研\\git\\MAB-AA\\ucbaa_jasa_resubmission_2026-10-15\\audit\\innovation_assessment_2026-10-18\\rules\\summarize_assessments.py",
+  "summarizer_sha256": "3780348aef69d95f43999d59e441f2d063a7ca13c453fdb1e05b87fa709f4ce1",
+  "round_files": {
+    "rounds/innovation_round_01.json": "ad9e5828f9263e28b089a91b4ace84ebea55343a024ee301f89f27a9f91d24a0",
+    "rounds/innovation_round_02.json": "0318a87378155ed0a63205debaf775db1ce9b8eacb8929628aa07f959662c038",
+    "rounds/innovation_round_03.json": "b5e5805a8498daa9b7992701351ce1870afc4727e0ea22dc6e105e9f9d5bf5a5",
+    "rounds/innovation_round_04.json": "1f4fe47446d4acee33e90f1a31401c40177ab50db366b3864e3fcd241a9811db",
+    "rounds/innovation_round_05.json": "a10facae24b5571fb2b3dbce8077cb762802e0de4c5dd70d2cb493f11cfec56e",
+    "rounds/innovation_round_06.json": "9ae2edc4c95d36748cb250f3c5b7c10c1fb746d0c009a58d57880a4a73884c75",
+    "rounds/innovation_round_07.json": "88177330c2e48b04130cfdbef12f94dbbe640c5bbf62a9562f75949e1971a3e9",
+    "rounds/innovation_round_08.json": "add35e42745b289252fa71d365557686b452000f0ab4a251c72bb41bb784d16c",
+    "rounds/innovation_round_09.json": "d1b18a043e86a3d998d7c8a5d4f4c51a8cf559d1bb924c451fd2b4cf0c3d93c8",
+    "rounds/innovation_round_10.json": "3e5b2f6ee8f52ca4f296f61633369c30bd4376a78ba799b49abfa5bf188533e3"
+  }
+}

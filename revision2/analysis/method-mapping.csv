@@ -1,0 +1,26 @@
+code,method_id,display_name,analysis_status,core,priority,adaptive,beta_r,beta_s,temperature,scheduler,prior,pfloor,k0,price
+M01,UCB1,UCB1,original frozen main configuration,10,0.0,False,,,1.0,50,1.0,0.02,4.0,0.1
+M02,UCB-conservative,UCB-conservative,original frozen main configuration,0,0.0,False,,,1.0,50,1.0,0.02,4.0,0.1
+M03,Growing-MOSS,Growing-MOSS,original frozen main configuration,1,0.0,False,,,1.0,50,1.0,0.02,4.0,0.1
+M04,MC-MOSS,MC-MOSS,original frozen main configuration,2,0.0,False,,,1.0,50,1.0,0.02,4.0,0.1
+M05,MC-MOSS-clipped,MC-MOSS-clipped,original frozen main configuration,7,0.0,False,,,1.0,50,1.0,0.02,4.0,0.1
+M06,Thompson,Thompson,original frozen main configuration,3,0.0,False,,,1.0,50,1.0,0.02,4.0,0.1
+M07,KL-UCB,KL-UCB,original frozen main configuration,4,0.0,False,,,1.0,50,1.0,0.02,4.0,0.1
+M08,F-R,F-R,original frozen main configuration,3,0.0,False,16.0,,0.5,50,1.0,0.02,4.0,0.1
+M09,F-R-TS-exact,F-R-TS-exact,original frozen main configuration,3,0.0,False,,,1.0,50,1.0,0.02,4.0,0.1
+M10,Cold-TS-unprotected,Cold-TS-unprotected,original frozen main configuration,3,0.0,False,,,0.5,50,1.0,0.02,4.0,0.1
+M11,Warm-TS-guard,Warm-TS-guard,original frozen main configuration,11,0.0,False,16.0,,0.5,50,1.0,0.02,4.0,0.1
+M12,CCP-original,CCP-original,original frozen main configuration,7,0.5,False,0.0,1.0,1.0,13,1.0,0.02,4.0,0.1
+M13,F-auto-0.1,F-auto-0.1,original frozen main configuration,3,0.1,True,16.0,1.0,0.5,50,1.0,0.02,4.0,0.1
+M14,F-auto-0.3,F-auto-0.3,original frozen main configuration,3,0.3,True,16.0,1.0,0.5,50,1.0,0.02,4.0,0.1
+M15,F-auto-0.6,F-auto-0.6,original frozen main configuration,3,0.6,True,16.0,1.0,0.5,50,1.0,0.02,4.0,0.1
+M16,F-auto-0.9,F-auto-0.9,original frozen main configuration,3,0.9,True,16.0,1.0,0.5,50,1.0,0.02,4.0,0.1
+M17,F-area,F-area,original frozen main configuration,3,1.0,False,16.0,,0.5,50,1.0,0.02,4.0,0.1
+M18,F-all-service-budgeted,F-all-service-budgeted,original frozen main configuration,3,1.0,False,16.0,1.0,0.5,50,1.0,0.02,4.0,0.1
+M19,F-fixed-0.6,F-fixed-0.6,original frozen main configuration,3,0.6,False,16.0,1.0,0.5,50,1.0,0.02,4.0,0.1
+M20,F-auto-0.6-no-service-cap,F-auto-0.6-no-service-cap,original frozen main configuration,3,0.6,True,16.0,,0.5,50,1.0,0.02,4.0,0.1
+M21,F-auto-0.6-TS,F-auto-0.6-TS,original frozen main configuration,3,0.6,True,16.0,1.0,1.0,50,1.0,0.02,4.0,0.1
+M22,ALL-auto-0.6,ALL-auto-0.6,superseded controller diagnostic,3,0.6,True,16.0,1.0,0.5,1,1.0,0.02,4.0,0.1
+M23,ALL-area,ALL-area,original frozen main configuration,3,1.0,False,16.0,,0.5,1,1.0,0.02,4.0,0.1
+M24,ALL-original-budget,ALL-original-budget,original frozen main configuration,7,0.5,False,0.0,1.0,1.0,1,1.0,0.02,4.0,0.1
+M25,ALL-auto-costmatched,ALL-auto-costmatched,corrected comparator,3,0.6,True,16.0,1.0,0.5,1,1.0,0.02,4.0,0.1

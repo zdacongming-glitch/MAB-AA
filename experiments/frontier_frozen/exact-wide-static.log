@@ -1,0 +1,19 @@
+layer 1 states 4 total 5
+layer 2 states 10 total 15
+layer 3 states 20 total 35
+layer 4 states 35 total 70
+layer 5 states 72 total 142
+layer 6 states 158 total 300
+layer 7 states 326 total 626
+layer 8 states 605 total 1231
+layer 9 states 1056 total 2287
+layer 10 states 1736 total 4023
+layer 11 states 2736 total 6759
+layer 12 states 4129 total 10888
+a 0 success False r None time 36.9
+a 1 success False r None time 72.6
+a 2 success False r None time 108.4
+a 3 success False r None time 142.5
+a 4 success False r None time 178.0
+a 5 success False r None time 213.5
+a 6 success False r None time 248.4

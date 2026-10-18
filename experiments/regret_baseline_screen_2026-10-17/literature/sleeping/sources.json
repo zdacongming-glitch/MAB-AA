@@ -1,0 +1,38 @@
+[
+  {
+    "file": "kleinberg2008_sleeping.pdf",
+    "url": "https://www.cs.cornell.edu/~rdk/papers/colt08.pdf",
+    "size": 180092,
+    "sha256": "2f39be60c4639fd5ea634e624256024d23ee94a92921f27ce9e64acf1407ebf6"
+  },
+  {
+    "file": "nguyen2024_sleeping.pdf",
+    "url": "https://proceedings.mlr.press/v238/nguyen24d/nguyen24d.pdf",
+    "size": 494135,
+    "sha256": "ac83bbf52833a4395669112a3ee36b6ed956dec40411c176bb7075160426a914"
+  },
+  {
+    "file": "saha2020_sleeping.pdf",
+    "url": "https://proceedings.mlr.press/v119/saha20a/saha20a.pdf",
+    "size": 500141,
+    "sha256": "351bb3a135c4075aca979c815a9ef6ee54593ca74828f69ccbacacc19f3dafb0"
+  },
+  {
+    "file": "chatterjee2017_sleeping_ts.pdf",
+    "url": "https://raw.githubusercontent.com/mlresearch/r15/main/assets/chatterjee17a/chatterjee17a.pdf",
+    "size": 523119,
+    "sha256": "e2222c64fb9815adcf9448f3bafb08a742713a4fcc5f9d6b44820d9826a73c20"
+  },
+  {
+    "file": "gaillard2023_internal.pdf",
+    "url": "https://proceedings.mlr.press/v206/gaillard23a/gaillard23a.pdf",
+    "size": 2819186,
+    "sha256": "df79b0a7e78aab71b81240d06d8124bd32541868dabca9ab334aa76d39368503"
+  },
+  {
+    "file": "kanade2009_sleeping_fpl.pdf",
+    "url": "https://proceedings.mlr.press/v5/kanade09a/kanade09a.pdf",
+    "size": 927027,
+    "sha256": "40f9ea1a956dbb4134515a67228ca744f7569d801a30ee8dd68c12bedb49af87"
+  }
+]

@@ -1,0 +1,128 @@
+\section{Capacity, scalar summaries and stability}
+\subsection{Feasible fractional allocations}
+The necessity of \eqref{eq:occupancy} follows by counting the available slots of arms with lifetime at most $h$. For sufficiency, order the arms increasingly by lifetime. At the step for arm $i$, all previously assigned mass lies in the suffix of length $H_i$, because its arms have shorter lifetimes. The total previous mass plus $n_i$ is at most $H_i$ by the corresponding constraint. There is therefore enough unused capacity in that suffix to assign $n_i$. Induction constructs the fractional schedule. The same argument works with whole slots when all $n_i$ are integers.
+
+\begin{proof}[Proof of Theorem~\ref{thm:capacity}]
+For any feasible $n$, let $a_\ell=\sum_{i\in G_\ell}n_i$. This is at most $b_\ell$, either by the suffix constraint or, if $b_\ell>T$, by the total-horizon constraint. Since $\phi(x)\le x$ and $\phi(x)\le\sqrt x$, Cauchy--Schwarz gives
+\[
+ \sum_{i\in G_\ell}\phi(n_i)
+ \le\min\{a_\ell,\sqrt{k_\ell a_\ell}\}\le s_{\ell,T}.
+\]
+Summing proves $\cC_T\le\cS_T$.
+
+For the reverse comparison set $n_i=b_\ell/(4k_\ell)$ for $i\in G_\ell$, for every nonempty group. Fix an integer suffix $h$. All arms with $H_i\le h$ belong to groups with upper endpoints at most $b_{\max}<2h$, including the group $b_0=1$. Counting the entire groups only increases their total demand, and
+\[
+ \sum_{i:H_i\le h}n_i\le\frac14\sum_{b_\ell\le b_{\max}}b_\ell
+ <\frac{b_{\max}}2<h.
+\]
+The allocation is feasible. Its contribution in group $\ell$ is
+\[
+ k_\ell\phi\left(\frac{b_\ell}{4k_\ell}\right)
+ =\min\{b_\ell/4,\sqrt{k_\ell b_\ell}/2\}\ge s_{\ell,T}/4.
+\]
+The minimax comparisons follow directly from Theorem~\ref{thm:main}. Empty competitor sets give zero throughout.
+\end{proof}
+
+\subsection{Hull and dual calculations}
+\begin{proof}[Proof of Proposition~\ref{prop:hull}]
+For a direct construction, from the current vertex $(r_{b-1},H_{(r_{b-1})})$ choose the largest $r>r_{b-1}$ minimizing
+\[
+ \frac{H_{(r)}-H_{(r_{b-1})}}{r-r_{b-1}}.
+\]
+The first slope is positive. If the next slope were smaller, the slope to its endpoint from the previous vertex would be smaller too, contrary to the choice of the previous minimum. The choice of the largest minimizing index removes redundant collinear vertices. Thus the slopes are positive and nondecreasing. Minimality also places each chord below all intermediate points. The allocation in \eqref{eq:hull-slopes} is feasible, with equality in its prefix constraint at every vertex.
+
+Take a supergradient $p_b$ of $\phi$ at $q_b$ as specified after Proposition~\ref{prop:hull}. At the corner $q_b=1$, the value one is a valid supergradient. These supergradients are nonincreasing. Put $p_{B+1}=0$, $\lambda_{r_b}=p_b-p_{b+1}\ge0$, and zero elsewhere. If $i$ belongs to block $b$, then $\sum_{r\ge i}\lambda_r=p_b$. Concavity gives, for every feasible $n$,
+\begin{align*}
+ \sum_i\{\phi(n_i)-\phi(n_i^*)\}
+ &\le\sum_i p_i(n_i-n_i^*)\\
+ &=\sum_r\lambda_r\left(\sum_{i\le r}n_i-\sum_{i\le r}n_i^*\right)\\
+ &=\sum_r\lambda_r\left(\sum_{i\le r}n_i-H_{(r)}\right)\le0.
+\end{align*}
+The third line uses tightness only where the multiplier is nonzero. This proves optimality without strict concavity or uniqueness.
+
+Direct one-dimensional maximization on $[0,1]$ and $[1,\infty)$ gives $g(c)=\sup_{x\ge0}\{\phi(x)-cx\}$ with the formula in the main article. For any $\lambda\ge0$, set $c_i=\sum_{r\ge i}\lambda_r$. The inequality $\phi(n_i)\le c_in_i+g(c_i)$ and the prefix constraints give the upper dual objective in \eqref{eq:dual}. For the multipliers just constructed, each $c_i$ is a supergradient at $n_i^*$, so equality holds in the conjugate inequality. Complementary tightness also holds. This supplies an attaining dual certificate and proves exact equality.
+
+After sorting, the usual monotone stack removes a middle point whenever the last two slopes cease to increase. Each point enters and leaves the stack at most once. This proves the stated arithmetic operation count.
+\end{proof}
+
+\subsection{The lifetime fixed point}
+\begin{proof}[Proof of Theorem~\ref{thm:fixed-point}]
+When $M\ge1$, $Q_T\ge1$. Put $r=\lceil Q_T\rceil$. If $r>T$, then $\Gamma_T\le T<r$. Otherwise every arm with $H_i>r$ belongs to a group with $b_\ell>Q_T$. This group cannot be saturated, since then $s_{\ell,T}=b_\ell>Q_T$. Therefore
+\[
+ V_T(r)\le\sum_{\ell:b_\ell>Q_T}k_\ell b_\ell
+ =\sum_{\ell:b_\ell>Q_T}s_{\ell,T}^2\le Q_T^2\le r^2.
+\]
+This proves $\Gamma_T\le\lceil Q_T\rceil\le2Q_T$.
+
+Conversely, set $r=\Gamma_T$ and $m=\lceil\log_2r\rceil$. The small groups satisfy
+\[
+ \sum_{\ell\le m}s_{\ell,T}^2\le\sum_{\ell\le m}4^\ell
+ <\frac{16}3r^2.
+\]
+All lifetimes in groups $\ell>m$ exceed $r$, and $b_\ell<2H_i$ there. Hence
+\[
+ \sum_{\ell>m}s_{\ell,T}^2\le\sum_{\ell>m}k_\ell b_\ell
+ \le2V_T(r)\le2r^2.
+\]
+The total is less than $9r^2$, proving $Q_T\le3\Gamma_T$. Cauchy--Schwarz and nonnegativity give $1\le\cS_T^2/Q_T^2\le L+1$. Combining with Theorem~\ref{thm:main} gives the effective-scale statement.
+
+For the final refinement, the small-group sum is less than $4r$, while at most $(L-m)_+$ large groups have squared sum at most $2r^2$. Thus
+\[
+ \cS_T\le4r+r\sqrt{2(L-m)_+}
+ \le C r\sqrt{1+\log(T/r)}.
+\]
+The comparison uses a universal constant, including the case $r=T$.
+\end{proof}
+
+For the family in \eqref{eq:separation}, group $j$ has $4^jH_j=T$ and $4^j\le H_j$, so its cost is $\sqrt T$. Summing the costs and their squares yields both equalities in that display. Equation~\eqref{eq:QGamma} then yields $\Gamma_T\asymp\sqrt{mT}$. In the comparison schedule, the $m+1$ old competitors contribute $\sqrt{(m+1)T}$ and the last-round competitors contribute one. Its squared spectral norm has the same order as before. This verifies both the separation and the assertion about $(K_T,\Gamma_T)$.
+
+For a general sufficiently large endpoint $T$, choose the largest $16^m\le T$ and place the same experiment in the last $16^m$ rounds, keeping only the anchor before that. The competitor lifetimes do not change and $m\asymp\log T$. Together with the upper comparison in Theorem~\ref{thm:fixed-point}, this proves that the largest possible order of $\cS_T/\Gamma_T$ is $\sqrt{\log(eT)}$.
+
+\subsection{Exact capacity sensitivity}
+\begin{proposition}\label{prop:stability}
+Adding any finite batch whose lifetimes are at most $h$ increases capacity by an amount in $[0,h]$. The jitter inequality \eqref{eq:jitter} and one-step growth inequality \eqref{eq:capacity-growth} also hold. With at least one competitor,
+\[
+ \sqrt{H_{\max}}\le\cC_T\le H_{\max}\le T.
+\]
+\end{proposition}
+\begin{proof}
+Adding arms enlarges the feasible set. From a maximizing allocation in the enlarged problem, delete the new arms' mass. Their total mass is at most $h$, and their total objective is no larger because $\phi(x)\le x$. The remaining allocation is feasible for the old problem, proving the batch bound.
+
+For jitter, take a feasible allocation $n$ under $H'$ and order its labels by increasing $H$. The first $r$ labels all have $H_i'\le H_{(r)}+d$, so their total allocated mass is at most $H_{(r)}+d$. If this exceeds the horizon, the total-horizon bound still implies the inequality. Visit the prefixes in order and delete just enough mass to meet each original constraint. Earlier upper constraints cannot be hurt by deletion. The cumulative deleted mass after prefix $r$ can be chosen as
+\[
+ D_r=\max_{q\le r}\left(\sum_{i\le q}n_{(i)}-H_{(q)}\right)_+\le d.
+\]
+At each step the mass to delete is available in that prefix, because the target bound is nonnegative. The total objective falls by at most $d$, since $\phi$ is 1-Lipschitz. This proves $\cC(H')\le\cC(H)+d$. Interchange the lifetime vectors for the reverse inequality.
+
+To advance the physical endpoint by one, keep the old physical allocation to prove monotonicity. In an optimal allocation for the new endpoint, delete the last time slot. All mass assigned to newly arrived arms disappears; the remaining assignment is valid by the old endpoint. At most one unit of mass was deleted, so the objective decreases by at most one. This proves \eqref{eq:capacity-growth} even with a large new batch.
+
+Finally, all competing arms are confined to the last $H_{\max}$ slots, so their total objective is at most their total mass, at most $H_{\max}$. Assigning all $H_{\max}$ slots to a longest-lived competitor gives objective $\phi(H_{\max})=\sqrt{H_{\max}}$.
+\end{proof}
+
+\subsection{The learning boundary and rate examples}
+\begin{proof}[Proof of Theorem~\ref{thm:learning}]
+Since $\sum_{\ell=0}^L b_\ell<4T$, Cauchy--Schwarz gives
+\[
+ \cS_T\le\sum_\ell\sqrt{k_\ell b_\ell}\le2\sqrt{(K_T-1)T}.
+\]
+If $K_T=o(T)$, Theorem~\ref{thm:main} gives uniform sublinear regret for the same MC-MOSS rule. Conversely, suppose $K_{t_j}\ge\epsilon t_j$ for some $\epsilon>0$ along $t_j\to\infty$. At $T_j=2t_j$, at least $\epsilon t_j-1$ competitors have lifetime at least $t_j+1$. Lemma~\ref{lem:long} gives $\cS_{T_j}\ge c_\epsilon T_j$ for all large $j$. The minimax lower bound prevents any policy from having uniform sublinear regret. Equivalence with capacity follows from Theorem~\ref{thm:capacity}.
+
+For the probability formulation, Markov's inequality gives one direction. For the other, use $0\le R_T/T\le1$ to write, for any $\epsilon>0$,
+\[
+ \sup_P\EE_P(R_T/T)\le\epsilon+
+ \sup_P\PP_P(R_T/T>\epsilon).
+\]
+Let $T$ tend to infinity, then $\epsilon$ tend to zero.
+\end{proof}
+
+If $M$ competitors share a lifetime $H$, Jensen's inequality gives
+\[
+ \cC_T=M\phi(H/M)=\min\{H,\sqrt{MH}\},
+\]
+with the equal allocation attaining it. This includes a single late batch and the static model; it is interpreted as zero for $M=0$.
+
+If $K_{\lfloor T/2\rfloor}-1\ge a(K_T-1)>0$ for a fixed $a\in(0,1]$, these early competitors have lifetime at least $T/2$. Lemma~\ref{lem:long} and the preceding general upper bound give
+\[
+ \cR_T(\tau)\asymp_a\min\{T,\sqrt{(K_T-1)T}\}.
+\]
+For each growth family listed in the main text, the two-sided growth bounds imply this early-fraction condition eventually. Substitution yields the stated orders, with constants allowed to depend on the growth parameters.

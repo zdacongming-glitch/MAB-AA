@@ -1,0 +1,7 @@
+{
+  "policy_performance_trials": 0,
+  "scope": "600 same-backend compatible actions, 320 prescribed-observation API actions, 10 same-state batch-action checks, 6 API rejection checks.",
+  "report": "paper/revision2/analysis/interface-checks.json",
+  "production_driver_import_and_help_checks": 6,
+  "not_claimed": "Full experiment rerun, cross-backend seeded equality, probabilistic certification or independent proof verification."
+}

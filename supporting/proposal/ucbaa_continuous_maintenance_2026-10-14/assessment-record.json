@@ -1,0 +1,224 @@
+{
+  "schema_version": "1-single-context-explicit-extension",
+  "date": "2026-10-14",
+  "assessment_object": "本轮新理论组合，不含独立 temporal-geometry 谱 minimax 结果，不把结论原样归给旧 Algorithm 1",
+  "basis": "current_written_results",
+  "packet_id": "sha256:c466b41eb4382d6cb71d81cba0f8cd549946e3a2dca7b75986ff0d12c05521fd",
+  "protocol": {
+    "repo": "zdacongming-glitch/statistical-innovation-assessment",
+    "skill_blob_sha": "2317897f5c3a0e6018758e791dced6f00bb0a472",
+    "rubric_blob_sha": "327861caa36ff15ac141d128d53360bb439b50bf",
+    "repetition_blob_sha": "1bcdbafcea92d0ac0e2c3b2940c4373e69003e0f",
+    "execution_method": "single_current_context_assessment",
+    "runtime_model_snapshot": null,
+    "settings": {},
+    "context_isolated_from_prior_scores": false
+  },
+  "default_planned_independent_rounds": 5,
+  "actual_current_context_assessments": 1,
+  "actual_isolated_independent_rounds": 0,
+  "independent_repetition_completed": false,
+  "tool_model_execution_ids": [],
+  "cross_round_statistics": {
+    "mean": null,
+    "sample_variance": null,
+    "standard_deviation": null,
+    "reason": "没有独立重复；不生成虚构轮次或将单次方差记为零。"
+  },
+  "results": [
+    {
+      "id": "L1",
+      "title": "基础置信区间、检查点与序贯 KL",
+      "score": null,
+      "tier": null,
+      "role": "standard",
+      "status": "not_scored_as_new",
+      "rationale": "已有统计工具，本轮给自包含证明但不计为新主贡献。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    },
+    {
+      "id": "T1",
+      "title": "累计未决面积到信息分配下界",
+      "score": 3.0,
+      "tier": 3,
+      "role": "auxiliary",
+      "status": "single_assessment",
+      "rationale": "统一风险协议，仍主要使用标准换测度和凸占用量松弛；可达性未证。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    },
+    {
+      "id": "T2",
+      "title": "共同参考环境的广播队列下界",
+      "score": 5.5,
+      "tier": 2,
+      "role": "core",
+      "status": "single_assessment",
+      "rationale": "新臂未知质量能阻碍许多旧臂的正认证；全时间使用同一参考环境。一般尖锐拥塞刻画仍缺。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    },
+    {
+      "id": "L2",
+      "title": "整数服务队列的二次面积",
+      "score": 3.2,
+      "tier": 3,
+      "role": "auxiliary",
+      "status": "single_assessment",
+      "rationale": "服务单位与忙期末轮的精确计数；创新主要体现在统计应用。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    },
+    {
+      "id": "C1",
+      "title": "给定无限日程的次平方根必要性",
+      "score": 5.4,
+      "tier": 2,
+      "role": "core-corollary",
+      "status": "single_assessment",
+      "rationale": "强及时性要求产生区别于纯收益的到达限制；不能作为一般充分性。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    },
+    {
+      "id": "T3",
+      "title": "任意到达的联合混合上界",
+      "score": null,
+      "tier": null,
+      "role": "inherited-baseline",
+      "status": "not_scored_as_new",
+      "rationale": "与已有项目的置信层、FIFO 配额和队列基准同类，不另外计新。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    },
+    {
+      "id": "C2",
+      "title": "多项式到达的二分之一指数边界",
+      "score": 5.8,
+      "tier": 2,
+      "role": "core-corollary",
+      "status": "single_assessment",
+      "rationale": "在同一可靠性和面积目标下闭合必要性与可实现性；临界慢变日程另需局部分析。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    },
+    {
+      "id": "L3",
+      "title": "自适应停止下部分同时恢复",
+      "score": 3.5,
+      "tier": 3,
+      "role": "auxiliary",
+      "status": "single_assessment",
+      "rationale": "恢复尺度有静态多重检测先例；当前证明处理任意交错采样和部分完成。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    },
+    {
+      "id": "C3",
+      "title": "单批截断面积下界",
+      "score": 3.5,
+      "tier": 3,
+      "role": "auxiliary",
+      "status": "single_assessment",
+      "rationale": "由部分同时恢复推出同协议面积期望与概率下界；不与 L3 累加计分。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    },
+    {
+      "id": "T4",
+      "title": "面积约束下可暂缓窗口的成本分配",
+      "score": 5.6,
+      "tier": 2,
+      "role": "core",
+      "status": "single_assessment",
+      "rationale": "面积迫使足够多临时窗口完成，使用兼容先验和不重复样本成本；仅为一般外部约束。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    },
+    {
+      "id": "T5",
+      "title": "检查点共享更新及超配额收益界",
+      "score": 4.5,
+      "tier": 2,
+      "role": "supporting-method",
+      "status": "single_assessment",
+      "rationale": "可执行未知最佳身份算法，不重复收全体旧臂工作；局部性能类仍需充分服务间隔。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    },
+    {
+      "id": "T6",
+      "title": "同协议多次更新的两端权衡",
+      "score": 6.0,
+      "tier": 2,
+      "role": "core",
+      "status": "single_assessment",
+      "rationale": "匹配快速维护必要 regret 与未知最佳身份的可执行上界；放宽面积后证据可跨更新复用。并非全 Pareto 前沿。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    },
+    {
+      "id": "C4",
+      "title": "中间可达服务点",
+      "score": 3.1,
+      "tier": 3,
+      "role": "auxiliary",
+      "status": "single_assessment",
+      "rationale": "事前逐批精度配置的直接推论，没有证明各点最优。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    },
+    {
+      "id": "P1",
+      "title": "已知参照角色的平方比分离",
+      "score": 4.2,
+      "tier": 2,
+      "role": "diagnostic",
+      "status": "single_assessment",
+      "rationale": "将取消未执行精细任务的机制单独隔离；额外信息使纯收益部分容易。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    },
+    {
+      "id": "T7",
+      "title": "有限终端臂集的强一致性与低 regret",
+      "score": 2.8,
+      "tier": 3,
+      "role": "supplementary",
+      "status": "single_assessment",
+      "rationale": "标准复核、纠错与可求和置信设计，不是本轮主要创新。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    },
+    {
+      "id": "T8",
+      "title": "任意到达日程的最坏维护面积匹配",
+      "score": 5.0,
+      "tier": 2,
+      "role": "supporting-theory",
+      "status": "single_assessment",
+      "rationale": "静态同时恢复下界与任意到达上界在面积风险上匹配；不把静态 log K 难度重算为新。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    },
+    {
+      "id": "C5",
+      "title": "终点总臂数受限类的精确统一边界",
+      "score": 5.0,
+      "tier": 2,
+      "role": "core-corollary",
+      "status": "single_assessment",
+      "rationale": "T8 的直接统一类推论；与固定日程量词区分，不与 T8 叠加。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    },
+    {
+      "id": "T9",
+      "title": "次平方根总数仍不足的突发反例",
+      "score": 5.2,
+      "tier": 2,
+      "role": "supporting-theory",
+      "status": "single_assessment",
+      "rationale": "揭示总数必要条件之外的局部同时识别负担；尚非逐日程充要刻画。",
+      "proof_status": "written_proof_and_internal_audit; no_independent_review"
+    }
+  ],
+  "overall": {
+    "score": 6.0,
+    "tier": 2,
+    "novelty_confidence": "medium-low",
+    "rationale": "T2/C2 与 T4/T6 给出持续维护的到达负担、临时任务的必要成本及跨更新证据复用的可执行权衡；整体依据核心结果，不由各分数平均或累加。",
+    "why_not_6_8": "任意重叠到达、异质边界距离及所有面积预算的可计算匹配前沿未闭合；尚无独立新颖性审计。",
+    "not_a_publication_probability": true
+  },
+  "verification_limits": [
+    "单次当前上下文评分受此前讨论影响，不冒充隔离复评。",
+    "新颖性检索仅针对直接近邻，不是穷尽检索。",
+    "所有书面证明仅经过本轮内部审计和数值诊断。",
+    "诊断没有统计验证置信覆盖，也没有强基线算法对比。"
+  ]
+}

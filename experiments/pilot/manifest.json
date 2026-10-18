@@ -1,0 +1,17 @@
+{
+  "source_sha256": "272815cbb45e2de1a99f849bd4718892ef6bc010d081e0eaf2ec45b21c746ef9",
+  "runner_sha256": "80642988279a76d9e986cef60de85566fe77eface08959ba18324b86c609e8d1",
+  "config_sha256": "8215deaeaccea06e9773ce1528ad99312dc032ede43759fb74e3b2faddf7901d",
+  "runs_sha256": "54e76780d82f04081575ae706f7416f70bcf04820324a16810eae5255fe1db9c",
+  "paths_sha256": "be725a7873639d932f601c63b05df73eef18c1da4387c7d5e60e028f24273a51",
+  "elapsed_seconds": 0.16925690000061877,
+  "python": "3.11.7 | packaged by Anaconda, Inc. | (main, Dec 15 2023, 18:05:47) [MSC v.1916 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "numpy": "1.26.4",
+  "numba": "0.59.0",
+  "replications_per_scenario": 2,
+  "rounds_per_run": 20000,
+  "total_runs": 64,
+  "policy_information": "No policy receives true means, future births, final arm count, horizon or evaluation truth; array size is storage only. Means/reward table are accessed only by the environment and evaluator.",
+  "notes": "Monte Carlo results concern the four frozen scenarios; not a proof of uniform reliability or asymptotic optimality."
+}

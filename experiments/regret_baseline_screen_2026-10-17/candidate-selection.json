@@ -1,0 +1,37 @@
+{
+  "selected_on": "2026-10-17",
+  "status": "full_batch_completed_and_analyzed",
+  "user_instruction": "Select the previous eight candidates and add AUER. Retain the preceding instruction to defer experiments.",
+  "objective": "Cumulative dynamic regret only; no unresolved-area comparison.",
+  "target_method": "F-R, the current F-CCP reward-only configuration",
+  "additional_candidates": [
+    "IMED",
+    "Bayes-UCB",
+    "KL-UCB+",
+    "empirical KL-UCB",
+    "UCB-V",
+    "UCB1-Tuned",
+    "BL-MOSS",
+    "SB-EXP3-ATGT",
+    "AUER"
+  ],
+  "existing_comparators": [
+    "UCB1",
+    "Growing-MOSS",
+    "MC-MOSS",
+    "Thompson sampling",
+    "KL-UCB"
+  ],
+  "environment_source": "../fccp_frozen/protocols/holdout-freeze.json",
+  "planned_scenarios": 12,
+  "planned_paired_replications": 96,
+  "parameter_status": "Not frozen. Preliminary code is not an approved or validated final implementation.",
+  "manuscript_changes_authorized": false,
+  "frozen_results_must_remain_unchanged": true,
+  "execution_protocol": "protocol.json",
+  "execution_freeze": "audit/execution-freeze.json",
+  "results": "results/",
+  "completed_trajectories": 19584,
+  "actual_configurations": 17,
+  "source_manuscript_unchanged": true
+}

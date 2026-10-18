@@ -1,0 +1,123 @@
+\section{Instance bounds and further consequences}
+\subsection{A detailed gap-dependent inequality}
+Let $\mathcal B_T$ be the arms that are strictly suboptimal at some time by $T$, with $\gamma_i$ as in the main article. Set $L_T^0=\log(eT)$. At time $t$, let
+\[
+ \gamma_t=\min_{i\in A_t:\Delta_i(t)>0}\Delta_i(t),
+\]
+and set $\gamma_t=+\infty$ when all available means are equal. If the current clock segment has capacity $d_j$ and local time $s$, define
+\begin{equation}\label{eq:U-gap}
+ \mathcal U_T=\sum_{t\le T:\gamma_t<\infty}
+ \min\left\{1,15\sqrt{d_j/s},\frac{90d_j}{s\gamma_t}\right\}.
+\end{equation}
+There are no summands before a competitor is present.
+
+\begin{proposition}\label{prop:detailed-gap}
+MC-MOSS satisfies
+\begin{equation}\label{eq:detailed-gap}
+ \EE R_T\le\sum_{i\in\mathcal B_T}
+ \left\{1+\frac{9+18L_T^0}{\gamma_i}\right\}+\mathcal U_T.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Genuine first observations of strictly suboptimal arms cost at most $|\mathcal B_T|$. At each other positive-regret selection, write \eqref{eq:index-decomposition} as $\Delta\le Z+e+b$. Assign the selection to the first of the following events that holds: $Z\ge\Delta/3$, $e\ge\Delta/3$, $b\ge\Delta/3$. At least one holds.
+
+On the underestimation event, regret is bounded by $\min\{1,3Z\ind\{Z\ge\gamma_t/3\}\}$. The expectation bounds in Lemma~\ref{lem:Z}, the truncated expectation bound there, and the trivial bound one give the summand of \eqref{eq:U-gap}. The best-arm label used in $Z$ is deterministic once the environment and schedule are fixed.
+
+For the empirical overestimation event on arm $i$, we have $\Delta\le3e$ and $e\ge\gamma_i/3$. For any $a>0$, the one-prefix Hoeffding bound gives
+\begin{align*}
+ \sum_{n\ge1}\EE[e_n\ind\{e_n\ge a\}]
+ &\le\frac{a}{e^{2a^2}-1}+\int_a^\infty\frac{dx}{e^{2x^2}-1}\\
+ &\le\frac1{2a}+\frac1{2a}=\frac1a.
+\end{align*}
+The actual count pairs do not repeat, so taking $a=\gamma_i/3$ and multiplying by three bounds this arm's contribution by $9/\gamma_i$.
+
+For the bonus event, $b\le\sqrt{L_T^0/n}$ and $b\ge\gamma_i/3$ imply $n\le9L_T^0/\gamma_i^2$. Extending to all integers in that range and using $\sum_{n\le u}n^{-1/2}\le2\sqrt u$ bounds its regret by $18L_T^0/\gamma_i$. Adding the three categories proves \eqref{eq:detailed-gap}.
+\end{proof}
+
+\begin{proof}[Gap bounds in Proposition~\ref{prop:gap}]
+A terminal best arm was never strictly suboptimal after its arrival, because the best available mean is nondecreasing and cannot exceed that arm's terminally optimal mean. Thus $|\mathcal B_T|\le K_T-1$. Segment capacities obey $\sum_jd_j\le4(K_T-1)$, by their geometric growth. Since $\sum_{s\le h_j}1/s\le\log(eT)$,
+\[
+ \mathcal U_T\le360(K_T-1)L_T^0/\gamma.
+\]
+The other terms in \eqref{eq:detailed-gap} sum to at most $28(K_T-1)L_T^0/\gamma$. Combine these inequalities, Theorem~\ref{thm:main}, and $R_T\le T$ to obtain \eqref{eq:gap-bound}.
+
+For deterministic rewards, every observed empirical mean is exact. The current best index is at least $B_t$, so selecting an observed inferior arm implies
+\[
+ \Delta_i(t)\le\sqrt{L_T^0/N_i(t-1)}.
+\]
+Its positive-regret pre-pull counts are at most $L_T^0/\gamma_i^2$ and do not repeat globally. Sum $\sqrt{L_T^0/n}$ over these counts and add the possible first observation. This gives \eqref{eq:det-gap}.
+\end{proof}
+
+\subsection{The cost of erasing evidence}
+\begin{proof}[Restart separation in Proposition~\ref{prop:gap}]
+For an integer $m\ge1$, put $h=2^{16m}$ and $T=mh$. Initially there are two deterministic arms of means $1/2$ and $1/4$. At time $jh+1$, for $j=1,\ldots,m-1$, add $2^{j-1}$ deterministic arms of mean $1/2$. The sole inferior arm has gap $1/4$ throughout. Segment $j$, indexed from zero, has $c_j=2^j$ competitors, capacity $d_j=2^{j+1}$, and length $h$.
+
+For MC-MOSS, selecting the inferior arm at a positive lifetime count $n$ implies
+\[
+ \frac14\le\sqrt{\log_+\{s/(d_jn)\}/n}\le\sqrt{\log T/n}.
+\]
+Its total pull count is at most $1+16\log T$, whence $R_T(\pi^{\mathrm{MC}})\le1/4+4\log T$.
+
+For the cold policy, fix a segment and set $q=\lfloor\log h\rfloor$. Suppose its inferior arm is pulled fewer than $q$ times in the entire segment. During the latter half, $s\ge h/2$, an unobserved inferior arm has infinite index. If it has $1\le n<q$ observations, then
+\begin{equation}\label{eq:cold-low-count}
+ \frac{\log\{s/(d_jn)\}}n
+ \ge\frac{\log\{h/(2d_j\log h)\}}{\log h}\ge\frac12.
+\end{equation}
+Indeed, $d_j\le2^m$ and $2d_j\log h\le\sqrt h$ for every $m\ge1$. The inferior index is therefore at least $1/4+1/\sqrt2>0.95$. Any optimal arm with at least $\lceil16\log h\rceil$ segment observations has index at most $1/2+1/4=0.75$. As long as the inferior count stays below $q$, no such well-sampled optimal arm can be selected in the latter half. The total number of possible selections in that half is therefore at most
+\[
+ K_j\lceil16\log h\rceil+q\le273m2^m<h/2,
+\]
+using $K_j=2^j+1\le2^m$, $\log h\le16m$, and $m\le2^{m-1}$. This contradicts its $h/2$ available rounds. Each segment thus pulls the inferior arm at least $q$ times, giving
+\[
+ R_T(\pi^{\mathrm{cold}})\ge\frac m4\lfloor\log h\rfloor.
+\]
+Since $\log T=16m\log2+\log m=\Theta(m)$, the asserted order separation follows.
+
+Cold MOSS also obeys the spectral upper bound. Its local segments use fresh suffixes of independent potential streams and deterministic arrival-defined boundaries. Conditional on the past, the unused rewards have their original product law; this can be verified by conditioning on the finite observed prefix counts and values, or by the usual independent-stream stopping argument. The segment bound then holds and the identical clock charging completes the proof. This conditional justification applies to unused rewards, not to the reused observations of MC-MOSS.
+\end{proof}
+
+\subsection{Safe clipping and inserted observations}
+For the clipped policy, an unobserved arm has index one and an observed arm has index $\min\{1,U_i(t)\}$. The current best arm's clipped index is at least $B_t-Z_{i_t^*}(s/d)$ whether or not it has been observed, since $B_t\le1$. A selected observed arm's clipped index is at most its original $\widehat\mu+b$. Thus \eqref{eq:index-decomposition} continues to hold for every observed-arm selection. Genuine first observations are still charged once. All segment and gap proofs remain valid. For deterministic rewards the best clipped index is at least $B_t$, so the deterministic gap argument remains valid too.
+
+In the reward-one example, after the initial observation the incumbent and all newly unobserved arms have clipped index one. Arrival-order tie breaking always chooses the incumbent, giving zero regret. Under the infinite-index rule, the single new arm at every round is selected and gives regret one. These are statements about these specified policies on one legal instance.
+
+\begin{proposition}[Predictable inserted choices]\label{prop:inserted}
+Keep the physical clock rules and update lifetime statistics after every observation. At a set of rounds $\mathcal I_T$ selected using information available before the action, permit any legal choice in place of MC-MOSS. Use the MC-MOSS index rule at all other rounds. Then
+\[
+ \EE R_T\le\min\left\{T,300\cS_T+
+ \EE\sum_{t\in\mathcal I_T}\Delta_{I_t}(t)\right\}.
+\]
+\end{proposition}
+\begin{proof}
+For ordinary choices, index comparison is unchanged. The underestimation lemma controls every potential prefix, while the empirical and bonus sums use distinct count pairs. Inserted observations can skip counts at ordinary choices but cannot repeat them. The local proof thus applies to the ordinary sub-sequence, charged using the full physical segment length. Arrival-defined clock segments are unchanged. Add the actual regret of the inserted choices separately and use $R_T\le T$.
+\end{proof}
+The result compares the modified policy with a bound, not with the realized trajectory of an unmodified policy. It does not make an additional sampling or inference objective free of cost.
+
+\subsection{Time-uniform and almost-sure consequences}
+\begin{proposition}\label{prop:uniform-envelope}
+For every fixed infinite deterministic schedule, fixed environment and $0<\delta<1$, MC-MOSS satisfies, with probability at least $1-\delta$, simultaneously for all $T\ge1$,
+\[
+ R_T\le\min\left\{T,\frac{5000}{\delta}\cC_T(1+\log_2\cC_T)^2\right\}.
+\]
+When $\cC_T=0$, the second term is defined to be zero.
+\end{proposition}
+\begin{proof}
+If no competitor ever arrives, regret is zero. Otherwise capacity is nondecreasing, and the longest competitor's lifetime tends to infinity, so Proposition~\ref{prop:stability} implies $\cC_T\to\infty$. For $m\ge0$, let $t_m$ be the last integer with $\cC_{t_m}<2^{m+1}$, skipping indices for which this set is empty. These are finite, schedule-determined endpoints. The capacity upper bound gives $\EE R_{t_m}\le1200\,2^{m+1}$. Apply Markov's inequality with error allowance $\delta_m=\delta/\{2(m+1)^2\}$ and sum the allowances, whose sum is less than $\delta$. On the resulting event,
+\[
+ R_{t_m}\le2400\,2^{m+1}(m+1)^2/\delta
+\]
+for every retained index. If $2^m\le\cC_T<2^{m+1}$, then $T\le t_m$ and nonnegativity of instantaneous regret implies $R_T\le R_{t_m}$. Since $2^{m+1}\le2\cC_T$ and $m+1\le1+\log_2\cC_T$, this gives the claimed constant after a small relaxation. Nonzero capacity is at least one, so its logarithm causes no ambiguity.
+\end{proof}
+
+This envelope is a consequence of the expectation bound and monotonicity. Its dependence on $\delta$ and on time is not claimed optimal.
+
+If $\sum_{m\ge0}\cS_{2^m}/2^m<\infty$, then MC-MOSS satisfies $R_T/T\to0$ almost surely in each fixed reward environment. For every positive rational $\epsilon$, Markov's inequality makes $\sum_m\PP(R_{2^m}>\epsilon2^m)$ finite. Borel--Cantelli and a countable intersection give convergence along dyadic endpoints. For $2^m\le T<2^{m+1}$,
+\[
+ R_T/T\le2R_{2^{m+1}}/2^{m+1}\longrightarrow0.
+\]
+For example, $K_t=O(t^\alpha)$ with $\alpha<1$ meets this sufficient condition. We do not deduce almost-sure convergence for every $K_t=o(t)$ from the expectation theorem.
+
+\subsection{Conditioning and future information}
+For a schedule independent of the reward streams and the policy seed, condition on the complete schedule, apply Theorem~\ref{thm:main}, and average to obtain \eqref{eq:random-upper}. Independence is required to preserve the potential-stream laws under this conditioning. No supremum over environments is interchanged with expectation in this argument. The random-schedule counterexample below explains why the analogous lower-bound interchange fails.
+
+For a fixed schedule and endpoint, \eqref{eq:main} also implies that MC-MOSS incurs at most $3\times10^6$ times the minimax risk of a learner given the complete schedule and endpoint. This loose constant follows directly by division, with the zero-competitor case treated separately. It compares two learners that both have unknown means, not a learner with an oracle that already knows the best arm.

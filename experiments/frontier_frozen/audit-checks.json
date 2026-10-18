@@ -1,0 +1,21 @@
+{
+  "symbolic_f_second_derivative": true,
+  "scalar_and_budget_checks": 20000,
+  "ABM_sanity": {
+    "rounds": 10000,
+    "regret": 1443.2000000000442,
+    "area": 6769,
+    "label_error_rounds": 0,
+    "fine_activations": 3,
+    "remaining_candidates": 0,
+    "service_pulls": 4351,
+    "final_counts": {
+      "1": 3035,
+      "2": 1544,
+      "3": 1718,
+      "4": 3313,
+      "5": 390
+    },
+    "note": "A single implementation test, not asymptotic theorem-family verification or a performance comparison"
+  }
+}

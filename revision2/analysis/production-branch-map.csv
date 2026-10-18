@@ -1,0 +1,6 @@
+module,role,status,note
+flexible_v2.py::choose_dual,main production action rule,frozen,two independent ledgers
+flexible_ccp.py::FlexibleCCP,interactive production API,frozen,owns NumPy Generator; no future truth inputs
+flexible_matched.py::choose_dual,corrected ALL action rule,frozen,only ALL planner cost return corrected
+matched_all.py::service_plan_matched,CCP and corrected ALL planning dispatch,frozen,corrected price interface
+flexible_engine.py::choose_flexible,historical single-ledger development,archive only,not main production entry

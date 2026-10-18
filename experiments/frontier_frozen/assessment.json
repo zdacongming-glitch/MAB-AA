@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "object": "this round incremental research",
+  "date": "2026-10-16",
+  "basis": "current",
+  "model": "GPT-6 Astra Pro",
+  "model_snapshot": null,
+  "protocol_source": "zdacongming-glitch/statistical-innovation-assessment",
+  "execution_method": "single_current_context",
+  "actual_assessments": 1,
+  "planned_independent_repeats": 5,
+  "independent_repeats_completed": false,
+  "variance": null,
+  "standard_deviation": null,
+  "contributions": [
+    {
+      "id": "causal_frontier_separation",
+      "tier": 2,
+      "score": 5.8
+    },
+    {
+      "id": "partial_recovery",
+      "tier": 2,
+      "score": 4.5
+    },
+    {
+      "id": "ABM_intermediate_budgets",
+      "tier": 2,
+      "score": 5.7
+    },
+    {
+      "id": "exact_finite_LP",
+      "tier": 3,
+      "score": 3.1
+    },
+    {
+      "id": "engineering_schedulers",
+      "tier": 3,
+      "score": 3.0
+    },
+    {
+      "id": "fixed_beta_obstruction",
+      "tier": 3,
+      "score": 2.5
+    }
+  ],
+  "overall": {
+    "tier": 2,
+    "score": 5.8,
+    "rationale": "Core novelty is the explicit future-information obstruction and the completion-count-dependent intermediate-budget matching. Not a complete general frontier and not a universally superior practical method."
+  },
+  "novelty_confidence": "medium",
+  "verification": "self-contained written proofs and internal diagnostics; no isolated agent/external peer/formal verification",
+  "evidence_files": {
+    "theory_frontier.md": "b1d14cc64e3b64fc7594576b987b77f411d4bfaab74dc81233bdc6a9494c63b5",
+    "holdout-freeze.json": "57d1655881064f7e5c521ec8c7acb21d351f9617c5682f231bdbad6658557613",
+    "holdout-summary.csv": "f28374673692808b7d1cdd7d20a16146bab87164649330eef7e948bb8d50fa83",
+    "holdout-paired.csv": "1de10b3e9d7004afda36e4ff353cc770eb128e9c323dfdb51fdf75a115e22250",
+    "proof_audit.md": "d65a0b147c48fcaf4ffda2efced38652932901baaa70b9aeead12b2538ede92d",
+    "literature.json": "5d6e8f653a62d6e92e7cf69624eef00a699282abaf31e9c3bf0117ba2b22d293",
+    "研究报告_前沿与算法.md": "c5b14fce622311bd976265609c3f97d463ef23e31dd72b3adeb5a3c1084fa8a5"
+  }
+}

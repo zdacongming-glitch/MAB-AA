@@ -1,0 +1,71 @@
+% Reorganized from the frozen October 15, 2026 supplement.
+\section{Area-constrained temporary tasks}
+\label{app:area_lower}
+
+In window $e$, suppose $M_e$ candidates have gaps
+$\varepsilon-\sigma_{e,k}d_e$, and a new reference makes their signs
+irrelevant after that window. Put $w_e=M_eH_e$, $V=\sum_ew_e$, and let
+$p_e$ be the product-prior probability that at least half of batch $e$ becomes
+determinate simultaneously before its window ends. Define
+\[
+ \Phi_\delta(u)=
+ \begin{cases}
+  \operatorname{kl}(1-\delta-u,\delta),&u<1-2\delta,\\
+  0,&u\ge1-2\delta,
+ \end{cases}
+\]
+\[
+ g_{m,\delta}(p)=\max\left\{0,
+ \frac{(p-2\delta)_+}{2}
+       \left[\log\frac m{4\log2}\right]_+-1,
+ \Phi_\delta(1-p/2)\right\}.
+\]
+Each displayed component is convex and nondecreasing in $p$.
+
+\begin{proof}[Proof of the general area-to-regret lower bound]
+If window $e$ never half-completes, at every round more than half its
+candidates remain unresolved. Its area is at least $w_e/2$. On area success,
+$\sum_ew_e1_{S_e^c}\le2a$; outside that event this sum is at most $V$.
+Consequently
+\[
+ \sum_ew_ep_e\ge(1-\delta)V-2a.
+\]
+Stop batch $e$ at first half-completion or at its endpoint. The likelihood
+argument above now intersects the product-posterior event with completion
+probability $p_e$, giving intersection probability at least
+$(p_e-2\delta)_+$ and expected determinate count at least $M_ep_e/2$.
+The absolute-likelihood and coordinate-flip derivations therefore give
+\[
+ \kappa_e\overline EN_e\ge M_eg_{M_e,\delta}(p_e).
+\]
+For the absolute-likelihood term, when the bracketed logarithm is positive
+its Jensen expression is increasing for subset sizes at least $M_e/2$;
+when it is nonpositive the stated term is at most zero. Each observation
+counted before stopping has regret at least $\varepsilon-d_e$.
+The signs of all batches belong to one product prior, and samples of
+different batches are disjoint. Hence
+\begin{equation}
+\label{eq:allocation_lower}
+ \sup_\sigma E_\sigma R_T\ge
+ \inf_{\substack{0\le p_e\le1\\
+       \sum_ew_ep_e\ge(1-\delta)V-2a}}
+ \sum_e\frac{(\varepsilon-d_e)M_e}{\kappa_e}
+                  g_{M_e,\delta}(p_e).
+\end{equation}
+This is an information lower relaxation, not a claim that every feasible
+allocation is achieved by a causal policy.
+\end{proof}
+
+\paragraph{Homogeneous consequence.}
+Take $M_e=M$, $H_e=H$, $d_e=d$, and $a=JMH/8$. On success at least $3J/4$
+windows half-complete; thus $\sum_ep_e\ge45J/64$. At least $3J/8$ windows
+have $p_e\ge1/2$: otherwise the sum is at most
+$3J/8+(5J/8)/2=11J/16<45J/64$.
+The Bernoulli means lie in $[1/4,3/4]$, giving $\kappa_e\le32d^2$.
+The partial-recovery lemma and $\varepsilon-d\ge\varepsilon/2$ yield
+\[
+ \sup_\sigma E_\sigma R_T\ge
+ \frac{3J}{8}\frac{\varepsilon M}{2\cdot1024\cdot32d^2}
+             \log\frac M\delta
+ \ge2^{-20}\frac{\varepsilon JM}{d^2}\log\frac M\delta.
+\]

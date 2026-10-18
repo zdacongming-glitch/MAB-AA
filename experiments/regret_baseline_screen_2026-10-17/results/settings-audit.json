@@ -1,0 +1,480 @@
+{
+  "created_utc": "2026-10-17T09:49:37.797972+00:00",
+  "source_protocol": "../fccp_frozen/protocols/holdout-freeze.json",
+  "source_protocol_sha256": "7d4b8536869250ce3b19ad5f15ddf388c16ed17ca058a94171b694ad29229668",
+  "scenarios": [
+    {
+      "index": 0,
+      "name": "two_close",
+      "T": 12000,
+      "K": 2,
+      "kind": "bernoulli",
+      "arrivals": [
+        1,
+        1
+      ],
+      "means": [
+        0.493,
+        0.51
+      ]
+    },
+    {
+      "index": 1,
+      "name": "few_arrivals",
+      "T": 12000,
+      "K": 3,
+      "kind": "bernoulli",
+      "arrivals": [
+        1,
+        4013,
+        4013
+      ],
+      "means": [
+        0.565,
+        0.785,
+        0.295
+      ]
+    },
+    {
+      "index": 2,
+      "name": "stable",
+      "T": 12000,
+      "K": 8,
+      "kind": "bernoulli",
+      "arrivals": [
+        1,
+        1,
+        2809,
+        2809,
+        2809,
+        6803,
+        6803,
+        6803
+      ],
+      "means": [
+        0.735,
+        0.625,
+        0.18,
+        0.35,
+        0.515,
+        0.66,
+        0.26,
+        0.43
+      ]
+    },
+    {
+      "index": 3,
+      "name": "successive_improvements",
+      "T": 14000,
+      "K": 11,
+      "kind": "bernoulli",
+      "arrivals": [
+        1,
+        1,
+        3301,
+        3301,
+        3301,
+        7013,
+        7013,
+        7013,
+        11003,
+        11003,
+        11003
+      ],
+      "means": [
+        0.425,
+        0.19,
+        0.645,
+        0.385,
+        0.51,
+        0.825,
+        0.615,
+        0.48,
+        0.955,
+        0.715,
+        0.88
+      ]
+    },
+    {
+      "index": 4,
+      "name": "burst",
+      "T": 14000,
+      "K": 14,
+      "kind": "bernoulli",
+      "arrivals": [
+        1,
+        1,
+        4219,
+        4219,
+        4219,
+        4219,
+        4219,
+        4219,
+        4219,
+        4219,
+        4219,
+        4219,
+        4219,
+        4219
+      ],
+      "means": [
+        0.635,
+        0.465,
+        0.915,
+        0.885,
+        0.81,
+        0.76,
+        0.675,
+        0.61,
+        0.57,
+        0.49,
+        0.41,
+        0.335,
+        0.225,
+        0.13
+      ]
+    },
+    {
+      "index": 5,
+      "name": "membership_boundary",
+      "T": 14000,
+      "K": 9,
+      "kind": "bernoulli",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        5701,
+        5701,
+        5701
+      ],
+      "means": [
+        0.765,
+        0.545,
+        0.585,
+        0.66,
+        0.41,
+        0.19,
+        0.735,
+        0.57,
+        0.52
+      ]
+    },
+    {
+      "index": 6,
+      "name": "many_close_means",
+      "T": 12000,
+      "K": 13,
+      "kind": "bernoulli",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        4507,
+        4507,
+        4507,
+        4507,
+        4507,
+        8903,
+        8903,
+        8903
+      ],
+      "means": [
+        0.615,
+        0.605,
+        0.59,
+        0.57,
+        0.55,
+        0.635,
+        0.6,
+        0.565,
+        0.54,
+        0.51,
+        0.65,
+        0.62,
+        0.585
+      ]
+    },
+    {
+      "index": 7,
+      "name": "late_improvement",
+      "T": 14000,
+      "K": 8,
+      "kind": "bernoulli",
+      "arrivals": [
+        1,
+        1,
+        1,
+        4201,
+        4201,
+        11701,
+        11701,
+        11701
+      ],
+      "means": [
+        0.54,
+        0.445,
+        0.285,
+        0.35,
+        0.51,
+        0.935,
+        0.71,
+        0.875
+      ]
+    },
+    {
+      "index": 8,
+      "name": "rare_rewards",
+      "T": 12000,
+      "K": 9,
+      "kind": "bernoulli",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        3713,
+        3713,
+        3713,
+        8819,
+        8819
+      ],
+      "means": [
+        0.035,
+        0.027,
+        0.018,
+        0.008,
+        0.042,
+        0.024,
+        0.009,
+        0.053,
+        0.031
+      ]
+    },
+    {
+      "index": 9,
+      "name": "ceiling",
+      "T": 12000,
+      "K": 9,
+      "kind": "bernoulli",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        4211,
+        4211,
+        4211,
+        9001,
+        9001
+      ],
+      "means": [
+        0.977,
+        0.954,
+        0.9,
+        0.79,
+        0.991,
+        0.934,
+        0.825,
+        0.965,
+        0.865
+      ]
+    },
+    {
+      "index": 10,
+      "name": "larger_pool",
+      "T": 16000,
+      "K": 20,
+      "kind": "bernoulli",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        4019,
+        4019,
+        4019,
+        4019,
+        4019,
+        4019,
+        4019,
+        4019,
+        4019,
+        4019,
+        4019,
+        4019,
+        10501,
+        10501,
+        10501,
+        10501
+      ],
+      "means": [
+        0.81,
+        0.73,
+        0.615,
+        0.4,
+        0.15,
+        0.22,
+        0.29,
+        0.36,
+        0.43,
+        0.5,
+        0.57,
+        0.64,
+        0.71,
+        0.78,
+        0.845,
+        0.89,
+        0.94,
+        0.91,
+        0.76,
+        0.665
+      ]
+    },
+    {
+      "index": 11,
+      "name": "bounded_low_variance",
+      "T": 12000,
+      "K": 10,
+      "kind": "two_point",
+      "arrivals": [
+        1,
+        1,
+        1,
+        1,
+        4703,
+        4703,
+        4703,
+        9173,
+        9173,
+        9173
+      ],
+      "means": [
+        0.705,
+        0.535,
+        0.395,
+        0.225,
+        0.845,
+        0.625,
+        0.775,
+        0.815,
+        0.555,
+        0.345
+      ]
+    }
+  ],
+  "reps": 96,
+  "reward_seed": 117110100,
+  "policy_seed": 117120100,
+  "shuffle_within_batch": true,
+  "reward_seed_formula": "reward_seed + scenario_index * 10000 + replication",
+  "shuffle_seed_formula": "reward_seed + 50000000 + scenario_index * 10000 + replication",
+  "policy_seed_formula": "policy_seed + scenario_index * 10000 + replication",
+  "rewards": "Original study.streams; same full K by original T potential reward array reused across every method in each paired replication.",
+  "policy_information": "Past statistics, physical clock, currently observed births, and explicitly declared constants only.",
+  "existing_reference_specs": [
+    {
+      "name": "UCB1",
+      "core": 10,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": null,
+      "beta_s": null,
+      "temperature": 1.0,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "Growing-MOSS",
+      "core": 1,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": null,
+      "beta_s": null,
+      "temperature": 1.0,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "MC-MOSS",
+      "core": 2,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": null,
+      "beta_s": null,
+      "temperature": 1.0,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "Thompson",
+      "core": 3,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": null,
+      "beta_s": null,
+      "temperature": 1.0,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "KL-UCB",
+      "core": 4,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": null,
+      "beta_s": null,
+      "temperature": 1.0,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    },
+    {
+      "name": "F-R",
+      "core": 3,
+      "priority": 0.0,
+      "adaptive": false,
+      "beta_r": 16.0,
+      "beta_s": null,
+      "temperature": 0.5,
+      "scheduler": 50,
+      "prior": 1.0,
+      "pfloor": 0.02,
+      "k0": 4.0,
+      "price": 0.1
+    }
+  ],
+  "environment": {
+    "python": "3.11.7",
+    "numpy": "1.26.4",
+    "numba": "0.59.0",
+    "pandas": "2.1.4",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "frozen_source_hash_match": {
+    "ccp_primitives.py": true,
+    "flexible_engine.py": true,
+    "flexible_v2.py": true,
+    "study.py": true,
+    "study_v2.py": true
+  }
+}

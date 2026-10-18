@@ -1,0 +1,89 @@
+{
+  "inspect": {
+    "exit_code": 0,
+    "result": {
+      "input": "D:\\博士学习\\科研\\git\\MAB-AA\\ucbaa_jasa_resubmission_2026-10-15\\assessments\\final_packet.txt",
+      "kind": "text",
+      "report": {
+        "length": 103905,
+        "suspicious_total": 0,
+        "hits": [],
+        "notes": [
+          "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+          "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+          "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+          "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+          "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+        ],
+        "encoding": "utf-8",
+        "removable_unicode_characters": 0,
+        "protected_spans": 864,
+        "path": "D:\\博士学习\\科研\\git\\MAB-AA\\ucbaa_jasa_resubmission_2026-10-15\\assessments\\final_packet.txt"
+      },
+      "coverage_gaps": [
+        "Statistical/token watermarks are not tested",
+        "Suspicious Unicode in protected spans may be intentional"
+      ],
+      "known_partial": false
+    },
+    "stderr": ""
+  },
+  "clean": {
+    "exit_code": 0,
+    "result": {
+      "input": "D:\\博士学习\\科研\\git\\MAB-AA\\ucbaa_jasa_resubmission_2026-10-15\\assessments\\final_packet.txt",
+      "output": "D:\\博士学习\\科研\\git\\MAB-AA\\ucbaa_jasa_resubmission_2026-10-15\\audit\\final_packet.cleaned.txt",
+      "original_preserved": true,
+      "changed": false,
+      "scope": "unicode_prose_only",
+      "bytes_in": 103905,
+      "bytes_out": 103905,
+      "input_sha256": "84468b3ff00e738b7f274698a3505fbd5415042f93717f91b394438ee22089b4",
+      "output_sha256": "84468b3ff00e738b7f274698a3505fbd5415042f93717f91b394438ee22089b4",
+      "partial": false,
+      "detected_metadata_residual": false,
+      "coverage_gaps": [],
+      "upstream_report": {
+        "actions": [
+          "protected-span Unicode cleanup"
+        ],
+        "unicode": {
+          "removed_count": 0,
+          "replaced_count": 0,
+          "protected_spans": 864,
+          "normalize_spaces": false
+        }
+      },
+      "post_inspection": {
+        "input": "D:\\博士学习\\科研\\git\\MAB-AA\\ucbaa_jasa_resubmission_2026-10-15\\audit\\final_packet.cleaned.txt",
+        "kind": "text",
+        "report": {
+          "length": 103905,
+          "suspicious_total": 0,
+          "hits": [],
+          "notes": [
+            "Layer A only: invisible/format Unicode and space homoglyphs (edit-based carriers).",
+            "Statistical (token-sampling) watermarks are not detectable here; use Layer B rewrite.",
+            "Inspect kinds: strip, bidi, tag_chars, variation_selector, zwj_family, private_use, space, confusable, other_cf.",
+            "Load-bearing invisibles are preserved by default during cleaning: emoji glue, CJK/Mongolian variation selectors, script joiners, complete flag tag sequences, same-script fillers/selectors (Mongolian FVS, Khmer inherent vowels, Hangul jamo fillers), RTL directional marks/paired embeddings, orthographic Arabic/Syriac Cf marks, and visible-layout format controls next to their own script (Egyptian hieroglyph quadrat, Duployan shorthand, musical beaming). Inspection still reports bidi controls. Use explicit strip flags only after review.",
+            "No deterministic Layer A (invisible Unicode/format) carriers detected; statistical and pixel-domain marks are out of scope here."
+          ],
+          "encoding": "utf-8",
+          "removable_unicode_characters": 0,
+          "protected_spans": 864,
+          "path": "D:\\博士学习\\科研\\git\\MAB-AA\\ucbaa_jasa_resubmission_2026-10-15\\audit\\final_packet.cleaned.txt"
+        },
+        "coverage_gaps": [
+          "Statistical/token watermarks are not tested",
+          "Suspicious Unicode in protected spans may be intentional"
+        ],
+        "known_partial": false
+      }
+    },
+    "stderr": ""
+  },
+  "byte_identical": true,
+  "source_sha256": "84468b3ff00e738b7f274698a3505fbd5415042f93717f91b394438ee22089b4",
+  "cleaned_sha256": "84468b3ff00e738b7f274698a3505fbd5415042f93717f91b394438ee22089b4",
+  "scope": "Invisible Unicode cleanup only; prose was edited separately. Statistical token watermarks are not tested. Authors, citations, mathematics and required attribution retained."
+}

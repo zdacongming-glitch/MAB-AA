@@ -1,0 +1,15 @@
+usage: ce_five_algo_runner.py [-h] [--output-dir OUTPUT_DIR] [--seed SEED]
+                              [--R R] [--n-jobs N_JOBS]
+                              [--max-checkpoints MAX_CHECKPOINTS]
+                              [--progress {auto,on,off}]
+
+Run five algorithms on fixed Scenario C/E best configs
+
+options:
+  -h, --help            show this help message and exit
+  --output-dir OUTPUT_DIR
+  --seed SEED
+  --R R
+  --n-jobs N_JOBS
+  --max-checkpoints MAX_CHECKPOINTS
+  --progress {auto,on,off}

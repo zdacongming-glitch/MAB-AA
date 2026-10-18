@@ -1,0 +1,61 @@
+% Reorganized from the frozen October 15, 2026 supplement.
+\section{General information-allocation relaxation}
+\label{app:information}
+
+This result is useful beyond the separated family, but does not assert
+attainability. Fix a reference environment $\boldsymbol r$, endpoint $T$, and a
+deterministic query set
+\[
+ \mathcal Q\subseteq\{(i,t):i\in \mathcal{A}_t,
+                  |\Delta_i(t)-\varepsilon|>\eta\},\qquad W=|\mathcal Q|.
+\]
+For each query choose any allowed alternative $\boldsymbol r'$ that reverses arm
+$i$'s membership at time $t$. Put $u_{i,t}=P_{\boldsymbol r}(i\in \mathcal V_t)$ and
+\[
+ \Phi_\delta(u)=
+ \begin{cases}
+ \kl(1-\delta-u,\delta),&0\le u<1-2\delta,\\
+ 0,&1-2\delta\le u\le1.
+ \end{cases}
+\]
+This function is convex and nonincreasing: the positive branch is an affine
+composition of binary KL, and its value and derivative vanish at the join.
+
+\begin{proposition}[One protocol for area and information]
+\label{prop:information}
+For any reliable policy,
+\[
+ \sum_jE_{\boldsymbol r} N_j(t)\kl(r_j,r_j')
+                       \ge\Phi_\delta(u_{i,t}).
+\]
+If its joint area budget at $\boldsymbol r$ is $a$, then
+$\sum_{(i,t)\in\mathcal Q}u_{i,t}\le a+\delta W$. Consequently $E_{\boldsymbol r} R_T$
+is at least the value of
+\[
+ \inf_{x,u}\sum_{s\le T}\sum_{j\in \mathcal{A}_s}\Delta_j(s)x_{s,j},
+\]
+subject to $x_{s,j}\ge0$, $\sum_{j\in \mathcal{A}_s}x_{s,j}=1$, no prearrival
+allocations, the preceding unresolved-probability constraint, and for every
+query and chosen alternative,
+\[
+ \sum_{s\le t}\sum_jx_{s,j}\kl(r_j,r_j')
+                             \ge\Phi_\delta(u_{i,t}).
+\]
+For non-Bernoulli laws replace binary arm divergences by their distributional KL.
+\end{proposition}
+\begin{proof}
+Let $F$ be the event of issuing, at $(i,t)$, the determinate label correct in
+the reference environment. Then $P_{\boldsymbol r}(F)\ge1-u_{i,t}-\delta$, whereas
+$P_{\boldsymbol r'}(F)\le\delta$. The history-KL identity and data processing give
+the claimed constraint whenever $1-u_{i,t}-\delta>\delta$; otherwise
+nonnegativity suffices. This is the precise point where the truncated KL is
+needed. On area success the queried unresolved sum is at most $a$; outside
+success it is at most $W$. Taking expectations gives $a+\delta W$.
+The actual occupation probabilities $x_{s,j}=P_{\boldsymbol r}(I_s=j)$ satisfy every
+constraint, with objective exactly $E_{\boldsymbol r} R_T$.
+\end{proof}
+
+One observation can enter many information constraints but is charged once
+in the objective. Neither convex feasibility nor an oracle allocation proves
+that a policy with unknown means and future arrivals attains this relaxation.
+Dropping $\delta W$ would also change the stated risk protocol.
