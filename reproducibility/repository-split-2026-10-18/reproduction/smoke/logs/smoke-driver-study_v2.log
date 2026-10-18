@@ -1,9 +1,0 @@
-usage: study_v2.py [-h] [--freeze-dev2] [--stage STAGE] [--worker WORKER]
-                   [--workers WORKERS]
-
-options:
-  -h, --help         show this help message and exit
-  --freeze-dev2
-  --stage STAGE
-  --worker WORKER
-  --workers WORKERS

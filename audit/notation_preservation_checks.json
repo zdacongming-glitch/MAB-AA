@@ -1,8 +1,0 @@
-{
-  "maintenance_and_tradeoff_full_text_preserved_after_notation": true,
-  "normalized_expected_sha256": "691f109a63787b5306b2a33e4ee8660dce1f81ed66ac424f87490f5f80e8e0c9",
-  "normalized_current_sha256": "691f109a63787b5306b2a33e4ee8660dce1f81ed66ac424f87490f5f80e8e0c9",
-  "invisible_character_issues": [],
-  "active_sources_checked": 9,
-  "watermark_scope": "Invisible-character check only; no claim about unknown statistical text watermarks."
-}

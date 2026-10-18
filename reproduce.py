@@ -1,29 +1,26 @@
 #!/usr/bin/env python3
-"""Portable reproduction entry. Frozen policies, data and manuscript stay unchanged.
+"""Numerical reproduction entry, independent of manuscripts and research archives.
 
-All generated output is written in a fresh isolated workspace. The default action
-verifies stored material and rechecks F17 endpoints without running a policy.
+Every action writes to a fresh isolated workspace and checks that distributed
+inputs remain unchanged. The default --verify checks stored files and F-CCP
+endpoint accounting without running a policy or repeating a simulation.
 """
 from __future__ import annotations
 
 import argparse
 import ast
 import concurrent.futures
-import csv
 import datetime as dt
 import gzip
 import hashlib
-import importlib.metadata
 import json
 import os
-import re
 import shutil
 import subprocess
 import sys
 import time
 import threading
 import uuid
-import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -61,30 +58,18 @@ def copy_tree(relative: str, target: Path) -> Path:
     return destination
 
 
-def assets() -> list[str]:
-    text = (ROOT / "manuscript.tex").read_text(encoding="utf-8")
-    found = re.findall(r"\\includegraphics(?:\[[^\]]*\])?\{([^}]+)\}", text)
-    for name in found:
-        p = Path(name)
-        if p.is_absolute() or ".." in p.parts or not (ROOT / p).is_file():
-            raise RuntimeError(f"Nonlocal or missing manuscript graphic: {name}")
-    return sorted(set(found))
+BASELINE = "experiments/regret_baseline_screen_2026-10-17"
+INPUT_DIRS = ("experiments", "analysis", "figures", "metadata")
 
 
 def frozen_snapshot() -> dict[str, str]:
-    # Numerical inputs and current authoring entry are protected in every mode.
-    paths = [ROOT / "manuscript.tex", ROOT / "references.bib",
-             ROOT / "experiments/run_experiments.py",
-             ROOT / "experiments/reference_cp_ucb_aa.py",
-             ROOT / "figures/gen_fig_performance.py"]
-    for folder in ["experiments/fccp_frozen", "experiments/ccp_frozen",
-                   "experiments/frontier_frozen", "experiments/results",
-                   "experiments/original_submission_archive"]:
-        p = ROOT / folder
-        if p.is_dir():
-            paths.extend(x for x in p.rglob("*") if x.is_file()
-                         and "__pycache__" not in x.parts and x.suffix not in {".pyc", ".nbi", ".nbc"})
-    return {p.relative_to(ROOT).as_posix(): digest(p) for p in sorted(set(paths))}
+    paths = [ROOT / "reproduce.py", ROOT / "requirements-reproduce.txt"]
+    for folder in INPUT_DIRS:
+        paths.extend(path for path in (ROOT / folder).rglob("*")
+                     if path.is_file() and "__pycache__" not in path.parts
+                     and path.suffix not in {".pyc", ".pyo", ".nbi", ".nbc"})
+    return {path.relative_to(ROOT).as_posix(): digest(path)
+            for path in sorted(set(paths)) if path.is_file()}
 
 
 class Run:
@@ -93,7 +78,7 @@ class Run:
         self.workspace = args.workspace.expanduser().resolve() if args.workspace else ROOT / "_reproduced"
         if self.workspace == ROOT or self.workspace in ROOT.parents:
             raise RuntimeError("Workspace must be a dedicated output directory, not the project or an ancestor.")
-        for protected in ["experiments", "revision2", "audit", "figures", "assessments", "build"]:
+        for protected in [*INPUT_DIRS, ".git"]:
             if self.workspace == ROOT / protected or (ROOT / protected) in self.workspace.parents:
                 raise RuntimeError("Workspace cannot be inside a distributed input directory.")
         stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
@@ -107,7 +92,7 @@ class Run:
                         MPLCONFIGDIR=str(self.path / "matplotlib-cache"))
         self.before = frozen_snapshot()
         self.result = {"started_utc": stamp, "action": args.action,
-                       "suite": args.suite, "scope": "isolated portable reproduction",
+                       "suite": args.suite, "scope": "isolated numerical reproduction",
                        "workspace": str(self.path), "commands": self.commands}
         self.flush()
 
@@ -146,115 +131,7 @@ class Run:
             self.result["error"] = str(error)
         self.flush()
         if self.before != after:
-            raise RuntimeError("Protected project inputs changed during the reproduction command.")
-
-
-def copy_paper(run: Run, numerical=False) -> Path:
-    paper = run.path / "paper"
-    paper.mkdir()
-    for relative in ["manuscript.tex", "references.bib", "revision2/build_papers.py", *assets()]:
-        copy_file(relative, paper)
-    if numerical:
-        for directory in ["experiments/fccp_frozen", "experiments/results"]:
-            copy_tree(directory, paper)
-        for relative in ["figures/gen_fig_performance.py", "revision2/analysis/reanalyze_fccp.py",
-                         "revision2/analysis/release-manifest.json"]:
-            copy_file(relative, paper)
-        # Transparent adapter in the work copy only: the editorial generator
-        # otherwise probes sibling research folders even with --release-only.
-        path = paper / "revision2/analysis/reanalyze_fccp.py"
-        old = path.read_text(encoding="utf-8")
-        assert old.count("REPO = PROJECT.parent") == 1
-        path.write_text(old.replace("REPO = PROJECT.parent", "REPO = PROJECT  # standalone work-copy adapter"), encoding="utf-8")
-        json_out(run.path / "path-adapter.json", {
-            "source": "revision2/analysis/reanalyze_fccp.py", "source_sha256": digest(ROOT / "revision2/analysis/reanalyze_fccp.py"),
-            "work_copy_sha256": digest(path), "change": "REPO = PROJECT.parent -> REPO = PROJECT",
-            "reason": "Keep all historical research-asset lookups inside the isolated paper copy.",
-            "policy_code_changed": False})
-    return paper
-
-
-def verify_original_manifests() -> list[dict]:
-    records = []
-    f = ROOT / "experiments/fccp_frozen"
-    manifest = json.loads((f / "MANIFEST.json").read_text(encoding="utf-8"))
-    archive = f / "original-archives/F-CCP_可调算法_理论与实验_2026-10-17.zip"
-    with zipfile.ZipFile(archive) as z:
-        for rel, metadata in manifest.items():
-            if (f / rel).is_file():
-                actual = digest(f / rel)
-            else:
-                matches = [n for n in z.namelist() if n.endswith("/" + rel)]
-                if len(matches) != 1:
-                    raise RuntimeError(f"Unrecoverable original F17 manifest input: {rel}")
-                actual = hashlib.sha256(z.read(matches[0])).hexdigest()
-            if actual != metadata["sha256"]:
-                raise RuntimeError(f"F17 manifest mismatch: {rel}")
-    records.append({"manifest": "experiments/fccp_frozen/MANIFEST.json", "checked": len(manifest)})
-    for relative, name in [("experiments/ccp_frozen", "checksums.sha256"),
-                           ("experiments/frontier_frozen", "MANIFEST.sha256")]:
-        directory = ROOT / relative
-        p = directory / name
-        if not p.is_file():
-            continue
-        checked = 0
-        for line in p.read_text(encoding="utf-8-sig").splitlines():
-            if not line.strip():
-                continue
-            expected, rel = line.split(maxsplit=1)
-            rel = rel.lstrip(" *")
-            rel = rel.removeprefix("./")
-            item = directory / rel
-            item.resolve().relative_to(directory.resolve())
-            if not item.is_file() or digest(item) != expected:
-                raise RuntimeError(f"Historical manifest mismatch: {relative}/{rel}")
-            checked += 1
-        records.append({"manifest": relative + "/" + name, "checked": checked})
-    checkpoint = ROOT / "experiments"
-    manifest = json.loads((checkpoint / "results/manifest.json").read_text(encoding="utf-8"))
-    checkpoint_inputs = {
-        "source_sha256": "reference_cp_ucb_aa.py",
-        "runner_sha256": "run_experiments.py",
-        "config_sha256": "results/config.json",
-        "runs_sha256": "results/runs.csv",
-        "paths_sha256": "results/paths.npz",
-    }
-    for key, relative in checkpoint_inputs.items():
-        item = checkpoint / relative
-        if not item.is_file() or digest(item) != manifest[key]:
-            raise RuntimeError(f"Checkpoint manifest mismatch: experiments/{relative}")
-    records.append({"manifest": "experiments/results/manifest.json",
-                    "checked": len(checkpoint_inputs)})
-    return records
-
-
-def verify_import_manifests() -> list[dict]:
-    reports = []
-    for name in ["numerical-import-manifest.json", "support-import-manifest.json"]:
-        p = ROOT / "reproducibility" / name
-        if not p.is_file():
-            raise FileNotFoundError("Missing distributed collection manifest: " + name)
-        records = json.loads(p.read_text(encoding="utf-8"))["files"]
-        decompressed = 0
-        for record in records:
-            item = ROOT / record["destination"]
-            item.resolve().relative_to(ROOT.resolve())
-            expected = record.get("destination_sha256", record.get("sha256"))
-            if not item.is_file() or digest(item) != expected:
-                raise RuntimeError("Import manifest mismatch: " + record["destination"])
-            if record.get("operation") == "gzip-lossless":
-                h, size = hashlib.sha256(), 0
-                with gzip.open(item, "rb") as stream:
-                    for block in iter(lambda: stream.read(1024 * 1024), b""):
-                        h.update(block)
-                        size += len(block)
-                if h.hexdigest() != record["source_sha256"] or size != record["source_bytes"]:
-                    raise RuntimeError("Decompressed historical data mismatch: " + record["destination"])
-                decompressed += 1
-        reports.append({"manifest": "reproducibility/" + name, "files_checked": len(records),
-                        "lossless_gzip_streams_checked": decompressed,
-                        "original_machine_source_paths_accessed": False})
-    return reports
+            raise RuntimeError("Distributed numerical inputs changed during the reproduction command.")
 
 
 def verify_original_driver() -> dict:
@@ -280,99 +157,104 @@ def verify_original_driver() -> dict:
             "manual_ce_final_used": False}
 
 
-def verify_local_imports(folder: str) -> dict:
-    source = ROOT / folder
-    module_files = list(source.glob("*.py"))
-    modules = {p.stem for p in module_files}
-    # P16 explicitly vendors its original CCP dependency under prior/.
-    modules.update(p.stem for p in (source / "prior").rglob("*.py"))
-    allowed = set(sys.stdlib_module_names) | {"numpy", "numba", "pandas", "scipy", "matplotlib", "sympy", "tqdm"} | modules
-    missing = set()
-    for p in module_files:
-        for node in ast.walk(ast.parse(p.read_text(encoding="utf-8-sig"))):
-            if isinstance(node, ast.Import):
-                names = [x.name.split(".")[0] for x in node.names]
-            elif isinstance(node, ast.ImportFrom) and node.module:
-                names = [node.module.split(".")[0]]
-            else:
-                names = []
-            missing.update(name for name in names if name not in allowed)
-    if missing:
-        raise RuntimeError(f"Unresolved distributed module imports in {folder}: {sorted(missing)}")
-    return {"folder": folder, "python_files_checked": len(module_files), "unresolved_imports": []}
+def checked_input(relative: str) -> Path:
+    path = (ROOT / relative).resolve()
+    path.relative_to(ROOT.resolve())
+    if not path.is_file():
+        raise FileNotFoundError(f"Missing distributed numerical input: {relative}")
+    return path
+
+
+def verify_release() -> dict:
+    manifest = json.loads(checked_input("metadata/files.sha256.json").read_text(encoding="utf-8-sig"))
+    records = manifest["files"]
+    seen = set()
+    for record in records:
+        relative = record["path"]
+        if relative in seen:
+            raise RuntimeError(f"Duplicate numerical manifest entry: {relative}")
+        seen.add(relative)
+        path = checked_input(relative)
+        if path.stat().st_size != record["bytes"] or digest(path) != record["sha256"]:
+            raise RuntimeError(f"Numerical release manifest mismatch: {relative}")
+    gzip_records = manifest.get("original_gzip", [])
+    for record in gzip_records:
+        value, size = hashlib.sha256(), 0
+        with gzip.open(checked_input(record["path"]), "rb") as stream:
+            for block in iter(lambda: stream.read(1024 * 1024), b""):
+                value.update(block)
+                size += len(block)
+        if size != record["source_bytes"] or value.hexdigest() != record["source_sha256"]:
+            raise RuntimeError(f"Lossless historical data check failed: {record['path']}")
+    return {"manifest": "metadata/files.sha256.json", "files_checked": len(records),
+            "lossless_gzip_streams_checked": len(gzip_records)}
 
 
 def do_verify(run: Run):
-    resources = assets()
-    text = (ROOT / "manuscript.tex").read_text(encoding="utf-8")
-    for group in re.findall(r"\\bibliography\{([^}]+)\}", text):
-        for name in group.split(","):
-            if not (ROOT / (name.strip() + ".bib")).is_file():
-                raise RuntimeError("Missing bibliography: " + name)
-    if re.search(r"\\(?:input|include)\s*\{", text):
-        raise RuntimeError("Unexpected external TeX source dependency in the combined manuscript.")
-    manifests = verify_original_manifests()
-    import_manifests = verify_import_manifests()
-    historical_driver = verify_original_driver()
-    import_closure = [verify_local_imports(folder) for folder in [
-        "experiments/fccp_frozen/src", "experiments/ccp_frozen", "experiments/frontier_frozen",
-        "experiments/original_submission_archive/source"]]
+    manifest = verify_release()
     modules = []
-    for folder in ["experiments/fccp_frozen/src", "experiments/ccp_frozen", "experiments/frontier_frozen"]:
-        source = ROOT / folder
-        if source.is_dir():
-            for p in source.glob("*.py"):
-                ast.parse(p.read_text(encoding="utf-8-sig"), filename=str(p))
-                modules.append(p.relative_to(ROOT).as_posix())
+    for folder in ("experiments", "analysis", "figures"):
+        for path in sorted((ROOT / folder).rglob("*.py")):
+            ast.parse(path.read_text(encoding="utf-8-sig"), filename=str(path))
+            modules.append(path.relative_to(ROOT).as_posix())
+    historical_driver = verify_original_driver()
     verifier = run.path / "check_revision2_data.py"
-    shutil.copyfile(ROOT / "revision2/analysis/check_revision2_data.py", verifier)
-    # Checker reads the frozen inputs and writes its fresh report outside them.
+    shutil.copyfile(checked_input("analysis/check_revision2_data.py"), verifier)
     run.python(verifier, ["--f-root", str(ROOT / "experiments/fccp_frozen"),
-                         "--out", str(run.path / "fccp-endpoint-check.json")], run.path, "verify-fccp-endpoints")
-    report = {"status": "passed", "manifest_checks": manifests,
-              "import_manifest_checks": import_manifests, "original_submission_driver": historical_driver,
-              "local_import_closure": import_closure,
-              "manuscript_graphics": resources, "python_modules_ast_checked": modules,
-              "tex_code_in_single_manuscript": True,
-              "no_policy_executed": True, "no_external_research_asset_lookup": True}
-    json_out(run.path / "verification.json", report)
+                         "--out", str(run.path / "fccp-endpoint-check.json")],
+               run.path, "verify-fccp-endpoints")
+    json_out(run.path / "verification.json", {
+        "status": "passed", "release_manifest": manifest,
+        "python_modules_ast_checked": modules, "original_submission_driver": historical_driver,
+        "no_policy_executed": True, "manuscript_required": False,
+        "external_research_archives_required": False})
 
 
 def do_figures(run: Run):
-    paper = copy_paper(run, numerical=True)
-    run.python(paper / "revision2/analysis/reanalyze_fccp.py", ["--release-only"], paper, "figures-fccp-readonly")
-    run.python(paper / "figures/gen_fig_performance.py", ["--figures-only"], paper, "figures-checkpoint-readonly")
-
-
-def do_build(run: Run):
-    for tool in ["latexmk", "pdflatex", "bibtex"]:
-        if shutil.which(tool) is None:
-            raise RuntimeError(f"Missing TeX tool: {tool}. Install a TeX distribution with latexmk.")
-    paper = copy_paper(run)
-    run.python(paper / "revision2/build_papers.py", [], paper, "build-combined-manuscript")
+    work = run.path / "numerical"
+    work.mkdir()
+    for directory in ("experiments/fccp_frozen", "experiments/results", BASELINE):
+        copy_tree(directory, work)
+    for relative in ("analysis/plot_fccp.py", "analysis/plot_baselines.py", "figures/gen_fig_performance.py"):
+        copy_file(relative, work)
+    run.python(work / "analysis/plot_fccp.py",
+               ["--data-root", str(work / "experiments/fccp_frozen"),
+                "--output-dir", str(work / "figures/fccp")], work, "figures-fccp")
+    run.python(work / "figures/gen_fig_performance.py", ["--figures-only"], work, "figures-checkpoint")
+    screen = work / BASELINE
+    run.python(screen / "analyze.py", [str(screen / "results"), "--protocol", str(screen / "protocol.json")],
+               screen, "analyze-baseline-stored-results")
+    run.python(work / "analysis/plot_baselines.py",
+               ["--results-dir", str(screen / "results"), "--output-dir", str(screen / "figures")],
+               work, "figures-baseline")
+    json_out(run.path / "figure-outputs.json", {
+        "fccp": "numerical/figures/fccp", "checkpoint": "numerical/figures",
+        "baseline": "numerical/" + BASELINE + "/figures", "policy_simulations": 0})
 
 
 def do_smoke(run: Run):
-    paper = run.path / "paper"
-    paper.mkdir()
-    copy_tree("experiments/fccp_frozen", paper)
-    copy_file("revision2/analysis/check_fccp_interface.py", paper)
-    run.python(paper / "revision2/analysis/check_fccp_interface.py", [], paper, "smoke-prescribed-interface")
-    for folder in ["experiments/ccp_frozen", "experiments/frontier_frozen", "experiments/original_submission_archive"]:
-        copy_tree(folder, paper)
-    copy_file("experiments/run_experiments.py", paper)
-    copy_file("experiments/reference_cp_ucb_aa.py", paper)
-    for entry in ["experiments/fccp_frozen/src/study_v2.py", "experiments/fccp_frozen/src/study_matched.py",
-                  "experiments/ccp_frozen/run_study.py", "experiments/frontier_frozen/test_run.py",
-                  "experiments/run_experiments.py", "experiments/original_submission_archive/source/ce_five_algo_runner.py"]:
-        path = paper / entry
-        run.python(path, ["--help"], path.parent, "smoke-driver-" + path.stem)
+    work = run.path / "numerical"
+    work.mkdir()
+    for directory in ("experiments/fccp_frozen", "experiments/ccp_frozen",
+                      "experiments/frontier_frozen", "experiments/original_submission_archive", BASELINE):
+        copy_tree(directory, work)
+    for relative in ("analysis/check_fccp_interface.py", "experiments/run_experiments.py",
+                     "experiments/reference_cp_ucb_aa.py"):
+        copy_file(relative, work)
+    run.python(work / "analysis/check_fccp_interface.py", [], work, "smoke-prescribed-interface")
+    entries = ["experiments/fccp_frozen/src/study_v2.py", "experiments/fccp_frozen/src/study_matched.py",
+               "experiments/ccp_frozen/run_study.py", "experiments/frontier_frozen/test_run.py",
+               "experiments/run_experiments.py", "experiments/original_submission_archive/source/ce_five_algo_runner.py",
+               BASELINE + "/runner.py"]
+    for index, entry in enumerate(entries):
+        path = work / entry
+        run.python(path, ["--help"], path.parent, f"smoke-driver-{index + 1}-{path.stem}")
     json_out(run.path / "smoke-scope.json", {
         "policy_performance_trials": 0,
-        "scope": "600 same-backend compatible actions, 320 prescribed-observation API actions, 10 same-state batch-action checks, 6 API rejection checks.",
-        "report": "paper/revision2/analysis/interface-checks.json",
-        "production_driver_import_and_help_checks": 6,
-        "not_claimed": "Full experiment rerun, cross-backend seeded equality, probabilistic certification or independent proof verification."})
+        "scope": "600 compatibility actions, 320 prescribed-observation API actions, 10 same-state action checks and 6 API rejection checks.",
+        "report": "numerical/analysis/interface-checks.json",
+        "production_driver_import_and_help_checks": len(entries),
+        "not_claimed": "Full experiment rerun, seeded equality across random-number backends or probabilistic certification."})
 
 
 def tasks(run: Run, items: list[tuple[list[str], Path, str]]):
@@ -391,7 +273,7 @@ def driver(script: Path, *arguments: str) -> list[str]:
 
 
 def do_simulate(run: Run):
-    suites = ["fccp", "ccp", "frontier", "checkpoint"] if run.args.suite == "all" else [run.args.suite]
+    suites = ["fccp", "ccp", "frontier", "checkpoint", "baseline"] if run.args.suite == "all" else [run.args.suite]
     outputs = []
     for suite in suites:
         paper = run.path / "simulations" / suite
@@ -432,6 +314,16 @@ def do_simulate(run: Run):
             run.python(paper / "experiments/run_experiments.py", [], paper, "simulate-checkpoint-all")
             run.python(paper / "figures/gen_fig_performance.py", ["--figures-only"], paper, "figures-checkpoint-rerun")
             outputs.append(str((paper / "experiments/results/runs.csv").relative_to(run.path)))
+        elif suite == "baseline":
+            copy_tree("experiments/fccp_frozen", paper)
+            package = copy_tree(BASELINE, paper)
+            destination = package / "results-rerun"
+            run.python(package / "runner.py",
+                       ["--protocol", str(package / "protocol.json"), "--output", str(destination),
+                        "--workers", str(run.args.workers)], package, "simulate-baseline-all")
+            run.python(package / "analyze.py", [str(destination), "--protocol", str(package / "protocol.json")],
+                       package, "summarize-baseline-rerun")
+            outputs.append(str((destination / "runs-all.csv").relative_to(run.path)))
         elif suite == "original":
             verify_original_driver()
             package = copy_tree("experiments/original_submission_archive", paper)
@@ -444,7 +336,7 @@ def do_simulate(run: Run):
     json_out(run.path / "simulation-outputs.json", {
         "suites": suites, "outputs": outputs,
         "protocols_regenerated": False,
-        "scope": "New independent reruns of the selected distributed test protocols. all means fccp, ccp, frontier and checkpoint. original is an explicit additional historical C/E rerun; development/tuning is archived separately.",
+        "scope": "New independent reruns of the selected distributed test protocols. all means fccp, ccp, frontier, checkpoint and baseline. original is an explicit additional historical C/E rerun; development/tuning is archived separately.",
         "cross_version_bitwise_equality_claimed": False,
         "note": "Compare scenario/rep/method or scenario/seed/method metrics, excluding runtime fields. Original failure paths remain in the distributed data."})
 
@@ -453,24 +345,23 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     group = parser.add_mutually_exclusive_group()
     for action, help_text in [
-        ("verify", "Verify hashes, local assets, Python syntax and frozen F17 endpoint accounting; no policy run."),
-        ("figures", "Recompute tables/figures from stored results in an isolated copy; no simulation."),
-        ("build", "Compile the complete manuscript in an isolated copy."),
+        ("verify", "Verify numerical release hashes, lossless data, Python syntax and F-CCP endpoint accounting; no policy run."),
+        ("figures", "Recompute numerical summaries and figures from stored results in an isolated copy; no simulation."),
         ("smoke", "Run only short prescribed-observation interface checks in an isolated copy."),
         ("simulate", "Rerun the complete selected frozen test suite in an isolated copy; can take substantial time."),
     ]:
         group.add_argument("--" + action, dest="action", action="store_const", const=action, help=help_text)
     parser.set_defaults(action="verify")
-    parser.add_argument("--suite", choices=["fccp", "ccp", "frontier", "checkpoint", "original", "all"], default="fccp")
+    parser.add_argument("--suite", choices=["fccp", "ccp", "frontier", "checkpoint", "baseline", "original", "all"], default="fccp")
     parser.add_argument("--workers", type=int, default=1, help="Concurrent simulation workers; default serial. Does not change frozen seeds or policies.")
-    parser.add_argument("--workspace", type=Path, help="Dedicated output base (default: manuscript/_reproduced). Each invocation creates a new run directory.")
+    parser.add_argument("--workspace", type=Path, help="Dedicated output base (default: repository/_reproduced). Each invocation creates a new run directory.")
     args = parser.parse_args()
     if args.workers < 1 or args.workers > 64:
         parser.error("--workers must be between 1 and 64")
     run = None
     try:
         run = Run(args)
-        {"verify": do_verify, "figures": do_figures, "build": do_build,
+        {"verify": do_verify, "figures": do_figures,
          "smoke": do_smoke, "simulate": do_simulate}[args.action](run)
         run.final(True)
         print(json.dumps({"status": "passed", "action": args.action,

@@ -1,1 +1,0 @@
-请执行 D:/博士学习/科研/git/MAB-AA/ucbaa_jasa_resubmission_2026-10-15/audit/innovation_assessment_2026-10-18/evaluation-task.txt 中的一次独立创新性评价任务。严格使用指定固定证据与规则，读取全部相关材料；不要继承、查找历史评分或其他轮次结果。按任务要求保存你本轮的JSON并简短回报。

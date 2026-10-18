@@ -1,6 +1,0 @@
-# Python 3.11.7 was used for the recorded runs.
-numpy==1.26.4
-numba==0.59.0
-scipy==1.11.4
-matplotlib==3.8.0
-# PDF compilation additionally requires pdflatex and bibtex (TeX Live 2024 used).

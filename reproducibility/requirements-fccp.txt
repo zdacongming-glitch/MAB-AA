@@ -1,7 +1,0 @@
-# Recorded C16/P16/F17 numerical-library versions (Python 3.13.5 on original Linux runs).
-# This records the observed environment; it is not a fully resolved transitive lockfile.
-numpy==2.3.5
-numba==0.65.1
-pandas==2.2.3
-scipy==1.17.0
-matplotlib==3.10.8

@@ -1,3 +1,0 @@
-method,n_scenarios,n_per_scenario,mean_scenario_regret,mean_regret_mcse,mean_paired_difference,paired_mcse,ci95_low,ci95_high,equal_scenario_mean_ratio_to_FR,mean_ratio_mcse_delta,scenarios_lower_mean,scenarios_unadjusted_significant_lower,scenarios_unadjusted_significant_higher,scenarios_familywise_lower,scenarios_familywise_higher
-F-R,12,96,7.994791666666667,0.008549355730725789,0.0,0.0,0.0,0.0,1.0,0.0,0,0,0,0,0
-synthetic,12,96,8.095098222838105,0.008580427679892063,0.10030655617143942,0.0010424300349097405,0.09823707089865022,0.10237604144422863,1.016202002319859,0.00020219462680253744,0,0,12,0,12

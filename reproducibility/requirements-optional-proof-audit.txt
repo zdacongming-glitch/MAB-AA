@@ -1,2 +1,0 @@
-# The P16 symbolic audit additionally recorded this version.
-sympy==1.14.0

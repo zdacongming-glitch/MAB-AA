@@ -1,5 +1,0 @@
-usage: run_experiments.py [-h] [--pilot]
-
-options:
-  -h, --help  show this help message and exit
-  --pilot     2-rep smoke execution; never writes production output

@@ -1,4 +1,0 @@
-This is BibTeX, Version 0.99d (TeX Live 2024)
-The top-level auxiliary file: audit/section_merge_build/manuscript_merged.aux
-The style file: plainnat.bst
-Database file #1: references.bib
