@@ -130,7 +130,8 @@ def preview(tasks: list[dict], profile: str) -> dict:
         item["shards"] += 1
         item["trajectories"] += len(task["methods"])
         item["physical_rounds"] += len(task["methods"]) * task["layout"]["T"]
-    return {"profile": profile, "kind": "derived smoke" if profile.startswith("smoke-") else "formal",
+    kind = "scaled screening" if profile == "screen-all" else ("derived smoke" if profile.startswith("smoke-") else "formal")
+    return {"profile": profile, "kind": kind,
             "layouts": len({t["layout"]["id"] for t in tasks}),
             "cells": len({(t["layout"]["id"], t["law"]) for t in tasks}),
             "shards": len(tasks), "unique_trajectories": sum(len(t["methods"]) for t in tasks),
@@ -247,7 +248,7 @@ def _run_locked(profile, output, tasks, methods, workers, resume, render):
         manifest = {"schema_version": 1, "profile": profile, "fingerprint": fingerprint,
             "config_sha256": sha256(output / "config.json"), "environment": versions(),
             "started_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
-            "scientific_scope": "derived smoke experiment" if profile.startswith("smoke-") else "formal",
+            "scientific_scope": "scaled screening" if profile == "screen-all" else ("derived smoke experiment" if profile.startswith("smoke-") else "formal"),
             "expected_shards": len(tasks), "expected_runs": config["expected_runs"],
             "shards": {}, "files": {}, "resume_count": 0}
     manifest.update(status="RUNNING", workers=workers, failures=[])
@@ -332,10 +333,14 @@ def _run_locked(profile, output, tasks, methods, workers, resume, render):
         atomic_json(manifest_path, manifest)
         verify(output, check_current=True)
         if render:
-            from .analysis import analyze
-            from .plotting import plot
-            analyze(output)
-            plot(output)
+            if profile == "screen-all":
+                from .relative_regret import analyze_relative
+                analyze_relative(output)
+            else:
+                from .analysis import analyze
+                from .plotting import plot
+                analyze(output)
+                plot(output)
         print(f'PASS {manifest["actual_runs"]} unique trajectories: {output}', flush=True)
         return manifest
     except BaseException:

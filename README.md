@@ -2,7 +2,7 @@
 
 论文当前无 H8 的 **SRC** 与理论改进版 **SRC-KL** 的最终实现：22 个奖励 baseline、匹配分类调度对照、45 个布局、540 个环境单元，以及统一配对模拟、校验、分析和绘图入口。SRC-KL 保留原经验分布奖励评分，改变 KL/MOSS 切换参考与奖励账本上限。
 
-**当前结果只有两套实际运行的小规模试验。完整正式矩阵尚未运行，试跑不构成算法优越性证据。** 完整入口覆盖 418,560 条唯一轨迹，包含独立尾部研究；复用的奖励端点只执行、计数一次。
+**完整原规模正式矩阵尚未运行。** 仓库提供两套流程试跑，以及覆盖全部 setting 的缩小预研究入口；缩小后的比较不能代替原规模实验。完整正式入口覆盖 418,560 条唯一轨迹，包含独立尾部研究；复用的奖励端点只执行、计数一次。
 
 本目录只发布最终版本，不保留旧开发代码、调参材料、历史结果或 H8/H16 候选。正常 Git 历史保留，精简来源记录在 `configs/provenance.json`。运行不依赖相邻 `proposal`、Overleaf、WSL 或 C++ 编译器。
 
@@ -29,7 +29,22 @@ python run_main.py run --profile smoke-dense --output _runs/my-dense --workers 1
 
 ![密集到达试跑的奖励与未决量权衡](results/smoke-dense/figures/tradeoff_smoke_dense_joint.png)
 
-## 完整主实验
+## 全 setting 的缩小比较
+
+需要先比较所有算法在所有 setting 下的表现时，可运行全 setting 缩小研究：
+
+```powershell
+python run_main.py run --profile screen-all --dry-run
+python run_main.py run --profile screen-all --output _runs/screen-all --workers auto
+```
+
+该 profile 为 45 个来源布局 × 对应分布，共 540 cells；T=400、每单元 4 次配对重复，全部 40 个配置，共 86,400 条轨迹。输出 `relative_regret/report.html` 与两种 SRC 对 22 baseline 的相对 regret 热图。原/实际臂数、配对百分比与统计解释见 [SCREENING.md](docs/SCREENING.md)。
+
+本次结果已全部完成：[实际结论](results/screen-all/relative_regret/RESULTS.md)、[完整单元表](results/screen-all/relative_regret/all_cell_methods.csv)、[百分比表](results/screen-all/relative_regret/percent_matrix.csv)。全部 cells 等权时，相对 IMED，SRC-R / SRC-KL-R 的平均 regret 分别降低 23.1% / 4.5%；KL 相对原 SRC 的改善主要出现在高密度与 scale，不能解释成处处更好。
+
+![全部 setting 缩小研究的相对 regret 热图](results/screen-all/relative_regret/relative_regret_screen.png)
+
+## 完整原规模主实验
 
 ```powershell
 python run_main.py run --profile full --dry-run

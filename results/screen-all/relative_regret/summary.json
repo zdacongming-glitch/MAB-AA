@@ -1,0 +1,71 @@
+{
+  "profile": "screen-all",
+  "manifest_status": "PASS",
+  "scope": "Scaled all-settings pilot; original full-size experiment not run",
+  "unique_trajectories": 86400,
+  "layouts": 45,
+  "cells": 540,
+  "methods": 40,
+  "cohorts": [
+    "screen"
+  ],
+  "sections": [
+    "adaptive",
+    "dense_K100",
+    "dense_K2000",
+    "dense_K500",
+    "f17",
+    "scale_K4000"
+  ],
+  "all_six_sections_present": true,
+  "actual_horizons": [
+    400
+  ],
+  "replications": [
+    4
+  ],
+  "candidates": [
+    "SRC-R",
+    "SRC-KL-R"
+  ],
+  "comparators": [
+    "IMED",
+    "UCB1",
+    "AUER",
+    "Growing-MOSS",
+    "ACI",
+    "Clipped-ACI",
+    "TS",
+    "KL-UCB-c0",
+    "KL-UCB-c3",
+    "KL-UCB+",
+    "UCB1-Tuned",
+    "UCB-V",
+    "Bayes-UCB",
+    "Empirical-KL-UCB",
+    "SB-EXP3-ATGT",
+    "BL-MOSS-b0.5",
+    "BL-MOSS-b1",
+    "BL-MOSS-b2",
+    "UCB-log2t-c3",
+    "MOSS-T-currentK",
+    "TS-Jeffreys",
+    "TS-SMAB-bounded"
+  ],
+  "percent_definition": "100*(candidate macro mean/comparator macro mean-1); never average cell percentages",
+  "primary_overall": "equal weight per environmental cell",
+  "secondary_overall": "equal weight per source section, then per cell",
+  "intervals": "nominal paired stratified delta-method t intervals with covariance; descriptive only",
+  "stars": false,
+  "all_failure_paths_retained": true,
+  "scientific_flag_paths": {
+    "label_error": 0,
+    "coverage_error": 220,
+    "empty_intersection": 0
+  },
+  "figures": [
+    "D:\\博士学习\\科研\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\screen-all\\relative_regret\\relative_regret_screen.png",
+    "D:\\博士学习\\科研\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\screen-all\\relative_regret\\relative_regret_screen.pdf",
+    "D:\\博士学习\\科研\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\screen-all\\relative_regret\\relative_regret_screen.svg"
+  ]
+}

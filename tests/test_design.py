@@ -106,6 +106,93 @@ def test_frozen_method_registry_drift_is_rejected(tmp_path):
         validate_registry(path)
 
 
+@pytest.fixture(scope="module")
+def screen_tasks():
+    return build_tasks("screen-all")
+
+
+def test_screen_all_covers_every_cell_and_method_with_four_paired_reps(screen_tasks):
+    assert len(screen_tasks) == 2160
+    assert len({t["cell_id"] for t in screen_tasks}) == 540
+    assert len({t["layout"]["id"] for t in screen_tasks}) == 45
+    assert sum(len(t["methods"]) for t in screen_tasks) == 86400
+    assert all(set(t["methods"]) == set(METHODS) for t in screen_tasks)
+    assert all(t["cohort"] == "screen" and t["seed_base"] == 2026103105 for t in screen_tasks)
+    assert all(t["suites"] == ["joint", "reward"] for t in screen_tasks)
+    assert all(v == ["reward", "joint"] for t in screen_tasks for v in t["method_suites"].values())
+    assert all(t["rep"] in {0, 1, 2, 3} for t in screen_tasks)
+
+
+def test_screen_preserves_source_record_identities_and_arrival_batches(screen_tasks):
+    originals = {s["id"]: s for s in load_layouts()}
+    derivatives = {t["layout"]["id"]: t["layout"] for t in screen_tasks}
+    for s in derivatives.values():
+        d = s["metadata"]["derivative"]
+        parent = originals[d["parent_id"]]
+        indices = d["selected_parent_indices"]
+        mandatory = {0, len(parent["arms"])-1}
+        mandatory.update(i for i, a in enumerate(parent["arms"]) if a["record"])
+        assert mandatory.issubset(indices)
+        assert len(s["arms"]) == d["actual_arm_count"]
+        assert s["T"] == d["actual_T"] == 400
+        assert d["parent_T"] == parent["T"]
+        assert d["record_status_changes"] == []
+        assert [a["mean"] for a in s["arms"]] == [parent["arms"][i]["mean"] for i in indices]
+        source_births = [parent["arms"][i]["arrival"] for i in indices]
+        actual_births = [a["arrival"] for a in s["arms"]]
+        assert actual_births[0] == 1
+        for old_a, old_b, new_a, new_b in zip(source_births, source_births[1:], actual_births, actual_births[1:]):
+            assert (old_a == old_b) == (new_a == new_b)
+            assert old_a == old_b or new_a < new_b
+        for key in ["epsilon", "eta", "delta"]:
+            assert s[key] == parent[key]
+        if s["group"] in {"f17", "adaptive"}:
+            assert len(indices) == len(parent["arms"])
+
+
+def test_screen_keeps_whole_bursts_and_expands_k100_when_records_require_it(screen_tasks):
+    originals = {s["id"]: s for s in load_layouts()}
+    bursts = {t["layout"]["id"]: t["layout"] for t in screen_tasks
+              if t["layout"]["metadata"].get("family") == "bursty_reservoir"}
+    assert len(bursts) == 3
+    for s in bursts.values():
+        counts = Counter(a["arrival"] for a in s["arms"])
+        assert set(counts.values()) == {5}
+        d = s["metadata"]["derivative"]
+        parent = originals[d["parent_id"]]
+        selected = set(d["selected_parent_indices"])
+        for i in selected:
+            batch_birth = parent["arms"][i]["arrival"]
+            assert all(j in selected for j, a in enumerate(parent["arms"]) if a["arrival"] == batch_birth)
+        if d["parent_arm_count"] == 100:
+            assert d["requested_arm_count"] == 20
+            assert d["actual_arm_count"] == 30
+            assert d["expansion_reason"]
+        else:
+            assert d["actual_arm_count"] == d["requested_arm_count"]
+
+
+def test_screen_has_minimal_diagnostics_and_changes_only_its_profile(screen_tasks):
+    assert all(t["diagnostics"] == dict(trajectory_replications=1, linear_points=21,
+                log_points=10, per_arm_methods=[], smoke_all_methods=False) for t in screen_tasks)
+    assert preview("full")["unique_paths"] == 418560
+    assert preview("smoke-small")["unique_paths"] == 448
+    assert preview("smoke-dense")["unique_paths"] == 176
+    assert preview("screen-all")["small_derivatives"] is True
+
+
+def test_screen_configuration_drives_its_replications_and_seed(tmp_path):
+    protocol = json.loads((CONFIG_ROOT / "protocol.json").read_text(encoding="utf-8"))
+    protocol["screen_all"]["replications"] = 1
+    protocol["screen_all"]["unique_paths"] = 21600
+    protocol["seed_bases"]["screen_all"] = 71321
+    path = tmp_path / "protocol.json"
+    path.write_text(json.dumps(protocol), encoding="utf-8")
+    tasks = build_tasks("screen-all", protocol_path=path)
+    assert len(tasks) == 540
+    assert all(t["seed_base"] == 71321 and t["rep"] == 0 for t in tasks)
+
+
 def test_registry_has_no_h8_or_legacy_candidate_and_no_duplicate_alias_rows():
     assert len(BASELINE_IDS) == 22 and len(METHODS) == 40
     assert ALIASES["MC-MOSS"] == "ACI"

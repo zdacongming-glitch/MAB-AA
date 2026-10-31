@@ -1,0 +1,79 @@
+{
+  "scope": "Scaled T400 all-settings pilot, four paired repetitions per cell. Point comparisons only.",
+  "candidates": {
+    "SRC-R": {
+      "mean_regret": 19.646135004175495,
+      "point_mean_lower_than_baselines": 22,
+      "comparators": 22,
+      "cells_point_lower_than_every_baseline": 337,
+      "cell_count": 540,
+      "relative_to_IMED": -23.12622741457301,
+      "relative_to_baselines": {
+        "IMED": -23.12622741457301,
+        "UCB1": -60.49809482323452,
+        "AUER": -66.42191491479666,
+        "Growing-MOSS": -42.49342244556049,
+        "ACI": -22.932305760801775,
+        "Clipped-ACI": -22.872791276312444,
+        "TS": -36.25044951529428,
+        "KL-UCB-c0": -38.71007363624726,
+        "KL-UCB-c3": -46.40474935903154,
+        "KL-UCB+": -39.57319412163035,
+        "UCB1-Tuned": -36.35306704525998,
+        "UCB-V": -67.25448050833158,
+        "Bayes-UCB": -24.498219652627174,
+        "Empirical-KL-UCB": -32.66318526613454,
+        "SB-EXP3-ATGT": -69.54039930214711,
+        "BL-MOSS-b0.5": -40.806252227699325,
+        "BL-MOSS-b1": -38.333053219685986,
+        "BL-MOSS-b2": -47.45308343175159,
+        "UCB-log2t-c3": -63.28215725227329,
+        "MOSS-T-currentK": -47.629463118895664,
+        "TS-Jeffreys": -36.73499825343678,
+        "TS-SMAB-bounded": -38.85873982502457
+      }
+    },
+    "SRC-KL-R": {
+      "mean_regret": 24.396928767155636,
+      "point_mean_lower_than_baselines": 22,
+      "comparators": 22,
+      "cells_point_lower_than_every_baseline": 42,
+      "cell_count": 540,
+      "relative_to_IMED": -4.536747129622309,
+      "relative_to_baselines": {
+        "IMED": -4.536747129622309,
+        "UCB1": -50.94581369008926,
+        "AUER": -58.3021215222695,
+        "Growing-MOSS": -28.587283150584664,
+        "ACI": -4.295931683100118,
+        "Clipped-ACI": -4.222025510797433,
+        "TS": -20.83464550238493,
+        "KL-UCB-c0": -23.889051596006595,
+        "KL-UCB-c3": -33.4444402490537,
+        "KL-UCB+": -24.96089035690734,
+        "UCB1-Tuned": -20.962077822701485,
+        "UCB-V": -59.33601666119321,
+        "Bayes-UCB": -6.24051211412352,
+        "Empirical-KL-UCB": -16.379915330923033,
+        "SB-EXP3-ATGT": -62.17471231142502,
+        "BL-MOSS-b0.5": -26.49212440233839,
+        "BL-MOSS-b1": -23.420860766377572,
+        "BL-MOSS-b2": -34.74628062075516,
+        "UCB-log2t-c3": -54.40311319200845,
+        "MOSS-T-currentK": -34.965312133177974,
+        "TS-Jeffreys": -21.43636696292488,
+        "TS-SMAB-bounded": -24.073667980700776
+      }
+    }
+  },
+  "direct_KL_vs_SRC_percent": 24.18182386495069,
+  "checks": {
+    "unique_paths": 86400,
+    "unique_cell_methods": 21600,
+    "all_methods_every_cell": true,
+    "all_cells_have_four_repetitions": true,
+    "independent_pandas_percent_check": "PASS",
+    "no_unmatched_pairs": true,
+    "no_paths_dropped": true
+  }
+}

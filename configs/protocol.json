@@ -13,7 +13,8 @@
     "main": 2026103101,
     "tail": 2026103102,
     "smoke_small": 2026103103,
-    "smoke_dense": 2026103104
+    "smoke_dense": 2026103104,
+    "screen_all": 2026103105
   },
   "full_includes_tail": true,
   "reward": {
@@ -242,5 +243,136 @@
       "SRC-KL-R"
     ],
     "smoke_all_methods": true
+  },
+  "screen_all": {
+    "profile": "screen-all",
+    "horizon": 400,
+    "replications": 4,
+    "methods": [
+      "SRC-R",
+      "SRC-L010",
+      "SRC-L030",
+      "SRC-L060",
+      "SRC-L090",
+      "SRC-L100",
+      "SRC-area",
+      "SRC-KL-R",
+      "SRC-KL-L010",
+      "SRC-KL-L030",
+      "SRC-KL-L060",
+      "SRC-KL-L090",
+      "SRC-KL-L100",
+      "SRC-KL-area",
+      "SRC-widest-L060",
+      "SRC-lucb-L060",
+      "SRC-KL-widest-L060",
+      "SRC-KL-lucb-L060",
+      "IMED",
+      "UCB1",
+      "AUER",
+      "Growing-MOSS",
+      "ACI",
+      "Clipped-ACI",
+      "TS",
+      "KL-UCB-c0",
+      "KL-UCB-c3",
+      "KL-UCB+",
+      "UCB1-Tuned",
+      "UCB-V",
+      "Bayes-UCB",
+      "Empirical-KL-UCB",
+      "SB-EXP3-ATGT",
+      "BL-MOSS-b0.5",
+      "BL-MOSS-b1",
+      "BL-MOSS-b2",
+      "UCB-log2t-c3",
+      "MOSS-T-currentK",
+      "TS-Jeffreys",
+      "TS-SMAB-bounded"
+    ],
+    "laws_by_group": {
+      "f17": [
+        "bernoulli",
+        "beta02",
+        "beta2",
+        "beta20",
+        "binomial4",
+        "binomial16",
+        "deterministic",
+        "two_point",
+        "uniform",
+        "spike_mix",
+        "hetero_best_noisy",
+        "hetero_best_quiet",
+        "hetero_jackpot",
+        "endpoint_two",
+        "rare_jackpot",
+        "trunc_normal"
+      ],
+      "adaptive": [
+        "bernoulli",
+        "beta02",
+        "beta2",
+        "beta20",
+        "binomial4",
+        "binomial16",
+        "deterministic",
+        "two_point",
+        "uniform",
+        "spike_mix",
+        "hetero_best_noisy",
+        "hetero_best_quiet",
+        "hetero_jackpot",
+        "endpoint_two",
+        "rare_jackpot",
+        "trunc_normal"
+      ],
+      "dense": [
+        "bernoulli",
+        "beta02",
+        "beta20",
+        "uniform",
+        "hetero_best_noisy",
+        "hetero_best_quiet",
+        "hetero_jackpot",
+        "trunc_normal"
+      ],
+      "scale": [
+        "bernoulli",
+        "beta20",
+        "hetero_best_noisy",
+        "hetero_best_quiet"
+      ]
+    },
+    "keep_all_groups": [
+      "f17",
+      "adaptive"
+    ],
+    "target_arms": {
+      "dense": {
+        "100": 20,
+        "500": 40,
+        "2000": 80
+      },
+      "scale": {
+        "4000": 100
+      }
+    },
+    "layouts": 45,
+    "cells": 540,
+    "unique_paths": 86400,
+    "seed_key": "screen_all",
+    "cohort": "screen",
+    "status": "SMALL_SCREEN",
+    "preservation": "All record/new-best identities, first/last arms, and complete five-arm burst batches; increase actual K above target when mandatory records require it. Compress distinct source batches to distinct physical times.",
+    "selection": "Frozen means and birth schedules only; deterministic longest-gap rank fill; no outcomes used.",
+    "record_dependent_noise": "Recompute flags after selecting whole batches. Keep record identities and record any changed noise classes in derivative metadata.",
+    "diagnostics": {
+      "trajectory_replications": 1,
+      "linear_points": 21,
+      "log_points": 10,
+      "per_arm_methods": [],
+      "smoke_all_methods": false
+    }
   }
 }
