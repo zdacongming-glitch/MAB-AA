@@ -1,0 +1,36 @@
+{
+  "profile": "smoke-small",
+  "smoke_only": true,
+  "manifest_status": "PASS",
+  "scientific_status": "SMOKE_ONLY_FULL_NOT_RUN",
+  "unique_trajectories": 448,
+  "suite_memberships": 896,
+  "expected_unique_trajectories": 448,
+  "expected_count_matches": true,
+  "execution_failure_records": 0,
+  "all_scientific_failure_paths_retained": true,
+  "unique_by_cohort": {
+    "smoke": 448
+  },
+  "membership_by_suite": {
+    "reward": 448,
+    "joint": 448
+  },
+  "weighting": "equal environmental cell; independent replications within each fixed cell",
+  "difference_direction": "left minus right",
+  "bonferroni_family": "cohort/group/suite/metric",
+  "files": [
+    "cell_summary.csv",
+    "module_summary.csv",
+    "density_summary.csv",
+    "law_summary.csv",
+    "paired_differences.csv",
+    "paired_cells.csv",
+    "failures.csv",
+    "trajectories_summary.csv",
+    "count_diagnostics.csv",
+    "theory_counts.csv",
+    "tail_summary.csv",
+    "report.html"
+  ]
+}

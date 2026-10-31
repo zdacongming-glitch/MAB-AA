@@ -1,0 +1,611 @@
+{
+  "schema_version": 1,
+  "methods": {
+    "SRC-R": {
+      "id": "SRC-R",
+      "family": "src",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 0.0,
+      "beta_r": 32.0,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "SRC-L010": {
+      "id": "SRC-L010",
+      "family": "src",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 0.1,
+      "beta_r": 32.0,
+      "beta_c": 1.0,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "SRC-L030": {
+      "id": "SRC-L030",
+      "family": "src",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 0.3,
+      "beta_r": 32.0,
+      "beta_c": 1.0,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "SRC-L060": {
+      "id": "SRC-L060",
+      "family": "src",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 0.6,
+      "beta_r": 32.0,
+      "beta_c": 1.0,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "SRC-L090": {
+      "id": "SRC-L090",
+      "family": "src",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 0.9,
+      "beta_r": 32.0,
+      "beta_c": 1.0,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "SRC-L100": {
+      "id": "SRC-L100",
+      "family": "src",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 1.0,
+      "beta_r": 32.0,
+      "beta_c": 1.0,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "SRC-area": {
+      "id": "SRC-area",
+      "family": "src",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 1.0,
+      "beta_r": 32.0,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "SRC-KL-R": {
+      "id": "SRC-KL-R",
+      "family": "src_kl",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 0.0,
+      "beta_r": 32.0,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "SRC-KL-L010": {
+      "id": "SRC-KL-L010",
+      "family": "src_kl",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 0.1,
+      "beta_r": 32.0,
+      "beta_c": 1.0,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "SRC-KL-L030": {
+      "id": "SRC-KL-L030",
+      "family": "src_kl",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 0.3,
+      "beta_r": 32.0,
+      "beta_c": 1.0,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "SRC-KL-L060": {
+      "id": "SRC-KL-L060",
+      "family": "src_kl",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 0.6,
+      "beta_r": 32.0,
+      "beta_c": 1.0,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "SRC-KL-L090": {
+      "id": "SRC-KL-L090",
+      "family": "src_kl",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 0.9,
+      "beta_r": 32.0,
+      "beta_c": 1.0,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "SRC-KL-L100": {
+      "id": "SRC-KL-L100",
+      "family": "src_kl",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 1.0,
+      "beta_r": 32.0,
+      "beta_c": 1.0,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "SRC-KL-area": {
+      "id": "SRC-KL-area",
+      "family": "src_kl",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 1.0,
+      "beta_r": 32.0,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "SRC-widest-L060": {
+      "id": "SRC-widest-L060",
+      "family": "src",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 0.6,
+      "beta_r": 32.0,
+      "beta_c": 1.0,
+      "planner": "widest",
+      "known_horizon": false
+    },
+    "SRC-lucb-L060": {
+      "id": "SRC-lucb-L060",
+      "family": "src",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 0.6,
+      "beta_r": 32.0,
+      "beta_c": 1.0,
+      "planner": "lucb",
+      "known_horizon": false
+    },
+    "SRC-KL-widest-L060": {
+      "id": "SRC-KL-widest-L060",
+      "family": "src_kl",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 0.6,
+      "beta_r": 32.0,
+      "beta_c": 1.0,
+      "planner": "widest",
+      "known_horizon": false
+    },
+    "SRC-KL-lucb-L060": {
+      "id": "SRC-KL-lucb-L060",
+      "family": "src_kl",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "relevance_floor": 0.02,
+        "rate_floor": 0.02,
+        "backlog_scale": 4.0
+      },
+      "preference": 0.6,
+      "beta_r": 32.0,
+      "beta_c": 1.0,
+      "planner": "lucb",
+      "known_horizon": false
+    },
+    "IMED": {
+      "id": "IMED",
+      "family": "baseline",
+      "kernel": "IMED",
+      "params": {
+        "log_coefficient": 1.0
+      },
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "UCB1": {
+      "id": "UCB1",
+      "family": "baseline",
+      "kernel": "UCB1",
+      "params": {},
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "AUER": {
+      "id": "AUER",
+      "family": "baseline",
+      "kernel": "AUER",
+      "params": {},
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "Growing-MOSS": {
+      "id": "Growing-MOSS",
+      "family": "baseline",
+      "kernel": "Growing-MOSS",
+      "params": {},
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "ACI": {
+      "id": "ACI",
+      "family": "baseline",
+      "kernel": "ACI",
+      "params": {},
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "Clipped-ACI": {
+      "id": "Clipped-ACI",
+      "family": "baseline",
+      "kernel": "Clipped-ACI",
+      "params": {},
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "TS": {
+      "id": "TS",
+      "family": "baseline",
+      "kernel": "TS",
+      "params": {},
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "KL-UCB-c0": {
+      "id": "KL-UCB-c0",
+      "family": "baseline",
+      "kernel": "KL-UCB",
+      "params": {
+        "loglog_coefficient": 0.0
+      },
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "KL-UCB-c3": {
+      "id": "KL-UCB-c3",
+      "family": "baseline",
+      "kernel": "KL-UCB",
+      "params": {
+        "loglog_coefficient": 3.0
+      },
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "KL-UCB+": {
+      "id": "KL-UCB+",
+      "family": "baseline",
+      "kernel": "KL-UCB+",
+      "params": {},
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "UCB1-Tuned": {
+      "id": "UCB1-Tuned",
+      "family": "baseline",
+      "kernel": "UCB1-Tuned",
+      "params": {},
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "UCB-V": {
+      "id": "UCB-V",
+      "family": "baseline",
+      "kernel": "UCB-V",
+      "params": {},
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "Bayes-UCB": {
+      "id": "Bayes-UCB",
+      "family": "baseline",
+      "kernel": "Bayes-UCB",
+      "params": {},
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "Empirical-KL-UCB": {
+      "id": "Empirical-KL-UCB",
+      "family": "baseline",
+      "kernel": "Empirical-KL-UCB",
+      "params": {},
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "SB-EXP3-ATGT": {
+      "id": "SB-EXP3-ATGT",
+      "family": "baseline",
+      "kernel": "SB-EXP3-ATGT",
+      "params": {},
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "BL-MOSS-b0.5": {
+      "id": "BL-MOSS-b0.5",
+      "family": "baseline",
+      "kernel": "BL-MOSS",
+      "params": {
+        "arrival_exponent": 0.5
+      },
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": true
+    },
+    "BL-MOSS-b1": {
+      "id": "BL-MOSS-b1",
+      "family": "baseline",
+      "kernel": "BL-MOSS",
+      "params": {
+        "arrival_exponent": 1.0
+      },
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": true
+    },
+    "BL-MOSS-b2": {
+      "id": "BL-MOSS-b2",
+      "family": "baseline",
+      "kernel": "BL-MOSS",
+      "params": {
+        "arrival_exponent": 2.0
+      },
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": true
+    },
+    "UCB-log2t-c3": {
+      "id": "UCB-log2t-c3",
+      "family": "baseline",
+      "kernel": "UCB-conservative",
+      "params": {},
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "MOSS-T-currentK": {
+      "id": "MOSS-T-currentK",
+      "family": "baseline",
+      "kernel": "MOSS-T-currentK",
+      "params": {},
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": true
+    },
+    "TS-Jeffreys": {
+      "id": "TS-Jeffreys",
+      "family": "baseline",
+      "kernel": "TS-Jeffreys",
+      "params": {},
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    },
+    "TS-SMAB-bounded": {
+      "id": "TS-SMAB-bounded",
+      "family": "baseline",
+      "kernel": "TS-SMAB-bounded",
+      "params": {},
+      "preference": 0.0,
+      "beta_r": null,
+      "beta_c": null,
+      "planner": "paired",
+      "known_horizon": false
+    }
+  },
+  "aliases": {
+    "UCB-conservative": "UCB-log2t-c3",
+    "MC-MOSS": "ACI",
+    "MC-MOSS-clipped": "Clipped-ACI",
+    "Clipped_ACI": "Clipped-ACI",
+    "Growing_MOSS": "Growing-MOSS",
+    "Thompson": "TS",
+    "F-R-TS-exact": "TS",
+    "KL-UCB": "KL-UCB-c3",
+    "KL_UCB_c0": "KL-UCB-c0",
+    "KL_UCB_c3": "KL-UCB-c3",
+    "KL_UCB_plus": "KL-UCB+",
+    "UCB_Tuned": "UCB1-Tuned",
+    "UCB_V": "UCB-V",
+    "Bayes_UCB": "Bayes-UCB",
+    "Empirical_KL_UCB": "Empirical-KL-UCB",
+    "empirical-KL-UCB": "Empirical-KL-UCB",
+    "SB_EXP3_ATGT": "SB-EXP3-ATGT",
+    "BL_MOSS_b05": "BL-MOSS-b0.5",
+    "BL_MOSS_b1": "BL-MOSS-b1",
+    "BL_MOSS_b2": "BL-MOSS-b2",
+    "BL-MOSS-P0.5": "BL-MOSS-b0.5",
+    "BL-MOSS-P1.0": "BL-MOSS-b1",
+    "BL-MOSS-P2.0": "BL-MOSS-b2"
+  },
+  "newly_evaluated_from_existing_code": [
+    "MOSS-T-currentK",
+    "TS-Jeffreys",
+    "TS-SMAB-bounded"
+  ],
+  "baseline_count": 22,
+  "information": "All methods use observed history and current availability only. BL-MOSS and MOSS-T-currentK additionally receive declared T. No H8, H16 or legacy Beta/F candidate is registered.",
+  "legacy_sources": [
+    {
+      "path": "experiments/fccp_frozen/src/flexible_engine.py",
+      "sha256": "453c22588b64e53de6cc32d103af98468fa31e61ba46acadc655aa27e03b88c4"
+    },
+    {
+      "path": "experiments/regret_baseline_screen_2026-10-17/new_policies.py",
+      "sha256": "3b97f8b623c7b1b21b66d0b7e12d59fa840e33e145475ede18a258ee0bf23132"
+    },
+    {
+      "path": "experiments/regret_baseline_screen_2026-10-17/sb_exp3.py",
+      "sha256": "9451a09c36a6fc85654e800f7124911984bca9e5daefba9bb44d9ef29c2ae4a0"
+    }
+  ]
+}

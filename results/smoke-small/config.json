@@ -1,0 +1,3398 @@
+{
+  "expected_runs": 448,
+  "layouts": [
+    {
+      "T": 1000,
+      "arms": [
+        {
+          "arrival": 1,
+          "mean": 0.493,
+          "record": false
+        },
+        {
+          "arrival": 1,
+          "mean": 0.51,
+          "record": true
+        }
+      ],
+      "delta": 0.05,
+      "epsilon": 0.027,
+      "eta": 0.006,
+      "group": "f17",
+      "id": "smoke-small__f17__two_close__T1000__K2",
+      "metadata": {
+        "canonical_sha256": "f9b901707d90ae4553771ac7f226474afe72165e16810c0326a0729b6e313cb4",
+        "derivative": {
+          "arrival_transform": "1 + floor((birth - 1) * smoke_T / parent_T)",
+          "parent_T": 12000,
+          "parent_arm_count": 2,
+          "parent_id": "f17__two_close",
+          "purpose": "implementation smoke only; excluded from scientific summaries",
+          "record_flags": "recomputed on the derivative with simultaneous-batch semantics",
+          "selected_parent_indices": [
+            0,
+            1
+          ]
+        },
+        "kind": "bernoulli",
+        "record_semantics": "at least the best mean through the entire batch minus 1e-14",
+        "simultaneous_labels": "shuffled within each batch per replicate; record flags remain attached",
+        "source": {
+          "path": "MAB-AA-reproducibility/experiments/fccp_frozen/protocols/holdout-freeze.json",
+          "scenario_index": 0,
+          "sha256": "7d4b8536869250ce3b19ad5f15ddf388c16ed17ca058a94171b694ad29229668"
+        }
+      },
+      "name": "smoke-small:two_close:T1000:K2"
+    },
+    {
+      "T": 1000,
+      "arms": [
+        {
+          "arrival": 1,
+          "mean": 0.565,
+          "record": true
+        },
+        {
+          "arrival": 335,
+          "mean": 0.785,
+          "record": true
+        },
+        {
+          "arrival": 335,
+          "mean": 0.295,
+          "record": false
+        }
+      ],
+      "delta": 0.05,
+      "epsilon": 0.18,
+      "eta": 0.045,
+      "group": "f17",
+      "id": "smoke-small__f17__few_arrivals__T1000__K3",
+      "metadata": {
+        "canonical_sha256": "c2815b517df1049a185692c7a21b49a31b49c627571a9aa9c7b88b57303729d8",
+        "derivative": {
+          "arrival_transform": "1 + floor((birth - 1) * smoke_T / parent_T)",
+          "parent_T": 12000,
+          "parent_arm_count": 3,
+          "parent_id": "f17__few_arrivals",
+          "purpose": "implementation smoke only; excluded from scientific summaries",
+          "record_flags": "recomputed on the derivative with simultaneous-batch semantics",
+          "selected_parent_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "kind": "bernoulli",
+        "record_semantics": "at least the best mean through the entire batch minus 1e-14",
+        "simultaneous_labels": "shuffled within each batch per replicate; record flags remain attached",
+        "source": {
+          "path": "MAB-AA-reproducibility/experiments/fccp_frozen/protocols/holdout-freeze.json",
+          "scenario_index": 1,
+          "sha256": "7d4b8536869250ce3b19ad5f15ddf388c16ed17ca058a94171b694ad29229668"
+        }
+      },
+      "name": "smoke-small:few_arrivals:T1000:K3"
+    }
+  ],
+  "methods": {
+    "ACI": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "ACI",
+      "kernel": "ACI",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "AUER": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "AUER",
+      "kernel": "AUER",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "BL-MOSS-b0.5": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "BL-MOSS-b0.5",
+      "kernel": "BL-MOSS",
+      "known_horizon": true,
+      "params": {
+        "arrival_exponent": 0.5
+      },
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "BL-MOSS-b1": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "BL-MOSS-b1",
+      "kernel": "BL-MOSS",
+      "known_horizon": true,
+      "params": {
+        "arrival_exponent": 1.0
+      },
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "BL-MOSS-b2": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "BL-MOSS-b2",
+      "kernel": "BL-MOSS",
+      "known_horizon": true,
+      "params": {
+        "arrival_exponent": 2.0
+      },
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "Bayes-UCB": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "Bayes-UCB",
+      "kernel": "Bayes-UCB",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "Clipped-ACI": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "Clipped-ACI",
+      "kernel": "Clipped-ACI",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "Empirical-KL-UCB": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "Empirical-KL-UCB",
+      "kernel": "Empirical-KL-UCB",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "Growing-MOSS": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "Growing-MOSS",
+      "kernel": "Growing-MOSS",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "IMED": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "IMED",
+      "kernel": "IMED",
+      "known_horizon": false,
+      "params": {
+        "log_coefficient": 1.0
+      },
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "KL-UCB+": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "KL-UCB+",
+      "kernel": "KL-UCB+",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "KL-UCB-c0": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "KL-UCB-c0",
+      "kernel": "KL-UCB",
+      "known_horizon": false,
+      "params": {
+        "loglog_coefficient": 0.0
+      },
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "KL-UCB-c3": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "KL-UCB-c3",
+      "kernel": "KL-UCB",
+      "known_horizon": false,
+      "params": {
+        "loglog_coefficient": 3.0
+      },
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "MOSS-T-currentK": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "MOSS-T-currentK",
+      "kernel": "MOSS-T-currentK",
+      "known_horizon": true,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "SB-EXP3-ATGT": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "SB-EXP3-ATGT",
+      "kernel": "SB-EXP3-ATGT",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "SRC-KL-L060": {
+      "beta_c": 1.0,
+      "beta_r": 32.0,
+      "family": "src_kl",
+      "id": "SRC-KL-L060",
+      "kernel": "IMED",
+      "known_horizon": false,
+      "params": {
+        "backlog_scale": 4.0,
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "rate_floor": 0.02,
+        "relevance_floor": 0.02
+      },
+      "planner": "paired",
+      "preference": 0.6
+    },
+    "SRC-KL-R": {
+      "beta_c": null,
+      "beta_r": 32.0,
+      "family": "src_kl",
+      "id": "SRC-KL-R",
+      "kernel": "IMED",
+      "known_horizon": false,
+      "params": {
+        "backlog_scale": 4.0,
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "rate_floor": 0.02,
+        "relevance_floor": 0.02
+      },
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "SRC-KL-area": {
+      "beta_c": null,
+      "beta_r": 32.0,
+      "family": "src_kl",
+      "id": "SRC-KL-area",
+      "kernel": "IMED",
+      "known_horizon": false,
+      "params": {
+        "backlog_scale": 4.0,
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "rate_floor": 0.02,
+        "relevance_floor": 0.02
+      },
+      "planner": "paired",
+      "preference": 1.0
+    },
+    "SRC-L060": {
+      "beta_c": 1.0,
+      "beta_r": 32.0,
+      "family": "src",
+      "id": "SRC-L060",
+      "kernel": "IMED",
+      "known_horizon": false,
+      "params": {
+        "backlog_scale": 4.0,
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "rate_floor": 0.02,
+        "relevance_floor": 0.02
+      },
+      "planner": "paired",
+      "preference": 0.6
+    },
+    "SRC-R": {
+      "beta_c": null,
+      "beta_r": 32.0,
+      "family": "src",
+      "id": "SRC-R",
+      "kernel": "IMED",
+      "known_horizon": false,
+      "params": {
+        "backlog_scale": 4.0,
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "rate_floor": 0.02,
+        "relevance_floor": 0.02
+      },
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "SRC-area": {
+      "beta_c": null,
+      "beta_r": 32.0,
+      "family": "src",
+      "id": "SRC-area",
+      "kernel": "IMED",
+      "known_horizon": false,
+      "params": {
+        "backlog_scale": 4.0,
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "rate_floor": 0.02,
+        "relevance_floor": 0.02
+      },
+      "planner": "paired",
+      "preference": 1.0
+    },
+    "TS": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "TS",
+      "kernel": "TS",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "TS-Jeffreys": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "TS-Jeffreys",
+      "kernel": "TS-Jeffreys",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "TS-SMAB-bounded": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "TS-SMAB-bounded",
+      "kernel": "TS-SMAB-bounded",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "UCB-V": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "UCB-V",
+      "kernel": "UCB-V",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "UCB-log2t-c3": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "UCB-log2t-c3",
+      "kernel": "UCB-conservative",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "UCB1": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "UCB1",
+      "kernel": "UCB1",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "UCB1-Tuned": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "UCB1-Tuned",
+      "kernel": "UCB1-Tuned",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    }
+  },
+  "profile": "smoke-small",
+  "protocol": {
+    "analysis_plan": "configs/analysis_plan.json",
+    "cells": 540,
+    "diagnostics": {
+      "linear_points": 41,
+      "log_points": 20,
+      "per_arm_methods": [
+        "SRC-R",
+        "SRC-KL-R"
+      ],
+      "smoke_all_methods": true,
+      "trajectory_replications": 4
+    },
+    "full_includes_tail": true,
+    "joint": {
+      "candidate_and_matched_method_count": 18,
+      "dense_laws": [
+        "bernoulli",
+        "beta20",
+        "hetero_best_noisy",
+        "hetero_best_quiet"
+      ],
+      "methods": [
+        "SRC-R",
+        "SRC-L010",
+        "SRC-L030",
+        "SRC-L060",
+        "SRC-L090",
+        "SRC-L100",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L010",
+        "SRC-KL-L030",
+        "SRC-KL-L060",
+        "SRC-KL-L090",
+        "SRC-KL-L100",
+        "SRC-KL-area",
+        "SRC-widest-L060",
+        "SRC-lucb-L060",
+        "SRC-KL-widest-L060",
+        "SRC-KL-lucb-L060"
+      ],
+      "replications": {
+        "dense": 8,
+        "scale": 8,
+        "small": 16
+      },
+      "reward_methods_tagged_on_same_subset": true,
+      "scale_laws": [
+        "bernoulli",
+        "beta20",
+        "hetero_best_noisy",
+        "hetero_best_quiet"
+      ],
+      "small_laws": [
+        "bernoulli",
+        "beta02",
+        "beta20",
+        "uniform",
+        "hetero_best_noisy",
+        "hetero_best_quiet",
+        "hetero_jackpot",
+        "trunc_normal"
+      ]
+    },
+    "layout_file": "configs/layouts.json",
+    "layouts": 45,
+    "method_file": "configs/methods.json",
+    "outcome_adaptive_selection": false,
+    "profile": "full",
+    "provenance": "configs/provenance.json",
+    "purpose": "Frozen no-H8 SRC and requested KL variant, independent of historical candidate outcomes",
+    "reward": {
+      "dense_laws": [
+        "bernoulli",
+        "beta02",
+        "beta20",
+        "uniform",
+        "hetero_best_noisy",
+        "hetero_best_quiet",
+        "hetero_jackpot",
+        "trunc_normal"
+      ],
+      "method_count": 24,
+      "methods": [
+        "SRC-R",
+        "SRC-KL-R",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "replications": {
+        "dense": 16,
+        "scale": 8,
+        "small": 32
+      },
+      "scale_laws": [
+        "bernoulli",
+        "beta20",
+        "hetero_best_noisy",
+        "hetero_best_quiet"
+      ],
+      "small_laws": [
+        "bernoulli",
+        "beta02",
+        "beta2",
+        "beta20",
+        "binomial4",
+        "binomial16",
+        "deterministic",
+        "two_point",
+        "uniform",
+        "spike_mix",
+        "hetero_best_noisy",
+        "hetero_best_quiet",
+        "hetero_jackpot",
+        "endpoint_two",
+        "rare_jackpot",
+        "trunc_normal"
+      ]
+    },
+    "schema_version": 1,
+    "seed_bases": {
+      "main": 2026103101,
+      "smoke_dense": 2026103104,
+      "smoke_small": 2026103103,
+      "tail": 2026103102
+    },
+    "smoke_derivatives_excluded_from_scientific_evidence": true,
+    "smoke_profiles": {
+      "smoke-dense": {
+        "horizon": 800,
+        "laws": [
+          "bernoulli",
+          "hetero_best_quiet"
+        ],
+        "layout_names": [
+          "d_stable_incumbent_K100",
+          "d_late_regime_records_K100"
+        ],
+        "max_arms": 40,
+        "methods": [
+          "SRC-R",
+          "SRC-L060",
+          "SRC-area",
+          "SRC-KL-R",
+          "SRC-KL-L060",
+          "SRC-KL-area",
+          "IMED",
+          "Empirical-KL-UCB",
+          "ACI",
+          "Growing-MOSS",
+          "BL-MOSS-b1"
+        ],
+        "parent_group": "dense",
+        "replications": 4,
+        "seed_key": "smoke_dense"
+      },
+      "smoke-small": {
+        "horizon": 1000,
+        "laws": [
+          "bernoulli",
+          "two_point"
+        ],
+        "layout_names": [
+          "two_close",
+          "few_arrivals"
+        ],
+        "methods": [
+          "SRC-R",
+          "SRC-L060",
+          "SRC-area",
+          "SRC-KL-R",
+          "SRC-KL-L060",
+          "SRC-KL-area",
+          "IMED",
+          "UCB1",
+          "AUER",
+          "Growing-MOSS",
+          "ACI",
+          "Clipped-ACI",
+          "TS",
+          "KL-UCB-c0",
+          "KL-UCB-c3",
+          "KL-UCB+",
+          "UCB1-Tuned",
+          "UCB-V",
+          "Bayes-UCB",
+          "Empirical-KL-UCB",
+          "SB-EXP3-ATGT",
+          "BL-MOSS-b0.5",
+          "BL-MOSS-b1",
+          "BL-MOSS-b2",
+          "UCB-log2t-c3",
+          "MOSS-T-currentK",
+          "TS-Jeffreys",
+          "TS-SMAB-bounded"
+        ],
+        "parent_group": "f17",
+        "replications": 4,
+        "seed_key": "smoke_small"
+      }
+    },
+    "tail": {
+      "laws": [
+        "bernoulli",
+        "hetero_best_noisy"
+      ],
+      "layout_names": [
+        "h_record_staircase",
+        "h_two_large_bursts",
+        "h_irregular_arrivals",
+        "h_late_challenger",
+        "h_early_flood_late_record",
+        "h_anchor_reversal"
+      ],
+      "layouts": 6,
+      "methods": [
+        "SRC-R",
+        "SRC-KL-R",
+        "IMED",
+        "Empirical-KL-UCB"
+      ],
+      "replications": 128
+    },
+    "unique_paths": 418560
+  },
+  "source_files": {
+    "configs/analysis_plan.json": "b7f31200ff1f673e1b9ee72ac868a68ed561bf88424d66daf90a2fd03e834106",
+    "configs/layouts.json": "b6195271260e1f157b524f5b147ef09bedf3059f65cbbc7352b5c87b1d857ceb",
+    "configs/methods.json": "3b2e3826391b00c49dd58ff472b9a073aeadcbcf4399e19f7761b2f268a34bf6",
+    "configs/protocol.json": "a5af76256e771dcce2eb18882853eaabeb93428f67bf15d87579a07f4ac99656",
+    "configs/provenance.json": "4edfeb6d8653e6aa874fe846b17673a0958a2aa713c670ed00bb7e4f78a1b3c6",
+    "requirements.txt": "f8fd8c730954d601db8ecd645bcbf711a425abfbcd77913cd5997588ec958844",
+    "run_main.py": "c1dd2e3d906b7dcbf7c6f90f17729f078a161d11902de81cbf16cd23b65b290e",
+    "src/srcbench/__init__.py": "fb96edf738daf0835d69891e02945443e1cf48ac5d422898cf6aa37062a177f8",
+    "src/srcbench/analysis.py": "19fbe22aad85f1bc8bd7529fd522a2f24c1b92bba066aeb9f7680fb10f671eb3",
+    "src/srcbench/baselines.py": "f0aa001646c30cbf3c9cb4836bf382e4193a64daa6afdf402e4e7d97eab13509",
+    "src/srcbench/design.py": "82d1f6aaf8f2cdf210ef4ce0a113273c6a477ed5b9e6b78b8a9b6ed9b60bb97f",
+    "src/srcbench/environment.py": "ac5a45021aa45d0573ffa9139eb0a555c889fc27ceaee48fe8bced512e16d2bf",
+    "src/srcbench/mathcore.py": "5f04d00937a79b1b7efaab4403eb3f899e86fecc68f86fd61fabdf8d2c1e3923",
+    "src/srcbench/methods.py": "9b1bceba84ce72f1680a521568fac15c013c4abe55123c049ff34e2f04346513",
+    "src/srcbench/plotting.py": "c95db15aec3303f43708dd49dda8be0231814cd48d029d9e437038860d375677",
+    "src/srcbench/policy.py": "adbefa00e3b8f92e5a966a1a9b10049b24625f371b10b2344dcf4ac63d200bf3",
+    "src/srcbench/runner.py": "389f390d35a08c2ccc3dab6d6d855f502956df6f31b9e82bb26e13b9d2670930",
+    "src/srcbench/simulation.py": "f1965d301f775e4afea9e76c4653dc2dacd6081fe597bc06d152209918e92592"
+  },
+  "tasks": [
+    {
+      "cell_id": "smoke-small__f17__two_close__T1000__K2__bernoulli",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "bernoulli",
+      "layout_id": "smoke-small__f17__two_close__T1000__K2",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "AUER": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b0.5": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b2": [
+          "reward",
+          "joint"
+        ],
+        "Bayes-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Clipped-ACI": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB+": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c0": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c3": [
+          "reward",
+          "joint"
+        ],
+        "MOSS-T-currentK": [
+          "reward",
+          "joint"
+        ],
+        "SB-EXP3-ATGT": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ],
+        "TS": [
+          "reward",
+          "joint"
+        ],
+        "TS-Jeffreys": [
+          "reward",
+          "joint"
+        ],
+        "TS-SMAB-bounded": [
+          "reward",
+          "joint"
+        ],
+        "UCB-V": [
+          "reward",
+          "joint"
+        ],
+        "UCB-log2t-c3": [
+          "reward",
+          "joint"
+        ],
+        "UCB1": [
+          "reward",
+          "joint"
+        ],
+        "UCB1-Tuned": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "rep": 0,
+      "seed_base": 2026103103,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_781d2188b9e83508c170"
+    },
+    {
+      "cell_id": "smoke-small__f17__two_close__T1000__K2__bernoulli",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "bernoulli",
+      "layout_id": "smoke-small__f17__two_close__T1000__K2",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "AUER": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b0.5": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b2": [
+          "reward",
+          "joint"
+        ],
+        "Bayes-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Clipped-ACI": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB+": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c0": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c3": [
+          "reward",
+          "joint"
+        ],
+        "MOSS-T-currentK": [
+          "reward",
+          "joint"
+        ],
+        "SB-EXP3-ATGT": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ],
+        "TS": [
+          "reward",
+          "joint"
+        ],
+        "TS-Jeffreys": [
+          "reward",
+          "joint"
+        ],
+        "TS-SMAB-bounded": [
+          "reward",
+          "joint"
+        ],
+        "UCB-V": [
+          "reward",
+          "joint"
+        ],
+        "UCB-log2t-c3": [
+          "reward",
+          "joint"
+        ],
+        "UCB1": [
+          "reward",
+          "joint"
+        ],
+        "UCB1-Tuned": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "rep": 1,
+      "seed_base": 2026103103,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_6390a4bb8cff97daee1e"
+    },
+    {
+      "cell_id": "smoke-small__f17__two_close__T1000__K2__bernoulli",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "bernoulli",
+      "layout_id": "smoke-small__f17__two_close__T1000__K2",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "AUER": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b0.5": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b2": [
+          "reward",
+          "joint"
+        ],
+        "Bayes-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Clipped-ACI": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB+": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c0": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c3": [
+          "reward",
+          "joint"
+        ],
+        "MOSS-T-currentK": [
+          "reward",
+          "joint"
+        ],
+        "SB-EXP3-ATGT": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ],
+        "TS": [
+          "reward",
+          "joint"
+        ],
+        "TS-Jeffreys": [
+          "reward",
+          "joint"
+        ],
+        "TS-SMAB-bounded": [
+          "reward",
+          "joint"
+        ],
+        "UCB-V": [
+          "reward",
+          "joint"
+        ],
+        "UCB-log2t-c3": [
+          "reward",
+          "joint"
+        ],
+        "UCB1": [
+          "reward",
+          "joint"
+        ],
+        "UCB1-Tuned": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "rep": 2,
+      "seed_base": 2026103103,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_81e04c94cfe29d4db20d"
+    },
+    {
+      "cell_id": "smoke-small__f17__two_close__T1000__K2__bernoulli",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "bernoulli",
+      "layout_id": "smoke-small__f17__two_close__T1000__K2",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "AUER": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b0.5": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b2": [
+          "reward",
+          "joint"
+        ],
+        "Bayes-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Clipped-ACI": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB+": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c0": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c3": [
+          "reward",
+          "joint"
+        ],
+        "MOSS-T-currentK": [
+          "reward",
+          "joint"
+        ],
+        "SB-EXP3-ATGT": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ],
+        "TS": [
+          "reward",
+          "joint"
+        ],
+        "TS-Jeffreys": [
+          "reward",
+          "joint"
+        ],
+        "TS-SMAB-bounded": [
+          "reward",
+          "joint"
+        ],
+        "UCB-V": [
+          "reward",
+          "joint"
+        ],
+        "UCB-log2t-c3": [
+          "reward",
+          "joint"
+        ],
+        "UCB1": [
+          "reward",
+          "joint"
+        ],
+        "UCB1-Tuned": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "rep": 3,
+      "seed_base": 2026103103,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_154145fd955422e5139d"
+    },
+    {
+      "cell_id": "smoke-small__f17__two_close__T1000__K2__two_point",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "two_point",
+      "layout_id": "smoke-small__f17__two_close__T1000__K2",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "AUER": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b0.5": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b2": [
+          "reward",
+          "joint"
+        ],
+        "Bayes-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Clipped-ACI": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB+": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c0": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c3": [
+          "reward",
+          "joint"
+        ],
+        "MOSS-T-currentK": [
+          "reward",
+          "joint"
+        ],
+        "SB-EXP3-ATGT": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ],
+        "TS": [
+          "reward",
+          "joint"
+        ],
+        "TS-Jeffreys": [
+          "reward",
+          "joint"
+        ],
+        "TS-SMAB-bounded": [
+          "reward",
+          "joint"
+        ],
+        "UCB-V": [
+          "reward",
+          "joint"
+        ],
+        "UCB-log2t-c3": [
+          "reward",
+          "joint"
+        ],
+        "UCB1": [
+          "reward",
+          "joint"
+        ],
+        "UCB1-Tuned": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "rep": 0,
+      "seed_base": 2026103103,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_c124137d35e79dc34e6a"
+    },
+    {
+      "cell_id": "smoke-small__f17__two_close__T1000__K2__two_point",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "two_point",
+      "layout_id": "smoke-small__f17__two_close__T1000__K2",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "AUER": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b0.5": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b2": [
+          "reward",
+          "joint"
+        ],
+        "Bayes-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Clipped-ACI": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB+": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c0": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c3": [
+          "reward",
+          "joint"
+        ],
+        "MOSS-T-currentK": [
+          "reward",
+          "joint"
+        ],
+        "SB-EXP3-ATGT": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ],
+        "TS": [
+          "reward",
+          "joint"
+        ],
+        "TS-Jeffreys": [
+          "reward",
+          "joint"
+        ],
+        "TS-SMAB-bounded": [
+          "reward",
+          "joint"
+        ],
+        "UCB-V": [
+          "reward",
+          "joint"
+        ],
+        "UCB-log2t-c3": [
+          "reward",
+          "joint"
+        ],
+        "UCB1": [
+          "reward",
+          "joint"
+        ],
+        "UCB1-Tuned": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "rep": 1,
+      "seed_base": 2026103103,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_7320deb026e8a6dd54f2"
+    },
+    {
+      "cell_id": "smoke-small__f17__two_close__T1000__K2__two_point",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "two_point",
+      "layout_id": "smoke-small__f17__two_close__T1000__K2",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "AUER": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b0.5": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b2": [
+          "reward",
+          "joint"
+        ],
+        "Bayes-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Clipped-ACI": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB+": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c0": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c3": [
+          "reward",
+          "joint"
+        ],
+        "MOSS-T-currentK": [
+          "reward",
+          "joint"
+        ],
+        "SB-EXP3-ATGT": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ],
+        "TS": [
+          "reward",
+          "joint"
+        ],
+        "TS-Jeffreys": [
+          "reward",
+          "joint"
+        ],
+        "TS-SMAB-bounded": [
+          "reward",
+          "joint"
+        ],
+        "UCB-V": [
+          "reward",
+          "joint"
+        ],
+        "UCB-log2t-c3": [
+          "reward",
+          "joint"
+        ],
+        "UCB1": [
+          "reward",
+          "joint"
+        ],
+        "UCB1-Tuned": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "rep": 2,
+      "seed_base": 2026103103,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_4106758418331ba960f9"
+    },
+    {
+      "cell_id": "smoke-small__f17__two_close__T1000__K2__two_point",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "two_point",
+      "layout_id": "smoke-small__f17__two_close__T1000__K2",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "AUER": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b0.5": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b2": [
+          "reward",
+          "joint"
+        ],
+        "Bayes-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Clipped-ACI": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB+": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c0": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c3": [
+          "reward",
+          "joint"
+        ],
+        "MOSS-T-currentK": [
+          "reward",
+          "joint"
+        ],
+        "SB-EXP3-ATGT": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ],
+        "TS": [
+          "reward",
+          "joint"
+        ],
+        "TS-Jeffreys": [
+          "reward",
+          "joint"
+        ],
+        "TS-SMAB-bounded": [
+          "reward",
+          "joint"
+        ],
+        "UCB-V": [
+          "reward",
+          "joint"
+        ],
+        "UCB-log2t-c3": [
+          "reward",
+          "joint"
+        ],
+        "UCB1": [
+          "reward",
+          "joint"
+        ],
+        "UCB1-Tuned": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "rep": 3,
+      "seed_base": 2026103103,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_7a25fa7bb9f0df6ef58b"
+    },
+    {
+      "cell_id": "smoke-small__f17__few_arrivals__T1000__K3__bernoulli",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "bernoulli",
+      "layout_id": "smoke-small__f17__few_arrivals__T1000__K3",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "AUER": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b0.5": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b2": [
+          "reward",
+          "joint"
+        ],
+        "Bayes-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Clipped-ACI": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB+": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c0": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c3": [
+          "reward",
+          "joint"
+        ],
+        "MOSS-T-currentK": [
+          "reward",
+          "joint"
+        ],
+        "SB-EXP3-ATGT": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ],
+        "TS": [
+          "reward",
+          "joint"
+        ],
+        "TS-Jeffreys": [
+          "reward",
+          "joint"
+        ],
+        "TS-SMAB-bounded": [
+          "reward",
+          "joint"
+        ],
+        "UCB-V": [
+          "reward",
+          "joint"
+        ],
+        "UCB-log2t-c3": [
+          "reward",
+          "joint"
+        ],
+        "UCB1": [
+          "reward",
+          "joint"
+        ],
+        "UCB1-Tuned": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "rep": 0,
+      "seed_base": 2026103103,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_cc92543b41f8083b19ec"
+    },
+    {
+      "cell_id": "smoke-small__f17__few_arrivals__T1000__K3__bernoulli",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "bernoulli",
+      "layout_id": "smoke-small__f17__few_arrivals__T1000__K3",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "AUER": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b0.5": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b2": [
+          "reward",
+          "joint"
+        ],
+        "Bayes-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Clipped-ACI": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB+": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c0": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c3": [
+          "reward",
+          "joint"
+        ],
+        "MOSS-T-currentK": [
+          "reward",
+          "joint"
+        ],
+        "SB-EXP3-ATGT": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ],
+        "TS": [
+          "reward",
+          "joint"
+        ],
+        "TS-Jeffreys": [
+          "reward",
+          "joint"
+        ],
+        "TS-SMAB-bounded": [
+          "reward",
+          "joint"
+        ],
+        "UCB-V": [
+          "reward",
+          "joint"
+        ],
+        "UCB-log2t-c3": [
+          "reward",
+          "joint"
+        ],
+        "UCB1": [
+          "reward",
+          "joint"
+        ],
+        "UCB1-Tuned": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "rep": 1,
+      "seed_base": 2026103103,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_8e519f572c0095c9000f"
+    },
+    {
+      "cell_id": "smoke-small__f17__few_arrivals__T1000__K3__bernoulli",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "bernoulli",
+      "layout_id": "smoke-small__f17__few_arrivals__T1000__K3",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "AUER": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b0.5": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b2": [
+          "reward",
+          "joint"
+        ],
+        "Bayes-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Clipped-ACI": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB+": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c0": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c3": [
+          "reward",
+          "joint"
+        ],
+        "MOSS-T-currentK": [
+          "reward",
+          "joint"
+        ],
+        "SB-EXP3-ATGT": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ],
+        "TS": [
+          "reward",
+          "joint"
+        ],
+        "TS-Jeffreys": [
+          "reward",
+          "joint"
+        ],
+        "TS-SMAB-bounded": [
+          "reward",
+          "joint"
+        ],
+        "UCB-V": [
+          "reward",
+          "joint"
+        ],
+        "UCB-log2t-c3": [
+          "reward",
+          "joint"
+        ],
+        "UCB1": [
+          "reward",
+          "joint"
+        ],
+        "UCB1-Tuned": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "rep": 2,
+      "seed_base": 2026103103,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_e088788a0b383714c0fe"
+    },
+    {
+      "cell_id": "smoke-small__f17__few_arrivals__T1000__K3__bernoulli",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "bernoulli",
+      "layout_id": "smoke-small__f17__few_arrivals__T1000__K3",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "AUER": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b0.5": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b2": [
+          "reward",
+          "joint"
+        ],
+        "Bayes-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Clipped-ACI": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB+": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c0": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c3": [
+          "reward",
+          "joint"
+        ],
+        "MOSS-T-currentK": [
+          "reward",
+          "joint"
+        ],
+        "SB-EXP3-ATGT": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ],
+        "TS": [
+          "reward",
+          "joint"
+        ],
+        "TS-Jeffreys": [
+          "reward",
+          "joint"
+        ],
+        "TS-SMAB-bounded": [
+          "reward",
+          "joint"
+        ],
+        "UCB-V": [
+          "reward",
+          "joint"
+        ],
+        "UCB-log2t-c3": [
+          "reward",
+          "joint"
+        ],
+        "UCB1": [
+          "reward",
+          "joint"
+        ],
+        "UCB1-Tuned": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "rep": 3,
+      "seed_base": 2026103103,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_3814b1fcc31ffa8ff704"
+    },
+    {
+      "cell_id": "smoke-small__f17__few_arrivals__T1000__K3__two_point",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "two_point",
+      "layout_id": "smoke-small__f17__few_arrivals__T1000__K3",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "AUER": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b0.5": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b2": [
+          "reward",
+          "joint"
+        ],
+        "Bayes-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Clipped-ACI": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB+": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c0": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c3": [
+          "reward",
+          "joint"
+        ],
+        "MOSS-T-currentK": [
+          "reward",
+          "joint"
+        ],
+        "SB-EXP3-ATGT": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ],
+        "TS": [
+          "reward",
+          "joint"
+        ],
+        "TS-Jeffreys": [
+          "reward",
+          "joint"
+        ],
+        "TS-SMAB-bounded": [
+          "reward",
+          "joint"
+        ],
+        "UCB-V": [
+          "reward",
+          "joint"
+        ],
+        "UCB-log2t-c3": [
+          "reward",
+          "joint"
+        ],
+        "UCB1": [
+          "reward",
+          "joint"
+        ],
+        "UCB1-Tuned": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "rep": 0,
+      "seed_base": 2026103103,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_af806386701091381e45"
+    },
+    {
+      "cell_id": "smoke-small__f17__few_arrivals__T1000__K3__two_point",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "two_point",
+      "layout_id": "smoke-small__f17__few_arrivals__T1000__K3",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "AUER": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b0.5": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b2": [
+          "reward",
+          "joint"
+        ],
+        "Bayes-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Clipped-ACI": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB+": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c0": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c3": [
+          "reward",
+          "joint"
+        ],
+        "MOSS-T-currentK": [
+          "reward",
+          "joint"
+        ],
+        "SB-EXP3-ATGT": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ],
+        "TS": [
+          "reward",
+          "joint"
+        ],
+        "TS-Jeffreys": [
+          "reward",
+          "joint"
+        ],
+        "TS-SMAB-bounded": [
+          "reward",
+          "joint"
+        ],
+        "UCB-V": [
+          "reward",
+          "joint"
+        ],
+        "UCB-log2t-c3": [
+          "reward",
+          "joint"
+        ],
+        "UCB1": [
+          "reward",
+          "joint"
+        ],
+        "UCB1-Tuned": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "rep": 1,
+      "seed_base": 2026103103,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_be7e6564383c4b5d96da"
+    },
+    {
+      "cell_id": "smoke-small__f17__few_arrivals__T1000__K3__two_point",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "two_point",
+      "layout_id": "smoke-small__f17__few_arrivals__T1000__K3",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "AUER": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b0.5": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b2": [
+          "reward",
+          "joint"
+        ],
+        "Bayes-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Clipped-ACI": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB+": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c0": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c3": [
+          "reward",
+          "joint"
+        ],
+        "MOSS-T-currentK": [
+          "reward",
+          "joint"
+        ],
+        "SB-EXP3-ATGT": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ],
+        "TS": [
+          "reward",
+          "joint"
+        ],
+        "TS-Jeffreys": [
+          "reward",
+          "joint"
+        ],
+        "TS-SMAB-bounded": [
+          "reward",
+          "joint"
+        ],
+        "UCB-V": [
+          "reward",
+          "joint"
+        ],
+        "UCB-log2t-c3": [
+          "reward",
+          "joint"
+        ],
+        "UCB1": [
+          "reward",
+          "joint"
+        ],
+        "UCB1-Tuned": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "rep": 2,
+      "seed_base": 2026103103,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_939c6b6f3d0c8f8ecdf4"
+    },
+    {
+      "cell_id": "smoke-small__f17__few_arrivals__T1000__K3__two_point",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "two_point",
+      "layout_id": "smoke-small__f17__few_arrivals__T1000__K3",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "AUER": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b0.5": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b2": [
+          "reward",
+          "joint"
+        ],
+        "Bayes-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Clipped-ACI": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB+": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c0": [
+          "reward",
+          "joint"
+        ],
+        "KL-UCB-c3": [
+          "reward",
+          "joint"
+        ],
+        "MOSS-T-currentK": [
+          "reward",
+          "joint"
+        ],
+        "SB-EXP3-ATGT": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ],
+        "TS": [
+          "reward",
+          "joint"
+        ],
+        "TS-Jeffreys": [
+          "reward",
+          "joint"
+        ],
+        "TS-SMAB-bounded": [
+          "reward",
+          "joint"
+        ],
+        "UCB-V": [
+          "reward",
+          "joint"
+        ],
+        "UCB-log2t-c3": [
+          "reward",
+          "joint"
+        ],
+        "UCB1": [
+          "reward",
+          "joint"
+        ],
+        "UCB1-Tuned": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "rep": 3,
+      "seed_base": 2026103103,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_4d0f6447804509e7687d"
+    }
+  ]
+}

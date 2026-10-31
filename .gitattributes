@@ -1,2 +1,5 @@
-# Frozen research inputs are byte-verified: preserve their original line endings.
+# Input and result hashes refer to literal bytes, including Windows CRLF.
 * -text
+* whitespace=trailing-space,space-before-tab,cr-at-eol
+# Matplotlib SVG paths deliberately wrap coordinate strings with spaces.
+*.svg -whitespace

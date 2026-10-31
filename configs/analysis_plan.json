@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "frozen_date": "2026-10-31",
+  "main_cells": 540,
+  "main_layouts": 45,
+  "primary_preference": 0.6,
+  "primary_candidates": [
+    "SRC-R",
+    "SRC-KL-R",
+    "SRC-L060",
+    "SRC-KL-L060"
+  ],
+  "candidate_contract": "Current manuscript SRC with no heteroskedastic initialization; KL variant changes only confidence/reference quantities explicitly defined by the requested notes.",
+  "reward_comparators": [
+    "IMED",
+    "UCB1",
+    "AUER",
+    "Growing-MOSS",
+    "ACI",
+    "Clipped-ACI",
+    "TS",
+    "KL-UCB-c0",
+    "KL-UCB-c3",
+    "KL-UCB+",
+    "UCB1-Tuned",
+    "UCB-V",
+    "Bayes-UCB",
+    "Empirical-KL-UCB",
+    "SB-EXP3-ATGT",
+    "BL-MOSS-b0.5",
+    "BL-MOSS-b1",
+    "BL-MOSS-b2",
+    "UCB-log2t-c3",
+    "MOSS-T-currentK",
+    "TS-Jeffreys",
+    "TS-SMAB-bounded"
+  ],
+  "metrics": [
+    "regret",
+    "area",
+    "area_all"
+  ],
+  "direct_variant_comparisons": "SRC-KL minus SRC at the same preference and service budget, with paired environments and repetitions.",
+  "multiplicity": {
+    "method": "Bonferroni",
+    "confidence": 0.95,
+    "families": "Separate, prespecified group x suite x metric families; all comparator contrasts in each family retained.",
+    "reward": "Each reward candidate minus each of 22 comparators",
+    "joint": "Primary lambda=.6 candidates, matched widest/LUCB controls, and direct same-mode KL-SRC comparisons. Tradeoff curves at other modes are descriptive.",
+    "tail": "Independent seed cohort; prespecified six layouts, two laws, 128 paired replications; descriptive pooled quantiles with no per-cell extreme-quantile claims."
+  },
+  "pairing": "Common arm/pull-number streams within a cell and repetition; reused R trajectories receive both reward and joint tags only on the joint-law/repetition subset.",
+  "aggregation": "Equal weight per fixed layout x law cell within each group; no pooled weighting that lets repeated layouts or extra repetitions dominate.",
+  "no_outcome_adaptive_selection": true,
+  "retain_failures": true,
+  "smoke": "Separate derivative cohort, excluded from scientific summaries and winner claims.",
+  "profiles": {
+    "full": {
+      "seed_base": 2026103101,
+      "small_reward_reps": 32,
+      "dense_reward_reps": 16,
+      "scale_reward_reps": 8,
+      "small_joint_reps": 16,
+      "dense_joint_reps": 8,
+      "scale_joint_reps": 8
+    },
+    "tail": {
+      "seed_base": 2026103102,
+      "replications": 128
+    },
+    "smoke_small": {
+      "seed_base": 2026103103,
+      "replications": 4,
+      "T": 1000
+    },
+    "smoke_dense": {
+      "seed_base": 2026103104,
+      "replications": 4,
+      "T": 800,
+      "K": 40
+    }
+  },
+  "full_profile_unique_paths": 418560,
+  "full_profile_includes_independent_tail": true
+}

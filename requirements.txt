@@ -1,0 +1,8 @@
+# Validated native Windows environment, Python 3.11.7. No C++ compiler required.
+numpy==1.26.4
+numba==0.59.0
+scipy==1.11.4
+pandas==2.1.4
+matplotlib==3.8.0
+psutil>=5.9,<8
+pytest>=7,<10

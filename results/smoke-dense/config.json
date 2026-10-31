@@ -1,0 +1,2297 @@
+{
+  "expected_runs": 176,
+  "layouts": [
+    {
+      "T": 800,
+      "arms": [
+        {
+          "arrival": 1,
+          "mean": 0.84,
+          "record": true
+        },
+        {
+          "arrival": 17,
+          "mean": 0.33083290412141,
+          "record": false
+        },
+        {
+          "arrival": 41,
+          "mean": 0.36232931042393,
+          "record": false
+        },
+        {
+          "arrival": 57,
+          "mean": 0.64579821467555,
+          "record": false
+        },
+        {
+          "arrival": 81,
+          "mean": 0.37774229545147,
+          "record": false
+        },
+        {
+          "arrival": 97,
+          "mean": 0.09230731447317,
+          "record": false
+        },
+        {
+          "arrival": 121,
+          "mean": 0.51026559308599,
+          "record": false
+        },
+        {
+          "arrival": 137,
+          "mean": 0.11267309306442,
+          "record": false
+        },
+        {
+          "arrival": 161,
+          "mean": 0.201514407442,
+          "record": false
+        },
+        {
+          "arrival": 177,
+          "mean": 0.14221721934962,
+          "record": false
+        },
+        {
+          "arrival": 201,
+          "mean": 0.25276338656424,
+          "record": false
+        },
+        {
+          "arrival": 217,
+          "mean": 0.71683853609238,
+          "record": false
+        },
+        {
+          "arrival": 241,
+          "mean": 0.32419563938868,
+          "record": false
+        },
+        {
+          "arrival": 257,
+          "mean": 0.25606992557448,
+          "record": false
+        },
+        {
+          "arrival": 281,
+          "mean": 0.50107089561646,
+          "record": false
+        },
+        {
+          "arrival": 297,
+          "mean": 0.69623186121755,
+          "record": false
+        },
+        {
+          "arrival": 321,
+          "mean": 0.37876694922002,
+          "record": false
+        },
+        {
+          "arrival": 337,
+          "mean": 0.23984904783874,
+          "record": false
+        },
+        {
+          "arrival": 361,
+          "mean": 0.75710463130911,
+          "record": false
+        },
+        {
+          "arrival": 377,
+          "mean": 0.33706884761213,
+          "record": false
+        },
+        {
+          "arrival": 401,
+          "mean": 0.7386914903717,
+          "record": false
+        },
+        {
+          "arrival": 417,
+          "mean": 0.13716788834155,
+          "record": false
+        },
+        {
+          "arrival": 441,
+          "mean": 0.62004068535987,
+          "record": false
+        },
+        {
+          "arrival": 457,
+          "mean": 0.53474772824962,
+          "record": false
+        },
+        {
+          "arrival": 481,
+          "mean": 0.70413318259654,
+          "record": false
+        },
+        {
+          "arrival": 497,
+          "mean": 0.50849887642966,
+          "record": false
+        },
+        {
+          "arrival": 521,
+          "mean": 0.47531946801777,
+          "record": false
+        },
+        {
+          "arrival": 537,
+          "mean": 0.40688294825838,
+          "record": false
+        },
+        {
+          "arrival": 561,
+          "mean": 0.3564810967758,
+          "record": false
+        },
+        {
+          "arrival": 577,
+          "mean": 0.22182934799929,
+          "record": false
+        },
+        {
+          "arrival": 601,
+          "mean": 0.64283212279175,
+          "record": false
+        },
+        {
+          "arrival": 617,
+          "mean": 0.50407164809723,
+          "record": false
+        },
+        {
+          "arrival": 641,
+          "mean": 0.5254780304469,
+          "record": false
+        },
+        {
+          "arrival": 657,
+          "mean": 0.67753546773214,
+          "record": false
+        },
+        {
+          "arrival": 681,
+          "mean": 0.58640725791148,
+          "record": false
+        },
+        {
+          "arrival": 697,
+          "mean": 0.19882974684538,
+          "record": false
+        },
+        {
+          "arrival": 721,
+          "mean": 0.43894934568758,
+          "record": false
+        },
+        {
+          "arrival": 737,
+          "mean": 0.69026237607098,
+          "record": false
+        },
+        {
+          "arrival": 761,
+          "mean": 0.75554486733687,
+          "record": false
+        },
+        {
+          "arrival": 777,
+          "mean": 0.44206594549549,
+          "record": false
+        }
+      ],
+      "delta": 0.05,
+      "epsilon": 0.15,
+      "eta": 0.03,
+      "group": "dense",
+      "id": "smoke-dense__dense__d_stable_incumbent_K100__T800__K40",
+      "metadata": {
+        "batch_size": 1,
+        "canonical_sha256": "50c3ed4a0b66c1d215e1e281e41f3047cab983246dbbb29ffaf49bf5df20eefd",
+        "density": 0.0125,
+        "derivative": {
+          "arrival_transform": "1 + floor((birth - 1) * smoke_T / parent_T)",
+          "parent_T": 8000,
+          "parent_arm_count": 100,
+          "parent_id": "dense__d_stable_incumbent_K100",
+          "purpose": "implementation smoke only; excluded from scientific summaries",
+          "record_flags": "recomputed on the derivative with simultaneous-batch semantics",
+          "selected_parent_indices": [
+            0,
+            2,
+            5,
+            7,
+            10,
+            12,
+            15,
+            17,
+            20,
+            22,
+            25,
+            27,
+            30,
+            32,
+            35,
+            37,
+            40,
+            42,
+            45,
+            47,
+            50,
+            52,
+            55,
+            57,
+            60,
+            62,
+            65,
+            67,
+            70,
+            72,
+            75,
+            77,
+            80,
+            82,
+            85,
+            87,
+            90,
+            92,
+            95,
+            97
+          ]
+        },
+        "family": "stable_incumbent",
+        "record_semantics": "at least the best mean through the entire batch minus 1e-14",
+        "simultaneous_labels": "shuffled within each batch per replicate; record flags remain attached",
+        "source": {
+          "path": "proposal/SRC_dense_arrivals_reproducibility/src_dense_arrivals/scenarios.json",
+          "scenario_index": 0,
+          "sha256": "8813bd9b6b8b85fc8e3e5210c665aeea42f6881ca4a2ba3e4ae2acceedd6aac3"
+        }
+      },
+      "name": "smoke-dense:d_stable_incumbent_K100:T800:K40"
+    },
+    {
+      "T": 800,
+      "arms": [
+        {
+          "arrival": 1,
+          "mean": 0.62,
+          "record": true
+        },
+        {
+          "arrival": 17,
+          "mean": 0.26958303288498,
+          "record": false
+        },
+        {
+          "arrival": 41,
+          "mean": 0.29163051729675,
+          "record": false
+        },
+        {
+          "arrival": 57,
+          "mean": 0.49005875027288,
+          "record": false
+        },
+        {
+          "arrival": 81,
+          "mean": 0.30241960681603,
+          "record": false
+        },
+        {
+          "arrival": 97,
+          "mean": 0.10261512013122,
+          "record": false
+        },
+        {
+          "arrival": 121,
+          "mean": 0.39518591516019,
+          "record": false
+        },
+        {
+          "arrival": 137,
+          "mean": 0.1168711651451,
+          "record": false
+        },
+        {
+          "arrival": 161,
+          "mean": 0.1790600852094,
+          "record": false
+        },
+        {
+          "arrival": 177,
+          "mean": 0.13755205354473,
+          "record": false
+        },
+        {
+          "arrival": 201,
+          "mean": 0.21493437059497,
+          "record": false
+        },
+        {
+          "arrival": 217,
+          "mean": 0.53978697526466,
+          "record": false
+        },
+        {
+          "arrival": 241,
+          "mean": 0.26493694757208,
+          "record": false
+        },
+        {
+          "arrival": 257,
+          "mean": 0.21724894790213,
+          "record": false
+        },
+        {
+          "arrival": 281,
+          "mean": 0.38874962693152,
+          "record": false
+        },
+        {
+          "arrival": 297,
+          "mean": 0.52536230285229,
+          "record": false
+        },
+        {
+          "arrival": 321,
+          "mean": 0.30313686445401,
+          "record": false
+        },
+        {
+          "arrival": 337,
+          "mean": 0.20589433348712,
+          "record": false
+        },
+        {
+          "arrival": 361,
+          "mean": 0.56797324191638,
+          "record": false
+        },
+        {
+          "arrival": 377,
+          "mean": 0.27394819332849,
+          "record": false
+        },
+        {
+          "arrival": 401,
+          "mean": 0.55508404326019,
+          "record": false
+        },
+        {
+          "arrival": 417,
+          "mean": 0.13401752183908,
+          "record": false
+        },
+        {
+          "arrival": 441,
+          "mean": 0.47202847975191,
+          "record": false
+        },
+        {
+          "arrival": 457,
+          "mean": 0.41232340977473,
+          "record": false
+        },
+        {
+          "arrival": 481,
+          "mean": 0.53089322781758,
+          "record": false
+        },
+        {
+          "arrival": 497,
+          "mean": 0.39394921350076,
+          "record": false
+        },
+        {
+          "arrival": 521,
+          "mean": 0.37072362761244,
+          "record": false
+        },
+        {
+          "arrival": 537,
+          "mean": 0.32281806378086,
+          "record": false
+        },
+        {
+          "arrival": 561,
+          "mean": 0.28753676774306,
+          "record": false
+        },
+        {
+          "arrival": 577,
+          "mean": 0.1932805435995,
+          "record": false
+        },
+        {
+          "arrival": 601,
+          "mean": 0.48798248595422,
+          "record": false
+        },
+        {
+          "arrival": 617,
+          "mean": 0.39085015366806,
+          "record": false
+        },
+        {
+          "arrival": 641,
+          "mean": 0.82,
+          "record": true
+        },
+        {
+          "arrival": 657,
+          "mean": 0.68871353247882,
+          "record": false
+        },
+        {
+          "arrival": 681,
+          "mean": 0.59888715422703,
+          "record": false
+        },
+        {
+          "arrival": 697,
+          "mean": 0.21684646474759,
+          "record": false
+        },
+        {
+          "arrival": 721,
+          "mean": 0.92,
+          "record": true
+        },
+        {
+          "arrival": 737,
+          "mean": 0.79129611013725,
+          "record": false
+        },
+        {
+          "arrival": 761,
+          "mean": 0.8649720645659,
+          "record": false
+        },
+        {
+          "arrival": 777,
+          "mean": 0.51118870991634,
+          "record": false
+        }
+      ],
+      "delta": 0.05,
+      "epsilon": 0.15,
+      "eta": 0.03,
+      "group": "dense",
+      "id": "smoke-dense__dense__d_late_regime_records_K100__T800__K40",
+      "metadata": {
+        "batch_size": 1,
+        "canonical_sha256": "2954c6c9124a3f0e1c9e9458cb26d763520de97b9b3c755132c7a05630d45ceb",
+        "density": 0.0125,
+        "derivative": {
+          "arrival_transform": "1 + floor((birth - 1) * smoke_T / parent_T)",
+          "parent_T": 8000,
+          "parent_arm_count": 100,
+          "parent_id": "dense__d_late_regime_records_K100",
+          "purpose": "implementation smoke only; excluded from scientific summaries",
+          "record_flags": "recomputed on the derivative with simultaneous-batch semantics",
+          "selected_parent_indices": [
+            0,
+            2,
+            5,
+            7,
+            10,
+            12,
+            15,
+            17,
+            20,
+            22,
+            25,
+            27,
+            30,
+            32,
+            35,
+            37,
+            40,
+            42,
+            45,
+            47,
+            50,
+            52,
+            55,
+            57,
+            60,
+            62,
+            65,
+            67,
+            70,
+            72,
+            75,
+            77,
+            80,
+            82,
+            85,
+            87,
+            90,
+            92,
+            95,
+            97
+          ]
+        },
+        "family": "late_regime_records",
+        "record_semantics": "at least the best mean through the entire batch minus 1e-14",
+        "simultaneous_labels": "shuffled within each batch per replicate; record flags remain attached",
+        "source": {
+          "path": "proposal/SRC_dense_arrivals_reproducibility/src_dense_arrivals/scenarios.json",
+          "scenario_index": 3,
+          "sha256": "8813bd9b6b8b85fc8e3e5210c665aeea42f6881ca4a2ba3e4ae2acceedd6aac3"
+        }
+      },
+      "name": "smoke-dense:d_late_regime_records_K100:T800:K40"
+    }
+  ],
+  "methods": {
+    "ACI": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "ACI",
+      "kernel": "ACI",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "BL-MOSS-b1": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "BL-MOSS-b1",
+      "kernel": "BL-MOSS",
+      "known_horizon": true,
+      "params": {
+        "arrival_exponent": 1.0
+      },
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "Empirical-KL-UCB": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "Empirical-KL-UCB",
+      "kernel": "Empirical-KL-UCB",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "Growing-MOSS": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "Growing-MOSS",
+      "kernel": "Growing-MOSS",
+      "known_horizon": false,
+      "params": {},
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "IMED": {
+      "beta_c": null,
+      "beta_r": null,
+      "family": "baseline",
+      "id": "IMED",
+      "kernel": "IMED",
+      "known_horizon": false,
+      "params": {
+        "log_coefficient": 1.0
+      },
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "SRC-KL-L060": {
+      "beta_c": 1.0,
+      "beta_r": 32.0,
+      "family": "src_kl",
+      "id": "SRC-KL-L060",
+      "kernel": "IMED",
+      "known_horizon": false,
+      "params": {
+        "backlog_scale": 4.0,
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "rate_floor": 0.02,
+        "relevance_floor": 0.02
+      },
+      "planner": "paired",
+      "preference": 0.6
+    },
+    "SRC-KL-R": {
+      "beta_c": null,
+      "beta_r": 32.0,
+      "family": "src_kl",
+      "id": "SRC-KL-R",
+      "kernel": "IMED",
+      "known_horizon": false,
+      "params": {
+        "backlog_scale": 4.0,
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "rate_floor": 0.02,
+        "relevance_floor": 0.02
+      },
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "SRC-KL-area": {
+      "beta_c": null,
+      "beta_r": 32.0,
+      "family": "src_kl",
+      "id": "SRC-KL-area",
+      "kernel": "IMED",
+      "known_horizon": false,
+      "params": {
+        "backlog_scale": 4.0,
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "rate_floor": 0.02,
+        "relevance_floor": 0.02
+      },
+      "planner": "paired",
+      "preference": 1.0
+    },
+    "SRC-L060": {
+      "beta_c": 1.0,
+      "beta_r": 32.0,
+      "family": "src",
+      "id": "SRC-L060",
+      "kernel": "IMED",
+      "known_horizon": false,
+      "params": {
+        "backlog_scale": 4.0,
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "rate_floor": 0.02,
+        "relevance_floor": 0.02
+      },
+      "planner": "paired",
+      "preference": 0.6
+    },
+    "SRC-R": {
+      "beta_c": null,
+      "beta_r": 32.0,
+      "family": "src",
+      "id": "SRC-R",
+      "kernel": "IMED",
+      "known_horizon": false,
+      "params": {
+        "backlog_scale": 4.0,
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "rate_floor": 0.02,
+        "relevance_floor": 0.02
+      },
+      "planner": "paired",
+      "preference": 0.0
+    },
+    "SRC-area": {
+      "beta_c": null,
+      "beta_r": 32.0,
+      "family": "src",
+      "id": "SRC-area",
+      "kernel": "IMED",
+      "known_horizon": false,
+      "params": {
+        "backlog_scale": 4.0,
+        "log_coefficient": 0.5,
+        "nu": 0.02,
+        "rate_floor": 0.02,
+        "relevance_floor": 0.02
+      },
+      "planner": "paired",
+      "preference": 1.0
+    }
+  },
+  "profile": "smoke-dense",
+  "protocol": {
+    "analysis_plan": "configs/analysis_plan.json",
+    "cells": 540,
+    "diagnostics": {
+      "linear_points": 41,
+      "log_points": 20,
+      "per_arm_methods": [
+        "SRC-R",
+        "SRC-KL-R"
+      ],
+      "smoke_all_methods": true,
+      "trajectory_replications": 4
+    },
+    "full_includes_tail": true,
+    "joint": {
+      "candidate_and_matched_method_count": 18,
+      "dense_laws": [
+        "bernoulli",
+        "beta20",
+        "hetero_best_noisy",
+        "hetero_best_quiet"
+      ],
+      "methods": [
+        "SRC-R",
+        "SRC-L010",
+        "SRC-L030",
+        "SRC-L060",
+        "SRC-L090",
+        "SRC-L100",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L010",
+        "SRC-KL-L030",
+        "SRC-KL-L060",
+        "SRC-KL-L090",
+        "SRC-KL-L100",
+        "SRC-KL-area",
+        "SRC-widest-L060",
+        "SRC-lucb-L060",
+        "SRC-KL-widest-L060",
+        "SRC-KL-lucb-L060"
+      ],
+      "replications": {
+        "dense": 8,
+        "scale": 8,
+        "small": 16
+      },
+      "reward_methods_tagged_on_same_subset": true,
+      "scale_laws": [
+        "bernoulli",
+        "beta20",
+        "hetero_best_noisy",
+        "hetero_best_quiet"
+      ],
+      "small_laws": [
+        "bernoulli",
+        "beta02",
+        "beta20",
+        "uniform",
+        "hetero_best_noisy",
+        "hetero_best_quiet",
+        "hetero_jackpot",
+        "trunc_normal"
+      ]
+    },
+    "layout_file": "configs/layouts.json",
+    "layouts": 45,
+    "method_file": "configs/methods.json",
+    "outcome_adaptive_selection": false,
+    "profile": "full",
+    "provenance": "configs/provenance.json",
+    "purpose": "Frozen no-H8 SRC and requested KL variant, independent of historical candidate outcomes",
+    "reward": {
+      "dense_laws": [
+        "bernoulli",
+        "beta02",
+        "beta20",
+        "uniform",
+        "hetero_best_noisy",
+        "hetero_best_quiet",
+        "hetero_jackpot",
+        "trunc_normal"
+      ],
+      "method_count": 24,
+      "methods": [
+        "SRC-R",
+        "SRC-KL-R",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "replications": {
+        "dense": 16,
+        "scale": 8,
+        "small": 32
+      },
+      "scale_laws": [
+        "bernoulli",
+        "beta20",
+        "hetero_best_noisy",
+        "hetero_best_quiet"
+      ],
+      "small_laws": [
+        "bernoulli",
+        "beta02",
+        "beta2",
+        "beta20",
+        "binomial4",
+        "binomial16",
+        "deterministic",
+        "two_point",
+        "uniform",
+        "spike_mix",
+        "hetero_best_noisy",
+        "hetero_best_quiet",
+        "hetero_jackpot",
+        "endpoint_two",
+        "rare_jackpot",
+        "trunc_normal"
+      ]
+    },
+    "schema_version": 1,
+    "seed_bases": {
+      "main": 2026103101,
+      "smoke_dense": 2026103104,
+      "smoke_small": 2026103103,
+      "tail": 2026103102
+    },
+    "smoke_derivatives_excluded_from_scientific_evidence": true,
+    "smoke_profiles": {
+      "smoke-dense": {
+        "horizon": 800,
+        "laws": [
+          "bernoulli",
+          "hetero_best_quiet"
+        ],
+        "layout_names": [
+          "d_stable_incumbent_K100",
+          "d_late_regime_records_K100"
+        ],
+        "max_arms": 40,
+        "methods": [
+          "SRC-R",
+          "SRC-L060",
+          "SRC-area",
+          "SRC-KL-R",
+          "SRC-KL-L060",
+          "SRC-KL-area",
+          "IMED",
+          "Empirical-KL-UCB",
+          "ACI",
+          "Growing-MOSS",
+          "BL-MOSS-b1"
+        ],
+        "parent_group": "dense",
+        "replications": 4,
+        "seed_key": "smoke_dense"
+      },
+      "smoke-small": {
+        "horizon": 1000,
+        "laws": [
+          "bernoulli",
+          "two_point"
+        ],
+        "layout_names": [
+          "two_close",
+          "few_arrivals"
+        ],
+        "methods": [
+          "SRC-R",
+          "SRC-L060",
+          "SRC-area",
+          "SRC-KL-R",
+          "SRC-KL-L060",
+          "SRC-KL-area",
+          "IMED",
+          "UCB1",
+          "AUER",
+          "Growing-MOSS",
+          "ACI",
+          "Clipped-ACI",
+          "TS",
+          "KL-UCB-c0",
+          "KL-UCB-c3",
+          "KL-UCB+",
+          "UCB1-Tuned",
+          "UCB-V",
+          "Bayes-UCB",
+          "Empirical-KL-UCB",
+          "SB-EXP3-ATGT",
+          "BL-MOSS-b0.5",
+          "BL-MOSS-b1",
+          "BL-MOSS-b2",
+          "UCB-log2t-c3",
+          "MOSS-T-currentK",
+          "TS-Jeffreys",
+          "TS-SMAB-bounded"
+        ],
+        "parent_group": "f17",
+        "replications": 4,
+        "seed_key": "smoke_small"
+      }
+    },
+    "tail": {
+      "laws": [
+        "bernoulli",
+        "hetero_best_noisy"
+      ],
+      "layout_names": [
+        "h_record_staircase",
+        "h_two_large_bursts",
+        "h_irregular_arrivals",
+        "h_late_challenger",
+        "h_early_flood_late_record",
+        "h_anchor_reversal"
+      ],
+      "layouts": 6,
+      "methods": [
+        "SRC-R",
+        "SRC-KL-R",
+        "IMED",
+        "Empirical-KL-UCB"
+      ],
+      "replications": 128
+    },
+    "unique_paths": 418560
+  },
+  "source_files": {
+    "configs/analysis_plan.json": "b7f31200ff1f673e1b9ee72ac868a68ed561bf88424d66daf90a2fd03e834106",
+    "configs/layouts.json": "b6195271260e1f157b524f5b147ef09bedf3059f65cbbc7352b5c87b1d857ceb",
+    "configs/methods.json": "3b2e3826391b00c49dd58ff472b9a073aeadcbcf4399e19f7761b2f268a34bf6",
+    "configs/protocol.json": "a5af76256e771dcce2eb18882853eaabeb93428f67bf15d87579a07f4ac99656",
+    "configs/provenance.json": "4edfeb6d8653e6aa874fe846b17673a0958a2aa713c670ed00bb7e4f78a1b3c6",
+    "requirements.txt": "f8fd8c730954d601db8ecd645bcbf711a425abfbcd77913cd5997588ec958844",
+    "run_main.py": "c1dd2e3d906b7dcbf7c6f90f17729f078a161d11902de81cbf16cd23b65b290e",
+    "src/srcbench/__init__.py": "fb96edf738daf0835d69891e02945443e1cf48ac5d422898cf6aa37062a177f8",
+    "src/srcbench/analysis.py": "19fbe22aad85f1bc8bd7529fd522a2f24c1b92bba066aeb9f7680fb10f671eb3",
+    "src/srcbench/baselines.py": "f0aa001646c30cbf3c9cb4836bf382e4193a64daa6afdf402e4e7d97eab13509",
+    "src/srcbench/design.py": "82d1f6aaf8f2cdf210ef4ce0a113273c6a477ed5b9e6b78b8a9b6ed9b60bb97f",
+    "src/srcbench/environment.py": "ac5a45021aa45d0573ffa9139eb0a555c889fc27ceaee48fe8bced512e16d2bf",
+    "src/srcbench/mathcore.py": "5f04d00937a79b1b7efaab4403eb3f899e86fecc68f86fd61fabdf8d2c1e3923",
+    "src/srcbench/methods.py": "9b1bceba84ce72f1680a521568fac15c013c4abe55123c049ff34e2f04346513",
+    "src/srcbench/plotting.py": "c95db15aec3303f43708dd49dda8be0231814cd48d029d9e437038860d375677",
+    "src/srcbench/policy.py": "adbefa00e3b8f92e5a966a1a9b10049b24625f371b10b2344dcf4ac63d200bf3",
+    "src/srcbench/runner.py": "389f390d35a08c2ccc3dab6d6d855f502956df6f31b9e82bb26e13b9d2670930",
+    "src/srcbench/simulation.py": "f1965d301f775e4afea9e76c4653dc2dacd6081fe597bc06d152209918e92592"
+  },
+  "tasks": [
+    {
+      "cell_id": "smoke-dense__dense__d_stable_incumbent_K100__T800__K40__bernoulli",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "bernoulli",
+      "layout_id": "smoke-dense__dense__d_stable_incumbent_K100__T800__K40",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "Empirical-KL-UCB",
+        "ACI",
+        "Growing-MOSS",
+        "BL-MOSS-b1"
+      ],
+      "rep": 0,
+      "seed_base": 2026103104,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_24340dfa53b8730c6486"
+    },
+    {
+      "cell_id": "smoke-dense__dense__d_stable_incumbent_K100__T800__K40__bernoulli",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "bernoulli",
+      "layout_id": "smoke-dense__dense__d_stable_incumbent_K100__T800__K40",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "Empirical-KL-UCB",
+        "ACI",
+        "Growing-MOSS",
+        "BL-MOSS-b1"
+      ],
+      "rep": 1,
+      "seed_base": 2026103104,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_72477cf637b650505bbc"
+    },
+    {
+      "cell_id": "smoke-dense__dense__d_stable_incumbent_K100__T800__K40__bernoulli",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "bernoulli",
+      "layout_id": "smoke-dense__dense__d_stable_incumbent_K100__T800__K40",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "Empirical-KL-UCB",
+        "ACI",
+        "Growing-MOSS",
+        "BL-MOSS-b1"
+      ],
+      "rep": 2,
+      "seed_base": 2026103104,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_c9043bf019613d99d628"
+    },
+    {
+      "cell_id": "smoke-dense__dense__d_stable_incumbent_K100__T800__K40__bernoulli",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "bernoulli",
+      "layout_id": "smoke-dense__dense__d_stable_incumbent_K100__T800__K40",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "Empirical-KL-UCB",
+        "ACI",
+        "Growing-MOSS",
+        "BL-MOSS-b1"
+      ],
+      "rep": 3,
+      "seed_base": 2026103104,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_112f2dbe2b097c57e9ef"
+    },
+    {
+      "cell_id": "smoke-dense__dense__d_stable_incumbent_K100__T800__K40__hetero_best_quiet",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "hetero_best_quiet",
+      "layout_id": "smoke-dense__dense__d_stable_incumbent_K100__T800__K40",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "Empirical-KL-UCB",
+        "ACI",
+        "Growing-MOSS",
+        "BL-MOSS-b1"
+      ],
+      "rep": 0,
+      "seed_base": 2026103104,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_57a6d07e187d53c12083"
+    },
+    {
+      "cell_id": "smoke-dense__dense__d_stable_incumbent_K100__T800__K40__hetero_best_quiet",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "hetero_best_quiet",
+      "layout_id": "smoke-dense__dense__d_stable_incumbent_K100__T800__K40",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "Empirical-KL-UCB",
+        "ACI",
+        "Growing-MOSS",
+        "BL-MOSS-b1"
+      ],
+      "rep": 1,
+      "seed_base": 2026103104,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_2ad495656be26bb1c8ee"
+    },
+    {
+      "cell_id": "smoke-dense__dense__d_stable_incumbent_K100__T800__K40__hetero_best_quiet",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "hetero_best_quiet",
+      "layout_id": "smoke-dense__dense__d_stable_incumbent_K100__T800__K40",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "Empirical-KL-UCB",
+        "ACI",
+        "Growing-MOSS",
+        "BL-MOSS-b1"
+      ],
+      "rep": 2,
+      "seed_base": 2026103104,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_51eff5ce93eae7f89bf7"
+    },
+    {
+      "cell_id": "smoke-dense__dense__d_stable_incumbent_K100__T800__K40__hetero_best_quiet",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "hetero_best_quiet",
+      "layout_id": "smoke-dense__dense__d_stable_incumbent_K100__T800__K40",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "Empirical-KL-UCB",
+        "ACI",
+        "Growing-MOSS",
+        "BL-MOSS-b1"
+      ],
+      "rep": 3,
+      "seed_base": 2026103104,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_4bfb8c0f90f1531cfecd"
+    },
+    {
+      "cell_id": "smoke-dense__dense__d_late_regime_records_K100__T800__K40__bernoulli",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "bernoulli",
+      "layout_id": "smoke-dense__dense__d_late_regime_records_K100__T800__K40",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "Empirical-KL-UCB",
+        "ACI",
+        "Growing-MOSS",
+        "BL-MOSS-b1"
+      ],
+      "rep": 0,
+      "seed_base": 2026103104,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_4724469956facdf5f97e"
+    },
+    {
+      "cell_id": "smoke-dense__dense__d_late_regime_records_K100__T800__K40__bernoulli",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "bernoulli",
+      "layout_id": "smoke-dense__dense__d_late_regime_records_K100__T800__K40",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "Empirical-KL-UCB",
+        "ACI",
+        "Growing-MOSS",
+        "BL-MOSS-b1"
+      ],
+      "rep": 1,
+      "seed_base": 2026103104,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_d024f5fa0d150417a81a"
+    },
+    {
+      "cell_id": "smoke-dense__dense__d_late_regime_records_K100__T800__K40__bernoulli",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "bernoulli",
+      "layout_id": "smoke-dense__dense__d_late_regime_records_K100__T800__K40",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "Empirical-KL-UCB",
+        "ACI",
+        "Growing-MOSS",
+        "BL-MOSS-b1"
+      ],
+      "rep": 2,
+      "seed_base": 2026103104,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_e3d1ed3b792532e1eaab"
+    },
+    {
+      "cell_id": "smoke-dense__dense__d_late_regime_records_K100__T800__K40__bernoulli",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "bernoulli",
+      "layout_id": "smoke-dense__dense__d_late_regime_records_K100__T800__K40",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "Empirical-KL-UCB",
+        "ACI",
+        "Growing-MOSS",
+        "BL-MOSS-b1"
+      ],
+      "rep": 3,
+      "seed_base": 2026103104,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_40f0af95337d633d42d8"
+    },
+    {
+      "cell_id": "smoke-dense__dense__d_late_regime_records_K100__T800__K40__hetero_best_quiet",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "hetero_best_quiet",
+      "layout_id": "smoke-dense__dense__d_late_regime_records_K100__T800__K40",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "Empirical-KL-UCB",
+        "ACI",
+        "Growing-MOSS",
+        "BL-MOSS-b1"
+      ],
+      "rep": 0,
+      "seed_base": 2026103104,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_5867534f9b0d3f933cef"
+    },
+    {
+      "cell_id": "smoke-dense__dense__d_late_regime_records_K100__T800__K40__hetero_best_quiet",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "hetero_best_quiet",
+      "layout_id": "smoke-dense__dense__d_late_regime_records_K100__T800__K40",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "Empirical-KL-UCB",
+        "ACI",
+        "Growing-MOSS",
+        "BL-MOSS-b1"
+      ],
+      "rep": 1,
+      "seed_base": 2026103104,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_e2e4f77f8c6d46941434"
+    },
+    {
+      "cell_id": "smoke-dense__dense__d_late_regime_records_K100__T800__K40__hetero_best_quiet",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "hetero_best_quiet",
+      "layout_id": "smoke-dense__dense__d_late_regime_records_K100__T800__K40",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "Empirical-KL-UCB",
+        "ACI",
+        "Growing-MOSS",
+        "BL-MOSS-b1"
+      ],
+      "rep": 2,
+      "seed_base": 2026103104,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_8f76b998e0ee086bcf7b"
+    },
+    {
+      "cell_id": "smoke-dense__dense__d_late_regime_records_K100__T800__K40__hetero_best_quiet",
+      "cohort": "smoke",
+      "diagnostics": {
+        "linear_points": 41,
+        "log_points": 20,
+        "per_arm_methods": [
+          "SRC-R",
+          "SRC-KL-R"
+        ],
+        "smoke_all_methods": true,
+        "trajectory_replications": 4
+      },
+      "law": "hetero_best_quiet",
+      "layout_id": "smoke-dense__dense__d_late_regime_records_K100__T800__K40",
+      "method_suites": {
+        "ACI": [
+          "reward",
+          "joint"
+        ],
+        "BL-MOSS-b1": [
+          "reward",
+          "joint"
+        ],
+        "Empirical-KL-UCB": [
+          "reward",
+          "joint"
+        ],
+        "Growing-MOSS": [
+          "reward",
+          "joint"
+        ],
+        "IMED": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-KL-area": [
+          "reward",
+          "joint"
+        ],
+        "SRC-L060": [
+          "reward",
+          "joint"
+        ],
+        "SRC-R": [
+          "reward",
+          "joint"
+        ],
+        "SRC-area": [
+          "reward",
+          "joint"
+        ]
+      },
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "Empirical-KL-UCB",
+        "ACI",
+        "Growing-MOSS",
+        "BL-MOSS-b1"
+      ],
+      "rep": 3,
+      "seed_base": 2026103104,
+      "suites": [
+        "joint",
+        "reward"
+      ],
+      "task_id": "smoke_375262b131c551881b36"
+    }
+  ]
+}

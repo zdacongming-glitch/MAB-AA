@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "layout_count": 45,
+  "source_files": [
+    {
+      "id": "f17",
+      "path": "MAB-AA-reproducibility/experiments/fccp_frozen/protocols/holdout-freeze.json",
+      "sha256": "7d4b8536869250ce3b19ad5f15ddf388c16ed17ca058a94171b694ad29229668",
+      "layouts": 12,
+      "transform": "Original arrival order, T, means and task parameters preserved; explicit batch-wise record flags added."
+    },
+    {
+      "id": "adaptive",
+      "path": "proposal/SRC_dense_arrivals_reproducibility/src_adaptive/holdout_scenarios.json",
+      "sha256": "68d254c8ed31961d8e645d3009659fc936c944706fc755aca3ee7806071921e6",
+      "layouts": 12,
+      "transform": "Original arrival order, T, means and task parameters preserved; explicit batch-wise record flags added."
+    },
+    {
+      "id": "dense",
+      "path": "proposal/SRC_dense_arrivals_reproducibility/src_dense_arrivals/scenarios.json",
+      "sha256": "8813bd9b6b8b85fc8e3e5210c665aeea42f6881ca4a2ba3e4ae2acceedd6aac3",
+      "layouts": 18,
+      "transform": "Original arrival order, T, means and task parameters preserved; explicit batch-wise record flags added."
+    },
+    {
+      "id": "scale",
+      "path": "proposal/SRC_dense_arrivals_reproducibility/src_dense_arrivals/scale_scenarios.json",
+      "sha256": "b011b694ea8b6e76fd60f13fdee201d358267256b296ee28429744a08ad1b209",
+      "layouts": 3,
+      "transform": "Original arrival order, T, means and task parameters preserved; explicit batch-wise record flags added."
+    }
+  ],
+  "canonical_layouts_sha256": "b6195271260e1f157b524f5b147ef09bedf3059f65cbbc7352b5c87b1d857ceb",
+  "runtime_source": "configs/layouts.json only; no proposal paths are read",
+  "record_definition_source": {
+    "path": "proposal/SRC_dense_arrivals_reproducibility/src_adaptive/engine_final.cpp",
+    "line": 209,
+    "sha256": "4c59351b1b777c86b673f5fe41bdb1eacf7ab4275dec77c43641337279ba37b2"
+  },
+  "algorithm_sources": [
+    {
+      "id": "current_manuscript",
+      "path": "ucbaa_jasa_resubmission_2026-10-15/manuscript.tex",
+      "sha256": "1dcd08835467b77330430692874dba268ee4e693b87df38906aa09cf3199d05e",
+      "contract": "Section 3, Algorithm 1"
+    },
+    {
+      "id": "original_src_rates",
+      "path": "proposal/SRC-Instance-Dependent-Rates-and-Proofs-2026-10-31.md",
+      "sha256": "c63f1cf9475248373bee68f072ff141fb7deef2a827738ea37e73bf9170da8ff",
+      "contract": "Section 1 algorithm contract"
+    },
+    {
+      "id": "src_kl_improvement",
+      "path": "proposal/SRC-Literature-Comparison-and-KL-Minimax-Improvement-2026-10-31.md",
+      "sha256": "2f2b05988b50025335d59dab7b453bc0bbf871ac4abbca09ad5ebea1f275ab65",
+      "contract": "Section 5"
+    }
+  ],
+  "import_base_commit": "c0694aa0b77b0f77cd5c8b1bf63b1724ed7561b4",
+  "historical_results_imported": false
+}

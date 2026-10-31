@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-31",
+  "formal": {
+    "status": "NOT_RUN",
+    "profile": "full",
+    "layouts": 45,
+    "cells": 540,
+    "planned_unique_trajectories": 418560
+  },
+  "smoke": {
+    "smoke-small": {
+      "status": "PASS",
+      "unique_trajectories": 448,
+      "complete_shards": 16,
+      "fingerprint": "f6d8532d7a548138b3ab7b2406b421e8458cd0f73fa61e7f8a93710bd98e9010",
+      "figures": 27,
+      "manifest_sha256": "5108f5a9acdf10f3992f9f438a576d37971f8ab970bd05e92ce84cd8ca3f3c55"
+    },
+    "smoke-dense": {
+      "status": "PASS",
+      "unique_trajectories": 176,
+      "complete_shards": 16,
+      "fingerprint": "b63c1563f72979a3689004dbbfdf2358519e42739027689bd9fceb1b9c663514",
+      "figures": 24,
+      "manifest_sha256": "31acd3b9a0aab50a14a30f77fe54f36f9fab5e31b2f92c029318dd03528ba9b7"
+    }
+  },
+  "interpretation": "Smoke pipeline validation only; no superiority or asymptotic convergence conclusion."
+}

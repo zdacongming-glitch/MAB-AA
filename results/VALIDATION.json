@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "tests_passed": 99,
+  "commands": [
+    "python -m pytest -q",
+    "python -m pytest tests/test_analysis.py -q",
+    "python run_main.py verify results/smoke-small --check-current",
+    "python run_main.py verify results/smoke-dense --check-current"
+  ],
+  "markdown_formula_delimiters": "PASS",
+  "syntax": "PASS",
+  "paired_order_and_worker_invariance": "PASS",
+  "resume_and_corruption_rejection": "PASS",
+  "full_study_executed": false,
+  "smoke": {
+    "smoke-small": {
+      "status": "PASS",
+      "unique_trajectories": 448,
+      "complete_shards": 16,
+      "fingerprint": "f6d8532d7a548138b3ab7b2406b421e8458cd0f73fa61e7f8a93710bd98e9010",
+      "figures": 27,
+      "manifest_sha256": "5108f5a9acdf10f3992f9f438a576d37971f8ab970bd05e92ce84cd8ca3f3c55"
+    },
+    "smoke-dense": {
+      "status": "PASS",
+      "unique_trajectories": 176,
+      "complete_shards": 16,
+      "fingerprint": "b63c1563f72979a3689004dbbfdf2358519e42739027689bd9fceb1b9c663514",
+      "figures": 24,
+      "manifest_sha256": "31acd3b9a0aab50a14a30f77fe54f36f9fab5e31b2f92c029318dd03528ba9b7"
+    }
+  }
+}

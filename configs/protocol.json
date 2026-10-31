@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "profile": "full",
+  "purpose": "Frozen no-H8 SRC and requested KL variant, independent of historical candidate outcomes",
+  "layout_file": "configs/layouts.json",
+  "method_file": "configs/methods.json",
+  "analysis_plan": "configs/analysis_plan.json",
+  "provenance": "configs/provenance.json",
+  "layouts": 45,
+  "cells": 540,
+  "unique_paths": 418560,
+  "seed_bases": {
+    "main": 2026103101,
+    "tail": 2026103102,
+    "smoke_small": 2026103103,
+    "smoke_dense": 2026103104
+  },
+  "full_includes_tail": true,
+  "reward": {
+    "small_laws": [
+      "bernoulli",
+      "beta02",
+      "beta2",
+      "beta20",
+      "binomial4",
+      "binomial16",
+      "deterministic",
+      "two_point",
+      "uniform",
+      "spike_mix",
+      "hetero_best_noisy",
+      "hetero_best_quiet",
+      "hetero_jackpot",
+      "endpoint_two",
+      "rare_jackpot",
+      "trunc_normal"
+    ],
+    "dense_laws": [
+      "bernoulli",
+      "beta02",
+      "beta20",
+      "uniform",
+      "hetero_best_noisy",
+      "hetero_best_quiet",
+      "hetero_jackpot",
+      "trunc_normal"
+    ],
+    "scale_laws": [
+      "bernoulli",
+      "beta20",
+      "hetero_best_noisy",
+      "hetero_best_quiet"
+    ],
+    "replications": {
+      "small": 32,
+      "dense": 16,
+      "scale": 8
+    },
+    "method_count": 24,
+    "methods": [
+      "SRC-R",
+      "SRC-KL-R",
+      "IMED",
+      "UCB1",
+      "AUER",
+      "Growing-MOSS",
+      "ACI",
+      "Clipped-ACI",
+      "TS",
+      "KL-UCB-c0",
+      "KL-UCB-c3",
+      "KL-UCB+",
+      "UCB1-Tuned",
+      "UCB-V",
+      "Bayes-UCB",
+      "Empirical-KL-UCB",
+      "SB-EXP3-ATGT",
+      "BL-MOSS-b0.5",
+      "BL-MOSS-b1",
+      "BL-MOSS-b2",
+      "UCB-log2t-c3",
+      "MOSS-T-currentK",
+      "TS-Jeffreys",
+      "TS-SMAB-bounded"
+    ]
+  },
+  "joint": {
+    "small_laws": [
+      "bernoulli",
+      "beta02",
+      "beta20",
+      "uniform",
+      "hetero_best_noisy",
+      "hetero_best_quiet",
+      "hetero_jackpot",
+      "trunc_normal"
+    ],
+    "dense_laws": [
+      "bernoulli",
+      "beta20",
+      "hetero_best_noisy",
+      "hetero_best_quiet"
+    ],
+    "scale_laws": [
+      "bernoulli",
+      "beta20",
+      "hetero_best_noisy",
+      "hetero_best_quiet"
+    ],
+    "replications": {
+      "small": 16,
+      "dense": 8,
+      "scale": 8
+    },
+    "candidate_and_matched_method_count": 18,
+    "reward_methods_tagged_on_same_subset": true,
+    "methods": [
+      "SRC-R",
+      "SRC-L010",
+      "SRC-L030",
+      "SRC-L060",
+      "SRC-L090",
+      "SRC-L100",
+      "SRC-area",
+      "SRC-KL-R",
+      "SRC-KL-L010",
+      "SRC-KL-L030",
+      "SRC-KL-L060",
+      "SRC-KL-L090",
+      "SRC-KL-L100",
+      "SRC-KL-area",
+      "SRC-widest-L060",
+      "SRC-lucb-L060",
+      "SRC-KL-widest-L060",
+      "SRC-KL-lucb-L060"
+    ]
+  },
+  "tail": {
+    "layouts": 6,
+    "laws": [
+      "bernoulli",
+      "hetero_best_noisy"
+    ],
+    "replications": 128,
+    "methods": [
+      "SRC-R",
+      "SRC-KL-R",
+      "IMED",
+      "Empirical-KL-UCB"
+    ],
+    "layout_names": [
+      "h_record_staircase",
+      "h_two_large_bursts",
+      "h_irregular_arrivals",
+      "h_late_challenger",
+      "h_early_flood_late_record",
+      "h_anchor_reversal"
+    ]
+  },
+  "outcome_adaptive_selection": false,
+  "smoke_derivatives_excluded_from_scientific_evidence": true,
+  "smoke_profiles": {
+    "smoke-small": {
+      "parent_group": "f17",
+      "layout_names": [
+        "two_close",
+        "few_arrivals"
+      ],
+      "horizon": 1000,
+      "laws": [
+        "bernoulli",
+        "two_point"
+      ],
+      "replications": 4,
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "UCB1",
+        "AUER",
+        "Growing-MOSS",
+        "ACI",
+        "Clipped-ACI",
+        "TS",
+        "KL-UCB-c0",
+        "KL-UCB-c3",
+        "KL-UCB+",
+        "UCB1-Tuned",
+        "UCB-V",
+        "Bayes-UCB",
+        "Empirical-KL-UCB",
+        "SB-EXP3-ATGT",
+        "BL-MOSS-b0.5",
+        "BL-MOSS-b1",
+        "BL-MOSS-b2",
+        "UCB-log2t-c3",
+        "MOSS-T-currentK",
+        "TS-Jeffreys",
+        "TS-SMAB-bounded"
+      ],
+      "seed_key": "smoke_small"
+    },
+    "smoke-dense": {
+      "parent_group": "dense",
+      "layout_names": [
+        "d_stable_incumbent_K100",
+        "d_late_regime_records_K100"
+      ],
+      "horizon": 800,
+      "max_arms": 40,
+      "laws": [
+        "bernoulli",
+        "hetero_best_quiet"
+      ],
+      "replications": 4,
+      "methods": [
+        "SRC-R",
+        "SRC-L060",
+        "SRC-area",
+        "SRC-KL-R",
+        "SRC-KL-L060",
+        "SRC-KL-area",
+        "IMED",
+        "Empirical-KL-UCB",
+        "ACI",
+        "Growing-MOSS",
+        "BL-MOSS-b1"
+      ],
+      "seed_key": "smoke_dense"
+    }
+  },
+  "diagnostics": {
+    "trajectory_replications": 4,
+    "linear_points": 41,
+    "log_points": 20,
+    "per_arm_methods": [
+      "SRC-R",
+      "SRC-KL-R"
+    ],
+    "smoke_all_methods": true
+  }
+}

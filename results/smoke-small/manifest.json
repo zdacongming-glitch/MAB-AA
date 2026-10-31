@@ -1,0 +1,126 @@
+{
+  "actual_runs": 448,
+  "completed_shards": 16,
+  "completed_utc": "2026-10-31T09:42:52.232694+00:00",
+  "config_sha256": "f6d8532d7a548138b3ab7b2406b421e8458cd0f73fa61e7f8a93710bd98e9010",
+  "elapsed_seconds": 22.375,
+  "environment": {
+    "matplotlib": "3.8.0",
+    "numba": "0.59.0",
+    "numpy": "1.26.4",
+    "pandas": "2.1.4",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.7",
+    "scipy": "1.11.4"
+  },
+  "expected_runs": 448,
+  "expected_shards": 16,
+  "failures": [],
+  "files": {
+    "counts.csv.gz": {
+      "bytes": 253493,
+      "rows": 51744,
+      "sha256": "214574c66a9252d31c9777dd73b7e10d45858be3b92df13403ea8e7baddf78c9"
+    },
+    "runs.csv.gz": {
+      "bytes": 16441,
+      "rows": 448,
+      "sha256": "e52535b6982cecb49929b1cccdd29dc63061f6cc641657cacdac0c618646b238"
+    },
+    "trajectories.csv.gz": {
+      "bytes": 191815,
+      "rows": 25536,
+      "sha256": "4f1748a5c4931f2f5ef9516521021d0f801d7c10cf6c72ff3d784b6700298770"
+    }
+  },
+  "fingerprint": "f6d8532d7a548138b3ab7b2406b421e8458cd0f73fa61e7f8a93710bd98e9010",
+  "profile": "smoke-small",
+  "resume_count": 0,
+  "schema_version": 1,
+  "scientific_scope": "derived smoke experiment",
+  "shards": {
+    "smoke_154145fd955422e5139d": {
+      "bytes": 41070,
+      "rows": 28,
+      "sha256": "bc044414e3f114f8d81919ebf4d22b502dd7e1b53d8d54ada3c15d23a96bbb95"
+    },
+    "smoke_3814b1fcc31ffa8ff704": {
+      "bytes": 38824,
+      "rows": 28,
+      "sha256": "53f3d94f376fdff7428d4e24216af13ded7aec91f80ea20b151f0833eea9ef51"
+    },
+    "smoke_4106758418331ba960f9": {
+      "bytes": 42361,
+      "rows": 28,
+      "sha256": "e17e203ba0eac06bc943b6a52f20965903d634436dda43603de0f0b4d739342d"
+    },
+    "smoke_4d0f6447804509e7687d": {
+      "bytes": 38654,
+      "rows": 28,
+      "sha256": "3bacfefa1eb06a9bf9fd8d25f79bbb835fcf179057ec1e1945997cef85686567"
+    },
+    "smoke_6390a4bb8cff97daee1e": {
+      "bytes": 40276,
+      "rows": 28,
+      "sha256": "2f7550f65481b75a41a3b71ef51b47f96b2d255b29e3d876b11aeb6251702fe9"
+    },
+    "smoke_7320deb026e8a6dd54f2": {
+      "bytes": 41820,
+      "rows": 28,
+      "sha256": "8e30e686fa9ff4c653502fde4e0ef79c30b07b8c313eb4003bb37da8e1331e6b"
+    },
+    "smoke_781d2188b9e83508c170": {
+      "bytes": 40191,
+      "rows": 28,
+      "sha256": "7cf781de4cf08136f7b5a19ae37e9d195afef21ce74bec60ff46d7253b4c2276"
+    },
+    "smoke_7a25fa7bb9f0df6ef58b": {
+      "bytes": 41918,
+      "rows": 28,
+      "sha256": "5c00e6bde3ecbdb106c6d4872cc5ef495c27a6441a2bef936f0b21e3b735b14a"
+    },
+    "smoke_81e04c94cfe29d4db20d": {
+      "bytes": 41081,
+      "rows": 28,
+      "sha256": "b00ce7b1eb77ac43c1c920758a48758641cecdbfbc5b9c4dc15547c2ce9a1762"
+    },
+    "smoke_8e519f572c0095c9000f": {
+      "bytes": 38436,
+      "rows": 28,
+      "sha256": "2c62a2347f9f4c083c5d8b9903abdacd2728ad96d1ea4bbcd93caa3679afc426"
+    },
+    "smoke_939c6b6f3d0c8f8ecdf4": {
+      "bytes": 38539,
+      "rows": 28,
+      "sha256": "bc66ea248bfc97161170a6d157d26129bc1cd7d88b09492feade033044f75b37"
+    },
+    "smoke_af806386701091381e45": {
+      "bytes": 38816,
+      "rows": 28,
+      "sha256": "e5f11a3c030a76e1d87297e2e292d89ecee50e96cecd7e4daa00ac690ee28fea"
+    },
+    "smoke_be7e6564383c4b5d96da": {
+      "bytes": 38744,
+      "rows": 28,
+      "sha256": "ecc92dd16464f38ddd4f7fe5ff6385409902dda152639d184596a42e941b2023"
+    },
+    "smoke_c124137d35e79dc34e6a": {
+      "bytes": 41824,
+      "rows": 28,
+      "sha256": "1638485c8b2c61241f3cd7cfb9e9b51706e5ea15add058e625d44bca92f2effd"
+    },
+    "smoke_cc92543b41f8083b19ec": {
+      "bytes": 38051,
+      "rows": 28,
+      "sha256": "5a325f665b16bd97497806161507ad491c2ac279a4c2ee632e4bf85ef3b92e79"
+    },
+    "smoke_e088788a0b383714c0fe": {
+      "bytes": 38793,
+      "rows": 28,
+      "sha256": "5f854b3471e9d84cf37f9ba315330a3b6faa2c3275f170dddeb79c2a092b0cbb"
+    }
+  },
+  "started_utc": "2026-10-31T09:42:28.265567+00:00",
+  "status": "PASS",
+  "workers": 2
+}

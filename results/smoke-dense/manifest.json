@@ -1,0 +1,126 @@
+{
+  "actual_runs": 176,
+  "completed_shards": 16,
+  "completed_utc": "2026-10-31T09:42:44.973317+00:00",
+  "config_sha256": "b63c1563f72979a3689004dbbfdf2358519e42739027689bd9fceb1b9c663514",
+  "elapsed_seconds": 16.187000000005355,
+  "environment": {
+    "matplotlib": "3.8.0",
+    "numba": "0.59.0",
+    "numpy": "1.26.4",
+    "pandas": "2.1.4",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.7",
+    "scipy": "1.11.4"
+  },
+  "expected_runs": 176,
+  "expected_shards": 16,
+  "failures": [],
+  "files": {
+    "counts.csv.gz": {
+      "bytes": 48966,
+      "rows": 7040,
+      "sha256": "842dcb928590b1b0d5747502bed11cbc4cbafac907c8561c730fbb9d29029ade"
+    },
+    "runs.csv.gz": {
+      "bytes": 10294,
+      "rows": 176,
+      "sha256": "230ebd835ec96aab9ab7dc0b5a45df9eea76e98309bd3d52decf1e48711d91ac"
+    },
+    "trajectories.csv.gz": {
+      "bytes": 163245,
+      "rows": 10032,
+      "sha256": "c651bfe16174777e3300ad1b63956d634a6e87abf47ceeff9b7ed95660b6c448"
+    }
+  },
+  "fingerprint": "b63c1563f72979a3689004dbbfdf2358519e42739027689bd9fceb1b9c663514",
+  "profile": "smoke-dense",
+  "resume_count": 0,
+  "schema_version": 1,
+  "scientific_scope": "derived smoke experiment",
+  "shards": {
+    "smoke_112f2dbe2b097c57e9ef": {
+      "bytes": 20455,
+      "rows": 11,
+      "sha256": "08c02f30540eaafae1e5bab8e75ac01feabab1f483cfa7827e459ccb651e2be5"
+    },
+    "smoke_24340dfa53b8730c6486": {
+      "bytes": 19872,
+      "rows": 11,
+      "sha256": "83776115e24dd45f662c38bbdd6973903bc33351f7959b3fa2b3b628954ba143"
+    },
+    "smoke_2ad495656be26bb1c8ee": {
+      "bytes": 20854,
+      "rows": 11,
+      "sha256": "bde96b6b41cf83f4528cad901bc8586e99c0a716ab8ba01a60d9c9612d88478e"
+    },
+    "smoke_375262b131c551881b36": {
+      "bytes": 20139,
+      "rows": 11,
+      "sha256": "db4afaed117dab47978318bf85a3b4073083a7214e7d370ddc235446ba400864"
+    },
+    "smoke_40f0af95337d633d42d8": {
+      "bytes": 19886,
+      "rows": 11,
+      "sha256": "f8e24bcdf93a0fd3795d5933ff2dad4d3f5e6ea98b78273d323c47bb5623febf"
+    },
+    "smoke_4724469956facdf5f97e": {
+      "bytes": 19955,
+      "rows": 11,
+      "sha256": "eb806b0e8390a8bec028e4daa58f5ed81676a2bc01684ef77b27130d51da99a8"
+    },
+    "smoke_4bfb8c0f90f1531cfecd": {
+      "bytes": 20818,
+      "rows": 11,
+      "sha256": "249f355fe28856117e477167aed90e2e1fe303160b65b6f77e745df7a645c9f2"
+    },
+    "smoke_51eff5ce93eae7f89bf7": {
+      "bytes": 20693,
+      "rows": 11,
+      "sha256": "b7a7c52bcd031806e3629be92c7d62ee0fed33d64869334eece9a4efc48235f3"
+    },
+    "smoke_57a6d07e187d53c12083": {
+      "bytes": 20545,
+      "rows": 11,
+      "sha256": "e1ef41d875cfe108129457ade81b092660ff56d7a1904b8db0d41dc018fb5181"
+    },
+    "smoke_5867534f9b0d3f933cef": {
+      "bytes": 19312,
+      "rows": 11,
+      "sha256": "1f5429c3a9ece7a8e9010ec2c0c972272ddadece024f060d4ea6ef386cc717d1"
+    },
+    "smoke_72477cf637b650505bbc": {
+      "bytes": 19915,
+      "rows": 11,
+      "sha256": "9f1c03e8691e9a10291ea288b38cc735ee8806365b667f332858ae0ce7754266"
+    },
+    "smoke_8f76b998e0ee086bcf7b": {
+      "bytes": 18882,
+      "rows": 11,
+      "sha256": "6f2bbae3f175bf7849079fd84a0f8e24776e3006a061ea1c3482482c1a100f13"
+    },
+    "smoke_c9043bf019613d99d628": {
+      "bytes": 20088,
+      "rows": 11,
+      "sha256": "f13b29eeda8e79a8ede5eeed05b8628f4611d501ce17fc2aa4ffcec06bc9778b"
+    },
+    "smoke_d024f5fa0d150417a81a": {
+      "bytes": 19998,
+      "rows": 11,
+      "sha256": "dc9ab173a58365e03d7da2d104a979080e978a0f6452a6e180b664ca477d1725"
+    },
+    "smoke_e2e4f77f8c6d46941434": {
+      "bytes": 18915,
+      "rows": 11,
+      "sha256": "f847bb969b0ce480e88ac54a3e38bcfd56d6fb7851329f0e27c9e0afec3f1087"
+    },
+    "smoke_e3d1ed3b792532e1eaab": {
+      "bytes": 19541,
+      "rows": 11,
+      "sha256": "00d3c54d8447f349385fc83d3dec6591c3b5c6286bf073d2968dbd90fe86407a"
+    }
+  },
+  "started_utc": "2026-10-31T09:42:28.193508+00:00",
+  "status": "PASS",
+  "workers": 2
+}
