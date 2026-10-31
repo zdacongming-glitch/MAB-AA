@@ -1,0 +1,174 @@
+{
+  "status": "PASS",
+  "phase": "all_development_refinement_and_fresh_seed_validations",
+  "source_files_match_plan": true,
+  "driver_matches_plan": true,
+  "all_three_driver_hashes_match_prefreeze": true,
+  "drivers_prefreeze_sha256": "40534e2e76444dddcb7904a77b907e1352c30ad3f972fe58da90d3321f069a69",
+  "stages": {
+    "screen-dev": {
+      "status": "NOT_RUN",
+      "required": false
+    },
+    "original-dev": {
+      "status": "PASS",
+      "paths": 960,
+      "worlds": 96,
+      "environment_cells": 48,
+      "config_sha256": "4ccabf8b71e18085ff9c2f11960ca888fd1e998b28aa7000fd253bd7d29f9fa0",
+      "runs_sha256": "2457bdf0ecd54d90863e18ed1ca2aaac614ef174e9c8445a6a8a0632f2bac5d0",
+      "failure_paths": {
+        "label_error": 0,
+        "coverage_error": 8,
+        "empty_intersection": 8
+      },
+      "paired_contrasts_checked": 54,
+      "primary_family_size": 24,
+      "all_failure_paths_retained": true,
+      "all_cell_means_match": true,
+      "independent_mcse_and_t_intervals_match": true
+    },
+    "refine-dev-new": {
+      "status": "PASS",
+      "paths": 1824,
+      "worlds": 96,
+      "environment_cells": 48,
+      "config_sha256": "3dd8e980b5cb49b1aa7f69a12b3ebdd35960123439e1a6b5cc818a3a8cc39013",
+      "runs_sha256": "68aa0986c3a07e4f053840f816a0775db902cab6004b5867d367822d46f5ae16",
+      "failure_paths": {
+        "label_error": 0,
+        "coverage_error": 14,
+        "empty_intersection": 8
+      }
+    },
+    "refined-dev": {
+      "status": "PASS",
+      "paths": 2784,
+      "worlds": 96,
+      "environmental_cells": 48,
+      "independent_repetitions_per_cell": 2,
+      "methods": 29,
+      "eligible_candidates": 25,
+      "original_rows_copied_exactly": true,
+      "new_rows_copied_exactly": true,
+      "controls_not_resimulated": true,
+      "one_identical_candidate_reused": true,
+      "derived_same_worlds_not_new_samples": true,
+      "runs_sha256": "735715c17dd621be26868866934a1ddabb7db616bacad7df65ff7e3c7f2cf7b2",
+      "config_sha256": "5e287c715dba9e7ddb8188e405f0cc205abd8a15a5382a55a261fa1137e86c1c",
+      "paired_contrasts_checked": 206,
+      "primary_family_size": 100,
+      "all_failure_paths_retained": true,
+      "all_cell_means_match": true,
+      "independent_mcse_and_t_intervals_match": true
+    },
+    "original-validation": {
+      "status": "PASS",
+      "paths": 4608,
+      "worlds": 768,
+      "environment_cells": 384,
+      "config_sha256": "c26288ca482efc9a427050052d43f9e1aa588e7fe66f44176e739bd0be58fc2f",
+      "runs_sha256": "0770d6dda7ee2bc044ba2041c63589c52a39b8aa07736ceab813b949addaf344",
+      "failure_paths": {
+        "label_error": 0,
+        "coverage_error": 15,
+        "empty_intersection": 0
+      },
+      "paired_contrasts_checked": 16,
+      "primary_family_size": 8,
+      "all_failure_paths_retained": true,
+      "all_cell_means_match": true,
+      "independent_mcse_and_t_intervals_match": true
+    },
+    "scaled-validation": {
+      "status": "PASS",
+      "paths": 12960,
+      "worlds": 2160,
+      "environment_cells": 540,
+      "config_sha256": "ada48ff61618fa89cc066bfcb90f6045b2edb4798ee768f0d16fbab4f4f02c1a",
+      "runs_sha256": "66c18202b6b29897eb5cfba5ccabfb7f4c138e5755ca8219392fb0123deb54ef",
+      "failure_paths": {
+        "label_error": 0,
+        "coverage_error": 18,
+        "empty_intersection": 0
+      },
+      "paired_contrasts_checked": 32,
+      "primary_family_size": 8,
+      "all_failure_paths_retained": true,
+      "all_cell_means_match": true,
+      "independent_mcse_and_t_intervals_match": true
+    }
+  },
+  "plan_sha256": "ce28cb145b3eb96f004f214bb5628270f408d7470d1dd11816268d1ea7ff102f",
+  "selection": {
+    "selected_method": "SRC-KL-a1024",
+    "selected_cap": 1024.0,
+    "worst_macro_ratio": 1.3449750480337648,
+    "global_rule_matches": true,
+    "zero_budget_diagnostic_not_eligible": true,
+    "selection_sha256": "04b802c2a9ea95f4b118508f7580b8c7ab28c71a4235cad7c91f9068b275b013"
+  },
+  "refined_selection": {
+    "selected": {
+      "method": "SRC-KL-a8192-c1-b32",
+      "cap_multiplier": 8192.0,
+      "log_coefficient": 1.0,
+      "beta_r": 32.0,
+      "worst_ratio": 1.0,
+      "ratios": {
+        "f17/IMED": 1.0,
+        "f17/Empirical-KL-UCB": 0.7088836776365068,
+        "adaptive/IMED": 1.0,
+        "adaptive/Empirical-KL-UCB": 0.6486033404040767
+      }
+    },
+    "one_global_spec": true,
+    "candidate_count": 25,
+    "fixed_minimax_four_macro_rule_matches": true,
+    "diagnostic_excluded": true,
+    "selection_sha256": "ce6c4c6712c75384fcb817f731fd5aef9e90eab04536a38e87b4bde6128bd573"
+  },
+  "final_cap_only_selection": {
+    "selected": {
+      "method": "SRC-KL-a8192-c0p5-b32",
+      "cap_multiplier": 8192.0,
+      "log_coefficient": 0.5,
+      "beta_r": 32.0,
+      "worst_ratio": 1.0482789110033766,
+      "ratios": {
+        "f17/IMED": 1.0482789110033766,
+        "f17/Empirical-KL-UCB": 0.743107809620866,
+        "adaptive/IMED": 0.6927740749278123,
+        "adaptive/Empirical-KL-UCB": 0.4493355791435232
+      }
+    },
+    "candidate_count": 7,
+    "restricted_to_c_half_beta_32": true,
+    "both_development_rounds": true,
+    "validation_data_used": false,
+    "initial_cap_selection_retained": true,
+    "selection_sha256": "9b4fcb7319a4d996d89b4f50479665e38f29bedaaee8a19ef083e4fc3387fdda"
+  },
+  "original_validation_context_partition": {
+    "cells": {
+      "heldout_from_original_dev": 336,
+      "original_dev_seen": 48
+    },
+    "selection_use": false,
+    "scope_note": "Held out from corrected ORIGINAL development only; optional screen development is reported separately. These are not claimed to be wholly unseen layouts. Validation streams have fresh seeds."
+  },
+  "refinement_plan_sha256": "cc7bb9c29c9d97f1b00531566fea7335ae255ccaa4898be27ac5ba541f93b2b7",
+  "validation_plan_sha256": "bef3c83fd27bbacde5a0102720efeb1fcede370987944c2dd9b68292d10f58ba",
+  "both_global_candidates_frozen_before_validation": [
+    "SRC-KL-a8192-c0p5-b32",
+    "SRC-KL-a8192-c1-b32"
+  ],
+  "validation_primary_family_size": 8,
+  "candidate_role_mapping": {
+    "cap_only": "SRC-KL-a8192-c0p5-b32",
+    "refined": "SRC-KL-a8192-c1-b32"
+  },
+  "validation_does_not_select_a_winner": true,
+  "reused_development_rows_not_extra_samples": true,
+  "verifier_sha256": "b85be0a0ed5833383f8e34dbf36db1ea46b76ef3aad3bb4dccbdfdbe24f5e06c"
+}

@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "date": "2026-11-01",
+  "scope": "Primary copied artifacts and producer-tree figure counts; scientific statistics were validated separately.",
+  "runs": {
+    "smoke-small": {
+      "source_directory": "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small",
+      "installed_directory": "D:\\博士学习\\科研\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small",
+      "primary_artifacts_sha256": {
+        "manifest.json": "e03b341f70c64b937ead6d4ac63dcbf33b7eb74592719de56c3ab1d2c489beb3",
+        "config.json": "8c237a6007f8d32eedc341eb8c9b0b64a0590b2c481f916c0cf3878135a12e50",
+        "runs.csv.gz": "8aae94e6b5a5d57e9be5bac54983ffcf74efaad6095777ab7d465af67962027e",
+        "trajectories.csv.gz": "c2d515d9fde337cbde41336310fb1f5a09525d23882f3f64dfb9f76b5917cbdc",
+        "counts.csv.gz": "f2fb41cbdbe48c6ba20ecfe98195f565595b48a0149c8fe1f7780a97e2df6069"
+      },
+      "source_and_installed_primary_artifacts_equal": true,
+      "figure_files_by_format": {
+        "pdf": 27,
+        "png": 27,
+        "svg": 27
+      },
+      "source_and_installed_figure_counts_equal": true
+    },
+    "smoke-dense": {
+      "source_directory": "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-dense",
+      "installed_directory": "D:\\博士学习\\科研\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-dense",
+      "primary_artifacts_sha256": {
+        "manifest.json": "8b18daaa80ce59ba51531f6911c95264279130514b5c721dfa75b45074eaf611",
+        "config.json": "40f2e6b85db59efa565ab9cccbc4531620ae336802743ed0e1ca21ba56d55b7c",
+        "runs.csv.gz": "d118c451d181090a3853f61f9f410ab9c6271e95322433af6395dca637baaee5",
+        "trajectories.csv.gz": "0d8e491d5cee802878945cbda4a4321aba1e0d49d460c9e42dd76712f4e07aa2",
+        "counts.csv.gz": "849f270fb29ddbb53c88638fae1894fc79a1070fa9458f47b07d0aeeb0161157"
+      },
+      "source_and_installed_primary_artifacts_equal": true,
+      "figure_files_by_format": {
+        "pdf": 24,
+        "png": 24,
+        "svg": 24
+      },
+      "source_and_installed_figure_counts_equal": true
+    },
+    "screen-all": {
+      "source_directory": "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all",
+      "installed_directory": "D:\\博士学习\\科研\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\screen-all",
+      "primary_artifacts_sha256": {
+        "manifest.json": "098efe718bbcd840682ae226019afad9d5de5277bcd4cc210cd9386f11fcae6d",
+        "config.json": "20ee5e892d067d43e4d442fa9d5412b2e6173cd2c3265111d5cc8be1954a9d3f",
+        "runs.csv.gz": "3abb7cedd1b41ab4fbe2eee199a38a5e1c50b5c4718ef6087d0e0b6b2f4a6f08",
+        "trajectories.csv.gz": "b9e39f0cb3d0eb1df9b09144f2bfc89907c407800a4033639a211d2cd35139ff",
+        "counts.csv.gz": "98d902253b95b5d21a1eb18b238075478caa0574bd4c1a715406882699da84cc"
+      },
+      "source_and_installed_primary_artifacts_equal": true,
+      "figure_files_by_format": {
+        "pdf": 103,
+        "png": 103,
+        "svg": 103
+      },
+      "source_and_installed_figure_counts_equal": true
+    },
+    "parameter-check/original-validation": {
+      "source_directory": "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\src_kl_parameter_study_final\\original-validation",
+      "installed_directory": "D:\\博士学习\\科研\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\parameter-check\\original-validation",
+      "primary_artifacts_sha256": {
+        "manifest.json": "2ce70a4f149fb34be761b94f0a4c5473293b8eb5b458f3d7cf8d9eb50ce9fbac",
+        "config.json": "c26288ca482efc9a427050052d43f9e1aa588e7fe66f44176e739bd0be58fc2f",
+        "runs.csv.gz": "0770d6dda7ee2bc044ba2041c63589c52a39b8aa07736ceab813b949addaf344",
+        "trajectories.csv.gz": "59403e663dcefce45c2c224d24d1059ea8f97899c86a7610075daf70bab06c1a",
+        "counts.csv.gz": "98d902253b95b5d21a1eb18b238075478caa0574bd4c1a715406882699da84cc"
+      },
+      "source_and_installed_primary_artifacts_equal": true,
+      "figure_files_by_format": {
+        "pdf": 2,
+        "png": 2,
+        "svg": 2
+      },
+      "source_and_installed_figure_counts_equal": true
+    },
+    "parameter-check/scaled-validation": {
+      "source_directory": "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\src_kl_parameter_study_final\\scaled-validation",
+      "installed_directory": "D:\\博士学习\\科研\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\parameter-check\\scaled-validation",
+      "primary_artifacts_sha256": {
+        "manifest.json": "8ab481dce7cc18d0c4ba249c8fe4bd0936b68ddf2ce24e08cb2fcb9fdcffebf4",
+        "config.json": "ada48ff61618fa89cc066bfcb90f6045b2edb4798ee768f0d16fbab4f4f02c1a",
+        "runs.csv.gz": "66c18202b6b29897eb5cfba5ccabfb7f4c138e5755ca8219392fb0123deb54ef",
+        "trajectories.csv.gz": "59403e663dcefce45c2c224d24d1059ea8f97899c86a7610075daf70bab06c1a",
+        "counts.csv.gz": "98d902253b95b5d21a1eb18b238075478caa0574bd4c1a715406882699da84cc"
+      },
+      "source_and_installed_primary_artifacts_equal": true,
+      "figure_files_by_format": {
+        "pdf": 2,
+        "png": 2,
+        "svg": 2
+      },
+      "source_and_installed_figure_counts_equal": true
+    }
+  }
+}

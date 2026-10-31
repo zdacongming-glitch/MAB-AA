@@ -2,6 +2,7 @@
 import csv
 import gzip
 import json
+import math
 from pathlib import Path
 
 import pytest
@@ -31,6 +32,33 @@ def test_ratio_interval_keeps_pair_covariance():
     assert result["percent_mcse"] == 0
     assert result["percent_ci_low"] == result["percent_ci_high"] == 100
     assert result["difference_mcse"] > 0
+
+
+@pytest.mark.parametrize("balanced", [False, True], ids=["equal-cell", "equal-section"])
+@pytest.mark.parametrize("direction", [-1, 1], ids=["tiny-decrease", "tiny-increase"])
+def test_tiny_paired_changes_survive_macro_cancellation(balanced, direction):
+    baseline = 1e8
+    changed = math.nextafter(baseline, math.inf if direction > 0 else -math.inf)
+    step = changed-baseline
+    cells = {("a", "law"): _cell("f17", [changed, baseline, baseline, baseline], [baseline]*4),
+             ("b", "law"): _cell("f17", [baseline]*4, [baseline]*4),
+             ("c", "law"): _cell("adaptive", [baseline]*4, [baseline]*4)}
+    result = _estimate(cells, balanced=balanced)
+    # There is one changed replication in one cell. Direct macro means both
+    # round to the same float, although the paired change is representable.
+    assert result["candidate_regret"] == result["comparator_regret"]
+    weight = 1/4 if balanced else 1/3
+    difference = weight*step/4
+    se = abs(difference)  # one nonzero replication among four, one varying cell
+    percent = 100*difference/baseline
+    assert result["regret_difference"] == pytest.approx(difference, rel=1e-12, abs=0)
+    assert result["difference_mcse"] == pytest.approx(se, rel=1e-12, abs=0)
+    assert result["difference_df"] == pytest.approx(3)
+    assert result["percent_change"] == pytest.approx(percent, rel=1e-12, abs=0)
+    assert result["percent_mcse"] == pytest.approx(100*se/baseline, rel=1e-12, abs=0)
+    assert result["percent_df"] == pytest.approx(3)
+    assert result["difference_ci_low"] < 0 < result["difference_ci_high"]
+    assert result["percent_ci_low"] < 0 < result["percent_ci_high"]
 
 
 def test_equal_cell_primary_and_equal_section_secondary_are_distinct():

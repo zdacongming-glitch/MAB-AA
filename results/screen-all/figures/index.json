@@ -1,0 +1,924 @@
+{
+  "profile": "screen-all",
+  "smoke_only": false,
+  "figures": [
+    {
+      "figure": "trajectory_screen_adaptive_joint",
+      "caption": "Frozen-cell descriptive estimates. 1\u20131 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Fixed display shortlist; every method remains in the CSV tables. Snapshot cell counts may differ across horizons.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_adaptive_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_adaptive_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_adaptive_joint.svg"
+      ]
+    },
+    {
+      "figure": "normalized_screen_adaptive_joint",
+      "caption": "Frozen-cell descriptive estimates. 1\u20131 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. R/log(t) uses checkpoints after the layout's last arrival only. No asymptotic constant is asserted for dense schedules. R/S(t) uses the current arrival spectrum; guards use its running maximum.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_adaptive_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_adaptive_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_adaptive_joint.svg"
+      ]
+    },
+    {
+      "figure": "trajectory_screen_adaptive_reward",
+      "caption": "Frozen-cell descriptive estimates. 1\u20131 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Fixed display shortlist; every method remains in the CSV tables. Snapshot cell counts may differ across horizons.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_adaptive_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_adaptive_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_adaptive_reward.svg"
+      ]
+    },
+    {
+      "figure": "normalized_screen_adaptive_reward",
+      "caption": "Frozen-cell descriptive estimates. 1\u20131 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. R/log(t) uses checkpoints after the layout's last arrival only. No asymptotic constant is asserted for dense schedules. R/S(t) uses the current arrival spectrum; guards use its running maximum.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_adaptive_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_adaptive_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_adaptive_reward.svg"
+      ]
+    },
+    {
+      "figure": "trajectory_screen_dense_joint",
+      "caption": "Frozen-cell descriptive estimates. 1\u20131 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Fixed display shortlist; every method remains in the CSV tables. Snapshot cell counts may differ across horizons.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_dense_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_dense_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_dense_joint.svg"
+      ]
+    },
+    {
+      "figure": "normalized_screen_dense_joint",
+      "caption": "Frozen-cell descriptive estimates. 1\u20131 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. R/log(t) uses checkpoints after the layout's last arrival only. No asymptotic constant is asserted for dense schedules. R/S(t) uses the current arrival spectrum; guards use its running maximum.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_dense_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_dense_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_dense_joint.svg"
+      ]
+    },
+    {
+      "figure": "trajectory_screen_dense_reward",
+      "caption": "Frozen-cell descriptive estimates. 1\u20131 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Fixed display shortlist; every method remains in the CSV tables. Snapshot cell counts may differ across horizons.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_dense_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_dense_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_dense_reward.svg"
+      ]
+    },
+    {
+      "figure": "normalized_screen_dense_reward",
+      "caption": "Frozen-cell descriptive estimates. 1\u20131 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. R/log(t) uses checkpoints after the layout's last arrival only. No asymptotic constant is asserted for dense schedules. R/S(t) uses the current arrival spectrum; guards use its running maximum.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_dense_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_dense_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_dense_reward.svg"
+      ]
+    },
+    {
+      "figure": "trajectory_screen_f17_joint",
+      "caption": "Frozen-cell descriptive estimates. 1\u20131 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Fixed display shortlist; every method remains in the CSV tables. Snapshot cell counts may differ across horizons.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_f17_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_f17_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_f17_joint.svg"
+      ]
+    },
+    {
+      "figure": "normalized_screen_f17_joint",
+      "caption": "Frozen-cell descriptive estimates. 1\u20131 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. R/log(t) uses checkpoints after the layout's last arrival only. No asymptotic constant is asserted for dense schedules. R/S(t) uses the current arrival spectrum; guards use its running maximum.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_f17_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_f17_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_f17_joint.svg"
+      ]
+    },
+    {
+      "figure": "trajectory_screen_f17_reward",
+      "caption": "Frozen-cell descriptive estimates. 1\u20131 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Fixed display shortlist; every method remains in the CSV tables. Snapshot cell counts may differ across horizons.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_f17_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_f17_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_f17_reward.svg"
+      ]
+    },
+    {
+      "figure": "normalized_screen_f17_reward",
+      "caption": "Frozen-cell descriptive estimates. 1\u20131 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. R/log(t) uses checkpoints after the layout's last arrival only. No asymptotic constant is asserted for dense schedules. R/S(t) uses the current arrival spectrum; guards use its running maximum.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_f17_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_f17_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_f17_reward.svg"
+      ]
+    },
+    {
+      "figure": "trajectory_screen_scale_joint",
+      "caption": "Frozen-cell descriptive estimates. 1\u20131 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Fixed display shortlist; every method remains in the CSV tables. Snapshot cell counts may differ across horizons.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_scale_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_scale_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_scale_joint.svg"
+      ]
+    },
+    {
+      "figure": "normalized_screen_scale_joint",
+      "caption": "Frozen-cell descriptive estimates. 1\u20131 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. R/log(t) uses checkpoints after the layout's last arrival only. No asymptotic constant is asserted for dense schedules. R/S(t) uses the current arrival spectrum; guards use its running maximum.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_scale_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_scale_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_scale_joint.svg"
+      ]
+    },
+    {
+      "figure": "trajectory_screen_scale_reward",
+      "caption": "Frozen-cell descriptive estimates. 1\u20131 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Fixed display shortlist; every method remains in the CSV tables. Snapshot cell counts may differ across horizons.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_scale_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_scale_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\trajectory_screen_scale_reward.svg"
+      ]
+    },
+    {
+      "figure": "normalized_screen_scale_reward",
+      "caption": "Frozen-cell descriptive estimates. 1\u20131 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. R/log(t) uses checkpoints after the layout's last arrival only. No asymptotic constant is asserted for dense schedules. R/S(t) uses the current arrival spectrum; guards use its running maximum.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_scale_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_scale_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\normalized_screen_scale_reward.svg"
+      ]
+    },
+    {
+      "figure": "tradeoff_screen_adaptive_joint",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Segments join tested preferences only. \u03bb=1 with finite service budget is a circle; uncapped area is a separate star and is never joined as the same endpoint.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\tradeoff_screen_adaptive_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\tradeoff_screen_adaptive_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\tradeoff_screen_adaptive_joint.svg"
+      ]
+    },
+    {
+      "figure": "tradeoff_screen_dense_joint",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Segments join tested preferences only. \u03bb=1 with finite service budget is a circle; uncapped area is a separate star and is never joined as the same endpoint.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\tradeoff_screen_dense_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\tradeoff_screen_dense_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\tradeoff_screen_dense_joint.svg"
+      ]
+    },
+    {
+      "figure": "tradeoff_screen_f17_joint",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Segments join tested preferences only. \u03bb=1 with finite service budget is a circle; uncapped area is a separate star and is never joined as the same endpoint.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\tradeoff_screen_f17_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\tradeoff_screen_f17_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\tradeoff_screen_f17_joint.svg"
+      ]
+    },
+    {
+      "figure": "tradeoff_screen_scale_joint",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Segments join tested preferences only. \u03bb=1 with finite service budget is a circle; uncapped area is a separate star and is never joined as the same endpoint.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\tradeoff_screen_scale_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\tradeoff_screen_scale_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\tradeoff_screen_scale_joint.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_adaptive_joint_SRC-KL-L060_SRC-L060_area",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-L060_SRC-L060_area.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-L060_SRC-L060_area.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-L060_SRC-L060_area.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_adaptive_joint_SRC-KL-L060_SRC-L060_area_all",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-L060_SRC-L060_area_all.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-L060_SRC-L060_area_all.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-L060_SRC-L060_area_all.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_adaptive_joint_SRC-KL-L060_SRC-L060_eta_fraction",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-L060_SRC-L060_eta_fraction.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-L060_SRC-L060_eta_fraction.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-L060_SRC-L060_eta_fraction.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_adaptive_joint_SRC-KL-L060_SRC-L060_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-L060_SRC-L060_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-L060_SRC-L060_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-L060_SRC-L060_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_adaptive_joint_SRC-KL-R_SRC-R_area",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-R_SRC-R_area.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-R_SRC-R_area.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-R_SRC-R_area.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_adaptive_joint_SRC-KL-R_SRC-R_area_all",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-R_SRC-R_area_all.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-R_SRC-R_area_all.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-R_SRC-R_area_all.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_adaptive_joint_SRC-KL-R_SRC-R_eta_fraction",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-R_SRC-R_eta_fraction.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-R_SRC-R_eta_fraction.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-R_SRC-R_eta_fraction.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_adaptive_joint_SRC-KL-R_SRC-R_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-R_SRC-R_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-R_SRC-R_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-R_SRC-R_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_adaptive_joint_SRC-KL-area_SRC-area_area",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-area_SRC-area_area.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-area_SRC-area_area.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-area_SRC-area_area.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_adaptive_joint_SRC-KL-area_SRC-area_area_all",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-area_SRC-area_area_all.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-area_SRC-area_area_all.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-area_SRC-area_area_all.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_adaptive_joint_SRC-KL-area_SRC-area_eta_fraction",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-area_SRC-area_eta_fraction.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-area_SRC-area_eta_fraction.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-area_SRC-area_eta_fraction.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_adaptive_joint_SRC-KL-area_SRC-area_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-area_SRC-area_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-area_SRC-area_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_joint_SRC-KL-area_SRC-area_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_adaptive_reward_SRC-KL-L060_SRC-L060_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_reward_SRC-KL-L060_SRC-L060_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_reward_SRC-KL-L060_SRC-L060_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_reward_SRC-KL-L060_SRC-L060_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_adaptive_reward_SRC-KL-R_SRC-R_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_reward_SRC-KL-R_SRC-R_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_reward_SRC-KL-R_SRC-R_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_reward_SRC-KL-R_SRC-R_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_adaptive_reward_SRC-KL-area_SRC-area_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_reward_SRC-KL-area_SRC-area_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_reward_SRC-KL-area_SRC-area_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_adaptive_reward_SRC-KL-area_SRC-area_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_dense_joint_SRC-KL-L060_SRC-L060_area",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-L060_SRC-L060_area.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-L060_SRC-L060_area.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-L060_SRC-L060_area.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_dense_joint_SRC-KL-L060_SRC-L060_area_all",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-L060_SRC-L060_area_all.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-L060_SRC-L060_area_all.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-L060_SRC-L060_area_all.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_dense_joint_SRC-KL-L060_SRC-L060_eta_fraction",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-L060_SRC-L060_eta_fraction.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-L060_SRC-L060_eta_fraction.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-L060_SRC-L060_eta_fraction.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_dense_joint_SRC-KL-L060_SRC-L060_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-L060_SRC-L060_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-L060_SRC-L060_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-L060_SRC-L060_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_dense_joint_SRC-KL-R_SRC-R_area",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-R_SRC-R_area.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-R_SRC-R_area.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-R_SRC-R_area.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_dense_joint_SRC-KL-R_SRC-R_area_all",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-R_SRC-R_area_all.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-R_SRC-R_area_all.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-R_SRC-R_area_all.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_dense_joint_SRC-KL-R_SRC-R_eta_fraction",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-R_SRC-R_eta_fraction.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-R_SRC-R_eta_fraction.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-R_SRC-R_eta_fraction.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_dense_joint_SRC-KL-R_SRC-R_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-R_SRC-R_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-R_SRC-R_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-R_SRC-R_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_dense_joint_SRC-KL-area_SRC-area_area",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-area_SRC-area_area.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-area_SRC-area_area.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-area_SRC-area_area.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_dense_joint_SRC-KL-area_SRC-area_area_all",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-area_SRC-area_area_all.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-area_SRC-area_area_all.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-area_SRC-area_area_all.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_dense_joint_SRC-KL-area_SRC-area_eta_fraction",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-area_SRC-area_eta_fraction.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-area_SRC-area_eta_fraction.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-area_SRC-area_eta_fraction.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_dense_joint_SRC-KL-area_SRC-area_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-area_SRC-area_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-area_SRC-area_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_joint_SRC-KL-area_SRC-area_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_dense_reward_SRC-KL-L060_SRC-L060_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_reward_SRC-KL-L060_SRC-L060_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_reward_SRC-KL-L060_SRC-L060_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_reward_SRC-KL-L060_SRC-L060_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_dense_reward_SRC-KL-R_SRC-R_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_reward_SRC-KL-R_SRC-R_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_reward_SRC-KL-R_SRC-R_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_reward_SRC-KL-R_SRC-R_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_dense_reward_SRC-KL-area_SRC-area_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_reward_SRC-KL-area_SRC-area_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_reward_SRC-KL-area_SRC-area_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_dense_reward_SRC-KL-area_SRC-area_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_f17_joint_SRC-KL-L060_SRC-L060_area",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-L060_SRC-L060_area.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-L060_SRC-L060_area.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-L060_SRC-L060_area.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_f17_joint_SRC-KL-L060_SRC-L060_area_all",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-L060_SRC-L060_area_all.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-L060_SRC-L060_area_all.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-L060_SRC-L060_area_all.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_f17_joint_SRC-KL-L060_SRC-L060_eta_fraction",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-L060_SRC-L060_eta_fraction.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-L060_SRC-L060_eta_fraction.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-L060_SRC-L060_eta_fraction.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_f17_joint_SRC-KL-L060_SRC-L060_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-L060_SRC-L060_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-L060_SRC-L060_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-L060_SRC-L060_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_f17_joint_SRC-KL-R_SRC-R_area",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-R_SRC-R_area.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-R_SRC-R_area.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-R_SRC-R_area.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_f17_joint_SRC-KL-R_SRC-R_area_all",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-R_SRC-R_area_all.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-R_SRC-R_area_all.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-R_SRC-R_area_all.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_f17_joint_SRC-KL-R_SRC-R_eta_fraction",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-R_SRC-R_eta_fraction.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-R_SRC-R_eta_fraction.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-R_SRC-R_eta_fraction.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_f17_joint_SRC-KL-R_SRC-R_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-R_SRC-R_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-R_SRC-R_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-R_SRC-R_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_f17_joint_SRC-KL-area_SRC-area_area",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-area_SRC-area_area.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-area_SRC-area_area.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-area_SRC-area_area.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_f17_joint_SRC-KL-area_SRC-area_area_all",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-area_SRC-area_area_all.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-area_SRC-area_area_all.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-area_SRC-area_area_all.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_f17_joint_SRC-KL-area_SRC-area_eta_fraction",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-area_SRC-area_eta_fraction.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-area_SRC-area_eta_fraction.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-area_SRC-area_eta_fraction.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_f17_joint_SRC-KL-area_SRC-area_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-area_SRC-area_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-area_SRC-area_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_joint_SRC-KL-area_SRC-area_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_f17_reward_SRC-KL-L060_SRC-L060_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_reward_SRC-KL-L060_SRC-L060_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_reward_SRC-KL-L060_SRC-L060_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_reward_SRC-KL-L060_SRC-L060_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_f17_reward_SRC-KL-R_SRC-R_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_reward_SRC-KL-R_SRC-R_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_reward_SRC-KL-R_SRC-R_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_reward_SRC-KL-R_SRC-R_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_f17_reward_SRC-KL-area_SRC-area_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_reward_SRC-KL-area_SRC-area_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_reward_SRC-KL-area_SRC-area_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_f17_reward_SRC-KL-area_SRC-area_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_scale_joint_SRC-KL-L060_SRC-L060_area",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-L060_SRC-L060_area.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-L060_SRC-L060_area.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-L060_SRC-L060_area.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_scale_joint_SRC-KL-L060_SRC-L060_area_all",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-L060_SRC-L060_area_all.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-L060_SRC-L060_area_all.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-L060_SRC-L060_area_all.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_scale_joint_SRC-KL-L060_SRC-L060_eta_fraction",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-L060_SRC-L060_eta_fraction.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-L060_SRC-L060_eta_fraction.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-L060_SRC-L060_eta_fraction.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_scale_joint_SRC-KL-L060_SRC-L060_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-L060_SRC-L060_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-L060_SRC-L060_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-L060_SRC-L060_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_scale_joint_SRC-KL-R_SRC-R_area",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-R_SRC-R_area.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-R_SRC-R_area.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-R_SRC-R_area.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_scale_joint_SRC-KL-R_SRC-R_area_all",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-R_SRC-R_area_all.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-R_SRC-R_area_all.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-R_SRC-R_area_all.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_scale_joint_SRC-KL-R_SRC-R_eta_fraction",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-R_SRC-R_eta_fraction.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-R_SRC-R_eta_fraction.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-R_SRC-R_eta_fraction.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_scale_joint_SRC-KL-R_SRC-R_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-R_SRC-R_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-R_SRC-R_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-R_SRC-R_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_scale_joint_SRC-KL-area_SRC-area_area",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-area_SRC-area_area.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-area_SRC-area_area.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-area_SRC-area_area.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_scale_joint_SRC-KL-area_SRC-area_area_all",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-area_SRC-area_area_all.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-area_SRC-area_area_all.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-area_SRC-area_area_all.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_scale_joint_SRC-KL-area_SRC-area_eta_fraction",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-area_SRC-area_eta_fraction.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-area_SRC-area_eta_fraction.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-area_SRC-area_eta_fraction.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_scale_joint_SRC-KL-area_SRC-area_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-area_SRC-area_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-area_SRC-area_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_joint_SRC-KL-area_SRC-area_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_scale_reward_SRC-KL-L060_SRC-L060_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_reward_SRC-KL-L060_SRC-L060_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_reward_SRC-KL-L060_SRC-L060_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_reward_SRC-KL-L060_SRC-L060_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_scale_reward_SRC-KL-R_SRC-R_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_reward_SRC-KL-R_SRC-R_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_reward_SRC-KL-R_SRC-R_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_reward_SRC-KL-R_SRC-R_regret.svg"
+      ]
+    },
+    {
+      "figure": "paired_heatmap_screen_scale_reward_SRC-KL-area_SRC-area_regret",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_reward_SRC-KL-area_SRC-area_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_reward_SRC-KL-area_SRC-area_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\paired_heatmap_screen_scale_reward_SRC-KL-area_SRC-area_regret.svg"
+      ]
+    },
+    {
+      "figure": "K_screen_adaptive_joint",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_adaptive_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_adaptive_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_adaptive_joint.svg"
+      ]
+    },
+    {
+      "figure": "K_screen_adaptive_reward",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_adaptive_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_adaptive_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_adaptive_reward.svg"
+      ]
+    },
+    {
+      "figure": "K_screen_dense_joint",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_dense_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_dense_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_dense_joint.svg"
+      ]
+    },
+    {
+      "figure": "K_screen_dense_reward",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_dense_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_dense_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_dense_reward.svg"
+      ]
+    },
+    {
+      "figure": "K_screen_f17_joint",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_f17_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_f17_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_f17_joint.svg"
+      ]
+    },
+    {
+      "figure": "K_screen_f17_reward",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_f17_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_f17_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\K_screen_f17_reward.svg"
+      ]
+    },
+    {
+      "figure": "law_screen_adaptive_joint",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_adaptive_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_adaptive_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_adaptive_joint.svg"
+      ]
+    },
+    {
+      "figure": "law_screen_adaptive_reward",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_adaptive_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_adaptive_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_adaptive_reward.svg"
+      ]
+    },
+    {
+      "figure": "law_screen_dense_joint",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_dense_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_dense_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_dense_joint.svg"
+      ]
+    },
+    {
+      "figure": "law_screen_dense_reward",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_dense_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_dense_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_dense_reward.svg"
+      ]
+    },
+    {
+      "figure": "law_screen_f17_joint",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_f17_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_f17_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_f17_joint.svg"
+      ]
+    },
+    {
+      "figure": "law_screen_f17_reward",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_f17_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_f17_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_f17_reward.svg"
+      ]
+    },
+    {
+      "figure": "law_screen_scale_joint",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_scale_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_scale_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_scale_joint.svg"
+      ]
+    },
+    {
+      "figure": "law_screen_scale_reward",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_scale_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_scale_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\law_screen_scale_reward.svg"
+      ]
+    },
+    {
+      "figure": "diagnostics_screen_adaptive_joint",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Guard exclusions, reward/service tax, and checkpoint hits are also retained in module_summary.csv. Unseen means zero real observations.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_adaptive_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_adaptive_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_adaptive_joint.svg"
+      ]
+    },
+    {
+      "figure": "diagnostics_screen_adaptive_reward",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Guard exclusions, reward/service tax, and checkpoint hits are also retained in module_summary.csv. Unseen means zero real observations.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_adaptive_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_adaptive_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_adaptive_reward.svg"
+      ]
+    },
+    {
+      "figure": "diagnostics_screen_dense_joint",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Guard exclusions, reward/service tax, and checkpoint hits are also retained in module_summary.csv. Unseen means zero real observations.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_dense_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_dense_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_dense_joint.svg"
+      ]
+    },
+    {
+      "figure": "diagnostics_screen_dense_reward",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Guard exclusions, reward/service tax, and checkpoint hits are also retained in module_summary.csv. Unseen means zero real observations.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_dense_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_dense_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_dense_reward.svg"
+      ]
+    },
+    {
+      "figure": "diagnostics_screen_f17_joint",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Guard exclusions, reward/service tax, and checkpoint hits are also retained in module_summary.csv. Unseen means zero real observations.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_f17_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_f17_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_f17_joint.svg"
+      ]
+    },
+    {
+      "figure": "diagnostics_screen_f17_reward",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Guard exclusions, reward/service tax, and checkpoint hits are also retained in module_summary.csv. Unseen means zero real observations.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_f17_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_f17_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_f17_reward.svg"
+      ]
+    },
+    {
+      "figure": "diagnostics_screen_scale_joint",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Guard exclusions, reward/service tax, and checkpoint hits are also retained in module_summary.csv. Unseen means zero real observations.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_scale_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_scale_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_scale_joint.svg"
+      ]
+    },
+    {
+      "figure": "diagnostics_screen_scale_reward",
+      "caption": "Frozen-cell descriptive estimates. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Guard exclusions, reward/service tax, and checkpoint hits are also retained in module_summary.csv. Unseen means zero real observations.",
+      "files": [
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_scale_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_scale_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all\\figures\\diagnostics_screen_scale_reward.svg"
+      ]
+    }
+  ]
+}

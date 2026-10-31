@@ -1,76 +1,217 @@
 {
   "schema_version": 2,
-  "date": "2026-10-31",
-  "formal": {
-    "status": "NOT_RUN",
-    "profile": "full",
-    "layouts": 45,
-    "cells": 540,
-    "planned_unique_trajectories": 374496
+  "date": "2026-11-01",
+  "status": "PASS_FOR_LISTED_COMPLETED_RUNS",
+  "scientific_scope": "Completed smoke/screen results and exploratory frozen-parameter checks; formal full run not performed",
+  "tests": {
+    "status": "PASS",
+    "passed": 170,
+    "scope": "Final-source repository tests",
+    "evidence": "Final test result retained by the root agent; no endpoint or old-commit identity inference is attached."
   },
-  "smoke": {
+  "formal_full": {
+    "status": "NOT_RUN",
+    "configured_unique_paths": 374496,
+    "description": "Configured full protocol, including its declared repetition/cohort schedule; not executed."
+  },
+  "original_twenty_replications": {
+    "status": "NOT_RUN",
+    "replications_per_cell": 20,
+    "description": "The original 45-layout/540-cell experiment with twenty replications was not executed."
+  },
+  "completed_runs": {
     "smoke-small": {
       "status": "PASS",
-      "unique_trajectories": 400,
-      "complete_shards": 16,
-      "fingerprint": "be005c10c7f4977117b88d5fe57408d5a45cc0b59b46df2e2a9bba1b22da9c93",
-      "figures": 27,
-      "figure_artifacts": 81,
-      "figure_formats": {
-        "png": 27,
+      "results_directory": "smoke-small",
+      "producer_profile": "smoke-small",
+      "paths": 400,
+      "worlds": 16,
+      "layouts": 2,
+      "cells": 4,
+      "replications_per_cell": 4,
+      "methods": 25,
+      "actual_horizons": [
+        1000
+      ],
+      "manifest_sha256": "e03b341f70c64b937ead6d4ac63dcbf33b7eb74592719de56c3ab1d2c489beb3",
+      "config_sha256": "8c237a6007f8d32eedc341eb8c9b0b64a0590b2c481f916c0cf3878135a12e50",
+      "endpoint_sha256": "8aae94e6b5a5d57e9be5bac54983ffcf74efaad6095777ab7d465af67962027e",
+      "scientific_flag_paths": {
+        "label_error": 0,
+        "coverage_error": 0,
+        "empty_intersection": 0
+      },
+      "all_scientific_failure_paths_retained": true,
+      "execution_failure_records": 0,
+      "figure_files_by_format": {
         "pdf": 27,
+        "png": 27,
         "svg": 27
       },
-      "manifest_sha256": "fbf96f4f380d9eaf50bdc4ba1bdaaab78ebab6ea38bc2821131fd084dd450081"
+      "figure_files_total": 81,
+      "scope": "Derived smoke verification",
+      "runtime_cache_provenance_sha256": "70438a692bd32ba7c681cee151da44bc19a672a9e8d00d2c0de4e0cafd0d9ebc"
     },
     "smoke-dense": {
       "status": "PASS",
-      "unique_trajectories": 160,
-      "complete_shards": 16,
-      "fingerprint": "0a6b656a21e043291ef41bcdb813a1a50520fa134a2d1f582d20cb96500587dd",
-      "figures": 24,
-      "figure_artifacts": 72,
-      "figure_formats": {
-        "png": 24,
+      "results_directory": "smoke-dense",
+      "producer_profile": "smoke-dense",
+      "paths": 160,
+      "worlds": 16,
+      "layouts": 2,
+      "cells": 4,
+      "replications_per_cell": 4,
+      "methods": 10,
+      "actual_horizons": [
+        800
+      ],
+      "manifest_sha256": "8b18daaa80ce59ba51531f6911c95264279130514b5c721dfa75b45074eaf611",
+      "config_sha256": "40f2e6b85db59efa565ab9cccbc4531620ae336802743ed0e1ca21ba56d55b7c",
+      "endpoint_sha256": "d118c451d181090a3853f61f9f410ab9c6271e95322433af6395dca637baaee5",
+      "scientific_flag_paths": {
+        "label_error": 0,
+        "coverage_error": 10,
+        "empty_intersection": 0
+      },
+      "all_scientific_failure_paths_retained": true,
+      "execution_failure_records": 0,
+      "figure_files_by_format": {
         "pdf": 24,
+        "png": 24,
         "svg": 24
       },
-      "manifest_sha256": "8086aae4df6ddad6efaf4131e515ffd2e2c77312754fbbcd010cc8754993a0a0"
+      "figure_files_total": 72,
+      "scope": "Derived smoke verification",
+      "runtime_cache_provenance_sha256": "ad4fc4746eb38bdfdc731d2bfeeac8e6d22ddb2574a57f0fc9a10acb14c7e606"
+    },
+    "screen-all": {
+      "status": "PASS",
+      "results_directory": "screen-all",
+      "producer_profile": "screen-all",
+      "paths": 79920,
+      "worlds": 2160,
+      "layouts": 45,
+      "cells": 540,
+      "replications_per_cell": 4,
+      "methods": 37,
+      "actual_horizons": [
+        400
+      ],
+      "manifest_sha256": "098efe718bbcd840682ae226019afad9d5de5277bcd4cc210cd9386f11fcae6d",
+      "config_sha256": "20ee5e892d067d43e4d442fa9d5412b2e6173cd2c3265111d5cc8be1954a9d3f",
+      "endpoint_sha256": "3abb7cedd1b41ab4fbe2eee199a38a5e1c50b5c4718ef6087d0e0b6b2f4a6f08",
+      "scientific_flag_paths": {
+        "label_error": 0,
+        "coverage_error": 206,
+        "empty_intersection": 0
+      },
+      "all_scientific_failure_paths_retained": true,
+      "execution_failure_records": 0,
+      "figure_files_by_format": {
+        "pdf": 103,
+        "png": 103,
+        "svg": 103
+      },
+      "figure_files_total": 309,
+      "scope": "Transformed T400 all-method screen; not the original full experiment",
+      "baseline_controls": 19,
+      "heatmap_numeric_cells": 304,
+      "primary_overall": "equal environmental cell",
+      "secondary_overall": "equal section, then equal cell",
+      "runtime_cache_provenance_sha256": "b508f04d23da905671bf7572e36992cec7ccfcbf95af37cc2f60383ca5dea74e"
+    },
+    "parameter-check/original-validation": {
+      "status": "PASS",
+      "results_directory": "parameter-check/original-validation",
+      "producer_profile": "parameter-original-validation",
+      "paths": 4608,
+      "worlds": 768,
+      "layouts": 24,
+      "cells": 384,
+      "replications_per_cell": 2,
+      "methods": 6,
+      "actual_horizons": [
+        8000,
+        9000,
+        10000,
+        12000,
+        14000,
+        15000,
+        16000
+      ],
+      "manifest_sha256": "2ce70a4f149fb34be761b94f0a4c5473293b8eb5b458f3d7cf8d9eb50ce9fbac",
+      "config_sha256": "c26288ca482efc9a427050052d43f9e1aa588e7fe66f44176e739bd0be58fc2f",
+      "endpoint_sha256": "0770d6dda7ee2bc044ba2041c63589c52a39b8aa07736ceab813b949addaf344",
+      "scientific_flag_paths": {
+        "label_error": 0,
+        "coverage_error": 15,
+        "empty_intersection": 0
+      },
+      "all_scientific_failure_paths_retained": true,
+      "execution_failure_records": 0,
+      "figure_files_by_format": {
+        "pdf": 2,
+        "png": 2,
+        "svg": 2
+      },
+      "figure_files_total": 6,
+      "scope": "Exploratory frozen-parameter validation; original horizons",
+      "primary_comparison_family_size": 8,
+      "parameter_candidates": 2
+    },
+    "parameter-check/scaled-validation": {
+      "status": "PASS",
+      "results_directory": "parameter-check/scaled-validation",
+      "producer_profile": "parameter-scaled-validation",
+      "paths": 12960,
+      "worlds": 2160,
+      "layouts": 45,
+      "cells": 540,
+      "replications_per_cell": 4,
+      "methods": 6,
+      "actual_horizons": [
+        400
+      ],
+      "manifest_sha256": "8ab481dce7cc18d0c4ba249c8fe4bd0936b68ddf2ce24e08cb2fcb9fdcffebf4",
+      "config_sha256": "ada48ff61618fa89cc066bfcb90f6045b2edb4798ee768f0d16fbab4f4f02c1a",
+      "endpoint_sha256": "66c18202b6b29897eb5cfba5ccabfb7f4c138e5755ca8219392fb0123deb54ef",
+      "scientific_flag_paths": {
+        "label_error": 0,
+        "coverage_error": 18,
+        "empty_intersection": 0
+      },
+      "all_scientific_failure_paths_retained": true,
+      "execution_failure_records": 0,
+      "figure_files_by_format": {
+        "pdf": 2,
+        "png": 2,
+        "svg": 2
+      },
+      "figure_files_total": 6,
+      "scope": "Exploratory frozen-parameter validation; transformed T400 layouts",
+      "primary_comparison_family_size": 8,
+      "parameter_candidates": 2
     }
   },
-  "scaled_screening": {
-    "status": "PASS",
-    "unique_trajectories": 79920,
-    "complete_shards": 2160,
-    "fingerprint": "01ed15e1aa0a7e39b57abd466a9bb7dde21ed3b0fd442e63516c17a9589ca7d8",
-    "figures": 1,
-    "figure_artifacts": 3,
-    "figure_formats": {
-      "png": 1,
-      "pdf": 1,
-      "svg": 1
-    },
-    "manifest_sha256": "bfb1886c4b2927240845aa649defb0dddceffed8f4069fb31db10edc37b43961",
-    "profile": "screen-all",
-    "source_layouts": 45,
-    "cells": 540,
-    "methods": 37,
-    "baseline_count": 19,
-    "paired_repetitions": 4,
-    "horizon": 400
-  },
-  "comparator_scope_revision": {
-    "excluded_methods": [
-      "BL-MOSS-b0.5",
-      "BL-MOSS-b1",
-      "BL-MOSS-b2"
-    ],
-    "baseline_count": 19,
-    "reward_method_count": 21,
-    "total_method_count": 37,
-    "basis": "User-specified comparator suitability: prefix admission may ignore later optimal arms and allow linear dynamic regret.",
-    "other_parameters_preserved": true,
-    "results_regenerated_by_simulation": true
-  },
-  "interpretation": "Only smoke and scaled screening have run. Original-size formal experiments, including the proposed 20-repetition batch, have not started."
+  "source_input_file_count": 20,
+  "source_cache_fingerprint": "26e0717d534827b6184252f983f0ceb736cbf719228e223f8c09bf415778e72a",
+  "current_method_configurations": 37,
+  "baseline_configurations": 19,
+  "removed_BL_MOSS_configurations": 3,
+  "all_failed_scientific_paths_retained": true,
+  "formal_default_promoted": false,
+  "parameter_original_primary_significant_count": 3,
+  "parameter_original_primary_comparisons_per_candidate": 4,
+  "parameter_original_no_all_four_superiority_claim": true,
+  "audit_reports_directory": "validation",
+  "validation_record": "VALIDATION.json",
+  "limitations": [
+    "The 79,920-path canonical screen and scaled parameter check use transformed T400 environments; they do not replace original full-size experiments.",
+    "Original parameter validation has two paired replications per fixed environment. Monte Carlo intervals are conditional on that fixed matrix.",
+    "Cap-only has three of four original primary difference intervals strictly below zero; the F17 versus Empirical-KL-UCB adjusted interval crosses zero.",
+    "No simultaneous four-comparison superiority or universal method dominance is claimed.",
+    "The c=1 selected candidate and IMED have identical action hashes and regret on every original and scaled validation path.",
+    "Canonical runtime cache supplements were reconstructed after execution from retained launch commands and source policy; they are not worker-emitted binary attestations.",
+    "Both prior v1/v2 studies are invalidated and excluded; development grid raw data are not installed as final result datasets."
+  ]
 }

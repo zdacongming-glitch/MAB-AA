@@ -1,0 +1,5 @@
+cohort,group,size_label,horizons,arm_counts,layouts,cells
+parameter_v3_scaled_validation,adaptive,reduced or modified horizon/arm set,400,2;3;6;7;12;14;16;18;24;28,12,192
+parameter_v3_scaled_validation,dense,reduced or modified horizon/arm set,400,20;30;40;80,18,144
+parameter_v3_scaled_validation,f17,reduced or modified horizon/arm set,400,2;3;8;9;10;11;13;14;20,12,192
+parameter_v3_scaled_validation,scale,reduced or modified horizon/arm set,400,100,3,12

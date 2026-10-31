@@ -1,0 +1,165 @@
+{
+  "study_revision": "final-v3",
+  "prior_study_invalidated": {
+    "results_imported": false,
+    "scientific_status": "both prior studies invalidated; diagnostic evidence only",
+    "studies": [
+      {
+        "path": "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\src_kl_parameter_study",
+        "reason": "Incorrect score-pruning incumbent, absolute mean tolerance in D_inf, and inverse endpoint rounding could change allocated actions.",
+        "revision": "v1"
+      },
+      {
+        "path": "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\src_kl_parameter_study_corrected",
+        "reason": "A transitive Numba machine-code cache embedded the obsolete D_inf gate despite corrected Python source; all v2 scientific results are invalidated.",
+        "revision": "v2"
+      }
+    ]
+  },
+  "numerical_correctness_fixes": [
+    "Feasible score pruning starts from an actually evaluated legal incumbent.",
+    "D_inf does not replace distinct empirical means using an absolute tolerance.",
+    "Empirical-KL inverse endpoints preserve numerical feasibility and ordering near one."
+  ],
+  "runtime_cache": {
+    "cache_root": "\\\\?\\D:\\博士学习\\科研\\git\\MAB-AA\\.numba-cache",
+    "effective_cache_dir": "\\\\?\\D:\\博士学习\\科研\\git\\MAB-AA\\.numba-cache\\srcbench-26e0717d534827b6184252f983f0ceb736cbf719228e223f8c09bf415778e72a",
+    "numba_version": "0.59.0",
+    "python_cache_tag": "cpython-311",
+    "source_fingerprint": "26e0717d534827b6184252f983f0ceb736cbf719228e223f8c09bf415778e72a",
+    "strategy": "package-source-hash-isolated-Numba-cache"
+  },
+  "source_change_scope": "Formal numerical correctness repairs plus source-fingerprinted runtime cache isolation; no allocation-structure change or tuning-driven default promotion.",
+  "formal_default_promoted": false,
+  "input_directory": "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\src_kl_parameter_study_final\\original-validation",
+  "study_phase": "original-validation",
+  "input_sha256": {
+    "config.json": "c26288ca482efc9a427050052d43f9e1aa588e7fe66f44176e739bd0be58fc2f",
+    "runs.csv.gz": "0770d6dda7ee2bc044ba2041c63589c52a39b8aa07736ceab813b949addaf344"
+  },
+  "analyzer_sha256": "784e68c9282b24c931a26d2b85c05ebdfd9d420f33ea73aa8b4ac727af1fb445",
+  "phase_one_analyzer_sha256": "bf266c1a4b2269dd15348450f73a89e0425d08c7598f64503d1ba589a518cfcc",
+  "paths": 4608,
+  "environmental_cells": 384,
+  "cap_candidates": [
+    "SRC-KL-a8192-c0p5-b32",
+    "SRC-KL-a8192-c1-b32"
+  ],
+  "primary_candidates": [
+    "SRC-KL-a8192-c0p5-b32",
+    "SRC-KL-a8192-c1-b32"
+  ],
+  "varied_parameters": [
+    "cap_multiplier",
+    "log_coefficient",
+    "beta_r"
+  ],
+  "candidate_specifications": [
+    {
+      "method": "SRC-KL-a8192-c0p5-b32",
+      "role": "cap_candidate",
+      "cap_multiplier": 8192.0,
+      "log_coefficient": 0.5,
+      "beta_r": 32.0,
+      "preference": 0.0,
+      "family": "src_kl",
+      "params_json": "{\"backlog_scale\": 4.0, \"cap_multiplier\": 8192.0, \"log_coefficient\": 0.5, \"nu\": 0.02, \"rate_floor\": 0.02, \"relevance_floor\": 0.02}"
+    },
+    {
+      "method": "SRC-KL-a8192-c1-b32",
+      "role": "cap_candidate",
+      "cap_multiplier": 8192.0,
+      "log_coefficient": 1.0,
+      "beta_r": 32.0,
+      "preference": 0.0,
+      "family": "src_kl",
+      "params_json": "{\"backlog_scale\": 4.0, \"cap_multiplier\": 8192.0, \"log_coefficient\": 1.0, \"nu\": 0.02, \"rate_floor\": 0.02, \"relevance_floor\": 0.02}"
+    }
+  ],
+  "diagnostic_methods": [],
+  "primary_groups": [
+    "f17",
+    "adaptive"
+  ],
+  "primary_references": [
+    "IMED",
+    "Empirical-KL-UCB"
+  ],
+  "primary_family_size": 8,
+  "primary_confidence_rule": "Bonferroni four times the actual number of source primary candidates; beta-zero is excluded",
+  "pairing": "exact cohort/group/layout/law/rep keys; no new repetitions created by joining candidate files",
+  "aggregation": "equal weight per environmental cell, using actual matched repetitions",
+  "difference_interval": "paired stratified t with Satterthwaite degrees of freedom; n=2 supported",
+  "percent_interval": "paired ratio delta method with covariance; zero denominator is undefined",
+  "secondary_comparisons": "SRC-R, SRC-KL-R and beta-zero diagnostic use nominal intervals",
+  "parameter_selection": "none; the frozen driver alone applies its prespecified global selection rule",
+  "development_provenance": "Separate stage; source identities are retained in config",
+  "reused_source_runs": [],
+  "score_contract": "c is an explicitly varied fixed constant; figures do not identify it with the original c=.5 definition",
+  "scope": [
+    {
+      "cohort": "parameter_v3_original_validation",
+      "group": "adaptive",
+      "size_label": "original horizon values; arm provenance retained in config",
+      "horizons": [
+        8000,
+        9000,
+        10000,
+        12000,
+        14000,
+        15000,
+        16000
+      ],
+      "arm_counts": [
+        2,
+        3,
+        6,
+        7,
+        12,
+        14,
+        16,
+        18,
+        24,
+        28
+      ],
+      "layouts": 12,
+      "cells": 192
+    },
+    {
+      "cohort": "parameter_v3_original_validation",
+      "group": "f17",
+      "size_label": "original horizon values; arm provenance retained in config",
+      "horizons": [
+        12000,
+        14000,
+        16000
+      ],
+      "arm_counts": [
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        20
+      ],
+      "layouts": 12,
+      "cells": 192
+    }
+  ],
+  "figures": [
+    "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\src_kl_parameter_study_final\\original-validation\\parameter_analysis\\refinement_dots_parameter_v3_original_validation.pdf",
+    "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\src_kl_parameter_study_final\\original-validation\\parameter_analysis\\refinement_dots_parameter_v3_original_validation.png",
+    "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\src_kl_parameter_study_final\\original-validation\\parameter_analysis\\refinement_dots_parameter_v3_original_validation.svg",
+    "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\src_kl_parameter_study_final\\original-validation\\parameter_analysis\\refinement_comparison_parameter_v3_original_validation.pdf",
+    "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\src_kl_parameter_study_final\\original-validation\\parameter_analysis\\refinement_comparison_parameter_v3_original_validation.png",
+    "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\src_kl_parameter_study_final\\original-validation\\parameter_analysis\\refinement_comparison_parameter_v3_original_validation.svg"
+  ],
+  "failure_paths": {
+    "label_error": 0,
+    "coverage_error": 15,
+    "empty_intersection": 0
+  }
+}

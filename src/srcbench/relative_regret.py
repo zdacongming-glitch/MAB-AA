@@ -75,21 +75,24 @@ def _cell_weights(cells, balanced=False):
 def _estimate(cells, balanced=False):
     """Paired, stratified ratio delta method retaining numerator covariance."""
     weights = _cell_weights(cells, balanced)
-    candidate = sum(weights[key]*mean(value["candidate"]) for key, value in cells.items())
-    comparator = sum(weights[key]*mean(value["comparator"]) for key, value in cells.items())
-    difference = candidate-comparator
-    ratio = candidate/comparator if comparator > 0 else None
-    percent = 100*(ratio-1) if ratio is not None else None
+    candidate = math.fsum(weights[key]*mean(value["candidate"]) for key, value in cells.items())
+    comparator = math.fsum(weights[key]*mean(value["comparator"]) for key, value in cells.items())
+    # Center each paired world before aggregating. Macro-mean subtraction can
+    # erase a small paired change or create an ulp-sized change and false CI.
+    difference = math.fsum(weights[key]*mean(a-b for a, b in zip(value["candidate"], value["comparator"]))
+                           for key, value in cells.items())
+    relative_difference = difference/comparator if comparator > 0 else None
+    percent = 100*relative_difference if relative_difference is not None else None
     difference_terms, ratio_terms = [], []
     for key, cell in cells.items():
         pairs = list(zip(cell["candidate"], cell["comparator"]))
         n, w = len(pairs), weights[key]
         diff = [a-b for a, b in pairs]
         difference_terms.append((w*w*variance(diff)/n if n > 1 else None, n))
-        if ratio is not None:
-            # At the macro ratio, these influence values include the paired
-            # numerator/denominator covariance without subtractive cancellation.
-            influence = [100/comparator*(a-ratio*b) for a, b in pairs]
+        if relative_difference is not None:
+            # This centered form retains the paired numerator/denominator
+            # covariance even when 1 + relative_difference rounds to one.
+            influence = [100/comparator*((a-b)-relative_difference*b) for a, b in pairs]
             ratio_terms.append((w*w*variance(influence)/n if n > 1 else None, n))
     dse, dlo, dhi, ddf = _interval(difference, difference_terms)
     pse, plo, phi, pdf = _interval(percent, ratio_terms) if percent is not None else (None, None, None, None)

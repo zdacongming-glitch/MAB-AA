@@ -1,0 +1,13 @@
+cohort,group,method,role,cap_multiplier,log_coefficient,beta_r,cells,paths,guard_changed_fraction,action_hash_match_fraction_SRC_R
+parameter_v3_original_validation,adaptive,Empirical-KL-UCB,reference,1.0,0.5,,192,384,0.0,0
+parameter_v3_original_validation,adaptive,IMED,reference,1.0,1.0,,192,384,0.0,0
+parameter_v3_original_validation,adaptive,SRC-KL-R,reference,1.0,0.5,32.0,192,384,0.35186540230241403,0
+parameter_v3_original_validation,adaptive,SRC-KL-a8192-c0p5-b32,cap_candidate,8192.0,0.5,32.0,192,384,0.0,1
+parameter_v3_original_validation,adaptive,SRC-KL-a8192-c1-b32,cap_candidate,8192.0,1.0,32.0,192,384,0.0,0
+parameter_v3_original_validation,adaptive,SRC-R,reference,1.0,0.5,32.0,192,384,0.0,1
+parameter_v3_original_validation,f17,Empirical-KL-UCB,reference,1.0,0.5,,192,384,0.0,0
+parameter_v3_original_validation,f17,IMED,reference,1.0,1.0,,192,384,0.0,0.0026041666666666665
+parameter_v3_original_validation,f17,SRC-KL-R,reference,1.0,0.5,32.0,192,384,0.17425074404761906,0
+parameter_v3_original_validation,f17,SRC-KL-a8192-c0p5-b32,cap_candidate,8192.0,0.5,32.0,192,384,8.637152777777778e-05,0.9921875
+parameter_v3_original_validation,f17,SRC-KL-a8192-c1-b32,cap_candidate,8192.0,1.0,32.0,192,384,0.0,0.0026041666666666665
+parameter_v3_original_validation,f17,SRC-R,reference,1.0,0.5,32.0,192,384,8.637152777777778e-05,1

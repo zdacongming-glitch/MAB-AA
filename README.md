@@ -4,11 +4,13 @@
 
 **完整原规模正式矩阵尚未运行。** 仓库提供两套流程试跑，以及覆盖全部 setting 的缩小预研究入口；缩小后的比较不能代替原规模实验。完整正式入口覆盖 374,496 条唯一轨迹，包含独立尾部研究；复用的奖励端点只执行、计数一次。
 
-本目录只发布最终版本，不保留旧开发代码、调参材料、历史结果或 H8/H16 候选。正常 Git 历史保留，精简来源记录在 `configs/provenance.json`。运行不依赖相邻 `proposal`、Overleaf、WSL 或 C++ 编译器。
+本目录发布最终实现、冻结实验配置、分析程序和有效结果；参数检查只保留两个最终候选的验证产物。正常 Git 历史保留，精简来源记录在 `configs/provenance.json`。运行不依赖相邻 `proposal`、Overleaf、WSL 或 C++ 编译器。
 
 ## 本机试跑
 
 使用 Python 3.11；已在原生 Windows、Python 3.11.7 验证。首次运行包含 Numba 编译。
+
+Numba 缓存按包内源码、Numba 版本和 Python cache tag 的指纹隔离；spawn 子进程沿用同一缓存命名空间，无需手动清理旧缓存。
 
 ```powershell
 python -m pip install -r requirements.txt
@@ -40,9 +42,20 @@ python run_main.py run --profile screen-all --output _runs/screen-all --workers 
 
 该 profile 为 45 个来源布局 × 对应分布，共 540 cells；T=400、每单元 4 次配对重复，全部 37 个配置，共 79,920 条轨迹。输出 `relative_regret/report.html` 与两种 SRC 对 19 baseline 的相对 regret 热图。原/实际臂数、配对百分比与统计解释见 [SCREENING.md](docs/SCREENING.md)。
 
-本次结果已全部完成：[实际结论](results/screen-all/relative_regret/RESULTS.md)、[完整单元表](results/screen-all/relative_regret/all_cell_methods.csv)、[百分比表](results/screen-all/relative_regret/percent_matrix.csv)。全部 cells 等权时，相对 IMED，SRC-R / SRC-KL-R 的平均 regret 分别降低 23.1% / 4.5%；KL 相对原 SRC 的改善主要出现在高密度与 scale，不能解释成处处更好。
+本轮已在当前数值核及隔离缓存下重新跑完并通过独立核验。单元等权总体上，SRC-R 与默认 SRC-KL-R 相对 IMED 的平均 regret 分别降低 22.4% 和 4.5%；来源组等权的敏感性摘要也全部保留。各组有明显差异，不能把总体平均看成每个 setting 的优势。完整结论见[实际结论](results/screen-all/relative_regret/RESULTS.md)、[完整单元表](results/screen-all/relative_regret/all_cell_methods.csv)、[百分比表](results/screen-all/relative_regret/percent_matrix.csv)。
 
-![全部 setting 缩小研究的相对 regret 热图](results/screen-all/relative_regret/relative_regret_screen.png)
+![两种默认算法对19个baseline的相对regret](results/screen-all/relative_regret/relative_regret_screen.png)
+
+## SRC-KL 固定参数检查
+
+另外完成了 F17/adaptive 全部 384 个原尺寸组合、每单元 2 次配对重复的两个固定参数候选验证，以及全部 540 个派生组合的 4 次重复压力检查。只把奖励上限系数改为 8192、保留评分系数 0.5，原尺寸 F17/adaptive 相对 IMED 的平均 regret 降低 34.1%/31.5%。四个主要 baseline 比较中三项校正区间低于 0；F17/Empirical-KL-UCB 尚不能确认。该配置表现接近原 SRC，并非 KL 机制独有收益；没有替换默认算法或运行原尺寸 20 次正式批次。详见[参数检查结论与区间](results/parameter-check/RESULTS.md)。
+
+```powershell
+python replay_parameter_check.py run --stage original --output _runs/parameter-original --workers 16 --analyze
+python replay_parameter_check.py run --stage scaled --output _runs/parameter-scaled --workers 4 --analyze
+```
+
+入口只依赖本仓库的最终配置与代码，可用 `--resume` 续跑，或 `python replay_parameter_check.py analyze OUTPUT` 单独分析。
 
 ## 完整原规模主实验
 
@@ -74,5 +87,7 @@ python run_main.py verify results/smoke-small --check-current
 python run_main.py analyze _runs/my-small
 python run_main.py plot _runs/my-small
 ```
+
+当前测试集已通过 170 项测试，包含接近 1 的实际支持点边界、奖励评分的合法剪枝上界、有限预算指数反演的可行下端点、源码与进程缓存隔离，以及冻结参数配置的重放、分析和续跑。数值核细节见[算法说明](docs/ALGORITHMS.md)。
 
 在线 API 为 `Policy.choose(new_arms)`、`observe(reward)`、`report()`；示例见 [ALGORITHMS.md](docs/ALGORITHMS.md)。配对、统计、输出和续跑规则见 [EXPERIMENTS.md](docs/EXPERIMENTS.md)。全部科学失败路径保留；执行异常单独记录，不能视为零成本或从完整结果中悄悄剔除。

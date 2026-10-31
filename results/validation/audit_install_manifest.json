@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-01",
+  "destination_root": "results",
+  "entries": [
+    {
+      "source": "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_raw_verification.json",
+      "destination": "validation/official_raw_verification.json",
+      "sha256": "35923cc7bdb8cfce519147cf0725e1a67baca5380ed04d878d5686b32383d0f7",
+      "bytes": 47063,
+      "purpose": "Three canonical raw/config/task/shard and source snapshot checks"
+    },
+    {
+      "source": "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_derived_verification.json",
+      "destination": "validation/official_derived_verification.json",
+      "sha256": "c4fee0f18b57deb590777a9c40f6dd76bddee548c075dcc533016ff63bd1b1bb",
+      "bytes": 2264,
+      "purpose": "Canonical heatmap, intervals, weighting and retained flags"
+    },
+    {
+      "source": "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_heatmap_recalculated.csv",
+      "destination": "validation/official_heatmap_recalculated.csv",
+      "sha256": "809884a3f7aeaa3e32b94d7fefdc2c15a29a1849e58498026943c07364f70f18",
+      "bytes": 83483,
+      "purpose": "Independent recalculation of all 304 heatmap records"
+    },
+    {
+      "source": "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\src_kl_parameter_study_final\\independent_verification\\final_original_validation_scientific_verification.json",
+      "destination": "validation/parameter_original_validation_verification.json",
+      "sha256": "d6cba73fa586db32db32710c5ba413312ca27b31e89d71ff8b78fbd8246aed19",
+      "bytes": 23884,
+      "purpose": "Original-horizon frozen-parameter inference and hash/cache diagnostics"
+    },
+    {
+      "source": "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\src_kl_parameter_study_final\\independent_verification\\completed_scaled_validation_verification.json",
+      "destination": "validation/parameter_scaled_validation_verification.json",
+      "sha256": "10f83632aca8e4faf367a60e90f1bb1d4e49889a76fe7afca24385c10d8930ae",
+      "bytes": 29037,
+      "purpose": "Scaled frozen-parameter inference and hash/cache diagnostics"
+    },
+    {
+      "source": "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\src_kl_parameter_study_final\\independent_verification\\all_stages_verification.json",
+      "destination": "validation/parameter_study_full_verification.json",
+      "sha256": "0ec0ecf1039c8319ebb730897a3a74b47033fa1a0674e69f0629c3e862567df1",
+      "bytes": 6498,
+      "purpose": "All-stage source/driver/selection/pairing/interval/seen-complement audit summary"
+    },
+    {
+      "source": "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\src_kl_parameter_study_final\\static_source_cache_verification.json",
+      "destination": "validation/source_cache_static_verification.json",
+      "sha256": "a06bb902a1af9c5111f1f93c2ac990a8564f4ced66bec9a864eb1b27fdf9c46b",
+      "bytes": 1839,
+      "purpose": "Source-hash-isolated cache API and frozen driver contract"
+    },
+    {
+      "source": "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\src_kl_parameter_study_final\\staging_checks\\installation_primary_artifact_checks.json",
+      "destination": "validation/installation_primary_artifact_checks.json",
+      "sha256": "2412f6775a97c715a0f0dc00617f7e010aac461eefbe8dbc5b2807588e589dda",
+      "bytes": 5535,
+      "purpose": "Copied primary artifacts equal the final producer files"
+    }
+  ],
+  "excluded": "No v1/v2 reports or raw rows, and no development grid raw data are included."
+}

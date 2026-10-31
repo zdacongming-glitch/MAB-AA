@@ -1,131 +1,745 @@
 {
-  "status": "PASS",
-  "tests_passed": 107,
-  "commands": [
-    "python -m pytest -q",
-    "python run_main.py verify results/smoke-small --check-current",
-    "python run_main.py verify results/smoke-dense --check-current",
-    "python run_main.py verify results/screen-all --check-current"
-  ],
-  "candidate_algorithm_unchanged_from_commit": "0a19f9525bfdd905dfecf23be390dd3a349d6dfb",
-  "candidate_algorithm_sha256": {
-    "src/srcbench/policy.py": "adbefa00e3b8f92e5a966a1a9b10049b24625f371b10b2344dcf4ac63d200bf3",
-    "src/srcbench/mathcore.py": "5f04d00937a79b1b7efaab4403eb3f899e86fecc68f86fd61fabdf8d2c1e3923"
+  "schema_version": 2,
+  "date": "2026-11-01",
+  "status": "PASS_FOR_LISTED_CHECKS",
+  "tests": {
+    "status": "PASS",
+    "passed": 170,
+    "scope": "Final-source repository tests",
+    "evidence": "Final test result retained by the root agent; no endpoint or old-commit identity inference is attached."
   },
-  "markdown_formula_delimiters": "PASS",
-  "screen_shape_and_pairing": "PASS",
-  "independent_pandas_percent_recalculation": {
-    "unique_trajectories": 79920,
-    "methods": 37,
-    "baselines": 19,
-    "environmental_cells": 540,
-    "cell_method_rows": 19980,
-    "paired_environment_comparisons": 20520,
-    "checked_matrix_cells": 304,
-    "max_absolute_percentage_discrepancy": 1.5276668818842154e-13,
-    "all_cell_regret_means_match": true,
-    "both_wide_matrices_match": true,
-    "all_failure_paths_included": true
-  },
-  "endpoint_invariance_to_previous_commit": {
-    "smoke-small": {
-      "previous_commit": "0a19f9525bfdd905dfecf23be390dd3a349d6dfb",
-      "count": 400,
-      "endpoint_sha256_excluding_runtime": "840f0cd50ff503f59955f9b54af6fdac8d71fef467313b5c378a2439342378ac",
-      "pre_removal_numerical_endpoints_identical": true,
-      "manifest_sha256": "fbf96f4f380d9eaf50bdc4ba1bdaaab78ebab6ea38bc2821131fd084dd450081",
-      "config_sha256": "be005c10c7f4977117b88d5fe57408d5a45cc0b59b46df2e2a9bba1b22da9c93"
-    },
-    "smoke-dense": {
-      "previous_commit": "0a19f9525bfdd905dfecf23be390dd3a349d6dfb",
-      "count": 160,
-      "endpoint_sha256_excluding_runtime": "f06871192c108b6e376c95d5a976fa9aa6a71a768a71bceceb49ead653f22e80",
-      "pre_removal_numerical_endpoints_identical": true,
-      "manifest_sha256": "8086aae4df6ddad6efaf4131e515ffd2e2c77312754fbbcd010cc8754993a0a0",
-      "config_sha256": "0a6b656a21e043291ef41bcdb813a1a50520fa134a2d1f582d20cb96500587dd"
-    },
-    "screen-all": {
-      "previous_commit": "0a19f9525bfdd905dfecf23be390dd3a349d6dfb",
-      "count": 79920,
-      "endpoint_sha256_excluding_runtime": "1c4b8c25eedba1a928379c341f53e073201893e86f49d1ab4c76904ccbc2e8f2",
-      "pre_removal_numerical_endpoints_identical": true,
-      "manifest_sha256": "bfb1886c4b2927240845aa649defb0dddceffed8f4069fb31db10edc37b43961",
-      "config_sha256": "01ed15e1aa0a7e39b57abd466a9bb7dde21ed3b0fd442e63516c17a9589ca7d8"
+  "source_snapshot": {
+    "kind": "Twenty SHA256 input fingerprints, matched to frozen final-v3 plan",
+    "files": {
+      "configs/analysis_plan.json": "134b3a4cf864a9b9fded9ef052e646ba058cfb9194d4a1405b423be7f96de7f9",
+      "configs/layouts.json": "b6195271260e1f157b524f5b147ef09bedf3059f65cbbc7352b5c87b1d857ceb",
+      "configs/methods.json": "78bf00473cf5312e1e44734769489f03a4539deee200ee7df00c5c6e07ca0356",
+      "configs/protocol.json": "7fc08c95090efcb33547973697a2c7f54a7a27ef6e4947af1b0d4af7d26fffaf",
+      "configs/provenance.json": "4edfeb6d8653e6aa874fe846b17673a0958a2aa713c670ed00bb7e4f78a1b3c6",
+      "requirements.txt": "f8fd8c730954d601db8ecd645bcbf711a425abfbcd77913cd5997588ec958844",
+      "run_main.py": "8d0274a78ca768cbc128260096faa3e527c5399fd2e42171bf84043e10cde5c6",
+      "src/srcbench/__init__.py": "ca444d30064c05bb7036dba3eff8e43699dc6ef0067c384bc8cbf4202a5238a1",
+      "src/srcbench/_numba_cache.py": "0cc66316a80be7c29eaad96c8eeca107c42c3da20556708767149ffa3b13d086",
+      "src/srcbench/analysis.py": "19fbe22aad85f1bc8bd7529fd522a2f24c1b92bba066aeb9f7680fb10f671eb3",
+      "src/srcbench/baselines.py": "bc863e0e821fd741a9fdc9329d6314fc75720ce2ef311b750fb0cc271e218e73",
+      "src/srcbench/design.py": "b9acd2e65fa9199c7fa7253c3d3d1dad65b81d1c6c3889d7bcdf39b97fc28e3b",
+      "src/srcbench/environment.py": "ac5a45021aa45d0573ffa9139eb0a555c889fc27ceaee48fe8bced512e16d2bf",
+      "src/srcbench/mathcore.py": "4ecc2dca288296f8e504fe086b675d5c3cc7fdefb6883acff9d2516089d07f74",
+      "src/srcbench/methods.py": "8f0b8ecc08e66cc1df82f49de715e01e4d2e280e31b3b9d334b9ce67dac156bb",
+      "src/srcbench/plotting.py": "c95db15aec3303f43708dd49dda8be0231814cd48d029d9e437038860d375677",
+      "src/srcbench/policy.py": "adbefa00e3b8f92e5a966a1a9b10049b24625f371b10b2344dcf4ac63d200bf3",
+      "src/srcbench/relative_regret.py": "e7056a216e3ab02584168c8c739bdf9d6e35e71e66facd7cccfbee2bb6a56338",
+      "src/srcbench/runner.py": "9d7a9a65a61709e2c691188f5a0dd387ce677b202084bfef2048f2971177c473",
+      "src/srcbench/simulation.py": "f1965d301f775e4afea9e76c4653dc2dacd6081fe597bc06d152209918e92592"
     }
   },
-  "independent_validation_script_sha256": "0c8a10dd46134eaabc2422f936c6f53eb8ff8ebd8cea4eb0a6df2767481df1fb",
-  "independent_validation_sha256": "39797b44fac05f159017b585fec2e8eb0fa7248eb646a1dea721a3fd53ad52ec",
-  "execution_recovery": {
-    "report": "screen-all/execution_recovery.json",
-    "initial_workers": 16,
-    "shard_hashes_identical": true,
-    "completed_shards": 2160,
-    "resimulated_shards": 0
+  "runtime_cache": {
+    "cache_root": "\\\\?\\D:\\博士学习\\科研\\git\\MAB-AA\\.numba-cache",
+    "effective_cache_dir": "\\\\?\\D:\\博士学习\\科研\\git\\MAB-AA\\.numba-cache\\srcbench-26e0717d534827b6184252f983f0ceb736cbf719228e223f8c09bf415778e72a",
+    "numba_version": "0.59.0",
+    "python_cache_tag": "cpython-311",
+    "source_fingerprint": "26e0717d534827b6184252f983f0ceb736cbf719228e223f8c09bf415778e72a",
+    "strategy": "package-source-hash-isolated-Numba-cache",
+    "parameter_task_records_checked": 3216,
+    "parameter_task_metadata_matches_plan_and_current_API": true,
+    "canonical_supplement_kind": "retained-launch-command+source-policy reconstruction",
+    "canonical_supplements_generated_after_run": true,
+    "worker_binary_attestation": false
   },
-  "scientific_failure_paths_dropped": 0,
-  "full_study_executed": false,
-  "comparator_scope_revision": {
-    "excluded_methods": [
-      "BL-MOSS-b0.5",
-      "BL-MOSS-b1",
-      "BL-MOSS-b2"
-    ],
-    "baseline_count": 19,
-    "reward_method_count": 21,
-    "total_method_count": 37,
-    "basis": "User-specified comparator suitability: prefix admission may ignore later optimal arms and allow linear dynamic regret.",
-    "other_parameters_preserved": true,
-    "results_regenerated_by_simulation": true
+  "frozen_study_drivers": {
+    "run_parameters.py": "0471e45ebda34b506629a7ef0671422095436db3d14b04421e3d19b04866ad6b",
+    "refine_parameters.py": "6b0fc030512b94b74fb3dfc93b1f2eb27baca32b0246b05a129db53368af8cd3",
+    "validate_parameters.py": "16ee5977e7005ecf3c68f5b5cb7be201bac89fd0e53834b2b248061ec924bb3e"
   },
-  "profiles": {
+  "study_plan_sha256": "ce28cb145b3eb96f004f214bb5628270f408d7470d1dd11816268d1ea7ff102f",
+  "refinement_plan_sha256": "cc7bb9c29c9d97f1b00531566fea7335ae255ccaa4898be27ac5ba541f93b2b7",
+  "validation_plan_sha256": "bef3c83fd27bbacde5a0102720efeb1fcede370987944c2dd9b68292d10f58ba",
+  "primary_family_size_per_validation": 8,
+  "no_validation_based_reselection": true,
+  "complete_pairing_verified": true,
+  "all_scientific_failure_paths_retained": true,
+  "original_context_split": {
+    "development_seen_cells": 48,
+    "complementary_cells": 336,
+    "selection_use": false,
+    "scope": "Complementary layout-law cells, not wholly unseen layouts; fresh validation reward seeds"
+  },
+  "completed_runs": {
     "smoke-small": {
       "status": "PASS",
-      "unique_trajectories": 400,
-      "complete_shards": 16,
-      "fingerprint": "be005c10c7f4977117b88d5fe57408d5a45cc0b59b46df2e2a9bba1b22da9c93",
-      "figures": 27,
-      "figure_artifacts": 81,
-      "figure_formats": {
-        "png": 27,
+      "results_directory": "smoke-small",
+      "producer_profile": "smoke-small",
+      "paths": 400,
+      "worlds": 16,
+      "layouts": 2,
+      "cells": 4,
+      "replications_per_cell": 4,
+      "methods": 25,
+      "actual_horizons": [
+        1000
+      ],
+      "manifest_sha256": "e03b341f70c64b937ead6d4ac63dcbf33b7eb74592719de56c3ab1d2c489beb3",
+      "config_sha256": "8c237a6007f8d32eedc341eb8c9b0b64a0590b2c481f916c0cf3878135a12e50",
+      "endpoint_sha256": "8aae94e6b5a5d57e9be5bac54983ffcf74efaad6095777ab7d465af67962027e",
+      "scientific_flag_paths": {
+        "label_error": 0,
+        "coverage_error": 0,
+        "empty_intersection": 0
+      },
+      "all_scientific_failure_paths_retained": true,
+      "execution_failure_records": 0,
+      "figure_files_by_format": {
         "pdf": 27,
+        "png": 27,
         "svg": 27
       },
-      "manifest_sha256": "fbf96f4f380d9eaf50bdc4ba1bdaaab78ebab6ea38bc2821131fd084dd450081"
+      "figure_files_total": 81,
+      "scope": "Derived smoke verification",
+      "runtime_cache_provenance_sha256": "70438a692bd32ba7c681cee151da44bc19a672a9e8d00d2c0de4e0cafd0d9ebc"
     },
     "smoke-dense": {
       "status": "PASS",
-      "unique_trajectories": 160,
-      "complete_shards": 16,
-      "fingerprint": "0a6b656a21e043291ef41bcdb813a1a50520fa134a2d1f582d20cb96500587dd",
-      "figures": 24,
-      "figure_artifacts": 72,
-      "figure_formats": {
-        "png": 24,
+      "results_directory": "smoke-dense",
+      "producer_profile": "smoke-dense",
+      "paths": 160,
+      "worlds": 16,
+      "layouts": 2,
+      "cells": 4,
+      "replications_per_cell": 4,
+      "methods": 10,
+      "actual_horizons": [
+        800
+      ],
+      "manifest_sha256": "8b18daaa80ce59ba51531f6911c95264279130514b5c721dfa75b45074eaf611",
+      "config_sha256": "40f2e6b85db59efa565ab9cccbc4531620ae336802743ed0e1ca21ba56d55b7c",
+      "endpoint_sha256": "d118c451d181090a3853f61f9f410ab9c6271e95322433af6395dca637baaee5",
+      "scientific_flag_paths": {
+        "label_error": 0,
+        "coverage_error": 10,
+        "empty_intersection": 0
+      },
+      "all_scientific_failure_paths_retained": true,
+      "execution_failure_records": 0,
+      "figure_files_by_format": {
         "pdf": 24,
+        "png": 24,
         "svg": 24
       },
-      "manifest_sha256": "8086aae4df6ddad6efaf4131e515ffd2e2c77312754fbbcd010cc8754993a0a0"
+      "figure_files_total": 72,
+      "scope": "Derived smoke verification",
+      "runtime_cache_provenance_sha256": "ad4fc4746eb38bdfdc731d2bfeeac8e6d22ddb2574a57f0fc9a10acb14c7e606"
     },
     "screen-all": {
       "status": "PASS",
-      "unique_trajectories": 79920,
-      "complete_shards": 2160,
-      "fingerprint": "01ed15e1aa0a7e39b57abd466a9bb7dde21ed3b0fd442e63516c17a9589ca7d8",
-      "figures": 1,
-      "figure_artifacts": 3,
-      "figure_formats": {
-        "png": 1,
-        "pdf": 1,
-        "svg": 1
+      "results_directory": "screen-all",
+      "producer_profile": "screen-all",
+      "paths": 79920,
+      "worlds": 2160,
+      "layouts": 45,
+      "cells": 540,
+      "replications_per_cell": 4,
+      "methods": 37,
+      "actual_horizons": [
+        400
+      ],
+      "manifest_sha256": "098efe718bbcd840682ae226019afad9d5de5277bcd4cc210cd9386f11fcae6d",
+      "config_sha256": "20ee5e892d067d43e4d442fa9d5412b2e6173cd2c3265111d5cc8be1954a9d3f",
+      "endpoint_sha256": "3abb7cedd1b41ab4fbe2eee199a38a5e1c50b5c4718ef6087d0e0b6b2f4a6f08",
+      "scientific_flag_paths": {
+        "label_error": 0,
+        "coverage_error": 206,
+        "empty_intersection": 0
       },
-      "manifest_sha256": "bfb1886c4b2927240845aa649defb0dddceffed8f4069fb31db10edc37b43961"
+      "all_scientific_failure_paths_retained": true,
+      "execution_failure_records": 0,
+      "figure_files_by_format": {
+        "pdf": 103,
+        "png": 103,
+        "svg": 103
+      },
+      "figure_files_total": 309,
+      "scope": "Transformed T400 all-method screen; not the original full experiment",
+      "baseline_controls": 19,
+      "heatmap_numeric_cells": 304,
+      "primary_overall": "equal environmental cell",
+      "secondary_overall": "equal section, then equal cell",
+      "runtime_cache_provenance_sha256": "b508f04d23da905671bf7572e36992cec7ccfcbf95af37cc2f60383ca5dea74e"
+    },
+    "parameter-check/original-validation": {
+      "status": "PASS",
+      "results_directory": "parameter-check/original-validation",
+      "producer_profile": "parameter-original-validation",
+      "paths": 4608,
+      "worlds": 768,
+      "layouts": 24,
+      "cells": 384,
+      "replications_per_cell": 2,
+      "methods": 6,
+      "actual_horizons": [
+        8000,
+        9000,
+        10000,
+        12000,
+        14000,
+        15000,
+        16000
+      ],
+      "manifest_sha256": "2ce70a4f149fb34be761b94f0a4c5473293b8eb5b458f3d7cf8d9eb50ce9fbac",
+      "config_sha256": "c26288ca482efc9a427050052d43f9e1aa588e7fe66f44176e739bd0be58fc2f",
+      "endpoint_sha256": "0770d6dda7ee2bc044ba2041c63589c52a39b8aa07736ceab813b949addaf344",
+      "scientific_flag_paths": {
+        "label_error": 0,
+        "coverage_error": 15,
+        "empty_intersection": 0
+      },
+      "all_scientific_failure_paths_retained": true,
+      "execution_failure_records": 0,
+      "figure_files_by_format": {
+        "pdf": 2,
+        "png": 2,
+        "svg": 2
+      },
+      "figure_files_total": 6,
+      "scope": "Exploratory frozen-parameter validation; original horizons",
+      "primary_comparison_family_size": 8,
+      "parameter_candidates": 2
+    },
+    "parameter-check/scaled-validation": {
+      "status": "PASS",
+      "results_directory": "parameter-check/scaled-validation",
+      "producer_profile": "parameter-scaled-validation",
+      "paths": 12960,
+      "worlds": 2160,
+      "layouts": 45,
+      "cells": 540,
+      "replications_per_cell": 4,
+      "methods": 6,
+      "actual_horizons": [
+        400
+      ],
+      "manifest_sha256": "8ab481dce7cc18d0c4ba249c8fe4bd0936b68ddf2ce24e08cb2fcb9fdcffebf4",
+      "config_sha256": "ada48ff61618fa89cc066bfcb90f6045b2edb4798ee768f0d16fbab4f4f02c1a",
+      "endpoint_sha256": "66c18202b6b29897eb5cfba5ccabfb7f4c138e5755ca8219392fb0123deb54ef",
+      "scientific_flag_paths": {
+        "label_error": 0,
+        "coverage_error": 18,
+        "empty_intersection": 0
+      },
+      "all_scientific_failure_paths_retained": true,
+      "execution_failure_records": 0,
+      "figure_files_by_format": {
+        "pdf": 2,
+        "png": 2,
+        "svg": 2
+      },
+      "figure_files_total": 6,
+      "scope": "Exploratory frozen-parameter validation; transformed T400 layouts",
+      "primary_comparison_family_size": 8,
+      "parameter_candidates": 2
     }
   },
-  "modified_markdown_files_checked": [
-    "README.md",
-    "docs/ALGORITHMS.md",
-    "docs/EXPERIMENTS.md",
-    "docs/SCREENING.md",
-    "results/screen-all/relative_regret/RESULTS.md"
+  "formal_full": {
+    "status": "NOT_RUN",
+    "configured_unique_paths": 374496,
+    "description": "Configured full protocol, including its declared repetition/cohort schedule; not executed."
+  },
+  "original_twenty_replications": {
+    "status": "NOT_RUN",
+    "replications_per_cell": 20,
+    "description": "The original 45-layout/540-cell experiment with twenty replications was not executed."
+  },
+  "original_parameter_primary_results": [
+    {
+      "cohort": "parameter_v3_original_validation",
+      "group": "f17",
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "comparator": "IMED",
+      "primary": true,
+      "family_size": 8,
+      "cells": 192,
+      "pairs": 384,
+      "candidate_regret": 23.67477083333345,
+      "comparator_regret": 35.93746093750018,
+      "regret_difference": -12.26269010416672,
+      "difference_mcse": 0.7455980113650971,
+      "difference_df": 4.437360801416933,
+      "difference_ci_low": -15.900590962354286,
+      "difference_ci_high": -8.624789245979155,
+      "difference_nominal_ci_low": -14.254764227499082,
+      "difference_nominal_ci_high": -10.27061598083436,
+      "mean_ratio": 0.6587769479459581,
+      "percent_change": -34.12230520540419,
+      "percent_mcse": 3.236431207585221,
+      "percent_df": 2.3466482029563456,
+      "percent_ci_low": -65.0522726172664,
+      "percent_ci_high": -3.1923377935419737,
+      "stage": "original-validation"
+    },
+    {
+      "cohort": "parameter_v3_original_validation",
+      "group": "adaptive",
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "comparator": "IMED",
+      "primary": true,
+      "family_size": 8,
+      "cells": 192,
+      "pairs": 384,
+      "candidate_regret": 37.78665104166711,
+      "comparator_regret": 55.1694505208334,
+      "regret_difference": -17.382799479166284,
+      "difference_mcse": 1.039547969691318,
+      "difference_df": 5.544887305819913,
+      "difference_ci_low": -21.8286412269278,
+      "difference_ci_high": -12.93695773140477,
+      "difference_nominal_ci_low": -19.97795812739652,
+      "difference_nominal_ci_high": -14.787640830936052,
+      "mean_ratio": 0.6849198367019789,
+      "percent_change": -31.508016329802118,
+      "percent_mcse": 1.836734047264884,
+      "percent_df": 5.553592190409471,
+      "percent_ci_low": -39.3568835049115,
+      "percent_ci_high": -23.659149154692727,
+      "stage": "original-validation"
+    },
+    {
+      "cohort": "parameter_v3_original_validation",
+      "group": "f17",
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "comparator": "Empirical-KL-UCB",
+      "primary": true,
+      "family_size": 8,
+      "cells": 192,
+      "pairs": 384,
+      "candidate_regret": 23.67477083333345,
+      "comparator_regret": 50.03729427083336,
+      "regret_difference": -26.362523437499902,
+      "difference_mcse": 2.7709486927802667,
+      "difference_df": 1.2183842431232763,
+      "difference_ci_low": -155.49386532669678,
+      "difference_ci_high": 102.76881845169696,
+      "difference_nominal_ci_low": -49.66146598292916,
+      "difference_nominal_ci_high": -3.0635808920706573,
+      "mean_ratio": 0.4731425065710124,
+      "percent_change": -52.68574934289876,
+      "percent_mcse": 5.471340095379124,
+      "percent_df": 1.170604044184856,
+      "percent_ci_low": -347.1770206182018,
+      "percent_ci_high": 241.8055219324043,
+      "stage": "original-validation"
+    },
+    {
+      "cohort": "parameter_v3_original_validation",
+      "group": "adaptive",
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "comparator": "Empirical-KL-UCB",
+      "primary": true,
+      "family_size": 8,
+      "cells": 192,
+      "pairs": 384,
+      "candidate_regret": 37.78665104166711,
+      "comparator_regret": 79.13878124999917,
+      "regret_difference": -41.352130208332056,
+      "difference_mcse": 1.2453369066947404,
+      "difference_df": 7.62622189022933,
+      "difference_ci_low": -46.00516905366276,
+      "difference_ci_high": -36.69909136300135,
+      "difference_nominal_ci_low": -44.24856733312616,
+      "difference_nominal_ci_high": -38.45569308353795,
+      "mean_ratio": 0.4774732494590635,
+      "percent_change": -52.25267505409364,
+      "percent_mcse": 1.406506367554316,
+      "percent_df": 7.57064949974268,
+      "percent_ci_low": -57.52131350787525,
+      "percent_ci_high": -46.98403660031204,
+      "stage": "original-validation"
+    },
+    {
+      "cohort": "parameter_v3_original_validation",
+      "group": "f17",
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "comparator": "IMED",
+      "primary": true,
+      "family_size": 8,
+      "cells": 192,
+      "pairs": 384,
+      "candidate_regret": 35.93746093750018,
+      "comparator_regret": 35.93746093750018,
+      "regret_difference": 0.0,
+      "difference_mcse": 0.0,
+      "difference_df": 192.0,
+      "difference_ci_low": 0.0,
+      "difference_ci_high": 0.0,
+      "difference_nominal_ci_low": 0.0,
+      "difference_nominal_ci_high": 0.0,
+      "mean_ratio": 1.0,
+      "percent_change": 0.0,
+      "percent_mcse": 0.0,
+      "percent_df": 192.0,
+      "percent_ci_low": 0.0,
+      "percent_ci_high": 0.0,
+      "stage": "original-validation"
+    },
+    {
+      "cohort": "parameter_v3_original_validation",
+      "group": "adaptive",
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "comparator": "IMED",
+      "primary": true,
+      "family_size": 8,
+      "cells": 192,
+      "pairs": 384,
+      "candidate_regret": 55.1694505208334,
+      "comparator_regret": 55.1694505208334,
+      "regret_difference": 0.0,
+      "difference_mcse": 0.0,
+      "difference_df": 192.0,
+      "difference_ci_low": 0.0,
+      "difference_ci_high": 0.0,
+      "difference_nominal_ci_low": 0.0,
+      "difference_nominal_ci_high": 0.0,
+      "mean_ratio": 1.0,
+      "percent_change": 0.0,
+      "percent_mcse": 0.0,
+      "percent_df": 192.0,
+      "percent_ci_low": 0.0,
+      "percent_ci_high": 0.0,
+      "stage": "original-validation"
+    },
+    {
+      "cohort": "parameter_v3_original_validation",
+      "group": "f17",
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "comparator": "Empirical-KL-UCB",
+      "primary": true,
+      "family_size": 8,
+      "cells": 192,
+      "pairs": 384,
+      "candidate_regret": 35.93746093750018,
+      "comparator_regret": 50.03729427083336,
+      "regret_difference": -14.099833333333187,
+      "difference_mcse": 2.628454764516768,
+      "difference_df": 1.0411238632073838,
+      "difference_ci_low": -238.9607118522444,
+      "difference_ci_high": 210.76104518557804,
+      "difference_nominal_ci_low": -44.535890067854936,
+      "difference_nominal_ci_high": 16.336223401188555,
+      "mean_ratio": 0.7182135137640335,
+      "percent_change": -28.178648623596647,
+      "percent_mcse": 5.234755436882815,
+      "percent_df": 1.0311413111415917,
+      "percent_ci_low": -494.7355420082568,
+      "percent_ci_high": 438.37824476106346,
+      "stage": "original-validation"
+    },
+    {
+      "cohort": "parameter_v3_original_validation",
+      "group": "adaptive",
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "comparator": "Empirical-KL-UCB",
+      "primary": true,
+      "family_size": 8,
+      "cells": 192,
+      "pairs": 384,
+      "candidate_regret": 55.1694505208334,
+      "comparator_regret": 79.13878124999917,
+      "regret_difference": -23.969330729165776,
+      "difference_mcse": 0.6405431012339399,
+      "difference_df": 6.840639525481864,
+      "difference_ci_low": -26.461056212683708,
+      "difference_ci_high": -21.477605245647844,
+      "difference_nominal_ci_low": -25.49115689587141,
+      "difference_nominal_ci_high": -22.447504562460143,
+      "mean_ratio": 0.6971228220782586,
+      "percent_change": -30.287717792174146,
+      "percent_mcse": 0.6985146862146671,
+      "percent_df": 13.635689537971825,
+      "percent_ci_low": -32.54275807274535,
+      "percent_ci_high": -28.03267751160294,
+      "stage": "original-validation"
+    }
+  ],
+  "original_parameter_primary_decisions": [
+    {
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "Bonferroni_family_size": 8,
+      "strictly_negative_adjusted_CI_upper": 3,
+      "all_four_adjusted_CI_upper_below_zero": false
+    },
+    {
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "Bonferroni_family_size": 8,
+      "strictly_negative_adjusted_CI_upper": 1,
+      "all_four_adjusted_CI_upper_below_zero": false
+    }
+  ],
+  "F17_Empirical_KL_UCB_wide_adjusted_difference_interval": {
+    "low": -155.49386532669678,
+    "high": 102.76881845169696,
+    "satterthwaite_df": 1.2183842431232763,
+    "family_size": 8,
+    "crosses_zero": true
+  },
+  "scaled_parameter_primary_decisions": [
+    {
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "Bonferroni_family_size": 8,
+      "strictly_negative_adjusted_CI_upper": 4,
+      "all_four_adjusted_CI_upper_below_zero": true
+    },
+    {
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "Bonferroni_family_size": 8,
+      "strictly_negative_adjusted_CI_upper": 2,
+      "all_four_adjusted_CI_upper_below_zero": false
+    }
+  ],
+  "original_hash_regret_overlap": [
+    {
+      "role": "refined",
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "comparator": "IMED",
+      "group": "ALL",
+      "paths": 768,
+      "equal_action_hash": 768,
+      "equal_regret": 768,
+      "guard_changed_total": 0,
+      "guard_exclusions_total": 0
+    },
+    {
+      "role": "refined",
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "comparator": "IMED",
+      "group": "adaptive",
+      "paths": 384,
+      "equal_action_hash": 384,
+      "equal_regret": 384,
+      "guard_changed_total": 0,
+      "guard_exclusions_total": 0
+    },
+    {
+      "role": "refined",
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "comparator": "IMED",
+      "group": "f17",
+      "paths": 384,
+      "equal_action_hash": 384,
+      "equal_regret": 384,
+      "guard_changed_total": 0,
+      "guard_exclusions_total": 0
+    },
+    {
+      "role": "cap_only",
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "comparator": "SRC-R",
+      "group": "ALL",
+      "paths": 768,
+      "equal_action_hash": 765,
+      "equal_regret": 766,
+      "guard_changed_total": 398,
+      "guard_exclusions_total": 917
+    },
+    {
+      "role": "cap_only",
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "comparator": "SRC-R",
+      "group": "adaptive",
+      "paths": 384,
+      "equal_action_hash": 384,
+      "equal_regret": 384,
+      "guard_changed_total": 0,
+      "guard_exclusions_total": 0
+    },
+    {
+      "role": "cap_only",
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "comparator": "SRC-R",
+      "group": "f17",
+      "paths": 384,
+      "equal_action_hash": 381,
+      "equal_regret": 382,
+      "guard_changed_total": 398,
+      "guard_exclusions_total": 917
+    }
+  ],
+  "scaled_hash_regret_overlap": [
+    {
+      "role": "refined",
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "comparator": "IMED",
+      "group": "ALL",
+      "paths": 2160,
+      "equal_complete_action_hash": 2160,
+      "equal_regret": 2160,
+      "candidate_guard_changed": 0,
+      "candidate_guard_exclusions": 0
+    },
+    {
+      "role": "refined",
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "comparator": "IMED",
+      "group": "adaptive",
+      "paths": 768,
+      "equal_complete_action_hash": 768,
+      "equal_regret": 768,
+      "candidate_guard_changed": 0,
+      "candidate_guard_exclusions": 0
+    },
+    {
+      "role": "refined",
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "comparator": "IMED",
+      "group": "dense",
+      "paths": 576,
+      "equal_complete_action_hash": 576,
+      "equal_regret": 576,
+      "candidate_guard_changed": 0,
+      "candidate_guard_exclusions": 0
+    },
+    {
+      "role": "refined",
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "comparator": "IMED",
+      "group": "f17",
+      "paths": 768,
+      "equal_complete_action_hash": 768,
+      "equal_regret": 768,
+      "candidate_guard_changed": 0,
+      "candidate_guard_exclusions": 0
+    },
+    {
+      "role": "refined",
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "comparator": "IMED",
+      "group": "scale",
+      "paths": 48,
+      "equal_complete_action_hash": 48,
+      "equal_regret": 48,
+      "candidate_guard_changed": 0,
+      "candidate_guard_exclusions": 0
+    },
+    {
+      "role": "cap_only",
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "comparator": "SRC-R",
+      "group": "ALL",
+      "paths": 2160,
+      "equal_complete_action_hash": 2160,
+      "equal_regret": 2160,
+      "candidate_guard_changed": 0,
+      "candidate_guard_exclusions": 0
+    },
+    {
+      "role": "cap_only",
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "comparator": "SRC-R",
+      "group": "adaptive",
+      "paths": 768,
+      "equal_complete_action_hash": 768,
+      "equal_regret": 768,
+      "candidate_guard_changed": 0,
+      "candidate_guard_exclusions": 0
+    },
+    {
+      "role": "cap_only",
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "comparator": "SRC-R",
+      "group": "dense",
+      "paths": 576,
+      "equal_complete_action_hash": 576,
+      "equal_regret": 576,
+      "candidate_guard_changed": 0,
+      "candidate_guard_exclusions": 0
+    },
+    {
+      "role": "cap_only",
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "comparator": "SRC-R",
+      "group": "f17",
+      "paths": 768,
+      "equal_complete_action_hash": 768,
+      "equal_regret": 768,
+      "candidate_guard_changed": 0,
+      "candidate_guard_exclusions": 0
+    },
+    {
+      "role": "cap_only",
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "comparator": "SRC-R",
+      "group": "scale",
+      "paths": 48,
+      "equal_complete_action_hash": 48,
+      "equal_regret": 48,
+      "candidate_guard_changed": 0,
+      "candidate_guard_exclusions": 0
+    }
+  ],
+  "canonical_heatmap": {
+    "records": 304,
+    "controls": 19,
+    "candidate_panels": 2,
+    "interval": "nominal paired stratified t with ratio covariance",
+    "significance_stars": false,
+    "overall_weighting": "540 cells each weighted 1/540",
+    "secondary_weighting": "six sections each weighted 1/6, then equal cells"
+  },
+  "audit_reports": [
+    {
+      "destination": "validation/official_raw_verification.json",
+      "sha256": "35923cc7bdb8cfce519147cf0725e1a67baca5380ed04d878d5686b32383d0f7",
+      "bytes": 47063,
+      "purpose": "Three canonical raw/config/task/shard and source snapshot checks"
+    },
+    {
+      "destination": "validation/official_derived_verification.json",
+      "sha256": "c4fee0f18b57deb590777a9c40f6dd76bddee548c075dcc533016ff63bd1b1bb",
+      "bytes": 2264,
+      "purpose": "Canonical heatmap, intervals, weighting and retained flags"
+    },
+    {
+      "destination": "validation/official_heatmap_recalculated.csv",
+      "sha256": "809884a3f7aeaa3e32b94d7fefdc2c15a29a1849e58498026943c07364f70f18",
+      "bytes": 83483,
+      "purpose": "Independent recalculation of all 304 heatmap records"
+    },
+    {
+      "destination": "validation/parameter_original_validation_verification.json",
+      "sha256": "d6cba73fa586db32db32710c5ba413312ca27b31e89d71ff8b78fbd8246aed19",
+      "bytes": 23884,
+      "purpose": "Original-horizon frozen-parameter inference and hash/cache diagnostics"
+    },
+    {
+      "destination": "validation/parameter_scaled_validation_verification.json",
+      "sha256": "10f83632aca8e4faf367a60e90f1bb1d4e49889a76fe7afca24385c10d8930ae",
+      "bytes": 29037,
+      "purpose": "Scaled frozen-parameter inference and hash/cache diagnostics"
+    },
+    {
+      "destination": "validation/parameter_study_full_verification.json",
+      "sha256": "0ec0ecf1039c8319ebb730897a3a74b47033fa1a0674e69f0629c3e862567df1",
+      "bytes": 6498,
+      "purpose": "All-stage source/driver/selection/pairing/interval/seen-complement audit summary"
+    },
+    {
+      "destination": "validation/source_cache_static_verification.json",
+      "sha256": "a06bb902a1af9c5111f1f93c2ac990a8564f4ced66bec9a864eb1b27fdf9c46b",
+      "bytes": 1839,
+      "purpose": "Source-hash-isolated cache API and frozen driver contract"
+    },
+    {
+      "destination": "validation/installation_primary_artifact_checks.json",
+      "sha256": "2412f6775a97c715a0f0dc00617f7e010aac461eefbe8dbc5b2807588e589dda",
+      "bytes": 5535,
+      "purpose": "Copied primary artifacts equal the final producer files"
+    }
+  ],
+  "producer_manifest_config_and_raw_untouched": true,
+  "limitations": [
+    "The 79,920-path canonical screen and scaled parameter check use transformed T400 environments; they do not replace original full-size experiments.",
+    "Original parameter validation has two paired replications per fixed environment. Monte Carlo intervals are conditional on that fixed matrix.",
+    "Cap-only has three of four original primary difference intervals strictly below zero; the F17 versus Empirical-KL-UCB adjusted interval crosses zero.",
+    "No simultaneous four-comparison superiority or universal method dominance is claimed.",
+    "The c=1 selected candidate and IMED have identical action hashes and regret on every original and scaled validation path.",
+    "Canonical runtime cache supplements were reconstructed after execution from retained launch commands and source policy; they are not worker-emitted binary attestations.",
+    "Both prior v1/v2 studies are invalidated and excluded; development grid raw data are not installed as final result datasets."
   ]
 }

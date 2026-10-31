@@ -1,0 +1,67 @@
+{
+  "record_kind": "retained-launch-command+source-policy reconstruction",
+  "generated_after_run": true,
+  "created_utc": "2026-10-31T17:51:53.125604+00:00",
+  "worker_emitted": false,
+  "binary_attestation": false,
+  "retained_launch_environment": {
+    "SRCBENCH_NUMBA_CACHE_ROOT": "D:\\博士学习\\科研\\git\\MAB-AA\\.numba-cache"
+  },
+  "reconstructed_command_argv": [
+    "python",
+    "D:\\博士学习\\科研\\git\\MAB-AA\\MAB-AA-reproducibility\\run_main.py",
+    "run",
+    "--profile",
+    "screen-all",
+    "--output",
+    "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\screen-all",
+    "--workers",
+    "2",
+    "--no-render"
+  ],
+  "launch_record_source": "Root agent retained the actual PowerShell environment prefix and profile/worker/output arguments.",
+  "source_snapshot_kind": "SHA256 input map in config.json, matched to the final frozen twenty inputs",
+  "config_sha256": "20ee5e892d067d43e4d442fa9d5412b2e6173cd2c3265111d5cc8be1954a9d3f",
+  "manifest_sha256": "098efe718bbcd840682ae226019afad9d5de5277bcd4cc210cd9386f11fcae6d",
+  "source_files": {
+    "configs/analysis_plan.json": "134b3a4cf864a9b9fded9ef052e646ba058cfb9194d4a1405b423be7f96de7f9",
+    "configs/layouts.json": "b6195271260e1f157b524f5b147ef09bedf3059f65cbbc7352b5c87b1d857ceb",
+    "configs/methods.json": "78bf00473cf5312e1e44734769489f03a4539deee200ee7df00c5c6e07ca0356",
+    "configs/protocol.json": "7fc08c95090efcb33547973697a2c7f54a7a27ef6e4947af1b0d4af7d26fffaf",
+    "configs/provenance.json": "4edfeb6d8653e6aa874fe846b17673a0958a2aa713c670ed00bb7e4f78a1b3c6",
+    "requirements.txt": "f8fd8c730954d601db8ecd645bcbf711a425abfbcd77913cd5997588ec958844",
+    "run_main.py": "8d0274a78ca768cbc128260096faa3e527c5399fd2e42171bf84043e10cde5c6",
+    "src/srcbench/__init__.py": "ca444d30064c05bb7036dba3eff8e43699dc6ef0067c384bc8cbf4202a5238a1",
+    "src/srcbench/_numba_cache.py": "0cc66316a80be7c29eaad96c8eeca107c42c3da20556708767149ffa3b13d086",
+    "src/srcbench/analysis.py": "19fbe22aad85f1bc8bd7529fd522a2f24c1b92bba066aeb9f7680fb10f671eb3",
+    "src/srcbench/baselines.py": "bc863e0e821fd741a9fdc9329d6314fc75720ce2ef311b750fb0cc271e218e73",
+    "src/srcbench/design.py": "b9acd2e65fa9199c7fa7253c3d3d1dad65b81d1c6c3889d7bcdf39b97fc28e3b",
+    "src/srcbench/environment.py": "ac5a45021aa45d0573ffa9139eb0a555c889fc27ceaee48fe8bced512e16d2bf",
+    "src/srcbench/mathcore.py": "4ecc2dca288296f8e504fe086b675d5c3cc7fdefb6883acff9d2516089d07f74",
+    "src/srcbench/methods.py": "8f0b8ecc08e66cc1df82f49de715e01e4d2e280e31b3b9d334b9ce67dac156bb",
+    "src/srcbench/plotting.py": "c95db15aec3303f43708dd49dda8be0231814cd48d029d9e437038860d375677",
+    "src/srcbench/policy.py": "adbefa00e3b8f92e5a966a1a9b10049b24625f371b10b2344dcf4ac63d200bf3",
+    "src/srcbench/relative_regret.py": "e7056a216e3ab02584168c8c739bdf9d6e35e71e66facd7cccfbee2bb6a56338",
+    "src/srcbench/runner.py": "9d7a9a65a61709e2c691188f5a0dd387ce677b202084bfef2048f2971177c473",
+    "src/srcbench/simulation.py": "f1965d301f775e4afea9e76c4653dc2dacd6081fe597bc06d152209918e92592"
+  },
+  "recorded_environment": {
+    "matplotlib": "3.8.0",
+    "numba": "0.59.0",
+    "numpy": "1.26.4",
+    "pandas": "2.1.4",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.7",
+    "scipy": "1.11.4"
+  },
+  "reconstructed_cache": {
+    "source_fingerprint": "26e0717d534827b6184252f983f0ceb736cbf719228e223f8c09bf415778e72a",
+    "effective_cache_dir": "\\\\?\\D:\\博士学习\\科研\\git\\MAB-AA\\.numba-cache\\srcbench-26e0717d534827b6184252f983f0ceb736cbf719228e223f8c09bf415778e72a",
+    "cache_root": "\\\\?\\D:\\博士学习\\科研\\git\\MAB-AA\\.numba-cache",
+    "numba_version": "0.59.0",
+    "python_cache_tag": "cpython-311"
+  },
+  "fingerprint_recomputed_from_snapshot_and_manifest_versions": "26e0717d534827b6184252f983f0ceb736cbf719228e223f8c09bf415778e72a",
+  "current_API_equals_reconstruction": true,
+  "limitation": "Post-run supplemental audit record; no historical worker-emitted cache path or binary-code attestation is asserted."
+}

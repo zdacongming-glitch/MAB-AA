@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "scope": "Static source, pre-frozen drivers and API/runtime cache namespace contract only; no numerical results read or allocations executed",
+  "study_revision": "final-v3",
+  "source_file_count": 20,
+  "source_and_prefreeze_SHA_match": true,
+  "drivers": {
+    "run_parameters.py": "0471e45ebda34b506629a7ef0671422095436db3d14b04421e3d19b04866ad6b",
+    "refine_parameters.py": "6b0fc030512b94b74fb3dfc93b1f2eb27baca32b0246b05a129db53368af8cd3",
+    "validate_parameters.py": "16ee5977e7005ecf3c68f5b5cb7be201bac89fd0e53834b2b248061ec924bb3e"
+  },
+  "actual_API_cache": {
+    "source_fingerprint": "26e0717d534827b6184252f983f0ceb736cbf719228e223f8c09bf415778e72a",
+    "effective_cache_dir": "\\\\?\\D:\\博士学习\\科研\\git\\MAB-AA\\.numba-cache\\srcbench-26e0717d534827b6184252f983f0ceb736cbf719228e223f8c09bf415778e72a",
+    "cache_root": "\\\\?\\D:\\博士学习\\科研\\git\\MAB-AA\\.numba-cache",
+    "numba_version": "0.59.0",
+    "python_cache_tag": "cpython-311"
+  },
+  "plan_cache_equals_API": true,
+  "NUMBA_CACHE_DIR_equals_API": true,
+  "numba_config_CACHE_DIR_equals_API": true,
+  "actual_python_and_numba_versions_match": true,
+  "mathcore_or_baseline_kernels_not_imported": true,
+  "stable_pairdiff_statistics_copied_exactly": true,
+  "ephemeral_plan_difference_keys": [
+    "runtime_cache"
+  ],
+  "ephemeral_cache_difference_keys": [
+    "cache_root",
+    "effective_cache_dir"
+  ],
+  "parameter_selection_driver_changes_from_prelaunch": false,
+  "invalidated_study_rows_imported": false,
+  "plan_sha256": "ce28cb145b3eb96f004f214bb5628270f408d7470d1dd11816268d1ea7ff102f",
+  "prefreeze_sha256": "40534e2e76444dddcb7904a77b907e1352c30ad3f972fe58da90d3321f069a69",
+  "verifier_sha256": "b85be0a0ed5833383f8e34dbf36db1ea46b76ef3aad3bb4dccbdfdbe24f5e06c"
+}

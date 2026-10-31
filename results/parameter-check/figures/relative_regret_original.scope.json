@@ -1,0 +1,125 @@
+{
+  "stage": "original",
+  "records": [
+    {
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "log_coefficient": 0.5,
+      "group": "f17",
+      "baseline": "IMED",
+      "percent_change": -34.12230520540419,
+      "percent_ci_low": -65.05227261726607,
+      "percent_ci_high": -3.192337793542311,
+      "interval_includes_zero": false
+    },
+    {
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "log_coefficient": 0.5,
+      "group": "f17",
+      "baseline": "Empirical-KL-UCB",
+      "percent_change": -52.68574934289876,
+      "percent_ci_low": -347.17702061819824,
+      "percent_ci_high": 241.80552193240072,
+      "interval_includes_zero": true
+    },
+    {
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "log_coefficient": 0.5,
+      "group": "adaptive",
+      "baseline": "IMED",
+      "percent_change": -31.508016329802107,
+      "percent_ci_low": -39.356883504911465,
+      "percent_ci_high": -23.65914915469275,
+      "interval_includes_zero": false
+    },
+    {
+      "candidate": "SRC-KL-a8192-c0p5-b32",
+      "log_coefficient": 0.5,
+      "group": "adaptive",
+      "baseline": "Empirical-KL-UCB",
+      "percent_change": -52.25267505409364,
+      "percent_ci_low": -57.521313507875234,
+      "percent_ci_high": -46.98403660031205,
+      "interval_includes_zero": false
+    },
+    {
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "log_coefficient": 1.0,
+      "group": "f17",
+      "baseline": "IMED",
+      "percent_change": 0.0,
+      "percent_ci_low": 0.0,
+      "percent_ci_high": 0.0,
+      "interval_includes_zero": true
+    },
+    {
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "log_coefficient": 1.0,
+      "group": "f17",
+      "baseline": "Empirical-KL-UCB",
+      "percent_change": -28.178648623596647,
+      "percent_ci_low": -494.7355420082448,
+      "percent_ci_high": 438.3782447610515,
+      "interval_includes_zero": true
+    },
+    {
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "log_coefficient": 1.0,
+      "group": "adaptive",
+      "baseline": "IMED",
+      "percent_change": 0.0,
+      "percent_ci_low": 0.0,
+      "percent_ci_high": 0.0,
+      "interval_includes_zero": true
+    },
+    {
+      "candidate": "SRC-KL-a8192-c1-b32",
+      "log_coefficient": 1.0,
+      "group": "adaptive",
+      "baseline": "Empirical-KL-UCB",
+      "percent_change": -30.287717792174146,
+      "percent_ci_low": -32.54275807274534,
+      "percent_ci_high": -28.032677511602948,
+      "interval_includes_zero": false
+    }
+  ],
+  "candidates": {
+    "0.5": "SRC-KL-a8192-c0p5-b32",
+    "1.0": "SRC-KL-a8192-c1-b32"
+  },
+  "input_sha256": {
+    "original-validation/config.json": "c26288ca482efc9a427050052d43f9e1aa588e7fe66f44176e739bd0be58fc2f",
+    "original-validation/parameter_analysis/paired_contrasts.csv": "bf7283ce302a40a26506492ac22649350b253e1c9f660db07a7d241fc4f5903e"
+  },
+  "scope": {
+    "groups": [
+      "f17",
+      "adaptive"
+    ],
+    "layouts": 24,
+    "cells": 384,
+    "paired_replications_per_cell": 2,
+    "horizons": [
+      8000,
+      9000,
+      10000,
+      12000,
+      14000,
+      15000,
+      16000
+    ],
+    "full_original_settings": true,
+    "other_density_groups_excluded": true,
+    "aggregation": "Stored macro percentages, with equal environmental-cell weights",
+    "point_estimate_only_color": true,
+    "primary_family_size": 8,
+    "interval": "Stored Bonferroni-8 simultaneous 95% intervals; no recomputation"
+  },
+  "script_sha256": "ff2047fbe952daabaa1a45cec29bbc5fcea9f02cee25da24e7e0875c10b3b831",
+  "shared_color_limit_percent": 60,
+  "output_sha256": {
+    "figures/relative_regret_original.png": "b7408e1d55511b00df8bf38829fa8b1612ca22a0058aa600516e136c5e91408d",
+    "figures/relative_regret_original.pdf": "4384c39dfea8114fa3c0b1c06b75f7f97d36af8cbdb91fca3e715a2d72e502e1",
+    "figures/relative_regret_original.svg": "b18717efdbb31c86ce3115e56e9ae8b7d41b62b4d73a198c4e6f1c04441ad38b"
+  },
+  "statistic_recomputed": false
+}

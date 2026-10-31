@@ -42,14 +42,14 @@ def bernoulli_kl(p, q):
 def dinf(values, counts, target):
     """Normalized D_inf(empirical distribution, target), on support [0,1]."""
     total = 0.0
-    weighted = 0.0
+    shifted = 0.0
     distinct = 0
     first = 0.0
     second = 0.0
     for j in range(len(values)):
         if counts[j] > 0:
             total += counts[j]
-            weighted += counts[j]*values[j]
+            shifted += counts[j]*(target-values[j])
             if distinct == 0:
                 first = values[j]
             elif distinct == 1:
@@ -64,8 +64,9 @@ def dinf(values, counts, target):
             if counts[j] > 0 and values[j] < 1:
                 return math.inf
         return 0.0
-    mean = weighted / total
-    if mean >= target - 1e-15:
+    # Compare centered observations. An absolute mean tolerance is unsafe
+    # near one, where an ulp-sized gap can have order-one information.
+    if shifted <= 0:
         return 0.0
     if distinct == 1:
         return math.log((1-first)/(1-target))
@@ -74,12 +75,14 @@ def dinf(values, counts, target):
     if distinct == 2:
         a, b = (target-first)*inv, (target-second)*inv
         if a*b < 0:
-            nu = min(1.0, max(0.0, -(target-mean)*inv/(a*b)))
+            nu = min(1.0, max(0.0, -(shifted/total)*inv/(a*b)))
     else:
         end = 0.0
+        second_moment = 0.0
         for j in range(len(values)):
             if counts[j] > 0:
                 a = (target-values[j])*inv
+                second_moment += counts[j]*a*a
                 den = 1+a
                 if den <= 0:
                     end = -math.inf
@@ -87,6 +90,12 @@ def dinf(values, counts, target):
                 end += counts[j]*a/den
         if end < 0:
             lo, hi, current = 0.0, 1.0, 0.5
+            # Start near the stationary point when the target is close to
+            # the empirical mean; retain the same safeguarded solver.
+            if second_moment > 0 and math.isfinite(second_moment):
+                initial = shifted*inv/second_moment
+                if initial > 0 and math.isfinite(initial):
+                    current = min(0.5, initial)
             converged = False
             for _ in range(80):
                 gradient, curvature = 0.0, 0.0
@@ -121,19 +130,19 @@ def dinf(values, counts, target):
 @njit(cache=True)
 def inverse_index(values, counts, budget):
     """Supremum m with n*D_inf(F,m)<=budget (budget is NOT normalized)."""
-    n, total = 0.0, 0.0
+    n = 0.0
+    perfect = True
     for j in range(len(values)):
         n += counts[j]
-        total += counts[j]*values[j]
-    if n == 0 or budget == math.inf:
+        if counts[j] > 0 and values[j] < 1:
+            perfect = False
+    if n == 0 or budget == math.inf or perfect:
         return 1.0
-    mean = total/n
-    if mean >= 1:
-        return 1.0
-    if budget <= 0:
-        return mean
-    lo, hi = mean, 1.0
-    for _ in range(48):
+    budget = max(0.0, budget)
+    # Zero is feasible and one is infeasible for every finite budget with
+    # non-perfect support, even when a rounded empirical mean equals one.
+    lo, hi = 0.0, 1.0
+    for _ in range(53):
         mid = (lo+hi)/2
         if mid == hi or mid == lo:
             break
@@ -141,7 +150,8 @@ def inverse_index(values, counts, budget):
             hi = mid
         else:
             lo = mid
-    return min(1.0, (lo+hi)/2)
+    # A midpoint of adjacent floats can round to the infeasible endpoint.
+    return lo
 
 
 @njit(cache=True)
@@ -278,10 +288,12 @@ def information_choice(n, sums, allowed, values, counts, coefficient):
         if allowed[i] and n[i] == 0:
             return i
     incumbent, selected = math.inf, -1
-    # A feasible empirical-best arm gives a cheap initial upper bound.
+    # Seed pruning with a feasible arm's actual cost. A rounded empirical
+    # mean near one does not imply zero D_inf at the boundary target one.
     for i in range(len(n)):
         if allowed[i] and n[i] > 0 and sums[i]/n[i] >= best_mean-1e-15:
-            incumbent = min(incumbent, coefficient*math.log(n[i]))
+            cost = n[i]*dinf(values[i], counts[i], best_mean)+coefficient*math.log(n[i])
+            incumbent = min(incumbent, cost)
     for i in range(len(n)):
         if not allowed[i]:
             continue

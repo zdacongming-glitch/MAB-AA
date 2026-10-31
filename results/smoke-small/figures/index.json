@@ -6,243 +6,243 @@
       "figure": "trajectory_smoke_f17_joint",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Fixed display shortlist; every method remains in the CSV tables. Snapshot cell counts may differ across horizons.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\trajectory_smoke_f17_joint.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\trajectory_smoke_f17_joint.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\trajectory_smoke_f17_joint.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\trajectory_smoke_f17_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\trajectory_smoke_f17_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\trajectory_smoke_f17_joint.svg"
       ]
     },
     {
       "figure": "normalized_smoke_f17_joint",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. R/log(t) uses checkpoints after the layout's last arrival only. No asymptotic constant is asserted for dense schedules. R/S(t) uses the current arrival spectrum; guards use its running maximum.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\normalized_smoke_f17_joint.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\normalized_smoke_f17_joint.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\normalized_smoke_f17_joint.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\normalized_smoke_f17_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\normalized_smoke_f17_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\normalized_smoke_f17_joint.svg"
       ]
     },
     {
       "figure": "trajectory_smoke_f17_reward",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Fixed display shortlist; every method remains in the CSV tables. Snapshot cell counts may differ across horizons.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\trajectory_smoke_f17_reward.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\trajectory_smoke_f17_reward.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\trajectory_smoke_f17_reward.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\trajectory_smoke_f17_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\trajectory_smoke_f17_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\trajectory_smoke_f17_reward.svg"
       ]
     },
     {
       "figure": "normalized_smoke_f17_reward",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. R/log(t) uses checkpoints after the layout's last arrival only. No asymptotic constant is asserted for dense schedules. R/S(t) uses the current arrival spectrum; guards use its running maximum.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\normalized_smoke_f17_reward.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\normalized_smoke_f17_reward.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\normalized_smoke_f17_reward.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\normalized_smoke_f17_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\normalized_smoke_f17_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\normalized_smoke_f17_reward.svg"
       ]
     },
     {
       "figure": "tradeoff_smoke_f17_joint",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Segments join tested preferences only. \u03bb=1 with finite service budget is a circle; uncapped area is a separate star and is never joined as the same endpoint.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\tradeoff_smoke_f17_joint.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\tradeoff_smoke_f17_joint.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\tradeoff_smoke_f17_joint.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\tradeoff_smoke_f17_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\tradeoff_smoke_f17_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\tradeoff_smoke_f17_joint.svg"
       ]
     },
     {
       "figure": "paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_area",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_area.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_area.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_area.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_area.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_area.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_area.svg"
       ]
     },
     {
       "figure": "paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_area_all",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_area_all.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_area_all.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_area_all.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_area_all.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_area_all.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_area_all.svg"
       ]
     },
     {
       "figure": "paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_eta_fraction",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_eta_fraction.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_eta_fraction.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_eta_fraction.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_eta_fraction.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_eta_fraction.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_eta_fraction.svg"
       ]
     },
     {
       "figure": "paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_regret",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_regret.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_regret.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_regret.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-L060_SRC-L060_regret.svg"
       ]
     },
     {
       "figure": "paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_area",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_area.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_area.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_area.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_area.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_area.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_area.svg"
       ]
     },
     {
       "figure": "paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_area_all",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_area_all.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_area_all.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_area_all.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_area_all.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_area_all.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_area_all.svg"
       ]
     },
     {
       "figure": "paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_eta_fraction",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_eta_fraction.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_eta_fraction.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_eta_fraction.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_eta_fraction.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_eta_fraction.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_eta_fraction.svg"
       ]
     },
     {
       "figure": "paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_regret",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_regret.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_regret.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_regret.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-R_SRC-R_regret.svg"
       ]
     },
     {
       "figure": "paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_area",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_area.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_area.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_area.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_area.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_area.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_area.svg"
       ]
     },
     {
       "figure": "paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_area_all",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_area_all.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_area_all.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_area_all.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_area_all.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_area_all.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_area_all.svg"
       ]
     },
     {
       "figure": "paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_eta_fraction",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_eta_fraction.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_eta_fraction.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_eta_fraction.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_eta_fraction.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_eta_fraction.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_eta_fraction.svg"
       ]
     },
     {
       "figure": "paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_regret",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_regret.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_regret.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_regret.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_joint_SRC-KL-area_SRC-area_regret.svg"
       ]
     },
     {
       "figure": "paired_heatmap_smoke_f17_reward_SRC-KL-L060_SRC-L060_regret",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-L060_SRC-L060_regret.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-L060_SRC-L060_regret.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-L060_SRC-L060_regret.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-L060_SRC-L060_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-L060_SRC-L060_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-L060_SRC-L060_regret.svg"
       ]
     },
     {
       "figure": "paired_heatmap_smoke_f17_reward_SRC-KL-R_SRC-R_regret",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-R_SRC-R_regret.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-R_SRC-R_regret.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-R_SRC-R_regret.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-R_SRC-R_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-R_SRC-R_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-R_SRC-R_regret.svg"
       ]
     },
     {
       "figure": "paired_heatmap_smoke_f17_reward_SRC-KL-area_SRC-area_regret",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Each tile is one layout \u00d7 law cell; no tilewise significance claim. Missing combinations remain blank.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-area_SRC-area_regret.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-area_SRC-area_regret.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-area_SRC-area_regret.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-area_SRC-area_regret.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-area_SRC-area_regret.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\paired_heatmap_smoke_f17_reward_SRC-KL-area_SRC-area_regret.svg"
       ]
     },
     {
       "figure": "K_smoke_f17_joint",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\K_smoke_f17_joint.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\K_smoke_f17_joint.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\K_smoke_f17_joint.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\K_smoke_f17_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\K_smoke_f17_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\K_smoke_f17_joint.svg"
       ]
     },
     {
       "figure": "K_smoke_f17_reward",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\K_smoke_f17_reward.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\K_smoke_f17_reward.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\K_smoke_f17_reward.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\K_smoke_f17_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\K_smoke_f17_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\K_smoke_f17_reward.svg"
       ]
     },
     {
       "figure": "law_smoke_f17_joint",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\law_smoke_f17_joint.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\law_smoke_f17_joint.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\law_smoke_f17_joint.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\law_smoke_f17_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\law_smoke_f17_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\law_smoke_f17_joint.svg"
       ]
     },
     {
       "figure": "law_smoke_f17_reward",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Law/density summaries are conditional on the fixed suite, with cohorts and source groups separate.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\law_smoke_f17_reward.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\law_smoke_f17_reward.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\law_smoke_f17_reward.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\law_smoke_f17_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\law_smoke_f17_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\law_smoke_f17_reward.svg"
       ]
     },
     {
       "figure": "diagnostics_smoke_f17_joint",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Guard exclusions, reward/service tax, and checkpoint hits are also retained in module_summary.csv. Unseen means zero real observations.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\diagnostics_smoke_f17_joint.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\diagnostics_smoke_f17_joint.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\diagnostics_smoke_f17_joint.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\diagnostics_smoke_f17_joint.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\diagnostics_smoke_f17_joint.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\diagnostics_smoke_f17_joint.svg"
       ]
     },
     {
       "figure": "diagnostics_smoke_f17_reward",
       "caption": "SMOKE ONLY: full study not run. 4\u20134 paired repetitions/cell. Cells weighted equally; bands/bars are \u00b11 Monte Carlo SE. Guard exclusions, reward/service tax, and checkpoint hits are also retained in module_summary.csv. Unseen means zero real observations.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\diagnostics_smoke_f17_reward.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\diagnostics_smoke_f17_reward.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\diagnostics_smoke_f17_reward.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\diagnostics_smoke_f17_reward.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\diagnostics_smoke_f17_reward.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\diagnostics_smoke_f17_reward.svg"
       ]
     },
     {
       "figure": "counts_smoke_f17_smoke-small__f17__two_close__T1000__K2_bernoulli",
       "caption": "SMOKE ONLY: no convergence conclusion. 4 paired repetitions; bands are \u00b11 Monte Carlo SE. Analytic Bernoulli/deterministic information constants only. Fixed finite static instance, fixed task parameters, interior best mean. Reference lines are asymptotic, not finite-time guarantees.",
       "files": [
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\counts_smoke_f17_smoke-small__f17__two_close__T1000__K2_bernoulli.png",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\counts_smoke_f17_smoke-small__f17__two_close__T1000__K2_bernoulli.pdf",
-        "D:\\\u535a\u58eb\u5b66\u4e60\\\u79d1\u7814\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\smoke-small\\figures\\counts_smoke_f17_smoke-small__f17__two_close__T1000__K2_bernoulli.svg"
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\counts_smoke_f17_smoke-small__f17__two_close__T1000__K2_bernoulli.png",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\counts_smoke_f17_smoke-small__f17__two_close__T1000__K2_bernoulli.pdf",
+        "C:\\Users\\12701\\.codex\\visualizations\\2026\\10\\31\\01a19128-74c6-73d0-b3a3-5e43e56cf9c1\\final_official_results\\smoke-small\\figures\\counts_smoke_f17_smoke-small__f17__two_close__T1000__K2_bernoulli.svg"
       ]
     }
   ]

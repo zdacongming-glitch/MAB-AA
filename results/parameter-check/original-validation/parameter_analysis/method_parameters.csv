@@ -1,0 +1,7 @@
+method,role,cap_multiplier,log_coefficient,beta_r,preference,family,params_json
+Empirical-KL-UCB,reference,1.0,0.5,,0.0,baseline,{}
+IMED,reference,1.0,1.0,,0.0,baseline,"{""log_coefficient"": 1.0}"
+SRC-KL-R,reference,1.0,0.5,32.0,0.0,src_kl,"{""backlog_scale"": 4.0, ""cap_multiplier"": 1.0, ""log_coefficient"": 0.5, ""nu"": 0.02, ""rate_floor"": 0.02, ""relevance_floor"": 0.02}"
+SRC-KL-a8192-c0p5-b32,cap_candidate,8192.0,0.5,32.0,0.0,src_kl,"{""backlog_scale"": 4.0, ""cap_multiplier"": 8192.0, ""log_coefficient"": 0.5, ""nu"": 0.02, ""rate_floor"": 0.02, ""relevance_floor"": 0.02}"
+SRC-KL-a8192-c1-b32,cap_candidate,8192.0,1.0,32.0,0.0,src_kl,"{""backlog_scale"": 4.0, ""cap_multiplier"": 8192.0, ""log_coefficient"": 1.0, ""nu"": 0.02, ""rate_floor"": 0.02, ""relevance_floor"": 0.02}"
+SRC-R,reference,1.0,0.5,32.0,0.0,src,"{""backlog_scale"": 4.0, ""log_coefficient"": 0.5, ""nu"": 0.02, ""rate_floor"": 0.02, ""relevance_floor"": 0.02}"
