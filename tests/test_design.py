@@ -41,7 +41,7 @@ def test_full_cell_and_workload_counts(full_tasks):
     assert len(full_tasks) == 16224
     assert len({t["cell_id"] for t in full_tasks}) == 540
     assert len({t["task_id"] for t in full_tasks}) == len(full_tasks)
-    assert sum(len(t["methods"]) for t in full_tasks) == 418560
+    assert sum(len(t["methods"]) for t in full_tasks) == 374496
     assert all(t["seed_base"] == (2026103101 if t["cohort"] == "main" else 2026103102) for t in full_tasks)
 
 
@@ -65,9 +65,9 @@ def test_smoke_derivatives_leave_full_settings_intact():
     small = build_tasks("smoke-small")
     dense = build_tasks("smoke-dense")
     assert len(small) == len(dense) == 16
-    assert sum(len(t["methods"]) for t in small) == 448
-    assert sum(len(t["methods"]) for t in dense) == 176
-    assert all(t["layout"]["T"] == 1000 and len(t["methods"]) == 28 for t in small)
+    assert sum(len(t["methods"]) for t in small) == 400
+    assert sum(len(t["methods"]) for t in dense) == 160
+    assert all(t["layout"]["T"] == 1000 and len(t["methods"]) == 25 for t in small)
     assert all(t["layout"]["T"] == 800 and len(t["layout"]["arms"]) == 40 for t in dense)
     late = next(t["layout"] for t in dense if "late_regime_records" in t["layout"]["name"])
     assert {round(a["mean"], 2) for a in late["arms"] if a["record"]} == {.62, .82, .92}
@@ -115,7 +115,7 @@ def test_screen_all_covers_every_cell_and_method_with_four_paired_reps(screen_ta
     assert len(screen_tasks) == 2160
     assert len({t["cell_id"] for t in screen_tasks}) == 540
     assert len({t["layout"]["id"] for t in screen_tasks}) == 45
-    assert sum(len(t["methods"]) for t in screen_tasks) == 86400
+    assert sum(len(t["methods"]) for t in screen_tasks) == 79920
     assert all(set(t["methods"]) == set(METHODS) for t in screen_tasks)
     assert all(t["cohort"] == "screen" and t["seed_base"] == 2026103105 for t in screen_tasks)
     assert all(t["suites"] == ["joint", "reward"] for t in screen_tasks)
@@ -175,16 +175,16 @@ def test_screen_keeps_whole_bursts_and_expands_k100_when_records_require_it(scre
 def test_screen_has_minimal_diagnostics_and_changes_only_its_profile(screen_tasks):
     assert all(t["diagnostics"] == dict(trajectory_replications=1, linear_points=21,
                 log_points=10, per_arm_methods=[], smoke_all_methods=False) for t in screen_tasks)
-    assert preview("full")["unique_paths"] == 418560
-    assert preview("smoke-small")["unique_paths"] == 448
-    assert preview("smoke-dense")["unique_paths"] == 176
+    assert preview("full")["unique_paths"] == 374496
+    assert preview("smoke-small")["unique_paths"] == 400
+    assert preview("smoke-dense")["unique_paths"] == 160
     assert preview("screen-all")["small_derivatives"] is True
 
 
 def test_screen_configuration_drives_its_replications_and_seed(tmp_path):
     protocol = json.loads((CONFIG_ROOT / "protocol.json").read_text(encoding="utf-8"))
     protocol["screen_all"]["replications"] = 1
-    protocol["screen_all"]["unique_paths"] = 21600
+    protocol["screen_all"]["unique_paths"] = 19980
     protocol["seed_bases"]["screen_all"] = 71321
     path = tmp_path / "protocol.json"
     path.write_text(json.dumps(protocol), encoding="utf-8")
@@ -194,7 +194,9 @@ def test_screen_configuration_drives_its_replications_and_seed(tmp_path):
 
 
 def test_registry_has_no_h8_or_legacy_candidate_and_no_duplicate_alias_rows():
-    assert len(BASELINE_IDS) == 22 and len(METHODS) == 40
+    assert len(BASELINE_IDS) == 19 and len(METHODS) == 37
+    assert not any(name.startswith("BL-MOSS") for name in METHODS)
+    assert not any(name.startswith(("BL-MOSS", "BL_MOSS")) for name in ALIASES)
     assert ALIASES["MC-MOSS"] == "ACI"
     assert "MC-MOSS" not in METHODS
     assert all("H8" not in name and "H16" not in name and not name.startswith("F-") for name in METHODS)

@@ -4,7 +4,7 @@
 
 在同一永久到达、有界 iid 模型下，比较 SRC 与 SRC-KL 的奖励和分类代价。45 布局保留 F17、adaptive、dense、scale 的原始到达时刻、均值、T、epsilon、eta、delta；采用新的统一种子和重复协议，不把旧结果改名回填。
 
-`configs/protocol.json` 实际驱动分布、重复、seed、方法和 smoke 派生设置；展开计数必须匹配声明。`configs/methods.json` 与代码注册表漂移时会报错。完整设计为 540 cells、16,224 个共享潜在世界分片、418,560 条唯一方法轨迹。40 方法配置按不同研究子集运行。
+`configs/protocol.json` 实际驱动分布、重复、seed、方法和 smoke 派生设置；展开计数必须匹配声明。`configs/methods.json` 与代码注册表漂移时会报错。完整设计为 540 cells、16,224 个共享潜在世界分片、374,496 条唯一方法轨迹。37 个方法配置按不同研究子集运行：奖励比较包含两种候选与 19 baseline，共 21 个配置；分类研究增加其他偏好与匹配调度控制。
 
 小场景的 16 分布包括 Bernoulli、Beta 浓度 .2/2/20、Binomial 4/16、确定性、窄双点、Uniform、spike mixture、两种记录异方差、记录 jackpot、endpoint 双点、rare jackpot、对称截断正态。dense/scale 使用各自冻结子集。截断正态以均值为中心，不通过裁剪到 [0,1] 改变目标均值。
 

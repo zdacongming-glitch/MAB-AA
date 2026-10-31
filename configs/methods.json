@@ -478,45 +478,6 @@
       "planner": "paired",
       "known_horizon": false
     },
-    "BL-MOSS-b0.5": {
-      "id": "BL-MOSS-b0.5",
-      "family": "baseline",
-      "kernel": "BL-MOSS",
-      "params": {
-        "arrival_exponent": 0.5
-      },
-      "preference": 0.0,
-      "beta_r": null,
-      "beta_c": null,
-      "planner": "paired",
-      "known_horizon": true
-    },
-    "BL-MOSS-b1": {
-      "id": "BL-MOSS-b1",
-      "family": "baseline",
-      "kernel": "BL-MOSS",
-      "params": {
-        "arrival_exponent": 1.0
-      },
-      "preference": 0.0,
-      "beta_r": null,
-      "beta_c": null,
-      "planner": "paired",
-      "known_horizon": true
-    },
-    "BL-MOSS-b2": {
-      "id": "BL-MOSS-b2",
-      "family": "baseline",
-      "kernel": "BL-MOSS",
-      "params": {
-        "arrival_exponent": 2.0
-      },
-      "preference": 0.0,
-      "beta_r": null,
-      "beta_c": null,
-      "planner": "paired",
-      "known_horizon": true
-    },
     "UCB-log2t-c3": {
       "id": "UCB-log2t-c3",
       "family": "baseline",
@@ -579,21 +540,15 @@
     "Bayes_UCB": "Bayes-UCB",
     "Empirical_KL_UCB": "Empirical-KL-UCB",
     "empirical-KL-UCB": "Empirical-KL-UCB",
-    "SB_EXP3_ATGT": "SB-EXP3-ATGT",
-    "BL_MOSS_b05": "BL-MOSS-b0.5",
-    "BL_MOSS_b1": "BL-MOSS-b1",
-    "BL_MOSS_b2": "BL-MOSS-b2",
-    "BL-MOSS-P0.5": "BL-MOSS-b0.5",
-    "BL-MOSS-P1.0": "BL-MOSS-b1",
-    "BL-MOSS-P2.0": "BL-MOSS-b2"
+    "SB_EXP3_ATGT": "SB-EXP3-ATGT"
   },
   "newly_evaluated_from_existing_code": [
     "MOSS-T-currentK",
     "TS-Jeffreys",
     "TS-SMAB-bounded"
   ],
-  "baseline_count": 22,
-  "information": "All methods use observed history and current availability only. BL-MOSS and MOSS-T-currentK additionally receive declared T. No H8, H16 or legacy Beta/F candidate is registered.",
+  "baseline_count": 19,
+  "information": "All methods use observed history and current availability only. MOSS-T-currentK additionally receives declared T. No H8, H16 or legacy Beta/F candidate is registered.",
   "legacy_sources": [
     {
       "path": "experiments/fccp_frozen/src/flexible_engine.py",

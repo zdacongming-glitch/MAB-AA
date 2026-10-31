@@ -19,5 +19,3 @@ smoke,dense,reward,ACI,4,16,"equal-cell weighted inverse empirical CDF; descript
 smoke,dense,joint,ACI,4,16,"equal-cell weighted inverse empirical CDF; descriptive, no extreme-tail precision claim",77.97404127462251,79.54090792605314,79.54090792605314,79.54090792605314,79.54090792605314
 smoke,dense,reward,Growing-MOSS,4,16,"equal-cell weighted inverse empirical CDF; descriptive, no extreme-tail precision claim",113.19759338907922,119.80575297854983,119.80575297854983,119.80575297854983,119.80575297854983
 smoke,dense,joint,Growing-MOSS,4,16,"equal-cell weighted inverse empirical CDF; descriptive, no extreme-tail precision claim",113.19759338907922,119.80575297854983,119.80575297854983,119.80575297854983,119.80575297854983
-smoke,dense,reward,BL-MOSS-b1,4,16,"equal-cell weighted inverse empirical CDF; descriptive, no extreme-tail precision claim",93.45852348666733,100.1333623397713,100.1333623397713,100.1333623397713,100.1333623397713
-smoke,dense,joint,BL-MOSS-b1,4,16,"equal-cell weighted inverse empirical CDF; descriptive, no extreme-tail precision claim",93.45852348666733,100.1333623397713,100.1333623397713,100.1333623397713,100.1333623397713

@@ -1,43 +1,76 @@
 {
+  "schema_version": 2,
   "date": "2026-10-31",
   "formal": {
     "status": "NOT_RUN",
     "profile": "full",
     "layouts": 45,
     "cells": 540,
-    "planned_unique_trajectories": 418560
+    "planned_unique_trajectories": 374496
   },
   "smoke": {
     "smoke-small": {
       "status": "PASS",
-      "unique_trajectories": 448,
+      "unique_trajectories": 400,
       "complete_shards": 16,
-      "fingerprint": "d14915ea61f6448172657ded6a42232cee7dc197cf1d3fef28e555be7837bdcb",
+      "fingerprint": "be005c10c7f4977117b88d5fe57408d5a45cc0b59b46df2e2a9bba1b22da9c93",
       "figures": 27,
-      "manifest_sha256": "afc711e41677aa392b041f391b6f3928a25cb055d94d085ed67eb73573df3237"
+      "figure_artifacts": 81,
+      "figure_formats": {
+        "png": 27,
+        "pdf": 27,
+        "svg": 27
+      },
+      "manifest_sha256": "fbf96f4f380d9eaf50bdc4ba1bdaaab78ebab6ea38bc2821131fd084dd450081"
     },
     "smoke-dense": {
       "status": "PASS",
-      "unique_trajectories": 176,
+      "unique_trajectories": 160,
       "complete_shards": 16,
-      "fingerprint": "79a53ccf22ef5f7f18892a83427df288ce16a2706103cc6bc5007558248cd852",
+      "fingerprint": "0a6b656a21e043291ef41bcdb813a1a50520fa134a2d1f582d20cb96500587dd",
       "figures": 24,
-      "manifest_sha256": "191a1297c4b03d810adf374d6d0e441245d092b30c60a0c27ac1d53bce480dca"
+      "figure_artifacts": 72,
+      "figure_formats": {
+        "png": 24,
+        "pdf": 24,
+        "svg": 24
+      },
+      "manifest_sha256": "8086aae4df6ddad6efaf4131e515ffd2e2c77312754fbbcd010cc8754993a0a0"
     }
   },
   "scaled_screening": {
     "status": "PASS",
-    "unique_trajectories": 86400,
+    "unique_trajectories": 79920,
     "complete_shards": 2160,
-    "fingerprint": "5b745bddf71208c9adcb21f2e7c9465c793cc21906388e506314a3274bd44804",
+    "fingerprint": "01ed15e1aa0a7e39b57abd466a9bb7dde21ed3b0fd442e63516c17a9589ca7d8",
     "figures": 1,
-    "manifest_sha256": "4ace4c9b9d7889351d2a744a2df95366fbb2a707cf6ab064adfd867992146c30",
+    "figure_artifacts": 3,
+    "figure_formats": {
+      "png": 1,
+      "pdf": 1,
+      "svg": 1
+    },
+    "manifest_sha256": "bfb1886c4b2927240845aa649defb0dddceffed8f4069fb31db10edc37b43961",
     "profile": "screen-all",
     "source_layouts": 45,
     "cells": 540,
-    "methods": 40,
+    "methods": 37,
+    "baseline_count": 19,
     "paired_repetitions": 4,
     "horizon": 400
   },
-  "interpretation": "Scaled screening and smoke results only; original full-size formal experiment has not run."
+  "comparator_scope_revision": {
+    "excluded_methods": [
+      "BL-MOSS-b0.5",
+      "BL-MOSS-b1",
+      "BL-MOSS-b2"
+    ],
+    "baseline_count": 19,
+    "reward_method_count": 21,
+    "total_method_count": 37,
+    "basis": "User-specified comparator suitability: prefix admission may ignore later optimal arms and allow linear dynamic regret.",
+    "other_parameters_preserved": true,
+    "results_regenerated_by_simulation": true
+  },
+  "interpretation": "Only smoke and scaled screening have run. Original-size formal experiments, including the proposed 20-repetition batch, have not started."
 }

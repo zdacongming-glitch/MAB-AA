@@ -1,9 +1,6 @@
 cohort,group,suite,method,paths,label_error_paths,coverage_error_paths,empty_intersection_paths
 smoke,f17,joint,ACI,16,0,0,0
 smoke,f17,joint,AUER,16,0,0,0
-smoke,f17,joint,BL-MOSS-b0.5,16,0,0,0
-smoke,f17,joint,BL-MOSS-b1,16,0,0,0
-smoke,f17,joint,BL-MOSS-b2,16,0,0,0
 smoke,f17,joint,Bayes-UCB,16,0,0,0
 smoke,f17,joint,Clipped-ACI,16,0,0,0
 smoke,f17,joint,Empirical-KL-UCB,16,0,0,0
@@ -29,9 +26,6 @@ smoke,f17,joint,UCB1,16,0,0,0
 smoke,f17,joint,UCB1-Tuned,16,0,0,0
 smoke,f17,reward,ACI,16,0,0,0
 smoke,f17,reward,AUER,16,0,0,0
-smoke,f17,reward,BL-MOSS-b0.5,16,0,0,0
-smoke,f17,reward,BL-MOSS-b1,16,0,0,0
-smoke,f17,reward,BL-MOSS-b2,16,0,0,0
 smoke,f17,reward,Bayes-UCB,16,0,0,0
 smoke,f17,reward,Clipped-ACI,16,0,0,0
 smoke,f17,reward,Empirical-KL-UCB,16,0,0,0

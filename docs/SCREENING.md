@@ -1,6 +1,6 @@
 # 全 setting 缩小预研究与相对 regret 热图
 
-`screen-all` 覆盖全部 45 个来源布局、540 个 layout-law 组合，每个组合 4 次配对重复、全部 40 个最终方法配置，共 86,400 条唯一轨迹。它是明确缩小后的研究，不是原时域与原臂数的正式主实验。
+`screen-all` 覆盖全部 45 个来源布局、540 个 layout-law 组合，每个组合 4 次配对重复、全部 37 个最终方法配置，共 79,920 条唯一轨迹。它是明确缩小后的研究，不是原时域与原臂数的正式主实验。
 
 ```powershell
 python run_main.py run --profile screen-all --dry-run
@@ -19,7 +19,7 @@ python run_main.py relative _runs/screen-all
 
 ## 百分比的含义
 
-主要热图分别比较 **SRC-R** 和 **SRC-KL-R** 与 22 个 canonical baseline。它们关闭专门分类服务，适合评价奖励效率。所有正分类偏好、area 和匹配调度控制均实际运行，数值保存在完整表中，不与 reward-only 比较混淆。
+主要热图分别比较 **SRC-R** 和 **SRC-KL-R** 与 19 个 canonical baseline。它们关闭专门分类服务，适合评价奖励效率。所有正分类偏好、area 和匹配调度控制均实际运行，数值保存在完整表中，不与 reward-only 比较混淆。
 
 每个来源组先对 layout-law 单元的重复均值等权，再计算
 
@@ -40,10 +40,10 @@ $$
 - `relative_regret_screen.png`、PDF、SVG：两种候选分别对全部 baseline 的分组热图。
 - `percent_matrix.csv`：相对百分比、绝对 regret 差、配对标准误和描述性区间。
 - `percent_matrix_SRC-R.csv`、`percent_matrix_SRC-KL-R.csv`：可直接读取的宽表。
-- `all_cell_methods.csv`：40 方法 × 540 cells，共 21,600 个单元均值与 MCSE。
+- `all_cell_methods.csv`：37 方法 × 540 cells，共 19,980 个单元均值与 MCSE。
 - `section_methods.csv`：全部方法在各来源与两种总体权重下的表现。
-- `all_method_relative_overall.csv`：全部方法相对 22 baseline 的总体百分比。
+- `all_method_relative_overall.csv`：全部方法相对 19 baseline 的总体百分比。
 - `direct_KL_minus_SRC.csv`：两候选之间的直接配对比较。
 - `summary.json`、`report.html`：完整性、失败旗标与离线图表报告。
 
-所有 coverage、错误标签和空交集路径保留。没有根据表现删除方法、选择最好的 BL-MOSS 参数或改变算法参数。以上结论只条件于这套预先确定的缩小环境矩阵。
+所有 coverage、错误标签和空交集路径保留。比较范围按用户本次要求排除 BL-MOSS：该规则限制接纳的到达标签，可能持续错过较晚到达的优臂。这是比较设计调整，没有依据观察到的胜负择优保留其参数。其余方法的算法参数、环境、种子与配对规则保持冻结。以上结论只条件于这套预先确定的缩小环境矩阵。

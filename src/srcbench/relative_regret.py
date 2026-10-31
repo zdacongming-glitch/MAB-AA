@@ -220,7 +220,7 @@ def _figures(records, metadata, baseline_ids, summary, out):
                 ax.set_xticks(range(len(COLUMNS)), [_label(c, metadata) for c in COLUMNS],
                               fontsize=8, rotation=30, ha="right")
                 ax.set_yticks(range(len(baselines)), baselines, fontsize=8)
-                ax.set_title(target + " versus each comparator", fontweight="bold", pad=12)
+                ax.set_title(f"{target} versus {len(baselines)} baselines", fontweight="bold", pad=12)
                 ax.set_xticks(np.arange(-.5, len(COLUMNS), 1), minor=True)
                 ax.set_yticks(np.arange(-.5, len(baselines), 1), minor=True)
                 ax.grid(which="minor", color="white", linewidth=1)
@@ -303,7 +303,7 @@ def analyze_relative(outputdir):
                    all_six_sections_present=set(SECTIONS).issubset(sections),
                    actual_horizons=sorted({int(r["T"]) for r in rows}),
                    replications=sorted({r["paths"] for r in cells}),
-                   candidates=list(TARGETS), comparators=baselines,
+                   candidates=list(TARGETS), comparators=baselines, comparator_count=len(baselines),
                    percent_definition="100*(candidate macro mean/comparator macro mean-1); never average cell percentages",
                    primary_overall="equal weight per environmental cell", secondary_overall="equal weight per source section, then per cell",
                    intervals="nominal paired stratified delta-method t intervals with covariance; descriptive only",
@@ -351,8 +351,8 @@ def analyze_relative(outputdir):
     report = ("<!doctype html><html lang='en'><meta charset='utf-8'><title>Relative regret screening</title>"
               "<body style='font:15px system-ui;margin:30px'><h1>Scaled all-settings regret screen</h1>"
               "<p>Original full-size experiment not run. All scientific failure paths are retained. "
-              "The main heatmap compares the two reward endpoints against the canonical baseline configurations; "
-              "all executed methods, including positive-service modes, are in all_cell_methods.csv and section_methods.csv.</p>"
+              f"The main heatmap compares the two reward endpoints against {summary['comparator_count']} canonical baseline configurations; "
+              f"all {summary['methods']} executed methods, including positive-service modes, are in all_cell_methods.csv and section_methods.csv.</p>"
               "<p>Primary overall: every layout × law cell has equal weight. Secondary balanced overall: every source section "
               "has equal weight. Percentages compare the corresponding macro means and are not averages of cell percentages. "
               "No significance stars are shown; nominal small-sample intervals are descriptive and unadjusted.</p>"

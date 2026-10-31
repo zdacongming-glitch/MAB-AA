@@ -1,5 +1,5 @@
 {
-  "expected_runs": 448,
+  "expected_runs": 400,
   "layouts": [
     {
       "T": 1000,
@@ -116,45 +116,6 @@
       "kernel": "AUER",
       "known_horizon": false,
       "params": {},
-      "planner": "paired",
-      "preference": 0.0
-    },
-    "BL-MOSS-b0.5": {
-      "beta_c": null,
-      "beta_r": null,
-      "family": "baseline",
-      "id": "BL-MOSS-b0.5",
-      "kernel": "BL-MOSS",
-      "known_horizon": true,
-      "params": {
-        "arrival_exponent": 0.5
-      },
-      "planner": "paired",
-      "preference": 0.0
-    },
-    "BL-MOSS-b1": {
-      "beta_c": null,
-      "beta_r": null,
-      "family": "baseline",
-      "id": "BL-MOSS-b1",
-      "kernel": "BL-MOSS",
-      "known_horizon": true,
-      "params": {
-        "arrival_exponent": 1.0
-      },
-      "planner": "paired",
-      "preference": 0.0
-    },
-    "BL-MOSS-b2": {
-      "beta_c": null,
-      "beta_r": null,
-      "family": "baseline",
-      "id": "BL-MOSS-b2",
-      "kernel": "BL-MOSS",
-      "known_horizon": true,
-      "params": {
-        "arrival_exponent": 2.0
-      },
       "planner": "paired",
       "preference": 0.0
     },
@@ -538,7 +499,7 @@
         "hetero_jackpot",
         "trunc_normal"
       ],
-      "method_count": 24,
+      "method_count": 21,
       "methods": [
         "SRC-R",
         "SRC-KL-R",
@@ -557,9 +518,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -700,9 +658,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -725,7 +680,7 @@
           "4000": 100
         }
       },
-      "unique_paths": 86400
+      "unique_paths": 79920
     },
     "seed_bases": {
       "main": 2026103101,
@@ -757,8 +712,7 @@
           "IMED",
           "Empirical-KL-UCB",
           "ACI",
-          "Growing-MOSS",
-          "BL-MOSS-b1"
+          "Growing-MOSS"
         ],
         "parent_group": "dense",
         "replications": 4,
@@ -796,9 +750,6 @@
           "Bayes-UCB",
           "Empirical-KL-UCB",
           "SB-EXP3-ATGT",
-          "BL-MOSS-b0.5",
-          "BL-MOSS-b1",
-          "BL-MOSS-b2",
           "UCB-log2t-c3",
           "MOSS-T-currentK",
           "TS-Jeffreys",
@@ -831,26 +782,26 @@
       ],
       "replications": 128
     },
-    "unique_paths": 418560
+    "unique_paths": 374496
   },
   "source_files": {
-    "configs/analysis_plan.json": "b7f31200ff1f673e1b9ee72ac868a68ed561bf88424d66daf90a2fd03e834106",
+    "configs/analysis_plan.json": "134b3a4cf864a9b9fded9ef052e646ba058cfb9194d4a1405b423be7f96de7f9",
     "configs/layouts.json": "b6195271260e1f157b524f5b147ef09bedf3059f65cbbc7352b5c87b1d857ceb",
-    "configs/methods.json": "3b2e3826391b00c49dd58ff472b9a073aeadcbcf4399e19f7761b2f268a34bf6",
-    "configs/protocol.json": "3bca49ef267b25a291d0a8c2d3aa7a4fcdbd1d84d99834c039393f9af02eb512",
+    "configs/methods.json": "78bf00473cf5312e1e44734769489f03a4539deee200ee7df00c5c6e07ca0356",
+    "configs/protocol.json": "7fc08c95090efcb33547973697a2c7f54a7a27ef6e4947af1b0d4af7d26fffaf",
     "configs/provenance.json": "4edfeb6d8653e6aa874fe846b17673a0958a2aa713c670ed00bb7e4f78a1b3c6",
     "requirements.txt": "f8fd8c730954d601db8ecd645bcbf711a425abfbcd77913cd5997588ec958844",
     "run_main.py": "8d0274a78ca768cbc128260096faa3e527c5399fd2e42171bf84043e10cde5c6",
     "src/srcbench/__init__.py": "fb96edf738daf0835d69891e02945443e1cf48ac5d422898cf6aa37062a177f8",
     "src/srcbench/analysis.py": "19fbe22aad85f1bc8bd7529fd522a2f24c1b92bba066aeb9f7680fb10f671eb3",
-    "src/srcbench/baselines.py": "f0aa001646c30cbf3c9cb4836bf382e4193a64daa6afdf402e4e7d97eab13509",
+    "src/srcbench/baselines.py": "bc863e0e821fd741a9fdc9329d6314fc75720ce2ef311b750fb0cc271e218e73",
     "src/srcbench/design.py": "b9acd2e65fa9199c7fa7253c3d3d1dad65b81d1c6c3889d7bcdf39b97fc28e3b",
     "src/srcbench/environment.py": "ac5a45021aa45d0573ffa9139eb0a555c889fc27ceaee48fe8bced512e16d2bf",
     "src/srcbench/mathcore.py": "5f04d00937a79b1b7efaab4403eb3f899e86fecc68f86fd61fabdf8d2c1e3923",
-    "src/srcbench/methods.py": "9b1bceba84ce72f1680a521568fac15c013c4abe55123c049ff34e2f04346513",
+    "src/srcbench/methods.py": "8f0b8ecc08e66cc1df82f49de715e01e4d2e280e31b3b9d334b9ce67dac156bb",
     "src/srcbench/plotting.py": "c95db15aec3303f43708dd49dda8be0231814cd48d029d9e437038860d375677",
     "src/srcbench/policy.py": "adbefa00e3b8f92e5a966a1a9b10049b24625f371b10b2344dcf4ac63d200bf3",
-    "src/srcbench/relative_regret.py": "5efe5d26750f4d590afde521c99f8032f230580d057af703464c9b80f736d727",
+    "src/srcbench/relative_regret.py": "44fd86c6ecaabbdb67d1a0768ee448e9132ea8cc5cabb0309072651dfd4391e5",
     "src/srcbench/runner.py": "9d7a9a65a61709e2c691188f5a0dd387ce677b202084bfef2048f2971177c473",
     "src/srcbench/simulation.py": "f1965d301f775e4afea9e76c4653dc2dacd6081fe597bc06d152209918e92592"
   },
@@ -876,18 +827,6 @@
           "joint"
         ],
         "AUER": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b0.5": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b1": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b2": [
           "reward",
           "joint"
         ],
@@ -1006,9 +945,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -1046,18 +982,6 @@
           "reward",
           "joint"
         ],
-        "BL-MOSS-b0.5": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b1": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b2": [
-          "reward",
-          "joint"
-        ],
         "Bayes-UCB": [
           "reward",
           "joint"
@@ -1173,9 +1097,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -1213,18 +1134,6 @@
           "reward",
           "joint"
         ],
-        "BL-MOSS-b0.5": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b1": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b2": [
-          "reward",
-          "joint"
-        ],
         "Bayes-UCB": [
           "reward",
           "joint"
@@ -1340,9 +1249,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -1380,18 +1286,6 @@
           "reward",
           "joint"
         ],
-        "BL-MOSS-b0.5": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b1": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b2": [
-          "reward",
-          "joint"
-        ],
         "Bayes-UCB": [
           "reward",
           "joint"
@@ -1507,9 +1401,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -1547,18 +1438,6 @@
           "reward",
           "joint"
         ],
-        "BL-MOSS-b0.5": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b1": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b2": [
-          "reward",
-          "joint"
-        ],
         "Bayes-UCB": [
           "reward",
           "joint"
@@ -1674,9 +1553,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -1714,18 +1590,6 @@
           "reward",
           "joint"
         ],
-        "BL-MOSS-b0.5": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b1": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b2": [
-          "reward",
-          "joint"
-        ],
         "Bayes-UCB": [
           "reward",
           "joint"
@@ -1841,9 +1705,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -1881,18 +1742,6 @@
           "reward",
           "joint"
         ],
-        "BL-MOSS-b0.5": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b1": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b2": [
-          "reward",
-          "joint"
-        ],
         "Bayes-UCB": [
           "reward",
           "joint"
@@ -2008,9 +1857,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -2048,18 +1894,6 @@
           "reward",
           "joint"
         ],
-        "BL-MOSS-b0.5": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b1": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b2": [
-          "reward",
-          "joint"
-        ],
         "Bayes-UCB": [
           "reward",
           "joint"
@@ -2175,9 +2009,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -2215,18 +2046,6 @@
           "reward",
           "joint"
         ],
-        "BL-MOSS-b0.5": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b1": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b2": [
-          "reward",
-          "joint"
-        ],
         "Bayes-UCB": [
           "reward",
           "joint"
@@ -2342,9 +2161,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -2382,18 +2198,6 @@
           "reward",
           "joint"
         ],
-        "BL-MOSS-b0.5": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b1": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b2": [
-          "reward",
-          "joint"
-        ],
         "Bayes-UCB": [
           "reward",
           "joint"
@@ -2509,9 +2313,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -2549,18 +2350,6 @@
           "reward",
           "joint"
         ],
-        "BL-MOSS-b0.5": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b1": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b2": [
-          "reward",
-          "joint"
-        ],
         "Bayes-UCB": [
           "reward",
           "joint"
@@ -2676,9 +2465,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -2716,18 +2502,6 @@
           "reward",
           "joint"
         ],
-        "BL-MOSS-b0.5": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b1": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b2": [
-          "reward",
-          "joint"
-        ],
         "Bayes-UCB": [
           "reward",
           "joint"
@@ -2843,9 +2617,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -2883,18 +2654,6 @@
           "reward",
           "joint"
         ],
-        "BL-MOSS-b0.5": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b1": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b2": [
-          "reward",
-          "joint"
-        ],
         "Bayes-UCB": [
           "reward",
           "joint"
@@ -3010,9 +2769,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -3050,18 +2806,6 @@
           "reward",
           "joint"
         ],
-        "BL-MOSS-b0.5": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b1": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b2": [
-          "reward",
-          "joint"
-        ],
         "Bayes-UCB": [
           "reward",
           "joint"
@@ -3177,9 +2921,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -3217,18 +2958,6 @@
           "reward",
           "joint"
         ],
-        "BL-MOSS-b0.5": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b1": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b2": [
-          "reward",
-          "joint"
-        ],
         "Bayes-UCB": [
           "reward",
           "joint"
@@ -3344,9 +3073,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -3384,18 +3110,6 @@
           "reward",
           "joint"
         ],
-        "BL-MOSS-b0.5": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b1": [
-          "reward",
-          "joint"
-        ],
-        "BL-MOSS-b2": [
-          "reward",
-          "joint"
-        ],
         "Bayes-UCB": [
           "reward",
           "joint"
@@ -3511,9 +3225,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",

@@ -2,10 +2,10 @@
   "profile": "screen-all",
   "manifest_status": "PASS",
   "scope": "Scaled all-settings pilot; original full-size experiment not run",
-  "unique_trajectories": 86400,
+  "unique_trajectories": 79920,
   "layouts": 45,
   "cells": 540,
-  "methods": 40,
+  "methods": 37,
   "cohorts": [
     "screen"
   ],
@@ -44,14 +44,12 @@
     "Bayes-UCB",
     "Empirical-KL-UCB",
     "SB-EXP3-ATGT",
-    "BL-MOSS-b0.5",
-    "BL-MOSS-b1",
-    "BL-MOSS-b2",
     "UCB-log2t-c3",
     "MOSS-T-currentK",
     "TS-Jeffreys",
     "TS-SMAB-bounded"
   ],
+  "comparator_count": 19,
   "percent_definition": "100*(candidate macro mean/comparator macro mean-1); never average cell percentages",
   "primary_overall": "equal weight per environmental cell",
   "secondary_overall": "equal weight per source section, then per cell",
@@ -60,7 +58,7 @@
   "all_failure_paths_retained": true,
   "scientific_flag_paths": {
     "label_error": 0,
-    "coverage_error": 220,
+    "coverage_error": 206,
     "empty_intersection": 0
   },
   "figures": [

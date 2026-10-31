@@ -3,18 +3,18 @@
   "smoke_only": true,
   "manifest_status": "PASS",
   "scientific_status": "SMOKE_ONLY_FULL_NOT_RUN",
-  "unique_trajectories": 448,
-  "suite_memberships": 896,
-  "expected_unique_trajectories": 448,
+  "unique_trajectories": 400,
+  "suite_memberships": 800,
+  "expected_unique_trajectories": 400,
   "expected_count_matches": true,
   "execution_failure_records": 0,
   "all_scientific_failure_paths_retained": true,
   "unique_by_cohort": {
-    "smoke": 448
+    "smoke": 400
   },
   "membership_by_suite": {
-    "reward": 448,
-    "joint": 448
+    "reward": 400,
+    "joint": 400
   },
   "weighting": "equal environmental cell; independent replications within each fixed cell",
   "difference_direction": "left minus right",

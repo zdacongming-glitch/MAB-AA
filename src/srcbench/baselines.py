@@ -50,7 +50,7 @@ def bernoulli_upper(mean, budget):
 _NUMERIC_CODES = {"UCB1": 0, "AUER": 1, "UCB-conservative": 2,
                   "UCB-V": 3, "UCB1-Tuned": 4, "ACI": 5,
                   "Clipped-ACI": 6, "Growing-MOSS": 7,
-                  "MOSS-T-currentK": 8, "BL-MOSS": 8,
+                  "MOSS-T-currentK": 8,
                   "KL-UCB": 9, "KL-UCB+": 10}
 
 
@@ -292,9 +292,6 @@ class BaselineSelector:
             return 1. - betaincinv(1. + n - S, 1. + S, 1. / t)
 
         allowed = k
-        if kernel == "BL-MOSS":
-            beta = self.params["arrival_exponent"]
-            allowed = min(k, max(1, math.ceil(self.horizon ** (1. / (1. + 2. * beta)))))
         scores = np.full(k, -math.inf)
         unobserved = np.flatnonzero(n[:allowed] == 0)
         if len(unobserved):

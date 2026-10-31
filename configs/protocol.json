@@ -8,7 +8,7 @@
   "provenance": "configs/provenance.json",
   "layouts": 45,
   "cells": 540,
-  "unique_paths": 418560,
+  "unique_paths": 374496,
   "seed_bases": {
     "main": 2026103101,
     "tail": 2026103102,
@@ -57,7 +57,7 @@
       "dense": 16,
       "scale": 8
     },
-    "method_count": 24,
+    "method_count": 21,
     "methods": [
       "SRC-R",
       "SRC-KL-R",
@@ -76,9 +76,6 @@
       "Bayes-UCB",
       "Empirical-KL-UCB",
       "SB-EXP3-ATGT",
-      "BL-MOSS-b0.5",
-      "BL-MOSS-b1",
-      "BL-MOSS-b2",
       "UCB-log2t-c3",
       "MOSS-T-currentK",
       "TS-Jeffreys",
@@ -195,9 +192,6 @@
         "Bayes-UCB",
         "Empirical-KL-UCB",
         "SB-EXP3-ATGT",
-        "BL-MOSS-b0.5",
-        "BL-MOSS-b1",
-        "BL-MOSS-b2",
         "UCB-log2t-c3",
         "MOSS-T-currentK",
         "TS-Jeffreys",
@@ -228,8 +222,7 @@
         "IMED",
         "Empirical-KL-UCB",
         "ACI",
-        "Growing-MOSS",
-        "BL-MOSS-b1"
+        "Growing-MOSS"
       ],
       "seed_key": "smoke_dense"
     }
@@ -282,9 +275,6 @@
       "Bayes-UCB",
       "Empirical-KL-UCB",
       "SB-EXP3-ATGT",
-      "BL-MOSS-b0.5",
-      "BL-MOSS-b1",
-      "BL-MOSS-b2",
       "UCB-log2t-c3",
       "MOSS-T-currentK",
       "TS-Jeffreys",
@@ -360,7 +350,7 @@
     },
     "layouts": 45,
     "cells": 540,
-    "unique_paths": 86400,
+    "unique_paths": 79920,
     "seed_key": "screen_all",
     "cohort": "screen",
     "status": "SMALL_SCREEN",

@@ -44,13 +44,18 @@ def test_arrival_clock_uses_lifetime_counts_after_restart():
     assert selector.last_scores[1] == pytest.approx(.5 + math.sqrt(math.log(10 / 8) / 2))
 
 
-def test_known_horizon_is_declared_and_rank_cap_is_enforced():
+def test_known_horizon_is_declared_and_moss_uses_current_available_count():
     with pytest.raises(ValueError, match="horizon"):
         BaselineSelector("MOSS-T-currentK")
-    selector = BaselineSelector("BL-MOSS-b1", horizon=8)
+    selector = BaselineSelector("MOSS-T-currentK", horizon=8)
     st = state(n=(1, 1, 0), S=(0., 0., 0.))
-    assert choose(selector, st) in (0, 1)  # ceil(8^(1/3))=2, third arm excluded.
-    assert selector.last_scores[2] == -math.inf
+    assert choose(selector, st) == 2
+    selector = BaselineSelector("MOSS-T-currentK", horizon=300)
+    st = state(n=(2, 5, 3), S=(1., 1., 1.))
+    expected = [si/ni + math.sqrt(max(0., math.log(300/(3*ni)))/ni)
+                for ni, si in zip(st[0], st[1])]
+    assert choose(selector, st, t=30) == int(np.argmax(expected))
+    assert np.allclose(selector.last_scores, expected)
 
 
 def test_beta_uniform_prior_is_not_forced_initialization():

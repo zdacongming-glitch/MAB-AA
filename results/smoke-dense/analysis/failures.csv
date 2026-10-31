@@ -1,6 +1,5 @@
 cohort,group,suite,method,paths,label_error_paths,coverage_error_paths,empty_intersection_paths
 smoke,dense,joint,ACI,16,0,1,0
-smoke,dense,joint,BL-MOSS-b1,16,0,1,0
 smoke,dense,joint,Empirical-KL-UCB,16,0,1,0
 smoke,dense,joint,Growing-MOSS,16,0,1,0
 smoke,dense,joint,IMED,16,0,1,0
@@ -11,7 +10,6 @@ smoke,dense,joint,SRC-L060,16,0,1,0
 smoke,dense,joint,SRC-R,16,0,1,0
 smoke,dense,joint,SRC-area,16,0,1,0
 smoke,dense,reward,ACI,16,0,1,0
-smoke,dense,reward,BL-MOSS-b1,16,0,1,0
 smoke,dense,reward,Empirical-KL-UCB,16,0,1,0
 smoke,dense,reward,Growing-MOSS,16,0,1,0
 smoke,dense,reward,IMED,16,0,1,0

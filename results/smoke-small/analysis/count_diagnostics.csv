@@ -20,9 +20,6 @@ smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,0,UCB-V,1000.0,1000.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,0,Bayes-UCB,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,0,Empirical-KL-UCB,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,0,SB-EXP3-ATGT,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,0,BL-MOSS-b0.5,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,0,BL-MOSS-b1,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,0,BL-MOSS-b2,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,0,UCB-log2t-c3,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,0,MOSS-T-currentK,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,0,TS-Jeffreys,1000.0,1000.0,2,2,2,0,0.0
@@ -48,9 +45,6 @@ smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,1,UCB-V,1000.0,1000.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,1,Bayes-UCB,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,1,Empirical-KL-UCB,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,1,SB-EXP3-ATGT,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,1,BL-MOSS-b0.5,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,1,BL-MOSS-b1,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,1,BL-MOSS-b2,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,1,UCB-log2t-c3,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,1,MOSS-T-currentK,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,1,TS-Jeffreys,1000.0,1000.0,2,2,2,0,0.0
@@ -76,9 +70,6 @@ smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,2,UCB-V,1000.0,1000.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,2,Bayes-UCB,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,2,Empirical-KL-UCB,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,2,SB-EXP3-ATGT,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,2,BL-MOSS-b0.5,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,2,BL-MOSS-b1,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,2,BL-MOSS-b2,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,2,UCB-log2t-c3,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,2,MOSS-T-currentK,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,2,TS-Jeffreys,1000.0,1000.0,2,2,2,0,0.0
@@ -104,9 +95,6 @@ smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,3,UCB-V,1000.0,1000.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,3,Bayes-UCB,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,3,Empirical-KL-UCB,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,3,SB-EXP3-ATGT,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,3,BL-MOSS-b0.5,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,3,BL-MOSS-b1,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,3,BL-MOSS-b2,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,3,UCB-log2t-c3,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,3,MOSS-T-currentK,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,bernoulli,3,TS-Jeffreys,1000.0,1000.0,2,2,2,0,0.0
@@ -132,9 +120,6 @@ smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,0,UCB-V,1000.0,1000.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,0,Bayes-UCB,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,0,Empirical-KL-UCB,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,0,SB-EXP3-ATGT,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,0,BL-MOSS-b0.5,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,0,BL-MOSS-b1,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,0,BL-MOSS-b2,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,0,UCB-log2t-c3,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,0,MOSS-T-currentK,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,0,TS-Jeffreys,1000.0,1000.0,2,2,2,0,0.0
@@ -160,9 +145,6 @@ smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,1,UCB-V,1000.0,1000.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,1,Bayes-UCB,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,1,Empirical-KL-UCB,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,1,SB-EXP3-ATGT,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,1,BL-MOSS-b0.5,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,1,BL-MOSS-b1,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,1,BL-MOSS-b2,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,1,UCB-log2t-c3,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,1,MOSS-T-currentK,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,1,TS-Jeffreys,1000.0,1000.0,2,2,2,0,0.0
@@ -188,9 +170,6 @@ smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,2,UCB-V,1000.0,1000.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,2,Bayes-UCB,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,2,Empirical-KL-UCB,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,2,SB-EXP3-ATGT,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,2,BL-MOSS-b0.5,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,2,BL-MOSS-b1,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,2,BL-MOSS-b2,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,2,UCB-log2t-c3,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,2,MOSS-T-currentK,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,2,TS-Jeffreys,1000.0,1000.0,2,2,2,0,0.0
@@ -216,9 +195,6 @@ smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,3,UCB-V,1000.0,1000.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,3,Bayes-UCB,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,3,Empirical-KL-UCB,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,3,SB-EXP3-ATGT,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,3,BL-MOSS-b0.5,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,3,BL-MOSS-b1,1000.0,1000.0,2,2,2,0,0.0
-smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,3,BL-MOSS-b2,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,3,UCB-log2t-c3,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,3,MOSS-T-currentK,1000.0,1000.0,2,2,2,0,0.0
 smoke,f17,smoke-small__f17__two_close__T1000__K2,two_point,3,TS-Jeffreys,1000.0,1000.0,2,2,2,0,0.0
@@ -244,9 +220,6 @@ smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,0,UCB-V,1000.0,100
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,0,Bayes-UCB,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,0,Empirical-KL-UCB,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,0,SB-EXP3-ATGT,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,0,BL-MOSS-b0.5,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,0,BL-MOSS-b1,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,0,BL-MOSS-b2,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,0,UCB-log2t-c3,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,0,MOSS-T-currentK,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,0,TS-Jeffreys,1000.0,1000.0,3,3,3,0,0.0
@@ -272,9 +245,6 @@ smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,1,UCB-V,1000.0,100
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,1,Bayes-UCB,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,1,Empirical-KL-UCB,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,1,SB-EXP3-ATGT,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,1,BL-MOSS-b0.5,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,1,BL-MOSS-b1,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,1,BL-MOSS-b2,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,1,UCB-log2t-c3,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,1,MOSS-T-currentK,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,1,TS-Jeffreys,1000.0,1000.0,3,3,3,0,0.0
@@ -300,9 +270,6 @@ smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,2,UCB-V,1000.0,100
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,2,Bayes-UCB,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,2,Empirical-KL-UCB,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,2,SB-EXP3-ATGT,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,2,BL-MOSS-b0.5,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,2,BL-MOSS-b1,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,2,BL-MOSS-b2,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,2,UCB-log2t-c3,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,2,MOSS-T-currentK,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,2,TS-Jeffreys,1000.0,1000.0,3,3,3,0,0.0
@@ -328,9 +295,6 @@ smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,3,UCB-V,1000.0,100
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,3,Bayes-UCB,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,3,Empirical-KL-UCB,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,3,SB-EXP3-ATGT,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,3,BL-MOSS-b0.5,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,3,BL-MOSS-b1,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,3,BL-MOSS-b2,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,3,UCB-log2t-c3,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,3,MOSS-T-currentK,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,bernoulli,3,TS-Jeffreys,1000.0,1000.0,3,3,3,0,0.0
@@ -356,9 +320,6 @@ smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,0,UCB-V,1000.0,100
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,0,Bayes-UCB,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,0,Empirical-KL-UCB,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,0,SB-EXP3-ATGT,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,0,BL-MOSS-b0.5,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,0,BL-MOSS-b1,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,0,BL-MOSS-b2,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,0,UCB-log2t-c3,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,0,MOSS-T-currentK,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,0,TS-Jeffreys,1000.0,1000.0,3,3,3,0,0.0
@@ -384,9 +345,6 @@ smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,1,UCB-V,1000.0,100
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,1,Bayes-UCB,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,1,Empirical-KL-UCB,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,1,SB-EXP3-ATGT,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,1,BL-MOSS-b0.5,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,1,BL-MOSS-b1,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,1,BL-MOSS-b2,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,1,UCB-log2t-c3,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,1,MOSS-T-currentK,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,1,TS-Jeffreys,1000.0,1000.0,3,3,3,0,0.0
@@ -412,9 +370,6 @@ smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,2,UCB-V,1000.0,100
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,2,Bayes-UCB,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,2,Empirical-KL-UCB,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,2,SB-EXP3-ATGT,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,2,BL-MOSS-b0.5,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,2,BL-MOSS-b1,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,2,BL-MOSS-b2,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,2,UCB-log2t-c3,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,2,MOSS-T-currentK,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,2,TS-Jeffreys,1000.0,1000.0,3,3,3,0,0.0
@@ -440,9 +395,6 @@ smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,3,UCB-V,1000.0,100
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,3,Bayes-UCB,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,3,Empirical-KL-UCB,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,3,SB-EXP3-ATGT,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,3,BL-MOSS-b0.5,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,3,BL-MOSS-b1,1000.0,1000.0,3,3,3,0,0.0
-smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,3,BL-MOSS-b2,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,3,UCB-log2t-c3,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,3,MOSS-T-currentK,1000.0,1000.0,3,3,3,0,0.0
 smoke,f17,smoke-small__f17__few_arrivals__T1000__K3,two_point,3,TS-Jeffreys,1000.0,1000.0,3,3,3,0,0.0

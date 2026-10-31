@@ -59,9 +59,6 @@ _baseline_specs = [
     ("Bayes-UCB", "Bayes-UCB", {}),
     ("Empirical-KL-UCB", "Empirical-KL-UCB", {}),
     ("SB-EXP3-ATGT", "SB-EXP3-ATGT", {}),
-    ("BL-MOSS-b0.5", "BL-MOSS", {"arrival_exponent": .5}),
-    ("BL-MOSS-b1", "BL-MOSS", {"arrival_exponent": 1.}),
-    ("BL-MOSS-b2", "BL-MOSS", {"arrival_exponent": 2.}),
     ("UCB-log2t-c3", "UCB-conservative", {}),
     ("MOSS-T-currentK", "MOSS-T-currentK", {}),
     ("TS-Jeffreys", "TS-Jeffreys", {}),
@@ -71,7 +68,7 @@ BASELINE_IDS = []
 for _identifier, _kernel, _params in _baseline_specs:
     METHODS[_identifier] = _method(
         _identifier, "baseline", _kernel, params=_params,
-        known_horizon=_kernel in {"BL-MOSS", "MOSS-T-currentK"})
+        known_horizon=_kernel == "MOSS-T-currentK")
     BASELINE_IDS.append(_identifier)
 
 ALIASES = {
@@ -84,9 +81,6 @@ ALIASES = {
     "UCB_Tuned": "UCB1-Tuned", "UCB_V": "UCB-V",
     "Bayes_UCB": "Bayes-UCB", "Empirical_KL_UCB": "Empirical-KL-UCB",
     "empirical-KL-UCB": "Empirical-KL-UCB", "SB_EXP3_ATGT": "SB-EXP3-ATGT",
-    "BL_MOSS_b05": "BL-MOSS-b0.5", "BL_MOSS_b1": "BL-MOSS-b1",
-    "BL_MOSS_b2": "BL-MOSS-b2", "BL-MOSS-P0.5": "BL-MOSS-b0.5",
-    "BL-MOSS-P1.0": "BL-MOSS-b1", "BL-MOSS-P2.0": "BL-MOSS-b2",
 }
 
 REWARD_METHOD_IDS = ["SRC-R", "SRC-KL-R", *BASELINE_IDS]

@@ -113,7 +113,6 @@ phase 累加 $p_t$，达到 1 时扣 1 并尝试服务；guard 拒绝后保留�
 | TS-SMAB-bounded | 对真实奖励另做私有 Bernoulli 化更新动作评分；报告仍用真实奖励 |
 | Bayes-UCB | uniform-prior Beta 的 $1-1/t$ 分位数；不强制初始化 |
 | SB-EXP3-ATGT | 嵌套可用集合的双层 doubling 与损失估计 |
-| 三种 BL-MOSS | 额外获知 T，只接纳前若干标签；仍对全部已到达臂报告 |
 | MOSS-T-currentK | 额外获知 T、使用当前臂数；不同于 Growing-MOSS |
 
 ACI、Clipped-ACI、UCB-log2t-c3 是明确规则的比较配置，不另计成三篇外部文献算法。旧 MC-MOSS 两个名字映射到 ACI 两配置；Thompson 与 TS-exact 去重。三个旧代码已有但旧正式实验未运行的配置为 MOSS-T-currentK、TS-Jeffreys、TS-SMAB-bounded。

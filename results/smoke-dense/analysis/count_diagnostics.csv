@@ -9,7 +9,6 @@ smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,0,I
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,0,Empirical-KL-UCB,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,0,ACI,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,0,Growing-MOSS,800.0,800.0,40,40,31,0,0.0
-smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,0,BL-MOSS-b1,800.0,800.0,10,40,31,21,0.6774193548387096
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,1,SRC-R,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,1,SRC-L060,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,1,SRC-area,800.0,800.0,40,40,31,0,0.0
@@ -20,7 +19,6 @@ smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,1,I
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,1,Empirical-KL-UCB,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,1,ACI,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,1,Growing-MOSS,800.0,800.0,40,40,31,0,0.0
-smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,1,BL-MOSS-b1,800.0,800.0,10,40,31,21,0.6774193548387096
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,2,SRC-R,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,2,SRC-L060,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,2,SRC-area,800.0,800.0,40,40,31,0,0.0
@@ -31,7 +29,6 @@ smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,2,I
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,2,Empirical-KL-UCB,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,2,ACI,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,2,Growing-MOSS,800.0,800.0,40,40,31,0,0.0
-smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,2,BL-MOSS-b1,800.0,800.0,10,40,31,21,0.6774193548387096
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,3,SRC-R,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,3,SRC-L060,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,3,SRC-area,800.0,800.0,40,40,31,0,0.0
@@ -42,7 +39,6 @@ smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,3,I
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,3,Empirical-KL-UCB,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,3,ACI,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,3,Growing-MOSS,800.0,800.0,40,40,31,0,0.0
-smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,bernoulli,3,BL-MOSS-b1,800.0,800.0,10,40,31,21,0.6774193548387096
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,0,SRC-R,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,0,SRC-L060,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,0,SRC-area,800.0,800.0,40,40,31,0,0.0
@@ -53,7 +49,6 @@ smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_q
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,0,Empirical-KL-UCB,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,0,ACI,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,0,Growing-MOSS,800.0,800.0,40,40,31,0,0.0
-smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,0,BL-MOSS-b1,800.0,800.0,10,40,31,21,0.6774193548387096
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,1,SRC-R,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,1,SRC-L060,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,1,SRC-area,800.0,800.0,40,40,31,0,0.0
@@ -64,7 +59,6 @@ smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_q
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,1,Empirical-KL-UCB,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,1,ACI,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,1,Growing-MOSS,800.0,800.0,40,40,31,0,0.0
-smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,1,BL-MOSS-b1,800.0,800.0,10,40,31,21,0.6774193548387096
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,2,SRC-R,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,2,SRC-L060,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,2,SRC-area,800.0,800.0,40,40,31,0,0.0
@@ -75,7 +69,6 @@ smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_q
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,2,Empirical-KL-UCB,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,2,ACI,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,2,Growing-MOSS,800.0,800.0,40,40,31,0,0.0
-smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,2,BL-MOSS-b1,800.0,800.0,10,40,31,21,0.6774193548387096
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,3,SRC-R,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,3,SRC-L060,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,3,SRC-area,800.0,800.0,40,40,31,0,0.0
@@ -86,7 +79,6 @@ smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_q
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,3,Empirical-KL-UCB,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,3,ACI,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,3,Growing-MOSS,800.0,800.0,40,40,31,0,0.0
-smoke,dense,smoke-dense__dense__d_stable_incumbent_K100__T800__K40,hetero_best_quiet,3,BL-MOSS-b1,800.0,800.0,10,40,31,21,0.6774193548387096
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,0,SRC-R,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,0,SRC-L060,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,0,SRC-area,800.0,800.0,34,40,31,0,0.0
@@ -97,7 +89,6 @@ smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,0,Empirical-KL-UCB,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,0,ACI,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,0,Growing-MOSS,800.0,800.0,40,40,31,0,0.0
-smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,0,BL-MOSS-b1,800.0,800.0,10,40,31,21,0.6774193548387096
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,1,SRC-R,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,1,SRC-L060,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,1,SRC-area,800.0,800.0,39,40,31,0,0.0
@@ -108,7 +99,6 @@ smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,1,Empirical-KL-UCB,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,1,ACI,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,1,Growing-MOSS,800.0,800.0,40,40,31,0,0.0
-smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,1,BL-MOSS-b1,800.0,800.0,10,40,31,21,0.6774193548387096
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,2,SRC-R,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,2,SRC-L060,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,2,SRC-area,800.0,800.0,40,40,31,0,0.0
@@ -119,7 +109,6 @@ smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,2,Empirical-KL-UCB,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,2,ACI,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,2,Growing-MOSS,800.0,800.0,40,40,31,0,0.0
-smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,2,BL-MOSS-b1,800.0,800.0,10,40,31,21,0.6774193548387096
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,3,SRC-R,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,3,SRC-L060,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,3,SRC-area,800.0,800.0,39,40,31,0,0.0
@@ -130,7 +119,6 @@ smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,3,Empirical-KL-UCB,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,3,ACI,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,3,Growing-MOSS,800.0,800.0,40,40,31,0,0.0
-smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,bernoulli,3,BL-MOSS-b1,800.0,800.0,10,40,31,21,0.6774193548387096
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,0,SRC-R,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,0,SRC-L060,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,0,SRC-area,800.0,800.0,37,40,31,0,0.0
@@ -141,7 +129,6 @@ smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_bes
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,0,Empirical-KL-UCB,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,0,ACI,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,0,Growing-MOSS,800.0,800.0,40,40,31,0,0.0
-smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,0,BL-MOSS-b1,800.0,800.0,10,40,31,21,0.6774193548387096
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,1,SRC-R,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,1,SRC-L060,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,1,SRC-area,800.0,800.0,37,40,31,0,0.0
@@ -152,7 +139,6 @@ smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_bes
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,1,Empirical-KL-UCB,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,1,ACI,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,1,Growing-MOSS,800.0,800.0,40,40,31,0,0.0
-smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,1,BL-MOSS-b1,800.0,800.0,10,40,31,21,0.6774193548387096
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,2,SRC-R,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,2,SRC-L060,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,2,SRC-area,800.0,800.0,37,40,31,0,0.0
@@ -163,7 +149,6 @@ smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_bes
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,2,Empirical-KL-UCB,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,2,ACI,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,2,Growing-MOSS,800.0,800.0,40,40,31,0,0.0
-smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,2,BL-MOSS-b1,800.0,800.0,10,40,31,21,0.6774193548387096
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,3,SRC-R,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,3,SRC-L060,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,3,SRC-area,800.0,800.0,34,40,31,0,0.0
@@ -174,4 +159,3 @@ smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_bes
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,3,Empirical-KL-UCB,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,3,ACI,800.0,800.0,40,40,31,0,0.0
 smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,3,Growing-MOSS,800.0,800.0,40,40,31,0,0.0
-smoke,dense,smoke-dense__dense__d_late_regime_records_K100__T800__K40,hetero_best_quiet,3,BL-MOSS-b1,800.0,800.0,10,40,31,21,0.6774193548387096

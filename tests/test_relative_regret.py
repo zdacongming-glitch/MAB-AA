@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from srcbench.relative_regret import (SECTIONS, _estimate, _label, _layout_metadata,
+from srcbench.relative_regret import (COLUMNS, SECTIONS, TARGETS, _estimate, _label, _layout_metadata,
                                      analyze_relative)
 
 
@@ -92,20 +92,21 @@ def test_all_method_exports_and_two_panel_three_format_artifacts(tmp_path):
     (tmp_path / "manifest.json").write_text(json.dumps(dict(status="PASS", expected_runs=len(rows))), encoding="utf-8")
     _write(tmp_path / "runs.csv.gz", rows)
     summary = analyze_relative(tmp_path)
-    assert summary["unique_trajectories"] == 6*4*40
+    assert summary["unique_trajectories"] == len(SECTIONS)*4*len(METHODS)
     assert summary["all_six_sections_present"]
     assert summary["scientific_flag_paths"]["coverage_error"] == 1
-    assert len(summary["comparators"]) == 22
+    assert len(summary["comparators"]) == len(BASELINE_IDS)
+    assert summary["comparator_count"] == len(BASELINE_IDS)
     assert not summary["stars"]
     assert {Path(p).suffix for p in summary["figures"]} == {".png", ".pdf", ".svg"}
     assert all(Path(p).is_file() for p in summary["figures"])
     out = tmp_path / "relative_regret"
     cells = _read(out / "all_cell_methods.csv")
-    assert len(cells) == 6*40
+    assert len(cells) == len(SECTIONS)*len(METHODS)
     assert {r["method"] for r in cells} == set(METHODS)
     assert sum(int(r["coverage_error_paths"]) for r in cells) == 1
     matrix = _read(out / "percent_matrix.csv")
-    assert len(matrix) == 2*22*8
+    assert len(matrix) == len(TARGETS)*len(BASELINE_IDS)*len(COLUMNS)
     wide = _read(out / "percent_matrix_SRC-KL-R.csv")
     assert len(wide) == len(BASELINE_IDS)
     assert "all_cells" in wide[0] and "balanced_sections" in wide[0]
@@ -113,3 +114,6 @@ def test_all_method_exports_and_two_panel_three_format_artifacts(tmp_path):
     assert {r["candidate"] for r in all_methods} == set(METHODS)
     direct = _read(out / "direct_KL_minus_SRC.csv")
     assert {r["comparator"] for r in direct} == {"SRC-R"}
+    report = (out / "report.html").read_text(encoding="utf-8")
+    assert f"{len(BASELINE_IDS)} canonical baseline configurations" in report
+    assert f"all {len(METHODS)} executed methods" in report

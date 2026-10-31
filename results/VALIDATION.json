@@ -1,45 +1,131 @@
 {
   "status": "PASS",
-  "python": "3.11.7",
-  "platform": "Windows-10-10.0.26200-SP0",
-  "tests_passed": 110,
+  "tests_passed": 107,
   "commands": [
     "python -m pytest -q",
-    "python run_main.py verify results/screen-all --check-current",
     "python run_main.py verify results/smoke-small --check-current",
-    "python run_main.py verify results/smoke-dense --check-current"
+    "python run_main.py verify results/smoke-dense --check-current",
+    "python run_main.py verify results/screen-all --check-current"
   ],
-  "algorithm_core_unchanged_from_commit": "575c994",
+  "candidate_algorithm_unchanged_from_commit": "0a19f9525bfdd905dfecf23be390dd3a349d6dfb",
+  "candidate_algorithm_sha256": {
+    "src/srcbench/policy.py": "adbefa00e3b8f92e5a966a1a9b10049b24625f371b10b2344dcf4ac63d200bf3",
+    "src/srcbench/mathcore.py": "5f04d00937a79b1b7efaab4403eb3f899e86fecc68f86fd61fabdf8d2c1e3923"
+  },
   "markdown_formula_delimiters": "PASS",
   "screen_shape_and_pairing": "PASS",
-  "independent_pandas_percent_recalculation": "PASS",
-  "resume_shard_hash_reuse": "PASS",
-  "scientific_paths_dropped": 0,
+  "independent_pandas_percent_recalculation": {
+    "unique_trajectories": 79920,
+    "methods": 37,
+    "baselines": 19,
+    "environmental_cells": 540,
+    "cell_method_rows": 19980,
+    "paired_environment_comparisons": 20520,
+    "checked_matrix_cells": 304,
+    "max_absolute_percentage_discrepancy": 1.5276668818842154e-13,
+    "all_cell_regret_means_match": true,
+    "both_wide_matrices_match": true,
+    "all_failure_paths_included": true
+  },
+  "endpoint_invariance_to_previous_commit": {
+    "smoke-small": {
+      "previous_commit": "0a19f9525bfdd905dfecf23be390dd3a349d6dfb",
+      "count": 400,
+      "endpoint_sha256_excluding_runtime": "840f0cd50ff503f59955f9b54af6fdac8d71fef467313b5c378a2439342378ac",
+      "pre_removal_numerical_endpoints_identical": true,
+      "manifest_sha256": "fbf96f4f380d9eaf50bdc4ba1bdaaab78ebab6ea38bc2821131fd084dd450081",
+      "config_sha256": "be005c10c7f4977117b88d5fe57408d5a45cc0b59b46df2e2a9bba1b22da9c93"
+    },
+    "smoke-dense": {
+      "previous_commit": "0a19f9525bfdd905dfecf23be390dd3a349d6dfb",
+      "count": 160,
+      "endpoint_sha256_excluding_runtime": "f06871192c108b6e376c95d5a976fa9aa6a71a768a71bceceb49ead653f22e80",
+      "pre_removal_numerical_endpoints_identical": true,
+      "manifest_sha256": "8086aae4df6ddad6efaf4131e515ffd2e2c77312754fbbcd010cc8754993a0a0",
+      "config_sha256": "0a6b656a21e043291ef41bcdb813a1a50520fa134a2d1f582d20cb96500587dd"
+    },
+    "screen-all": {
+      "previous_commit": "0a19f9525bfdd905dfecf23be390dd3a349d6dfb",
+      "count": 79920,
+      "endpoint_sha256_excluding_runtime": "1c4b8c25eedba1a928379c341f53e073201893e86f49d1ab4c76904ccbc2e8f2",
+      "pre_removal_numerical_endpoints_identical": true,
+      "manifest_sha256": "bfb1886c4b2927240845aa649defb0dddceffed8f4069fb31db10edc37b43961",
+      "config_sha256": "01ed15e1aa0a7e39b57abd466a9bb7dde21ed3b0fd442e63516c17a9589ca7d8"
+    }
+  },
+  "independent_validation_script_sha256": "0c8a10dd46134eaabc2422f936c6f53eb8ff8ebd8cea4eb0a6df2767481df1fb",
+  "independent_validation_sha256": "39797b44fac05f159017b585fec2e8eb0fa7248eb646a1dea721a3fd53ad52ec",
+  "execution_recovery": {
+    "report": "screen-all/execution_recovery.json",
+    "initial_workers": 16,
+    "shard_hashes_identical": true,
+    "completed_shards": 2160,
+    "resimulated_shards": 0
+  },
+  "scientific_failure_paths_dropped": 0,
   "full_study_executed": false,
+  "comparator_scope_revision": {
+    "excluded_methods": [
+      "BL-MOSS-b0.5",
+      "BL-MOSS-b1",
+      "BL-MOSS-b2"
+    ],
+    "baseline_count": 19,
+    "reward_method_count": 21,
+    "total_method_count": 37,
+    "basis": "User-specified comparator suitability: prefix admission may ignore later optimal arms and allow linear dynamic regret.",
+    "other_parameters_preserved": true,
+    "results_regenerated_by_simulation": true
+  },
   "profiles": {
     "smoke-small": {
       "status": "PASS",
-      "unique_trajectories": 448,
+      "unique_trajectories": 400,
       "complete_shards": 16,
-      "fingerprint": "d14915ea61f6448172657ded6a42232cee7dc197cf1d3fef28e555be7837bdcb",
+      "fingerprint": "be005c10c7f4977117b88d5fe57408d5a45cc0b59b46df2e2a9bba1b22da9c93",
       "figures": 27,
-      "manifest_sha256": "afc711e41677aa392b041f391b6f3928a25cb055d94d085ed67eb73573df3237"
+      "figure_artifacts": 81,
+      "figure_formats": {
+        "png": 27,
+        "pdf": 27,
+        "svg": 27
+      },
+      "manifest_sha256": "fbf96f4f380d9eaf50bdc4ba1bdaaab78ebab6ea38bc2821131fd084dd450081"
     },
     "smoke-dense": {
       "status": "PASS",
-      "unique_trajectories": 176,
+      "unique_trajectories": 160,
       "complete_shards": 16,
-      "fingerprint": "79a53ccf22ef5f7f18892a83427df288ce16a2706103cc6bc5007558248cd852",
+      "fingerprint": "0a6b656a21e043291ef41bcdb813a1a50520fa134a2d1f582d20cb96500587dd",
       "figures": 24,
-      "manifest_sha256": "191a1297c4b03d810adf374d6d0e441245d092b30c60a0c27ac1d53bce480dca"
+      "figure_artifacts": 72,
+      "figure_formats": {
+        "png": 24,
+        "pdf": 24,
+        "svg": 24
+      },
+      "manifest_sha256": "8086aae4df6ddad6efaf4131e515ffd2e2c77312754fbbcd010cc8754993a0a0"
     },
     "screen-all": {
       "status": "PASS",
-      "unique_trajectories": 86400,
+      "unique_trajectories": 79920,
       "complete_shards": 2160,
-      "fingerprint": "5b745bddf71208c9adcb21f2e7c9465c793cc21906388e506314a3274bd44804",
+      "fingerprint": "01ed15e1aa0a7e39b57abd466a9bb7dde21ed3b0fd442e63516c17a9589ca7d8",
       "figures": 1,
-      "manifest_sha256": "4ace4c9b9d7889351d2a744a2df95366fbb2a707cf6ab064adfd867992146c30"
+      "figure_artifacts": 3,
+      "figure_formats": {
+        "png": 1,
+        "pdf": 1,
+        "svg": 1
+      },
+      "manifest_sha256": "bfb1886c4b2927240845aa649defb0dddceffed8f4069fb31db10edc37b43961"
     }
-  }
+  },
+  "modified_markdown_files_checked": [
+    "README.md",
+    "docs/ALGORITHMS.md",
+    "docs/EXPERIMENTS.md",
+    "docs/SCREENING.md",
+    "results/screen-all/relative_regret/RESULTS.md"
+  ]
 }

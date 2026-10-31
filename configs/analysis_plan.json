@@ -27,9 +27,6 @@
     "Bayes-UCB",
     "Empirical-KL-UCB",
     "SB-EXP3-ATGT",
-    "BL-MOSS-b0.5",
-    "BL-MOSS-b1",
-    "BL-MOSS-b2",
     "UCB-log2t-c3",
     "MOSS-T-currentK",
     "TS-Jeffreys",
@@ -45,7 +42,7 @@
     "method": "Bonferroni",
     "confidence": 0.95,
     "families": "Separate, prespecified group x suite x metric families; all comparator contrasts in each family retained.",
-    "reward": "Each reward candidate minus each of 22 comparators",
+    "reward": "Each reward candidate minus each of 19 comparators",
     "joint": "Primary lambda=.6 candidates, matched widest/LUCB controls, and direct same-mode KL-SRC comparisons. Tradeoff curves at other modes are descriptive.",
     "tail": "Independent seed cohort; prespecified six layouts, two laws, 128 paired replications; descriptive pooled quantiles with no per-cell extreme-quantile claims."
   },
@@ -80,6 +77,13 @@
       "K": 40
     }
   },
-  "full_profile_unique_paths": 418560,
-  "full_profile_includes_independent_tail": true
+  "full_profile_unique_paths": 374496,
+  "full_profile_includes_independent_tail": true,
+  "comparator_scope_revision": {
+    "decision": "User-requested removal before regenerating the final small-study outputs.",
+    "excluded_scope": "All prefix-restricted ballooning MOSS configurations and their aliases.",
+    "reason": "Restricting admission to an initial prefix can ignore a later-arriving optimal arm and allow linear dynamic regret in the permanent-arrival model.",
+    "selection_basis": "Comparator suitability specified by the user, not filtering according to wins or losses in this study.",
+    "preserved": "All other algorithms, layouts, reward laws, seeds and replication counts."
+  }
 }
