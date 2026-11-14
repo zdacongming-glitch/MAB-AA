@@ -1,0 +1,37 @@
+Final follow-up experiment-integrity audit. Judge the completed artifacts independently; do not treat the preliminary code review as a completed-data verdict. Do not launch simulations, change producer code, alter data, or rewrite figures. Read-only deterministic checks are allowed. Write your complete final review verbatim to D:/博士学习/科研/git/MAB-AA/.aris/traces/experiment-audit/2026-11-14_run01/final_raw_response.txt and return that review and its SHA256. Any temporary checking scripts must stay in the same trace directory.
+
+Paths (read directly, without relying on the executor's interpretation):
+- D:/博士学习/科研/git/MAB-AA/proposal/简化算法稿.md
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/simplified.py
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/policy.py
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/full_reward.py
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/full_reward_analysis.py
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/relative_regret.py
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/run_full_reward.py
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/tools/verify_full_reward.py
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/configs/full_reward.json
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/configs/layouts.json
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/docs/SIMPLIFIED.md
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/README.md
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/tests/test_simplified.py
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/tests/test_full_reward_run.py
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/config.json
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/manifest.json
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/source_snapshot/
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/shards/
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/runs.csv.gz
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/counts.csv.gz
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/trajectories.csv.gz
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/analysis/
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/figures/
+- D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/validation/
+
+Audit checklist:
+A. Ground-truth provenance and information access: where do true means and arrivals enter evaluation versus learner decisions? Does FULL match the simplified draft, and do the original SRC/SRC-KL controls retain their declared defaults? Check complete empirical support and scope of numerical versus formal assurances.
+B. Metric and normalization integrity: raw dynamic pseudo-regret, equal-cell weighting, paired differences, relative denominator, Satterthwaite uncertainty and the frozen eight-comparison Bonferroni family. Independently recompute the primary contrasts from raw endpoints; do not merely trust producer summary files or the supplied verifier's PASS.
+C. Artifact existence and completeness: actual original F17/adaptive coverage, every requested replication and method, source/config/seed/cache provenance, matching raw shards and aggregate data. Examine archived execution-incident evidence and check whether recovery kept old completed shards unchanged and retained the affected world. Check claimed numbers in RESULTS.md and all generated figures against data.
+D. Dead-code and routing: confirm the measured policy branches and statistic functions are actually used. Distinguish implemented ON/reporting components from the reward-only performance study.
+E. Scope and claims: assess what the fixed benchmark and replication count support, including raw mean advantages, interval qualifications, and per-cell exceptions. Distinguish observed maxima, Monte Carlo intervals and any theorem/coverage guarantee. Do not silently infer universal dominance.
+F. Evaluation classification: real_gt, synthetic_proxy, self_supervised_proxy, simulation_only or human_eval, with evidence.
+
+For A-F give PASS/WARN/FAIL, exact file/line evidence and details. Give an overall verdict, supported/qualified/unsupported claim list, actionable defects if any, and the limits of the review. Inspect the actual primary, mean-regret, trajectory and layout/cell PNG figures. Preserve the base Codex classification review_independence=same-family and acceptance_status=provisional for semantic judgment; deterministic evidence checks can be accepted separately. State the actual reviewer identity and completion scope.

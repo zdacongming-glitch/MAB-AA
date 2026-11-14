@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "profile": "full-reward",
+  "source_draft": "Simplified draft 2026-11-14, sections 3-5",
+  "groups": ["f17", "adaptive"],
+  "replications": 20,
+  "seed_base": 2026111401,
+  "pilot_seed_base": 2026111402,
+  "methods": ["FULL-R", "SRC-R", "SRC-KL-R", "IMED", "Empirical-KL-UCB"],
+  "primary_candidate": "FULL-R",
+  "primary_comparators": ["SRC-R", "SRC-KL-R", "IMED", "Empirical-KL-UCB"],
+  "primary_family_size": 8,
+  "alpha": 0.05,
+  "weighting": "equal environmental cell within each source group",
+  "reporting": "disabled for every method; reward trajectories only; no label or area claims",
+  "settings": "unmodified canonical layouts and all 16 small reward laws",
+  "trajectory_fractions": [0.0, 0.01, 0.025, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+  "pilot_layouts": ["f17__two_close", "adaptive__h_record_staircase"],
+  "selection": "no parameter selection or validation-dependent stopping; pilot used only for runtime and correctness"
+}

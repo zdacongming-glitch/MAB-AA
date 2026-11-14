@@ -9,6 +9,9 @@ __version__ = "1.0.0"
 
 
 def __getattr__(name):
+    if name == "FullPolicy":
+        from .simplified import FullPolicy
+        return FullPolicy
     if name == "Policy":
         from .policy import Policy
         return Policy

@@ -1,13 +1,16 @@
 {
-  "schema_version": 2,
-  "date": "2026-11-01",
+  "schema_version": 3,
+  "date": "2026-11-15",
   "status": "PASS_FOR_LISTED_COMPLETED_RUNS",
-  "scientific_scope": "Completed smoke/screen results and exploratory frozen-parameter checks; formal full run not performed",
+  "scientific_scope": "Completed original-size FULL reward comparison (F17/adaptive, 20 pairs per cell), plus separately frozen smoke/screen and parameter studies; full 45-layout protocol not performed",
   "tests": {
     "status": "PASS",
-    "passed": 170,
-    "scope": "Final-source repository tests",
-    "evidence": "Final test result retained by the root agent; no endpoint or old-commit identity inference is attached."
+    "passed": 193,
+    "scope": "Current repository tests with frozen full-reward source hashes",
+    "evidence": "full-reward-r20/validation/tests.json",
+    "evidence_sha256": "5400f70b705f39faa57f9da423ed7833cff30a38f00c34fded976b3ec7486bc3",
+    "log": "full-reward-r20/validation/test_run.txt",
+    "duration_seconds": 73.84
   },
   "formal_full": {
     "status": "NOT_RUN",
@@ -17,7 +20,18 @@
   "original_twenty_replications": {
     "status": "NOT_RUN",
     "replications_per_cell": 20,
-    "description": "The original 45-layout/540-cell experiment with twenty replications was not executed."
+    "description": "The original 45-layout/540-cell experiment with twenty replications was not executed.",
+    "completed_subset": {
+      "results_directory": "full-reward-r20",
+      "groups": [
+        "f17",
+        "adaptive"
+      ],
+      "layouts": 24,
+      "cells": 384,
+      "methods": 5,
+      "scope": "Reward only, not completion of the 45-layout/540-cell protocol"
+    }
   },
   "completed_runs": {
     "smoke-small": {
@@ -191,10 +205,84 @@
       "scope": "Exploratory frozen-parameter validation; transformed T400 layouts",
       "primary_comparison_family_size": 8,
       "parameter_candidates": 2
+    },
+    "full-reward-r20": {
+      "status": "PASS",
+      "results_directory": "full-reward-r20",
+      "producer_profile": "full-reward",
+      "scope": "Original F17/adaptive settings; pure reward comparison; fixed five methods; no parameter search",
+      "worlds": 7680,
+      "paths": 38400,
+      "layouts": 24,
+      "cells": 384,
+      "replications_per_cell": 20,
+      "methods": [
+        "FULL-R",
+        "SRC-R",
+        "SRC-KL-R",
+        "IMED",
+        "Empirical-KL-UCB"
+      ],
+      "default_SRC_parameters": true,
+      "settings_compressed": false,
+      "reports_evaluated": false,
+      "classification_failure_counts": null,
+      "seed_base": 2026111401,
+      "unique_trajectory_feedbacks": 483200000,
+      "retry_computations_are_not_extra_samples": true,
+      "source_input_file_count": 25,
+      "source_cache_fingerprint": "177d56d1fed0c97c0ff75710a0aa3370cc8ad9518f805af2b764498bf9ec0956",
+      "manifest_sha256": "65b5aa248aa1a0a7cf6b04977c86c380237599ff1e9975f2090bce593d1e7186",
+      "config_sha256": "636c4d984d6e69c6508a728ca564fb154091c9a1fc03d71edea7f7ad0b567a8a",
+      "endpoint_sha256": "da6522016be4c2e42be4f2e4abde55297de0f9e4c0f95746c9a232a1ec175f72",
+      "raw_files": {
+        "counts.csv.gz": {
+          "rows": 448000,
+          "sha256": "a45bfa184dd3dd37d20a999b812a8a680e9b0ba8ea42be0872bacd3c0cffb606"
+        },
+        "runs.csv.gz": {
+          "rows": 38400,
+          "sha256": "da6522016be4c2e42be4f2e4abde55297de0f9e4c0f95746c9a232a1ec175f72"
+        },
+        "trajectories.csv.gz": {
+          "rows": 499200,
+          "sha256": "e3f4e0ede9f866a35ccbfbc11d4ab4f66e09beee0d43379853cb26e4873ba45e"
+        }
+      },
+      "started_utc": "2026-11-14T09:07:20.416908+00:00",
+      "completed_utc": "2026-11-14T16:11:11.422117+00:00",
+      "elapsed_compute_seconds": 25228.42290570002,
+      "workers": 16,
+      "primary_comparison_family_size": 8,
+      "primary_interval": "paired cell-stratified Monte Carlo; delta method; Satterthwaite t; Bonferroni, approximate familywise 95%",
+      "all_scientific_paths_retained": true,
+      "execution_failure_records": 1,
+      "execution_recovery_status": "RESOLVED",
+      "retained_byte_identical_shards_after_interruption": 1171,
+      "execution_incident_evidence": "full-reward-r20/validation/execution_incidents.json",
+      "independent_numerical_verification": {
+        "status": "PASS",
+        "path": "full-reward-r20/analysis/independent_verification.json",
+        "sha256": "581ff746967a921d96f83c04ce4480d64331a2dd6ededb37e013477be4f74518"
+      },
+      "figure_files_by_format": {
+        "pdf": 5,
+        "png": 5,
+        "svg": 5
+      },
+      "figure_files_total": 15,
+      "results_report": "full-reward-r20/analysis/INTERPRETATION.md",
+      "semantic_review": {
+        "verdict": "PASS",
+        "review_independence": "same-family",
+        "acceptance_status": "provisional",
+        "path": "full-reward-r20/validation/EXPERIMENT_AUDIT.json",
+        "sha256": "e8598a8eab30d9a249d4e0e6d2deaf821fe41d56dea723c50d54e63f411dd767"
+      }
     }
   },
-  "source_input_file_count": 20,
-  "source_cache_fingerprint": "26e0717d534827b6184252f983f0ceb736cbf719228e223f8c09bf415778e72a",
+  "source_input_file_count": 25,
+  "source_cache_fingerprint": "177d56d1fed0c97c0ff75710a0aa3370cc8ad9518f805af2b764498bf9ec0956",
   "current_method_configurations": 37,
   "baseline_configurations": 19,
   "removed_BL_MOSS_configurations": 3,
@@ -209,9 +297,22 @@
     "The 79,920-path canonical screen and scaled parameter check use transformed T400 environments; they do not replace original full-size experiments.",
     "Original parameter validation has two paired replications per fixed environment. Monte Carlo intervals are conditional on that fixed matrix.",
     "Cap-only has three of four original primary difference intervals strictly below zero; the F17 versus Empirical-KL-UCB adjusted interval crosses zero.",
-    "No simultaneous four-comparison superiority or universal method dominance is claimed.",
+    "In the earlier cap-only parameter study, no simultaneous four-comparison superiority is claimed. No study establishes universal method dominance.",
     "The c=1 selected candidate and IMED have identical action hashes and regret on every original and scaled validation path.",
     "Canonical runtime cache supplements were reconstructed after execution from retained launch commands and source policy; they are not worker-emitted binary attestations.",
-    "Both prior v1/v2 studies are invalidated and excluded; development grid raw data are not installed as final result datasets."
-  ]
+    "Both prior v1/v2 studies are invalidated and excluded; development grid raw data are not installed as final result datasets.",
+    "FULL-R20 uses original F17/adaptive settings and twenty paired repeats per cell. Dense/scale and ON classification performance are outside this batch.",
+    "FULL-R20 compares default SRC/SRC-KL, not the previously selected cap-8192 parameter candidates; batches and seeds are not pooled.",
+    "FULL-R20 approximate Monte Carlo intervals condition on the fixed setting matrix; point-mean cell wins are not simultaneous significance claims.",
+    "One Windows manifest-publication access error was recovered under the same source/configuration/seed fingerprint; all 1,171 pre-interruption shards remain byte-identical."
+  ],
+  "historical_tests": {
+    "status": "PASS",
+    "passed": 170,
+    "scope": "Final-source repository tests",
+    "evidence": "Final test result retained by the root agent; no endpoint or old-commit identity inference is attached."
+  },
+  "historical_source_input_file_count": 20,
+  "historical_source_cache_fingerprint": "26e0717d534827b6184252f983f0ceb736cbf719228e223f8c09bf415778e72a",
+  "current_method_configurations_scope": "37 configurations in the unchanged legacy main protocol; FULL is added through the dedicated five-method reward study"
 }

@@ -1,0 +1,17 @@
+[
+  {
+    "status": "RECOVERABLE_EXECUTION_FAILURE",
+    "operation": "os.replace while publishing manifest.json",
+    "windows_error": 5,
+    "completed_worlds": 1171,
+    "scientific_selection": false,
+    "frozen_sources_unchanged": true,
+    "evidence_files": [
+      "execution_incident_1_manifest.json",
+      "execution_incident_1_log.txt"
+    ],
+    "cause": "A transient Windows access denial during atomic publication. A held ordinary reader reproduces this error; the particular blocking handle was not captured.",
+    "resolution": "Removed all owned concurrent manifest polling. Monitor only the append-only log; finalization waits for the producer subprocess to exit. Numerical source/configuration are unchanged; resume validates and retains every existing shard.",
+    "monitoring_reader_experiment": "Ordinary held reader blocked os.replace as expected. A FILE_SHARE_DELETE wrapper also failed to permit replacement in this environment, so that mitigation was rejected and is not used."
+  }
+]

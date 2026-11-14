@@ -1,0 +1,73 @@
+{"layouts": 24, "cells": 384, "worlds": 7680, "trajectories": 38400, "replications": 20, "pilot": false, "feedbacks": 483200000}
+20/7680 elapsed=11.0s
+40/7680 elapsed=456.3s
+60/7680 elapsed=693.2s
+80/7680 elapsed=734.2s
+100/7680 elapsed=754.4s
+120/7680 elapsed=772.2s
+140/7680 elapsed=788.8s
+160/7680 elapsed=949.6s
+180/7680 elapsed=1087.8s
+200/7680 elapsed=1102.8s
+220/7680 elapsed=1114.9s
+240/7680 elapsed=1125.7s
+260/7680 elapsed=1135.8s
+280/7680 elapsed=1143.3s
+300/7680 elapsed=1285.8s
+320/7680 elapsed=1391.0s
+340/7680 elapsed=1540.6s
+360/7680 elapsed=1696.1s
+380/7680 elapsed=1941.3s
+400/7680 elapsed=2009.1s
+420/7680 elapsed=2020.7s
+440/7680 elapsed=2029.6s
+460/7680 elapsed=2038.0s
+480/7680 elapsed=2099.8s
+500/7680 elapsed=2196.3s
+520/7680 elapsed=2209.7s
+540/7680 elapsed=2221.2s
+560/7680 elapsed=2229.3s
+580/7680 elapsed=2236.1s
+600/7680 elapsed=2242.4s
+620/7680 elapsed=2328.1s
+640/7680 elapsed=2403.9s
+660/7680 elapsed=2552.1s
+680/7680 elapsed=2997.7s
+700/7680 elapsed=3329.6s
+720/7680 elapsed=3424.6s
+740/7680 elapsed=3446.9s
+760/7680 elapsed=3464.9s
+780/7680 elapsed=3482.4s
+800/7680 elapsed=3647.9s
+820/7680 elapsed=3820.6s
+840/7680 elapsed=3835.1s
+860/7680 elapsed=3846.2s
+880/7680 elapsed=3854.4s
+900/7680 elapsed=3861.4s
+920/7680 elapsed=3867.7s
+940/7680 elapsed=3973.5s
+960/7680 elapsed=4118.4s
+980/7680 elapsed=4212.9s
+1000/7680 elapsed=4330.3s
+1020/7680 elapsed=4483.6s
+1040/7680 elapsed=4507.6s
+1060/7680 elapsed=4519.8s
+1080/7680 elapsed=4531.7s
+1100/7680 elapsed=4540.6s
+1120/7680 elapsed=4577.8s
+1140/7680 elapsed=4646.6s
+1160/7680 elapsed=4659.7s
+Traceback (most recent call last):
+  File "D:\��ʿѧϰ\����\git\MAB-AA\MAB-AA-reproducibility\run_full_reward.py", line 37, in <module>
+    main()
+  File "D:\��ʿѧϰ\����\git\MAB-AA\MAB-AA-reproducibility\run_full_reward.py", line 26, in main
+    run(args.output, args.workers, args.resume, args.pilot, args.dry_run)
+  File "D:\��ʿѧϰ\����\git\MAB-AA\MAB-AA-reproducibility\src\srcbench\full_reward.py", line 243, in run
+    publish(task, future.result())
+  File "D:\��ʿѧϰ\����\git\MAB-AA\MAB-AA-reproducibility\src\srcbench\full_reward.py", line 223, in publish
+    atomic_json(manifest_path, manifest)
+  File "D:\��ʿѧϰ\����\git\MAB-AA\MAB-AA-reproducibility\src\srcbench\runner.py", line 54, in atomic_json
+    atomic_bytes(path, json_bytes(value))
+  File "D:\��ʿѧϰ\����\git\MAB-AA\MAB-AA-reproducibility\src\srcbench\runner.py", line 47, in atomic_bytes
+    os.replace(temp, path)
+PermissionError: [WinError 5] �ܾ����ʡ�: 'D:\\��ʿѧϰ\\����\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\full-reward-r20\\manifest.json.3pouz4g3.part' -> 'D:\\��ʿѧϰ\\����\\git\\MAB-AA\\MAB-AA-reproducibility\\results\\full-reward-r20\\manifest.json'

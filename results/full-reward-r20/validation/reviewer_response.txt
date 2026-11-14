@@ -1,0 +1,78 @@
+最终审查结论：**PASS，限于已完成的固定基准纯奖励研究。** 未发现虚构结果、归一化失真、漏掉请求单元、删除不利路径或改变原始设置的证据。图表有轻微排版和密集显示限制，不影响数值结论。
+
+审查日期：2026-11-15，Asia/Shanghai。执行身份为 Codex 原生子代理 `/root/full_integrity_review`，是前次运行前审查的继续会话；解析路由声明 `gpt-6-astra / ultra`，本会话没有额外的后端型号证明。语义审查记录为 `review_independence=same-family`、`acceptance_status=provisional`；下面实际执行的确定性数据核验可单独接受。
+
+我直接读取了冻结配置、25 份源码/配置快照、全部 7,680 个分片、三张原始汇总表、分析产物、执行中断记录、测试记录，以及五张实际 PNG。未调用会改写结果的生产者分析器或核验器，未重新模拟；独立检查代码只做读取和内存计算。最终版 INTERPRETATION.md 和 README.md 也已纳入审查。后续根目录 STATUS/VALIDATION 编辑、旧实验的数值真实性及算法稿完整定理证明不在本次完成范围内。
+
+**A．真值来源、信息权限与算法：PASS。**
+
+真均值、完整到达日程和奖励生成器位于评估端；每轮策略只接收当前新增臂，在选择后取得该臂下一份真实样本。动态 pseudo-regret 使用当轮已到达臂中的最佳真均值，未从政策输出构造参照。证据：[full_reward.py:59](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/full_reward.py:59)、[full_reward.py:79](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/full_reward.py:79)、[environment.py:109](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/environment.py:109)。
+
+FULL 的全部正计数信息预算、未观察臂优先、到达秩破平局、单臂约定、完美支持边界、竞争规模翻倍时钟及完整经验支持，与算法稿对应。剪枝使用当前预算的信息下界，不将一般分布替换为均值 Bernoulli 分布。GT_M 的混合权重、逐臂风险、历史交、永久失败保护，以及 B∪W 内的最小终身计数和正价格门控，代码语义与稿件一致。证据：[算法稿:254](D:/博士学习/科研/git/MAB-AA/proposal/简化算法稿.md:254)、[算法稿:285](D:/博士学习/科研/git/MAB-AA/proposal/简化算法稿.md:285)、[算法稿:424](D:/博士学习/科研/git/MAB-AA/proposal/简化算法稿.md:424)、[simplified.py:34](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/simplified.py:34)、[simplified.py:68](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/simplified.py:68)、[simplified.py:104](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/simplified.py:104)、[simplified.py:205](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/simplified.py:205)。
+
+原 SRC/SRC-KL 保留奖励预算系数 32、信息评分 log 系数 0.5，以及 SRC-KL 默认 sublog cap 系数 1；本批未引入 cap=8192 候选。证据：[methods.py:21](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/methods.py:21)、[policy.py:159](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/policy.py:159)、[policy.py:198](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/policy.py:198)。普通浮点求根和端点外移不是认证区间算术；[SIMPLIFIED.md:22](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/docs/SIMPLIFIED.md:22) 已明确限定，没有将这一局限冒充为经过认证的覆盖保证。
+
+**B．指标、配对、归一化与推断：PASS。**
+
+我没有依赖生产者 summary 或 verifier 的 PASS：逐条用“各轮可用最佳均值之和 − 各臂终点计数乘真均值之和”重建全部 38,400 个 regret 端点，与原始端点最大绝对差为 3.4049207897624e-10。该量级符合两种浮点累加顺序的差异，不构成算法或指标错误。
+
+配对流按原始臂身份、世界种子和拉取序号索引，所有方法共享同一世界及同批标签置换。统计先在世界内作差，再按环境单元等权汇总；百分比的分母是对照的单元等权平均 regret。百分比方差保留配对协方差，Satterthwaite 自由度和八项 Bonferroni 家族符合冻结计划。证据：[environment.py:41](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/environment.py:41)、[relative_regret.py:68](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/relative_regret.py:68)、[relative_regret.py:75](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/relative_regret.py:75)、[full_reward_analysis.py:19](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/full_reward_analysis.py:19)、[full_reward.json:11](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/configs/full_reward.json:11)。
+
+独立从原始端点重算全部八项均值、配对差、相对变化、MCSE、自由度及校正区间，最大绝对差为 9.094947017729282e-13。相对变化的独立复算如下；负值有利于 FULL，区间为近似整体 95%：
+
+| 对照 | F17 相对变化及校正区间 | adaptive 相对变化及校正区间 |
+|---|---:|---:|
+| SRC-R | +44.24%；[+29.70, +58.78]% | +29.32%；[+22.40, +36.25]% |
+| SRC-KL-R | −59.71%；[−60.32, −59.11]% | −53.42%；[−54.09, −52.76]% |
+| IMED | +1.09%；[−5.67, +7.86]% | −8.20%；[−11.49, −4.90]% |
+| Empirical-KL-UCB | −27.39%；[−28.96, −25.83]% | −34.04%；[−35.49, −32.59]% |
+
+同时核对了 1,920 行单元均值、10 行方法汇总，以及 1,760 行探索性比较的点估计。探索性点估计最大差为 1.1368683772161603e-13。没有按候选自身最大值、最小值或最佳样本归一化，也没有把单元百分比简单平均。
+
+**C．结果存在、完整性、来源与恢复：PASS。**
+
+实际数据完整覆盖 F17/adaptive 各 12 个原始布局、各 16 种分布；每个单元恰有重复编号 0–19，且每个世界包含要求的五个方法，无重复或缺失。实际计数为 7,680 世界、38,400 端点、448,000 臂计数行、499,200 检查点行及 483,200,000 次纳入统计的策略反馈。全部分片与清单 SHA256 一致；分片内容与三张 CSV 逐字段、逐行一致。计数非负、每路径总计数等于原始 T、每臂计数不超过其曝光长度；原始臂身份、均值和出生时刻与冻结布局一致。所有端点明确标为 `reports_evaluated=false`。
+
+25 份冻结输入都与源码快照及当前数值文件一致；源文件列表从 [config.json:2064](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/config.json:2064) 开始。另独立从快照源码、Numba 版本和 Python cache tag 重建缓存指纹，匹配全部 worker 分片。配置和完成清单中的数值环境相同，恢复指纹包含环境版本。原始布局来源的逐项核对沿用本会话已直接完成的 F17 Git 历史文件与 adaptive JSON 核对；本批配置与该份 canonical 布局完全相同，无缩短 T、删臂或改到达/均值。完成状态见 [manifest.json:2](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/manifest.json:2) 和 [manifest.json:7715](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/manifest.json:7715)。
+
+执行中断证据没有被最终空 errors 数组掩盖：归档清单确为 FAILED，记录 1,171 个已完成分片和一次 PermissionError；日志栈定位到发布 manifest 时的 `os.replace`。恢复后的配置/源码/种子指纹不变，归档中全部 1,171 个分片在最终数据中保持原 SHA256。受影响世界 `78f2870abc1b18addfea35ec`，即 `f17__successive_improvements / hetero_best_noisy / rep=15`，已经包含在归档的已写分片中，最终仍按原字节保留。不存在因该错误剔除该世界的证据。证据：[归档清单:14](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/validation/execution_incident_1_manifest.json:14)、[执行事件:13](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/validation/execution_incidents.json:13)、[full_reward.py:216](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/full_reward.py:216)。具体阻塞句柄未被捕获，因而只能确认文件替换访问错误，不能把某一读取句柄写成已取证的唯一原因。
+
+**D．执行路径与死代码：PASS。**
+
+真实执行路径是入口调用 run，worker 调用 simulate_world，再按 family 选择 FullPolicy 或原 Policy，每轮 choose/observe 后累计 regret。FULL-R 为 OFF；四个对照为各自已声明的纯奖励配置。分析路径确实从完整 runs.csv.gz 构造配对、调用统计函数并输出表格与图。证据：[run_full_reward.py:24](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/run_full_reward.py:24)、[full_reward.py:71](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/full_reward.py:71)、[full_reward.py:233](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/full_reward.py:233)、[full_reward_analysis.py:47](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/full_reward_analysis.py:47)。
+
+GT_M 和 ON 服务是已实现、已有定向测试的功能，但在本批中按计划未执行；不能据此报告分类、面积或 ON 性能。报告开关的动作一致性测试、正价格及严格 B∪W 子集测试可见 [test_simplified.py:95](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/tests/test_simplified.py:95) 和 [test_simplified.py:132](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/tests/test_simplified.py:132)。归档测试日志记载 193 项通过，其日志、测试文件及数值源码 hashes 均匹配；本次审查验证了这些记录，没有重新运行测试或模拟。证据：[tests.json:2](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/validation/tests.json:2)。
+
+**E．范围、结论与图表：PASS，附展示限制。**
+
+[RESULTS.md:15](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/analysis/RESULTS.md:15) 的全部八行数值与复算一致。最终 [INTERPRETATION.md:3](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/analysis/INTERPRETATION.md:3)、[INTERPRETATION.md:30](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/results/full-reward-r20/analysis/INTERPRETATION.md:30) 和 [README.md:5](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/README.md:5) 如实报告了对原 SRC 的劣势、F17/IMED 的不确定性、固定基准及近似区间限制，没有把旧调参候选、32 次实验或缩小实验混入本批。
+
+独立复算的较低/较高/持平单元数，与 INTERPRETATION.md 第 40–47 行全部一致。尤其 adaptive 对 IMED 为 95/96/1；平均改善并不代表多数单元或逐环境优势。对默认 SRC-KL，F17 为 192/0/0，adaptive 为 191/1/0；即使 F17 的全部样本单元均值较低，也不是所有单元分别显著或普遍支配的证明。
+
+已实际查看 `relative_regret.png`、`mean_regret.png`、`regret_trajectories.png`、`relative_regret_by_layout.png`、`relative_regret_by_cell.png`。主图的八个百分比、区间、星号和正负色彩正确；10 个均值柱标签及 96 个布局标签与独立复算一致，SVG 文字注释也已检查。轨迹图有 13 个预设检查点，每组/方法共 130 个均值点，终点与方法均值一致；它是检查点连线，不是逐轮完整动作记录。
+
+展示 WARN：均值图中两个最高柱的数值标签贴近或跨过上轴边框，建议仅在后续展示副本增加纵向留白。全单元热图在普通页面尺寸下字较密，且四对照共 1,536 个色块中有 87 项百分比超过 +100%，颜色因此饱和（SRC-R 68 项、IMED 7 项、Empirical-KL-UCB 12 项）；图例已说明色彩截断，完整 CSV 没有截断。读者不能仅凭饱和颜色比较这些大幅退化的大小。可另提供四个单独面板用于打印。证据：[full_reward_analysis.py:140](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/full_reward_analysis.py:140)、[full_reward_analysis.py:173](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/full_reward_analysis.py:173)。这些是可读性限制，不要求改写冻结图表或重跑实验。
+
+**F．评价类型：PASS，`simulation_only`。**
+
+真值来自预设模拟环境，奖励来自明确的有界分布，未使用实测数据或人工判断。本实验衡量固定模拟矩阵中的动态 pseudo-regret；既非 real_gt 数据集评价，也非模型输出生成参照的 synthetic_proxy。证据：[environment.py:67](D:/博士学习/科研/git/MAB-AA/MAB-AA-reproducibility/src/srcbench/environment.py:67)。
+
+支持的声明：全部请求单元和 20 次配对重复已完成；本批固定矩阵上 FULL 的平均 regret 低于默认 SRC-KL 和 Empirical-KL-UCB、高于原 SRC；adaptive 对 IMED 的校正区间支持平均改善。F17 对 IMED 尚不能确认差异。
+
+需限定的声明：上述推断使用近似 t/delta-method 区间，只描述固定矩阵中的 Monte Carlo 不确定性；观察到的单元胜负是点估计；最大观察 regret 只是样本诊断；约 7.01 小时是此次记录时间，不是普遍计算复杂度或未来运行时间保证。
+
+本批不支持的声明：逐环境或普遍支配、优于 cap=8192 的调参候选、ON/分类/面积优势、经认证的标签覆盖概率、尾部概率保证，以及完整 45 布局/540 单元旧主协议已经完成。已审查的最终人类解读没有提出这些越界声明。
+
+没有需要撤销本批结果或重跑的实质完整性缺陷。审查仍不能仅凭摘要、计数和 action hash 独立证明每份随机奖励及每轮动作均实际按源码执行；本次没有逐轮重新模拟，也没有做定理证明或浮点形式化验证。语义判断保持同家族 provisional，不升级为跨家族独立认证。
+
+审计锚点 SHA256：
+
+- config.json：`636c4d984d6e69c6508a728ca564fb154091c9a1fc03d71edea7f7ad0b567a8a`
+- manifest.json：`65b5aa248aa1a0a7cf6b04977c86c380237599ff1e9975f2090bce593d1e7186`
+- runs.csv.gz：`da6522016be4c2e42be4f2e4abde55297de0f9e4c0f95746c9a232a1ec175f72`
+- counts.csv.gz：`a45bfa184dd3dd37d20a999b812a8a680e9b0ba8ea42be0872bacd3c0cffb606`
+- trajectories.csv.gz：`e3f4e0ede9f866a35ccbfbc11d4ab4f66e09beee0d43379853cb26e4873ba45e`
+- analysis/RESULTS.md：`9ffc07cb809211c80e98dd681b13b7273bc85b7a8007240ac2f4760a4e473220`
+- analysis/primary_comparisons.csv：`347d79a4440b3847d6ea5503ae6be99285b89a2e5e68a0c570b3b2e38b2079ea`
+- analysis/INTERPRETATION.md：`a84516a460d7a97bff45c14492ee495f488b7ab9919b51fda1c5ae94ca4f6dad`
+- README.md：`6339a6f5e64f68057223756abdac599109f3a8c131ca4a8af35cc8aa6d49ff74`

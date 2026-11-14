@@ -17,7 +17,7 @@ class Policy:
     ``supports`` exposes only observed distinct values and their counts.
     """
 
-    def __init__(self, method: dict, epsilon, eta, delta, seed=0, horizon=None):
+    def __init__(self, method: dict, epsilon, eta, delta, seed=0, horizon=None, *, track_reports=True):
         if not (0 < eta < epsilon < 1 and 0 < delta < 1):
             raise ValueError('require 0 < eta < epsilon < 1 and 0 < delta < 1')
         self.method = dict(method)
@@ -27,6 +27,9 @@ class Policy:
             raise ValueError('unknown policy family')
         self.epsilon, self.eta, self.delta = float(epsilon), float(eta), float(delta)
         self.preference = float(method.get('preference', 0))
+        self.track_reports = bool(track_reports)
+        if not self.track_reports and self.preference != 0:
+            raise ValueError('classification policies require reporting evidence')
         if not 0 <= self.preference <= 1:
             raise ValueError('preference must be in [0,1]')
         self.beta_r = self._budget(method.get('beta_r', 32))
@@ -244,7 +247,7 @@ class Policy:
         self.supports[i] = (self._values[i][:length], self._counts[i][:length])
         if self.n[i] == self.quota[i]:
             self.checkpoint_hits += 1
-        if not self.failed:
+        if self.track_reports and not self.failed:
             lower, upper = prefix_interval(int(self.n[i]), float(self.S[i]), float(self.alpha[i]))
             self.lower[i], self.upper[i] = max(self.lower[i], lower), min(self.upper[i], upper)
             if self.n[i] == self.quota[i]:
@@ -262,6 +265,8 @@ class Policy:
         self._pending = None
 
     def report(self):
+        if not self.track_reports:
+            raise RuntimeError('passive reporting is disabled for reward-only evaluation')
         labels, _ = reporter(self.lower, self.upper, self.epsilon, self.eta, self.failed)
         return tuple([self.ids[i] for i in range(len(self.ids)) if labels[i] == label]
                      for label in (1, -1, 0))

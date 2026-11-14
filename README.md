@@ -1,4 +1,16 @@
-# SRC / SRC-KL 统一数值实验
+# SRC / SRC-KL / FULL 统一数值实验
+
+新增 2026-11-14 简化稿的 **FULL + GT_M** 在线实现及独立原尺寸奖励比较入口。F17、adaptive 的全部 384 单元保持原始规模，每单元 20 次配对重复，与 SRC-R、SRC-KL-R、IMED、Empirical-KL-UCB 比较。算法、运行命令及统计合同见 [SIMPLIFIED.md](docs/SIMPLIFIED.md)。本轮纯奖励实验不评价分类性能，原有冻结实验协议保持其各自定义。
+
+**这批 20 次重复实验已完成，共 38,400 条轨迹。** FULL 相对默认 SRC-KL 的平均 regret 在 F17/adaptive 分别降低 59.71%/53.42%，相对 Empirical-KL-UCB 降低 27.39%/34.04%；相对原 SRC 则增加 44.24%/29.32%。相对 IMED，F17 的 +1.09% 尚不能确认差异，adaptive 的 −8.20% 校正区间低于零。完整区间、逐 setting 的胜负和执行记录见[实际结论](results/full-reward-r20/analysis/INTERPRETATION.md)。这里只比较默认旧算法，没有使用此前的参数候选。
+
+![原尺寸 F17/adaptive：FULL 对四个对照的相对 regret](results/full-reward-r20/figures/relative_regret.png)
+
+```powershell
+python run_full_reward.py run --dry-run
+python run_full_reward.py run --output _runs/full-reward-r20 --workers 16
+python run_full_reward.py verify --output results/full-reward-r20 --check-current
+```
 
 论文当前无 H8 的 **SRC** 与理论改进版 **SRC-KL** 的最终实现：19 个奖励 baseline、匹配分类调度对照、45 个布局、540 个环境单元，以及统一配对模拟、校验、分析和绘图入口。SRC-KL 保留原经验分布奖励评分，改变 KL/MOSS 切换参考与奖励账本上限。
 
@@ -42,13 +54,13 @@ python run_main.py run --profile screen-all --output _runs/screen-all --workers 
 
 该 profile 为 45 个来源布局 × 对应分布，共 540 cells；T=400、每单元 4 次配对重复，全部 37 个配置，共 79,920 条轨迹。输出 `relative_regret/report.html` 与两种 SRC 对 19 baseline 的相对 regret 热图。原/实际臂数、配对百分比与统计解释见 [SCREENING.md](docs/SCREENING.md)。
 
-本轮已在当前数值核及隔离缓存下重新跑完并通过独立核验。单元等权总体上，SRC-R 与默认 SRC-KL-R 相对 IMED 的平均 regret 分别降低 22.4% 和 4.5%；来源组等权的敏感性摘要也全部保留。各组有明显差异，不能把总体平均看成每个 setting 的优势。完整结论见[实际结论](results/screen-all/relative_regret/RESULTS.md)、[完整单元表](results/screen-all/relative_regret/all_cell_methods.csv)、[百分比表](results/screen-all/relative_regret/percent_matrix.csv)。
+已发布的缩小批次按其冻结数值核及隔离缓存运行，并通过独立核验。单元等权总体上，SRC-R 与默认 SRC-KL-R 相对 IMED 的平均 regret 分别降低 22.4% 和 4.5%；来源组等权的敏感性摘要也全部保留。各组有明显差异，不能把总体平均看成每个 setting 的优势。完整结论见[实际结论](results/screen-all/relative_regret/RESULTS.md)、[完整单元表](results/screen-all/relative_regret/all_cell_methods.csv)、[百分比表](results/screen-all/relative_regret/percent_matrix.csv)。
 
 ![两种默认算法对19个baseline的相对regret](results/screen-all/relative_regret/relative_regret_screen.png)
 
 ## SRC-KL 固定参数检查
 
-另外完成了 F17/adaptive 全部 384 个原尺寸组合、每单元 2 次配对重复的两个固定参数候选验证，以及全部 540 个派生组合的 4 次重复压力检查。只把奖励上限系数改为 8192、保留评分系数 0.5，原尺寸 F17/adaptive 相对 IMED 的平均 regret 降低 34.1%/31.5%。四个主要 baseline 比较中三项校正区间低于 0；F17/Empirical-KL-UCB 尚不能确认。该配置表现接近原 SRC，并非 KL 机制独有收益；没有替换默认算法或运行原尺寸 20 次正式批次。详见[参数检查结论与区间](results/parameter-check/RESULTS.md)。
+另外完成了 F17/adaptive 全部 384 个原尺寸组合、每单元 2 次配对重复的两个固定参数候选验证，以及全部 540 个派生组合的 4 次重复压力检查。只把奖励上限系数改为 8192、保留评分系数 0.5，原尺寸 F17/adaptive 相对 IMED 的平均 regret 降低 34.1%/31.5%。四个主要 baseline 比较中三项校正区间低于 0；F17/Empirical-KL-UCB 尚不能确认。该配置表现接近原 SRC，并非 KL 机制独有收益；没有替换默认算法，这两种调参候选尚未运行每单元 20 次的原尺寸批次。详见[参数检查结论与区间](results/parameter-check/RESULTS.md)。
 
 ```powershell
 python replay_parameter_check.py run --stage original --output _runs/parameter-original --workers 16 --analyze
@@ -83,11 +95,11 @@ python run_main.py run --profile full --output _runs/main --workers auto --resum
 
 ```powershell
 python -m pytest -q
-python run_main.py verify results/smoke-small --check-current
+python run_main.py verify results/smoke-small
 python run_main.py analyze _runs/my-small
 python run_main.py plot _runs/my-small
 ```
 
-当前测试集已通过 170 项测试，包含接近 1 的实际支持点边界、奖励评分的合法剪枝上界、有限预算指数反演的可行下端点、源码与进程缓存隔离，以及冻结参数配置的重放、分析和续跑。数值核细节见[算法说明](docs/ALGORITHMS.md)。
+当前测试集已通过 193 项测试，包含 FULL 指数与 GT_M、报告开关的动作一致性、worker/方法顺序/续跑不变性，以及接近 1 的实际支持点边界、奖励评分的合法剪枝上界、有限预算指数反演的可行下端点、源码与进程缓存隔离。测试日志见[本轮测试记录](results/full-reward-r20/validation/tests.json)；数值核细节见[算法说明](docs/ALGORITHMS.md)及[简化算法说明](docs/SIMPLIFIED.md)。
 
 在线 API 为 `Policy.choose(new_arms)`、`observe(reward)`、`report()`；示例见 [ALGORITHMS.md](docs/ALGORITHMS.md)。配对、统计、输出和续跑规则见 [EXPERIMENTS.md](docs/EXPERIMENTS.md)。全部科学失败路径保留；执行异常单独记录，不能视为零成本或从完整结果中悄悄剔除。

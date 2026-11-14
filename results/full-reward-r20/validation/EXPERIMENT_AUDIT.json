@@ -1,0 +1,139 @@
+{
+  "audit_skill": "experiment-audit",
+  "verdict": "PASS",
+  "reason_code": "complete_fixed_benchmark_reward_study_verified",
+  "summary": "All requested original-size F17/adaptive cells and twenty paired repetitions are complete. Claims match raw data; limitations remain explicit.",
+  "audited_input_hashes": {
+    "configs/analysis_plan.json": "134b3a4cf864a9b9fded9ef052e646ba058cfb9194d4a1405b423be7f96de7f9",
+    "configs/full_reward.json": "55cdee5150d7d8c6e04315af97ca2206db77a8e3ce2355d82e00c4cdc6c7ff7b",
+    "configs/layouts.json": "b6195271260e1f157b524f5b147ef09bedf3059f65cbbc7352b5c87b1d857ceb",
+    "configs/methods.json": "78bf00473cf5312e1e44734769489f03a4539deee200ee7df00c5c6e07ca0356",
+    "configs/protocol.json": "7fc08c95090efcb33547973697a2c7f54a7a27ef6e4947af1b0d4af7d26fffaf",
+    "configs/provenance.json": "4edfeb6d8653e6aa874fe846b17673a0958a2aa713c670ed00bb7e4f78a1b3c6",
+    "requirements.txt": "f8fd8c730954d601db8ecd645bcbf711a425abfbcd77913cd5997588ec958844",
+    "run_full_reward.py": "3210ff44cdaaa5a2cc4e74d9adcbc50da9036eda86e0247fb50c902cbedffb76",
+    "run_main.py": "8d0274a78ca768cbc128260096faa3e527c5399fd2e42171bf84043e10cde5c6",
+    "src/srcbench/__init__.py": "a33450a82dc2a7a03d36527f1f569924ca8b6ba8fb8e6af8baab35dea810a3e2",
+    "src/srcbench/_numba_cache.py": "0cc66316a80be7c29eaad96c8eeca107c42c3da20556708767149ffa3b13d086",
+    "src/srcbench/analysis.py": "19fbe22aad85f1bc8bd7529fd522a2f24c1b92bba066aeb9f7680fb10f671eb3",
+    "src/srcbench/baselines.py": "bc863e0e821fd741a9fdc9329d6314fc75720ce2ef311b750fb0cc271e218e73",
+    "src/srcbench/design.py": "b9acd2e65fa9199c7fa7253c3d3d1dad65b81d1c6c3889d7bcdf39b97fc28e3b",
+    "src/srcbench/environment.py": "ac5a45021aa45d0573ffa9139eb0a555c889fc27ceaee48fe8bced512e16d2bf",
+    "src/srcbench/full_reward.py": "70036e8fef6729d7070d1c48e309641eb612b8c60d60641cf79bf4c8889f0199",
+    "src/srcbench/full_reward_analysis.py": "65a5f61ef2e24866d7623c27c60c41bf01d99d4280ee04574f93deb9f028f388",
+    "src/srcbench/mathcore.py": "4ecc2dca288296f8e504fe086b675d5c3cc7fdefb6883acff9d2516089d07f74",
+    "src/srcbench/methods.py": "8f0b8ecc08e66cc1df82f49de715e01e4d2e280e31b3b9d334b9ce67dac156bb",
+    "src/srcbench/plotting.py": "c95db15aec3303f43708dd49dda8be0231814cd48d029d9e437038860d375677",
+    "src/srcbench/policy.py": "2c608e29619f3a1be24d19ba3d4d84edd0d8ed55b12c6e41b4189c5b7f6c7822",
+    "src/srcbench/relative_regret.py": "e7056a216e3ab02584168c8c739bdf9d6e35e71e66facd7cccfbee2bb6a56338",
+    "src/srcbench/runner.py": "9d7a9a65a61709e2c691188f5a0dd387ce677b202084bfef2048f2971177c473",
+    "src/srcbench/simplified.py": "62656a558b0fd75463eb687288a8d1090081e0de0939a7d1575510c7d61098e8",
+    "src/srcbench/simulation.py": "f1965d301f775e4afea9e76c4653dc2dacd6081fe597bc06d152209918e92592",
+    "README.md": "6339a6f5e64f68057223756abdac599109f3a8c131ca4a8af35cc8aa6d49ff74",
+    "docs/SIMPLIFIED.md": "168f6f2b9af7efdbd7680e479aa446d8ff39ad9f7fd4af409ecd51f172a2fc79",
+    "results/full-reward-r20/config.json": "636c4d984d6e69c6508a728ca564fb154091c9a1fc03d71edea7f7ad0b567a8a",
+    "results/full-reward-r20/manifest.json": "65b5aa248aa1a0a7cf6b04977c86c380237599ff1e9975f2090bce593d1e7186",
+    "results/full-reward-r20/runs.csv.gz": "da6522016be4c2e42be4f2e4abde55297de0f9e4c0f95746c9a232a1ec175f72",
+    "results/full-reward-r20/counts.csv.gz": "a45bfa184dd3dd37d20a999b812a8a680e9b0ba8ea42be0872bacd3c0cffb606",
+    "results/full-reward-r20/trajectories.csv.gz": "e3f4e0ede9f866a35ccbfbc11d4ab4f66e09beee0d43379853cb26e4873ba45e",
+    "results/full-reward-r20/analysis/RESULTS.md": "9ffc07cb809211c80e98dd681b13b7273bc85b7a8007240ac2f4760a4e473220",
+    "results/full-reward-r20/analysis/INTERPRETATION.md": "a84516a460d7a97bff45c14492ee495f488b7ab9919b51fda1c5ae94ca4f6dad",
+    "results/full-reward-r20/analysis/primary_comparisons.csv": "347d79a4440b3847d6ea5503ae6be99285b89a2e5e68a0c570b3b2e38b2079ea",
+    "results/full-reward-r20/validation/tests.json": "5400f70b705f39faa57f9da423ed7833cff30a38f00c34fded976b3ec7486bc3",
+    "results/full-reward-r20/validation/execution_incident_1_manifest.json": "f970e977a6a7e158a5ae330e212ff1ef0ed3fd44847fd5bcfbb70daf7931a4b3",
+    "results/full-reward-r20/validation/execution_incidents.json": "c847615cf8d524c6060ede59e87b58f040e3b7f850cad6829c0afa35e0d4b9bf",
+    "results/full-reward-r20/figures/mean_regret.png": "1e5e941437586352be4501574c4da216144b735ebf87a7ed7c38c0bbd507b2c8",
+    "results/full-reward-r20/figures/regret_trajectories.png": "154cd8bf2557053503ef620c9f01a31ab70f0de95c23f44d41528f0b945c51d9",
+    "results/full-reward-r20/figures/relative_regret.png": "e856984181ca02a4c04a299ed14cf88b3cff63ef03cf25d582702caa4b41319d",
+    "results/full-reward-r20/figures/relative_regret_by_cell.png": "2b62c4b1579313697371e24eba9d602ceb310ecbbb654670ba4c86002f79c769",
+    "results/full-reward-r20/figures/relative_regret_by_layout.png": "7c49d8aceba96cf42760d3a73fefdbcc44ef2c28c87944728cbdbca1f17b9c66"
+  },
+  "trace_path": "../.aris/traces/experiment-audit/2026-11-14_run01/",
+  "published_trace": {
+    "final_raw_response.txt": "reviewer_response.txt",
+    "final_review_prompt.txt": "reviewer_prompt.txt",
+    "final_route.json": "reviewer_route.json"
+  },
+  "agent_id": "/root/full_integrity_review",
+  "verdict_id": "1712a9c001266c05fdb52dddbf5935a983cd30bf83f722e37475e496f258ac4f",
+  "executor_model": "Codex; exact root model not exposed",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_model_identity_basis": "Resolved native route; no separate backend attestation",
+  "reviewer_family": "openai",
+  "reviewer_reasoning": "ultra",
+  "review_session": "Initially fresh independent reviewer; final review continues its pre-run audit context",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "deterministic_evidence_status": "PASS",
+  "generated_at": "2026-11-14T16:20:34.495353+00:00",
+  "date": "2026-11-15",
+  "auditor": "native Codex reviewer, route gpt-6-astra / ultra",
+  "overall_verdict": "pass",
+  "integrity_status": "pass",
+  "checks": {
+    "gt_provenance": {
+      "status": "pass",
+      "details": "Simulator owns means/schedules; FULL and baseline policies consume only arrivals and observed feedback."
+    },
+    "score_normalization": {
+      "status": "pass",
+      "details": "All 38,400 regrets reconstructed; all eight paired contrasts, covariance-aware ratios and corrected intervals independently recomputed."
+    },
+    "result_existence": {
+      "status": "pass",
+      "details": "7,680 complete worlds, raw aggregates reconstructed, 25 frozen sources current, all 1,171 archived shards preserved."
+    },
+    "dead_code": {
+      "status": "pass",
+      "details": "Reward execution and analysis paths called; GT_M/ON are tested features outside this experiment."
+    },
+    "scope": {
+      "status": "pass",
+      "details": "Claims confined to fixed simulated F17/adaptive matrix, default SRC parameters, pure reward, approximate Monte Carlo inference."
+    },
+    "eval_type": "simulation_only"
+  },
+  "deterministic_checks": {
+    "worlds": 7680,
+    "endpoints": 38400,
+    "arm_count_rows": 448000,
+    "checkpoint_rows": 499200,
+    "regret_reconstruction_max_abs_difference": 3.4049207897624e-10,
+    "primary_statistic_max_abs_difference": 9.094947017729282e-13,
+    "retained_byte_identical_pre_interruption_shards": 1171
+  },
+  "presentation_warnings": [
+    "The highest labels in mean_regret.png touch or cross the upper axes frame; exact values remain in CSV.",
+    "The all-cell heatmap is dense; 87 of 1,536 percentages exceed +100 and saturate its declared color scale. CSV values are untruncated."
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "All requested original settings and twenty paired repetitions completed",
+      "impact": "supported"
+    },
+    {
+      "id": "C2",
+      "claim": "FULL mean regret lower than default SRC-KL and Empirical-KL-UCB, higher than SRC in both groups",
+      "impact": "supported within fixed benchmark"
+    },
+    {
+      "id": "C3",
+      "claim": "FULL improves on IMED in adaptive; F17 difference unresolved",
+      "impact": "supported with approximate corrected intervals"
+    },
+    {
+      "id": "C4",
+      "claim": "Universal dominance, tuned-cap superiority, classification/ON gains, certified coverage or tail guarantees",
+      "impact": "unsupported and not claimed"
+    }
+  ],
+  "not_audited": [
+    "Later root STATUS/VALIDATION metadata edits",
+    "Truth of legacy experiments",
+    "Full theorem proofs",
+    "Per-step simulation replay",
+    "Formal floating-point certification"
+  ]
+}

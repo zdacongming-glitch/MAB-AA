@@ -1,0 +1,9 @@
+group,comparator,lower_mean,higher_mean,ties
+f17,SRC-R,8,184,0
+f17,SRC-KL-R,192,0,0
+f17,IMED,46,146,0
+f17,Empirical-KL-UCB,165,25,2
+adaptive,SRC-R,24,168,0
+adaptive,SRC-KL-R,191,1,0
+adaptive,IMED,95,96,1
+adaptive,Empirical-KL-UCB,174,18,0

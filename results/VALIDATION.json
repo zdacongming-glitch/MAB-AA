@@ -1,49 +1,51 @@
 {
-  "schema_version": 2,
-  "date": "2026-11-01",
+  "schema_version": 3,
+  "date": "2026-11-15",
   "status": "PASS_FOR_LISTED_CHECKS",
   "tests": {
     "status": "PASS",
-    "passed": 170,
-    "scope": "Final-source repository tests",
-    "evidence": "Final test result retained by the root agent; no endpoint or old-commit identity inference is attached."
+    "passed": 193,
+    "scope": "Current repository tests with frozen full-reward source hashes",
+    "evidence": "full-reward-r20/validation/tests.json",
+    "evidence_sha256": "5400f70b705f39faa57f9da423ed7833cff30a38f00c34fded976b3ec7486bc3",
+    "log": "full-reward-r20/validation/test_run.txt",
+    "duration_seconds": 73.84
   },
   "source_snapshot": {
-    "kind": "Twenty SHA256 input fingerprints, matched to frozen final-v3 plan",
+    "kind": "Twenty-five current input fingerprints, frozen for full-reward-r20",
     "files": {
       "configs/analysis_plan.json": "134b3a4cf864a9b9fded9ef052e646ba058cfb9194d4a1405b423be7f96de7f9",
+      "configs/full_reward.json": "55cdee5150d7d8c6e04315af97ca2206db77a8e3ce2355d82e00c4cdc6c7ff7b",
       "configs/layouts.json": "b6195271260e1f157b524f5b147ef09bedf3059f65cbbc7352b5c87b1d857ceb",
       "configs/methods.json": "78bf00473cf5312e1e44734769489f03a4539deee200ee7df00c5c6e07ca0356",
       "configs/protocol.json": "7fc08c95090efcb33547973697a2c7f54a7a27ef6e4947af1b0d4af7d26fffaf",
       "configs/provenance.json": "4edfeb6d8653e6aa874fe846b17673a0958a2aa713c670ed00bb7e4f78a1b3c6",
       "requirements.txt": "f8fd8c730954d601db8ecd645bcbf711a425abfbcd77913cd5997588ec958844",
+      "run_full_reward.py": "3210ff44cdaaa5a2cc4e74d9adcbc50da9036eda86e0247fb50c902cbedffb76",
       "run_main.py": "8d0274a78ca768cbc128260096faa3e527c5399fd2e42171bf84043e10cde5c6",
-      "src/srcbench/__init__.py": "ca444d30064c05bb7036dba3eff8e43699dc6ef0067c384bc8cbf4202a5238a1",
+      "src/srcbench/__init__.py": "a33450a82dc2a7a03d36527f1f569924ca8b6ba8fb8e6af8baab35dea810a3e2",
       "src/srcbench/_numba_cache.py": "0cc66316a80be7c29eaad96c8eeca107c42c3da20556708767149ffa3b13d086",
       "src/srcbench/analysis.py": "19fbe22aad85f1bc8bd7529fd522a2f24c1b92bba066aeb9f7680fb10f671eb3",
       "src/srcbench/baselines.py": "bc863e0e821fd741a9fdc9329d6314fc75720ce2ef311b750fb0cc271e218e73",
       "src/srcbench/design.py": "b9acd2e65fa9199c7fa7253c3d3d1dad65b81d1c6c3889d7bcdf39b97fc28e3b",
       "src/srcbench/environment.py": "ac5a45021aa45d0573ffa9139eb0a555c889fc27ceaee48fe8bced512e16d2bf",
+      "src/srcbench/full_reward.py": "70036e8fef6729d7070d1c48e309641eb612b8c60d60641cf79bf4c8889f0199",
+      "src/srcbench/full_reward_analysis.py": "65a5f61ef2e24866d7623c27c60c41bf01d99d4280ee04574f93deb9f028f388",
       "src/srcbench/mathcore.py": "4ecc2dca288296f8e504fe086b675d5c3cc7fdefb6883acff9d2516089d07f74",
       "src/srcbench/methods.py": "8f0b8ecc08e66cc1df82f49de715e01e4d2e280e31b3b9d334b9ce67dac156bb",
       "src/srcbench/plotting.py": "c95db15aec3303f43708dd49dda8be0231814cd48d029d9e437038860d375677",
-      "src/srcbench/policy.py": "adbefa00e3b8f92e5a966a1a9b10049b24625f371b10b2344dcf4ac63d200bf3",
+      "src/srcbench/policy.py": "2c608e29619f3a1be24d19ba3d4d84edd0d8ed55b12c6e41b4189c5b7f6c7822",
       "src/srcbench/relative_regret.py": "e7056a216e3ab02584168c8c739bdf9d6e35e71e66facd7cccfbee2bb6a56338",
       "src/srcbench/runner.py": "9d7a9a65a61709e2c691188f5a0dd387ce677b202084bfef2048f2971177c473",
+      "src/srcbench/simplified.py": "62656a558b0fd75463eb687288a8d1090081e0de0939a7d1575510c7d61098e8",
       "src/srcbench/simulation.py": "f1965d301f775e4afea9e76c4653dc2dacd6081fe597bc06d152209918e92592"
     }
   },
   "runtime_cache": {
-    "cache_root": "\\\\?\\D:\\博士学习\\科研\\git\\MAB-AA\\.numba-cache",
-    "effective_cache_dir": "\\\\?\\D:\\博士学习\\科研\\git\\MAB-AA\\.numba-cache\\srcbench-26e0717d534827b6184252f983f0ceb736cbf719228e223f8c09bf415778e72a",
     "numba_version": "0.59.0",
     "python_cache_tag": "cpython-311",
-    "source_fingerprint": "26e0717d534827b6184252f983f0ceb736cbf719228e223f8c09bf415778e72a",
-    "strategy": "package-source-hash-isolated-Numba-cache",
-    "parameter_task_records_checked": 3216,
-    "parameter_task_metadata_matches_plan_and_current_API": true,
-    "canonical_supplement_kind": "retained-launch-command+source-policy reconstruction",
-    "canonical_supplements_generated_after_run": true,
+    "source_fingerprint": "177d56d1fed0c97c0ff75710a0aa3370cc8ad9518f805af2b764498bf9ec0956",
+    "scope": "full-reward-r20; every shard records the runtime cache provenance",
     "worker_binary_attestation": false
   },
   "frozen_study_drivers": {
@@ -236,6 +238,80 @@
       "scope": "Exploratory frozen-parameter validation; transformed T400 layouts",
       "primary_comparison_family_size": 8,
       "parameter_candidates": 2
+    },
+    "full-reward-r20": {
+      "status": "PASS",
+      "results_directory": "full-reward-r20",
+      "producer_profile": "full-reward",
+      "scope": "Original F17/adaptive settings; pure reward comparison; fixed five methods; no parameter search",
+      "worlds": 7680,
+      "paths": 38400,
+      "layouts": 24,
+      "cells": 384,
+      "replications_per_cell": 20,
+      "methods": [
+        "FULL-R",
+        "SRC-R",
+        "SRC-KL-R",
+        "IMED",
+        "Empirical-KL-UCB"
+      ],
+      "default_SRC_parameters": true,
+      "settings_compressed": false,
+      "reports_evaluated": false,
+      "classification_failure_counts": null,
+      "seed_base": 2026111401,
+      "unique_trajectory_feedbacks": 483200000,
+      "retry_computations_are_not_extra_samples": true,
+      "source_input_file_count": 25,
+      "source_cache_fingerprint": "177d56d1fed0c97c0ff75710a0aa3370cc8ad9518f805af2b764498bf9ec0956",
+      "manifest_sha256": "65b5aa248aa1a0a7cf6b04977c86c380237599ff1e9975f2090bce593d1e7186",
+      "config_sha256": "636c4d984d6e69c6508a728ca564fb154091c9a1fc03d71edea7f7ad0b567a8a",
+      "endpoint_sha256": "da6522016be4c2e42be4f2e4abde55297de0f9e4c0f95746c9a232a1ec175f72",
+      "raw_files": {
+        "counts.csv.gz": {
+          "rows": 448000,
+          "sha256": "a45bfa184dd3dd37d20a999b812a8a680e9b0ba8ea42be0872bacd3c0cffb606"
+        },
+        "runs.csv.gz": {
+          "rows": 38400,
+          "sha256": "da6522016be4c2e42be4f2e4abde55297de0f9e4c0f95746c9a232a1ec175f72"
+        },
+        "trajectories.csv.gz": {
+          "rows": 499200,
+          "sha256": "e3f4e0ede9f866a35ccbfbc11d4ab4f66e09beee0d43379853cb26e4873ba45e"
+        }
+      },
+      "started_utc": "2026-11-14T09:07:20.416908+00:00",
+      "completed_utc": "2026-11-14T16:11:11.422117+00:00",
+      "elapsed_compute_seconds": 25228.42290570002,
+      "workers": 16,
+      "primary_comparison_family_size": 8,
+      "primary_interval": "paired cell-stratified Monte Carlo; delta method; Satterthwaite t; Bonferroni, approximate familywise 95%",
+      "all_scientific_paths_retained": true,
+      "execution_failure_records": 1,
+      "execution_recovery_status": "RESOLVED",
+      "retained_byte_identical_shards_after_interruption": 1171,
+      "execution_incident_evidence": "full-reward-r20/validation/execution_incidents.json",
+      "independent_numerical_verification": {
+        "status": "PASS",
+        "path": "full-reward-r20/analysis/independent_verification.json",
+        "sha256": "581ff746967a921d96f83c04ce4480d64331a2dd6ededb37e013477be4f74518"
+      },
+      "figure_files_by_format": {
+        "pdf": 5,
+        "png": 5,
+        "svg": 5
+      },
+      "figure_files_total": 15,
+      "results_report": "full-reward-r20/analysis/INTERPRETATION.md",
+      "semantic_review": {
+        "verdict": "PASS",
+        "review_independence": "same-family",
+        "acceptance_status": "provisional",
+        "path": "full-reward-r20/validation/EXPERIMENT_AUDIT.json",
+        "sha256": "e8598a8eab30d9a249d4e0e6d2deaf821fe41d56dea723c50d54e63f411dd767"
+      }
     }
   },
   "formal_full": {
@@ -246,7 +322,18 @@
   "original_twenty_replications": {
     "status": "NOT_RUN",
     "replications_per_cell": 20,
-    "description": "The original 45-layout/540-cell experiment with twenty replications was not executed."
+    "description": "The original 45-layout/540-cell experiment with twenty replications was not executed.",
+    "completed_subset": {
+      "results_directory": "full-reward-r20",
+      "groups": [
+        "f17",
+        "adaptive"
+      ],
+      "layouts": 24,
+      "cells": 384,
+      "methods": 5,
+      "scope": "Reward only, not completion of the 45-layout/540-cell protocol"
+    }
   },
   "original_parameter_primary_results": [
     {
@@ -737,9 +824,58 @@
     "The 79,920-path canonical screen and scaled parameter check use transformed T400 environments; they do not replace original full-size experiments.",
     "Original parameter validation has two paired replications per fixed environment. Monte Carlo intervals are conditional on that fixed matrix.",
     "Cap-only has three of four original primary difference intervals strictly below zero; the F17 versus Empirical-KL-UCB adjusted interval crosses zero.",
-    "No simultaneous four-comparison superiority or universal method dominance is claimed.",
+    "In the earlier cap-only parameter study, no simultaneous four-comparison superiority is claimed. No study establishes universal method dominance.",
     "The c=1 selected candidate and IMED have identical action hashes and regret on every original and scaled validation path.",
     "Canonical runtime cache supplements were reconstructed after execution from retained launch commands and source policy; they are not worker-emitted binary attestations.",
-    "Both prior v1/v2 studies are invalidated and excluded; development grid raw data are not installed as final result datasets."
-  ]
+    "Both prior v1/v2 studies are invalidated and excluded; development grid raw data are not installed as final result datasets.",
+    "FULL-R20 uses original F17/adaptive settings and twenty paired repeats per cell. Dense/scale and ON classification performance are outside this batch.",
+    "FULL-R20 compares default SRC/SRC-KL, not the previously selected cap-8192 parameter candidates; batches and seeds are not pooled.",
+    "FULL-R20 approximate Monte Carlo intervals condition on the fixed setting matrix; point-mean cell wins are not simultaneous significance claims.",
+    "One Windows manifest-publication access error was recovered under the same source/configuration/seed fingerprint; all 1,171 pre-interruption shards remain byte-identical."
+  ],
+  "historical_tests": {
+    "status": "PASS",
+    "passed": 170,
+    "scope": "Final-source repository tests",
+    "evidence": "Final test result retained by the root agent; no endpoint or old-commit identity inference is attached."
+  },
+  "historical_source_snapshot": {
+    "kind": "Twenty SHA256 input fingerprints, matched to frozen final-v3 plan",
+    "files": {
+      "configs/analysis_plan.json": "134b3a4cf864a9b9fded9ef052e646ba058cfb9194d4a1405b423be7f96de7f9",
+      "configs/layouts.json": "b6195271260e1f157b524f5b147ef09bedf3059f65cbbc7352b5c87b1d857ceb",
+      "configs/methods.json": "78bf00473cf5312e1e44734769489f03a4539deee200ee7df00c5c6e07ca0356",
+      "configs/protocol.json": "7fc08c95090efcb33547973697a2c7f54a7a27ef6e4947af1b0d4af7d26fffaf",
+      "configs/provenance.json": "4edfeb6d8653e6aa874fe846b17673a0958a2aa713c670ed00bb7e4f78a1b3c6",
+      "requirements.txt": "f8fd8c730954d601db8ecd645bcbf711a425abfbcd77913cd5997588ec958844",
+      "run_main.py": "8d0274a78ca768cbc128260096faa3e527c5399fd2e42171bf84043e10cde5c6",
+      "src/srcbench/__init__.py": "ca444d30064c05bb7036dba3eff8e43699dc6ef0067c384bc8cbf4202a5238a1",
+      "src/srcbench/_numba_cache.py": "0cc66316a80be7c29eaad96c8eeca107c42c3da20556708767149ffa3b13d086",
+      "src/srcbench/analysis.py": "19fbe22aad85f1bc8bd7529fd522a2f24c1b92bba066aeb9f7680fb10f671eb3",
+      "src/srcbench/baselines.py": "bc863e0e821fd741a9fdc9329d6314fc75720ce2ef311b750fb0cc271e218e73",
+      "src/srcbench/design.py": "b9acd2e65fa9199c7fa7253c3d3d1dad65b81d1c6c3889d7bcdf39b97fc28e3b",
+      "src/srcbench/environment.py": "ac5a45021aa45d0573ffa9139eb0a555c889fc27ceaee48fe8bced512e16d2bf",
+      "src/srcbench/mathcore.py": "4ecc2dca288296f8e504fe086b675d5c3cc7fdefb6883acff9d2516089d07f74",
+      "src/srcbench/methods.py": "8f0b8ecc08e66cc1df82f49de715e01e4d2e280e31b3b9d334b9ce67dac156bb",
+      "src/srcbench/plotting.py": "c95db15aec3303f43708dd49dda8be0231814cd48d029d9e437038860d375677",
+      "src/srcbench/policy.py": "adbefa00e3b8f92e5a966a1a9b10049b24625f371b10b2344dcf4ac63d200bf3",
+      "src/srcbench/relative_regret.py": "e7056a216e3ab02584168c8c739bdf9d6e35e71e66facd7cccfbee2bb6a56338",
+      "src/srcbench/runner.py": "9d7a9a65a61709e2c691188f5a0dd387ce677b202084bfef2048f2971177c473",
+      "src/srcbench/simulation.py": "f1965d301f775e4afea9e76c4653dc2dacd6081fe597bc06d152209918e92592"
+    }
+  },
+  "historical_runtime_cache": {
+    "cache_root": "\\\\?\\D:\\博士学习\\科研\\git\\MAB-AA\\.numba-cache",
+    "effective_cache_dir": "\\\\?\\D:\\博士学习\\科研\\git\\MAB-AA\\.numba-cache\\srcbench-26e0717d534827b6184252f983f0ceb736cbf719228e223f8c09bf415778e72a",
+    "numba_version": "0.59.0",
+    "python_cache_tag": "cpython-311",
+    "source_fingerprint": "26e0717d534827b6184252f983f0ceb736cbf719228e223f8c09bf415778e72a",
+    "strategy": "package-source-hash-isolated-Numba-cache",
+    "parameter_task_records_checked": 3216,
+    "parameter_task_metadata_matches_plan_and_current_API": true,
+    "canonical_supplement_kind": "retained-launch-command+source-policy reconstruction",
+    "canonical_supplements_generated_after_run": true,
+    "worker_binary_attestation": false
+  },
+  "legacy_parameter_study_scope": "The plan hashes, parameter comparison decisions and overlap diagnostics below retain their original two-repeat/scaled-study meanings."
 }
